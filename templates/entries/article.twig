@@ -1,5 +1,38 @@
-{{ entry.title }}
+<h1>{{ entry.title }}</h1>
 
-{{ entry.url }}
+<h3>{{ entry.lead }}</h3>
 
-{{ entry.section.handle }}
+{% set aufmacherBild = entry.img.one() %}
+
+<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}"> <br>
+<small>{{ aufmacherBild.imgSource }}</small>
+
+{% for block in entry.mxArticleBlocks %}
+
+    {% switch block.type %}
+
+        {% case "cellTxt" %}
+            {{ block.text }}
+        {% case "cellTitle" %}
+            <{{ block.headlineLevel }}>{{ block.title }}</{{ block.headlineLevel }}>
+        {% case "cellQuote" %}
+            <blockquote>
+                {{ block.text }}
+                {% if block.zitatQuelle %}
+                    — {{ block.zitatQuelle }}
+                {% endif %}
+            </blockquote>
+        {% case "cellBox" %}
+            <h3>{{ block.title }}</h3>
+            {{ block.text }}
+            <a href="{{ block.hyperlink.value }}">{{ block.hyperlink.label }}</a>
+        {% case "cellImgMonoLingual" %}
+            {% set articleImg = block.img.all() %}
+            {% for asset in articleImg %}
+                <img src="{{ asset.url }}" width="300px" alt="">
+                {{ asset.text }}
+                <small>{{ asset.imgSource }}</small>
+            {% endfor %}
+    {% endswitch %}
+
+{% endfor %}
