@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: de-CH
+name: 'EspaceSuisse Publishing'
+primary: true
+siteGroup: 2e063293-328e-4b38-8c35-ec4074593593 # EspaceSuisse Publishing
+sortOrder: 1
