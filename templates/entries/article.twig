@@ -1,8 +1,13 @@
+{% set aufmacherBild = entry.img.one() %}
+{% set articleAuthor = entry.writer.one() %}
+
 <h1>{{ entry.title }}</h1>
+
+<p>{{ articleAuthor.fullName }}</p>
 
 <h3>{{ entry.lead }}</h3>
 
-{% set aufmacherBild = entry.img.one() %}
+
 
 <img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}"> <br>
 <small>{{ aufmacherBild.imgSource }}</small>

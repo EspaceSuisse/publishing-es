@@ -1,16 +1,9 @@
-dateModified: 1734526831
+dateModified: 1734527142
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
-  authorPortrait:
-    hasUrls: true
-    name: 'Author Portrait'
-    settings:
-      path: $CRAFT_DEV_MODE/assets/author
-    type: craft\fs\Local
-    url: $PRIMARY_SITE_URL/assets/author
   images:
     hasUrls: true
     name: Images
@@ -26,7 +19,6 @@ meta:
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: Bild # Bild
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
-    4e2f2891-d3e2-4c64-92e7-045b5b8a016b: 'Author Portrait' # Author Portrait
     5ca31310-0358-4910-9e30-5605bc0c3c17: Zwischentitel # Zwischentitel
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: Lead # Lead

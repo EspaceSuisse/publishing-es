@@ -1,6 +1,6 @@
 allowPublicRegistration: false
 defaultGroup: null
 photoSubpath: null
-photoVolumeUid: 4e2f2891-d3e2-4c64-92e7-045b5b8a016b # Author Portrait
+photoVolumeUid: 4e2f2891-d3e2-4c64-92e7-045b5b8a016b
 require2fa: false
 requireEmailVerification: true
