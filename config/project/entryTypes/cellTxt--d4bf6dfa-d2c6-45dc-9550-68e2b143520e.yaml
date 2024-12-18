@@ -24,10 +24,10 @@ fieldLayouts:
         name: Inhalt
         uid: a9620b28-6116-4747-a99a-45b96c770935
         userCondition: null
-handle: artikelMatrix
+handle: cellTxt
 hasTitleField: false
 icon: null
-name: 'Artikel Matrix'
+name: Text
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -7,7 +7,10 @@ settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
   entryTypes:
-    - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Artikel Matrix
+    - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text
+    - 5ca31310-0358-4910-9e30-5605bc0c3c17 # Zwischentitel
+    - 81e82c07-b4c5-40fc-9b89-aa26efa3cae8 # Zitat
+    - c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1 # Bild Monolingual
   includeTableView: false
   maxEntries: null
   minEntries: null

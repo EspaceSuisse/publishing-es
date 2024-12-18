@@ -1,0 +1,44 @@
+columnSuffix: null
+handle: headlineLevel
+instructions: null
+name: 'Headline Level'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Headline 2'
+        -
+          - value
+          - headline2
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Headline 3'
+        -
+          - value
+          - headline3
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Headline 4'
+        -
+          - value
+          - headline4
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons
