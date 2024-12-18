@@ -1,6 +1,18 @@
 {% set aufmacherBild = entry.img.one() %}
 {% set articleAuthor = entry.writer.one() %}
 
+<a href="/">Home</a>
+<br>
+{% for catGenre in entry.catGenre %}
+    {% if loop.first %}Genre:{% endif %}
+    <a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
+{% endfor %}
+<br>
+{% for catGenre in entry.catSubject %}
+    {% if loop.first %}Thema:{% endif %}
+    <a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
+{% endfor %}
+
 <h1>{{ entry.title }}</h1>
 
 <p>{{ articleAuthor.fullName }}</p>
@@ -12,7 +24,7 @@
 <img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}"> <br>
 <small>{{ aufmacherBild.imgSource }}</small>
 
-{% for block in entry.mxArticleBlocks %}
+{% for block in entry.mxArticleBlocks %} 
 
     {% switch block.type %}
 
