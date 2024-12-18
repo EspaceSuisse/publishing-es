@@ -12,7 +12,7 @@ settings:
   selectionLabel: '+ Thema'
   showCardsInGrid: false
   showSiteMenu: false
-  source: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  source: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

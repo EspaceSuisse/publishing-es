@@ -17,5 +17,5 @@ settings:
   showWordCount: true
   wordLimit: null
 translationKeyFormat: null
-translationMethod: none
+translationMethod: language
 type: craft\ckeditor\Field

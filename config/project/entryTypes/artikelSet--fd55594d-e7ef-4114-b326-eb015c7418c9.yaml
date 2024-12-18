@@ -44,32 +44,10 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-12-18T11:06:12+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: d7356903-c8aa-4f65-8222-bb22b412e8e5
-            userCondition: null
-          -
-            dateAdded: '2024-12-18T11:06:12+00:00'
-            elementCondition: null
-            fieldUid: dd48d553-f4af-4730-9102-fd8714062dcc # Author
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cb31bc9b-3680-4bdd-a68e-f8aa0b11ee57
             userCondition: null
             warning: null
             width: 100
@@ -82,13 +60,13 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e058395e-3601-40ef-88b6-c85b0e9dcfb1
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
             elementCondition: null
@@ -98,19 +76,67 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 0d4dc202-9a02-4984-8cc1-3a6840b5229c
             userCondition: null
             warning: null
-            width: 50
+            width: 25
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            fieldUid: dd48d553-f4af-4730-9102-fd8714062dcc # Author
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb31bc9b-3680-4bdd-a68e-f8aa0b11ee57
+            userCondition: null
+            warning: null
+            width: 25
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: b7c9361a-7847-47ec-b835-7af43e155f2c
+            uid: d7356903-c8aa-4f65-8222-bb22b412e8e5
             userCondition: null
+          -
+            dateAdded: '2024-12-18T11:43:10+00:00'
+            elementCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Lead
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4c6d60f-5f54-4785-8aba-c7c77853b4b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-18T11:46:25+00:00'
+            elementCondition: null
+            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Bild
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Aufmacherbild
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: adf71057-53e3-4784-9ae3-db24387e946c
+            userCondition: null
+            warning: null
+            width: 100
           -
             dateAdded: '2024-12-18T11:08:52+00:00'
             elementCondition: null

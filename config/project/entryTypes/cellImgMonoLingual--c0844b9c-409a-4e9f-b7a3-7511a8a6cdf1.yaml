@@ -54,7 +54,7 @@ fieldLayouts:
         userCondition: null
 handle: cellImgMonoLingual
 hasTitleField: false
-icon: null
+icon: image
 name: 'Bild Monolingual'
 showSlugField: true
 showStatusField: true

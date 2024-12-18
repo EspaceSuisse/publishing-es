@@ -1,9 +1,16 @@
-dateModified: 1734521283
+dateModified: 1734523742
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  authorPortrait:
+    hasUrls: true
+    name: 'Author Portrait'
+    settings:
+      path: $CRAFT_DEV_MODE/assets/author
+    type: craft\fs\Local
+    url: $PRIMARY_SITE_URL/assets/author
   images:
     hasUrls: true
     name: Images
@@ -19,17 +26,21 @@ meta:
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: Bild # Bild
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
+    4e2f2891-d3e2-4c64-92e7-045b5b8a016b: 'Author Portrait' # Author Portrait
     5ca31310-0358-4910-9e30-5605bc0c3c17: Zwischentitel # Zwischentitel
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
+    38c1e2e9-c1e3-4c80-acfe-f190d86317fa: Lead # Lead
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Zitat # Zitat
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Bild Quelle' # Bild Quelle
+    212f7ab4-64f9-4b3c-92e4-fc78442435a9: Url # Url
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
+    2200945b-b73a-4a89-bc06-0e3927264677: Kasten # Kasten
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Zitat Quelle' # Zitat Quelle
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
@@ -60,10 +71,3 @@ system:
   name: 'EspaceSuisse Publishing'
   schemaVersion: 5.5.0.0
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  require2fa: false
-  requireEmailVerification: true

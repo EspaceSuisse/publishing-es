@@ -1,6 +1,9 @@
 color: null
 fieldLayouts:
   63c70567-8281-4c5f-9dae-73e288e87634:
+    cardView:
+      - 'layoutElement:7f46965c-055b-4025-93c0-2c3230abcad0'
+      - 'layoutElement:be8eced6-7257-4a31-a5ae-aac01139fd0d'
     tabs:
       -
         elementCondition: null
@@ -10,7 +13,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -26,7 +29,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b572ca4f-491d-4184-8bba-ebf12597ed59 # Zitat Quelle
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -42,7 +45,7 @@ fieldLayouts:
         userCondition: null
 handle: cellQuote
 hasTitleField: false
-icon: null
+icon: quote-left
 name: Zitat
 showSlugField: false
 showStatusField: true

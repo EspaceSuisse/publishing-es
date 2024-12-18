@@ -1,6 +1,8 @@
 color: null
 fieldLayouts:
   63033601-5637-49f6-8b9e-290c24c2f022:
+    cardView:
+      - 'layoutElement:0fd93863-06fa-4f17-a5f2-8b25a3c7d129'
     tabs:
       -
         elementCondition: null
@@ -10,7 +12,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -26,7 +28,7 @@ fieldLayouts:
         userCondition: null
 handle: cellTxt
 hasTitleField: false
-icon: null
+icon: file-lines
 name: Text
 showSlugField: false
 showStatusField: true
