@@ -1,13 +1,13 @@
 columnSuffix: null
-handle: lead
+handle: caption
 instructions: null
-name: Lead
+name: Bieldbeschrieb
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
   code: false
-  initialRows: 4
+  initialRows: 2
   multiline: true
   placeholder: null
   uiMode: normal

@@ -3,11 +3,19 @@ fieldLayouts:
   55060bd9-75b4-4130-b5cb-0fb44c1e3983:
     cardView:
       - 'layoutElement:40b75549-30b9-42af-8aa5-765c99db2ba4'
-      - 'layoutElement:b1fa72da-9af3-4ade-a9d3-76c7798f55a5'
     tabs:
       -
         elementCondition: null
         elements:
+          -
+            dateAdded: '2024-12-18T11:26:27+00:00'
+            dismissible: false
+            elementCondition: null
+            style: warning
+            tip: "Bildquelle Obligatorisch\r\nDoppelklick auf die Bilddatei"
+            type: craft\fieldlayoutelements\Tip
+            uid: 1879ffb6-423b-4e47-a267-aa008351450e
+            userCondition: null
           -
             dateAdded: '2024-12-18T11:26:27+00:00'
             elementCondition: null
@@ -23,32 +31,23 @@ fieldLayouts:
             uid: 40b75549-30b9-42af-8aa5-765c99db2ba4
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
-            dateAdded: '2024-12-18T11:26:27+00:00'
-            dismissible: false
+            dateAdded: '2024-12-18T14:43:10+00:00'
             elementCondition: null
-            style: warning
-            tip: "Bildquelle Obligatorisch\r\nDoppelklick auf die Bilddatei"
-            type: craft\fieldlayoutelements\Tip
-            uid: 1879ffb6-423b-4e47-a267-aa008351450e
-            userCondition: null
-          -
-            dateAdded: '2024-12-18T11:26:27+00:00'
-            elementCondition: null
-            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text
+            fieldUid: f98e570c-0feb-4f56-98ea-8fcd39709930 # Bieldbeschrieb
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b1fa72da-9af3-4ade-a9d3-76c7798f55a5
+            uid: 2662c4f2-61e2-4bc6-b854-7ad0d86578f8
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
         userCondition: null

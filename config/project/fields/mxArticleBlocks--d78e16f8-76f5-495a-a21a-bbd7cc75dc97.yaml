@@ -4,7 +4,7 @@ instructions: null
 name: 'Artikel Blöcke'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'Neue Textfelder'
   defaultIndexViewMode: cards
   entryTypes:
     - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text
@@ -15,11 +15,11 @@ settings:
   includeTableView: false
   maxEntries: null
   minEntries: null
-  pageSize: 50
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
   showCardsInGrid: false
-  viewMode: cards
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

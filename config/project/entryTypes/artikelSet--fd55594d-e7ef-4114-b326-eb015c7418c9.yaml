@@ -6,52 +6,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2024-12-18T10:44:36+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: bfab3bd8-d6eb-4c0f-a8ea-461ece283cb7
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-12-18T10:45:45+00:00'
-            elementCondition: null
-            fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2024-12-18T11:06:12+00:00'
             elementCondition: null
             fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
@@ -100,15 +54,61 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: '2024-12-18T11:06:12+00:00'
+            dateAdded: '2024-12-18T14:33:52+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: d7356903-c8aa-4f65-8222-bb22b412e8e5
+            uid: 3993fac1-ba1c-454c-9013-425272f0f6b1
             userCondition: null
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-18T10:44:36+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bfab3bd8-d6eb-4c0f-a8ea-461ece283cb7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-18T10:45:45+00:00'
+            elementCondition: null
+            fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
+            userCondition: null
+            warning: null
+            width: 100
           -
             dateAdded: '2024-12-18T11:43:10+00:00'
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Lead
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Zitat
             handle: null
             includeInCards: false
             instructions: null

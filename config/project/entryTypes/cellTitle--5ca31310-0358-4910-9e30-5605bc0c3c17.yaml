@@ -34,7 +34,7 @@ fieldLayouts:
             uid: fde419f4-52aa-4897-8e8d-7d10ac49031f
             userCondition: null
             warning: null
-            width: 100
+            width: 75
           -
             dateAdded: '2024-12-18T11:18:45+00:00'
             elementCondition: null
@@ -50,7 +50,7 @@ fieldLayouts:
             uid: 4681cdf5-dbe5-4d7e-ab94-b8d4e39db62b
             userCondition: null
             warning: null
-            width: 100
+            width: 25
         name: Inhalt
         uid: 5042406c-43fc-4495-898d-3ca36374cbdd
         userCondition: null

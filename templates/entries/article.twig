@@ -17,7 +17,7 @@
 
 <p>{{ articleAuthor.fullName }}</p>
 
-<h3>{{ entry.lead }}</h3>
+<h3>{{ entry.plainText }}</h3>
 
 
 
@@ -29,25 +29,25 @@
     {% switch block.type %}
 
         {% case "cellTxt" %}
-            {{ block.text }}
+            {{ block.richText }}
         {% case "cellTitle" %}
             <{{ block.headlineLevel }}>{{ block.title }}</{{ block.headlineLevel }}>
         {% case "cellQuote" %}
             <blockquote>
-                {{ block.text }}
+                {{ block.plainText }}
                 {% if block.zitatQuelle %}
                     — {{ block.zitatQuelle }}
                 {% endif %}
             </blockquote>
         {% case "cellBox" %}
             <h3>{{ block.title }}</h3>
-            {{ block.text }}
+            {{ block.richText }}
             <a href="{{ block.hyperlink.value }}">{{ block.hyperlink.label }}</a>
         {% case "cellImgMonoLingual" %}
             {% set articleImg = block.img.all() %}
             {% for asset in articleImg %}
                 <img src="{{ asset.url }}" width="300px" alt="">
-                {{ asset.text }}
+                {{ asset.plainText }}
                 <small>{{ asset.imgSource }}</small>
             {% endfor %}
     {% endswitch %}

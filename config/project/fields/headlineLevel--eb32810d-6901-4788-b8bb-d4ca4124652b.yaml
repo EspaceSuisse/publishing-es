@@ -10,10 +10,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Headline 2'
+          - 'Überschrift 1'
         -
           - value
-          - h2
+          - h1
         -
           - default
           - '1'
@@ -21,10 +21,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Headline 3'
+          - 'Überschrift 2'
         -
           - value
-          - h3
+          - h2
         -
           - default
           - ''
@@ -32,13 +32,13 @@ settings:
       __assoc__:
         -
           - label
-          - 'Headline 4'
+          - 'Überschrift 3'
         -
           - value
-          - h4
+          - h3
         -
           - default
           - ''
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\RadioButtons
+type: craft\fields\Dropdown
