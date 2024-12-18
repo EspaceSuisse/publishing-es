@@ -1,6 +1,8 @@
 allowPublicRegistration: false
-defaultGroup: null
+deactivateByDefault: false
+defaultGroup: ''
 photoSubpath: null
-photoVolumeUid: 4e2f2891-d3e2-4c64-92e7-045b5b8a016b
+photoVolumeUid: 288ee88d-e3ce-43e7-9cd8-371e235033c5 # Profilbild
 require2fa: false
 requireEmailVerification: true
+validateOnPublicRegistration: false

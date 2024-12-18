@@ -1,4 +1,4 @@
-dateModified: 1734527142
+dateModified: 1734530047
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -8,9 +8,16 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: $CRAFT_WEB_ROOT/assets
+      path: '@assetBasePath'
     type: craft\fs\Local
-    url: $PRIMARY_SITE_URL/assets
+    url: '@assetBaseUrl'
+  userPortraits:
+    hasUrls: true
+    name: 'User Portraits'
+    settings:
+      path: '@assetBasePath/userPortraits'
+    type: craft\fs\Local
+    url: '@assetBaseUrl/userPortraits'
 meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
@@ -27,6 +34,7 @@ meta:
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Bild Quelle' # Bild Quelle
     212f7ab4-64f9-4b3c-92e4-fc78442435a9: Url # Url
+    288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
