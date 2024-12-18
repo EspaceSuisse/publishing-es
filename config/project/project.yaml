@@ -1,4 +1,4 @@
-dateModified: 1734526353
+dateModified: 1734526831
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -59,6 +59,7 @@ plugins:
   retour:
     edition: standard
     enabled: true
+    licenseKey: VJR8JIXNP3X424S665JMYRYZ
     schemaVersion: 3.0.12
   seomatic:
     edition: standard
@@ -66,7 +67,7 @@ plugins:
     licenseKey: K6LZMFR5AVB04VFJEZ3O4Z9N
     schemaVersion: 3.0.12
 system:
-  edition: solo
+  edition: pro
   live: true
   name: 'EspaceSuisse Publishing'
   schemaVersion: 5.5.0.0
