@@ -9,7 +9,7 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
-  defaultUploadLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  defaultUploadLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: null
@@ -18,7 +18,7 @@ settings:
   restrictFiles: false
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   restrictedLocationSubpath: '{slug}'
   selectionLabel: null
   showCardsInGrid: false

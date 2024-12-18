@@ -5,25 +5,25 @@ permissions:
   - accesscp
   - accesssitewhensystemisoff
   - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'createfolders:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
-  - 'deleteassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  - 'createfolders:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'deleteassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'deleteentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'deletepeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  - 'deletepeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'deletepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'deletepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'editimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
-  - 'editpeerimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  - 'editimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'editpeerimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'editsite:2d4ea7fb-3050-435d-806e-46986d5c58d2' # EspaceSuisse Publishing FR
   - 'editsite:5f286764-7e74-4475-989a-21ca80692fad' # EspaceSuisse Publishing DE
-  - 'replacefiles:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
-  - 'replacepeerfiles:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
-  - 'saveassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  - 'replacefiles:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'replacepeerfiles:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'saveassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'saveentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'savepeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  - 'savepeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'savepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'savepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'viewassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  - 'viewassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'viewentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'viewpeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Bild
+  - 'viewpeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'viewpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'viewpeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel

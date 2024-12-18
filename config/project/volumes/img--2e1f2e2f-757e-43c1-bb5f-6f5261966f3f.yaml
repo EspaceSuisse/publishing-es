@@ -57,10 +57,10 @@ fieldLayouts:
         userCondition: null
 fs: images
 handle: img
-name: Bild
+name: 'Artikel Bilder'
 sortOrder: 1
 subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
+transformFs: images
 transformSubpath: ''

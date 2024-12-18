@@ -1,4 +1,4 @@
-dateModified: 1734533053
+dateModified: 1734533481
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -6,11 +6,11 @@ email:
 fs:
   images:
     hasUrls: true
-    name: Images
+    name: 'Artikel Bilder'
     settings:
-      path: '@assetBasePath'
+      path: '@assetBasePath/articleImages'
     type: craft\fs\Local
-    url: '@assetBaseUrl'
+    url: '@assetBaseUrl/articleImages'
   userPortraits:
     hasUrls: true
     name: 'User Portraits'
@@ -24,7 +24,7 @@ meta:
     2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9: Bild # Bild
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
-    2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: Bild # Bild
+    2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
     5ca31310-0358-4910-9e30-5605bc0c3c17: Zwischentitel # Zwischentitel
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
