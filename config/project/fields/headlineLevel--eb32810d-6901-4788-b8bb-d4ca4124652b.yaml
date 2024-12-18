@@ -13,7 +13,7 @@ settings:
           - 'Headline 2'
         -
           - value
-          - headline2
+          - h2
         -
           - default
           - '1'
@@ -24,7 +24,7 @@ settings:
           - 'Headline 3'
         -
           - value
-          - headline3
+          - h3
         -
           - default
           - ''
@@ -35,7 +35,7 @@ settings:
           - 'Headline 4'
         -
           - value
-          - headline4
+          - h4
         -
           - default
           - ''
