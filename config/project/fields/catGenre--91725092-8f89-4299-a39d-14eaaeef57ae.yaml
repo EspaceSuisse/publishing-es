@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: catGenre
+instructions: null
+name: Rubrik
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 3
+  minRelations: 1
+  selectionLabel: '+ Rubrik'
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

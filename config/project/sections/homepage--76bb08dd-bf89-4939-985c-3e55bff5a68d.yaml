@@ -1,0 +1,32 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
+handle: homepage
+maxAuthors: 1
+name: Homepage
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primäre Eintrag Seite'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/homepage.twig
+    uriFormat: __home__
+  5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/homepage.twig
+    uriFormat: __home__
+type: single

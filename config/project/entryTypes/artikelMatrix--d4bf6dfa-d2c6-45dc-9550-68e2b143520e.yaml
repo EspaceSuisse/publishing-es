@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  63033601-5637-49f6-8b9e-290c24c2f022:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-18T11:08:22+00:00'
+            elementCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0fd93863-06fa-4f17-a5f2-8b25a3c7d129
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: a9620b28-6116-4747-a99a-45b96c770935
+        userCondition: null
+handle: artikelMatrix
+hasTitleField: false
+icon: null
+name: 'Artikel Matrix'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

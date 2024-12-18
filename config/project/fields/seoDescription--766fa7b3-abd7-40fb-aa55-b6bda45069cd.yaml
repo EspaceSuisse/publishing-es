@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: seoDescription
+instructions: 'Der Text der in der Google Suche unter dem Titel angezeigt wird.'
+name: 'Google Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 150
+  code: true
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText

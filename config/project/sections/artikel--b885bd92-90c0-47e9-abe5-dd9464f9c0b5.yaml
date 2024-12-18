@@ -1,0 +1,32 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - fd55594d-e7ef-4114-b326-eb015c7418c9 # Artikel Set
+handle: artikel
+maxAuthors: 1
+name: Artikel
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primäre Eintrag Seite'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR
+    enabledByDefault: true
+    hasUrls: true
+    template: entries/article.twig
+    uriFormat: 'article/{slug}'
+  5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
+    enabledByDefault: true
+    hasUrls: true
+    template: entries/article.twig
+    uriFormat: 'artikel/{slug}'
+type: channel

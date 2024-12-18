@@ -1,0 +1,165 @@
+color: null
+fieldLayouts:
+  a2bae6e5-b24f-480c-8840-77318c35fe87:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-18T10:44:36+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bfab3bd8-d6eb-4c0f-a8ea-461ece283cb7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-18T10:45:45+00:00'
+            elementCondition: null
+            fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d7356903-c8aa-4f65-8222-bb22b412e8e5
+            userCondition: null
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            fieldUid: dd48d553-f4af-4730-9102-fd8714062dcc # Author
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb31bc9b-3680-4bdd-a68e-f8aa0b11ee57
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e058395e-3601-40ef-88b6-c85b0e9dcfb1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d4dc202-9a02-4984-8cc1-3a6840b5229c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b7c9361a-7847-47ec-b835-7af43e155f2c
+            userCondition: null
+          -
+            dateAdded: '2024-12-18T11:08:52+00:00'
+            elementCondition: null
+            fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # Artikel Blöcke
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2d32664-61c3-43b9-8325-d286c231ae69
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: d7eeb8cf-bc12-4c92-b8cc-3ef09c800bff
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-18T10:52:25+00:00'
+            elementCondition: null
+            fieldUid: 8615cf7b-5ca8-4def-a0f2-1370cdee3c8e # SEO Article
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d14bd53-0ba2-4789-b3c7-03556beb5ce1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Google
+        uid: 132df382-76c4-4b56-ab8f-95fb71743dd4
+        userCondition: null
+handle: artikelSet
+hasTitleField: true
+icon: null
+name: 'Artikel Set'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

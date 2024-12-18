@@ -1,12 +1,43 @@
-dateModified: 1734511236
+dateModified: 1734520174
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
+    2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
-    5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
+    3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
+    5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
+    76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
+    91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
+    766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
+    2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
+    8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
+    09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
+    76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
+    91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
+    b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
+    d4bf6dfa-d2c6-45dc-9550-68e2b143520e: 'Artikel Matrix' # Artikel Matrix
+    d78e16f8-76f5-495a-a21a-bbd7cc75dc97: 'Artikel Blöcke' # Artikel Blöcke
+    dd48d553-f4af-4730-9102-fd8714062dcc: Author # Author
+    fd55594d-e7ef-4114-b326-eb015c7418c9: 'Artikel Set' # Artikel Set
+    ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  retour:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.12
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: K6LZMFR5AVB04VFJEZ3O4Z9N
+    schemaVersion: 3.0.12
 system:
   edition: solo
   live: true
