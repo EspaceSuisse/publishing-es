@@ -40,7 +40,7 @@ fieldLayouts:
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
             elementCondition: null
-            fieldUid: dd48d553-f4af-4730-9102-fd8714062dcc # Author
+            fieldUid: dd48d553-f4af-4730-9102-fd8714062dcc
             handle: null
             includeInCards: false
             instructions: null
@@ -150,6 +150,37 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a2d32664-61c3-43b9-8325-d286c231ae69
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-08T13:10:34+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: ee41adaf-27dd-4848-ae62-3ce46053b2b3
+            userCondition: null
+          -
+            dateAdded: '2025-01-08T13:10:34+00:00'
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: "1. In Texteditor für Verortung der Fussnote ein X hochgestellt einsetzen\r\n2. Fussnoten entsprechend der Reihenfolge einfügen.\r\n3. Die nummerierung wird dann vom System automatisch vergeben"
+            type: craft\fieldlayoutelements\Tip
+            uid: c66d513b-cf50-464d-87e6-f46db72a09f1
+            userCondition: null
+          -
+            dateAdded: '2025-01-08T13:10:34+00:00'
+            elementCondition: null
+            fieldUid: 38431ae0-6666-499d-a0a8-a2a332b0b6ce # Footnote
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca59bed8-6bf9-43d3-8b7a-fb000c497bd9
             userCondition: null
             warning: null
             width: 100

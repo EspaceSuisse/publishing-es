@@ -9,6 +9,7 @@ name: Simple
 toolbar:
   - bold
   - italic
+  - superscript
   - link
   - '|'
   - sourceEditing

@@ -1,4 +1,4 @@
-dateModified: 1734533481
+dateModified: 1736342475
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -39,6 +39,7 @@ meta:
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
+    38431ae0-6666-499d-a0a8-a2a332b0b6ce: Footnote # Footnote
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
     2200945b-b73a-4a89-bc06-0e3927264677: Kasten # Kasten
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
@@ -47,7 +48,6 @@ meta:
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: 'Bild Monolingual' # Bild Monolingual
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Text # Text
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: 'Artikel Blöcke' # Artikel Blöcke
-    dd48d553-f4af-4730-9102-fd8714062dcc: Author # Author
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'Headline Level' # Headline Level
     f98e570c-0feb-4f56-98ea-8fcd39709930: Bieldbeschrieb # Bieldbeschrieb

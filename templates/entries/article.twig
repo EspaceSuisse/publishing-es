@@ -1,5 +1,6 @@
 {% set aufmacherBild = entry.img.one() %}
-{% set articleAuthor = entry.writer.one() %}
+{% set articleAuthor = entry.author %}
+{% set supCounter = 1 %} {# Start the superscript counter at 1 #}
 
 <a href="/">Home</a>
 <br>
@@ -25,11 +26,14 @@
 <small>{{ aufmacherBild.imgSource }}</small>
 
 {% for block in entry.mxArticleBlocks %} 
-
+    {% set content = null %} {# Initialize content variable for each block #}
     {% switch block.type %}
+        
 
         {% case "cellTxt" %}
-            {{ block.richText }}
+        
+            {% set content = block.richText %}
+
         {% case "cellTitle" %}
             <{{ block.headlineLevel }}>{{ block.title }}</{{ block.headlineLevel }}>
         {% case "cellQuote" %}
@@ -41,8 +45,12 @@
             </blockquote>
         {% case "cellBox" %}
             <h3>{{ block.title }}</h3>
-            {{ block.richText }}
-            <a href="{{ block.hyperlink.value }}">{{ block.hyperlink.label }}</a>
+
+            {% set content = block.richText %}
+
+            {% if block.hyperlink %}
+                <a href="{{ block.hyperlink.value }}">{{ block.hyperlink.label }}</a>
+            {% endif %}
         {% case "cellImgMonoLingual" %}
             {% set articleImg = block.img.all() %}
             {% for asset in articleImg %}
@@ -52,4 +60,34 @@
             {% endfor %}
     {% endswitch %}
 
+    {# Process only if content is set #}
+    {% if content %}
+        {% set updatedContent = "" %}
+        {% set splitContent = content|split('<sup>x</sup>') %}
+        
+        {# Iterate through the split content, and manually insert the superscript numbers #}
+        {% for i in 0..(splitContent|length - 1) %}
+            {# Add the part of content before each <sup>X</sup> replacement #}
+            {% set updatedContent = updatedContent ~ splitContent[i] %}
+            
+            {# If we're not at the last part of the split, add the superscript number #}
+            {% if i < (splitContent|length - 1) %}
+                {% set updatedContent = updatedContent ~ '<sup><a href="#footnote-' ~ supCounter ~ '">' ~ supCounter ~ '</a></sup>' %}
+                {% set supCounter = supCounter + 1 %}
+            {% endif %}
+        {% endfor %}
+        
+        {# Output the updated content #}
+        {{ updatedContent|raw }}
+    {% endif %}
+
 {% endfor %}
+
+{# Output the footnotes list, matching the superscript numbers #}
+{% set footnoteCounter = 1 %}
+<ol>
+{% for item in entry.footnote %}
+    <li> <span id="footnote-{{ footnoteCounter }}">{{ footnoteCounter }}</span> <a href="{{ item.url }}">{{ item.label }}</a></li>
+    {% set footnoteCounter = footnoteCounter + 1 %}
+{% endfor %}
+</ol>
