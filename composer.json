@@ -2,10 +2,10 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/ckeditor": "4.4.0",
-    "craftcms/cms": "^5.0.0",
-    "nystudio107/craft-retour": "5.0.4",
-    "nystudio107/craft-seomatic": "5.1.7",
+    "craftcms/ckeditor": "4.5.0",
+    "craftcms/cms": "5.6.6",
+    "nystudio107/craft-retour": "5.0.7",
+    "nystudio107/craft-seomatic": "5.1.11",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
