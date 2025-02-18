@@ -6,60 +6,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-18T11:06:12+00:00'
-            elementCondition: null
-            fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e058395e-3601-40ef-88b6-c85b0e9dcfb1
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            dateAdded: '2024-12-18T11:06:12+00:00'
-            elementCondition: null
-            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 0d4dc202-9a02-4984-8cc1-3a6840b5229c
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            dateAdded: '2024-12-18T11:06:12+00:00'
-            elementCondition: null
-            fieldUid: dd48d553-f4af-4730-9102-fd8714062dcc
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cb31bc9b-3680-4bdd-a68e-f8aa0b11ee57
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            dateAdded: '2024-12-18T14:33:52+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 3993fac1-ba1c-454c-9013-425272f0f6b1
-            userCondition: null
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -90,6 +36,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-01-08T14:34:46+00:00'
+            elementCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Lead Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f75053de-6c04-4645-a9f5-f88d93ccbf0a
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2024-12-18T10:45:45+00:00'
             elementCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
@@ -102,22 +64,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-12-18T11:43:10+00:00'
-            elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Zitat
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d4c6d60f-5f54-4785-8aba-c7c77853b4b4
             userCondition: null
             warning: null
             width: 100
@@ -137,6 +83,44 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e058395e-3601-40ef-88b6-c85b0e9dcfb1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2024-12-18T11:06:12+00:00'
+            elementCondition: null
+            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d4dc202-9a02-4984-8cc1-3a6840b5229c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2024-12-18T14:33:52+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 3993fac1-ba1c-454c-9013-425272f0f6b1
+            userCondition: null
           -
             dateAdded: '2024-12-18T11:08:52+00:00'
             elementCondition: null

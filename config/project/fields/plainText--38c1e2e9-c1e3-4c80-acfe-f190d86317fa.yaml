@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: plainText
 instructions: null
-name: Zitat
+name: 'Lead Text'
 searchable: false
 settings:
   byteLimit: null
