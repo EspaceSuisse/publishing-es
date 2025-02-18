@@ -1,0 +1,55 @@
+columnSuffix: null
+handle: typ
+instructions: null
+name: Typ
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Typ A'
+        -
+          - value
+          - typA
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Typ B'
+        -
+          - value
+          - typB
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Typ C'
+        -
+          - value
+          - typC
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Typ D'
+        -
+          - value
+          - typD
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

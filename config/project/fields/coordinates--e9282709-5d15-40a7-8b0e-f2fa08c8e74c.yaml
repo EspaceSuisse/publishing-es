@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: coordinates
+instructions: null
+name: Coordinates
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: true
+  initialRows: 4
+  multiline: false
+  placeholder: '2''534''783.59, 1''154''118.39'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

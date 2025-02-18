@@ -143,6 +143,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\HorizontalRule
             uid: ee41adaf-27dd-4848-ae62-3ce46053b2b3
             userCondition: null
+        name: Inhalt
+        uid: d7eeb8cf-bc12-4c92-b8cc-3ef09c800bff
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             dateAdded: '2025-01-08T13:10:34+00:00'
             dismissible: false
@@ -168,8 +174,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Inhalt
-        uid: d7eeb8cf-bc12-4c92-b8cc-3ef09c800bff
+        name: Quellen
+        uid: 812ef1ba-2337-4f06-9c7a-b512aa0eaaeb
         userCondition: null
       -
         elementCondition: null

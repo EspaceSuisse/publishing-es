@@ -1,23 +1,16 @@
 color: null
 fieldLayouts:
-  c1c33481-6c7d-4b77-b4f9-b5e160ddfcd2:
+  86a4330c-37bc-4c04-a927-4dafbc1ea032:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-18T11:38:19+00:00'
-            elementCondition: null
-            heading: 'Der klassische blaue Kasten aus dem Inforaum für Zusatzinfos'
-            type: craft\fieldlayoutelements\Heading
-            uid: 0efc282b-8345-43f2-b1ed-9153ff62cfa4
-            userCondition: null
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-12-18T11:35:16+00:00'
+            dateAdded: '2025-02-18T08:03:09+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -38,14 +31,14 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 07ae4c59-b0ad-44d8-8bfd-a1cc493e6a39
+            uid: 6766cfcc-50a1-49e4-aaf7-6af718ae7ca9
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-18T11:38:19+00:00'
+            dateAdded: '2025-02-18T08:08:37+00:00'
             elementCondition: null
-            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Lead Text
             handle: null
             includeInCards: false
             instructions: null
@@ -54,14 +47,14 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9a5e8d45-10ce-458d-b464-69f56653ca78
+            uid: 5b579e00-a4a1-4a09-b302-f9612282ad35
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-18T11:38:19+00:00'
+            dateAdded: '2025-02-18T08:04:54+00:00'
             elementCondition: null
-            fieldUid: 212f7ab4-64f9-4b3c-92e4-fc78442435a9 # Url
+            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Bild
             handle: null
             includeInCards: false
             instructions: null
@@ -70,39 +63,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8fb919e8-4a3f-4dff-a45b-36d0b55945b8
+            uid: 1486815f-8978-4a09-adf4-611de6c8eac8
             userCondition: null
             warning: null
             width: 100
-        name: Inhalt
-        uid: 1fc15a0d-6f6a-4fc0-8e61-4c7506104737
+        name: Content
+        uid: 98800a45-a03b-42df-bbdb-ad5d53f0555b
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-02-18T09:03:23+00:00'
-            elementCondition: null
-            fieldUid: 8348b893-eaba-48e4-b4ab-15c74d5c44d0 # Typ
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 66c06d27-b7de-403c-9d8f-60ce84c52266
-            userCondition: null
-            warning: null
-            width: 100
-        name: Layout
-        uid: 435d7c9d-1e64-4c0f-8867-202e1a3658d3
-        userCondition: null
-handle: cellBox
+handle: newChapter
 hasTitleField: true
-icon: cart-flatbed-boxes
-name: Kasten
+icon: bookmark
+name: 'New Chapter'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

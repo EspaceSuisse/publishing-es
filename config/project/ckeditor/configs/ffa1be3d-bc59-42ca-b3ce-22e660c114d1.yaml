@@ -12,4 +12,7 @@ toolbar:
   - superscript
   - link
   - '|'
+  - bulletedList
+  - numberedList
+  - '|'
   - sourceEditing

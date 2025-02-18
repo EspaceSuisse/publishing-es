@@ -1,4 +1,4 @@
-dateModified: 1736346886
+dateModified: 1739888253
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -21,11 +21,13 @@ fs:
 meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
+    0c121041-33ed-43c2-b57a-f9fe3001c8e7: Map # Map
     2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9: Bild # Bild
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
+    04f7222f-7818-43e0-8dc5-5da11bcdf34f: 'New Chapter' # New Chapter
     5ca31310-0358-4910-9e30-5605bc0c3c17: Zwischentitel # Zwischentitel
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Lead Text' # Lead Text
@@ -37,6 +39,7 @@ meta:
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
+    8348b893-eaba-48e4-b4ab-15c74d5c44d0: Typ # Typ
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
     38431ae0-6666-499d-a0a8-a2a332b0b6ce: Footnote # Footnote
@@ -45,10 +48,13 @@ meta:
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Zitat Quelle' # Zitat Quelle
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
+    b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Breite' # Grid Breite
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: 'Bild Monolingual' # Bild Monolingual
+    d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Offset' # Grid Offset
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Text # Text
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: 'Artikel Blöcke' # Artikel Blöcke
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
+    e9282709-5d15-40a7-8b0e-f2fa08c8e74c: Coordinates # Coordinates
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'Headline Level' # Headline Level
     f98e570c-0feb-4f56-98ea-8fcd39709930: Bieldbeschrieb # Bieldbeschrieb
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Artikel Set' # Artikel Set
@@ -73,5 +79,5 @@ system:
   live: true
   name: 'EspaceSuisse Publishing'
   retryDuration: null
-  schemaVersion: 5.5.0.0
+  schemaVersion: 5.6.0.2
   timeZone: $TZ

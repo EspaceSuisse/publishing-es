@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: gridOffset
+instructions: null
+name: 'Grid Offset'
+searchable: false
+settings:
+  defaultValue: 2
+  max: 12
+  min: 1
+  step: 1
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Range
