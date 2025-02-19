@@ -1,0 +1,15 @@
+{% if craft.app.env != 'production' %}
+    <div class="devBar" style="position: fixed; bottom: 0; right: 0; background: #000; color: #fff; padding: 1em;">
+        Env: {{ craft.app.env }} | 
+        {% if entry.section.handle is defined %}
+            Section: {{ entry.section.handle }}
+        {% else %}
+            Category: {{ category.group.handle }}
+        {% endif %} | 
+        {% if currentUser.username is defined %}
+            User: {{ currentUser.username }}
+        {% else %}
+            Not logged in
+        {% endif %}
+    </div>
+{% endif %}
