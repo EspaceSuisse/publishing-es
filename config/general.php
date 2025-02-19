@@ -21,6 +21,9 @@ return GeneralConfig::create()
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
+    ->limitAutoSlugsToAscii(true)
+    ->maxUploadFileSize(App::env('MAX_UPLOAD_FILE_SIZE'))
+
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
         '@assetBaseUrl' => rtrim(getenv('PRIMARY_SITE_URL') . '/assets'),
