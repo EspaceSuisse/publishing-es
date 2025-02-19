@@ -1,6 +1,6 @@
 columnSuffix: null
-handle: img
-instructions: null
+handle: cellImg
+instructions: Monolingual
 name: Bild
 searchable: false
 settings:
@@ -10,7 +10,7 @@ settings:
   allowedKinds: null
   branchLimit: null
   defaultUploadLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
-  defaultUploadLocationSubpath: null
+  defaultUploadLocationSubpath: '{owner.slug}'
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
@@ -19,7 +19,7 @@ settings:
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
-  restrictedLocationSubpath: '{ owner.slug ?? slug }'
+  restrictedLocationSubpath: '{owner.slug}'
   selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: false

@@ -1,4 +1,4 @@
-dateModified: 1739888253
+dateModified: 1739964175
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -21,7 +21,6 @@ fs:
 meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
-    0c121041-33ed-43c2-b57a-f9fe3001c8e7: Map # Map
     2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9: Bild # Bild
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
@@ -44,6 +43,7 @@ meta:
     09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
     38431ae0-6666-499d-a0a8-a2a332b0b6ce: Footnote # Footnote
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
+    98718d66-ebba-40fb-a95e-032706d7bac0: Bild # Bild
     2200945b-b73a-4a89-bc06-0e3927264677: Kasten # Kasten
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Zitat Quelle' # Zitat Quelle
@@ -54,7 +54,6 @@ meta:
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Text # Text
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: 'Artikel Blöcke' # Artikel Blöcke
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
-    e9282709-5d15-40a7-8b0e-f2fa08c8e74c: Coordinates # Coordinates
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'Headline Level' # Headline Level
     f98e570c-0feb-4f56-98ea-8fcd39709930: Bieldbeschrieb # Bieldbeschrieb
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Artikel Set' # Artikel Set

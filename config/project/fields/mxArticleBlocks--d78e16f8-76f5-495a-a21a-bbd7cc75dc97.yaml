@@ -26,6 +26,11 @@ settings:
       __assoc__:
         -
           - uid
+          - c9a8cb19-0442-4761-af7e-5f87723586dd
+    -
+      __assoc__:
+        -
+          - uid
           - 2200945b-b73a-4a89-bc06-0e3927264677 # Kasten
     -
       __assoc__:
@@ -37,11 +42,6 @@ settings:
         -
           - uid
           - 81e82c07-b4c5-40fc-9b89-aa26efa3cae8 # Zitat
-    -
-      __assoc__:
-        -
-          - uid
-          - 0c121041-33ed-43c2-b57a-f9fe3001c8e7 # Map
   includeTableView: false
   maxEntries: null
   minEntries: null
