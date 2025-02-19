@@ -10,8 +10,11 @@
     .all() %}
 
   {# Output them #}
-  {% for entry in entries %}
-    <a href="{{ entry.url }}">{{ entry.title }}</a>
-  {% endfor %}
+   <h2>Artikel mit disem Genre:</h2>
+  <ul>
+    {% for entry in entries %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>
 
 {% endblock %}

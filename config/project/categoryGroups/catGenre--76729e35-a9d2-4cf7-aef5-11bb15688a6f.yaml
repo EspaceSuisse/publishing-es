@@ -38,7 +38,7 @@ fieldLayouts:
         name: Inhalt
         uid: e72ed69c-5962-432b-b873-1a6ab58c61bb
         userCondition: null
-handle: genre
+handle: catGenre
 name: Rubrik
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR

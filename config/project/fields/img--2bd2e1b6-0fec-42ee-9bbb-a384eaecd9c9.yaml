@@ -19,7 +19,7 @@ settings:
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
-  restrictedLocationSubpath: '{ owner.slug ?? slug }'
+  restrictedLocationSubpath: '{ craft.entries().id(object.id).site(craft.app.sites.primarySite).one().owner.slug ?? owner.slug ?? slug }'
   selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: false

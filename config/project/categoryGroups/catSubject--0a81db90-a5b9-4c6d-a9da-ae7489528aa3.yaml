@@ -38,7 +38,7 @@ fieldLayouts:
         name: Inhalt
         uid: 8732783b-ab28-4e2b-9ceb-8f87d9ef6b90
         userCondition: null
-handle: subject
+handle: catSubject
 name: Thema
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR

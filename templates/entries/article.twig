@@ -8,12 +8,12 @@
 
 <a href="/">Home</a>
 <br>
-{% for catGenre in entry.catGenre %}
+{% for catGenre in entry.fieldCatGenre %}
     {% if loop.first %}Genre:{% endif %}
     <a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
 {% endfor %}
 <br>
-{% for catGenre in entry.catSubject %}
+{% for catGenre in entry.fieldCatSubject %}
     {% if loop.first %}Thema:{% endif %}
     <a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
 {% endfor %}

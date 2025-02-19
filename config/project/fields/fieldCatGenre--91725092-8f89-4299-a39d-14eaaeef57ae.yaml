@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: catSubject
+handle: fieldCatGenre
 instructions: null
-name: Thema
+name: Rubrik
 searchable: false
 settings:
   allowSelfRelations: false
@@ -9,10 +9,10 @@ settings:
   maintainHierarchy: false
   maxRelations: 3
   minRelations: 1
-  selectionLabel: '+ Thema'
+  selectionLabel: '+ Rubrik'
   showCardsInGrid: false
   showSiteMenu: false
-  source: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  source: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
