@@ -3,6 +3,7 @@
 
 
 {% block content %}
+
     {% set allEntries = craft.entries.section('artikel').all() %}
     {% set genre = craft.categories.group('catGenre').all() %}
     {% set subject = craft.categories.group('catSubject').all() %}
@@ -45,4 +46,5 @@
             <li><a href="{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
+    
 {% endblock %}
