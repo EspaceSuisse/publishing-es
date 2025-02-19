@@ -1,8 +1,13 @@
-<h1>{{ entry.title }}</h1>
+{% extends "_layout" %}
 
-{% set allEntries = craft.entries.section('artikel').all() %}
-{% set catGenre = craft.categories.group('genre').all() %}
-{% set catSubject = craft.categories.group('subject').all() %}
+
+
+{% block content %}
+    {% set allEntries = craft.entries.section('artikel').all() %}
+    {% set catGenre = craft.categories.group('genre').all() %}
+    {% set catSubject = craft.categories.group('subject').all() %}
+
+    <h1>{{ entry.title }}</h1>
 
     {# Display All Subject Category in Use. Unassigned Items will not be displayed #}
     {% for category in catSubject %}
@@ -33,3 +38,4 @@
             <li><a href="{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
+{% endblock %}

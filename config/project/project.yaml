@@ -1,4 +1,4 @@
-dateModified: 1739964175
+dateModified: 1739964520
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -43,7 +43,6 @@ meta:
     09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
     38431ae0-6666-499d-a0a8-a2a332b0b6ce: Footnote # Footnote
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
-    98718d66-ebba-40fb-a95e-032706d7bac0: Bild # Bild
     2200945b-b73a-4a89-bc06-0e3927264677: Kasten # Kasten
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Zitat Quelle' # Zitat Quelle
