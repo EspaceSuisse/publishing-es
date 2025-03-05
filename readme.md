@@ -18,69 +18,114 @@ Bei Hilfe:
 - Craft CMS Discord: https://discord.com/invite/uuDFCTX
 - Dokumentation: https://craftcms.com/docs/5.x/
 
-## Git Ettiquette
+## Github
 - Es wird niemals im Main Branch gearbeitet sondern nur arbeits branches darin eingechekt.
 - Auf der Lokalen Maschine wird ein Working Branch ausgecheckt in welchen dann commited wird.
 - Wenn das Minimum Viable Product existiert wird pro feature/bug ein branch erstellt und nach erfolgreichem deploment/testing gelöscht.
 - Deployment auf STAGING & LIVE wird via Pull Reuests auf der Github homepage gemacht.
 
-## Basic Concept
+## Craft CMS
 
-### Config
+### Folder Structure
 
-Alle Pfade und variablen werden in die `.env` geschrieben und dann an den entsprechenden Stellen aufgereufen. DIE .ENV DARF NIEMALS INS REPO EINGECHEKCT WERDEN.
+templates/
+│── _layouts/        # Base layouts
+│── _partials/       # Reusable partials (headers, footers, etc.)
+│── _components/     # UI components (buttons, cards, etc.)
+│── _macros/         # Twig macros
+│── pages/           # Page-specific templates
+│── sections/        # Homepage, blog, shop, etc.
+│── index.twig       # Default entry point
 
-Die `.env` variablen werden dann in den config files im Ordner geladen oder können auch im COntrolpanel verwendet werden.
+### Core Concepts
 
-## Templates
+#### Entries & Sections
 
-Templates werden mit Twig geschrieben. Natives PHP wird nicht verwendet (Und ist standardmässig deaktiviert). https://craftcms.com/docs/getting-started-tutorial/build/twig.html
+Craft organizes content into Entries, which belong to Sections.
 
-## Craft Content Architektur:
+- Single: A one-off page (e.g., "About Us").
+- Channel: A collection of entries with the same structure (e.g., "Blog Posts").
+- Structure: Hierarchical entries (e.g., "Documentation" or "Categories").
 
-Im Craft Control Panel können folgende Strukturen gebaut werden:
+📌 Example:
+A blog could have a Channel section named "Blog" with multiple entries (posts).
 
-### Sektionen https://craftcms.com/docs/5.x/reference/element-types/entries.html#sections
-Sektionen sind alle Seiten arten vom CMS. z.b:
+#### Fields & Field Groups
 
-#### Einzeleintrag
-Einzelne Seiten
+Instead of rigid content types, Craft lets you define your own fields and group them for better organization.
 
-- Startseite
-- Artikel Übersicht
-- Kontakt Seite
-- About Seite
+##### Common field types:
+- Plain Text (Titles, summaries)
+- Rich Text (Redactor) (Formatted content)
+- Assets (Images, PDFs)
+- Entries (Relationships between content)
+- Categories & Tags (Organizing content)
+- Lightswitch (On/off toggle)
 
-#### Kanal
-Sich wiederholender Content
+📌 Example:
+A blog post might use:
 
-- Blog Posts
-- Artikel
+- A Plain Text field for the title
+- A Rich Text field for the content
+- An Asset field for the featured image
 
-#### Struktur
-Sich wiederholender COntent, der aber keine feste Reihenfolge hat.
-- Z.b. FAQ
+#####  Matrix Fields (Flexible Content Blocks)
 
-#### Eintragstypen https://craftcms.com/docs/5.x/reference/element-types/entries.html#entry-types
+Matrix fields allow for reusable, structured content blocks, perfect for dynamic page layouts.
 
-Allen Sektionen können *Eintragstypen* hinzugefügt werden. Das sind verschiedene Feldersets.
+A Matrix field contains Block Types, each with its own set of fields.
 
-- Blog Post mit Eintragstyp Kurz
-- Blog Post mit Eintragstyp lang
+📌 Example:
+A Matrix field for a landing page might include:
 
-### Felder https://craftcms.com/docs/5.x/system/fields.html
+- Text Block (Title + Rich Text)
+- Image Block (Asset field + Caption)
+- Quote Block (Plain Text for quote + Author name)
 
-Es gibt sehr viele Felder die mehrfach allen Sektionen zugewiesen werden können. So kann man ein einzelnes Textfeld sowohl in der Blog Sektion als auch auf der Kontakt Page verwendet werden
+Matrix blocks allow editors to build flexible layouts without needing developers to create new templates every time.
 
-#### Matrix Felder https://craftcms.com/docs/5.x/reference/field-types/matrix.html
+#### Categories & Tags
 
-Matrix Felder sind Content Blöcke, die dem Editor eine Feldauswahl beiten, aus denen extrem Individuelle Artikel geschrieben werden können.
+Categories help organize content hierarchically, while Tags are more flexible.
 
-Beispiel:
+📌 Example:
+A "Blog" section could have categories like:
+📂 News → Articles about current events
+📂 Tutorials → Step-by-step guides
 
-Eine Artikel Sektion mit einem Matrix Feld, Welches folgende Optionen hat: Textfeld, Bildfeld, Zitat, Textkasten.
-Diese Blöcke können dann fix fertig vordesignt werden das alle Artikel konsistent wirken, aber der Editor trotzdem die Wahlmöglichkeit hat (Wenn es bei einem Artikel kein Textkasten braucht, dannw ird auch keiner angezeigt.)
+####  Relations (Entries, Assets, Users)
 
-## Kategorien
+Craft allows you to relate content together, so an entry can reference:
 
-Alle Artikel werden in den selben Kanälen gehalten und via Kategorien aufgeteilt und dann auf Kategorien pages automatisch zusammen gefasst.
+- Other Entries (e.g., a blog post linking to related posts)
+- Users (e.g., assigning an author to a post)
+- Assets (e.g., featured images, PDFs)
+
+This makes it easy to create dynamic content relationships across the site.
+
+#### Craft CMS Templating (Twig Basics)
+
+Craft uses Twig for templating, making it easy to pull in content.
+
+📌 Example: Fetching Blog Posts
+
+```
+{% set posts = craft.entries.section('blog').limit(5).all() %}
+{% for post in posts %}
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p>{{ post.summary }}</p>
+{% endfor %}
+```
+📌 Example: Displaying an Image Field
+```
+{% set image = entry.featuredImage.one() %}
+{% if image %}
+    <img src="{{ image.url }}" alt="{{ image.title }}">
+{% endif %}
+```
+
+🔗 Resources
+
+    📘 Official Craft CMS Documentation
+    🛠 Craft CMS GitHub Repo
+    💬 Craft Discord Community
