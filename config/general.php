@@ -22,8 +22,9 @@ return GeneralConfig::create()
     ->preventUserEnumeration()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->limitAutoSlugsToAscii(true)
-    ->maxUploadFileSize(App::env('MAX_UPLOAD_FILE_SIZE'))
+    ->maxUploadFileSize(App::env('MAX_UPLOAD_FILE_SIZE' ?: '5M'))
     ->cpTrigger(App::env('CP_TRIGGER') ?: 'admin')
+    ->timezone(App::env('TIMEZONE') ?: 'Europe/Zurich')
 
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
