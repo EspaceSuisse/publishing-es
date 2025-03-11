@@ -2,100 +2,39 @@
 
 {% block content %}
 
-{% set aufmacherBild = entry.img.one() %}
-{% set articleAuthor = entry.author %}
-{% set supCounter = 1 %} {# Start the superscript counter at 1 #}
+	{% set aufmacherBild = entry.img.one() %}
+	{% set articleAuthor = entry.author %}
+	{% set supCounter = 1 %}
+	{# Start the superscript counter at 1 #}
 
-<a href="/">Home</a>
-<br>
-{% for catGenre in entry.fieldCatGenre %}
-    {% if loop.first %}Genre:{% endif %}
-    <a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
-{% endfor %}
-<br>
-{% for catGenre in entry.fieldCatSubject %}
-    {% if loop.first %}Thema:{% endif %}
-    <a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
-{% endfor %}
+	<a href="/">Home</a>
+	<br>
+	{% for catGenre in entry.fieldCatGenre %}
+		{% if loop.first %}Genre:
+		{% endif %}
+		<a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
+	{% endfor %}
+	<br>
+	{% for catGenre in entry.fieldCatSubject %}
+		{% if loop.first %}Thema:
+		{% endif %}
+		<a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
+	{% endfor %}
 
-<h1>{{ entry.title }}</h1>
+	<h1>{{ entry.title }}</h1>
 
-<p>{{ articleAuthor.fullName }}</p>
+	<p>{{ articleAuthor.fullName }}</p>
 
-<h3>{{ entry.plainText }}</h3>
+	<h3>{{ entry.plainText }}</h3>
 
 
+	<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}">
+	<br>
+	<small>{{ aufmacherBild.imgSource }}</small>
 
-<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}"> <br>
-<small>{{ aufmacherBild.imgSource }}</small>
+	{% include "_components/matrixArticle" %}
 
-{% for block in entry.mxArticleBlocks %} 
-    {% set content = null %} {# Initialize content variable for each block #}
-    {% switch block.type %}
-        
 
-        {% case "cellTxt" %}
-        
-            {% set content = block.richText %}
-
-        {% case "cellTitle" %}
-            <{{ block.headlineLevel }}>{{ block.title }}</{{ block.headlineLevel }}>
-        {% case "cellQuote" %}
-            <blockquote>
-                {{ block.plainText }}
-                {% if block.zitatQuelle %}
-                    — {{ block.zitatQuelle }}
-                {% endif %}
-            </blockquote>
-        {% case "cellBox" %}
-            <h3>{{ block.title }}</h3>
-
-            {% set content = block.richText %}
-
-            {% if block.hyperlink %}
-                <a href="{{ block.hyperlink.value }}">{{ block.hyperlink.label }}</a>
-            {% endif %}
-        {% case "cellImgMonoLingual" %}
-            {% set articleImg = block.img.all() %}
-            {% for asset in articleImg %}
-                <img src="{{ asset.url }}" width="300px" alt="">
-                {{ asset.plainText }}
-                <small>{{ asset.imgSource }}</small>
-            {% endfor %}
-    {% endswitch %}
-
-    {# Process only if content is set #}
-    {% if content %}
-        {% set updatedContent = "" %}
-        {% set splitContent = content|split('<sup>x</sup>') %}
-        
-        {# Iterate through the split content, and manually insert the superscript numbers #}
-        {% for i in 0..(splitContent|length - 1) %}
-            {# Add the part of content before each <sup>X</sup> replacement #}
-            {% set updatedContent = updatedContent ~ splitContent[i] %}
-            
-            {# If we're not at the last part of the split, add the superscript number #}
-            {% if i < (splitContent|length - 1) %}
-                {% set updatedContent = updatedContent ~ '<sup><a href="#footnote-' ~ supCounter ~ '">' ~ supCounter ~ '</a></sup>' %}
-                {% set supCounter = supCounter + 1 %}
-            {% endif %}
-        {% endfor %}
-        
-        {# Output the updated content #}
-        {{ updatedContent|raw }}
-    {% endif %}
-
-{% endfor %}
-
-{# Output the footnotes list, matching the superscript numbers #}
-{% set footnoteCounter = 1 %}
-<ol>
-{% for item in entry.footnote %}
-    <li> <span id="footnote-{{ footnoteCounter }}">{{ footnoteCounter }}</span> <a href="{{ item.url }}">{{ item.label }}</a></li>
-    {% set footnoteCounter = footnoteCounter + 1 %}
-{% endfor %}
-</ol>
-
-{{ entry.author }}
+	{{ entry.author }}
 
 {% endblock %}

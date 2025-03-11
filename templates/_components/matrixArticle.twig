@@ -1,0 +1,16 @@
+{% for block in entry.mxArticleBlocks %}
+	{% set content = null %}
+	{# Initialize content variable for each block #}
+	{% switch block.type %}
+		{% case "cellTxt" %}
+			{% include "_partials/cellRichText" %}
+		{% case "cellTitle" %}
+			{% include "_partials/cellSubtitle" %}
+		{% case "cellQuote" %}
+			{% include "_partials/cellQuote" %}
+		{% case "cellBox" %}
+			{% include "_partials/cellBox" %}
+		{% case "cellImgMonoLingual" %}
+			{% include "_partials/cellImg" %}
+	{% endswitch %}
+{% endfor %}

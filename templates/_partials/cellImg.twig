@@ -1,0 +1,6 @@
+{% set articleImg = block.img.all() %}
+{% for asset in articleImg %}
+	<img src="{{ asset.url }}" width="300px" alt="">
+	{{ asset.plainText }}
+	<small>{{ asset.imgSource }}</small>
+{% endfor %}

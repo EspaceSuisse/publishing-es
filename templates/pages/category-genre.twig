@@ -2,19 +2,21 @@
 
 {% block content %}
 
-  <h1>{{ category.title }}</h1>
+	<h1>{{ category.title }}</h1>
 
-  {# Fetch all entries related to this category #}
-  {% set entries = craft.entries()
+	{# Fetch all entries related to this category #}
+	{% set entries = craft.entries()
     .relatedTo(category)
     .all() %}
 
-  {# Output them #}
-   <h2>Artikel mit disem Genre:</h2>
-  <ul>
-    {% for entry in entries %}
-      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-    {% endfor %}
-  </ul>
+	{# Output them #}
+	<h2>Artikel mit disem Genre:</h2>
+	<ul>
+		{% for entry in entries %}
+			<li>
+				<a href="{{ entry.url }}">{{ entry.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
 
 {% endblock %}

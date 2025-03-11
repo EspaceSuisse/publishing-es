@@ -1,8 +1,7 @@
-
-    <!doctype html>
-    <html lang="{{ craft.app.language }}">
-        <body class="{{ entry.section.handle ?? category.group.handle }}">
-            {% block content %}{# all the content #}{% endblock %}
-            {% include "_partials/devBar" %}
-        </body>
-    </html>
+<!doctype html>
+<html lang="{{ craft.app.language }}">
+	<body class="{{ entry.section.handle ?? category.group.handle }}">
+		{% block content %}{# all the content #}{% endblock %}
+		{% include "_partials/devBar" %}
+	</body>
+</html>

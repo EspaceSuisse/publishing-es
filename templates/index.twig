@@ -1,50 +1,60 @@
 {% extends "_layouts/main" %}
 
 
-
 {% block content %}
 
-    {% set allEntries = craft.entries.section('artikel').all() %}
-    {% set genre = craft.categories.group('catGenre').all() %}
-    {% set subject = craft.categories.group('catSubject').all() %}
+	{% set allEntries = craft.entries.section('artikel').all() %}
+	{% set genre = craft.categories.group('catGenre').all() %}
+	{% set subject = craft.categories.group('catSubject').all() %}
 
-    <h1>{{ entry.title }}</h1>
+	<h1>{{ entry.title }}</h1>
 
-    {# Display All Subject Category in Use. Unassigned Items will not be displayed #}
-    
-    <ul>
-        {% for category in genre %}
-            {% if loop.first %}
-                <li><h2>{{ category.group.name }}</h2></li>
-            {% endif %}
-            
-            {% set entries = craft.entries.relatedTo(category).all() %}
-            {% if entries|length > 0 %}
-                <li><a href="{{ category.url }}">{{ category.title }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 
-    <ul>
-        {% for category in subject %}
-            {% if loop.first %}
-                <li><h2>{{ category.group.name }}</h2></li>
-            {% endif %}
-            
-            {% set entries = craft.entries.relatedTo(category).all() %}
-            {% if entries|length > 0 %}
-                <li><a href="{{ category.url }}">{{ category.title }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+	<ul>
+		{% for category in genre %}
+			{% if loop.first %}
+				<li>
+					<h2>{{ category.group.name }}</h2>
+				</li>
+			{% endif %}
+
+			{% set entries = craft.entries.relatedTo(category).all() %}
+			{% if entries|length > 0 %}
+				<li>
+					<a href="{{ category.url }}">{{ category.title }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+	<ul>
+		{% for category in subject %}
+			{% if loop.first %}
+				<li>
+					<h2>{{ category.group.name }}</h2>
+				</li>
+			{% endif %}
+
+			{% set entries = craft.entries.relatedTo(category).all() %}
+			{% if entries|length > 0 %}
+				<li>
+					<a href="{{ category.url }}">{{ category.title }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
 
 
-    
-    <ul>
-        <li><h2>Artikel</h2></li>
-        {% for item in allEntries %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-    </ul>
-    
+	<ul>
+		<li>
+			<h2>Artikel</h2>
+		</li>
+		{% for item in allEntries %}
+			<li>
+				<a href="{{ item.url }}">{{ item.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
 {% endblock %}

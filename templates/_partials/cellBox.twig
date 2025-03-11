@@ -1,0 +1,7 @@
+<h3>{{ block.title }}</h3>
+
+{% set content = block.richText %}
+
+{% if block.hyperlink %}
+	<a href="{{ block.hyperlink.value }}">{{ block.hyperlink.label }}</a>
+{% endif %}
