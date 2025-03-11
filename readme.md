@@ -129,3 +129,15 @@ Craft uses Twig for templating, making it easy to pull in content.
     📘 Official Craft CMS Documentation
     🛠 Craft CMS GitHub Repo
     💬 Craft Discord Community
+
+
+### Naming COnventions
+
+- All handles need to be in English
+- All templates us CamelCase
+- Fields Prefix: `f` eg `fRichText`
+- Matrix Field Prefix: `mx` eg `mxArticleBlocks`
+- Fields within Matrix field Prefix: `cell` eg `cellText`
+- Entry Type sets: prefix: `et` eg `etArticleSet`
+
+This is super important for orientation in Templates

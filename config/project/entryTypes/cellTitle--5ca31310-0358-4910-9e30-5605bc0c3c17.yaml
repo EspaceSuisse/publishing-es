@@ -38,7 +38,7 @@ fieldLayouts:
           -
             dateAdded: '2024-12-18T11:18:45+00:00'
             elementCondition: null
-            fieldUid: eb32810d-6901-4788-b8bb-d4ca4124652b # Headline Level
+            fieldUid: eb32810d-6901-4788-b8bb-d4ca4124652b # Überschrift
             handle: null
             includeInCards: false
             instructions: null

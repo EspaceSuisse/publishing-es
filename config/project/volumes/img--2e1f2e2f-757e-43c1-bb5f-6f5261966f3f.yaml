@@ -7,6 +7,15 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            content: "# Use Automated Field if Possible\r\n- only use Fotograf Field if Photographer is not from EspaceSuisse\r\n- Img Source Example: Unsplash, Flicker, Staatskanzlei."
+            dateAdded: '2025-03-11T08:33:10+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: ddb838f7-2890-459c-b68c-d29930868fef
+            userCondition: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -37,9 +46,35 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2025-03-11T08:38:07+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: c279a0de-5702-4476-82ba-2d0c797f51f4
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2024-12-18T11:23:27+00:00'
             elementCondition: null
-            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Bild Quelle
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Fotograf
             handle: null
             includeInCards: false
             instructions: null
@@ -49,6 +84,54 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a5f36884-58d8-414b-a0fa-668660832f96
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-11T08:33:10+00:00'
+            elementCondition: null
+            fieldUid: 2ed24e90-d4a5-44e6-a62d-8dca362fbd87 # Author
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 75b4b21a-5411-4ab4-8b1f-05d2e943a35c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-11T08:27:39+00:00'
+            elementCondition: null
+            fieldUid: 8eb00f97-2338-4934-bcf8-efa6dccc68db # Image Licence
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a5092e3e-3b50-4c33-aead-74dec33287d3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-11T08:27:39+00:00'
+            elementCondition: null
+            fieldUid: 282c1783-d7ff-4d44-9822-c78e9a0434ac # Image Library
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 365d334b-d28c-4f0c-8970-bd4b457d7038
             userCondition: null
             warning: null
             width: 100

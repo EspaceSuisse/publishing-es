@@ -92,7 +92,7 @@ fieldLayouts:
         name: Google
         uid: c068604f-53b1-4979-915c-f4215695ea3a
         userCondition: null
-handle: pageSet
+handle: etPageSet
 hasTitleField: true
 icon: null
 name: 'Page Set'

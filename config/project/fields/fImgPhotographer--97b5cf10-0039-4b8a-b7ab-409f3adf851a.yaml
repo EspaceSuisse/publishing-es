@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: fImgSource
+handle: fImgPhotographer
 instructions: null
-name: 'Bild Quelle'
+name: Fotograf
 searchable: false
 settings:
   byteLimit: null
@@ -12,5 +12,5 @@ settings:
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\fields\PlainText

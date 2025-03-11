@@ -21,22 +21,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
-          -
-            dateAdded: '2024-12-18T14:43:10+00:00'
-            elementCondition: null
-            fieldUid: f98e570c-0feb-4f56-98ea-8fcd39709930 # Bieldbeschrieb
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2662c4f2-61e2-4bc6-b854-7ad0d86578f8
-            userCondition: null
-            warning: null
-            width: 75
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
         userCondition: null

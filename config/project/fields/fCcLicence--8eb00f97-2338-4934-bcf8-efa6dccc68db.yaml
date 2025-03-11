@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: fTyp
+handle: fCcLicence
 instructions: null
-name: Typ
+name: 'Image Licence'
 searchable: false
 settings:
   customOptions: false
@@ -10,10 +10,21 @@ settings:
       __assoc__:
         -
           - label
-          - 'Typ A'
+          - 'Creative Commons 1'
         -
           - value
-          - typA
+          - cc1
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Creative Commons 2'
+        -
+          - value
+          - cc2
         -
           - default
           - '1'
@@ -21,35 +32,13 @@ settings:
       __assoc__:
         -
           - label
-          - 'Typ B'
+          - 'Creative Commons 3'
         -
           - value
-          - typB
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Typ C'
-        -
-          - value
-          - typC
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Typ D'
-        -
-          - value
-          - typD
+          - cc3
         -
           - default
           - ''
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\RadioButtons
+type: craft\fields\Dropdown
