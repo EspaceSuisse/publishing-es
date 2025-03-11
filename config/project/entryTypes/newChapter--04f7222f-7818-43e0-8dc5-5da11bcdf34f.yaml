@@ -38,7 +38,7 @@ fieldLayouts:
           -
             dateAdded: '2025-02-18T08:08:37+00:00'
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Lead Text
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text
             handle: null
             includeInCards: false
             instructions: null

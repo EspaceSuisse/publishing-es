@@ -1,0 +1,32 @@
+{% macro articleImage(handleParam, transformKey) %}
+
+    {%- set image = handleParam is iterable ? handleParam : [handleParam] -%}
+
+    {%- if handleParam | length -%}
+
+        {% if handleParam.extension == 'svg' %}
+			{{ svg(image) }}
+		{% else %}
+
+            {% set filenameMods = 'Enter your stuff here' | ascii | kebab %}
+
+            {%- set transformedImages = craft.imagerx.transformImage(
+                image, 
+                transformKey,
+                {filenamePattern: ( filenameMods ~ '_{shorthash}.{extension}')}
+            ) -%}
+
+            {% set smallestImage = transformedImages | first %}
+
+            <img 
+                sizes="100vw"
+                src="{{ smallestImage.url }}" 
+                srcset="{{ craft.imagerx.srcset(transformedImages) }}" 
+                alt="{{ macro.imageNaming(image) }}" 
+                loading="lazy"/>
+
+        {% endif %}
+
+    {%- endif -%}
+
+{% endmacro %}

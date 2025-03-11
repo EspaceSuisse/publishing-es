@@ -1,18 +1,18 @@
 columnSuffix: null
-handle: fImgLibrary
+handle: fCatGenre
 instructions: null
-name: 'Image Library'
+name: Rubrik
 searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
   maintainHierarchy: false
-  maxRelations: 1
-  minRelations: null
-  selectionLabel: null
+  maxRelations: 3
+  minRelations: 1
+  selectionLabel: '+ Rubrik'
   showCardsInGrid: false
   showSiteMenu: false
-  source: 'group:99345ed5-ddea-4d5c-a8b4-9eb9a451aece' # catSource
+  source: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

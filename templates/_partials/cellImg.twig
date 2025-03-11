@@ -1,6 +1,5 @@
-{% set articleImg = block.img.all() %}
-{% for asset in articleImg %}
-	<img src="{{ asset.url }}" width="300px" alt="">
-	{{ asset.plainText }}
-	<small>{{ asset.imgSource }}</small>
-{% endfor %}
+{% import '_partials/macroImage' as macro %}
+
+{% set asset = block.fImg.all() %}
+
+{{ macro.articleImage(asset, 'articleImage') }}

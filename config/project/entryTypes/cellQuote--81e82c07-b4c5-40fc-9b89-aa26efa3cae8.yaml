@@ -10,7 +10,7 @@ fieldLayouts:
           -
             dateAdded: '2024-12-18T14:39:20+00:00'
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Lead Text
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text
             handle: null
             includeInCards: false
             instructions: null
@@ -26,7 +26,7 @@ fieldLayouts:
           -
             dateAdded: '2024-12-18T11:21:29+00:00'
             elementCondition: null
-            fieldUid: b572ca4f-491d-4184-8bba-ebf12597ed59 # Zitat Quelle
+            fieldUid: b572ca4f-491d-4184-8bba-ebf12597ed59 # Plain Tex Line
             handle: null
             includeInCards: true
             instructions: null

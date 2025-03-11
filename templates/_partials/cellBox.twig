@@ -1,7 +1,7 @@
 <h3>{{ block.title }}</h3>
 
-{% set content = block.richText %}
+{% set content = block.fRichText %}
 
-{% if block.hyperlink %}
-	<a href="{{ block.hyperlink.value }}">{{ block.hyperlink.label }}</a>
+{% if block.fUrl %}
+	<a href="{{ block.fUrl.value }}">{{ block.fUrl.label }}</a>
 {% endif %}

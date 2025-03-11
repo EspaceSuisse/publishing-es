@@ -21,7 +21,7 @@ settings:
       __assoc__:
         -
           - label
-          - h3
+          - H3
         -
           - value
           - h3
@@ -32,7 +32,7 @@ settings:
       __assoc__:
         -
           - label
-          - h4
+          - H4
         -
           - value
           - h4
@@ -43,7 +43,7 @@ settings:
       __assoc__:
         -
           - label
-          - h5
+          - H5
         -
           - value
           - h5
@@ -52,4 +52,4 @@ settings:
           - ''
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\RadioButtons
+type: craft\fields\Dropdown

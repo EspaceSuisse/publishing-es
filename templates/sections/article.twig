@@ -2,20 +2,20 @@
 
 {% block content %}
 
-	{% set aufmacherBild = entry.img.one() %}
+	{% set aufmacherBild = entry.fImg.one() %}
 	{% set articleAuthor = entry.author %}
 	{% set supCounter = 1 %}
 	{# Start the superscript counter at 1 #}
 
 	<a href="/">Home</a>
 	<br>
-	{% for catGenre in entry.fieldCatGenre %}
+	{% for catGenre in entry.fCatGenre %}
 		{% if loop.first %}Genre:
 		{% endif %}
 		<a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
 	{% endfor %}
 	<br>
-	{% for catGenre in entry.fieldCatSubject %}
+	{% for catGenre in entry.fCatSubject %}
 		{% if loop.first %}Thema:
 		{% endif %}
 		<a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
@@ -25,12 +25,11 @@
 
 	<p>{{ articleAuthor.fullName }}</p>
 
-	<h3>{{ entry.plainText }}</h3>
+	<h3>{{ entry.fRichText }}</h3>
 
 
 	<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}">
-	<br>
-	<small>{{ aufmacherBild.imgSource }}</small>
+
 
 	{% include "_components/matrixArticle" %}
 

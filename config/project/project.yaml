@@ -1,4 +1,4 @@
-dateModified: 1741683238
+dateModified: 1741705969
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -36,7 +36,7 @@ meta:
     5ca31310-0358-4910-9e30-5605bc0c3c17: Zwischentitel # Zwischentitel
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
     8eb00f97-2338-4934-bcf8-efa6dccc68db: 'Image Licence' # Image Licence
-    38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Lead Text' # Lead Text
+    38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text' # Plain Text
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Zitat # Zitat
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
@@ -53,7 +53,7 @@ meta:
     99345ed5-ddea-4d5c-a8b4-9eb9a451aece: catSource # catSource
     2200945b-b73a-4a89-bc06-0e3927264677: Kasten # Kasten
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
-    b572ca4f-491d-4184-8bba-ebf12597ed59: 'Zitat Quelle' # Zitat Quelle
+    b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Tex Line' # Plain Tex Line
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
     b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Breite' # Grid Breite
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: 'Bild Monolingual' # Bild Monolingual
@@ -63,7 +63,6 @@ meta:
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     eb32810d-6901-4788-b8bb-d4ca4124652b: Überschrift # Überschrift
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
-    f98e570c-0feb-4f56-98ea-8fcd39709930: Bieldbeschrieb # Bieldbeschrieb
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Artikel Set' # Artikel Set
     ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
 plugins:
@@ -75,6 +74,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  imager-x:
+    edition: pro
+    enabled: true
+    licenseKey: Q66KERQ0US0VFVKAFRDGYOPG
+    schemaVersion: 4.0.0
   retour:
     edition: standard
     enabled: true

@@ -1,16 +1,16 @@
 columnSuffix: null
-handle: fCaption
+handle: fPlainTextLine
 instructions: null
-name: Bieldbeschrieb
+name: 'Plain Tex Line'
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
-  code: false
-  initialRows: 2
-  multiline: true
+  code: true
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\fields\PlainText
