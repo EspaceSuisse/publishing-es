@@ -39,6 +39,18 @@ templates/
 
 ### Core Concepts
 
+#### Database & YAML Sync
+
+Craft CMS stores content in the database, while structural settings (fields, sections, entry types) are synced via YAML files (`config/project/`).
+When changes are made in the control panel, Craft updates both. Commit YAML files to version control and run craft up after pulling changes to keep environments in sync.
+
+⚠️ WARNING: NO STRUCTURAL CHANGE OR SETTING WILL EVER TAKE PLACE ON THE PRODUCTION ENVIRONEMENT ⚠️ 
+
+#### Environment Variables (`.env`)
+
+Craft CMS uses `.env` files to manage environment-specific settings like database credentials, API keys, and site URLs.
+Rename `.env.example.dev` to `.env` and update the values accordingly. Never commit `.env` files to version control—use `.env.example` as a reference instead.
+
 #### Entries & Sections
 
 Craft organizes content into Entries, which belong to Sections.
@@ -102,6 +114,7 @@ Craft allows you to relate content together, so an entry can reference:
 - Assets (e.g., featured images, PDFs)
 
 This makes it easy to create dynamic content relationships across the site.
+
 
 #### Craft CMS Templating (Twig Basics)
 
