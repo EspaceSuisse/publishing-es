@@ -1,14 +1,13 @@
 columnSuffix: null
-handle: seoPage
+handle: fSeoArticle
 instructions: null
-name: 'SEO Page'
+name: 'SEO Article'
 searchable: false
 settings:
   elementDisplayPreviewType: google
   facebookEnabledFields: ''
   facebookTabEnabled: ''
   generalEnabledFields:
-    - seoPreview
     - seoTitle
     - seoDescription
     - seoImage

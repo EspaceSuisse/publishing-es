@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: gridWidth
+handle: fGridWidth
 instructions: null
 name: 'Grid Breite'
 searchable: false

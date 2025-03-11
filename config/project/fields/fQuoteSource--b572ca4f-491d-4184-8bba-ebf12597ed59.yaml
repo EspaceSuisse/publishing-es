@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: imgSource
+handle: fQuoteSource
 instructions: null
-name: 'Bild Quelle'
+name: 'Zitat Quelle'
 searchable: false
 settings:
   byteLimit: null
@@ -12,5 +12,5 @@ settings:
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\fields\PlainText

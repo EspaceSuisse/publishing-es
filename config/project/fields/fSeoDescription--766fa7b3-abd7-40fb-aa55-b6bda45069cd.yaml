@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: seoDescription
+handle: fSeoDescription
 instructions: 'Der Text der in der Google Suche unter dem Titel angezeigt wird.'
 name: 'Google Text'
 searchable: false

@@ -1,14 +1,14 @@
 columnSuffix: null
-handle: caption
+handle: fImgSource
 instructions: null
-name: Bieldbeschrieb
+name: 'Bild Quelle'
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
   code: false
-  initialRows: 2
-  multiline: true
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

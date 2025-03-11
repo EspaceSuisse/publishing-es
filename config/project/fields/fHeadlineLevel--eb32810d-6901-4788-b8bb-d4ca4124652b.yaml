@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: headlineLevel
+handle: fHeadlineLevel
 instructions: null
 name: 'Headline Level'
 searchable: false
