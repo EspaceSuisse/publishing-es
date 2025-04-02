@@ -5,12 +5,14 @@ Die ES Publishing Page beinhalted Artikel aus Inforaum und Raum & Umwelt.
 ## Installation
 
 1. Clone dieses Git Repo via https (SSH wird von der ES Firewall geblockt)
-2. Starte Docker
-3. Terminal > `composer install`
-4. Terminal > `ddev start`. Falls ddev nicht installiert ist: https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/ 
-5. Lade ein db dump herunter und installiere via: `ddev import-db --file=YOUR_PATH_TO_SQL_DUMP`
-6. Rename `.env.example.dev` zu `.env` und fülle die variablen ein
-7. Success.
+2. Installiere [Docker Desktop]([https://pages.github.com/](https://www.docker.com/products/docker-desktop/)) (Free Plan)
+3. Installiere [DDEV]([https://pages.github.com/](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/ ))
+4. Terminal > `composer install`
+5. Terminal > `ddev start`
+6. Lade ein db dump herunter und installiere via: `ddev import-db --file=YOUR_PATH_TO_SQL_DUMP`
+7. Rename `.env.example.dev` zu `.env` und fülle die variablen ein
+8. Lade die Assets (Bilder & PDF Daten usw.) in das öffentliche verzeichniss (Häufig `web` oder `www`)
+9. Success.
 
 Bei Hilfe:
 
