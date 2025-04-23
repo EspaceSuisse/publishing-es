@@ -1,80 +1,77 @@
 color: null
 fieldLayouts:
-  86a4330c-37bc-4c04-a927-4dafbc1ea032:
+  63033601-5637-49f6-8b9e-290c24c2f022:
+    cardView:
+      - 'layoutElement:0fd93863-06fa-4f17-a5f2-8b25a3c7d129'
     tabs:
       -
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-02-18T08:03:09+00:00'
-            disabled: false
+            dateAdded: '2024-12-18T11:08:22+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 6766cfcc-50a1-49e4-aaf7-6af718ae7ca9
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-02-18T08:08:37+00:00'
-            elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5b579e00-a4a1-4a09-b302-f9612282ad35
+            uid: 0fd93863-06fa-4f17-a5f2-8b25a3c7d129
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-02-18T08:04:54+00:00'
-            elementCondition: null
-            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Bild
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1486815f-8978-4a09-adf4-611de6c8eac8
-            userCondition: null
-            warning: null
-            width: 100
-        name: Content
-        uid: 98800a45-a03b-42df-bbdb-ad5d53f0555b
+        name: Inhalt
+        uid: a9620b28-6116-4747-a99a-45b96c770935
         userCondition: null
-handle: newChapter
-hasTitleField: true
-icon: bookmark
-name: 'New Chapter'
-showSlugField: true
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T12:39:07+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Breite
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ac46815b-4a22-4d24-b312-de0c017d49c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T12:39:07+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Offset
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3da876d3-a3de-4c13-b684-af8899b3edb4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Layout
+        uid: 3929d890-cdda-4809-b680-fb80873d635c
+        userCondition: null
+handle: typeTxtI18n
+hasTitleField: false
+icon: file-lines
+name: 'Text i18N'
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

@@ -7,7 +7,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: "# Use Automated Field if Possible\r\n- only use Fotograf Field if Photographer is not from EspaceSuisse\r\n- Img Source Example: Unsplash, Flicker, Staatskanzlei."
+            content: "Bitte alles ausfüllen, so weit als möglich\r\n\r\n## Gängige Quellen:\r\n- Flickr\r\n- Unsplash\r\n- Wikimedia Commons\r\n- EspaceSuisse\r\n\r\n## Gängige Bildlizenzen:\r\n- CC BY-SA 2.0\r\n- CC BY-SA 4.0\r\n- Public Domain"
             dateAdded: '2025-03-11T08:33:10+00:00'
             displayInPane: true
             elementCondition: null
@@ -46,95 +46,73 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            dateAdded: '2025-03-11T08:38:07+00:00'
-            disabled: false
+            dateAdded: '2025-04-23T10:31:04+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            handle: null
             includeInCards: false
             instructions: null
-            label: null
-            name: null
-            orientation: null
-            placeholder: null
+            label: 'Alt Text'
             providesThumbs: false
-            readonly: false
-            requirable: true
             required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: c279a0de-5702-4476-82ba-2d0c797f51f4
+            tip: 'Bild beschrieb für Leser mit Sehbehinderung.'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90532aec-3315-4929-89a3-182fcdc3a2a1
             userCondition: null
             warning: null
             width: 100
           -
             dateAdded: '2024-12-18T11:23:27+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Fotograf
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Fotograf
             providesThumbs: false
             required: true
-            tip: null
+            tip: 'Alain Beuret'
             type: craft\fieldlayoutelements\CustomField
             uid: a5f36884-58d8-414b-a0fa-668660832f96
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
-            dateAdded: '2025-03-11T08:33:10+00:00'
+            dateAdded: '2025-04-23T07:25:16+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 2ed24e90-d4a5-44e6-a62d-8dca362fbd87 # Author
-            handle: null
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+            handle: assetProvider
             includeInCards: false
             instructions: null
-            label: null
+            label: Provider
             providesThumbs: false
             required: false
-            tip: null
+            tip: 'Wikimedia Commons'
             type: craft\fieldlayoutelements\CustomField
-            uid: 75b4b21a-5411-4ab4-8b1f-05d2e943a35c
+            uid: b88ef0cb-0f9e-4be5-b385-7f44cd23169f
             userCondition: null
             warning: null
-            width: 100
+            width: 25
           -
-            dateAdded: '2025-03-11T08:27:39+00:00'
+            dateAdded: '2025-04-23T07:25:16+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 8eb00f97-2338-4934-bcf8-efa6dccc68db # Image Licence
-            handle: null
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+            handle: assetLIcence
             includeInCards: false
             instructions: null
-            label: null
+            label: Lizenz
             providesThumbs: false
             required: false
-            tip: null
+            tip: 'CC BY-SA 2.0'
             type: craft\fieldlayoutelements\CustomField
-            uid: a5092e3e-3b50-4c33-aead-74dec33287d3
+            uid: d9e2b39e-38af-4ccc-ba63-59b3b5867d29
             userCondition: null
             warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-11T08:27:39+00:00'
-            elementCondition: null
-            fieldUid: 282c1783-d7ff-4d44-9822-c78e9a0434ac # Image Library
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 365d334b-d28c-4f0c-8970-bd4b457d7038
-            userCondition: null
-            warning: null
-            width: 100
+            width: 25
         name: Inhalt
         uid: 8fbc089a-23b3-4c45-a770-d16436c054c5
         userCondition: null

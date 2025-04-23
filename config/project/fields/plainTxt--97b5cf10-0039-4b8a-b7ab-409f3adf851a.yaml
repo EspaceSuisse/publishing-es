@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: fPlainText
+handle: plainTxt
 instructions: null
 name: 'Plain Text'
 searchable: false
@@ -7,10 +7,10 @@ settings:
   byteLimit: null
   charLimit: null
   code: false
-  initialRows: 2
-  multiline: true
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\fields\PlainText

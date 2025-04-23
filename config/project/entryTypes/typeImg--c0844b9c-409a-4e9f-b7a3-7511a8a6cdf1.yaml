@@ -7,8 +7,9 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-02-19T11:22:33+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Bild
+            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Article Img
             handle: null
             includeInCards: false
             instructions: null
@@ -24,10 +25,10 @@ fieldLayouts:
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
         userCondition: null
-handle: cellImgMonoLingual
+handle: typeImg
 hasTitleField: false
 icon: image
-name: 'Bild Monolingual'
+name: 'Article Image'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
