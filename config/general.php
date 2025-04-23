@@ -12,20 +12,18 @@ use craft\config\GeneralConfig;
 use craft\helpers\App;
 
 return GeneralConfig::create()
-    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
     ->defaultWeekStartDay(1)
-    // Prevent generated URLs from including "index.php"
     ->omitScriptNameInUrls()
-    // Preload Single entries as Twig variables
     ->preloadSingles()
-    // Prevent user enumeration attacks
     ->preventUserEnumeration()
-    // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->limitAutoSlugsToAscii(true)
     ->maxUploadFileSize(App::env('MAX_UPLOAD_FILE_SIZE' ?: '5M'))
     ->cpTrigger(App::env('CP_TRIGGER') ?: 'admin')
     ->timezone(App::env('TIMEZONE') ?: 'Europe/Zurich')
-
+    ->securityKey(App::env('CRAFT_SECURITY_KEY'))
+    ->generateTransformsBeforePageLoad(true)
+    ->convertFilenamesToAscii(true)
+    ->transformGifs(false) 
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
         '@assetBaseUrl' => rtrim(getenv('PRIMARY_SITE_URL') . '/assets'),
