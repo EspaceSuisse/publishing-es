@@ -1,0 +1,44 @@
+columnSuffix: null
+handle: fCcLicence
+instructions: null
+name: 'Image Licence'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Creative Commons 1'
+        -
+          - value
+          - cc1
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Creative Commons 2'
+        -
+          - value
+          - cc2
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Creative Commons 3'
+        -
+          - value
+          - cc3
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

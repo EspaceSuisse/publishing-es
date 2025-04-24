@@ -1,49 +1,42 @@
 columnSuffix: null
 handle: mxArticleBlocks
 instructions: null
-name: ArticleBlocks
+name: 'Artikel Blöcke'
 searchable: false
 settings:
-  createButtonLabel: 'Artikel Element'
+  createButtonLabel: 'Neue Textfelder'
   defaultIndexViewMode: cards
-  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - 5ca31310-0358-4910-9e30-5605bc0c3c17 # Subtitle
-        -
-          - name
-          - Zwischentitel
+          - 5ca31310-0358-4910-9e30-5605bc0c3c17 # Zwischentitel
     -
       __assoc__:
         -
           - uid
-          - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text i18N
+          - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text
     -
       __assoc__:
         -
           - uid
-          - 2200945b-b73a-4a89-bc06-0e3927264677 # Box
+          - c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1 # Bild Monolingual
     -
       __assoc__:
         -
           - uid
-          - 81e82c07-b4c5-40fc-9b89-aa26efa3cae8 # Quote
-        -
-          - name
-          - Zitat
+          - 2200945b-b73a-4a89-bc06-0e3927264677 # Kasten
     -
       __assoc__:
         -
           - uid
-          - c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1 # Article Image
+          - 04f7222f-7818-43e0-8dc5-5da11bcdf34f # New Chapter
     -
       __assoc__:
         -
           - uid
-          - ba109802-9948-4c83-85bd-d61f696378a3 # Article Image i18n
+          - 81e82c07-b4c5-40fc-9b89-aa26efa3cae8 # Zitat
   includeTableView: false
   maxEntries: null
   minEntries: null

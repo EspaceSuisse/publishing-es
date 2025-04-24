@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: articleImg
+handle: fImg
 instructions: null
-name: 'Article Img'
+name: Bild
 searchable: false
 settings:
   allowSelfRelations: false
@@ -9,19 +9,18 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
-  defaultPlacement: end
   defaultUploadLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: 1
-  minRelations: 1
+  maxRelations: null
+  minRelations: null
   previewMode: full
   restrictFiles: false
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   restrictedLocationSubpath: '{ craft.entries().id(object.id).site(craft.app.sites.primarySite).one().owner.slug ?? owner.slug ?? slug }'
-  selectionLabel: 'Bild hinzufügen'
+  selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: false
   showUnpermittedFiles: false
@@ -29,7 +28,7 @@ settings:
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: large
+  viewMode: list
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets

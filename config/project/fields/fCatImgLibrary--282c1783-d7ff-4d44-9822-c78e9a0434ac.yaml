@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: fCatImgLibrary
+instructions: null
+name: 'Image Library'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:99345ed5-ddea-4d5c-a8b4-9eb9a451aece' # catSource
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

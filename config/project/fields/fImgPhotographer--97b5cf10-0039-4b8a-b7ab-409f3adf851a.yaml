@@ -1,16 +1,16 @@
 columnSuffix: null
-handle: plainTextI18nMultiline
+handle: fImgPhotographer
 instructions: null
-name: 'Plain Text i18n Multiline'
+name: Fotograf
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
   code: false
   initialRows: 4
-  multiline: true
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\fields\PlainText

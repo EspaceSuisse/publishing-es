@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: hLevel
+handle: fHeadlineLevel
 instructions: null
-name: 'H Level'
+name: Überschrift
 searchable: false
 settings:
   customOptions: false
@@ -15,12 +15,6 @@ settings:
           - value
           - h2
         -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
           - default
           - ''
     -
@@ -31,12 +25,6 @@ settings:
         -
           - value
           - h3
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
         -
           - default
           - '1'
@@ -49,12 +37,6 @@ settings:
           - value
           - h4
         -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
           - default
           - ''
     -
@@ -65,12 +47,6 @@ settings:
         -
           - value
           - h5
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
         -
           - default
           - ''

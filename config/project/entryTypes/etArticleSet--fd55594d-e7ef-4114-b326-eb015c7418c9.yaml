@@ -2,35 +2,13 @@ color: null
 fieldLayouts:
   a2bae6e5-b24f-480c-8840-77318c35fe87:
     cardView:
+      - authors
+      - 'layoutElement:354464c7-9d21-4189-9f3a-1d1349ebce86'
       - postDate
-      - 'layoutElement:f75053de-6c04-4645-a9f5-f88d93ccbf0a'
     tabs:
       -
         elementCondition: null
         elements:
-          -
-            dateAdded: '2024-12-18T11:46:25+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Article Img
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Aufmacher Bild'
-            providesThumbs: true
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: adf71057-53e3-4784-9ae3-db24387e946c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-23T08:10:27+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: ccb9dece-cc63-4b57-88ad-a3010159c036
-            userCondition: null
           -
             autocapitalize: true
             autocomplete: false
@@ -63,13 +41,12 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-01-08T14:34:46+00:00'
-            editCondition: null
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
-            label: Lead
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -80,30 +57,38 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-12-18T10:45:45+00:00'
-            editCondition: null
             elementCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
             required: true
-            tip: 'Wird in der Google Suche dargestellt. Nicht im Artikel selber'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
             userCondition: null
-            warning: 'Aufgrund dieses Textes klicken Besucher auf Google Suche auf diesen Artikel'
+            warning: null
             width: 100
           -
-            dateAdded: '2025-04-23T08:10:27+00:00'
+            dateAdded: '2024-12-18T11:46:25+00:00'
             elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 3ccdefd8-e23f-41dd-95e5-7aa281a823f0
+            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Bild
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Aufmacherbild
+            providesThumbs: true
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: adf71057-53e3-4784-9ae3-db24387e946c
             userCondition: null
+            warning: null
+            width: 100
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
-            editCondition: null
             elementCondition: null
             fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
             handle: null
@@ -120,7 +105,6 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
-            editCondition: null
             elementCondition: null
             fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
             handle: null
@@ -142,19 +126,9 @@ fieldLayouts:
             uid: 3993fac1-ba1c-454c-9013-425272f0f6b1
             userCondition: null
           -
-            dateAdded: '2025-04-23T08:12:38+00:00'
-            dismissible: false
-            elementCondition: null
-            style: tip
-            tip: 'Würfle dir den Artikel aus diesen Elementen zusammen'
-            type: craft\fieldlayoutelements\Tip
-            uid: 43f60bf9-5e50-4d87-8353-567d716447de
-            userCondition: null
-          -
             dateAdded: '2024-12-18T11:08:52+00:00'
-            editCondition: null
             elementCondition: null
-            fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # ArticleBlocks
+            fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # Artikel Blöcke
             handle: null
             includeInCards: false
             instructions: null
@@ -180,8 +154,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-01-08T13:10:34+00:00'
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: "1. In Texteditor für Verortung der Fussnote ein X hochgestellt einsetzen\r\n2. Fussnoten entsprechend der Reihenfolge einfügen.\r\n3. Die nummerierung wird dann vom System automatisch vergeben"
+            type: craft\fieldlayoutelements\Tip
+            uid: c66d513b-cf50-464d-87e6-f46db72a09f1
+            userCondition: null
+        name: Quellen
+        uid: 812ef1ba-2337-4f06-9c7a-b512aa0eaaeb
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2024-12-18T10:52:25+00:00'
-            editCondition: null
             elementCondition: null
             fieldUid: 8615cf7b-5ca8-4def-a0f2-1370cdee3c8e # SEO Article
             handle: null
@@ -199,10 +187,10 @@ fieldLayouts:
         name: Google
         uid: 132df382-76c4-4b56-ab8f-95fb71743dd4
         userCondition: null
-handle: typeArticleSet
+handle: etArticleSet
 hasTitleField: true
 icon: null
-name: 'Article Set'
+name: 'Artikel Set'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fSeoDescription
-instructions: null
+instructions: 'Der Text der in der Google Suche unter dem Titel angezeigt wird.'
 name: 'Google Text'
 searchable: false
 settings:
