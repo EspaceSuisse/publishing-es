@@ -1,0 +1,6 @@
+siteUid: 5f286764-7e74-4475-989a-21ca80692fad # EspaceSuisse Publishing DE
+sortOrder: 1
+template: pages/category-overview
+uriParts:
+  - alle-rubriken
+uriPattern: alle-rubriken

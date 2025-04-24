@@ -1,4 +1,4 @@
-dateModified: 1745479767
+dateModified: 1745488828
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -50,7 +50,6 @@ meta:
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
-    99345ed5-ddea-4d5c-a8b4-9eb9a451aece: catSource # catSource
     2200945b-b73a-4a89-bc06-0e3927264677: Kasten # Kasten
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Tex Line' # Plain Tex Line

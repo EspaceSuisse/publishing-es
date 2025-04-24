@@ -3,12 +3,14 @@
 		Env:
 		{{ craft.app.env }}
 		|
+		Sprache: 
+		{{ craft.app.language }} | 
 		{% if entry.section.handle is defined %}
 			Section:
 			{{ entry.section.handle }}
 		{% else %}
 			Category:
-			{{ category.group.handle }}
+			{{ category.group.handle ?? '?' }}
 		{% endif %}
 		|
 		{% if currentUser.username is defined %}

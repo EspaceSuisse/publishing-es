@@ -1,0 +1,60 @@
+{# This macro prints the url to the category overview and takes a label for the visible link label #}
+
+{% macro catOverview(uriParamDe, uriParamFr, labelParam) %}
+    {% if craft.app.language == 'de-CH' %}
+        <a href="{{ url(uriParamDe) }}">{{ labelParam | t }}</a>
+    {% else %}
+        <a href="{{ url(uriParamFr) }}">{{ labelParam | t }}</a>
+    {% endif %}
+{% endmacro %}
+
+{# This template is used to display the site navigation #}
+{# It includes links to the home page, category overviews, and an about page #}
+
+{# Fetch categories for navigation #}
+{# Limit the number of categories displayed to 3 for each group #}
+{# This is done to optimize the navigation display #}
+{# The categories are fetched from the 'catSubject' and 'catGenre' groups #}
+{# These groups are defined in the Craft CMS control panel #}
+
+{% set subjectNav = craft.categories.group('catSubject').with(['title','url']).limit(3).all() %}
+{% set genreNav = craft.categories.group('catGenre').with(['title','url']).limit(3).all() %}
+
+
+<nav>
+	<ul>
+		<li>
+			<a href="/">{{ 'Home' | t }}</a>
+		</li>
+		<li>
+			{{ _self.catOverview('alle-rubriken', 'tous-les-themes', 'Themen' ) }}
+			<ul>
+				{% for category in subjectNav %}
+					<li>
+						<a href="{{ category.url }}">{{ category.title }}</a>
+					</li>
+					{% if loop.last %}
+						<li>{{ _self.catOverview('alle-themen', 'tous-les-themes', 'Alle Themen') }}</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</li>
+
+		<li>
+			{{ _self.catOverview('alle-rubriken', 'tous-les-themes', 'Rubriken' ) }}
+			<ul>
+				{% for category in genreNav %}
+					<li>
+						<a href="{{ category.url }}">{{ category.title }}</a>
+					</li>
+					{% if loop.last %}
+						<li>{{ _self.catOverview('alle-rubriken', 'tous-les-themes', 'Alle Rubriken' ) }}</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</li>
+		<li>
+			<a href="#">About</a>
+		</li>
+	</ul>
+</nav>
