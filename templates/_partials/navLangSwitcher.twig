@@ -1,0 +1,25 @@
+{# Determine the current element (entry, category, product, etc.) #}
+{% set currentElement = entry ?? category ?? product ?? null %}
+
+{% if currentElement %}
+    {% for site in craft.app.sites.allSites %}
+        {% set localized = craft.categories()
+            .id(currentElement.id)
+            .site(site.handle)
+            .one()
+        %}
+
+        {# If no category found, try entries instead #}
+        {% if not localized %}
+            {% set localized = craft.entries()
+                .id(currentElement.id)
+                .site(site.handle)
+                .one()
+            %}
+        {% endif %}
+
+        {% if localized and localized.enabled %}
+            <a href="{{ localized.url }}">{{ site.language|upper }}</a>
+        {% endif %}
+    {% endfor %}
+{% endif %}

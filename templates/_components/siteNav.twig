@@ -1,60 +1,77 @@
-{# This macro prints the url to the category overview and takes a label for the visible link label #}
+{% import '_macros/macroCatOverview' as catMacro %}
 
-{% macro catOverview(uriParamDe, uriParamFr, labelParam) %}
-    {% if craft.app.language == 'de-CH' %}
-        <a href="{{ url(uriParamDe) }}">{{ labelParam | t }}</a>
-    {% else %}
-        <a href="{{ url(uriParamFr) }}">{{ labelParam | t }}</a>
-    {% endif %}
-{% endmacro %}
+{# This is the site navigation for the header #}
+{# It uses the macro to print out the category overview link #}
+{# The two categories are fetched with only url and title #}
 
-{# This template is used to display the site navigation #}
-{# It includes links to the home page, category overviews, and an about page #}
-
-{# Fetch categories for navigation #}
-{# Limit the number of categories displayed to 3 for each group #}
-{# This is done to optimize the navigation display #}
-{# The categories are fetched from the 'catSubject' and 'catGenre' groups #}
-{# These groups are defined in the Craft CMS control panel #}
-
+{# Fetch the two category section with only url and title and only 3 per cat #}
 {% set subjectNav = craft.categories.group('catSubject').with(['title','url']).limit(3).all() %}
 {% set genreNav = craft.categories.group('catGenre').with(['title','url']).limit(3).all() %}
 
+{% set labelSubject = 'Themen' %}
+{% set labelGenre = 'Rubriken' %}
 
-<nav>
-	<ul>
+	<nav aria-label="{{'Main navigation'|t}}"> <ul>
 		<li>
 			<a href="/">{{ 'Home' | t }}</a>
 		</li>
-		<li>
-			{{ _self.catOverview('alle-rubriken', 'tous-les-themes', 'Themen' ) }}
-			<ul>
+
+		{# starts the dropdown for the subject dropdown #}
+		<li class="hasDropdown">
+			<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-1">{{ labelSubject | t }}</button>
+			<ul
+				class="dropdown" id="dropdown-menu-2" role="menu">
+				{# print out the navi dropdown #}
 				{% for category in subjectNav %}
 					<li>
 						<a href="{{ category.url }}">{{ category.title }}</a>
 					</li>
-					{% if loop.last %}
-						<li>{{ _self.catOverview('alle-themen', 'tous-les-themes', 'Alle Themen') }}</li>
-					{% endif %}
 				{% endfor %}
+				<li>{{ catMacro.catOverview('alle-themen', 'tous-les-themes', 'Alle' ~ labelSubject) }}</li>
 			</ul>
 		</li>
 
-		<li>
-			{{ _self.catOverview('alle-rubriken', 'tous-les-themes', 'Rubriken' ) }}
-			<ul>
+		{# starts the dropdown for the genre dropdown #}
+		<li class="hasDropdown">
+			<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-1">{{ labelGenre | t }}</button>
+			<ul class="dropdown" id="dropdown-menu-2" role="menu">
 				{% for category in genreNav %}
 					<li>
 						<a href="{{ category.url }}">{{ category.title }}</a>
 					</li>
-					{% if loop.last %}
-						<li>{{ _self.catOverview('alle-rubriken', 'tous-les-themes', 'Alle Rubriken' ) }}</li>
-					{% endif %}
 				{% endfor %}
+				<li>{{ catMacro.catOverview('alle-rubriken', 'tous-les-themes', 'Alle' ~ labelGenre) }}</li>
 			</ul>
 		</li>
 		<li>
 			<a href="#">About</a>
 		</li>
+        {% include "_partials/navLangSwitcher.twig" %}
 	</ul>
 </nav>
+
+{# Ads a .open class to the dropdown list and removes it if a dropdown is already open #}
+{% js %}
+document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.dropdownLink').forEach(button => {
+            button.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const parentLi = button.closest('li');
+            const dropdown = parentLi.querySelector('.dropdown');
+
+            // Close all other dropdowns
+            document.querySelectorAll('ul.dropdown.open').forEach(openDropdown => {
+                if (openDropdown !== dropdown) {
+                openDropdown.classList.remove('open');
+                }
+            });
+
+            // Toggle current dropdown
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+            }
+            });
+        });
+    });
+{% endjs %}
