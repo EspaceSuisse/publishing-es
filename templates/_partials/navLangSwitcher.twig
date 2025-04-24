@@ -19,7 +19,7 @@
         {% endif %}
 
         {% if localized and localized.enabled %}
-            <a href="{{ localized.url }}">{{ site.language|upper }}</a>
+            <a href="{{ localized.url }}">{{ site.language |replace({'de-CH': 'de', 'fr-CH': "fr"}) }}</a>
         {% endif %}
     {% endfor %}
 {% endif %}
