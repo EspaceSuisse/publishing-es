@@ -1,7 +1,11 @@
 <!doctype html>
 <html lang="{{ craft.app.language }}">
+	{% include "_incl/metaHead" %}
 	<body class="{{ entry.section.handle ?? category.group.handle }}">
-		{% block content %}{# all the content #}{% endblock %}
+		<div id="app">
+			{% include "_components/site_header" %}
+			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
+		</div>
 		{% include "_partials/devBar" %}
 	</body>
 </html>
