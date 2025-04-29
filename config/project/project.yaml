@@ -1,4 +1,30 @@
-dateModified: 1745479767
+dateModified: 1745907200
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+      tableAttributes:
+        - status
+        - postDate
+        - authors
+        - link
+        - 'field:91725092-8f89-4299-a39d-14eaaeef57ae' # Rubrik
+        - 'field:2897cc3f-95c9-4148-80b9-fd663d11f977' # Thema
+      type: native
 email:
   fromEmail: kaspar.allenbach@espacesuisse.ch
   fromName: 'EspaceSuisse Publishing'
@@ -26,44 +52,44 @@ meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
-    2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9: Bild # Bild
+    2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9: 'Article Img' # Article Img
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
     2ed24e90-d4a5-44e6-a62d-8dca362fbd87: Author # Author
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
-    04f7222f-7818-43e0-8dc5-5da11bcdf34f: 'New Chapter' # New Chapter
-    5ca31310-0358-4910-9e30-5605bc0c3c17: Zwischentitel # Zwischentitel
+    5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
-    8eb00f97-2338-4934-bcf8-efa6dccc68db: 'Image Licence' # Image Licence
-    38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text' # Plain Text
+    38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text i18n' # Plain Text i18n
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
-    81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Zitat # Zitat
+    81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
-    97b5cf10-0039-4b8a-b7ab-409f3adf851a: Fotograf # Fotograf
+    97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
     212f7ab4-64f9-4b3c-92e4-fc78442435a9: Url # Url
-    282c1783-d7ff-4d44-9822-c78e9a0434ac: 'Image Library' # Image Library
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
+    826bddc1-fa89-4b66-b1ab-6924ab5aa9c3: 'Plain Text i18n Multiline' # Plain Text i18n Multiline
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8348b893-eaba-48e4-b4ab-15c74d5c44d0: Typ # Typ
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
-    09087e84-41bc-4451-91af-6be5abe8388d: Text # Text
+    09087e84-41bc-4451-91af-6be5abe8388d: 'Text i18n' # Text i18n
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
     99345ed5-ddea-4d5c-a8b4-9eb9a451aece: catSource # catSource
-    2200945b-b73a-4a89-bc06-0e3927264677: Kasten # Kasten
+    2200945b-b73a-4a89-bc06-0e3927264677: Box # Box
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
-    b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Tex Line' # Plain Tex Line
+    b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Article Img i18n' # Article Img i18n
+    b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
     b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Breite' # Grid Breite
-    c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: 'Bild Monolingual' # Bild Monolingual
+    ba109802-9948-4c83-85bd-d61f696378a3: 'Article Image i18n' # Article Image i18n
+    c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: 'Article Image' # Article Image
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Offset' # Grid Offset
-    d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Text # Text
-    d78e16f8-76f5-495a-a21a-bbd7cc75dc97: 'Artikel Blöcke' # Artikel Blöcke
+    d4bf6dfa-d2c6-45dc-9550-68e2b143520e: 'Text i18N' # Text i18N
+    d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
-    eb32810d-6901-4788-b8bb-d4ca4124652b: Überschrift # Überschrift
+    eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
-    fd55594d-e7ef-4114-b326-eb015c7418c9: 'Artikel Set' # Artikel Set
+    fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
 plugins:
   ckeditor:
@@ -79,6 +105,11 @@ plugins:
     enabled: true
     licenseKey: Q66KERQ0US0VFVKAFRDGYOPG
     schemaVersion: 4.0.0
+  ohdear:
+    edition: standard
+    enabled: true
+    licenseKey: NE67WJ7K4BNECPA4BCBNHFI2
+    schemaVersion: 1.0.0
   retour:
     edition: standard
     enabled: true

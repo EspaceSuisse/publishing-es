@@ -111,6 +111,7 @@ tabs:
         width: 100
       -
         dateAdded: '2024-12-18T12:06:18+00:00'
+        editCondition: null
         elementCondition: null
         fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text
         handle: null
