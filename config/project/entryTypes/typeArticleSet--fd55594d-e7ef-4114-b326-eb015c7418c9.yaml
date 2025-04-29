@@ -24,7 +24,16 @@ fieldLayouts:
             uid: adf71057-53e3-4784-9ae3-db24387e946c
             userCondition: null
             warning: null
-            width: 100
+            width: 25
+          -
+            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!"
+            dateAdded: '2025-04-29T06:25:34+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 02017aaf-a36b-4cac-9644-1ec620c81753
+            userCondition: null
+            width: 75
           -
             dateAdded: '2025-04-23T08:10:27+00:00'
             elementCondition: null
@@ -72,12 +81,12 @@ fieldLayouts:
             label: Lead
             providesThumbs: false
             required: false
-            tip: null
+            tip: 'Beim Leser interesse wecken'
             type: craft\fieldlayoutelements\CustomField
             uid: f75053de-6c04-4645-a9f5-f88d93ccbf0a
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2024-12-18T10:45:45+00:00'
             editCondition: null
@@ -89,12 +98,12 @@ fieldLayouts:
             label: null
             providesThumbs: false
             required: true
-            tip: 'Wird in der Google Suche dargestellt. Nicht im Artikel selber'
+            tip: 'Wird in der Google Suche dargestellt.'
             type: craft\fieldlayoutelements\CustomField
             uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
             userCondition: null
-            warning: 'Aufgrund dieses Textes klicken Besucher auf Google Suche auf diesen Artikel'
-            width: 100
+            warning: null
+            width: 50
           -
             dateAdded: '2025-04-23T08:10:27+00:00'
             elementCondition: null
