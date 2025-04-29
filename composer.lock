@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aaac03899d86781c13941b925da3c274",
+    "content-hash": "0ba51cc102d359fab6162eca08293a58",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -483,11 +483,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.7.3",
+            "version": "5.7.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/c55baf92246ee7c4088cc7fa3942dcd2c93c1a27",
-                "reference": "c55baf92246ee7c4088cc7fa3942dcd2c93c1a27",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/0a211b2bd1a834b7e15f16514ed2be494a3aa2f2",
+                "reference": "0a211b2bd1a834b7e15f16514ed2be494a3aa2f2",
                 "shasum": ""
             },
             "require": {
@@ -584,7 +584,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-04-23T17:03:05+00:00"
+            "time": "2025-04-25T21:06:00+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -3330,11 +3330,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "5.1.12",
+            "version": "5.1.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/a2f6fe4ec2fafb747735deafb72a2b929b80d60e",
-                "reference": "a2f6fe4ec2fafb747735deafb72a2b929b80d60e",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/cc9616d067f1650845603eeb0adacf685e0565ab",
+                "reference": "cc9616d067f1650845603eeb0adacf685e0565ab",
                 "shasum": ""
             },
             "require": {
@@ -3386,7 +3386,7 @@
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
-            "time": "2025-04-04T02:36:35+00:00"
+            "time": "2025-04-24T23:56:25+00:00"
         },
         {
             "name": "ohdearapp/health-check-results",
@@ -4911,17 +4911,40 @@
         },
         {
             "name": "spomky-labs/pki-framework",
-            "version": "1.2.2",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Spomky-Labs/pki-framework.git",
+                "reference": "5ff1dcc21e961b60149a80e77f744fc047800b31"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/pki-framework/zipball/5ac374c3e295c8b917208ff41b4d30f76668478c",
-                "reference": "5ac374c3e295c8b917208ff41b4d30f76668478c",
+                "url": "https://api.github.com/repos/Spomky-Labs/pki-framework/zipball/5ff1dcc21e961b60149a80e77f744fc047800b31",
+                "reference": "5ff1dcc21e961b60149a80e77f744fc047800b31",
                 "shasum": ""
             },
             "require": {
-                "brick/math": "^0.10|^0.11|^0.12",
+                "brick/math": "^0.10|^0.11|^0.12|^0.13",
                 "ext-mbstring": "*",
                 "php": ">=8.1"
+            },
+            "require-dev": {
+                "ekino/phpstan-banned-code": "^1.0|^2.0|^3.0",
+                "ext-gmp": "*",
+                "ext-openssl": "*",
+                "infection/infection": "^0.28|^0.29",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpstan/extension-installer": "^1.3|^2.0",
+                "phpstan/phpstan": "^1.8|^2.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0|^2.0",
+                "phpstan/phpstan-phpunit": "^1.1|^2.0",
+                "phpstan/phpstan-strict-rules": "^1.3|^2.0",
+                "phpunit/phpunit": "^10.1|^11.0|^12.0",
+                "rector/rector": "^1.0|^2.0",
+                "roave/security-advisories": "dev-latest",
+                "symfony/string": "^6.4|^7.0",
+                "symfony/var-dumper": "^6.4|^7.0",
+                "symplify/easy-coding-standard": "^12.0"
             },
             "suggest": {
                 "ext-bcmath": "For better performance (or GMP)",
@@ -4934,6 +4957,7 @@
                     "SpomkyLabs\\Pki\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4978,7 +5002,21 @@
                 "x509",
                 "x690"
             ],
-            "time": "2025-01-03T09:35:48+00:00"
+            "support": {
+                "issues": "https://github.com/Spomky-Labs/pki-framework/issues",
+                "source": "https://github.com/Spomky-Labs/pki-framework/tree/1.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Spomky",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2025-04-25T15:57:13+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
