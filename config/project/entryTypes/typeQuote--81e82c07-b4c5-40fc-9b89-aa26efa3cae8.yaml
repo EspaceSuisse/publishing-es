@@ -1,51 +1,51 @@
 color: null
 fieldLayouts:
   63c70567-8281-4c5f-9dae-73e288e87634:
-    cardView:
-      - 'layoutElement:be8eced6-7257-4a31-a5ae-aac01139fd0d'
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-18T14:39:20+00:00'
+            dateAdded: '2025-04-23T10:26:30+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Zitat
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d7cca186-6a29-492e-8db3-cfd33a11eb91
+            uid: 7e098318-ddaf-4aad-9071-cfc5414098be
             userCondition: null
             warning: null
-            width: 75
+            width: 100
           -
-            dateAdded: '2024-12-18T11:21:29+00:00'
+            dateAdded: '2025-04-23T10:26:30+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: b572ca4f-491d-4184-8bba-ebf12597ed59 # Plain Tex Line
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
-            label: null
+            label: UrheberIn
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: be8eced6-7257-4a31-a5ae-aac01139fd0d
+            uid: 69647ff8-3a46-4222-9134-7d3b6fffd58e
             userCondition: null
             warning: null
-            width: 25
+            width: 100
         name: Inhalt
         uid: 80ae1dd6-4f37-4682-99fb-5950713e3a10
         userCondition: null
-handle: cellQuote
+handle: typeQuote
 hasTitleField: false
 icon: quote-left
-name: Zitat
+name: Quote
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -2,7 +2,8 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: fd55594d-e7ef-4114-b326-eb015c7418c9 # Artikel Set
+    name: 'Artikel Zutaten'
+    uid: fd55594d-e7ef-4114-b326-eb015c7418c9 # Article Set
 handle: artikel
 maxAuthors: 1
 name: Artikel

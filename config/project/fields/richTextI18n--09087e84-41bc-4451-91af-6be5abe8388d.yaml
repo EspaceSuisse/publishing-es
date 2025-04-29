@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: fRichText
+handle: richTextI18n
 instructions: null
-name: Text
+name: 'Text i18n'
 searchable: false
 settings:
   availableTransforms: ''

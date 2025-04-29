@@ -37,8 +37,9 @@ fieldLayouts:
             width: 75
           -
             dateAdded: '2024-12-18T11:18:45+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: eb32810d-6901-4788-b8bb-d4ca4124652b # Überschrift
+            fieldUid: eb32810d-6901-4788-b8bb-d4ca4124652b # H Level
             handle: null
             includeInCards: false
             instructions: null
@@ -54,10 +55,10 @@ fieldLayouts:
         name: Inhalt
         uid: 5042406c-43fc-4495-898d-3ca36374cbdd
         userCondition: null
-handle: cellTitle
+handle: typeSubtitle
 hasTitleField: true
 icon: heading
-name: Zwischentitel
+name: Subtitle
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

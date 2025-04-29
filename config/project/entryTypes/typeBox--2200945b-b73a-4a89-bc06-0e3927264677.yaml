@@ -1,16 +1,23 @@
 color: null
 fieldLayouts:
-  8adfccba-d66f-4d1c-8b98-f0209111b33e:
+  c1c33481-6c7d-4b77-b4f9-b5e160ddfcd2:
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: '2024-12-18T11:38:19+00:00'
+            elementCondition: null
+            heading: 'Der klassische blaue Kasten aus dem Inforaum für Zusatzinfos'
+            type: craft\fieldlayoutelements\Heading
+            uid: 0efc282b-8345-43f2-b1ed-9153ff62cfa4
+            userCondition: null
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-12-18T10:42:49+00:00'
+            dateAdded: '2024-12-18T11:35:16+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,14 +38,15 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: f48d648f-07d9-4d2d-9e1b-0fc104ab5e91
+            uid: 07ae4c59-b0ad-44d8-8bfd-a1cc493e6a39
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-18T10:44:16+00:00'
+            dateAdded: '2024-12-18T11:38:19+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             includeInCards: false
             instructions: null
@@ -47,14 +55,15 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fe25a13d-22f3-4f98-9d62-8cfbbb56c3b1
+            uid: 9a5e8d45-10ce-458d-b464-69f56653ca78
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-18T10:44:59+00:00'
+            dateAdded: '2024-12-18T11:38:19+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text
+            fieldUid: 212f7ab4-64f9-4b3c-92e4-fc78442435a9 # Url
             handle: null
             includeInCards: false
             instructions: null
@@ -63,20 +72,21 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 23d1efa2-4667-456d-8023-fa0b8b825a0a
+            uid: 8fb919e8-4a3f-4dff-a45b-36d0b55945b8
             userCondition: null
             warning: null
             width: 100
         name: Inhalt
-        uid: b93622c6-3558-4064-b5dc-9c3256af0390
+        uid: 1fc15a0d-6f6a-4fc0-8e61-4c7506104737
         userCondition: null
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-18T10:51:17+00:00'
+            dateAdded: '2025-02-18T09:03:23+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 91b81ff9-4af2-440b-b42a-16821f2d0d5c # SEO Page
+            fieldUid: 8348b893-eaba-48e4-b4ab-15c74d5c44d0 # Typ
             handle: null
             includeInCards: false
             instructions: null
@@ -85,17 +95,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: dccd1960-7cc9-4be1-9b4a-7d6b0fce57a4
+            uid: 66c06d27-b7de-403c-9d8f-60ce84c52266
             userCondition: null
             warning: null
             width: 100
-        name: Google
-        uid: c068604f-53b1-4979-915c-f4215695ea3a
+        name: Layout
+        uid: 435d7c9d-1e64-4c0f-8867-202e1a3658d3
         userCondition: null
-handle: etPageSet
+handle: typeBox
 hasTitleField: true
-icon: null
-name: 'Page Set'
+icon: cart-flatbed-boxes
+name: Box
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
