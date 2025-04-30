@@ -22,13 +22,39 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
+          -
+            dateAdded: '2025-04-29T07:28:17+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Bildlegende
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8f941e2d-0d96-43b6-8e5b-26670955e460
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2025-04-29T07:32:47+00:00'
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Bildquelle: Doppelklick aufs Bild'
+            type: craft\fieldlayoutelements\Tip
+            uid: 1aec61e3-44c2-4574-80f6-ca95dd325fc2
+            userCondition: null
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
         userCondition: null
-handle: typeImg
+handle: articleImg
 hasTitleField: false
 icon: image
-name: 'Article Image'
+name: Image
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

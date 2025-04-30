@@ -38,12 +38,17 @@ settings:
       __assoc__:
         -
           - uid
-          - c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1 # Article Image
+          - c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1 # Image
     -
       __assoc__:
         -
           - uid
-          - ba109802-9948-4c83-85bd-d61f696378a3 # Article Image i18n
+          - ba109802-9948-4c83-85bd-d61f696378a3 # Image i18n
+    -
+      __assoc__:
+        -
+          - uid
+          - f636f8a5-c9a2-4976-9ccf-f73a58c3fabf # Article Image Gallery
   includeTableView: false
   maxEntries: null
   minEntries: null

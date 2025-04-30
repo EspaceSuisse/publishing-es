@@ -1,3 +1,7 @@
 description: null
 handle: espacesuisse
 name: EspaceSuisse
+permissions:
+  - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'saveentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel

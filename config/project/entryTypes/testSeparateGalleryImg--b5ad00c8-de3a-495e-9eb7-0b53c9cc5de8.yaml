@@ -1,15 +1,15 @@
 color: null
 fieldLayouts:
-  9eb71394-1e19-4afa-b424-60e2d602b7d5:
+  ae37812d-9c1a-462d-aea3-f99e0053d5de:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-23T08:01:20+00:00'
+            dateAdded: '2025-04-29T09:39:10+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Article Img i18n
+            fieldUid: 8423a2cf-6dcc-46b6-a196-16b2f63bf219 # Test, nested img
             handle: null
             includeInCards: false
             instructions: null
@@ -18,17 +18,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e004b8db-a4fd-4096-abd1-8fa0f2b3a24a
+            uid: 73947028-37fa-440d-9d1b-ef7ef1869691
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 0dd90caa-0a5d-48ef-8331-204f105d5d90
+        uid: 4d80970e-6de2-4d64-8a37-ceb08e422f59
         userCondition: null
-handle: articleImageI18n
+handle: testSeparateGalleryImg
 hasTitleField: false
-icon: image-polaroid
-name: 'Article Image i18n'
+icon: null
+name: 'Test separate gallery img'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -1,0 +1,38 @@
+color: null
+fieldLayouts:
+  b1a7e021-3c5f-42e1-a2a5-39d8728567ab:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-29T07:30:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 4b6337e2-afe6-4b96-a285-d544f0ff0fdc # Image Gallery
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9e19ae7c-cd20-4c72-974b-627c0242f9ab
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e5cdc8a3-8fd7-4277-b485-a3f0876e6652
+        userCondition: null
+handle: articleImgGallery
+hasTitleField: false
+icon: rectangle-history
+name: 'Article Image Gallery'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

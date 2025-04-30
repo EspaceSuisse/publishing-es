@@ -110,6 +110,23 @@ tabs:
         userCondition: null
         width: 100
       -
+        dateAdded: '2025-04-29T07:06:49+00:00'
+        editCondition: null
+        elementCondition: null
+        fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+        handle: null
+        includeInCards: false
+        instructions: null
+        label: Funktion
+        providesThumbs: false
+        required: false
+        tip: 'Z.b. «Anwältin, stellvertretende Direktorin von EspaceSuisse»'
+        type: craft\fieldlayoutelements\CustomField
+        uid: b4789b93-a202-4a87-a724-f555549a25f2
+        userCondition: null
+        warning: null
+        width: 100
+      -
         dateAdded: '2024-12-18T12:06:18+00:00'
         editCondition: null
         elementCondition: null
