@@ -1,6 +1,6 @@
 baseUrl: $PRIMARY_SITE_URL
 enabled: true
-handle: siteDE
+handle: default
 hasUrls: true
 language: de-CH
 name: 'EspaceSuisse Publishing DE'

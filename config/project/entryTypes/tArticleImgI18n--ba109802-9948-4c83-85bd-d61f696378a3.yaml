@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         uid: 0dd90caa-0a5d-48ef-8331-204f105d5d90
         userCondition: null
-handle: articleImgI18n
+handle: tArticleImgI18n
 hasTitleField: false
 icon: image-polaroid
 name: 'Image i18n'

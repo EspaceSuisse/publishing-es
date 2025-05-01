@@ -1,6 +1,6 @@
 baseUrl: $SITE_URL_FR
 enabled: '1'
-handle: siteFR
+handle: espacesuissePublishingFr
 hasUrls: true
 language: fr-CH
 name: 'EspaceSuisse Publishing FR'

@@ -1,6 +1,6 @@
 defaultPlacement: end
 fieldLayouts:
-  cd92531f-51f0-4ab0-85e9-9e047bd871f7:
+  a14fcf5a-c5bd-4cb2-91d8-79e22e7070b5:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-12-18T10:54:49+00:00'
+            dateAdded: '2025-03-11T07:58:55+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,24 +31,24 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: 75b8d53e-980c-4181-9193-fb989c7305e2
+            uid: 78a642c9-33c3-4d69-a109-13187497dd90
             userCondition: null
             warning: null
             width: 100
-        name: Inhalt
-        uid: e72ed69c-5962-432b-b873-1a6ab58c61bb
+        name: Content
+        uid: bca53383-a67e-4a8c-9dc8-69f047492ef9
         userCondition: null
-handle: catGenre
-name: Rubrik
+handle: catsource
+name: catSource
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR
     hasUrls: true
-    template: pages/category-genre.twig
-    uriFormat: 'genre/{slug}'
+    template: catsource/_category.twig
+    uriFormat: 'catsource/{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
     hasUrls: true
-    template: pages/category-genre.twig
-    uriFormat: 'rubrik/{slug}'
+    template: catsource/_category.twig
+    uriFormat: 'catsource/{slug}'
 structure:
   maxLevels: 1
-  uid: 6e63c6c5-e683-4d2c-a5c5-e31e40a5eb94
+  uid: b1a469de-63b5-4b92-b663-f5033494523b

@@ -43,11 +43,11 @@ name: Thema
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR
     hasUrls: true
-    template: pages/article-by-category.twig
+    template: pages/category-subject.twig
     uriFormat: 'sujet/{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
     hasUrls: true
-    template: pages/article-by-category.twig
+    template: pages/category-subject.twig
     uriFormat: 'thema/{slug}'
 structure:
   maxLevels: 1

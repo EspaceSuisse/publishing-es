@@ -80,39 +80,39 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            dateAdded: '2025-04-23T07:25:16+00:00'
+            dateAdded: '2025-05-01T12:21:29+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
-            handle: assetProvider
+            fieldUid: 2d392e7b-19e3-42f2-bb21-f8710194fd3f # Plain Text
+            handle: null
             includeInCards: false
             instructions: null
             label: Provider
             providesThumbs: false
             required: false
-            tip: 'Wikimedia Commons'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b88ef0cb-0f9e-4be5-b385-7f44cd23169f
+            uid: d96297fe-00ce-47f2-bef1-d1568b989e97
             userCondition: null
             warning: null
-            width: 25
+            width: 100
           -
-            dateAdded: '2025-04-23T07:25:16+00:00'
+            dateAdded: '2025-05-01T12:21:29+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
-            handle: assetLIcence
+            fieldUid: 34360219-963c-430e-9b56-640ddc7d6eda # Plain Text
+            handle: null
             includeInCards: false
             instructions: null
-            label: Lizenz
+            label: Licence
             providesThumbs: false
             required: false
-            tip: 'CC BY-SA 2.0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d9e2b39e-38af-4ccc-ba63-59b3b5867d29
+            uid: 0fdcf21c-ef88-4c7c-8ed0-82636504a1ff
             userCondition: null
             warning: null
-            width: 25
+            width: 100
         name: Inhalt
         uid: 8fbc089a-23b3-4c45-a770-d16436c054c5
         userCondition: null
