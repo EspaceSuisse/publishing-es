@@ -1,0 +1,12 @@
+{% macro articleImage(handleParam, transformKey) %}
+
+    {% set altText = handleParam.fPlainTextI18nMultiline %}
+    {% set imgTitle = handleParam.title %}
+    {% set imgphotographer = handleParam.fPlainTxt %}
+    {% set imgProvider = handleParam.fPlainTxt2 %}
+    {% set imgLicence = handleParam.fPlainTxt3 %}
+
+    <img src="{{ handleParam.url }}" alt="{{ altText }}" width="200" title="{{ imgTitle }}">
+    <p>{{ imgphotographer }}, {{ imgProvider }} - {{ imgLicence }}</p>
+
+{% endmacro %}

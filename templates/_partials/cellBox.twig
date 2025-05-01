@@ -1,7 +1,4 @@
-<h3>{{ block.title }}</h3>
-
-{% set content = block.fRichText %}
-
-{% if block.fUrl %}
-	<a href="{{ block.fUrl.value }}">{{ block.fUrl.label }}</a>
-{% endif %}
+<div class="box">
+	<h3>{{ block.title }}</h3>
+	{{ block.fRichTextI18n }}
+</div>

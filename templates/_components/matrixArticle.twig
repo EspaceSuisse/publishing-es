@@ -1,16 +1,25 @@
-{% for block in entry.mxArticleBlocks %}
-	{% set content = null %}
-	{# Initialize content variable for each block #}
+{# Call the matrix article set #}
+{% set articleMatrix = entry.fMxArticleBlocks.all() %}
+
+{# loop trough all blocks #}
+{% for block in articleMatrix %}
+
+{# switch trough all blocks. actual block code in partials #}
 	{% switch block.type %}
-		{% case "cellTxt" %}
-			{% include "_partials/cellRichText" %}
-		{% case "cellTitle" %}
+
+		{% case "tSubtitle" %}
 			{% include "_partials/cellSubtitle" %}
-		{% case "cellQuote" %}
-			{% include "_partials/cellQuote" %}
-		{% case "cellBox" %}
+		{% case "tBox" %}
 			{% include "_partials/cellBox" %}
-		{% case "cellImgMonoLingual" %}
+		{% case "tTxtI18n" %}
+			{% include "_partials/cellRichText" %}
+		{% case "tQuote" %}
+			{% include "_partials/cellQuote" %}
+		{% case "tArticleImg" %}
 			{% include "_partials/cellImg" %}
+		{% case "tArticleImgI18n" %}
+			{% include "_partials/cellImg" %}
+
 	{% endswitch %}
+
 {% endfor %}

@@ -2,38 +2,32 @@
 
 {% block content %}
 	<article class="gridArticle">
-		{% set aufmacherBild = entry.fImg.one() %}
-		{% set articleAuthor = entry.author %}
-		{% set supCounter = 1 %}
-		{# Start the superscript counter at 1 #}
-
-		<a href="/">Home</a>
-		<br>
-		{% for catGenre in entry.fCatGenre %}
-			{% if loop.first %}Genre:
-			{% endif %}
-			<a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
+		{% set aufmacherBild = entry.fArticleImg.one() %}
+		
+		{% for catItem in entry.fCatGenre %}
+			{% if loop.first %}{{'Genre' | t}}:{% endif %}
+			<a href="{{ catItem.url }}">{{ catItem.title }}</a>
 		{% endfor %}
 		<br>
-		{% for catGenre in entry.fCatSubject %}
-			{% if loop.first %}Thema:
-			{% endif %}
-			<a href="{{ catGenre.url }}">{{ catGenre.title }}</a>
+		{% for catItem in entry.fCatSubject %}
+			{% if loop.first %}{{ 'Thema' | t }}:{% endif %}
+			<a href="{{ catItem.url }}">{{ catItem.title }}</a>
 		{% endfor %}
 
 		<h1>{{ entry.title }}</h1>
 
-		<p>{{ articleAuthor.fullName }}</p>
+		<p>{{ entry.author }}</p>
 
-		<h3>{{ entry.fRichText }}</h3>
+		{# Lead Text #}
+		<h3>{{ entry.fPlainTextI18n }}</h3>
+
+		
+		
 
 
 		<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}">
 
 
-		{# {% include "_components/matrixArticle" %} #}
-
-		xx
-		{{ entry.author }}
+		{% include "_components/matrixArticle" %}
 	</article>
 {% endblock %}

@@ -1,5 +1,9 @@
-{% import '_partials/macroImage' as macro %}
+{% import '_macros/macroImage' as macro %}
 
-{% set asset = block.fImg.all() %}
+{% set image = block.fArticleImg.all() %}
 
-{{ macro.articleImage(asset, 'articleImage') }}
+
+
+{% for asset in image %}
+    {{ macro.articleImage(asset, 'articleImage') }}
+{% endfor %}
