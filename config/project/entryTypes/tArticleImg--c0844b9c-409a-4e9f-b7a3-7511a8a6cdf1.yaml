@@ -51,7 +51,7 @@ fieldLayouts:
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
         userCondition: null
-handle: articleImg
+handle: tArticleImg
 hasTitleField: false
 icon: image
 name: Image

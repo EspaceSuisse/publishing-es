@@ -67,7 +67,7 @@ fieldLayouts:
         name: Layout
         uid: 3929d890-cdda-4809-b680-fb80873d635c
         userCondition: null
-handle: typeTxtI18n
+handle: tTxtI18n
 hasTitleField: false
 icon: file-lines
 name: 'Text i18N'

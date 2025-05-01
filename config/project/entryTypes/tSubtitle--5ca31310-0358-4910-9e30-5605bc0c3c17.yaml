@@ -1,51 +1,64 @@
 color: null
 fieldLayouts:
-  63c70567-8281-4c5f-9dae-73e288e87634:
+  5ebb01a2-ac7e-495b-bc10-8bb1b6625184:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-23T10:26:30+00:00'
-            editCondition: null
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-18T11:17:25+00:00'
+            disabled: false
             elementCondition: null
-            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
-            handle: null
+            id: null
             includeInCards: false
+            inputType: null
             instructions: null
-            label: Zitat
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
             providesThumbs: false
+            readonly: false
             required: true
+            size: null
+            step: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7e098318-ddaf-4aad-9071-cfc5414098be
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fde419f4-52aa-4897-8e8d-7d10ac49031f
             userCondition: null
             warning: null
             width: 75
           -
-            dateAdded: '2025-04-23T10:26:30+00:00'
+            dateAdded: '2024-12-18T11:18:45+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+            fieldUid: eb32810d-6901-4788-b8bb-d4ca4124652b # H Level
             handle: null
             includeInCards: false
             instructions: null
-            label: UrheberIn
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 69647ff8-3a46-4222-9134-7d3b6fffd58e
+            uid: 4681cdf5-dbe5-4d7e-ab94-b8d4e39db62b
             userCondition: null
             warning: null
             width: 25
         name: Inhalt
-        uid: 80ae1dd6-4f37-4682-99fb-5950713e3a10
+        uid: 5042406c-43fc-4495-898d-3ca36374cbdd
         userCondition: null
-handle: typeQuote
-hasTitleField: false
-icon: quote-left
-name: Quote
+handle: tSubtitle
+hasTitleField: true
+icon: heading
+name: Subtitle
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

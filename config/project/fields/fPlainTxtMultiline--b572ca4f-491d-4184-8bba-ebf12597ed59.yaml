@@ -1,16 +1,16 @@
 columnSuffix: null
-handle: plainTextI18nMultiline
+handle: fPlainTxtMultiline
 instructions: null
-name: 'Plain Text i18n Multiline'
+name: 'Plain Text Multiline'
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
-  code: false
+  code: true
   initialRows: 4
   multiline: true
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\fields\PlainText

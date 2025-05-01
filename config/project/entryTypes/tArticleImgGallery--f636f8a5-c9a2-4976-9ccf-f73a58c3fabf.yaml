@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         uid: e5cdc8a3-8fd7-4277-b485-a3f0876e6652
         userCondition: null
-handle: articleImgGallery
+handle: tArticleImgGallery
 hasTitleField: false
 icon: rectangle-history
 name: 'Article Image Gallery'

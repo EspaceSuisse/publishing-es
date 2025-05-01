@@ -208,7 +208,7 @@ fieldLayouts:
         name: Google
         uid: 132df382-76c4-4b56-ab8f-95fb71743dd4
         userCondition: null
-handle: typeArticleSet
+handle: tArticleSet
 hasTitleField: true
 icon: null
 name: 'Article Set'
