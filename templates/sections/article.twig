@@ -2,8 +2,8 @@
 
 {% block content %}
 	<article class="gridArticle">
-		{% set aufmacherBild = entry.fArticleImg.one() %}
-		
+		{% set aufmacherBild = entry.fArticleImgI18n.one() %}
+
 		{% for catItem in entry.fCatGenre %}
 			{% if loop.first %}{{'Genre' | t}}:{% endif %}
 			<a href="{{ catItem.url }}">{{ catItem.title }}</a>
