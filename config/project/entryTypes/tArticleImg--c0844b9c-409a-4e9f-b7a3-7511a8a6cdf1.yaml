@@ -6,10 +6,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-02-19T11:22:33+00:00'
+            dateAdded: '2025-05-01T12:30:08+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9 # Article Img
+            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Article Img i18n
             handle: null
             includeInCards: false
             instructions: null
@@ -18,7 +18,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a02c9b34-e74f-4b59-9476-d9477ac44116
+            uid: 51e94f97-bc2e-44ac-9a0c-251ad12a8fb1
             userCondition: null
             warning: null
             width: 25

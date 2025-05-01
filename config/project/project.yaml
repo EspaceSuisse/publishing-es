@@ -1,4 +1,4 @@
-dateModified: 1746102089
+dateModified: 1746102775
 elementSources:
   craft\elements\Entry:
     -
@@ -52,12 +52,10 @@ meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
-    2bd2e1b6-0fec-42ee-9bbb-a384eaecd9c9: 'Article Img' # Article Img
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
-    2ed24e90-d4a5-44e6-a62d-8dca362fbd87: Author # Author
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery
     5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle
@@ -67,13 +65,11 @@ meta:
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
-    212f7ab4-64f9-4b3c-92e4-fc78442435a9: Url # Url
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     826bddc1-fa89-4b66-b1ab-6924ab5aa9c3: 'Plain Text i18n Multiline' # Plain Text i18n Multiline
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8348b893-eaba-48e4-b4ab-15c74d5c44d0: Typ # Typ
-    8423a2cf-6dcc-46b6-a196-16b2f63bf219: 'Test, nested img' # Test, nested img
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: 'Text i18n' # Text i18n
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
@@ -81,12 +77,10 @@ meta:
     2200945b-b73a-4a89-bc06-0e3927264677: Box # Box
     34360219-963c-430e-9b56-640ddc7d6eda: 'Plain Text' # Plain Text
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
-    b5ad00c8-de3a-495e-9eb7-0b53c9cc5de8: 'Test separate gallery img' # Test separate gallery img
     b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Article Img i18n' # Article Img i18n
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
     b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Breite' # Grid Breite
-    ba109802-9948-4c83-85bd-d61f696378a3: 'Image i18n' # Image i18n
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Offset' # Grid Offset
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: 'Text i18N' # Text i18N
