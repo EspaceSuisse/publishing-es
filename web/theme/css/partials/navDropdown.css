@@ -1,0 +1,35 @@
+.dropdown {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+
+    /* slide in from the top on mobile */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-20px);
+
+    /* slide in from the right on desktop */
+    @media (min-width: 768px) {
+        left: 100%;
+        height: 100vh;
+        transform: translateX(-20px);
+        top: 0;
+    }
+
+    &.open {
+        display: block;
+        background: red;
+        opacity: 1;
+        visibility: visible;
+
+        /* tranfoxm on the X axis on mobile */
+        transform: translateX(0);
+
+        /* transform on desktop */
+        @media (min-width: 768px) {
+            transform: translateX(0);
+        }
+    }
+}

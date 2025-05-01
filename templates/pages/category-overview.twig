@@ -1,0 +1,49 @@
+{% extends "_layouts/main" %}
+
+{# This template is used to display a list of categories based on the URL segment #}
+{# The URL segment determines which category group to display #}
+
+
+{% set title = "Category Overview" %} {# Set the page title #}
+
+{% block content %}
+
+	{% set urlSegment = craft.app.request.segment(1) %}
+	{# Get the first URL segment #}
+
+	{# Determine the category handle based on the URL segment #}
+		{% if urlSegment == 'alle-rubriken' %}
+		{% set categoryHandle = 'catGenre' %}
+	{% elseif urlSegment == 'alle-themen' %}
+		{% set categoryHandle = 'catSubject' %}
+	{% else %}
+		{% set categoryHandle = null %}
+		{# Fallback if URL segment doesn't match #}
+	{% endif %}
+
+	{# Check if a valid category handle was determined #}
+	{% if categoryHandle %}
+		{# Query categories with associated entries for the determined handle #}
+		{% set categories = craft.categories().group(categoryHandle).all() %}
+
+
+		{# Display the categories #}
+		<h1>
+			{% if categoryHandle == 'catGenre' %}
+				Alle Rubriken
+			{% elseif categoryHandle == 'catSubject' %}
+				Alle Themen
+			{% endif %}
+		</h1>
+		<ul>
+			{% for category in categories %}
+				<li>
+                    <a href="{{ category.url }}">{{ category.title }}</a>
+                </li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>Invalid URL segment. Please check the URL.</p>
+	{% endif %}
+
+{% endblock %}

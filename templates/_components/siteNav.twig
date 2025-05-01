@@ -1,0 +1,77 @@
+{% import '_macros/macroCatOverview' as catMacro %}
+
+{# This is the site navigation for the header #}
+{# It uses the macro to print out the category overview link #}
+{# The two categories are fetched with only url and title #}
+
+{# Fetch the two category section with only url and title and only 3 per cat #}
+{% set subjectNav = craft.categories.group('catSubject').with(['title','url']).limit(3).all() %}
+{% set genreNav = craft.categories.group('catGenre').with(['title','url']).limit(3).all() %}
+
+{% set labelSubject = 'Themen' %}
+{% set labelGenre = 'Rubriken' %}
+
+	<nav aria-label="{{'Main navigation'|t}}"> <ul>
+		<li>
+			<a href="/">{{ 'Home' | t }}</a>
+		</li>
+
+		{# starts the dropdown for the subject dropdown #}
+		<li class="hasDropdown">
+			<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-1">{{ labelSubject | t }}</button>
+			<ul
+				class="dropdown" id="dropdown-menu-2" role="menu">
+				{# print out the navi dropdown #}
+				{% for category in subjectNav %}
+					<li>
+						<a href="{{ category.url }}">{{ category.title }}</a>
+					</li>
+				{% endfor %}
+				<li>{{ catMacro.catOverview('alle-themen', 'tous-les-themes', 'Alle' ~ labelSubject) }}</li>
+			</ul>
+		</li>
+
+		{# starts the dropdown for the genre dropdown #}
+		<li class="hasDropdown">
+			<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-1">{{ labelGenre | t }}</button>
+			<ul class="dropdown" id="dropdown-menu-2" role="menu">
+				{% for category in genreNav %}
+					<li>
+						<a href="{{ category.url }}">{{ category.title }}</a>
+					</li>
+				{% endfor %}
+				<li>{{ catMacro.catOverview('alle-rubriken', 'tous-les-themes', 'Alle' ~ labelGenre) }}</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">About</a>
+		</li>
+        {% include "_partials/navLangSwitcher.twig" %}
+	</ul>
+</nav>
+
+{# Ads a .open class to the dropdown list and removes it if a dropdown is already open #}
+{% js %}
+document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.dropdownLink').forEach(button => {
+            button.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const parentLi = button.closest('li');
+            const dropdown = parentLi.querySelector('.dropdown');
+
+            // Close all other dropdowns
+            document.querySelectorAll('ul.dropdown.open').forEach(openDropdown => {
+                if (openDropdown !== dropdown) {
+                openDropdown.classList.remove('open');
+                }
+            });
+
+            // Toggle current dropdown
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+            }
+            });
+        });
+    });
+{% endjs %}

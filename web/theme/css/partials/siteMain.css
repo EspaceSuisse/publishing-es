@@ -1,0 +1,5 @@
+#main {
+    container-name: mainContainer;
+    container-type: inline-size;
+    width: 100%;
+}
