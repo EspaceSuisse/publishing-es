@@ -1,4 +1,4 @@
-dateModified: 1746520056
+dateModified: 1746520209
 elementSources:
   craft\elements\Entry:
     -
@@ -48,6 +48,7 @@ meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
+    2a01649b-ab6a-4edd-a8f9-130d7d06dc53: Article # Article
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing

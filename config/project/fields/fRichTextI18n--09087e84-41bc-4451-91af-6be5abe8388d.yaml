@@ -6,7 +6,7 @@ searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: ''
-  ckeConfig: ffa1be3d-bc59-42ca-b3ce-22e660c114d1 # Simple
+  ckeConfig: 2a01649b-ab6a-4edd-a8f9-130d7d06dc53 # Article
   createButtonLabel: null
   defaultTransform: null
   purifierConfig: null
