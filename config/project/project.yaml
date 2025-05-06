@@ -1,4 +1,4 @@
-dateModified: 1746102775
+dateModified: 1746520056
 elementSources:
   craft\elements\Entry:
     -
@@ -44,10 +44,6 @@ fs:
       path: '@assetBasePath/userPortraits'
     type: craft\fs\Local
     url: '@assetBaseUrl/userPortraits'
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
@@ -68,10 +64,12 @@ meta:
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     826bddc1-fa89-4b66-b1ab-6924ab5aa9c3: 'Plain Text i18n Multiline' # Plain Text i18n Multiline
+    898d8de1-26a8-46a2-be3b-ba455a3711cc: 'Related Article' # Related Article
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8348b893-eaba-48e4-b4ab-15c74d5c44d0: Typ # Typ
     8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: 'Text i18n' # Text i18n
+    23465aca-7fa4-4dd7-bd09-9c11e7d61c9a: 'Related Entry' # Related Entry
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
     99345ed5-ddea-4d5c-a8b4-9eb9a451aece: catSource # catSource
     2200945b-b73a-4a89-bc06-0e3927264677: Box # Box

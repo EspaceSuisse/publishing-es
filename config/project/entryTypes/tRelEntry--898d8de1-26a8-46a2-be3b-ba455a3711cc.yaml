@@ -1,0 +1,78 @@
+color: null
+fieldLayouts:
+  869b2c27-7217-44de-b40b-cba891515611:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-05-06T08:27:33+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 23465aca-7fa4-4dd7-bd09-9c11e7d61c9a # Related Entry
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c025a36e-5baf-44d8-b134-ed5598502c7d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b956d1ca-6f34-4577-93de-f11d39da6df1
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-05-06T08:27:33+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Breite
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 117d96c2-f8d5-40de-a0c4-b81d92cad4ac
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-06T08:27:33+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Offset
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa102dc0-eed3-4c70-aa38-da0fec2dcd69
+            userCondition: null
+            warning: null
+            width: 100
+        name: Layout
+        uid: e2331b0d-90b2-41da-8556-6ec89518c833
+        userCondition: null
+handle: tRelEntry
+hasTitleField: false
+icon: null
+name: 'Related Article'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

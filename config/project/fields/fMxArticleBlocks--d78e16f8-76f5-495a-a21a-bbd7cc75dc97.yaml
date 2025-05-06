@@ -43,12 +43,12 @@ settings:
       __assoc__:
         -
           - uid
-          - ba109802-9948-4c83-85bd-d61f696378a3
+          - f636f8a5-c9a2-4976-9ccf-f73a58c3fabf # Article Image Gallery
     -
       __assoc__:
         -
           - uid
-          - f636f8a5-c9a2-4976-9ccf-f73a58c3fabf # Article Image Gallery
+          - 898d8de1-26a8-46a2-be3b-ba455a3711cc # Related Article
   includeTableView: false
   maxEntries: null
   minEntries: null
