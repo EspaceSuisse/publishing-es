@@ -1,3 +1,6 @@
+{# This macro contains the constructed image tag with alt title image description and legends. 
+for image transformations fo to config/imager-x-transform.php you can pass named transforms from there into this macro #}
+
 {% macro articleImage(handleParam, transformKey) %}
 
     {% set altText = handleParam.fPlainTextI18nMultiline %}

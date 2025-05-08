@@ -1,3 +1,7 @@
+{# This macro is used to print out the category overview link #}
+{# It takes the url params for the two languages and a class for the link #}
+{# The label is taken from the translation file #}
+
 {% macro catOverview(uriParamDe, uriParamFr, labelParam) %}
     {% if craft.app.language == 'de-CH' %}
         <a href="{{ url(uriParamDe) }}">{{ labelParam | t }}</a>
@@ -5,6 +9,3 @@
         <a href="{{ url(uriParamFr) }}">{{ labelParam | t }}</a>
     {% endif %}
 {% endmacro %}
-{# This macro is used to print out the category overview link #}
-{# It takes the url params for the two languages and a class for the link #}
-{# The label is taken from the translation file #}

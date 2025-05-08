@@ -1,33 +1,21 @@
 {% extends "_layouts/main" %}
 
+{# 
+This is the template for all articles.
+It includes the header and the matrix include which contains a switch statement.
+In the switch statement the different blocks are included.
+The blocks are defined in the matrix field in the CMS.
+ #}
+
 {% block content %}
+
+	
+
 	<article class="gridArticle">
-		{% set aufmacherBild = entry.fArticleImgI18n.one() %}
-
-		{% for catItem in entry.fCatGenre %}
-			{% if loop.first %}{{'Genre' | t}}:{% endif %}
-			<a href="{{ catItem.url }}">{{ catItem.title }}</a>
-		{% endfor %}
-		<br>
-		{% for catItem in entry.fCatSubject %}
-			{% if loop.first %}{{ 'Thema' | t }}:{% endif %}
-			<a href="{{ catItem.url }}">{{ catItem.title }}</a>
-		{% endfor %}
-
-		<h1>{{ entry.title }}</h1>
-
-		<p>{{ entry.author }}</p>
-
-		{# Lead Text #}
-		<h3>{{ entry.fPlainTextI18n }}</h3>
-
 		
-		
+		<div class="articleElement">{% include "_components/articleHead" %}</div>
+		{% include "_components/articleMatrix" %}
 
-
-		<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}">
-
-
-		{% include "_components/matrixArticle" %}
 	</article>
+
 {% endblock %}
