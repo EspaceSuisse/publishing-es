@@ -1,0 +1,25 @@
+{# Call the matrix article set #}
+{% set articleMatrix = entry.fMxArticleBlocks.all() %}
+
+{# loop trough all blocks #}
+{% for block in articleMatrix %}
+
+{# switch trough all blocks. actual block code in partials #}
+	{% switch block.type %}
+
+		{% case "tSubtitle" %}
+			<div class="articleElement">{% include "_partials/cellSubtitle" %}</div>
+		{% case "tBox" %}
+			<div class="articleElement">{% include "_partials/cellBox" %}</div>
+		{% case "tTxtI18n" %}
+			<div class="articleElement">{% include "_partials/cellRichText" %}</div>
+		{% case "tQuote" %}
+			<div class="articleElement">{% include "_partials/cellQuote" %}</div>
+		{% case "tArticleImg" %}
+			<div class="articleElement">{% include "_partials/cellImg" %}</div>
+		{% case "tArticleImgGallery" %}
+			<div class="articleElement">{% include "_partials/cellImgGallery" %}</div>
+			
+	{% endswitch %}
+
+{% endfor %}

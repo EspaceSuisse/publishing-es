@@ -1,0 +1,27 @@
+{% set aufmacherBild = entry.fArticleImgI18n.one() %}
+{% set articleGenre = entry.fCatGenre %}
+{% set articleSubject = entry.fCatSubject %}
+
+{% for catItem in articleGenre %}
+	{% if loop.first %}
+		{{'Genre' | t}}:
+	{% endif %}
+	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
+{% endfor %}
+<br>
+{% for catItem in articleSubject %}
+	{% if loop.first %}
+		{{ 'Thema' | t }}:
+	{% endif %}
+	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
+{% endfor %}
+
+<h1>{{ entry.title }}</h1>
+
+<p>{{ entry.author }}</p>
+
+{# Lead Text #}
+<h3>{{ entry.fPlainTextI18n }}</h3>
+
+
+<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}">
