@@ -1,0 +1,13 @@
+{% import '_macros/macroImage' as macro %}
+
+{% set imgGallery = block.fMxImgGallery.all() %}
+
+
+{% for item in imgGallery %}
+        {% for asset in item.fArticleImgI18n.all() %}
+            {{ macro.articleImage(asset, 'articleImage') }}
+            {% if item.fPlainTextI18nMultiline %}
+                {{ item.fPlainTextI18nMultiline }}
+            {% endif %}
+        {% endfor %}
+{% endfor %}
