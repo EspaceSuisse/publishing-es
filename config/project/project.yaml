@@ -1,4 +1,4 @@
-dateModified: 1746707512
+dateModified: 1746711259
 elementSources:
   craft\elements\Entry:
     -
@@ -79,9 +79,9 @@ meta:
     b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Article Img i18n' # Article Img i18n
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
-    b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Breite' # Grid Breite
+    b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Left' # Grid Left
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image
-    d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Offset' # Grid Offset
+    d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Right' # Grid Right
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: 'Text i18N' # Text i18N
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor

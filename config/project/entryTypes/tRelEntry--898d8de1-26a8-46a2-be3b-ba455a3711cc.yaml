@@ -32,7 +32,7 @@ fieldLayouts:
             dateAdded: '2025-05-06T08:27:33+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Breite
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Left
             handle: null
             includeInCards: false
             instructions: null
@@ -49,7 +49,7 @@ fieldLayouts:
             dateAdded: '2025-05-06T08:27:33+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Offset
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Right
             handle: null
             includeInCards: false
             instructions: null

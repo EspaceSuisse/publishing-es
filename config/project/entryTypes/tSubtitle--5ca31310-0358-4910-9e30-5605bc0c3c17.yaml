@@ -55,6 +55,55 @@ fieldLayouts:
         name: Inhalt
         uid: 5042406c-43fc-4495-898d-3ca36374cbdd
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-05-08T13:26:33+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Left
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87ed1f0e-76b1-460f-bb2d-390d05d79490
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-05-08T13:26:33+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Right
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c633f7ce-6a63-485a-b0ef-206b8686df6d
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            content: "# Grid Definition\r\nEin Artikel ist ausgelegt auf einem 12 Raster Grid.\r\nHier kann die Standards breite eines Elements angepasst werden.\r\n\r\n```\r\n\r\n+-----+-----+------+------+------+------+------+------+------+------+-----+-----+\r\n|  1  |  2  |  3   |  4   |  5   |  6   |  7   |  8   |  9   |  10  | 11  | 12  |\r\n+-----+-----+------+------+------+------+------+------+------+------+-----+-----+\r\n| img | img | img  | img  | img  | img  | img  | img  | img  | img  | img | img |\r\n| --  | --  | text | text | text | text | text | text | text | text | --  | --  |\r\n+-----+-----+------+------+------+------+------+------+------+------+-----+-----+\r\n\r\n```\r\n\r\ntextblöcke sind immer je 2 eingeschoben. Mit den Slidern hier kann das überschrieben werden."
+            dateAdded: '2025-05-08T13:32:05+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 2dabfc7d-53de-4a5d-abf2-cebac67d710f
+            userCondition: null
+            width: 100
+        name: Layout
+        uid: e268efe7-1950-4440-b53d-9d79703eaeb0
+        userCondition: null
 handle: tSubtitle
 hasTitleField: true
 icon: heading
