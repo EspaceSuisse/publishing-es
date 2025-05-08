@@ -3,7 +3,6 @@ fieldLayouts:
   a2bae6e5-b24f-480c-8840-77318c35fe87:
     cardView:
       - postDate
-      - 'layoutElement:f75053de-6c04-4645-a9f5-f88d93ccbf0a'
     tabs:
       -
         elementCondition: null
@@ -16,7 +15,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Aufmacherbild
             providesThumbs: false
             required: false
             tip: null
@@ -71,19 +70,19 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-01-08T14:34:46+00:00'
+            dateAdded: '2025-05-08T12:21:24+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: Lead
             providesThumbs: false
             required: false
-            tip: 'Beim Leser interesse wecken'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f75053de-6c04-4645-a9f5-f88d93ccbf0a
+            uid: 5c2a7f7d-3a80-47aa-bd26-89a7c4789197
             userCondition: null
             warning: null
             width: 50
@@ -167,7 +166,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Artikel Blöcke'
             providesThumbs: false
             required: false
             tip: null

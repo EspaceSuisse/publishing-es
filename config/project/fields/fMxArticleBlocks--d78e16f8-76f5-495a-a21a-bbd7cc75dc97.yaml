@@ -15,12 +15,15 @@ settings:
           - 5ca31310-0358-4910-9e30-5605bc0c3c17 # Subtitle
         -
           - name
-          - Zwischentitel
+          - 'Titel Abschnitt'
     -
       __assoc__:
         -
           - uid
           - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text i18N
+        -
+          - name
+          - Lauftext
     -
       __assoc__:
         -
@@ -39,11 +42,17 @@ settings:
         -
           - uid
           - c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1 # Image
+        -
+          - name
+          - Bild
     -
       __assoc__:
         -
           - uid
           - f636f8a5-c9a2-4976-9ccf-f73a58c3fabf # Article Image Gallery
+        -
+          - name
+          - 'Mehrere Bilder'
     -
       __assoc__:
         -

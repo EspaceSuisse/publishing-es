@@ -90,7 +90,7 @@ fieldLayouts:
             label: Provider
             providesThumbs: false
             required: false
-            tip: null
+            tip: Flickr
             type: craft\fieldlayoutelements\CustomField
             uid: d96297fe-00ce-47f2-bef1-d1568b989e97
             userCondition: null
@@ -107,7 +107,7 @@ fieldLayouts:
             label: Licence
             providesThumbs: false
             required: false
-            tip: null
+            tip: 'CC BY-SA 2.0'
             type: craft\fieldlayoutelements\CustomField
             uid: 0fdcf21c-ef88-4c7c-8ed0-82636504a1ff
             userCondition: null
