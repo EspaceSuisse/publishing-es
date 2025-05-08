@@ -6,4 +6,7 @@
 
 {% for asset in image %}
     {{ macro.articleImage(asset, 'articleImage') }}
+    {% if block.fPlainTextI18nMultiline %}
+        {{ block.fPlainTextI18nMultiline }}
+    {% endif %}
 {% endfor %}
