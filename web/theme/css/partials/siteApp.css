@@ -7,7 +7,7 @@
     min-height: 100vh;
     container-type: inline-size;
     container-name: appContainer;
-    background: green;
+    background: #954;
     @media (max-width: 768px) {
       background-color: lightblue; /* Change color when viewport is narrow */
       flex-direction: column;

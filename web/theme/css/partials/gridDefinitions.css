@@ -1,0 +1,72 @@
+.gridStart1 {
+    grid-column-start: 1;
+}
+.gridStart2 {
+    grid-column-start: 2;
+}
+.gridStart3 {
+    grid-column-start: 3;
+}
+.gridStart4 {
+    grid-column-start: 4;
+}
+.gridStart5 {
+    grid-column-start: 5;
+}
+.gridStart6 {
+    grid-column-start: 6;
+}
+.gridStart7 {
+    grid-column-start: 7;
+}
+.gridStart8 {
+    grid-column-start: 8;
+}
+.gridStart9 {
+    grid-column-start: 9;
+}
+.gridStart10 {
+    grid-column-start: 10;
+}
+.gridStart11 {
+    grid-column-start: 11;
+}
+.gridStart12 {
+    grid-column-start: 12;
+}
+.gridSpan1 {
+    grid-column-end: span 1;
+}
+.gridSpan2 {
+    grid-column-end: span 2;
+}
+.gridSpan3 {
+    grid-column-end: span 3;
+}
+.gridSpan4 {
+    grid-column-end: span 4;
+}
+.gridSpan5 {
+    grid-column-end: span 5;
+}
+.gridSpan6 {
+    grid-column-end: span 6;
+}
+.gridSpan7 {
+    grid-column-end: span 7;
+}
+.gridSpan8 {
+    grid-column-end: span 8;
+}
+.gridSpan9 {
+    grid-column-end: span 9;
+}
+.gridSpan10 {
+    grid-column-end: span 10;
+}
+.gridSpan11 {
+    grid-column-end: span 11;
+}
+.gridSpan12 {
+    grid-column-end: span 12;
+}
