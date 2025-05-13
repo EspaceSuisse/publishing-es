@@ -17,7 +17,7 @@ fieldLayouts:
             instructions: null
             label: Aufmacherbild
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fcd00616-fbe2-4880-95b3-f71b685a20f9

@@ -62,7 +62,7 @@ fieldLayouts:
             dateAdded: '2025-05-08T13:26:33+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Left
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
             handle: null
             includeInCards: false
             instructions: null
@@ -79,7 +79,7 @@ fieldLayouts:
             dateAdded: '2025-05-08T13:26:33+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Right
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
             handle: null
             includeInCards: false
             instructions: null

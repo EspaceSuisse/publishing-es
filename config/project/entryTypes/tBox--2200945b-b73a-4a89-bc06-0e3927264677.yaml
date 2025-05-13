@@ -66,6 +66,40 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-05-13T07:38:29+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f1e56f5-aa14-4bfc-808d-4df081d77cf1
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-05-13T07:38:29+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2cfa91a8-e128-4331-a9f5-f84eb9716549
+            userCondition: null
+            warning: null
+            width: 25
+          -
             dateAdded: '2025-02-18T09:03:23+00:00'
             editCondition: null
             elementCondition: null
@@ -81,7 +115,7 @@ fieldLayouts:
             uid: 66c06d27-b7de-403c-9d8f-60ce84c52266
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Layout
         uid: 435d7c9d-1e64-4c0f-8867-202e1a3658d3
         userCondition: null

@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: fGridRight
+handle: fGridStart
 instructions: null
-name: 'Grid Right'
+name: 'Grid Start'
 searchable: false
 settings:
-  defaultValue: 10
+  defaultValue: 2
   max: 12
-  min: 1
+  min: 0
   step: 1
   suffix: null
 translationKeyFormat: null

@@ -1,0 +1,17 @@
+{# 
+Each field has layout field which define how the element is placed on the grid.
+The layout field is a number which defines the start and end of the grid element.
+The number is a string which is converted to a number.
+here we check if the number is set and if it is set we add the class to the element.
+The class is defined in the css file and is used to place the element on the grid.
+The class is defined as gridStart{number} and gridEnd{number}.
+if grid start is set to 0. then ther will only be grid span and element s can be multi grid
+ #}
+
+{%- macro gridClasses(paramStart, paramSpan) -%}
+    {%- if paramStart or paramSpan -%}
+        {{- ' gridStart' ~ paramStart ~ ' gridSpan' ~ paramSpan -}}
+    {%- else -%}
+        gridNull
+    {%- endif -%}
+{%- endmacro -%}

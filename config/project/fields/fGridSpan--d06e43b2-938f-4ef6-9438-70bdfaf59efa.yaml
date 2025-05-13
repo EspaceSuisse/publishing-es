@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: fGridLeft
+handle: fGridSpan
 instructions: null
-name: 'Grid Left'
+name: 'Grid Span'
 searchable: false
 settings:
-  defaultValue: 2
+  defaultValue: 10
   max: 12
   min: 1
   step: 1
