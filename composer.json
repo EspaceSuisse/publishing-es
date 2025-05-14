@@ -4,6 +4,7 @@
   "require": {
     "craftcms/ckeditor": "4.8.0",
     "craftcms/cms": "5.7.5",
+    "miranj/craft-obfuscator": "1.2.0",
     "nystudio107/craft-retour": "5.0.10",
     "nystudio107/craft-seomatic": "5.1.13",
     "spacecatninja/imager-x": "5.1.3",

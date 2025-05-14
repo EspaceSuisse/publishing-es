@@ -1,4 +1,4 @@
-dateModified: 1747218442
+dateModified: 1747222557
 elementSources:
   craft\elements\Entry:
     -
@@ -109,6 +109,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   ohdear:
     edition: standard
     enabled: true
