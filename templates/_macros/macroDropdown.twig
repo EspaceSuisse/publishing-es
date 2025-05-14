@@ -1,0 +1,12 @@
+{%- macro dropdown(paramQuery, paramLabel) -%}
+	<li class="hasDropdown">
+		<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-{{ paramLabel | ascii }}">{{ paramLabel | t }}</button>
+		<ul class="dropdown" id="dropdown-menu-2" role="menu">
+			{% for category in paramQuery %}
+				<li>
+					<a href="{{ category.url }}">{{ category.title }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</li>
+{%- endmacro -%}

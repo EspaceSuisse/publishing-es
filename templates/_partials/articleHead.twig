@@ -5,7 +5,7 @@
 {% set catGenreElement %}
 {% for catItem in articleGenre %}
 	{% if loop.first %}
-		{{'Genre' | t}}:
+		{{ labelGenre | t }}:
 	{% endif %}
 	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
 {% endfor %}
@@ -14,7 +14,7 @@
 {% set catSubjectElement %}
 {% for catItem in articleSubject %}
 	{% if loop.first %}
-		{{ 'Thema' | t }}:
+		{{ labelSubject | t }}:
 	{% endif %}
 	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
 {% endfor %}
