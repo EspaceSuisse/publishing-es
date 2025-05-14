@@ -1,12 +1,20 @@
 
-@import url("../css/partials/siteReset.css");
-@import url("../css/partials/siteApp.css");
-@import url("../css/partials/siteHeader.css");
-@import url("../css/partials/siteMain.css");
+@import url("../css/components/siteReset.css");
+@import url("../css/components/siteApp.css");
+@import url("../css/components/siteMain.css");
 
-@import url("../css/partials/nav.css");
+@import url("../css/components/gridArticle.css");
+@import url("../css/components/gridDefinitions.css");
+
+@import url("../css/components/nav.css");
 @import url("../css/partials/navDropdown.css");
 
-@import url("../css/partials/gridArticle.css");
+@import url("../css/partials/siteHeader.css");
 @import url("../css/partials/gridArticleHead.css");
-@import url("../css/partials/gridDefinitions.css");
+
+@import url("../css/components/cellSubtitle.css");
+@import url("../css/components/cellBox.css");
+@import url("../css/components/cellRichText.css");
+@import url("../css/components/cellQuote.css");
+@import url("../css/components/cellImg.css");
+@import url("../css/components/cellImgGallery.css");

@@ -10,6 +10,6 @@ for image transformations fo to config/imager-x-transform.php you can pass named
     {% set imgLicence = handleParam.fPlainTxt3 %}
 
     <img src="{{ handleParam.url }}" alt="{{ altText }}" width="200" title="{{ imgTitle }}">
-    <p>{{ imgphotographer }}, {{ imgProvider }} - {{ imgLicence }}</p>
+    <p>{{ imgphotographer }}{{ ', ' ~ imgProvider }}{{ ' - ' ~ imgLicence  }}</p>
 
 {% endmacro %}

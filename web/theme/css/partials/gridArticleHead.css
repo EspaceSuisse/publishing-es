@@ -1,9 +1,17 @@
 .articleHead {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    img {
-        grid-column-end: span 6;
+    .articleHeadImg {
         aspect-ratio: 1 / 1;
         background-color: red;
+        img {
+            object-fit: cover;
+        }
+    }
+    .articleHeadTitle {
+        background-color: #789;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

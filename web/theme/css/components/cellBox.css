@@ -1,0 +1,7 @@
+.cellBox {
+    background-color: aqua;
+    padding: 20px;
+    h3 {
+        background-color: aquamarine;
+    }
+}

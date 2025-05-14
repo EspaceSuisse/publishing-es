@@ -5,8 +5,10 @@
 
 
 {% for asset in image %}
-    {{ macro.articleImage(asset, 'articleImage') }}
-    {% if block.fPlainTextI18nMultiline %}
-        {{ block.fPlainTextI18nMultiline }}
-    {% endif %}
+    <div class="articleImg">
+        {{ macro.articleImage(asset, 'articleImage') }}
+        {% if block.fPlainTextI18nMultiline %}
+            {{ block.fPlainTextI18nMultiline }}
+        {% endif %}
+    </div>
 {% endfor %}

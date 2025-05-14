@@ -3,32 +3,33 @@
 {% set articleSubject = entry.fCatSubject %}
 
 {% set catGenreElement %}
-	{% for catItem in articleGenre %}
-		{% if loop.first %}
-			{{'Genre' | t}}:
-		{% endif %}
-		<a href="{{ catItem.url }}">{{ catItem.title }}</a>
-	{% endfor %}
+{% for catItem in articleGenre %}
+	{% if loop.first %}
+		{{'Genre' | t}}:
+	{% endif %}
+	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
+{% endfor %}
 {% endset %}
 
 {% set catSubjectElement %}
-	{% for catItem in articleSubject %}
-		{% if loop.first %}
-			{{ 'Thema' | t }}:
-		{% endif %}
-		<a href="{{ catItem.url }}">{{ catItem.title }}</a>
-	{% endfor %}
+{% for catItem in articleSubject %}
+	{% if loop.first %}
+		{{ 'Thema' | t }}:
+	{% endif %}
+	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
+{% endfor %}
 {% endset %}
 
-<img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}">
+<div class="articleHeadImg"><img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}"></div>
+<div class="articleHeadTitle">
+	<h1>{{ entry.title }}</h1>
 
-<h1>{{ entry.title }}</h1>
+	<p>{{ entry.author }}</p>
+	<p>{{ catGenreElement }}</p>
+	<p>{{ catSubjectElement}}</p>
 
-<p>{{ entry.author }}</p>
-<p>{{ catGenreElement }}</p>
-<p>{{ catSubjectElement}}</p>
+	<p>{{ entry.postDate | datetime('short') }}</p>
 
-<p>{{ entry.postDate | datetime('short') }}</p>
-
-{# Lead Text #}
-<h3>{{ entry.fPlainTextI18n }}</h3>
+	{# Lead Text #}
+	<h3>{{ entry.fPlainTextI18n }}</h3>
+</div>

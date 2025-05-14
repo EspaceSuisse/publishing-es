@@ -1,13 +1,20 @@
-{% import '_macros/macroImage' as macro %}
+{% import '_macros/macroImage' as imgMacro %}
+{% import '_macros/macroGridClasses' as layoutMacro %}
 
 {% set imgGallery = block.fMxImgGallery.all() %}
 
 
 {% for item in imgGallery %}
+
+    {% set gridImgStart = item.fGridStart ?? null %}
+    {% set gridImgSpan = item.fGridSpan ?? null %}
+
         {% for asset in item.fArticleImgI18n.all() %}
-            {{ macro.articleImage(asset, 'articleImage') }}
-            {% if item.fPlainTextI18nMultiline %}
-                {{ item.fPlainTextI18nMultiline }}
-            {% endif %}
+            <div class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
+                {{ imgMacro.articleImage(asset, 'articleImage') }}
+                {% if item.fPlainTextI18nMultiline %}
+                    {{ item.fPlainTextI18nMultiline }}
+                {% endif %}
+            </div>
         {% endfor %}
 {% endfor %}

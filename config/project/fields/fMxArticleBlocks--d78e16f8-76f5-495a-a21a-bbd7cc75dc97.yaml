@@ -52,7 +52,7 @@ settings:
           - f636f8a5-c9a2-4976-9ccf-f73a58c3fabf # Article Image Gallery
         -
           - name
-          - 'Mehrere Bilder'
+          - Bildergalerie
     -
       __assoc__:
         -

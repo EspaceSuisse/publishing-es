@@ -20,7 +20,7 @@
 		<li class="hasDropdown">
 			<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-1">{{ labelSubject | t }}</button>
 			<ul
-				class="dropdown" id="dropdown-menu-2" role="menu">
+				class="dropdown" id="dropdown-menu-1" role="menu">
 				{# print out the navi dropdown #}
 				{% for category in subjectNav %}
 					<li>
@@ -33,7 +33,7 @@
 
 		{# starts the dropdown for the genre dropdown #}
 		<li class="hasDropdown">
-			<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-1">{{ labelGenre | t }}</button>
+			<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-2">{{ labelGenre | t }}</button>
 			<ul class="dropdown" id="dropdown-menu-2" role="menu">
 				{% for category in genreNav %}
 					<li>
@@ -53,25 +53,33 @@
 {# Ads a .open class to the dropdown list and removes it if a dropdown is already open #}
 {% js %}
 document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.dropdownLink').forEach(button => {
-            button.addEventListener('click', (event) => {
+    document.querySelectorAll('.dropdownLink').forEach(button => {
+        button.addEventListener('click', (event) => {
             event.preventDefault();
 
             const parentLi = button.closest('li');
             const dropdown = parentLi.querySelector('.dropdown');
 
-            // Close all other dropdowns
             document.querySelectorAll('ul.dropdown.open').forEach(openDropdown => {
                 if (openDropdown !== dropdown) {
-                openDropdown.classList.remove('open');
+                    openDropdown.classList.remove('open');
                 }
             });
 
-            // Toggle current dropdown
-            if (dropdown) {
-                dropdown.classList.toggle('open');
+            if (dropdown.classList.contains('open')) {
+                // Start slide-out animation
+                dropdown.classList.add('closing');
+                dropdown.classList.remove('open');
+
+                // Wait for animation to finish before removing .closing
+                setTimeout(() => {
+                    dropdown.classList.remove('closing');
+                }, 300); // match transition duration
+            } else {
+                dropdown.classList.add('open');
             }
-            });
         });
     });
+});
+
 {% endjs %}

@@ -3,15 +3,17 @@ enableVersioning: true
 entryTypes:
   -
     uid: 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
-handle: homepage
+  -
+    uid: fd55594d-e7ef-4114-b326-eb015c7418c9 # Article Set
+handle: subPages
 maxAuthors: 1
-name: Homepage
+name: 'Sub Pages'
 previewTargets:
   -
     __assoc__:
       -
         - label
-        - 'Primäre Eintrag Seite'
+        - 'Primary entry page'
       -
         - urlFormat
         - '{url}'
@@ -23,11 +25,14 @@ siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR
     enabledByDefault: true
     hasUrls: true
-    template: pages/index.twig
-    uriFormat: __home__
+    template: pages/subPage.twig
+    uriFormat: '{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
     enabledByDefault: true
     hasUrls: true
-    template: pages/index.twig
-    uriFormat: __home__
-type: single
+    template: pages/subPage.twig
+    uriFormat: '{slug}'
+structure:
+  maxLevels: 1
+  uid: 1e55ce0b-adbb-4a37-b101-66c3d9c952fb
+type: structure

@@ -15,18 +15,20 @@
 
 
 		{% case "tSubtitle" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }}">{% include "_partials/cellSubtitle" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellSubtitle">{% include "_partials/cellSubtitle" %}</div>
 		{% case "tBox" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }}">{% include "_partials/cellBox" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellBox">{% include "_partials/cellBox" %}</div>
 		{% case "tTxtI18n" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }}">{% include "_partials/cellRichText" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellRichText">{% include "_partials/cellRichText" %}</div>
 		{% case "tQuote" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }}">{% include "_partials/cellQuote" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellQuote">{% include "_partials/cellQuote" %}</div>
 		{% case "tArticleImg" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }}">{% include "_partials/cellImg" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellImg">{% include "_partials/cellImg" %}</div>
 		{% case "tArticleImgGallery" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }}">{% include "_partials/cellImgGallery" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellImgGallery">{% include "_partials/cellImgGallery" %}</div>
 			
 	{% endswitch %}
+
+	
 
 {% endfor %}
