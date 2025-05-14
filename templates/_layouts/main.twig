@@ -6,9 +6,10 @@
 	{% include "_incl/metaHead" %}
 	<body>
 		<div id="app">
-			{% include "_components/siteHeader" %}
+			{% include "_partials/siteHeader" %}
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
 		</div>
-		{% include "_partials/devBar" %}
+		{% include "_partials/siteFooter" %}
+		{% include "_components/devBar" %}
 	</body>
 </html>

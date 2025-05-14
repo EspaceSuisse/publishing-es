@@ -1,0 +1,35 @@
+{% import '_macros/macroGridClasses' as macro %}
+
+{# Call the matrix article set #}
+{% set articleMatrix = entry.fMxArticleBlocks.all() %}
+
+{# loop trough all blocks #}
+{% for block in articleMatrix %}
+
+		{# check if there is a number set for grid placement. #}
+		{% set gridStart = block.fGridStart ?? null %}
+    	{% set gridSpan = block.fGridSpan ?? null %}
+
+{# switch trough all blocks. actual block code in partials #}
+	{% switch block.type %}
+
+
+		{% case "tSubtitle" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellSubtitle">{% include "_components/cellSubtitle" %}</div>
+		{% case "tBox" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellBox">{% include "_components/cellBox" %}</div>
+		{% case "tTxtI18n" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellRichText">{% include "_components/cellRichText" %}</div>
+		{% case "tQuote" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellQuote">{% include "_components/cellQuote" %}</div>
+		{% case "tArticleImg" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellImg">{% include "_components/cellImg" %}</div>
+		{% case "tArticleImgGallery" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellImgGallery">{% include "_components/cellImgGallery" %}</div>
+		{% case "tRelEntry" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan) }} cellRelEntry">{% include "_components/cellRelEntry" %}</div>
+	{% endswitch %}
+
+	
+
+{% endfor %}

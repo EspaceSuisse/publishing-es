@@ -1,0 +1,6 @@
+{% set relEntryQuery = block.fRelEntry.all() %}
+
+<p>{{ 'Lesen Sie dazu auch' | t }}</p>
+{% for item in relEntryQuery %}
+    <a href="{{ item.url }}">{{ item.title }}</a>
+{% endfor %}

@@ -67,7 +67,7 @@ fieldLayouts:
         userCondition: null
 handle: tRelEntry
 hasTitleField: false
-icon: null
+icon: typewriter
 name: 'Related Article'
 showSlugField: false
 showStatusField: false
