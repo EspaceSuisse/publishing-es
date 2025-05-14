@@ -1,3 +1,41 @@
+{% import '_macros/macroLinkList' as listMacro %}
+
+{% set queryFooterSubject = craft.categories.group('catSubject')
+	.with(['title','url'])
+	.relatedTo({ sourceElement: craft.entries.section('article') })
+	.all() %}
+
+{% set queryFooterGenre = craft.categories.group('catGenre')
+	.with(['title','url'])
+	.relatedTo({ sourceElement: craft.entries.section('article') })
+	.all() %}
+
+{% set querySubpages = craft.entries.section('subpages')
+    .with(['title','url'])
+    .all()
+%}
+
+{% set queryLatestArticle = craft.entries.section('article')
+    .with(['title','url',])
+    .limit('10')
+    .all()
+%}
+
+
 <footer>
-    Hallo. Ich bin dann der Footer
+
+    <div>
+        <strong>EspaceSuisse<strong> <br>
+        Verband für Raumplanung <br>
+        Sulgenrain 20 <br>
+        CH 3007 Bern <br>
+
+        T: <a href="tel:"+41 380 + 76 76>+41 380 + 76 76</a>
+        M: <a href="mailto:info@espacesuisse.ch">info@espacesuisse.ch</a>
+    </div>
+
+    {{ listMacro.listMacro(queryFooterSubject, labelSubject) }}
+    {{ listMacro.listMacro(queryFooterGenre, labelSubject) }}
+    {{ listMacro.listMacro(querySubpages, null) }}
+    {{ listMacro.listMacro(queryLatestArticle, 'Die letzten Einträge') }}
 </footer>

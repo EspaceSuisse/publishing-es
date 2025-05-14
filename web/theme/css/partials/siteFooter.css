@@ -1,4 +1,6 @@
 footer {
-    height: 100vh;
-    background-color: darkblue;
+    height: 70vh;
+    background-color: skyblue;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
 }

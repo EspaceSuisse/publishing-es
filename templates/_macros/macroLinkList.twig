@@ -1,0 +1,18 @@
+{% macro listMacro(queryParam, labelParam) %}
+
+	{% for item in queryParam %}
+		{% if loop.first %}
+			<ul>
+			{% endif %}
+			{% if loop.first and labelParam %}
+				<h3>{{ labelParam | t }}</h3>
+			{% endif %}
+			<li>
+				<a href="{{ item.url }}">{{ item.title }}</a>
+			</li>
+			{% if loop.last %}
+			</ul>
+		{% endif %}
+	{% endfor %}
+
+{% endmacro %}
