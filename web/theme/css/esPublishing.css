@@ -7,7 +7,7 @@
 @import url("../css/partials/gridDefinitions.css");
 
 @import url("../css/partials/nav.css");
-@import url("../css/partials/navDropdown.css");
+@import url("../css/components/navDropdown.css");
 
 @import url("../css/partials/siteHeader.css");
 @import url("../css/partials/gridArticleHead.css");

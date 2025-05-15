@@ -1,0 +1,62 @@
+.hasDropdown {
+}
+button.dropdownLink {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    padding: 0;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    background-color: red;
+    height: 100vh;
+    @media (min-width: 768px) {
+        top: 0;
+        left: 300px;
+        height: 100vh;
+    }
+
+    &.open {
+        animation-name: foldOut;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        width: 100%;
+    }
+
+    &.closing {
+        animation-name: foldIn;
+        animation-duration: 0.1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
+}
+
+
+@keyframes foldOut {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes foldIn {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
