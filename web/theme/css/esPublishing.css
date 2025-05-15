@@ -2,6 +2,7 @@
 @import url("../css/partials/siteReset.css");
 @import url("../css/partials/siteApp.css");
 @import url("../css/partials/siteMain.css");
+@import url("../css/components/mobileVisibility.css");
 
 @import url("../css/partials/gridArticle.css");
 @import url("../css/partials/gridDefinitions.css");
@@ -20,4 +21,3 @@
 @import url("../css/components/cellQuote.css");
 @import url("../css/components/cellImg.css");
 @import url("../css/components/cellImgGallery.css");
-

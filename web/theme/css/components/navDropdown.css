@@ -11,37 +11,43 @@ button.dropdownLink {
 }
 
 .dropdown {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
     overflow: hidden;
     background-color: red;
-    height: 100vh;
+    position: absolute;
+    height: 0;
+    /* Deifnitions for dekstop */
     @media (min-width: 768px) {
         top: 0;
         left: 300px;
         height: 100vh;
+        width: 0;
     }
 
     &.open {
-        animation-name: foldOut;
+        animation-name: foldOutTop;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-out;
         width: 100%;
+        @media (min-width: 768px) {
+            animation-name: foldOutLeft;
+            animation-duration: 0.5s;
+        }
     }
 
     &.closing {
-        animation-name: foldIn;
+        animation-name: foldInTop;
         animation-duration: 0.1s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
+        @media (min-width: 768px) {
+            animation-name: foldInLeft;
+        }
     }
 }
 
 
-@keyframes foldOut {
+@keyframes foldOutLeft {
   0% {
     width: 0;
   }
@@ -51,12 +57,31 @@ button.dropdownLink {
   }
 }
 
-@keyframes foldIn {
+@keyframes foldInLeft {
   0% {
     width: 100%;
   }
 
   100% {
     width: 0;
+  }
+}
+@keyframes foldOutTop {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes foldInTop {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0;
   }
 }

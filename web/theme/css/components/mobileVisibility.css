@@ -1,0 +1,10 @@
+.hideOnMobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.hideOnDesktop {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
