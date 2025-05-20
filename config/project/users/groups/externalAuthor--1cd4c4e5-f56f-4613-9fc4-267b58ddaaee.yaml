@@ -1,3 +1,5 @@
 description: null
 handle: externalAuthor
 name: 'External Author'
+permissions:
+  - 'viewentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel

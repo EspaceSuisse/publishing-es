@@ -40,7 +40,7 @@ fieldLayouts:
         uid: 7266f88d-68c2-4cde-a545-32c5c0347561
         userCondition: null
 fs: userPortraits
-handle: profileImg
+handle: vProfileImg
 name: Profilbild
 sortOrder: 3
 subpath: ''

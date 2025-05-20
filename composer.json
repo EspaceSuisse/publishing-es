@@ -3,7 +3,7 @@
   "prefer-stable": true,
   "require": {
     "craftcms/ckeditor": "4.8.0",
-    "craftcms/cms": "5.7.5",
+    "craftcms/cms": "5.7.6",
     "miranj/craft-obfuscator": "1.2.0",
     "nystudio107/craft-retour": "5.0.10",
     "nystudio107/craft-seomatic": "5.1.13",
@@ -11,7 +11,7 @@
     "topshelfcraft/environment-label": "5.0.0",
     "verbb/knock-knock": "3.0.3",
     "vlucas/phpdotenv": "^5.4.0",
-    "webhubworks/craft-ohdear": "5.2.1"
+    "webhubworks/craft-ohdear": "5.2.2"
   },
   "require-dev": {
     "craftcms/generator": "^2.0.0",

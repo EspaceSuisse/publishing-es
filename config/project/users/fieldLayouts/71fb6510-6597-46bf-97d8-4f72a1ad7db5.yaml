@@ -33,6 +33,23 @@ tabs:
         warning: null
         width: 100
       -
+        dateAdded: '2025-05-20T10:53:42+00:00'
+        editCondition: null
+        elementCondition: null
+        fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+        handle: null
+        includeInCards: false
+        instructions: null
+        label: Honorific
+        providesThumbs: false
+        required: false
+        tip: 'Prof. Dr.'
+        type: craft\fieldlayoutelements\CustomField
+        uid: 39f1046a-3b3a-4f60-8592-00b4c1ce9154
+        userCondition: null
+        warning: null
+        width: 25
+      -
         attribute: fullName
         autocapitalize: true
         autocomplete: false
@@ -63,7 +80,7 @@ tabs:
         uid: 57910cdb-434b-4fa6-9b92-f0ac9b0fd45f
         userCondition: null
         warning: null
-        width: 100
+        width: 75
       -
         dateAdded: '2024-12-18T12:04:41+00:00'
         elementCondition: null

@@ -1,33 +1,34 @@
 {# Ads a .open class to the dropdown list and removes it if a dropdown is already open #}
 {% js %}
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.dropdownLink').forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault();
 
-            const parentLi = button.closest('li');
-            const dropdown = parentLi.querySelector('.dropdown');
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.dropdownLink').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
 
-            document.querySelectorAll('ul.dropdown.open').forEach(openDropdown => {
-                if (openDropdown !== dropdown) {
-                    openDropdown.classList.remove('open');
+                const parentLi = button.closest('li');
+                const dropdown = parentLi.querySelector('.dropdown');
+
+                document.querySelectorAll('ul.dropdown.open').forEach(openDropdown => {
+                    if (openDropdown !== dropdown) {
+                        openDropdown.classList.remove('open');
+                    }
+                });
+
+                if (dropdown.classList.contains('open')) {
+                    // Start slide-out animation
+                    dropdown.classList.add('closing');
+                    dropdown.classList.remove('open');
+
+                    // Wait for animation to finish before removing .closing
+                    setTimeout(() => {
+                        dropdown.classList.remove('closing');
+                    }, 300); // match transition duration
+                } else {
+                    dropdown.classList.add('open');
                 }
             });
-
-            if (dropdown.classList.contains('open')) {
-                // Start slide-out animation
-                dropdown.classList.add('closing');
-                dropdown.classList.remove('open');
-
-                // Wait for animation to finish before removing .closing
-                setTimeout(() => {
-                    dropdown.classList.remove('closing');
-                }, 300); // match transition duration
-            } else {
-                dropdown.classList.add('open');
-            }
         });
     });
-});
 
 {% endjs %}

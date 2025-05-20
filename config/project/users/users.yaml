@@ -1,8 +1,8 @@
-allowPublicRegistration: false
+allowPublicRegistration: true
 deactivateByDefault: false
-defaultGroup: ''
+defaultGroup: 1cd4c4e5-f56f-4613-9fc4-267b58ddaaee # External Author
 photoSubpath: null
 photoVolumeUid: 288ee88d-e3ce-43e7-9cd8-371e235033c5 # Profilbild
 require2fa: false
-requireEmailVerification: true
+requireEmailVerification: false
 validateOnPublicRegistration: false

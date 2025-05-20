@@ -5,7 +5,7 @@ entryTypes:
     name: 'Artikel Zutaten'
     uid: fd55594d-e7ef-4114-b326-eb015c7418c9 # Article Set
 handle: article
-maxAuthors: 1
+maxAuthors: 5
 name: Artikel
 previewTargets:
   -

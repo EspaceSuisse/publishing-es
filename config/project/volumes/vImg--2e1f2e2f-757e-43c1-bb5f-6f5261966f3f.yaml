@@ -117,7 +117,7 @@ fieldLayouts:
         uid: 8fbc089a-23b3-4c45-a770-d16436c054c5
         userCondition: null
 fs: images
-handle: img
+handle: vImg
 name: 'Artikel Bilder'
 sortOrder: 1
 subpath: ''
