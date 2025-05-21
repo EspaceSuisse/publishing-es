@@ -5,7 +5,7 @@
 
 <div class="articleHeadTitle gridArticle">
 
-	<p class="gridStart2 gridSpan10">{{ entry.postDate.format('j. F Y') }}</p>
+	<p class="gridStart2 gridSpan10">{{ entry.postDate | date('j. F Y') }}</p>
 	<h1 class="gridStart2 gridSpan10">{{ entry.title }}</h1>
 
 	{% include "_components/articleHeadAuthors" %}

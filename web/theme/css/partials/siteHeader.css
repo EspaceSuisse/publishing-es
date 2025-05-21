@@ -1,22 +1,17 @@
 .siteHeader {
-  background-color: pink;
+  background-color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-/* Container query: separate block */
-@container mainContainer (max-width: 1024px) {
-  .siteHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1024px) {
     height: 100vh;
-    display: flex;
+    min-width: var(--siteHeadWidth);
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    max-width: 300px;
-  }
-
-  .siteHeader .esBrandLink {
-    width: 200px;
+    gap: 20px;
   }
 }

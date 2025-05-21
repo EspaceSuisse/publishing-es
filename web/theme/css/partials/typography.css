@@ -1,19 +1,27 @@
+p, li, a {
+    font-family: var(--font-default);
+    font-weight: var(--font-regualar);
+}
+h1, h2, h3 {
+    font-family: var(--font-default);
+    font-weight: var(--font-bold);
+}
 article {
     h1 {
-        font-size: 5rem;
+        font-size: var(--font-size-XXL);
         margin-bottom: 0;
     }
-    p {
-        font-size: 2rem;
+    p, li {
+        font-size: var(--font-size-M);
         line-height: 1.5;
         margin-bottom: 0;
     }
     h2 {
-        font-size: 4rem;
+        font-size: var(--font-size-XL);
         margin-bottom: 0;
     }
     h3 {
-        font-size: 3rem;
+        font-size: var(--font-size-L);
         margin-bottom: 0;
     }
 }

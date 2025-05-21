@@ -2,9 +2,11 @@
 
 <ul class="articleAuthors gridStart2 gridSpan10">
 		{% for item in authorQuery %}
-            {% set portrait = item.photo.url %}
 			<li>
-                <img src="{{ portrait }}" alt="{{ item.name }}">
+                {% if item.photo %}
+                    {% set portrait = item.photo.url %}
+                    <img src="{{ portrait }}" alt="{{ item.name }}">
+                {% endif %}
                 {{ item.name }}
             </li>
 		{% endfor %}

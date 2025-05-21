@@ -18,13 +18,13 @@
 
 	<nav aria-label="{{'Main navigation'|t}}"> <ul>
 		<li>
-			<a href="/">{{ 'Home' | t }}</a>
+			<a href="/" aria-label="{{ 'Home' | t }}">
+				<span class="hideOnMobile">{{ 'Home' | t }}</span>
+				<span class="hideOnDesktop"><img src="https://placehold.co/30x30" alt=""></span>
+			</a>
 		</li>
 		{{ dropMacro.dropdown(navSubject, labelSubject) }}
 		{{ dropMacro.dropdown(navGenre, labelGenre) }}
-		<li>
-			<a href="#">About</a>
-		</li>
         {% include "_components/navLangSwitcher.twig" %}
 	</ul>
 </nav>
