@@ -12,18 +12,18 @@ settings:
       __assoc__:
         -
           - uid
-          - 5ca31310-0358-4910-9e30-5605bc0c3c17 # Subtitle
-        -
-          - name
-          - 'Titel Abschnitt'
-    -
-      __assoc__:
-        -
-          - uid
           - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text i18N
         -
           - name
           - Lauftext
+    -
+      __assoc__:
+        -
+          - uid
+          - 5ca31310-0358-4910-9e30-5605bc0c3c17 # Subtitle
+        -
+          - name
+          - 'Titel Abschnitt'
     -
       __assoc__:
         -
@@ -57,12 +57,22 @@ settings:
       __assoc__:
         -
           - uid
+          - fcc8fbb4-1672-46a2-bb5d-fbd078cf5a93 # Img + Txt
+    -
+      __assoc__:
+        -
+          - uid
           - 898d8de1-26a8-46a2-be3b-ba455a3711cc # Related Article
     -
       __assoc__:
         -
           - uid
           - bf9959dc-941c-45ef-86b1-d05efb3e1626 # Download
+    -
+      __assoc__:
+        -
+          - uid
+          - 450218bb-dec8-4ecd-ac87-ba41a6674544 # Map
   includeTableView: false
   maxEntries: null
   minEntries: null

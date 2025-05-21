@@ -1,12 +1,12 @@
 color: null
 fieldLayouts:
-  55060bd9-75b4-4130-b5cb-0fb44c1e3983:
+  0a93e99d-cc48-4058-b262-0b4be2325a60:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-05-01T12:30:08+00:00'
+            dateAdded: '2025-05-21T08:05:38+00:00'
             editCondition: null
             elementCondition: null
             fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Article Img i18n
@@ -18,38 +18,15 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 51e94f97-bc2e-44ac-9a0c-251ad12a8fb1
+            uid: 7d9eba82-a0f0-4d91-a321-aef3af1a577a
             userCondition: null
             warning: null
-            width: 25
+            width: 100
           -
-            dateAdded: '2025-04-29T07:28:17+00:00'
+            dateAdded: '2025-05-21T08:05:38+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: Bildlegende
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8f941e2d-0d96-43b6-8e5b-26670955e460
-            userCondition: null
-            warning: null
-            width: 75
-        name: Inhalt
-        uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-05-13T07:38:58+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             includeInCards: false
             instructions: null
@@ -58,12 +35,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7ef404a8-6a68-4173-83a6-4af2bfd7761a
+            uid: a1b312f6-47c8-4bf7-8f54-e91f23c9172f
             userCondition: null
             warning: null
-            width: 25
+            width: 100
+        name: Content
+        uid: 468538c0-f81f-406f-ae0e-81c9b5767fd0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
-            dateAdded: '2025-05-13T07:38:58+00:00'
+            dateAdded: '2025-05-21T08:05:38+00:00'
             editCondition: null
             elementCondition: null
             fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
@@ -75,15 +58,15 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b98a6d1b-d59a-4bf5-bf2e-f63c67a88a54
+            uid: f25f501e-ffe9-4c6d-823e-4dcd8225f1d1
             userCondition: null
             warning: null
             width: 25
           -
-            dateAdded: '2025-05-21T08:09:16+00:00'
+            dateAdded: '2025-05-21T08:05:38+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
             handle: null
             includeInCards: false
             instructions: null
@@ -92,21 +75,38 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2e8e4924-6795-4dc6-ac74-8ec31255a561
+            uid: 97e9de43-9a29-40ec-b995-12a1ebfe42a8
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-05-21T08:12:15+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Img Position'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b69b666-37a4-4b55-aa81-69ac4ffc5484
             userCondition: null
             warning: null
             width: 25
         name: Layout
-        uid: 9a7652c2-646e-4191-9775-3f779d72f259
+        uid: 8a0efd02-c81f-4ca9-b8b1-12773e4cf479
         userCondition: null
-handle: tArticleImg
+handle: tImgTxt
 hasTitleField: false
-icon: image
-name: Image
-showSlugField: true
+icon: null
+name: 'Img + Txt'
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
-slugTranslationMethod: none
+slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
-titleTranslationMethod: none
+titleTranslationMethod: site

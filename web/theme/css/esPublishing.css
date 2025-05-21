@@ -21,3 +21,8 @@
 @import url("../css/components/cellQuote.css");
 @import url("../css/components/cellImg.css");
 @import url("../css/components/cellImgGallery.css");
+
+@import url("../css/components/articleHeadAuthors.css");
+@import url("../css/components/articleHeadCat.css");
+
+@import url("../css/partials/typography.css");

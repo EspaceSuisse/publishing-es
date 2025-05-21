@@ -8,9 +8,9 @@ The class is defined as gridStart{number} and gridEnd{number}.
 if grid start is set to 0. then ther will only be grid span and element s can be multi grid
  #}
 
-{%- macro gridClasses(paramStart, paramSpan) -%}
+{%- macro gridClasses(paramStart, paramSpan, paramVertPos) -%}
     {%- if paramStart or paramSpan -%}
-        {{- ' gridStart' ~ paramStart ~ ' gridSpan' ~ paramSpan -}}
+        {{- ' gridStart' ~ paramStart ~ ' gridSpan' ~ paramSpan ~ ' verticalPos' ~ paramVertPos | capitalize -}}
     {%- else -%}
         gridNull
     {%- endif -%}

@@ -55,6 +55,63 @@ fieldLayouts:
         name: Content
         uid: 33c18b5d-57b3-42d4-931c-97fc820a06f4
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-05-21T08:10:09+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c98692c0-e7ef-4c25-9a0c-de64a147bbf8
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-05-21T08:10:09+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e2b382dd-520d-47be-8649-f11489168ff6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-05-21T08:10:09+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f6a4c29-345e-4619-8910-d289592b37e1
+            userCondition: null
+            warning: null
+            width: 25
+        name: Layout
+        uid: 3574d368-a75a-4bf2-8d21-4dc229230392
+        userCondition: null
 handle: tDownload
 hasTitleField: true
 icon: file-circle-plus

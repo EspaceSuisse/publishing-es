@@ -1,0 +1,24 @@
+{% set articleGenre = entry.fCatGenre %}
+{% set articleSubject = entry.fCatSubject %}
+
+{% set catGenreElement %}
+{% for catItem in articleGenre %}
+	{% if loop.first %}
+		{{ labelGenre | t }}:
+	{% endif %}
+	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
+{% endfor %}
+{% endset %}
+
+{% set catSubjectElement %}
+{% for catItem in articleSubject %}
+	{% if loop.first %}
+		{{ labelSubject | t }}:
+	{% endif %}
+	<a href="{{ catItem.url }}">{{ catItem.title }}</a>
+{% endfor %}
+{% endset %}
+<div class="articleHeadCat gridStart2 gridSpan10">
+	<p>{{ catGenreElement }}</p>
+	<p>{{ catSubjectElement}}</p>
+</div>

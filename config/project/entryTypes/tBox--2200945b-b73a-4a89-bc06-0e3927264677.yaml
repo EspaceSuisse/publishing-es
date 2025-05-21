@@ -100,10 +100,10 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: '2025-02-18T09:03:23+00:00'
+            dateAdded: '2025-05-21T08:08:41+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 8348b893-eaba-48e4-b4ab-15c74d5c44d0 # Typ
+            fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
             includeInCards: false
             instructions: null
@@ -112,10 +112,10 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 66c06d27-b7de-403c-9d8f-60ce84c52266
+            uid: fb4cd135-fa4f-4032-a4c3-1f5e2dace911
             userCondition: null
             warning: null
-            width: 50
+            width: 25
         name: Layout
         uid: 435d7c9d-1e64-4c0f-8867-202e1a3658d3
         userCondition: null

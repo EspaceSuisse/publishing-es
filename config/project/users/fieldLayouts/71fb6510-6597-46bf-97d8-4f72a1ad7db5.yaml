@@ -127,6 +127,23 @@ tabs:
         userCondition: null
         width: 100
       -
+        dateAdded: '2025-05-21T07:53:10+00:00'
+        editCondition: null
+        elementCondition: null
+        fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+        handle: null
+        includeInCards: false
+        instructions: null
+        label: Aubildung
+        providesThumbs: false
+        required: false
+        tip: 'Journalistin, Redaktorin'
+        type: craft\fieldlayoutelements\CustomField
+        uid: f327a6e7-06c7-481e-80ad-0c7031c12b26
+        userCondition: null
+        warning: null
+        width: 100
+      -
         dateAdded: '2025-04-29T07:06:49+00:00'
         editCondition: null
         elementCondition: null
@@ -137,7 +154,7 @@ tabs:
         label: Funktion
         providesThumbs: false
         required: false
-        tip: 'Z.b. «Anwältin, stellvertretende Direktorin von EspaceSuisse»'
+        tip: 'Anwältin, stellvertretende Direktorin von EspaceSuisse'
         type: craft\fieldlayoutelements\CustomField
         uid: b4789b93-a202-4a87-a724-f555549a25f2
         userCondition: null

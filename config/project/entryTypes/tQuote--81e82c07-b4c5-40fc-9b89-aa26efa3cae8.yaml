@@ -79,6 +79,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
+          -
+            dateAdded: '2025-05-21T08:08:59+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cccbf5c-03e5-4ecc-a725-48173502ba79
+            userCondition: null
+            warning: null
+            width: 25
         name: Layout
         uid: 6918e779-b83a-450e-a59e-0a4cb33a17bc
         userCondition: null

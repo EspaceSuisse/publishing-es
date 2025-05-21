@@ -25,10 +25,10 @@ siteSettings:
     enabledByDefault: false
     hasUrls: true
     template: sections/article.twig
-    uriFormat: 'article/{slug}'
+    uriFormat: 'article/{id}-{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
     enabledByDefault: false
     hasUrls: true
     template: sections/article.twig
-    uriFormat: 'artikel/{slug}'
+    uriFormat: 'artikel/{id}-{slug}'
 type: channel

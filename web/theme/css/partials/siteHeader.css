@@ -6,7 +6,7 @@
 }
 
 /* Container query: separate block */
-@container mainContainer (max-width: 600px) {
+@container mainContainer (max-width: 1024px) {
   .siteHeader {
     height: 100vh;
     display: flex;

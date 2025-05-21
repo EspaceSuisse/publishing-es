@@ -70,7 +70,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Fotograf
+            label: Quelle
             providesThumbs: false
             required: true
             tip: 'Alain Beuret'
@@ -78,7 +78,7 @@ fieldLayouts:
             uid: a5f36884-58d8-414b-a0fa-668660832f96
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2025-05-01T12:21:29+00:00'
             editCondition: null

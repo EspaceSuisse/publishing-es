@@ -70,3 +70,13 @@
 .gridSpan12 {
     grid-column-end: span 12;
 }
+.verticalPosMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.verticalPosBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}

@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  5ebb01a2-ac7e-495b-bc10-8bb1b6625184:
+  09662c87-2347-406a-9fa0-55e34d3451d4:
     tabs:
       -
         elementCondition: null
@@ -10,14 +10,14 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-12-18T11:17:25+00:00'
+            dateAdded: '2025-05-21T06:47:55+00:00'
             disabled: false
             elementCondition: null
             id: null
             includeInCards: false
             inputType: null
             instructions: null
-            label: null
+            label: Ort
             max: null
             min: null
             name: null
@@ -31,15 +31,15 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: fde419f4-52aa-4897-8e8d-7d10ac49031f
+            uid: 3f76e6b3-a65a-424d-8ff2-59997ddf3f03
             userCondition: null
             warning: null
-            width: 75
+            width: 100
           -
-            dateAdded: '2024-12-18T11:18:45+00:00'
+            dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: eb32810d-6901-4788-b8bb-d4ca4124652b # H Level
+            fieldUid: fa1b164b-252f-4494-8e00-ef34899159fa # Latitude
             handle: null
             includeInCards: false
             instructions: null
@@ -48,18 +48,69 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4681cdf5-dbe5-4d7e-ab94-b8d4e39db62b
+            uid: 86127263-566f-4104-abd0-847eb16a4b8a
             userCondition: null
             warning: null
             width: 25
-        name: Inhalt
-        uid: 5042406c-43fc-4495-898d-3ca36374cbdd
+          -
+            dateAdded: '2025-05-21T06:46:08+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 004b97b7-ef5f-4e9e-a79e-0f94bebe89a8 # Longitude
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ed6634d3-6fa8-4e29-8353-695684a8e427
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-05-21T06:47:55+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8caa68b5-9596-4170-82d2-20866078095e # Numer
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: ZoomStufe
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0517b57-25c0-4d82-88c5-55b2646ad152
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-05-21T09:44:46+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Kartenlayer
+            providesThumbs: false
+            required: false
+            tip: 'Layer aus der url kopieren: "ch.are.wohnungsinventar-zweitwohnungsanteil"'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a7010d6-61b7-4715-a503-5a0836dfa01b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: de8accf5-1a04-48d6-b18e-0e31b1a003f0
         userCondition: null
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-05-08T13:26:33+00:00'
+            dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
             fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
@@ -71,12 +122,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 87ed1f0e-76b1-460f-bb2d-390d05d79490
+            uid: 990bb357-d4ec-48c0-b453-aaeeb92a874a
             userCondition: null
             warning: null
             width: 25
           -
-            dateAdded: '2025-05-08T13:26:33+00:00'
+            dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
             fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
@@ -88,12 +139,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c633f7ce-6a63-485a-b0ef-206b8686df6d
+            uid: 4de5dbfe-cec8-43ba-b7e1-0005e66e520d
             userCondition: null
             warning: null
             width: 25
           -
-            dateAdded: '2025-05-21T08:07:59+00:00'
+            dateAdded: '2025-05-21T08:10:26+00:00'
             editCondition: null
             elementCondition: null
             fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
@@ -105,17 +156,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f8d55de9-f43f-429f-9dc8-f0dec7f1d115
+            uid: 7cfd3a77-d53c-49f5-9cee-81fcabcbb80c
             userCondition: null
             warning: null
             width: 25
         name: Layout
-        uid: e268efe7-1950-4440-b53d-9d79703eaeb0
+        uid: 6e80896f-15ad-4872-b6f6-5ff3bc95e688
         userCondition: null
-handle: tSubtitle
+handle: tMap
 hasTitleField: true
-icon: heading
-name: Subtitle
+icon: map-location
+name: Map
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

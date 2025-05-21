@@ -63,22 +63,22 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: '2025-05-14T08:12:36+00:00'
+            dateAdded: '2025-05-21T08:09:29+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 667bf7af-f912-48b9-94c0-84b315656801
+            fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Bilder Raster'
+            label: null
             providesThumbs: false
             required: false
-            tip: 'Wie die Bildergalerie innerhalb von sich selber unterteilt sein soll'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fd3d6bd8-029a-4673-86e7-9fc4be637e83
+            uid: a84f0a48-ec6c-4dce-a146-fb65dab0ebf9
             userCondition: null
             warning: null
-            width: 50
+            width: 25
         name: Layout
         uid: 165cfa28-1490-4c4c-81c4-0e457b464b0c
         userCondition: null

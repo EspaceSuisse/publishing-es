@@ -3,8 +3,15 @@
 		<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-{{ paramLabel | ascii }}">{{ paramLabel | t }}</button>
 		<ul class="dropdown" id="dropdown-menu-2" role="menu">
 			{% for category in paramQuery %}
+				{% set relatedArticle = craft.entries().section('article').relatedTo(category).limit(10).all() %}
 				<li>
-					<a href="{{ category.url }}">{{ category.title }}</a>
+					<h2><a href="{{ category.url }}">{{ category.title }}</a></h2>
+					<ul>
+						{% for item in relatedArticle %}
+							<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+						{% endfor %}
+							<li><a href="{{ category.url }}">{{ 'Alle Artikel' | t}}</a></li>
+					</ul>
 				</li>
 			{% endfor %}
 		</ul>
