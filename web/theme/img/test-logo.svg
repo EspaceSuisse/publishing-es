@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920">
+  <rect x="186.34" y="588.32" width="90.51" height="154.19"/>
+  <rect x="739.59" y="1028.87" width="90.51" height="154.19"/>
+  <rect x="789.4" y="1183.07" width="90.51" height="144.25"/>
+  <rect x="223.21" y="742.12" width="91.17" height="170.57"/>
+  <rect x="818.59" y="588.32" width="90.51" height="154.19"/>
+  <rect x="855.46" y="742.12" width="91.17" height="170.57"/>
+  <rect x="428.94" y="596.77" width="108.33" height="315.53"/>
+  <rect x="490.67" y="501.48" width="108.33" height="298.9" transform="translate(1195.77 106.1) rotate(90)"/>
+  <rect x="169.18" y="1011.78" width="108.33" height="312.02"/>
+  <rect x="566.97" y="964.49" width="108.33" height="385.32" transform="translate(1000.15 -100.29) rotate(45)"/>
+  <rect x="324.94" y="959.33" width="108.33" height="213.22" transform="translate(1445.04 686.84) rotate(90)"/>
+  <rect x="1004.39" y="493.04" width="108.33" height="298.9" transform="translate(1701.04 -416.07) rotate(90)"/>
+  <rect x="1002.83" y="646.58" width="108.33" height="298.9" transform="translate(1853.03 -260.96) rotate(90)"/>
+  <rect x="618.69" y="703.94" width="108.33" height="208.37"/>
+  <rect x="1111.32" y="1011.78" width="108.33" height="207.21" transform="translate(2330.97 2230.76) rotate(180)"/>
+  <rect x="992.3" y="1148.25" width="108.33" height="249.8" transform="translate(-226.68 2319.61) rotate(-90)"/>
+  <rect x="921.57" y="1011.78" width="108.33" height="208.37" transform="translate(1951.46 2231.92) rotate(180)"/>
+  <rect x="1284.56" y="1120.11" width="108.33" height="207.21"/>
+  <rect x="1487.66" y="856.95" width="108.33" height="417.98" transform="translate(2607.77 -475.89) rotate(90)"/>
+  <rect x="1474.31" y="1118.95" width="108.33" height="208.37"/>
+  <rect x="1642.49" y="1118.95" width="108.33" height="208.37"/>
+  <path d="M1626.05,877.37h-210.13c-83.45,0-151.35-67.89-151.35-151.35v-6.61c0-83.45,67.89-151.35,151.35-151.35h210.13c83.45,0,151.35,67.89,151.35,151.35v6.61c0,83.45-67.89,151.35-151.35,151.35ZM1415.92,638.07c-44.85,0-81.35,36.49-81.35,81.35v6.61c0,44.85,36.49,81.35,81.35,81.35h210.13c44.85,0,81.35-36.49,81.35-81.35v-6.61c0-44.85-36.49-81.35-81.35-81.35h-210.13Z"/>
+</svg>

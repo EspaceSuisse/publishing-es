@@ -1,0 +1,10 @@
+.siteHeader {
+    .irBranding, .esBranding {
+        width: 100%;
+    }
+    .irBranding {
+        @media (max-width: 768px) {
+            width: 50%;
+        }
+    }
+}

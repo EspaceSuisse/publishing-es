@@ -7,6 +7,6 @@ body {
   padding: 0;
 }
 
-img {
+img, svg {
   width: 100%;
 }

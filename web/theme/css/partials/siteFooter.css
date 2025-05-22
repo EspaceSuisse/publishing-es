@@ -3,4 +3,7 @@ footer {
     background-color: white;
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
 }
