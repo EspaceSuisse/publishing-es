@@ -4,4 +4,5 @@
     h3 {
         background-color: aquamarine;
     }
+    margin-bottom: var(--layoutGap);
 }

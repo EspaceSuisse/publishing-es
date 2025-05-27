@@ -1,3 +1,5 @@
 .cellQuote {
-    
+    blockquote {
+        border-left: solid 5px red;
+    }
 }

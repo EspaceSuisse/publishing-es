@@ -1,7 +1,9 @@
-{% set aufmacherBild = entry.fArticleImgI18n.one() %}
+{% import '_macros/macroImage' as imgMacro %}
 
-
-<div class="articleHeadImg"><img src="{{ aufmacherBild.url }}" width="300" alt="" title="{{ aufmacherBild.title }}"></div>
+<div class="articleHeadImg">
+	{% set aufmacherBild = entry.fArticleImgI18n.one() %}
+	{{ imgMacro.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+</div>
 
 <div class="articleHeadTitle gridArticle">
 

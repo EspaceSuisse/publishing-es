@@ -1,0 +1,18 @@
+.cellDownload {
+    display: grid;
+    grid-template-columns: subgrid;
+    .cellDownloadTitle {
+        grid-column: 1 / -1;
+    }
+    .downloadList {
+        grid-column: span 5;
+    }
+    .downloadLink {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 150px;
+        }
+    }
+}

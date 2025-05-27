@@ -3,7 +3,7 @@ p, li, a {
     font-weight: var(--font-regular);
     font-size: var(--font-size-base);
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, blockquote {
     font-family: var(--font-display);
     font-weight: var(--font-bold);
 }
@@ -30,7 +30,7 @@ a, .buttonTxt {
     }
 }
 article {
-    p {
+    p, a, li {
         font-size: var(--font-size-M);
         line-height: var(--line-height-base);
         color: var(--colorText);
@@ -39,5 +39,13 @@ article {
         font-size: var(--font-size-L);
         line-height: var(--line-height-base);
         color: var(--colorText);
+    }
+    blockquote {
+        font-size: var(--font-size-XL);
+        color: greenyellow
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: var(--layoutGap);
     }
 }

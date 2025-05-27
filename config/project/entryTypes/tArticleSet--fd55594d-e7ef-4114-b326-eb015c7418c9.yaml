@@ -188,10 +188,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-18T10:52:25+00:00'
+            dateAdded: '2025-05-27T12:12:07+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 8615cf7b-5ca8-4def-a0f2-1370cdee3c8e # SEO Article
+            fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
             handle: null
             includeInCards: false
             instructions: null
@@ -200,7 +200,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1d14bd53-0ba2-4789-b3c7-03556beb5ce1
+            uid: 7e1b0956-3d57-466c-bc47-ee01df7d84d8
             userCondition: null
             warning: null
             width: 100

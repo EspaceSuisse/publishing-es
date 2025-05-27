@@ -1,24 +1,39 @@
 {# This macro contains the constructed image tag with alt title image description and legends. 
 for image transformations fo to config/imager-x-transform.php you can pass named transforms from there into this macro #}
 
-{% macro articleImage(handleParam, transformKey) %}
 
+{# handleParam == the craft handle #}
+{# transformKey == the transformation handle from imager-x-trnasforms.php #}
+{# paramClass == the css class assigned to the picture tag #}
+
+{% macro articleImage(handleParam, transformKey, paramClass) %}
+
+
+    {# Define variable #}
     {% set altText = handleParam.fPlainTextI18nMultiline %}
     {% set imgTitle = handleParam.title %}
     {% set imgphotographer = handleParam.fPlainTxt %}
     {% set imgProvider = handleParam.fPlainTxt2 %}
     {% set imgLicence = handleParam.fPlainTxt3 %}
 
-    <img src="{{ handleParam.url }}" alt="{{ altText }}" width="200" title="{{ imgTitle }}">
-    
-    <p>
-        {{ imgphotographer }}
-        {%- if imgProvider -%}
-            {{- ', ' ~ imgProvider -}}
-        {%- endif -%}
-        {%- if imgLicence -%}
-            {{- ' - ' ~ imgLicence  -}}
-        {%- endif -%}
-    </p>
+
+    {# Construct the filename pattern which will be used in the frontend #}
+    {% set filenamePattern = imgTitle | ascii  ~ '-' ~ transformKey ~ '-EspaceSuisse-' ~ '-{fullname|shorthash}.{extension}' %}
+
+    {# pass the filename pattern to the image transforme #}
+    {% set transformedImages = craft.imagerx.transformImage(handleParam, 'articleThumb', {
+        filenamePattern: filenamePattern
+    }) %}
+
+    <picture class="{{ paramClass ? paramClass : 'imgItem'}}">
+        {# Loop through the transformed images and create source elements #}
+        {% for img in transformedImages %}
+            <source srcset="{{ img.url }}" media="(max-width: {{ img.width }}px)">
+        {% endfor %}
+        {# Fallback image tag where the source images will be filled in #}
+        <img src="{{ transformedImages[0].url }}" alt="{{ altText }}" title="{{ imgTitle }}, {{ imgphotographer }}">
+    </picture>
+
+
 
 {% endmacro %}

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: fSeoArticle
+handle: seoArticles
 instructions: null
-name: 'SEO Article'
+name: 'SEO Articles'
 searchable: false
 settings:
   elementDisplayPreviewType: google

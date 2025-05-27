@@ -1,4 +1,4 @@
-dateModified: 1748340689
+dateModified: 1748347927
 elementSources:
   craft\elements\Entry:
     -
@@ -117,6 +117,7 @@ meta:
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
+    8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text i18n' # Plain Text i18n
     49c73379-624e-465f-92eb-b17550eca753: 'Grid Start Wide' # Grid Start Wide
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
@@ -129,7 +130,6 @@ meta:
     898d8de1-26a8-46a2-be3b-ba455a3711cc: 'Related Article' # Related Article
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8348b893-eaba-48e4-b4ab-15c74d5c44d0: Typ # Typ
-    8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: 'Text i18n' # Text i18n
     23465aca-7fa4-4dd7-bd09-9c11e7d61c9a: 'Related Entry' # Related Entry
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
@@ -172,6 +172,10 @@ plugins:
     enabled: true
     licenseKey: Q66KERQ0US0VFVKAFRDGYOPG
     schemaVersion: 4.0.0
+  imager-x-pdf-adapter:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   knock-knock:
     edition: standard
     enabled: true

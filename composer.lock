@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8572b58cbd3d7a8ee20cd193fa8537bb",
+    "content-hash": "6c17d3169f80f153ed865189c47917f7",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -48,16 +48,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.342.32",
+            "version": "3.343.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "638ded9f33b28aac014db6bf2817e9341f5e6361"
+                "reference": "ae98d503173740cce23b30d2ba2737c49b0d9876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/638ded9f33b28aac014db6bf2817e9341f5e6361",
-                "reference": "638ded9f33b28aac014db6bf2817e9341f5e6361",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ae98d503173740cce23b30d2ba2737c49b0d9876",
+                "reference": "ae98d503173740cce23b30d2ba2737c49b0d9876",
                 "shasum": ""
             },
             "require": {
@@ -139,9 +139,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.342.32"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.343.18"
             },
-            "time": "2025-04-22T18:26:09+00:00"
+            "time": "2025-05-23T18:08:18+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1351,28 +1351,28 @@
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.62.1",
+            "version": "v1.62.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-core.git",
-                "reference": "824a617d5c2b1b571673d1111856f5c2f064a0fd"
+                "reference": "0c19d76e7f3b6810c4f2cc1330c693af2681c601"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/824a617d5c2b1b571673d1111856f5c2f064a0fd",
-                "reference": "824a617d5c2b1b571673d1111856f5c2f064a0fd",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/0c19d76e7f3b6810c4f2cc1330c693af2681c601",
+                "reference": "0c19d76e7f3b6810c4f2cc1330c693af2681c601",
                 "shasum": ""
             },
             "require": {
                 "google/auth": "^1.34",
                 "google/gax": "^1.36.0",
-                "guzzlehttp/guzzle": "^6.5.8|^7.4.4",
+                "guzzlehttp/guzzle": "^6.5.8||^7.4.4",
                 "guzzlehttp/promises": "^1.4||^2.0",
                 "guzzlehttp/psr7": "^2.6",
-                "monolog/monolog": "^2.9|^3.0",
+                "monolog/monolog": "^2.9||^3.0",
                 "php": "^8.0",
-                "psr/http-message": "^1.0|^2.0",
-                "rize/uri-template": "~0.3"
+                "psr/http-message": "^1.0||^2.0",
+                "rize/uri-template": "~0.3||~0.4"
             },
             "require-dev": {
                 "erusev/parsedown": "^1.6",
@@ -1411,22 +1411,22 @@
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.62.1"
+                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.62.3"
             },
-            "time": "2025-02-22T00:57:16+00:00"
+            "time": "2025-05-20T19:49:54+00:00"
         },
         {
             "name": "google/cloud-storage",
-            "version": "v1.48.0",
+            "version": "v1.48.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-storage.git",
-                "reference": "e2d7a59290ab7fb69208c45058efa3946edbb793"
+                "reference": "509b095c3ea44db92c9e62a94b5773563c831821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/e2d7a59290ab7fb69208c45058efa3946edbb793",
-                "reference": "e2d7a59290ab7fb69208c45058efa3946edbb793",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/509b095c3ea44db92c9e62a94b5773563c831821",
+                "reference": "509b095c3ea44db92c9e62a94b5773563c831821",
                 "shasum": ""
             },
             "require": {
@@ -1468,22 +1468,22 @@
             ],
             "description": "Cloud Storage Client for PHP",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.48.0"
+                "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.48.1"
             },
-            "time": "2025-04-18T20:49:28+00:00"
+            "time": "2025-05-20T19:49:54+00:00"
         },
         {
             "name": "google/common-protos",
-            "version": "4.12.0",
+            "version": "4.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/common-protos-php.git",
-                "reference": "96f6873c65fb0289fcdb6ac3d5239f9c9e5750b0"
+                "reference": "70c4eb1abab5484a23c17a43b0d455259f5d8c1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/96f6873c65fb0289fcdb6ac3d5239f9c9e5750b0",
-                "reference": "96f6873c65fb0289fcdb6ac3d5239f9c9e5750b0",
+                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/70c4eb1abab5484a23c17a43b0d455259f5d8c1b",
+                "reference": "70c4eb1abab5484a23c17a43b0d455259f5d8c1b",
                 "shasum": ""
             },
             "require": {
@@ -1527,17 +1527,22 @@
                 "google"
             ],
             "support": {
-                "source": "https://github.com/googleapis/common-protos-php/tree/v4.12.0"
+                "source": "https://github.com/googleapis/common-protos-php/tree/v4.12.1"
             },
-            "time": "2025-04-18T20:49:28+00:00"
+            "time": "2025-05-20T19:49:54+00:00"
         },
         {
             "name": "google/gax",
-            "version": "v1.36.0",
+            "version": "v1.36.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/googleapis/gax-php.git",
+                "reference": "afdac3bc38a3b17d70668115d7b1a97289ac4d72"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/140599cf5eae2432363ce6198e9fdff851625a7a",
-                "reference": "140599cf5eae2432363ce6198e9fdff851625a7a",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/afdac3bc38a3b17d70668115d7b1a97289ac4d72",
+                "reference": "afdac3bc38a3b17d70668115d7b1a97289ac4d72",
                 "shasum": ""
             },
             "require": {
@@ -1555,6 +1560,12 @@
             "conflict": {
                 "ext-protobuf": "<3.7.0"
             },
+            "require-dev": {
+                "phpspec/prophecy-phpunit": "^2.1",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^9.6",
+                "squizlabs/php_codesniffer": "3.*"
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1562,6 +1573,7 @@
                     "GPBMetadata\\ApiCore\\": "metadata/ApiCore"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1570,7 +1582,11 @@
             "keywords": [
                 "google"
             ],
-            "time": "2024-12-11T02:47:43+00:00"
+            "support": {
+                "issues": "https://github.com/googleapis/gax-php/issues",
+                "source": "https://github.com/googleapis/gax-php/tree/v1.36.1"
+            },
+            "time": "2025-05-20T19:50:43+00:00"
         },
         {
             "name": "google/grpc-gcp",
@@ -1650,16 +1666,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.30.2",
+            "version": "v4.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "a4c4d8565b40b9f76debc9dfeb221412eacb8ced"
+                "reference": "d59e31ce4bf0e4b48728e90c4d880839edb5be07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/a4c4d8565b40b9f76debc9dfeb221412eacb8ced",
-                "reference": "a4c4d8565b40b9f76debc9dfeb221412eacb8ced",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/d59e31ce4bf0e4b48728e90c4d880839edb5be07",
+                "reference": "d59e31ce4bf0e4b48728e90c4d880839edb5be07",
                 "shasum": ""
             },
             "require": {
@@ -1688,9 +1704,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.30.2"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.31.0"
             },
-            "time": "2025-03-26T18:01:50+00:00"
+            "time": "2025-05-14T16:17:23+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -4804,6 +4820,61 @@
             "time": "2025-03-25T13:10:04+00:00"
         },
         {
+            "name": "spacecatninja/imager-x-pdf-adapter",
+            "version": "1.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x-pdf-adapter/zipball/95c7d69306d3c24ba6e2262afad055d029066b3f",
+                "reference": "95c7d69306d3c24ba6e2262afad055d029066b3f",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0|^5.0.0-beta.1",
+                "ext-imagick": "*",
+                "php": "^8.0.2",
+                "spacecatninja/imager-x": "^4.1.0|^5.0.0-beta.1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Imager X PDF Adapter",
+                "handle": "imager-x-pdf-adapter",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/spacecatninja/craft-imager-x-pdf-adapter/master/CHANGELOG.md",
+                "components": [],
+                "class": "spacecatninja\\imagerxpdfadapter\\PDFAdapter"
+            },
+            "autoload": {
+                "psr-4": {
+                    "spacecatninja\\imagerxpdfadapter\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SPACECATNINJA",
+                    "homepage": "https://www.spacecat.ninja"
+                }
+            ],
+            "description": "File adapter for transforming PDFs in Imager X",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "imager",
+                "pdf"
+            ],
+            "support": {
+                "docs": "https://github.com/spacecatninja/craft-imager-x-pdf-adapter/blob/master/README.md",
+                "issues": "https://github.com/spacecatninja/craft-imager-x-pdf-adapter/issues"
+            },
+            "time": "2024-02-09T20:16:19+00:00"
+        },
+        {
             "name": "spatie/macroable",
             "version": "2.0.0",
             "dist": {
@@ -5213,11 +5284,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.5.1",
+            "version": "v3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
-                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
                 "shasum": ""
             },
             "require": {
@@ -5225,12 +5301,12 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "3.5-dev"
-                },
                 "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -5238,6 +5314,7 @@
                     "function.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5253,7 +5330,24 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
-            "time": "2024-09-25T14:20:29+00:00"
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -5371,11 +5465,16 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.5.1",
+            "version": "v3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "59eb412e93815df44f05f342958efa9f46b1e586"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/7642f5e970b672283b7823222ae8ef8bbc160b9f",
-                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/59eb412e93815df44f05f342958efa9f46b1e586",
+                "reference": "59eb412e93815df44f05f342958efa9f46b1e586",
                 "shasum": ""
             },
             "require": {
@@ -5384,12 +5483,12 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "3.5-dev"
-                },
                 "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -5397,6 +5496,7 @@
                     "Symfony\\Contracts\\EventDispatcher\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5420,7 +5520,24 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -5559,11 +5676,16 @@
         },
         {
             "name": "symfony/http-client-contracts",
-            "version": "v3.5.2",
+            "version": "v3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client-contracts.git",
+                "reference": "75d7043853a42837e68111812f4d964b01e5101c"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/ee8d807ab20fcb51267fdace50fbe3494c31e645",
-                "reference": "ee8d807ab20fcb51267fdace50fbe3494c31e645",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/75d7043853a42837e68111812f4d964b01e5101c",
+                "reference": "75d7043853a42837e68111812f4d964b01e5101c",
                 "shasum": ""
             },
             "require": {
@@ -5576,7 +5698,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.5-dev"
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -5587,6 +5709,7 @@
                     "/Test/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5610,7 +5733,24 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2024-12-07T08:49:48+00:00"
+            "support": {
+                "source": "https://github.com/symfony/http-client-contracts/tree/v3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-04-29T11:18:49+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -6907,11 +7047,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.5.1",
+            "version": "v3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/service-contracts.git",
+                "reference": "f021b05a130d35510bd6b25fe9053c2a8a15d5d4"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
-                "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
+                "reference": "f021b05a130d35510bd6b25fe9053c2a8a15d5d4",
                 "shasum": ""
             },
             "require": {
@@ -6924,12 +7069,12 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "3.5-dev"
-                },
                 "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.6-dev"
                 }
             },
             "autoload": {
@@ -6940,6 +7085,7 @@
                     "/Test/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6963,7 +7109,24 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "support": {
+                "source": "https://github.com/symfony/service-contracts/tree/v3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-04-25T09:37:31+00:00"
         },
         {
             "name": "symfony/string",

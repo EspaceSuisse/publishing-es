@@ -6,14 +6,14 @@
 
 {% for item in imgGallery %}
 
-    {% set gridImgStart = item.fGridStart ?? null %}
-    {% set gridImgSpan = item.fGridSpan ?? null %}
+    {% set gridImgStart = item.fGridStartWide ?? null %}
+    {% set gridImgSpan = item.fGridSpanWide ?? null %}
 
         {% for asset in item.fArticleImgI18n.all() %}
             <div class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
                 {{ imgMacro.articleImage(asset, 'articleImage') }}
-                {% if item.fPlainTextI18nMultiline %}
-                    {{ item.fPlainTextI18nMultiline }}
+                {% if block.fPlainTextI18nMultiline %}
+                    <p class="caption">{{ block.fPlainTextI18nMultiline }}</p>
                 {% endif %}
             </div>
         {% endfor %}

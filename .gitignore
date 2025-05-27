@@ -5,3 +5,4 @@
 /storage
 /web/assets
 .env.web
+/web/imager

@@ -11,6 +11,9 @@
     	{% set gridSpan = block.fGridSpan ?? null %}
 		{% set vertPos = block.fVertPos.value ?? null %}
 
+		{% set gridStartImg = block.fGridStartWide ?? null %}
+		{% set gridSpanImg = block.fGridSpanWide ?? null %}
+
 {# switch trough all blocks. actual block code in partials #}
 	{% switch block.type %}
 
@@ -24,13 +27,13 @@
 		{% case "tQuote" %}
 			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellQuote">{% include "_components/cellQuote" %}</div>
 		{% case "tArticleImg" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellImg">{% include "_components/cellImg" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellImg">{% include "_components/cellImg" %}</div>
 		{% case "tArticleImgGallery" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellImgGallery">{% include "_components/cellImgGallery" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellImgGallery">{% include "_components/cellImgGallery" %}</div>
 		{% case "tRelEntry" %}
 			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellRelEntry">{% include "_components/cellRelEntry" %}</div>
 		{% case "tMap" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellMap">{% include "_components/cellMap" %}</div>
+			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellMap">{% include "_components/cellMap" %}</div>
 		{% case "tDownload" %}
 			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload">{% include "_components/cellDownload" %}</div>
 	{% endswitch %}

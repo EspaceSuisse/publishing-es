@@ -1,6 +1,13 @@
+{% import '_macros/macroImage' as imgMacro %}
+
 {% set relEntryQuery = block.fRelEntry.all() %}
 
-<p>{{ 'Lesen Sie dazu auch' | t }}</p>
+
 {% for item in relEntryQuery %}
-    <a href="{{ item.url }}">{{ item.title }}</a>
+    {% set img = item.fArticleImgI18n.one() %}
+    {{ imgMacro.articleImage(img, 'articleThumb') }}
+    <a href="{{ item.url }}">
+        {{ 'Lesen Sie dazu auch' | t }} <br>
+        {{ item.title }}
+    </a>
 {% endfor %}
