@@ -1,9 +1,6 @@
 .articleHead {
   .articleHeadImg {
-    height: 50vh;    
     width: 100%;   
-    overflow: hidden;
-    aspect-ratio: 16/9;
     img {
       object-fit: cover;
       object-position: center;
