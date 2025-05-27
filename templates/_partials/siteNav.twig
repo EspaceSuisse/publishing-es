@@ -16,7 +16,8 @@
 	.all() %}
 
 
-	<nav aria-label="{{'Main navigation'|t}}"> <ul>
+<nav aria-label="{{'Main navigation'|t}}" role="navigation"> 
+	<ul class="siteNav">
 		<li>
 			<a href="/" aria-label="{{ 'Home' | t }}">
 				<span class="hideOnMobile">{{ 'Home' | t }}</span>
@@ -25,7 +26,7 @@
 		</li>
 		{{ dropMacro.dropdown(navSubject, labelSubject) }}
 		{{ dropMacro.dropdown(navGenre, labelGenre) }}
-        {% include "_components/navLangSwitcher.twig" %}
+		{% include "_components/navLangSwitcher.twig" %}
 	</ul>
 </nav>
 
