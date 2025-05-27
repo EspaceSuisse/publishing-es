@@ -1,4 +1,4 @@
-dateModified: 1747821868
+dateModified: 1748340689
 elementSources:
   craft\elements\Entry:
     -
@@ -112,11 +112,13 @@ meta:
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery
     4f2a2908-da4b-46df-b9ab-a5a6d8078286: Downloads # Downloads
+    5af8807d-9f2e-4703-a300-ba7f06531aea: 'Grid Span Wide' # Grid Span Wide
     5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle
     5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text i18n' # Plain Text i18n
+    49c73379-624e-465f-92eb-b17550eca753: 'Grid Start Wide' # Grid Start Wide
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
@@ -154,7 +156,6 @@ meta:
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
-    fcc8fbb4-1672-46a2-bb5d-fbd078cf5a93: 'Img + Txt' # Img + Txt
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
 plugins:

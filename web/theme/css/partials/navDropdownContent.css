@@ -1,0 +1,14 @@
+.dropdown {
+    @media (min-width: 1025px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .relatedNav {
+        padding: var(--layoutGap);
+    }
+    .catArticles {
+        li:last-child {
+            padding-top: var(--layoutGap);
+        }
+    }
+}

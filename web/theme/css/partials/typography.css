@@ -1,27 +1,43 @@
 p, li, a {
     font-family: var(--font-default);
-    font-weight: var(--font-regualar);
+    font-weight: var(--font-regular);
+    font-size: var(--font-size-base);
 }
-h1, h2, h3 {
-    font-family: var(--font-default);
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
     font-weight: var(--font-bold);
 }
-article {
+ul {
+    li {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+    }
+}
+a, .buttonTxt {
+   text-decoration-thickness: 3px;
+   text-decoration-color: var(--colorLink);
+   text-decoration-line: underline;
+   transition: all 0.2s ease-in-out;
+   &:hover, &:visited {
+       text-decoration-color: var(--colorLinkHover);
+       text-decoration-thickness: 5px;
+       cursor: pointer;
+   }
+}
+.articleHeadTitle {
     h1 {
         font-size: var(--font-size-XXL);
-        margin-bottom: 0;
     }
-    p, li {
+}
+article {
+    p {
         font-size: var(--font-size-M);
-        line-height: 1.5;
-        margin-bottom: 0;
-    }
-    h2 {
-        font-size: var(--font-size-XL);
-        margin-bottom: 0;
+        line-height: var(--line-height-base);
+        color: var(--colorText);
     }
     h3 {
         font-size: var(--font-size-L);
-        margin-bottom: 0;
+        line-height: var(--line-height-base);
+        color: var(--colorText);
     }
 }

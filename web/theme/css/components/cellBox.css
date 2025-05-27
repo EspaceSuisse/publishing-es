@@ -1,6 +1,6 @@
 .cellBox {
     background-color: aqua;
-    padding: 20px;
+    padding: var(--layoutGap);
     h3 {
         background-color: aquamarine;
     }

@@ -5,7 +5,7 @@
   min-height: 100vh;
   container-type: inline-size;
   container-name: appContainer;
-  background: #954;
+  background: var(--colorArticleBG);
 }
 
 @media (max-width: 1024px) {

@@ -18,12 +18,19 @@ nav {
         justify-content: space-evenly;
         @media (min-width: 1024px) {
             flex-direction: column;
-            padding-left: 20px;
+            padding-left: var(--layoutGap);
         }
     }
     .langSwitcher {
         display: flex;
         gap: 10px;
         margin-top: 10px;
+    }
+    a, .buttonTxt, a p {
+        text-decoration-thickness: 0;
+        text-decoration-color: white;
+        &:visited {
+            text-decoration-color: white;
+        }
     }
 }

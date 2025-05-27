@@ -1,0 +1,6 @@
+{% set downloadAsset = block.fFile.all() %}
+
+{% for item in downloadAsset %}
+    <a href="{{ item.url }}">{{ item.title }} ({{ item.extension }})</a>
+    <hr>
+{% endfor %}

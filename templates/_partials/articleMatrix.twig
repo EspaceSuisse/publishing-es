@@ -31,6 +31,8 @@
 			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellRelEntry">{% include "_components/cellRelEntry" %}</div>
 		{% case "tMap" %}
 			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellMap">{% include "_components/cellMap" %}</div>
+		{% case "tDownload" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload">{% include "_components/cellDownload" %}</div>
 	{% endswitch %}
 
 	

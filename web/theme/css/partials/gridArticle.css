@@ -2,10 +2,10 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     container-name: articleContainer;
-    column-gap: 20px;
-    max-width: 1320px;
+    column-gap: var(--layoutGap);
+    max-width: 13var(--layoutGap);
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--layoutGap);
      @media (min-width: 768px) {
         grid-template-columns: repeat(12, minmax(0, 1fr));
         padding: 0;

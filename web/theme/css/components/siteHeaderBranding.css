@@ -1,6 +1,6 @@
 .esBrandLink {
     width: 80%;
-    padding-bottom: 20px;
+    padding-bottom: var(--layoutGap);
     display: block;
 }
 .irBranding {
