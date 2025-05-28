@@ -1,68 +1,37 @@
 {% macro articleImage(handleParam, transformKey, paramClass) %}
-
-    {# create empty variables which we will check if the are empty #}
-    {% set imgphotographer = '' %}
-    {% set imgProvider = '' %}
-    {% set imgCC = '' %}
-
-    {# Define variable to apply some filters #}
-    {% set altText = handleParam.fPlainTextI18nMultiline %}
+    {# Image meta text transformations #}
     {% set imgFileTitle = handleParam.title | ascii | kebab %}
-    {% if imgphotographer %}
-        {% set imgphotographer = handleParam.fPlainTxt | ascii | kebab %}
-    {% endif %}
-    {% if imgProvider %}
-        {% set imgProvider = handleParam.fPlainTxt2 | ascii | kebab %}
-    {% endif %}
-    {% if imgCC %}
-        {% set imgCC = handleParam.fPlainTxt3 | ascii | kebab %}
-    {% endif %}
+    {% set imgPhotographer = handleParam.fPlainTxt ?? '' | ascii | kebab %}
+    {% set imgProvider = handleParam.fPlainTxt2 ?? '' | ascii | kebab %}
+    {% set imgCC = handleParam.fPlainTxt3 ?? '' | ascii | kebab %}
+    {% set altText = handleParam.fPlainTextI18nMultiline ?? '' %}
 
-    {# Set the image photographer, provider, and CC license handles #}
-    {% set imgProvider = handleParam.fPlainTxt2 | ascii | kebab %}
-    {% if handleParam.fPlainTxt3 %}
-        {% set imgCC = handleParam.fPlainTxt3 | ascii | kebab %}
-    {% endif %}
-    
-
-    {# look up table which matches with the named transform device handle #}
-    {% set deviceMap = ['desktop', 'mobile'] %}
-
-    {# Construct the filename pattern #}
+    {# Filename pattern construction #}
     {% set filenamePattern = 
-        imgFileTitle ~
-        '-' ~
-        imgphotographer ~
-        '-' ~
-        imgProvider ~
-        '-'  ~
-        imgCC ~
-        '-'  ~
-        transformKey ~
-        '-' ~
-        'EspaceSuisse' ~
-        '-' ~
+        imgFileTitle ~ '-' ~
+        imgPhotographer ~ '-' ~
+        imgProvider ~ '-' ~
+        imgCC ~ '-' ~
+        transformKey ~ '-' ~
+        'EspaceSuisse' ~ '-' ~
         '{fullname|shorthash}.{extension}'
     %}
 
-    {{ filenamePattern }}
+{{ filenamePattern }}
 
-    {# Use transformKey variable instead of hardcoded value #}
+    {# Transform image via Imager X #}
     {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {
         filenamePattern: filenamePattern
     }) %}
 
-    <picture class="{{ paramClass ? paramClass : 'imgItem'}}">
-        {% for img in transformedImages %}
-        {# Force mobile to be first in the loop #}
-        {% set device = deviceMap[loop.index0] %}
-            {% if device == 'mobile' %}
-                <source srcset="{{ img.url }}" media="(max-width: 1080px)">
-            {% else %}
-                <source srcset="{{ img.url }}" media="(min-width: 1081px)">
-            {% endif %}
-        {% endfor %}
-        <img src="{{ transformedImages[0].url }}" alt="{{ altText }}" title="{{ handleParam.title }}">
-    </picture>
+    {# Device order: mobile first #}
+    {% set deviceMap = ['mobile', 'desktop'] %}
 
+    <picture class="{{ paramClass ?? 'imgItem' }}">
+        {% for img in transformedImages %}
+            {% set device = deviceMap[loop.index0] %}
+            <source srcset="{{ img.url }}" media="{{ device == 'mobile' ? '(max-width: 1080px)' : '(min-width: 1081px)' }}">
+        {% endfor %}
+        <img src="{{ transformedImages[0].url }}" alt="{{ altText|e('html_attr') }}" title="{{ handleParam.title|e('html_attr') }}">
+    </picture>
 {% endmacro %}
