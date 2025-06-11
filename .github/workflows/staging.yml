@@ -24,7 +24,7 @@ jobs:
         run: composer install --no-dev --optimize-autoloader
 
       - name: Deploy via FTP to Green.ch
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
