@@ -23,7 +23,7 @@
 			{% endfor %}
 		</section>
 		<section class="latest">
-			{% for item in allEntries | slice(6, 20) %}
+			{% for item in allEntries | slice(6) %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
 			{% endfor %}
 		</section>
