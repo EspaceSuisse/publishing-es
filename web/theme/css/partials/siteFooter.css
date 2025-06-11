@@ -1,6 +1,6 @@
 footer {
     height: 100vh;
-    background-color: white;
+    background-color: var(--colorES-brand-blue);
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     position: sticky;

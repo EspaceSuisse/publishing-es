@@ -6,14 +6,14 @@
     {% set catSubject = queryParam.fCatSubject.all() %}
 
     <article class="articlePreviewS {{ classParam }}">
-            <a href="{{ queryParam.url }}">
+        <a href="{{ queryParam.url }}">
             {% for cat in catGenre %}
                 {{ cat.title }}
             {% endfor %}
             {% for cat in catSubject %}
                 {{ cat.title }}
             {% endfor %}
-            {{ queryParam.title }}
+            <h2>{{ queryParam.title }}</h2>
         </a>
     </article>
     

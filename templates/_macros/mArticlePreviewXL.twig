@@ -10,14 +10,15 @@
 
     <article class="articlePreviewXL {{ classParam }}">
             <a href="{{ queryParam.url }}">
-            {{ macro.articleImage(image, 'articleImage', 'previewImg') }}
+            {{ macro.articleImage(image, 'articleStarterImg', 'previewImg') }}
             {% for cat in catGenre %}
                 {{ cat.title }}
             {% endfor %}
             {% for cat in catSubject %}
                 {{ cat.title }}
             {% endfor %}
-            {{ queryParam.title }}
+            <h2>{{ queryParam.title }}</h2>
+            <p class="lead">{{ queryParam.fSeoDescription}}</p>
         </a>
     </article>
 
