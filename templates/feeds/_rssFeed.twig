@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/theme/rss-style.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+
+{% import '_macros/macroRssImg' as macroImg %}
+
+<channel>
+    <title>{{ siteName }} - {{ 'Artikel' | t }} {{ language|slice(0,2) }}</title>
+    <link>{{ siteUrl(language) }}</link>
+     <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/articled-' ~ language |slice(0,2) }}.rss" />
+    <description>{{ 'Latest articles in'|t(language) ~ ' ' ~ language }}</description>
+    <language>{{ language }}</language>
+
+    {% set deSiteHandle = 'default' %}
+    {% set frSiteHandle = 'espacesuissePublishingFr' %}
+
+
+    {% for item in entries %}
+
+        {% set otherLang = craft.entries()
+            .uid(item.uid)
+            .site(frSiteHandle)
+            .one()
+        %}
+
+        <item>
+            {{ macroImg.rssFeedImg(item.fArticleImgI18n.one(), 'articleThumb') }}
+            <pubDate>{{ item.postDate.format('r') }}</pubDate>
+            <title>{{ item.title }}</title>
+            <description>{{ item.fSeoDescription }}</description>
+
+             <link>{{ item.url }}</link>
+             <guid isPermaLink="true">{{ item.url }}</guid>
+
+            {%- if otherLang -%}
+                <atom:link rel="alternate" hreflang="fr" href="{{ otherLang.url }}" />
+            {%- endif -%}
+
+        </item>
+    {% endfor %}
+</channel>
+</rss>

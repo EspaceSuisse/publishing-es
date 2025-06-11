@@ -5,4 +5,13 @@
   {% hook "seomaticRender" %}
 
   <link rel="stylesheet" href="/theme/css/esPublishing.css?v={{ now|date('U') }}">
+
+  {% set currentHandle = currentSite.handle %}
+  {% set secondHandle = currentHandle == 'espacesuissePublishingFr' ? 'default' : 'espacesuissePublishingFr' %}
+  {% set secondSite = craft.app.sites.getSiteByHandle(secondHandle) %}
+
+<link rel="alternate" type="application/rss+xml" title="{{ currentSite.name }} ({{ currentSite.language|slice(0,2) }})" href="{{ currentSite.baseUrl }}feeds/articles-{{ currentSite.language|slice(0,2) }}.rss">
+<link rel="alternate" type="application/rss+xml" title="{{ secondSite.name }} ({{ secondSite.language|slice(0,2) }})" href="{{ secondSite.baseUrl }}feeds/articles-{{ secondSite.language|slice(0,2) }}.rss">
+
+ 
 </head>

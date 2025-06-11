@@ -1,0 +1,14 @@
+{% macro rssFeedImg(handleParam, transformKey) %}
+
+
+{% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey) %}
+
+<media:content 
+  url="{{ siteUrl |trim('/')  ~ transformedImages[0].url }}" 
+  medium="image" 
+  type="{{ transformedImages[0].mimeType }}" 
+  width="{{ transformedImages[0].width }}" 
+  height="{{ transformedImages[0].height }}" 
+/>
+
+{% endmacro %}

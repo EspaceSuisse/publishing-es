@@ -75,11 +75,11 @@ fieldLayouts:
 handle: catSubject
 name: Thema
 siteSettings:
-  2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum
     hasUrls: true
     template: pages/articleByCat.twig
     uriFormat: 'sujet/{slug}'
-  5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
+  5f286764-7e74-4475-989a-21ca80692fad: # Inforaum
     hasUrls: true
     template: pages/articleByCat.twig
     uriFormat: 'thema/{slug}'

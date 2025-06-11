@@ -1,0 +1,12 @@
+{%- header "Content-Type: application/rss+xml; charset=utf-8" -%}
+{%- set site = craft.app.sites.getSiteByHandle('default') -%}
+{%- set language = site.language -%}
+{%- set entries = craft.entries()
+    .section('article')
+    .site(site)
+    .orderBy('postDate desc')
+    .limit(20)
+    .all()
+-%}
+
+{% include 'feeds/_rssFeed.twig' with { language, entries } %}

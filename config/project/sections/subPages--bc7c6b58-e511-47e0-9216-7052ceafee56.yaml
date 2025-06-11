@@ -22,12 +22,12 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  2d4ea7fb-3050-435d-806e-46986d5c58d2: # EspaceSuisse Publishing FR
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum
     enabledByDefault: true
     hasUrls: true
     template: pages/subPage.twig
     uriFormat: '{slug}'
-  5f286764-7e74-4475-989a-21ca80692fad: # EspaceSuisse Publishing DE
+  5f286764-7e74-4475-989a-21ca80692fad: # Inforaum
     enabledByDefault: true
     hasUrls: true
     template: pages/subPage.twig
