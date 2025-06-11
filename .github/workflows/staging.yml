@@ -1,0 +1,46 @@
+name: Deploy to Green.ch Staging
+
+on:
+  push:
+    branches:
+      - STAGING
+
+jobs:
+  deploy:
+    name: Deploy Es Publishing to Staging
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout STAGING branch
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Install Composer dependencies (no dev)
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Deploy via FTP to Green.ch
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: ./
+          server-dir: ${{ secrets.PATH_STAGING }}
+          exclude: |
+            **/.git*
+            **/node_modules/**
+            **/tests/**
+            .github/**
+            composer.lock
+            yarn.lock
+            vite.config.js
+            tailwind.config.js
+            web/assets/**
+            web/imager/**
+            web/cpresources/**
+            *.jsx
