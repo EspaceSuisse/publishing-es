@@ -17,8 +17,6 @@
         '{fullname|shorthash}.{extension}'
     %}
 
-{{ filenamePattern }}
-
     {# Transform image via Imager X #}
     {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {
         filenamePattern: filenamePattern

@@ -24,8 +24,8 @@ return [
     'articleThumb' => [
         'displayName' => 'Article Thumb',
         'transforms' => [
-            ['width' => 1920, 'ratio' => 1 / 1, 'device' => 'desktop'],
-            ['width' => 1080, 'ratio' => 1 / 1, 'device' => 'mobile'],
+            ['width' => 512, 'ratio' => 1 / 1, 'device' => 'desktop'],
+            ['width' => 320, 'ratio' => 1 / 1, 'device' => 'mobile'],
         ],
         'defaults' => [
             'format' => 'avif'

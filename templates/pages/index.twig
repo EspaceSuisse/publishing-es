@@ -1,5 +1,8 @@
 {% extends "_layouts/main" %}
 
+{% import '_macros/mArticlePreviewXL' as macroPreviewXL %}
+{% import '_macros/mArticlePreviewL' as macroPreviewL %}
+{% import '_macros/mArticlePreviewS' as macroPreviewS %}
 
 {% block content %}
 
@@ -7,54 +10,25 @@
 	{% set genre = craft.categories.group('catGenre').all() %}
 	{% set subject = craft.categories.group('catSubject').all() %}
 
-	<h1>{{ entry.title }}</h1>
-
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 
-	<ul>
-		{% for category in genre %}
-			{% if loop.first %}
-				<li>
-					<h2>{{ category.group.name }}</h2>
-				</li>
-			{% endif %}
-
-			{% set entries = craft.entries.relatedTo(category).all() %}
-			{% if entries|length > 0 %}
-				<li>
-					<a href="{{ category.url }}">{{ category.title }}</a>
-				</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
-
-	<ul>
-		{% for category in subject %}
-			{% if loop.first %}
-				<li>
-					<h2>{{ category.group.name }}</h2>
-				</li>
-			{% endif %}
-
-			{% set entries = craft.entries.relatedTo(category).all() %}
-			{% if entries|length > 0 %}
-				<li>
-					<a href="{{ category.url }}">{{ category.title }}</a>
-				</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
-
-
-	<ul>
-		<li>
-			<h2>Artikel</h2>
-		</li>
-		{% for item in allEntries %}
-			<li>
-				<a href="{{ item.url }}">{{ item.title }}</a>
-			</li>
-		{% endfor %}
-	</ul>
+	<div class="listignGrid">
+		<section class="headliner">
+			{% set headliner = allEntries | first %}
+			{{ macroPreviewXL.listMacro(headliner) }}
+		</section>
+		<section class="teaser">
+			{% for item in allEntries | slice(1, 3) %}
+				{{ macroPreviewS.listMacro(item) }}
+			{% endfor %}
+		</section>
+		<section class="latest">
+			{% for item in allEntries | slice(4, 5) %}
+				<article>
+					{{ macroPreviewL.listMacro(item) }}
+				</article>
+			{% endfor %}
+		</section>
+	</div>
 
 {% endblock %}

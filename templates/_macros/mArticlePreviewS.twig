@@ -1,0 +1,20 @@
+
+
+{% macro listMacro(queryParam) %}
+
+    {% set catGenre = queryParam.fCatGenre.all() %}
+    {% set catSubject = queryParam.fCatSubject.all() %}
+
+    <article class="articlePreviewS">
+            <a href="{{ queryParam.url }}">
+            {% for cat in catGenre %}
+                {{ cat.title }}
+            {% endfor %}
+            {% for cat in catSubject %}
+                {{ cat.title }}
+            {% endfor %}
+            {{ queryParam.title }}
+        </a>
+    </article>
+    
+{% endmacro %}
