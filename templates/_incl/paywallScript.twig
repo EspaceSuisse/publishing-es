@@ -1,5 +1,8 @@
 
-    {% set paywallCancelDomain = site.url %}
+{% set paywallCancelDomain = 'https://inforaum.espacesuisse.ch'%}
+
+{# Show Paywall only in Production #}
+{% if craft.app.env == 'dev' %}
 
     <script type="module">
       import { Supertab } from "https://js.supertab.co/v3/sdk.js";
@@ -29,8 +32,9 @@
         } else {
           // Insert your code to handle when user abandons the flow without purchase or prior entitlement
           console.log("Purchase canceled!");
-          window.location.href = "{{ paywallCancelDoamin }}";
+          window.location.href = "{{ paywallCancelDomain }}";
         }
       }
     </script>
-  
+
+{% endif %}
