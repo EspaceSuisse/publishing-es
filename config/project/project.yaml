@@ -1,5 +1,28 @@
-dateModified: 1748347927
+dateModified: 1749637903
 elementSources:
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+      tableAttributes:
+        - filename
+        - size
+        - 'field:2d392e7b-19e3-42f2-bb21-f8710194fd3f' # Plain Text
+        - 'field:97b5cf10-0039-4b8a-b7ab-409f3adf851a' # Plain Text
+      type: native
+    -
+      key: 'volume:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+      type: native
+    -
+      key: 'volume:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+      type: native
+    -
+      key: temp
+      type: native
   craft\elements\Entry:
     -
       key: '*'
