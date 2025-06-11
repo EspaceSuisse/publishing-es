@@ -1,3 +1,6 @@
+.gridStart0 {
+    grid-column-start: 0;
+}
 .gridStart1 {
     grid-column-start: 1;
 }

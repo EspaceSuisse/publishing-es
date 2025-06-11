@@ -1,21 +1,23 @@
 {% macro articleImage(handleParam, transformKey, paramClass) %}
-    {# Image meta text transformations #}
-    {% set imgFileTitle = handleParam.title | ascii | kebab %}
-    {% set imgPhotographer = handleParam.fPlainTxt ?? '' | ascii | kebab %}
-    {% set imgProvider = handleParam.fPlainTxt2 ?? '' | ascii | kebab %}
-    {% set imgCC = handleParam.fPlainTxt3 ?? '' | ascii | kebab %}
-    {% set altText = handleParam.fPlainTextI18nMultiline ?? '' %}
 
-    {# Filename pattern construction #}
-    {% set filenamePattern = 
-        imgFileTitle ~ '-' ~
-        imgPhotographer ~ '-' ~
-        imgProvider ~ '-' ~
-        imgCC ~ '-' ~
-        transformKey ~ '-' ~
-        'EspaceSuisse' ~ '-' ~
+
+    {% set title        = handleParam.title | default('image') | ascii | kebab | slice(0, 40) %}
+    {% set altText      = handleParam.fPlainTextI18nMultiline ?? '' %}
+    {% set photographer = handleParam.fPlainTxt ?? '' | ascii | kebab | slice(0, 20) %}
+    {% set provider     = handleParam.fPlainTxt2 ?? '' | ascii | kebab | slice(0, 20) %}
+    {% set cc           = handleParam.fPlainTxt3 ?? '' | ascii | kebab | slice(0, 10) %}
+    {% set transform    = transformKey | ascii | kebab | slice(0, 20) %}
+    {% set projectTag   = 'espace-suisse' %}
+
+    {% set filenamePattern = [
+        title,
+        provider,
+        cc,
+        transform,
+        projectTag,
         '{fullname|shorthash}.{extension}'
-    %}
+    ]|filter(v => v|length) | join('-') %}
+
 
     {# Transform image via Imager X #}
     {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {

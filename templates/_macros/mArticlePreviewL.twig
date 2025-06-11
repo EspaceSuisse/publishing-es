@@ -1,6 +1,6 @@
 
 
-{% macro listMacro(queryParam) %}
+{% macro listMacro(queryParam, classParam) %}
 
     {% import '_macros/macroImage' as macro %}
 
@@ -8,7 +8,7 @@
     {% set catGenre = queryParam.fCatGenre.all() %}
     {% set catSubject = queryParam.fCatSubject.all() %}
 
-    <article class="articlePreviewL">
+    <article class="articlePreviewL {{ classParam }}">
         <a href="{{ queryParam.url }}">
             {{ macro.articleImage(image, 'articleImage', 'previewImg') }}
             {% for cat in catGenre %}

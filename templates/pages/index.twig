@@ -15,18 +15,16 @@
 	<div class="listignGrid">
 		<section class="headliner">
 			{% set headliner = allEntries | first %}
-			{{ macroPreviewXL.listMacro(headliner) }}
+			{{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
 		</section>
 		<section class="teaser">
 			{% for item in allEntries | slice(1, 3) %}
-				{{ macroPreviewS.listMacro(item) }}
+				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
 			{% endfor %}
 		</section>
 		<section class="latest">
-			{% for item in allEntries | slice(4, 5) %}
-				<article>
-					{{ macroPreviewL.listMacro(item) }}
-				</article>
+			{% for item in allEntries | slice(6, 20) %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
 			{% endfor %}
 		</section>
 	</div>
