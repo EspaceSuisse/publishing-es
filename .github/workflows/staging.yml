@@ -1,4 +1,4 @@
-name: Deploy ES Publishing to Stagign
+name: Deploy ES Publishing to Staging
 
 on:
   push:
@@ -13,33 +13,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          extensions: mbstring, intl, gd, imagick, pdo, pdo_mysql, bcmath, openssl
-
-      - name: Install Composer dependencies
-        run: composer install --no-dev --optimize-autoloader --no-interaction
-
       - name: Prepare .ssh directory and Known Hosts
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.FTP_HOST }} >> ~/.ssh/known_hosts
 
-      # (Optional) If you're using an SSH key rather than password
       - name: Add SSH key
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-      - name: Deploy files with rsync
+      - name: Deploy files with rsync (no vendor)
         env:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
           SSH_PATH: ${{ secrets.PATH_STAGING }}
         run: |
-          ssh $SSH_USER@$SSH_HOST "ls -l $SSH_PATH/vendor/nystudio107/craft-retour/src/web/assets"
           rsync -az --delete \
             --exclude='.git*' \
             --exclude='.github' \
@@ -54,13 +43,22 @@ jobs:
             --exclude='node_modules/' \
             --exclude='storage/' \
             --exclude='*.log' \
+            --exclude='vendor/' \
             -e "ssh -o StrictHostKeyChecking=no" \
             ./ $SSH_USER@$SSH_HOST:$SSH_PATH
 
-      # - name: Apply Craft project config (remote)
-      #   env:
-      #     SSH_USER: ${{ secrets.FTP_USER }}
-      #     SSH_HOST: ${{ secrets.FTP_HOST }}
-      #     SSH_PATH: ${{ secrets.PATH_STAGING }}
-      #   run: |
-      #     ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && ./craft project-config/apply --interactive=0"
+      - name: Install Composer dependencies on remote
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          SSH_PATH: ${{ secrets.PATH_STAGING }}
+        run: |
+          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && composer install --no-dev --optimize-autoloader --no-interaction"
+
+      - name: Apply Craft project config (remote)
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          SSH_PATH: ${{ secrets.PATH_STAGING }}
+        run: |
+          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && ./craft project-config/apply --interactive=0"
