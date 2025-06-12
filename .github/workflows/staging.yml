@@ -57,10 +57,10 @@ jobs:
             -e "ssh -o StrictHostKeyChecking=no" \
             ./ $SSH_USER@$SSH_HOST:$SSH_PATH
 
-      - name: Apply Craft project config (remote)
-        env:
-          SSH_USER: ${{ secrets.FTP_USER }}
-          SSH_HOST: ${{ secrets.FTP_HOST }}
-          SSH_PATH: ${{ secrets.PATH_STAGING }}
-        run: |
-          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && ./craft project-config/apply --interactive=0"
+      # - name: Apply Craft project config (remote)
+      #   env:
+      #     SSH_USER: ${{ secrets.FTP_USER }}
+      #     SSH_HOST: ${{ secrets.FTP_HOST }}
+      #     SSH_PATH: ${{ secrets.PATH_STAGING }}
+      #   run: |
+      #     ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && ./craft project-config/apply --interactive=0"
