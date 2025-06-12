@@ -42,6 +42,8 @@ jobs:
           rsync -az --delete \
             --exclude='.git*' \
             --exclude='.github' \
+            --exclude='.ddev' \
+            --exclude='*.jsx' \
             --exclude='.env*' \
             --exclude='.vscode' \
             --exclude='tests/' \
