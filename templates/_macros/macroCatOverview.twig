@@ -2,10 +2,14 @@
 {# It takes the url params for the two languages and a class for the link #}
 {# The label is taken from the translation file #}
 
-{%- macro catOverview(catParam, classParam) -%}
+{%- macro catOverview(catParam, classParam, linkParam) -%}
 	{% for item in catParam %}
-	    <span class="tag {{ classParam }}">
-            <a href="{{ item.url }}">{{ item.title }}</a>
+	    <span class="tag {{ ' ' ~ classParam }}">
+            {%- if linkParam == true -%}
+                <a href="{{- item.url -}}">{{- item.title -}}</a>
+            {%- else -%}
+                {{- item.title -}}
+            {%- endif -%}
         </span>
-	{% endfor %}
+	{%- endfor -%}
 {%- endmacro -%}

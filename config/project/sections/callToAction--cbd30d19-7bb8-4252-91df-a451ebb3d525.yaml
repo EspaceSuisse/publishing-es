@@ -2,17 +2,16 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    name: 'Artikel Zutaten'
-    uid: fd55594d-e7ef-4114-b326-eb015c7418c9 # Article Set
-handle: article
-maxAuthors: 5
-name: Artikel
+    uid: d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text i18N
+handle: callToAction
+maxAuthors: 1
+name: 'Call to Action'
 previewTargets:
   -
     __assoc__:
       -
         - label
-        - 'Primäre Eintrag Seite'
+        - 'Primary entry page'
       -
         - urlFormat
         - '{url}'
@@ -23,12 +22,12 @@ propagationMethod: all
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum
     enabledByDefault: false
-    hasUrls: true
-    template: sections/article.twig
-    uriFormat: 'article/{id}-{slug}'
+    hasUrls: false
+    template: null
+    uriFormat: null
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum
     enabledByDefault: false
-    hasUrls: true
-    template: sections/article.twig
-    uriFormat: 'artikel/{id}-{slug}'
+    hasUrls: false
+    template: null
+    uriFormat: null
 type: channel

@@ -1,5 +1,28 @@
-dateModified: 1749714557
+dateModified: 1749720890
 elementSources:
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+      tableAttributes:
+        - filename
+        - size
+        - 'field:2d392e7b-19e3-42f2-bb21-f8710194fd3f' # Plain Text
+        - 'field:97b5cf10-0039-4b8a-b7ab-409f3adf851a' # Plain Text
+      type: native
+    -
+      key: 'volume:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+      type: native
+    -
+      key: 'volume:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+      type: native
+    -
+      key: temp
+      type: native
   craft\elements\Entry:
     -
       key: '*'
@@ -19,9 +42,6 @@ elementSources:
       key: 'section:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
       tableAttributes:
         - id
-        - authors
-        - 'field:91725092-8f89-4299-a39d-14eaaeef57ae' # Rubrik
-        - 'field:2897cc3f-95c9-4148-80b9-fd663d11f977' # Thema
         - postDate
         - status
         - link
@@ -104,7 +124,7 @@ meta:
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
     1f6d945b-d305-4fc1-be5f-9774e3768396: 'SEO Defaults' # SEO Defaults
     2a01649b-ab6a-4edd-a8f9-130d7d06dc53: Article # Article
-    2d4ea7fb-3050-435d-806e-46986d5c58d2: 'EspaceSuisse Publishing FR' # EspaceSuisse Publishing FR
+    2d4ea7fb-3050-435d-806e-46986d5c58d2: Inforum # Inforum
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
@@ -112,11 +132,14 @@ meta:
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery
     4f2a2908-da4b-46df-b9ab-a5a6d8078286: Downloads # Downloads
+    5af8807d-9f2e-4703-a300-ba7f06531aea: 'Grid Span Wide' # Grid Span Wide
     5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle
-    5f286764-7e74-4475-989a-21ca80692fad: 'EspaceSuisse Publishing DE' # EspaceSuisse Publishing DE
+    5f286764-7e74-4475-989a-21ca80692fad: Inforaum # Inforaum
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
+    8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text i18n' # Plain Text i18n
+    49c73379-624e-465f-92eb-b17550eca753: 'Grid Start Wide' # Grid Start Wide
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
@@ -127,7 +150,6 @@ meta:
     898d8de1-26a8-46a2-be3b-ba455a3711cc: 'Related Article' # Related Article
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema
     8348b893-eaba-48e4-b4ab-15c74d5c44d0: Typ # Typ
-    8615cf7b-5ca8-4def-a0f2-1370cdee3c8e: 'SEO Article' # SEO Article
     09087e84-41bc-4451-91af-6be5abe8388d: 'Text i18n' # Text i18n
     23465aca-7fa4-4dd7-bd09-9c11e7d61c9a: 'Related Entry' # Related Entry
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
@@ -145,6 +167,7 @@ meta:
     bf9959dc-941c-45ef-86b1-d05efb3e1626: Download # Download
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
+    cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Call to Action' # Call to Action
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Span' # Grid Span
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: 'Text i18N' # Text i18N
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
@@ -154,7 +177,6 @@ meta:
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
-    fcc8fbb4-1672-46a2-bb5d-fbd078cf5a93: 'Img + Txt' # Img + Txt
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
 plugins:

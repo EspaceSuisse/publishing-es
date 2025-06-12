@@ -1,13 +1,18 @@
 .esBrandLink {
-    width: 80%;
+    width: 150px;
     padding-bottom: var(--layoutGap);
     display: block;
+    transform: rotate(-90deg) translateY(0);
+    transform-origin: 20% -120%;
+    padding: 0;
+    path {
+        fill: var(--colorTextInvert);
+    }
 }
 .irBranding {
-    display: block;
-    text-align: center;
-    @media (max-width: 1023px) {
-        width: 100px;
-        padding: 0;
-    }
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    right: 0;
+    width: 100px;
 }

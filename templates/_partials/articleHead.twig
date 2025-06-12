@@ -16,8 +16,8 @@
 	{% include "_components/articleHeadAuthors" %}
 	<p class="gridStart2 gridSpan10">{{ entry.postDate | date('j. F Y') }}</p>
 	<p class="gridSpan12">
-		{{ macroCat.catOverview(articleGenre, 'genre') }}
-    	{{ macroCat.catOverview(articleSubject, 'subject') }}
+		{{ macroCat.catOverview(articleGenre, 'genre', true) }}
+    	{{ macroCat.catOverview(articleSubject, 'subject', true) }}
 	</p>
 
 	{# Lead Text #}

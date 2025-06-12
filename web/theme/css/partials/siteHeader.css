@@ -1,5 +1,5 @@
 .siteHeader {
-  background-color: white;
+  background-color: var(--colorES-brand-blue);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -11,7 +11,7 @@
     width: var(--siteHeadWidth);
     flex-shrink: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: var(--layoutGap);
   }

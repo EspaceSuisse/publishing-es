@@ -9,7 +9,7 @@
     {% set catGenre = queryParam.fCatGenre.all() %}
     {% set catSubject = queryParam.fCatSubject.all() %}
 
-    <article class="articlePreviewXL {{ classParam }}">
+    <article class="articlePreview previewSizeXL {{ classParam }}">
             <a href="{{ queryParam.url }}">
             {{ macroImg.articleImage(image, 'articleThumb', 'previewImg') }}
             {{ macroCat.catOverview(catGenre, 'genre') }}

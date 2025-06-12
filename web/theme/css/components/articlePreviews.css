@@ -1,0 +1,8 @@
+.articlePreview {
+    border: solid 1px red;
+    padding: 20px;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}

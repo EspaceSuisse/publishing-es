@@ -1,11 +1,13 @@
 {# This is the head component of all articles #}
 
+
 <div class="siteHeader">
-	<a class="irBranding" href="/" aria-label="{{ 'Home' | t }}">
-		<img src="https://placehold.co/400x400" alt="">
-	</a>
 	{% include "_partials/siteNav" %}
 	<a href="https://www.espacesuisse.ch/" class="esBrandLink hideOnMobile">
-		<img src="/theme/img/logo-espacesuisse-simple.svg" alt="EspaceSuisse Website">
+		{{ svg('@webroot/theme/img/logo-espacesuisse-simple.svg')|raw }}
 	</a>
 </div>
+
+<a class="irBranding" href="/" aria-label="{{ 'Home' | t }}">
+	<img src="https://placehold.co/400x400" alt="">
+</a>
