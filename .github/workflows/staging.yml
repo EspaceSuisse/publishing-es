@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Es Publishing to Staging
+    name: Deploy to Staging (Green.ch FTP)
     runs-on: ubuntu-latest
 
     steps:
@@ -23,24 +23,35 @@ jobs:
       - name: Install Composer dependencies (no dev)
         run: composer install --no-dev --optimize-autoloader
 
+      - name: Prepare deploy folder
+        run: |
+          mkdir build
+
+          # Copy necessary files and folders
+          cp -r config build/
+          cp -r templates build/
+          cp -r modules build/
+          cp -r plugins build/
+          cp -r web build/
+          cp -r vendor build/
+          cp composer.json build/
+          cp index.php build/ || true  # if present
+          
+          # Optional: Add any other needed files
+          # e.g. cp robots.txt build/ or cp .htaccess build/
+
       - name: Deploy via FTP to Green.ch
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./
+          local-dir: build
           server-dir: ${{ secrets.PATH_STAGING }}
           exclude: |
-            **/.git*
             **/node_modules/**
-            **/tests/**
-            .github/**
-            composer.lock
-            yarn.lock
-            vite.config.js
-            tailwind.config.js
-            web/assets/**
-            web/imager/**
-            web/cpresources/**
-            *.jsx
+            **/storage/runtime/**
+            **/storage/logs/**
+            **/web/assets/**
+            **/web/imager/**
+            **/web/cpresources/**
