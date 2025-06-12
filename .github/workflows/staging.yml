@@ -39,6 +39,7 @@ jobs:
           SSH_HOST: ${{ secrets.FTP_HOST }}
           SSH_PATH: ${{ secrets.PATH_STAGING }}
         run: |
+          ssh $SSH_USER@$SSH_HOST "ls -l $SSH_PATH/vendor/nystudio107/craft-retour/src/web/assets"
           rsync -az --delete \
             --exclude='.git*' \
             --exclude='.github' \
