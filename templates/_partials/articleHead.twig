@@ -14,7 +14,10 @@
 	<h1 class="gridStart2 gridSpan10">{{ entry.title }}</h1>
 
 	{% include "_components/articleHeadAuthors" %}
-	<p class="gridStart2 gridSpan10">{{ entry.postDate | date('j. F Y') }}</p>
+	<p class="gridStart2 gridSpan10">
+		{{ entry.postDate | date('j. F Y') }}
+		{% include "_components/memberBlock" %}
+	</p>
 	<p class="gridSpan12">
 		{{ macroCat.catOverview(articleGenre, 'genre', true) }}
     	{{ macroCat.catOverview(articleSubject, 'subject', true) }}

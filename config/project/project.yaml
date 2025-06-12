@@ -1,4 +1,4 @@
-dateModified: 1749720890
+dateModified: 1749721603
 elementSources:
   craft\elements\Asset:
     -
@@ -173,6 +173,7 @@ meta:
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
+    e8b4cd0c-7d29-4d2a-a92c-3549a590ecd0: Mitglieder # Mitglieder
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
