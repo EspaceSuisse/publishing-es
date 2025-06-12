@@ -30,8 +30,6 @@ jobs:
           # Copy necessary files and folders
           cp -r config build/
           cp -r templates build/
-          cp -r modules build/
-          cp -r plugins build/
           cp -r web build/
           cp -r vendor build/
           cp composer.json build/
