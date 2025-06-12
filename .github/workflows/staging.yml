@@ -28,9 +28,7 @@ jobs:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
           SSH_PATH: ${{ secrets.PATH_STAGING }}
-          COMPOSER_BIN: ${{ secrets.COMPOSER_BIN }}
         run: |
-          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && $COMPOSER_BIN install --no-dev --optimize-autoloader --no-interaction"
           rsync -az --delete \
             --exclude='.git*' \
             --exclude='.github' \
@@ -54,8 +52,9 @@ jobs:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
           SSH_PATH: ${{ secrets.PATH_STAGING }}
+          COMPOSER_BIN: ${{ secrets.COMPOSER_BIN }} # Save "/var/www/vhosts/.../bin/composer" in this secret
         run: |
-          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && composer install --no-dev --optimize-autoloader --no-interaction"
+          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && $COMPOSER_BIN install --no-dev --optimize-autoloader --no-interaction"
 
       - name: Apply Craft project config (remote)
         env:
