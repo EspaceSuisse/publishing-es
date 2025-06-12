@@ -30,8 +30,8 @@
     <picture class="{{ paramClass ?? 'imgItem' }}">
         {% for img in transformedImages %}
             {% set device = deviceMap[loop.index0] %}
-            <source srcset="{{ img.url }}" media="{{ device == 'mobile' ? '(max-width: 1080px)' : '(min-width: 1081px)' }}">
+            <source srcset="{{ img.url }}" media="{{ device == 'mobile' ? '(min-width: 1080px)' : '(max-width: 1081px)' }}">
         {% endfor %}
-        <img src="{{ transformedImages[0].url }}" alt="{{ altText|e('html_attr') }}" title="{{ handleParam.title|e('html_attr') }}">
+        <img src="{{ transformedImages[0].url }}" alt="{{ altText|e('html_attr') }}" title="{{ handleParam.title|e('html_attr') }}" loading="lazy" decoding="async">
     </picture>
 {% endmacro %}

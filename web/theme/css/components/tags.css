@@ -1,0 +1,17 @@
+.tag {
+    background-color: var(--colorES-brand-blue);
+    border-radius: 4px;
+    padding: 4px 7px;
+    color: var(--colorTextInvert);
+    a {
+        text-decoration: none;
+        color: var(--colorTextInvert);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &.genre {
+        border-radius: 50px;
+    }
+}

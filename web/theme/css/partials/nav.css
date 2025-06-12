@@ -19,7 +19,7 @@ nav {
     }
     .langSwitcher {
         display: flex;
-        gap: 10px;
+        gap: var(--layoutGap);
         margin-top: 10px;
     }
     a, .buttonTxt, a p {

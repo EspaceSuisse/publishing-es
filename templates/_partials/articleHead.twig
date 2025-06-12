@@ -1,8 +1,12 @@
-{% import '_macros/macroImage' as imgMacro %}
+{% import '_macros/macroImage' as macroImg %}
+{% import '_macros/macroCatOverview' as macroCat %}
+
+{% set articleGenre = entry.fCatGenre %}
+{% set articleSubject = entry.fCatSubject %}
+{% set aufmacherBild = entry.fArticleImgI18n.one() %}
 
 <div class="articleHeadImg">
-	{% set aufmacherBild = entry.fArticleImgI18n.one() %}
-	{{ imgMacro.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
 </div>
 
 <div class="articleHeadTitle gridArticle">
@@ -11,7 +15,10 @@
 
 	{% include "_components/articleHeadAuthors" %}
 	<p class="gridStart2 gridSpan10">{{ entry.postDate | date('j. F Y') }}</p>
-	{% include "_components/articleHeadCat" %}
+	<p class="gridSpan12">
+		{{ macroCat.catOverview(articleGenre, 'genre') }}
+    	{{ macroCat.catOverview(articleSubject, 'subject') }}
+	</p>
 
 	{# Lead Text #}
 	<h3 class="gridStart2 gridSpan10">{{ entry.fPlainTextI18nMultiline }}</h3>

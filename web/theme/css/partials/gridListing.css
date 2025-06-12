@@ -1,7 +1,9 @@
 .listignGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: var(--layoutGap);
+  max-width: 1200px;
+  margin: auto;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(12, 1fr);
   }

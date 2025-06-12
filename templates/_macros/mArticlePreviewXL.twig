@@ -2,7 +2,8 @@
 
 {% macro listMacro(queryParam, classParam) %}
 
-    {% import '_macros/macroImage' as macro %}
+    {% import '_macros/macroImage' as macroImg %}
+    {% import '_macros/macroCatOverview' as macroCat %}
 
     {% set image = queryParam.fArticleImgI18n.one() %}
     {% set catGenre = queryParam.fCatGenre.all() %}
@@ -10,13 +11,9 @@
 
     <article class="articlePreviewXL {{ classParam }}">
             <a href="{{ queryParam.url }}">
-            {{ macro.articleImage(image, 'articleStarterImg', 'previewImg') }}
-            {% for cat in catGenre %}
-                {{ cat.title }}
-            {% endfor %}
-            {% for cat in catSubject %}
-                {{ cat.title }}
-            {% endfor %}
+            {{ macroImg.articleImage(image, 'articleThumb', 'previewImg') }}
+            {{ macroCat.catOverview(catGenre, 'genre') }}
+            {{ macroCat.catOverview(catSubject, 'subject') }}
             <h2>{{ queryParam.title }}</h2>
             <p class="lead">{{ queryParam.fSeoDescription}}</p>
         </a>
