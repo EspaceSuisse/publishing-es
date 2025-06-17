@@ -6,6 +6,57 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-06-17T07:37:24+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Article Img i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Bild
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aab7cb30-7a69-4d75-8852-b683c6bcc0bf
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-06-17T11:50:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Bildlegende
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c030e47c-e0b7-437f-af81-73b3f83ae7a4
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2025-06-17T07:37:24+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Test
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8f30374a-9c72-4d1d-8855-582e0d0139f7
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-06-17T07:58:49+00:00'
             editCondition: null
             elementCondition: null
@@ -33,43 +84,9 @@ fieldLayouts:
             label: 'Bild Position'
             providesThumbs: false
             required: false
-            tip: 'Bild auf welcher Seite?'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b5c5a6b5-4827-4471-a396-bbde5607a425
-            userCondition: null
-            warning: null
-            width: 75
-          -
-            dateAdded: '2025-06-17T07:37:24+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Article Img i18n
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: aab7cb30-7a69-4d75-8852-b683c6bcc0bf
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            dateAdded: '2025-06-17T07:37:24+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8f30374a-9c72-4d1d-8855-582e0d0139f7
             userCondition: null
             warning: null
             width: 75
