@@ -1,0 +1,4 @@
+{% set articleBedtime = entry.postDate|date_modify('+3 months') %}
+{% set daysLeft = date(articleBedtime|date('c')).diff(now).days %}
+<br>
+Artikel für Nichtmitglieder noch {{ daysLeft }} Tage verfügbar.
