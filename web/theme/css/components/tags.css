@@ -4,6 +4,7 @@
     padding: 4px 7px;
     color: var(--colorTextInvert);
     white-space:nowrap;
+    font-size: var(--font-size-S);
     a {
         text-decoration: none;
         color: var(--colorTextInvert);
@@ -12,8 +13,11 @@
             opacity: 0.8;
         }
     }
+    &.subject {
+        background-color: var(--colorES-subject);
+    }
     &.genre {
         border-radius: 50px;
-        background-color: pink;
+        background-color: var(--colorES-genre);
     }
 }
