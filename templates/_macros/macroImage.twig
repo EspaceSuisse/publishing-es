@@ -4,8 +4,8 @@
     {% set title        = handleParam.title | default('image') | ascii | kebab | slice(0, 40) %}
     {% set altText      = handleParam.fPlainTextI18nMultiline ?? '' %}
     {% set photographer = handleParam.fPlainTxt ?? '' | ascii | kebab | slice(0, 20) %}
-    {% set provider     = handleParam.fPlainTxt2 ?? '' | ascii | kebab | slice(0, 20) %}
-    {% set cc           = handleParam.fPlainTxt3 ?? '' | ascii | kebab | slice(0, 10) %}
+    {% set provider     = handleParam.fTagProvider.one() ?? '' | ascii | kebab | slice(0, 20) %}
+    {% set cc           = (handleParam.imgLicence ?? '') | ascii | trim | lower | kebab %}
     {% set transform    = transformKey | ascii | kebab | slice(0, 20) %}
     {% set projectTag   = 'espace-suisse' %}
 
@@ -17,7 +17,6 @@
         projectTag,
         '{fullname|shorthash}.{extension}'
     ]|filter(v => v|length) | join('-') %}
-
 
     {# Transform image via Imager X #}
     {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {
