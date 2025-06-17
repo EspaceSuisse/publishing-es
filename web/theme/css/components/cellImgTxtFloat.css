@@ -1,5 +1,4 @@
 .cellImgTxtFloat {
-    background: pink;
 
     .cellImgTxtFloatElements {
         @media (min-width: 1024px) {

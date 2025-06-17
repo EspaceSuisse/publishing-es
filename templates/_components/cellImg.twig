@@ -7,6 +7,7 @@
 {% for asset in image %}
     <div class="articleImg">
         {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
+        <p class="source">{{ asset.fPlainTxt }}{{ ', ' ~ asset.fPlainTxt2 }} {{ ' - ' ~ asset.fPlainTxt3 }}</p>
         {% if block.fPlainTextI18nMultiline %}
             <p class="caption">{{ block.fPlainTextI18nMultiline }}</p>
         {% endif %}
