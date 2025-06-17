@@ -1,0 +1,96 @@
+columnSuffix: null
+handle: imgLicence
+instructions: null
+name: 'Image Licence'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'CC BY 4.0 Can use, modify, and redistribute with attribution.'
+        -
+          - value
+          - 'CC BY 4.0'
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'CC BY-SA 4.0 Can use, modify, and redistribute with attribution.'
+        -
+          - value
+          - 'CC BY-SA 4.0'
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'CC0 Public domain — free for any use, no attribution required.'
+        -
+          - value
+          - CC0
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'CC BY-SA 2.0 Must share derivatives under same license.'
+        -
+          - value
+          - 'CC BY-SA 2.0'
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Stock Site Licence'
+        -
+          - value
+          - stockSiteLicence
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

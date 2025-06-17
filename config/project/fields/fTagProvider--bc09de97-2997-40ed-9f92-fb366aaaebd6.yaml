@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: fTagProvider
+instructions: null
+name: 'Tag Field Provider'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'taggroup:746a28ba-cc90-41ff-8b16-82638446ed07' # Provider
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Tags

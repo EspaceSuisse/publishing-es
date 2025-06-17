@@ -1,4 +1,4 @@
-dateModified: 1750161127
+dateModified: 1750162440
 elementSources:
   craft\elements\Asset:
     -
@@ -127,6 +127,7 @@ meta:
     2d4ea7fb-3050-435d-806e-46986d5c58d2: Inforum # Inforum
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text
     2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
+    02e09030-3253-478b-97e2-af4db5bdcaa1: 'Image Licence' # Image Licence
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
@@ -146,6 +147,7 @@ meta:
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
+    746a28ba-cc90-41ff-8b16-82638446ed07: Provider # Provider
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     826bddc1-fa89-4b66-b1ab-6924ab5aa9c3: 'Plain Text i18n Multiline' # Plain Text i18n Multiline
     898d8de1-26a8-46a2-be3b-ba455a3711cc: 'Related Article' # Related Article
@@ -164,6 +166,7 @@ meta:
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
     b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Start' # Grid Start
+    bc09de97-2997-40ed-9f92-fb366aaaebd6: 'Tag Field Provider' # Tag Field Provider
     bc7c6b58-e511-47e0-9216-7052ceafee56: 'Sub Pages' # Sub Pages
     bf9959dc-941c-45ef-86b1-d05efb3e1626: Download # Download
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image

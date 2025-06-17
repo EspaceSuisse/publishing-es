@@ -80,39 +80,39 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-05-01T12:21:29+00:00'
+            dateAdded: '2025-06-17T12:03:50+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 2d392e7b-19e3-42f2-bb21-f8710194fd3f # Plain Text
+            fieldUid: bc09de97-2997-40ed-9f92-fb366aaaebd6 # Tag Field Provider
             handle: null
             includeInCards: false
             instructions: null
             label: Provider
             providesThumbs: false
             required: false
-            tip: Flickr
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d96297fe-00ce-47f2-bef1-d1568b989e97
+            uid: c0a7e850-ba44-4062-ad18-1b3a6a5a8f6e
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
-            dateAdded: '2025-05-01T12:21:29+00:00'
+            dateAdded: '2025-06-17T12:11:50+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 34360219-963c-430e-9b56-640ddc7d6eda # Plain Text
+            fieldUid: 02e09030-3253-478b-97e2-af4db5bdcaa1 # Image Licence
             handle: null
             includeInCards: false
             instructions: null
-            label: Licence
+            label: null
             providesThumbs: false
             required: false
-            tip: 'CC BY-SA 2.0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0fdcf21c-ef88-4c7c-8ed0-82636504a1ff
+            uid: ed62dee3-a11b-4ac2-a067-071b12e1146f
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Inhalt
         uid: 8fbc089a-23b3-4c45-a770-d16436c054c5
         userCondition: null
