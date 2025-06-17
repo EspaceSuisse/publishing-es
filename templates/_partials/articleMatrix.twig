@@ -36,8 +36,9 @@
 			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellMap">{% include "_components/cellMap" %}</div>
 		{% case "tDownload" %}
 			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload">{% include "_components/cellDownload" %}</div>
+		{% case "imgTxtFloat" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellImgTxtFloat">{% include "_components/cellImgTxtFloat" %}</div>
 	{% endswitch %}
 
-	
 
 {% endfor %}

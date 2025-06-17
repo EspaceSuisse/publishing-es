@@ -1,4 +1,4 @@
-dateModified: 1749721603
+dateModified: 1750151806
 elementSources:
   craft\elements\Asset:
     -
@@ -145,6 +145,7 @@ meta:
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
+    432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     826bddc1-fa89-4b66-b1ab-6924ab5aa9c3: 'Plain Text i18n Multiline' # Plain Text i18n Multiline
     898d8de1-26a8-46a2-be3b-ba455a3711cc: 'Related Article' # Related Article
@@ -169,6 +170,7 @@ meta:
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
     cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Call to Action' # Call to Action
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Span' # Grid Span
+    d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: 'Text i18N' # Text i18N
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position

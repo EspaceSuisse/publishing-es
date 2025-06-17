@@ -1,0 +1,17 @@
+{% set floatClass = block.fSwitch == 1 ? 'imgRight' : 'imgLeft' %}
+
+<div class="cellImgTxtFloatElements {{ floatClass }}">
+	{% include "_components/cellImg.twig" %}
+	{{ block.fRichTextI18n|raw }}
+</div>
+
+
+{# Because here we want the text to float arount the image, css grid is not suitable. 
+It doesnt allow that. So we take the value of the slider element and map it to %  #}
+
+{% css %}
+	{% set widthPercent = (block.fGridSpanWide / 12) * 100 %}
+	.cellImgTxtFloat .articleImg {
+		width: {{ widthPercent }}%;
+	}
+{% endcss %}

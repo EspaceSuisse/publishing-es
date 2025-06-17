@@ -3,7 +3,7 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     container-name: articleContainer;
     column-gap: var(--layoutGap);
-    max-width: 13var(--layoutGap);
+    max-width: var(--layoutMaxWidth);
     margin: 0 auto;
     padding: var(--layoutGap);
      @media (min-width: 768px) {

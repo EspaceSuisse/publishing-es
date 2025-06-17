@@ -17,6 +17,7 @@
 
     --siteHeadWidth: 75px;
     --layoutGap: 20px;
+    --layoutMaxWidth: 1200px;
 
     --colorLink: green;
     --colorLinkHover: darkgreen;

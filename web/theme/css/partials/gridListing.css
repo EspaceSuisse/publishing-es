@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--layoutGap);
-  max-width: 1200px;
+  max-width: var(--layoutMaxWidth);
   margin: auto;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(12, 1fr);

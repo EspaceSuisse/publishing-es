@@ -1,0 +1,17 @@
+.cellImgTxtFloat {
+    background: pink;
+
+    .cellImgTxtFloatElements {
+        @media (min-width: 1024px) {
+            &.imgLeft .articleImg {
+                float: left;
+                margin-right: 20px;
+            }
+
+            &.imgRight .articleImg {
+                float: right;
+                margin-left: 20px;
+            }
+        }
+    }
+}

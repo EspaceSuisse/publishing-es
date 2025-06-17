@@ -57,11 +57,6 @@ settings:
       __assoc__:
         -
           - uid
-          - fcc8fbb4-1672-46a2-bb5d-fbd078cf5a93
-    -
-      __assoc__:
-        -
-          - uid
           - 898d8de1-26a8-46a2-be3b-ba455a3711cc # Related Article
     -
       __assoc__:
@@ -73,6 +68,11 @@ settings:
         -
           - uid
           - 450218bb-dec8-4ecd-ac87-ba41a6674544 # Map
+    -
+      __assoc__:
+        -
+          - uid
+          - d4bed2bd-da16-4068-9c34-38184168514f # Bild Umfluss
   includeTableView: false
   maxEntries: null
   minEntries: null
