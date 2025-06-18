@@ -1,4 +1,4 @@
-dateModified: 1750162440
+dateModified: 1750254463
 elementSources:
   craft\elements\Asset:
     -
@@ -93,9 +93,14 @@ elementSources:
       key: 'group:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
       type: native
 email:
-  fromEmail: kaspar.allenbach@espacesuisse.ch
+  fromEmail: $SYSTEM_EMAIL
   fromName: 'EspaceSuisse Publishing'
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    apiKey: $SENDGRID_API_KEY
+    categories: ''
+  transportType: putyourlightson\sendgrid\mail\SendgridAdapter
 fs:
   files:
     hasUrls: true
@@ -221,6 +226,10 @@ plugins:
     enabled: true
     licenseKey: VJR8JIXNP3X424S665JMYRYZ
     schemaVersion: 3.0.12
+  sendgrid:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
