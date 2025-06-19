@@ -4,6 +4,7 @@
 {% set articleGenre = entry.fCatGenre %}
 {% set articleSubject = entry.fCatSubject %}
 {% set aufmacherBild = entry.fArticleImgI18n.one() %}
+{% set headerGridClasses = 'gridStart2 gridSpan9' %}
 
 <div class="articleHeadImg">
 	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
@@ -11,19 +12,25 @@
 
 <div class="articleHeadTitle gridArticle">
 
-	<h1 class="gridStart2 gridSpan10">{{ entry.title }}</h1>
+	<h1 class="{{ headerGridClasses }}">{{ entry.title }}</h1>
+
+	{# Share Article #}
+	{% include "_components/shareArticle" %}
 
 	{% include "_components/articleHeadAuthors" %}
-	<p class="gridStart2 gridSpan10">
+	<p class="{{ headerGridClasses }}">
 		{{ entry.postDate | date('j. F Y') }}
 		{% include "_components/articleSunset" %}
 	</p>
-	<p class="gridSpan12">
+	<p class="{{ headerGridClasses }}">
 		{{ macroCat.catOverview(articleGenre, 'genre', true) }}
     	{{ macroCat.catOverview(articleSubject, 'subject', true) }}
 	</p>
 
 	{# Lead Text #}
-	<h3 class="gridStart2 gridSpan10">{{ entry.fPlainTextI18nMultiline }}</h3>
+	{% if entry.fPlainTextI18nMultiline %}
+		<h3 class="{{ headerGridClasses }}">{{ entry.fPlainTextI18nMultiline }}</h3>
+	{% endif %}
+	
 
 </div>

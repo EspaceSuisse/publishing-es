@@ -1,0 +1,5 @@
+.shareArticle {
+    background-color: aqua;
+    grid-column: span 2;
+    grid-row: span 4;
+}
