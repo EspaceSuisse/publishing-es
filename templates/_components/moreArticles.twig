@@ -1,0 +1,11 @@
+{% import '_macros/mArticlePreviewL' as macroPreviewL %}
+
+<aside class="gridArticle">
+	<h3 class="gridSpan12">Weiteres…</h3>
+
+	{% set allEntries = craft.entries.section('article').limit(4).all() %}
+
+	{% for item in allEntries %}
+		{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+	{% endfor %}
+</aside>

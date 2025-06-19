@@ -1,5 +1,7 @@
 {% extends "_layouts/main" %}
 
+
+
 {# 
 This is the template for all articles.
 It includes the header and the matrix include which contains a switch statement.
@@ -13,6 +15,7 @@ The blocks are defined in the matrix field in the CMS.
 		
 		<header class="articleHead">{% include "_partials/articleHead" %}</header>
 		<div class="gridArticle">{% include "_partials/articleMatrix" %}</div>
-		<div class="cta">Hier könnte man einen kontextuellen cta bauen: Erste Hilfe raumplanung, db Urteile, Newsletter oder so</div>
+		{% include "_components/ctaCall" %}
+		{% include "_components/moreArticles" %}
 	</article>
 {% endblock %}
