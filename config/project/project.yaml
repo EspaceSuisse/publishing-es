@@ -1,4 +1,4 @@
-dateModified: 1750254463
+dateModified: 1750332368
 elementSources:
   craft\elements\Asset:
     -
@@ -128,6 +128,7 @@ meta:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
     1f6d945b-d305-4fc1-be5f-9774e3768396: 'SEO Defaults' # SEO Defaults
+    1fb49816-e800-4eb3-a679-27ea164fb72d: 'CTA Type' # CTA Type
     2a01649b-ab6a-4edd-a8f9-130d7d06dc53: Article # Article
     2d4ea7fb-3050-435d-806e-46986d5c58d2: Inforum # Inforum
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text

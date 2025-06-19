@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Text i18N
+    uid: 1fb49816-e800-4eb3-a679-27ea164fb72d # CTA Type
 handle: callToAction
 maxAuthors: 1
 name: 'Call to Action'
