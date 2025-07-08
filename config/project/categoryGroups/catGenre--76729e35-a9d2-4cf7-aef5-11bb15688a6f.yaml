@@ -92,11 +92,11 @@ fieldLayouts:
 handle: catGenre
 name: Rubrik
 siteSettings:
-  2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
     hasUrls: true
     template: pages/articleByCat.twig
     uriFormat: 'genre/{slug}'
-  5f286764-7e74-4475-989a-21ca80692fad: # Inforaum
+  5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     hasUrls: true
     template: pages/articleByCat.twig
     uriFormat: 'rubrik/{slug}'

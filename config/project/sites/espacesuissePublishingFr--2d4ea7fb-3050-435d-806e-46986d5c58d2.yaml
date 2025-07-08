@@ -3,7 +3,7 @@ enabled: '1'
 handle: espacesuissePublishingFr
 hasUrls: true
 language: fr-CH
-name: Inforum
+name: 'Inforum FR'
 primary: false
 siteGroup: 2e063293-328e-4b38-8c35-ec4074593593 # EspaceSuisse Publishing
 sortOrder: 2
