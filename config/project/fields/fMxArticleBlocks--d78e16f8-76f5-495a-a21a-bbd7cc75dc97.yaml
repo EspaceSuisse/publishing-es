@@ -16,6 +16,9 @@ settings:
         -
           - name
           - Lauftext
+        -
+          - group
+          - General
     -
       __assoc__:
         -
@@ -24,11 +27,17 @@ settings:
         -
           - name
           - 'Titel Abschnitt'
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 2200945b-b73a-4a89-bc06-0e3927264677 # Box
+        -
+          - group
+          - General
     -
       __assoc__:
         -
@@ -37,6 +46,17 @@ settings:
         -
           - name
           - Zitat
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - d4bed2bd-da16-4068-9c34-38184168514f # Bild Umfluss
+        -
+          - group
+          - General
     -
       __assoc__:
         -
@@ -45,6 +65,9 @@ settings:
         -
           - name
           - Bild
+        -
+          - group
+          - Media
     -
       __assoc__:
         -
@@ -53,26 +76,33 @@ settings:
         -
           - name
           - Bildergalerie
-    -
-      __assoc__:
         -
-          - uid
-          - 898d8de1-26a8-46a2-be3b-ba455a3711cc # Related Article
+          - group
+          - Media
     -
       __assoc__:
         -
           - uid
           - bf9959dc-941c-45ef-86b1-d05efb3e1626 # Download
+        -
+          - group
+          - Media
+    -
+      __assoc__:
+        -
+          - uid
+          - 898d8de1-26a8-46a2-be3b-ba455a3711cc # Related Article
+        -
+          - group
+          - Special
     -
       __assoc__:
         -
           - uid
           - 450218bb-dec8-4ecd-ac87-ba41a6674544 # Map
-    -
-      __assoc__:
         -
-          - uid
-          - d4bed2bd-da16-4068-9c34-38184168514f # Bild Umfluss
+          - group
+          - Special
   includeTableView: false
   maxEntries: null
   minEntries: null
