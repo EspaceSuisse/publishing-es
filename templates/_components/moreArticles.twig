@@ -1,11 +1,17 @@
 {% import '_macros/mArticlePreviewL' as macroPreviewL %}
+{% import '_macros/mArticlePreviewS' as macroPreviewS %}
 
 <aside class="gridArticle">
 	<h3 class="gridSpan12">Weiteres…</h3>
 
-	{% set allEntries = craft.entries.section('article').limit(4).all() %}
+	{% set allEntries = craft.entries.section('article').limit(null).all() %}
 
 	{% for item in allEntries %}
-		{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+		{% if loop.index <= 4 %}
+			{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+		{% else %}
+			{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+		{% endif %}
+			
 	{% endfor %}
 </aside>
