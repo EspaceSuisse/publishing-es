@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
+handle: memberLogin
+maxAuthors: 1
+name: 'Member Login'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/memberLogin.twig
+    uriFormat: member-login
+  5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/memberLogin.twig
+    uriFormat: member-login
+type: single
