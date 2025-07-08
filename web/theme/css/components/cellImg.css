@@ -1,3 +1,7 @@
-.cellImg {
-    
+
+.caption {
+    font-size: var(--font-size-S);
+}
+.assetSource {
+    font-size: var(--font-size-S);
 }
