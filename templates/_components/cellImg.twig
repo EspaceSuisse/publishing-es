@@ -5,11 +5,17 @@
 
 
 {% for asset in image %}
-    <div class="articleImg">
+    <figure class="articleImg">
         {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
-        <p class="source">{{ asset.fPlainTxt }}{{ ', ' ~ asset.fTagProvider.one() }} {{ ' - ' ~ asset.imgLicence }}</p>
-        {% if block.fPlainTextI18nMultiline %}
-            <p class="caption">{{ block.fPlainTextI18nMultiline }}</p>
-        {% endif %}
-    </div>
+        <figcaption>
+            {% if block.fPlainTextI18nMultiline %}
+                <p class="caption">{{ block.fPlainTextI18nMultiline }}</p>
+            {% endif %}
+            <p class="assetSource">
+                {{ asset.fPlainTxt }}
+                {% if asset.fTagProvider.one() %}, {{ asset.fTagProvider.one() }}{% endif %}
+                {% if asset.imgLicence %} – {{ asset.imgLicence }}{% endif %}
+            </p>
+        </figcaption>
+    </figure>
 {% endfor %}

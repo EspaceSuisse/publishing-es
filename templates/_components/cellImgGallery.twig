@@ -10,11 +10,14 @@
     {% set gridImgSpan = item.fGridSpanWide ?? null %}
 
         {% for asset in item.fArticleImgI18n.all() %}
-            <div class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
+            <figure class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
                 {{ imgMacro.articleImage(asset, 'articleImage') }}
-                {% if block.fPlainTextI18nMultiline %}
-                    <p class="caption">{{ block.fPlainTextI18nMultiline }}</p>
-                {% endif %}
-            </div>
+                <figcaption>
+                    <p class="assetSource">{{ asset.fPlainTxt }}{{ ', ' ~ asset.fTagProvider.one() }} {{ ' - ' ~ asset.imgLicence }}</p>
+                    {% if item.fPlainTextI18nMultiline %}
+                        <p class="caption">{{ item.fPlainTextI18nMultiline }}</p>
+                    {% endif %}
+                </figcaption>
+            </figure>
         {% endfor %}
 {% endfor %}
