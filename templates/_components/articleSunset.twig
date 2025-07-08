@@ -1,12 +1,12 @@
 {% set accessMessage %}
     {% if not isSunset %}
         Artikel für Nichtmitglieder noch {{ daysLeft }} Tage verfügbar.
-        <a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>
+        <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Mitglied werden' | t }}</a>
     {% else %}
-        Artikel nur für Mitglieder verfügbar. Bitte
-        <a href="{{ url('member-login') }}">Loggen Sie sich ein.</a>
+        Artikel nur für Mitglieder verfügbar. 
+        <a href="{{ url('member-login') }}">{{ 'Loggen Sie sich ein' | t }}</a>
         oder
-        <a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>.
+        <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Werden Sie Mitglied' | t }}</a>
     {% endif %}
 {% endset %}
 
