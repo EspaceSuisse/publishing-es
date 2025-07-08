@@ -3,6 +3,7 @@
 {% set articleSunset = entry.postDate|date_modify('+3 months') %}
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
+{% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
 
 {# 
 This is the template for all articles.
@@ -16,7 +17,7 @@ The blocks are defined in the matrix field in the CMS.
 	<article>
 		
 		<header class="articleHead">{% include "_partials/articleHead" %}</header>
-		<div class="gridArticle">{% include "_partials/articleMatrix" %}</div>
+		<div class="gridArticle {{ articleSunsetClass }}">{% include "_partials/articleMatrix" %}</div>
 		{% include "_components/ctaCall" %}
 		{% include "_components/moreArticles" %}
 	</article>

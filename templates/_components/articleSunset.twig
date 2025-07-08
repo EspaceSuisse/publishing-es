@@ -1,12 +1,13 @@
-{% if not isSunset %}
-    <p class="gridStart2 gridSpan9">Artikel für Nichtmitglieder noch {{ daysLeft }} Tage verfügbar.
-		<a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>
-	</p> 
-{% else %}
-            
-	<p class="gridStart2 gridSpan9">Artikel nur für Mitglieder verfügbar. Bitte
-		<a href="{{ url('member-login') }}">Loggen Sie sich ein.</a> oder
-		<a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>.
-    </p>
-	
-{% endif %}
+{% set accessMessage %}
+    {% if not isSunset %}
+        Artikel für Nichtmitglieder noch {{ daysLeft }} Tage verfügbar.
+        <a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>
+    {% else %}
+        Artikel nur für Mitglieder verfügbar. Bitte
+        <a href="{{ url('member-login') }}">Loggen Sie sich ein.</a>
+        oder
+        <a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>.
+    {% endif %}
+{% endset %}
+
+<p class="gridStart2 gridSpan9">{{ accessMessage|raw }}</p>
