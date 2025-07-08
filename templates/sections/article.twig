@@ -1,6 +1,8 @@
 {% extends "_layouts/main" %}
 
-
+{% set articleSunset = entry.postDate|date_modify('+3 months') %}
+{% set isSunset = articleSunset < now %}
+{% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
 
 {# 
 This is the template for all articles.

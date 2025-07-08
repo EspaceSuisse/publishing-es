@@ -20,8 +20,10 @@
 	{% include "_components/articleHeadAuthors" %}
 	<p class="{{ headerGridClasses }}">
 		{{ entry.postDate | date('j. F Y') }}
-		{% include "_components/articleSunset" %}
 	</p>
+
+	{% include "_components/articleSunset" %}
+	
 	<p class="{{ headerGridClasses }}">
 		{{ macroCat.catOverview(articleGenre, 'genre', true) }}
     	{{ macroCat.catOverview(articleSubject, 'subject', true) }}

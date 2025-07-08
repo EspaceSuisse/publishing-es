@@ -1,9 +1,12 @@
-{% set articleBedtime = entry.postDate|date_modify('+3 months') %}
-{% set daysLeft = date(articleBedtime|date('c')).diff(now).days %}
-
-{% if daysLeft > articleBedtime | date('c') %}
-    Artikel nur Nichtmitglieder verfügbar. Bitte Loggen Sie sich ein.
+{% if not isSunset %}
+    <p class="gridStart2 gridSpan9">Artikel für Nichtmitglieder noch {{ daysLeft }} Tage verfügbar.
+		<a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>
+	</p> 
 {% else %}
-    Artikel für Nichtmitglieder noch {{ daysLeft }} Tage verfügbar.
+            
+	<p class="gridStart2 gridSpan9">Artikel nur für Mitglieder verfügbar. Bitte
+		<a href="{{ url('member-login') }}">Loggen Sie sich ein.</a> oder
+		<a href="https://www.espacesuisse.ch/de/verband/mitglieder">Mitglied werden</a>.
+    </p>
+	
 {% endif %}
-
