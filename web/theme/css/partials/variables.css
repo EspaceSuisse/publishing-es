@@ -22,10 +22,10 @@
 
     --colorLink: var(--txtColor);
     --colorLinkHover: darkgreen;
-    --txtColor: blue;
+    --txtColor: rgb(98, 93, 90);
     --colorTextInvert: white;
 
-    --colorArticleBG: rgb(238, 230, 223);
+    --colorArticleBG: rgb(245, 239, 233);
     --colorPreviewCard: white;
 
     --colorES-brand-blue: #1c70b7;

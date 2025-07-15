@@ -1,13 +1,20 @@
+{% import '_macros/macroPostDate' as macroPostDate %}
+
 {% set authorQuery = entry.authors %}
 
-<ul class="articleAuthors gridStart2 gridSpan9">
+<ul class="articleAuthors gridStart2 gridSpan4">
 		{% for item in authorQuery %}
 			<li>
                 {% if item.photo %}
                     {% set portrait = item.photo.url %}
                     <img src="{{ portrait }}" alt="{{ item.name }}">
                 {% endif %}
-                {{ item.name }}
+                <div class="authorInfo">
+                    <span>{{ item.name }}</span>
+                    {% if loop.first %}
+                        {{ macroPostDate.postDate(entry) }}
+                    {% endif %}
+                </div>
             </li>
 		{% endfor %}
 </ul>
