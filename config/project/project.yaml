@@ -1,4 +1,4 @@
-dateModified: 1751978116
+dateModified: 1752566859
 elementSources:
   craft\elements\Asset:
     -
@@ -22,6 +22,31 @@ elementSources:
       type: native
     -
       key: temp
+      type: native
+  craft\elements\Category:
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+      tableAttributes:
+        - 'field:432db72f-cf6e-4d81-90df-eef5aeb18160' # Color
+        - status
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+      tableAttributes:
+        - 'field:432db72f-cf6e-4d81-90df-eef5aeb18160' # Color
+        - status
+        - link
       type: native
   craft\elements\Entry:
     -
