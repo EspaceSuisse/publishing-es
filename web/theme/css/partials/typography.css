@@ -1,51 +1,15 @@
-p, li, a {
-    font-family: var(--font-default);
-    font-weight: var(--font-regular);
-    font-size: var(--font-size-base);
-}
-h1, h2, h3, h4, h5, h6, blockquote {
-    font-family: var(--font-display);
-    font-weight: var(--font-bold);
-}
-ul {
-    li {
-        font-size: var(--font-size-base);
-        line-height: var(--line-height-base);
-    }
-}
-a, .buttonTxt {
-   text-decoration-thickness: 3px;
-   text-decoration-color: var(--colorLink);
-   text-decoration-line: underline;
-   transition: all 0.2s ease-in-out;
-   &:hover, &:visited {
-       text-decoration-color: var(--colorLinkHover);
-       text-decoration-thickness: 5px;
-       cursor: pointer;
-   }
-}
-.articleHeadTitle {
-    h1 {
-        font-size: var(--font-size-XXL);
-    }
-}
-.bodyArticle article {
-    p, a, li {
+.articleElement, .cellImgTxtFloatElements {
+    > p {
         font-size: var(--font-size-M);
+        font-family: var(--font-default);
         line-height: var(--line-height-base);
-        color: var(--colorText);
+        margin-top: 0;
     }
-    h3 {
+    > h3, > h4 {
         font-size: var(--font-size-L);
-        line-height: var(--line-height-base);
-        color: var(--colorText);
-    }
-    blockquote {
-        font-size: var(--font-size-XL);
-        color: greenyellow
-    }
-    ul {
-        list-style-type: disc;
-        padding-left: var(--layoutGap);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        line-height: 1.3;
+        margin-bottom: 0;
     }
 }

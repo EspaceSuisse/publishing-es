@@ -3,11 +3,14 @@
 {% set labelSubject = 'Thema' %}
 {% set labelGenre = 'Rubrik' %}
 
+{% set handle = entry.section.handle ?? category %}
+{% set bodyClass = 'body' ~ handle|ucfirst %}
+
 <!doctype html>
 
 <html lang="{{ craft.app.language }}">
 	{% include "_incl/metaHead" %}
-	<body class="body{{ entry.section.handle | capitalize }}">
+	<body class="{{ bodyClass }}">
 		<div id="app">
 			{% include "_partials/siteHeader" %}
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>

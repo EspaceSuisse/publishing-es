@@ -83,3 +83,6 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+.gridSpanAll {
+    grid-column-span: 1 / -1;
+}

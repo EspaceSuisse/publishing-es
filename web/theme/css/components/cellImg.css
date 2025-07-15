@@ -1,7 +1,16 @@
-
+.articleImg {
+    position: relative;
+    picture {
+        display: block;
+    }
+    p {
+        margin: 0;
+    }
+    margin-bottom: var(--layoutGap);
+}
 .caption {
     font-size: var(--font-size-S);
 }
 .assetSource {
-    font-size: var(--font-size-S);
+    font-size: var(--font-size-XS);
 }
