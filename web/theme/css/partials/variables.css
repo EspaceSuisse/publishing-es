@@ -13,7 +13,7 @@
     --font-size-S: 0.9rem; /* 8px */
     --font-size-XS: 0.375rem; /* 6px */
     --font-size-XXS: 0.25rem; /* 4px */
-    --line-height-base: 1.7;
+    --line-height-base: 1.4;
 
     --siteHeadWidth: 75px;
     --layoutGap: 20px;
@@ -21,7 +21,7 @@
 
     --colorLink: green;
     --colorLinkHover: darkgreen;
-    --colorText: rgb(39, 39, 39);
+    --txtColor: rgb(72, 72, 72);
     --colorTextInvert: white;
 
     --colorArticleBG: rgb(238, 230, 223);

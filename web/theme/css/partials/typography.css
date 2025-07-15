@@ -29,7 +29,7 @@ a, .buttonTxt {
         font-size: var(--font-size-XXL);
     }
 }
-article {
+.bodyArticle article {
     p, a, li {
         font-size: var(--font-size-M);
         line-height: var(--line-height-base);

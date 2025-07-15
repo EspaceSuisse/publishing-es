@@ -8,16 +8,22 @@
 	{% set catSubject = queryParam.fCatSubject.all() %}
 
 	<article class="articlePreview previewSizeXL {{ classParam }}">
-		{{ macroImg.articleImage(image, 'articleThumb', 'previewImg') }}
-		<div class="tags">
-			{{ macroCat.catOverview(catGenre, 'genre') }}
-			{{ macroCat.catOverview(catSubject, 'subject') }}
-		</div>
 		<a href="{{ queryParam.url }}">
-			<h2>{{ queryParam.title }}</h2>
+			{{ macroImg.articleImage(image, 'articleThumb', 'previewImg') }}
+		</a>
+		<div class="tags">
+			{{ macroCat.catOverview(catGenre, 'genre', true) }}
+			{{ macroCat.catOverview(catSubject, 'subject', true) }}
+		</div>
+
+		<div class="txtPart">
+			<h2>
+				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
+			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			{% include "_components/previewPostDate.twig" %}
-		</a>
+		</div>
+
 	</article>
 
 {% endmacro %}

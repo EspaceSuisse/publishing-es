@@ -7,7 +7,7 @@
 
 <html lang="{{ craft.app.language }}">
 	{% include "_incl/metaHead" %}
-	<body>
+	<body class="body{{ entry.section.handle | capitalize }}">
 		<div id="app">
 			{% include "_partials/siteHeader" %}
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>

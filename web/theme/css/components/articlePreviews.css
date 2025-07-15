@@ -1,14 +1,29 @@
 .articlePreview {
     position: relative;
     background-color: var(--colorPreviewCard);
-    a {
+    border-radius: 3px;
+    box-shadow: -6px 10px 5px -6px rgba(0,0,0,0.2);
+    overflow: hidden;
+    h2 a {
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        font-size: var(--font-size-L);
+        color: var(--txtColor);
+        line-height: 1.2;
+        margin: 0;
         text-decoration: none;
-        color: inherit;
+        &:hover {
+            text-decoration: underline;
+        }
     }
-    .tags {
-        position: absolute;
-        top: var(--layoutGap);
-        left: var(--layoutGap);
-        z-index: 1;
+    .txtPart {
+        padding: var(--layoutGap);
+        display: flex;
+        flex-direction: column;
+    }
+    .lead {
+        font-size: var(--font-size-M);
+        line-height: var(--line-height-base);
+        color: var(--txtColor)
     }
 }

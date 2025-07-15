@@ -1,23 +1,40 @@
 .tag {
     background-color: var(--colorES-brand-blue);
     border-radius: 4px;
-    padding: 4px 7px;
-    color: var(--colorTextInvert);
-    white-space:nowrap;
+    font-family: var(--font-default);
+    white-space: nowrap;
     font-size: var(--font-size-S);
+    padding: 4px 7px;
+
     a {
         text-decoration: none;
-        color: var(--colorTextInvert);
         transition: all 0.3s ease-in-out;
+        color: var(--colorLink);
         &:hover {
-            opacity: 0.8;
+            color: var(--colorLinkHover);
         }
     }
+
     &.subject {
         background-color: var(--colorES-subject);
     }
+
     &.genre {
-        border-radius: 50px;
         background-color: var(--colorES-genre);
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--layoutGap) / 2);
+}
+
+.previewSizeXL,
+.previewSizeL {
+    .tags {
+        position: absolute;
+        top: var(--layoutGap);
+        right: var(--layoutGap);
     }
 }

@@ -9,17 +9,19 @@
 
 	<article class="articlePreview previewSizeL {{ classParam }}">
 
-
-		{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
+		<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}">
+			{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
+		</a>
 		<div class="tags">
-			{{ macroCat.catOverview(catGenre, 'genre') }}
-			{{ macroCat.catOverview(catSubject, 'subject') }}
+			{{ macroCat.catOverview(catGenre, 'genre', true) }}
+			{{ macroCat.catOverview(catSubject, 'subject', true) }}
 		</div>
-		<a href="{{ queryParam.url }}">
-			<h2>{{ queryParam.title }}</h2>
+
+		<div class="txtPart">
+			<h2>
+				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
+			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			{% include "_components/previewPostDate.twig" %}
-		</a>
-	</article>
-
-{% endmacro %}
+		</div>
+</article>{% endmacro %}
