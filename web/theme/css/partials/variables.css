@@ -20,9 +20,9 @@
     --layoutGap: 20px;
     --layoutMaxWidth: 1200px;
 
-    --colorLink: green;
+    --colorLink: var(--txtColor);
     --colorLinkHover: darkgreen;
-    --txtColor: rgb(72, 72, 72);
+    --txtColor: blue;
     --colorTextInvert: white;
 
     --colorArticleBG: rgb(238, 230, 223);

@@ -2,6 +2,8 @@
 
 	{% import '_macros/macroImage' as macro %}
 	{% import '_macros/macroCatOverview' as macroCat %}
+    {% import '_macros/macroPostDate' as macroPostDate %}
+
 
 	{% set image = queryParam.fArticleImgI18n.one() %}
 	{% set catGenre = queryParam.fCatGenre.all() %}
@@ -22,6 +24,6 @@
 				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			{% include "_components/previewPostDate.twig" %}
+			{{ macroPostDate.postDate(queryParam) }}
 		</div>
 </article>{% endmacro %}

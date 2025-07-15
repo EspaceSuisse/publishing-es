@@ -4,6 +4,8 @@
     border-radius: 3px;
     box-shadow: -6px 10px 5px -6px rgba(0,0,0,0.2);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     h2 a {
         font-family: var(--font-display);
         font-weight: var(--font-bold);
@@ -20,10 +22,15 @@
         padding: var(--layoutGap);
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     .lead {
         font-size: var(--font-size-M);
         line-height: var(--line-height-base);
         color: var(--txtColor)
+    }
+    .postDate {
+        align-self: flex-end;
+        margin-top: auto;
     }
 }

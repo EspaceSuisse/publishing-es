@@ -1,6 +1,8 @@
 {% macro listMacro(queryParam, classParam) %}
 
 	{% import '_macros/macroCatOverview' as macroCat %}
+    {% import '_macros/macroPostDate' as macroPostDate %}
+
 
 	{% set catGenre = queryParam.fCatGenre.all() %}
 	{% set catSubject = queryParam.fCatSubject.all() %}
@@ -16,7 +18,7 @@
 			<h2>
 				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
 			</h2>
-			{% include "_components/previewPostDate.twig" %}
+			{{ macroPostDate.postDate(queryParam) }}
 		</div>
 	</article>
 

@@ -17,7 +17,9 @@ The blocks are defined in the matrix field in the CMS.
 	<article>
 		
 		<header class="articleHead">{% include "_partials/articleHead" %}</header>
-		<div class="gridArticle {{ articleSunsetClass }} articleContent">{% include "_partials/articleMatrix" %}</div>
+		<div class="gridArticle {{ articleSunsetClass }} articleContent">
+			{% include "_partials/articleMatrix" %}
+		</div>
 		{% include "_components/shareArticle" %}
 		{% include "_components/ctaCall" %}
 		{% include "_components/moreArticles" %}
