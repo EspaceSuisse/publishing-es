@@ -3,9 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: var(--layoutGap);
   max-width: var(--layoutMaxWidth);
-  margin: auto;
+  padding: 0 var(--layoutGap);
   @media (min-width: 1024px) {
     grid-template-columns: repeat(12, 1fr);
+    margin: auto;
   }
   .headliner {
     grid-column: 1 / -1;
