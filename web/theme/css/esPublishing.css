@@ -10,6 +10,7 @@
 
 @import url("../css/partials/nav.css");
 @import url("../css/components/navDropdown.css");
+@import url("../css/components/articleHead.css");
 @import url("../css/partials/navDropdownContent.css");
 
 @import url("../css/partials/siteHeader.css");
@@ -33,6 +34,5 @@
 @import url("../css/components/tags.css");
 @import url("../css/components/articlePreviews.css");
 @import url("../css/components/shareArticle.css");
-@import url("../css/components/ctaCall.css");
 
 @import url("../css/partials/typography.css");

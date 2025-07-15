@@ -23,13 +23,16 @@
 	{% if entry.fPlainTextI18nMultiline %}
 		<h3 class="{{ smallerGrid }} articleLeadText">{{ entry.fPlainTextI18nMultiline }}</h3>
 	{% endif %}
-
-	{% include "_components/articleHeadAuthors" %}
+	<div class="headMeta {{ smallerGrid }}">
+		{% include "_components/articleHeadAuthors" %}
+		<p>
+			{{ macroCat.catOverview(articleGenre, 'genre', true) }}
+			{{ macroCat.catOverview(articleSubject, 'subject', true) }}
+		</p>
+	</div>
+	
 	
 
-	<p class="gridSpan6">
-		{{ macroCat.catOverview(articleGenre, 'genre', true) }}
-		{{ macroCat.catOverview(articleSubject, 'subject', true) }}
-	</p>
+	
 
 </div>
