@@ -8,3 +8,9 @@
     }
   }
 }
+
+.articleHeadTitle {
+  position: relative;
+  margin-top: -35vh;
+  background-color: white;
+}
