@@ -24,18 +24,25 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     .articlePostDate {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
+        margin: 0;
     }
     .articleTitle {
         font-size: var(--font-size-XXL);
         font-family: var(--font-display);
         font-weight: var(--font-bold);
         line-height: 1.2;
-        margin-bottom: 0;
+        margin: 0;
     }
     .articleLeadText {
         font-size: var(--font-size-L);
         font-family: var(--font-default);
+        font-weight: var(--font-regular);
         line-height: 1.4;
         margin-bottom: 0;
+    }
+    .articleHeadDates {
+        display: flex;
+        gap: var(--layoutGap);
+        margin-top: calc(var(--layoutGap) * 2);
     }
 }

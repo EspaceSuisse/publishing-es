@@ -1,4 +1,4 @@
-{% import '_macros/macroPostDate' as macroPostDate %}
+
 
 {% set authorQuery = entry.authors %}
 
@@ -10,10 +10,7 @@
                     <img src="{{ portrait }}" alt="{{ item.name }}">
                 {% endif %}
                 <div class="authorInfo">
-                    <span>{{ item.name }}</span>
-                    {% if loop.first %}
-                        {{ macroPostDate.postDate(entry) }}
-                    {% endif %}
+                    <span>{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
                 </div>
             </li>
 		{% endfor %}

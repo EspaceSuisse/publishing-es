@@ -11,6 +11,7 @@
 
 .articleHeadTitle {
   position: relative;
-  margin-top: -35vh;
+  margin-top: -150px;
   background-color: white;
+  padding-bottom: calc(var(--layoutGap) * 2);
 }
