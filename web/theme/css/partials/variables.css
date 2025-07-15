@@ -24,7 +24,8 @@
     --colorText: rgb(39, 39, 39);
     --colorTextInvert: white;
 
-    --colorArticleBG: rgb(255, 249, 244);
+    --colorArticleBG: rgb(238, 230, 223);
+    --colorPreviewCard: white;
 
     --colorES-brand-blue: #1c70b7;
     --colorES-brand-petrol: #00c9be;

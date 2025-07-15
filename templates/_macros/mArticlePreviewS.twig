@@ -1,20 +1,21 @@
-
-
 {% macro listMacro(queryParam, classParam) %}
 
-    {% import '_macros/macroCatOverview' as macroCat %}
+	{% import '_macros/macroCatOverview' as macroCat %}
 
-    {% set catGenre = queryParam.fCatGenre.all() %}
-    {% set catSubject = queryParam.fCatSubject.all() %}
+	{% set catGenre = queryParam.fCatGenre.all() %}
+	{% set catSubject = queryParam.fCatSubject.all() %}
 
-    <article class="articlePreview previewSizeS {{ classParam }}">
-        <a href="{{ queryParam.url }}">
+	<article class="articlePreview previewSizeS {{ classParam }}">
 
-            {{ macroCat.catOverview(catGenre, 'genre') }}
-            {{ macroCat.catOverview(catSubject, 'subject') }}
 
-            <h2>{{ queryParam.title }}</h2>
-        </a>
-    </article>
-    
+		<div class="tags">
+			{{ macroCat.catOverview(catGenre, 'genre') }}
+			{{ macroCat.catOverview(catSubject, 'subject') }}
+		</div>
+		<a href="{{ queryParam.url }}">
+			<h2>{{ queryParam.title }}</h2>
+			{% include "_components/previewPostDate.twig" %}
+		</a>
+	</article>
+
 {% endmacro %}

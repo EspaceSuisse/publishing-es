@@ -1,8 +1,14 @@
 .articlePreview {
-    border: solid 1px red;
-    padding: 20px;
+    position: relative;
+    background-color: var(--colorPreviewCard);
     a {
         text-decoration: none;
         color: inherit;
+    }
+    .tags {
+        position: absolute;
+        top: var(--layoutGap);
+        left: var(--layoutGap);
+        z-index: 1;
     }
 }
