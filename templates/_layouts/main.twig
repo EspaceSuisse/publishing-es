@@ -1,8 +1,10 @@
 {# this is the root template. All other templates inherit this and the content is printed in block content #}
 
-{% set labelSubject = 'Thema' %}
-{% set labelGenre = 'Rubrik' %}
+{# Category naming globally avalable #}
+{% set labelSubject = 'Thema' | t %}
+{% set labelGenre = 'Rubrik' | t %}
 
+{# Sets a body css class with the section or category handle for css toplevel scoping #}
 {% set handle = entry.section.handle ?? category %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}
 

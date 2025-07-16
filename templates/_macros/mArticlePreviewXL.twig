@@ -22,7 +22,10 @@
 				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			{{ macroPostDate.postDate(queryParam) }}
+			<div class="previewPostDate">
+				{{ macroPostDate.postDate(queryParam) }}
+				{% include "_components/previewSunset.twig" %}
+			</div>
 		</div>
 
 	</article>

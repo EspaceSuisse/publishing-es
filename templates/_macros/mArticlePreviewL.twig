@@ -10,7 +10,6 @@
 	{% set catSubject = queryParam.fCatSubject.all() %}
 
 	<article class="articlePreview previewSizeL {{ classParam }}">
-
 		<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}">
 			{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 		</a>
@@ -24,6 +23,9 @@
 				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			{{ macroPostDate.postDate(queryParam) }}
+			<div class="previewPostDate">
+				{{ macroPostDate.postDate(queryParam) }}
+				{% include "_components/previewSunset.twig" %}
+			</div>
 		</div>
 </article>{% endmacro %}

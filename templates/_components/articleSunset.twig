@@ -1,11 +1,10 @@
 {% set accessMessage %}
     {% if not isSunset %}
-        Artikel für Nichtmitglieder noch {{ daysLeft }} Tage verfügbar.
+        {{ 'Artikel für Nichtmitglieder noch' | t }} {{ daysLeft }} {{ 'Tage verfügbar.' | t }}
         <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Mitglied werden' | t }}</a>
     {% else %}
-        Artikel nur für Mitglieder verfügbar. 
-        <a href="{{ url('member-login') }}">{{ 'Loggen Sie sich ein' | t }}</a>
-        oder
+        {{ 'Artikel nur für Mitglieder verfügbar.' | t }}
+        <a href="{{ url('member-login') }}">{{ 'Loggen Sie sich ein' | t }}</a>. 
         <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Werden Sie Mitglied' | t }}</a>
     {% endif %}
 {% endset %}

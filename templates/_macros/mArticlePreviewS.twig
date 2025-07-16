@@ -14,12 +14,13 @@
 				{{ macroCat.catOverview(catGenre, 'genre', true) }}
 				{{ macroCat.catOverview(catSubject, 'subject', true) }}
 			</div>
-
 			<h2>
 				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
 			</h2>
-			{{ macroPostDate.postDate(queryParam) }}
-		</div>
+			<div class="previewPostDate">
+				{{ macroPostDate.postDate(queryParam) }}
+				{% include "_components/previewSunset.twig" %}
+			</div>
 	</article>
 
 {% endmacro %}
