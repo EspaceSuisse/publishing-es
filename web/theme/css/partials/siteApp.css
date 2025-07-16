@@ -5,7 +5,7 @@
   min-height: 100vh;
   container-type: inline-size;
   container-name: appContainer;
-  background: var(--colorArticleBG);
+  background: var(--backgroundColor);
   position: relative;
   z-index: 2;
 }

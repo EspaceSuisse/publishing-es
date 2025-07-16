@@ -17,16 +17,4 @@ nav {
             flex-direction: column;
         }
     }
-    .langSwitcher {
-        display: flex;
-        gap: var(--layoutGap);
-        margin-top: 10px;
-    }
-    a, .buttonTxt, a p {
-        text-decoration-thickness: 0;
-        text-decoration-color: white;
-        &:visited {
-            text-decoration-color: white;
-        }
-    }
 }

@@ -21,16 +21,16 @@
     --layoutMaxWidth: 1200px;
 
     --colorLink: var(--txtColor);
-    --colorLinkHover: darkgreen;
+    --hoverColor: rgb(14, 81, 135);
     --txtColor: rgb(98, 93, 90);
     --txtInvertColor: white;
 
-    --colorArticleBG: rgb(245, 239, 233);
+    --backgroundColor: rgb(245, 239, 233);
     --colorPreviewCard: white;
 
-    --colorES-brand-blue: #1c70b7;
-    --colorES-brand-petrol: #00c9be;
-    --colorES-subject: #f9c200;
-    --colorES-genre: #308dc0;
-    
+    --colorES-brand-blue: rgb(28, 112, 183);
+    --colorES-brand-petrol: rgb(0, 201, 190);
+    --colorES-subject: rgb(249, 194, 0);
+    --colorES-genre: rgb(48, 141, 192);
+
 }

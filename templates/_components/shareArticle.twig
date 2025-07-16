@@ -2,7 +2,7 @@
 
 <div class="shareArticle">
 	<button class="js-share-button" aria-label="{{ 'Artikel Teilen' | t }}">
-        {{ svg('@webroot/theme/img/share-apple-svgrepo-com.svg')|raw }}
+        {{ svg('@webroot/theme/img/icon-share.svg')|raw }}
     </button>
 	<p class="result" aria-live="polite"></p>
 </div>
@@ -35,7 +35,7 @@ if (navigator.share) {
         }
         }
 
-        try {
+        try {logo
         await navigator.share(shareData);
         resultPara.textContent = "Article shared successfully!";
         } catch (err) {
@@ -44,7 +44,7 @@ if (navigator.share) {
     });
     } else {
         btn.style.display = "none";
-        resultPara.innerHTML = "<img src='" + '/theme/img/share-not-supported.svg' + "' alt='{{ 'Teilen nicht unterstützt' | t }}' />";
+        resultPara.innerHTML = "<img src='" + '/theme/img/icon-share-not-supported.svg' + "' alt='{{ 'Teilen nicht unterstützt' | t }}' />";
     }
 
 {% endjs %}

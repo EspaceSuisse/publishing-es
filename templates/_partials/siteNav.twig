@@ -18,10 +18,9 @@
 
 <nav aria-label="{{'Main navigation'|t}}" role="navigation"> 
 	<ul class="siteNav">
-		<li>
+		<li class="navIcon">
 			<a href="/" aria-label="{{ 'Home' | t }}">
-				<span class="hideOnMobile">{{ 'Home' | t }}</span>
-				<span class="hideOnDesktop"><img src="https://placehold.co/30x30" alt=""></span>
+				{{ svg('@webroot/theme/img/icon-home.svg')|raw }}
 			</a>
 		</li>
 		{{ dropMacro.dropdown(navSubject, labelSubject) }}

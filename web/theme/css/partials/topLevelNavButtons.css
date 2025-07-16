@@ -1,0 +1,49 @@
+.navIcon, .hasDropdown, .langSwitcher {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px var(--hoverColor);
+
+    > a,
+    > button {
+        font-family: var(--font-display);
+        font-size: var(--font-size-S);
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: var(--txtInvertColor);
+        }
+    }
+
+    &.navIcon {
+        svg {
+            width: 30%;
+            height: auto;
+
+            polygon {
+                stroke: var(--txtInvertColor);
+            }
+        }
+    }
+
+    &:hover {
+        background-color: var(--hoverColor);
+        cursor: pointer;
+    }
+
+    &.active {
+        background-color: var(--backgroundColor);
+        cursor: default;
+
+        span {
+            color: var(--txtColor);
+        }
+    }
+
+}

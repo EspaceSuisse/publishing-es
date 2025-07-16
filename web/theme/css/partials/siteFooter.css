@@ -6,7 +6,17 @@ footer {
     position: sticky;
     bottom: 0;
     z-index: 1;
-    padding: var(--layoutGap);
+    padding: 5vw var(--layoutGap);
+
+    a {
+        color: var(--txtInvertColor);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .listTitle {
         margin-top: 0;
         font-size: var(--font-size-L);
@@ -15,18 +25,13 @@ footer {
         line-height: var(--line-height-base);
         color: var(--txtInvertColor);
     }
+
     .listItem {
         font-size: var(--font-size-a);
         font-family: var(--font-default);
         line-height: var(--line-height-base);
-        a {
-            color: var(--txtInvertColor);
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
     }
+
     .footerContact {
         color: var(--txtInvertColor);
         font-size: var(--font-size-m);
