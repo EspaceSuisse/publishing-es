@@ -2,12 +2,12 @@
 
 	{% for item in queryParam %}
 		{% if loop.first %}
+			{% if labelParam %}
+				<h3 class="listTitle">{{ labelParam | t }}</h3>
+			{% endif %}
 			<ul>
 			{% endif %}
-			{% if loop.first and labelParam %}
-				<h3>{{ labelParam | t }}</h3>
-			{% endif %}
-			<li>
+			<li class="listItem">
 				<a href="{{ item.url }}">{{ item.title }}</a>
 			</li>
 			{% if loop.last %}

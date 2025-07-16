@@ -46,3 +46,8 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         margin-top: calc(var(--layoutGap) * 2);
     }
 }
+.postDate {
+    font-size: var(--font-size-S);
+    font-family: var(--font-default);
+    color: var(--txtColor);
+}

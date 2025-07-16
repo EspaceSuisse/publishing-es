@@ -25,17 +25,19 @@
 <footer>
 
     <div>
-        <strong>EspaceSuisse</strong> <br>
-        Verband für Raumplanung <br>
-        Sulgenrain 20 <br>
-        CH 3007 Bern <br>
+        <p class="footerContact">
+            <strong>EspaceSuisse</strong> <br>
+            Verband für Raumplanung <br>
+            Sulgenrain 20 <br>
+            CH 3007 Bern <br>
 
-        T: <a href="tel:"+41 380 + 76 76>+41 380 + 76 76</a>
-        M: <a href="mailto:info@espacesuisse.ch">info@espacesuisse.ch</a>
-        {{ listMacro.listMacro(querySubpages, null) }}
+            T: <a href="tel:"+41 380 + 76 76>+41 380 + 76 76</a> <br>
+            M: <a href="mailto:info@espacesuisse.ch">info@espacesuisse.ch</a>
+        </p>
     </div>
 
-    {{ listMacro.listMacro(queryFooterSubject, labelSubject) }}
-    {{ listMacro.listMacro(queryFooterGenre, labelSubject) }}
-    {{ listMacro.listMacro(queryLatestArticle, 'Die letzten Einträge') }}
+    <div>{{ listMacro.listMacro(queryFooterSubject, labelSubject) }}</div>
+    <div>{{ listMacro.listMacro(queryFooterGenre, labelSubject) }}</div>
+    <div>{{ listMacro.listMacro(queryLatestArticle, 'Die letzten Einträge') }}</div>
+    <div>{{ listMacro.listMacro(querySubpages, null) }}</div>
 </footer>

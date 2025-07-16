@@ -23,7 +23,7 @@
     --colorLink: var(--txtColor);
     --colorLinkHover: darkgreen;
     --txtColor: rgb(98, 93, 90);
-    --colorTextInvert: white;
+    --txtInvertColor: white;
 
     --colorArticleBG: rgb(245, 239, 233);
     --colorPreviewCard: white;

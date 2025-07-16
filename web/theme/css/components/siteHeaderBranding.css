@@ -6,7 +6,7 @@
     transform-origin: 20% -120%;
     padding: 0;
     path {
-        fill: var(--colorTextInvert);
+        fill: var(--txtInvertColor);
     }
 }
 .irBranding {

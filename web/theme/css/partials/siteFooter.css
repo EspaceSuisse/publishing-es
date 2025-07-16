@@ -7,4 +7,31 @@ footer {
     bottom: 0;
     z-index: 1;
     padding: var(--layoutGap);
+    .listTitle {
+        margin-top: 0;
+        font-size: var(--font-size-L);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        line-height: var(--line-height-base);
+        color: var(--txtInvertColor);
+    }
+    .listItem {
+        font-size: var(--font-size-a);
+        font-family: var(--font-default);
+        line-height: var(--line-height-base);
+        a {
+            color: var(--txtInvertColor);
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .footerContact {
+        color: var(--txtInvertColor);
+        font-size: var(--font-size-m);
+        font-family: var(--font-default);
+        line-height: 1.4;
+        margin: 0;
+    }
 }
