@@ -1,9 +1,50 @@
-<div class="gridStart10 gridSpan2 shareArticle">
-    <h3>Share this article</h3>
-    <ul>
-        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ entry.url }}" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com/intent/tweet?url={{ entry.url }}&text={{ entry.title }}" target="_blank">Twitter</a></li>
-        <li><a href="https://www.instagram.com/?url={{ entry.url }}" target="_blank">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ entry.url }}&title={{ entry.title }}" target="_blank">LinkedIn</a></li>
-    </ul>
+
+
+<div class="shareArticle">
+	<button class="js-share-button" aria-label="{{ 'Artikel Teilen' | t }}">
+        {{ svg('@webroot/theme/img/share-apple-svgrepo-com.svg')|raw }}
+    </button>
+	<p class="result" aria-live="polite"></p>
 </div>
+
+{% js %}
+    const btn = document.querySelector(".js-share-button");
+const resultPara = document.querySelector(".result");
+
+if (navigator.share) {
+    btn.addEventListener("click", async () => {
+        const shareData = {
+        title: document.title || '',
+        text: (document.querySelector('meta[name="description"]')?.content) || '',
+        url: (document.querySelector('link[rel="canonical"]')?.href) || window.location.href,
+        };
+
+        // Try to fetch og:image and attach as file if possible
+        const imgUrl =
+        document.querySelector('meta[property="og:image"]')?.content ||
+        document.querySelector('meta[name="twitter:image"]')?.content;
+
+        if (imgUrl) {
+        try {
+            const response = await fetch(imgUrl);
+            const blob = await response.blob();
+            const file = new File([blob], "share-image.jpg", { type: blob.type });
+            shareData.files = [file];
+        } catch (e) {
+            console.warn("Failed to load share image:", e);
+        }
+        }
+
+        try {
+        await navigator.share(shareData);
+        resultPara.textContent = "Article shared successfully!";
+        } catch (err) {
+        resultPara.textContent = `Share error: ${err.message}`;
+        }
+    });
+    } else {
+        btn.style.display = "none";
+        resultPara.innerHTML = "<img src='" + '/theme/img/share-not-supported.svg' + "' alt='{{ 'Teilen nicht unterstützt' | t }}' />";
+    }
+
+{% endjs %}

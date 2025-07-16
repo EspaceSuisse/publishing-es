@@ -46,8 +46,10 @@
 
 .articleHeadTitle {
   position: relative;
-  margin-top: -250px;
   background-color: white;
   padding-bottom: calc(var(--layoutGap) * 2);
   margin-bottom: calc(var(--layoutGap) * 2);
+  @media (min-width: 1200px) {
+    margin-top: -250px;
+  }
 }

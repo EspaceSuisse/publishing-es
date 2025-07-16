@@ -6,6 +6,8 @@
   container-type: inline-size;
   container-name: appContainer;
   background: var(--colorArticleBG);
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 1024px) {

@@ -1,5 +1,9 @@
 .shareArticle {
-    background-color: aqua;
-    grid-column: span 2;
-    grid-row: span 4;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    svg, img {
+        width: 24px;
+        height: 24px;
+    }
 }

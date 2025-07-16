@@ -32,10 +32,10 @@
 
         T: <a href="tel:"+41 380 + 76 76>+41 380 + 76 76</a>
         M: <a href="mailto:info@espacesuisse.ch">info@espacesuisse.ch</a>
+        {{ listMacro.listMacro(querySubpages, null) }}
     </div>
 
     {{ listMacro.listMacro(queryFooterSubject, labelSubject) }}
     {{ listMacro.listMacro(queryFooterGenre, labelSubject) }}
-    {{ listMacro.listMacro(querySubpages, null) }}
     {{ listMacro.listMacro(queryLatestArticle, 'Die letzten Einträge') }}
 </footer>

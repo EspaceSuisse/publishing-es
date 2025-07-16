@@ -2,6 +2,7 @@
     container-name: mainContainer;
     container-type: inline-size;
     width: 100%;
+    padding-bottom: var(--layoutGap);
 }
 .articleIsSunset {
   filter: blur(5px);
