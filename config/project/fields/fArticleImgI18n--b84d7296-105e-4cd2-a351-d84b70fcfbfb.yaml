@@ -21,10 +21,11 @@ settings:
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
-  restrictedLocationSubpath: null
+  restrictedLocationSubpath: '{ owner.owner.id ?? owner.id ?? id }'
   selectionLabel: 'Bild hinzufügen'
   showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'
