@@ -1,6 +1,23 @@
-{% set ctaItems = craft.entries.section('callToAction').one() %}
-<aside class="calltoAction">
-	<h4>{{ ctaItems.title }}</h4>
-	{{ ctaItems.fRichTextI18n|raw }}
-	<a href="{{ ctaItems.fLinkI18n.url }}">{{ ctaItems.fLinkI18n.label }}</a>
-</aside>
+{# get the first genre from the current article #}
+{% set relatedCtaGenre = entry.fCatGenre.one() %}
+
+{# Fetch call to cta entries related to the first genre #}
+{% set ctaItems = craft.entries()
+    .section('callToAction')
+    .relatedTo(relatedCtaGenre)
+    .all() %}
+
+{# Shuffle the cta items related to the first genre #}
+{% set shuffledCtaItems = ctaItems|shuffle %}
+
+{# Select a random cta item from the shuffled list #}
+{% set randomCta = shuffledCtaItems|first %}
+
+
+{% if randomCta %}
+    <aside class="calltoAction" style="background:{{ relatedCtaGenre.fColor }}">
+        <h4>{{ randomCta.title }}</h4>
+        {{ randomCta.fRichTextI18n|raw }}
+        <a href="{{ randomCta.fLinkI18n.url }}" class="btn ctaBtn">{{ randomCta.fLinkI18n.label }}</a>
+    </aside>
+{% endif %}
