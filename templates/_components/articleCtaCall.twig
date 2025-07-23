@@ -1,4 +1,6 @@
 {% set ctaItems = craft.entries.section('callToAction').one() %}
 <aside class="calltoAction">
-	hier käme dann cta buttons hin
+	<h4>{{ ctaItems.title }}</h4>
+	{{ ctaItems.fRichTextI18n|raw }}
+	<a href="{{ ctaItems.fLinkI18n.url }}">{{ ctaItems.fLinkI18n.label }}</a>
 </aside>

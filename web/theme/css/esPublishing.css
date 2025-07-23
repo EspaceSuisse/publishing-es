@@ -1,41 +1,41 @@
-@import url("../css/partials/variables.css");
-@import url("../css/partials/siteReset.css");
-@import url("../css/partials/siteApp.css");
-@import url("../css/partials/siteMain.css");
-@import url("../css/components/mobileVisibility.css");
+@import url("partials/variables.css");
+@import url("partials/siteReset.css");
+@import url("partials/siteApp.css");
+@import url("partials/siteMain.css");
+@import url("partials/mobileVisibility.css");
 
-@import url("../css/partials/gridArticle.css");
-@import url("../css/partials/gridDefinitions.css");
-@import url("../css/partials/gridListing.css");
+@import url("partials/gridArticle.css");
+@import url("partials/gridDefinitions.css");
+@import url("partials/gridListing.css");
 
-@import url("../css/partials/nav.css");
-@import url("../css/components/navDropdown.css");
-@import url("../css/components/articleHead.css");
-@import url("../css/partials/navDropdownContent.css");
+@import url("components/nav.css");
+@import url("components/navDropdown.css");
+@import url("components/articleHead.css");
+@import url("components/navDropdownContent.css");
 
-@import url("../css/partials/siteHeader.css");
-@import url("../css/components/siteHeaderBranding.css");
-@import url("../css/partials/gridArticleHead.css");
+@import url("partials/siteHeader.css");
+@import url("partials/siteHeaderBranding.css");
+@import url("partials/gridArticleHead.css");
 
-@import url("../css/partials/siteFooter.css");
-@import url("../css/partials/langSwitcher.css");
-@import url("../css/partials/topLevelNavButtons.css");
+@import url("partials/siteFooter.css");
+@import url("components/navLangSwitcher.css");
+@import url("components/navTopLevelButtons.css");
 
-@import url("../css/components/cellSubtitle.css");
-@import url("../css/components/cellBox.css");
-@import url("../css/components/cellRichText.css");
-@import url("../css/components/cellQuote.css");
-@import url("../css/components/cellImg.css");
-@import url("../css/components/cellImgGallery.css");
-@import url("../css/components/cellDownloads.css");
-@import url("../css/components/cellRelEntry.css");
-@import url("../css/components/cellImgTxtFloat.css");
+@import url("components/articleBlocks/cellSubtitle.css");
+@import url("components/articleBlocks/cellBox.css");
+@import url("components/articleBlocks/cellRichText.css");
+@import url("components/articleBlocks/cellQuote.css");
+@import url("components/articleBlocks/cellImg.css");
+@import url("components/articleBlocks/cellImgGallery.css");
+@import url("components/articleBlocks/cellDownloads.css");
+@import url("components/articleBlocks/cellRelEntry.css");
+@import url("components/articleBlocks/cellImgTxtFloat.css");
+@import url("components/articleCtaCall.css");
 
+@import url("components/articleHeadAuthors.css");
+@import url("components/articleHeadCat.css");
+@import url("partials/siteTags.css");
+@import url("components/articlePreviews.css");
+@import url("components/articleShare.css");
 
-@import url("../css/components/articleHeadAuthors.css");
-@import url("../css/components/articleHeadCat.css");
-@import url("../css/components/tags.css");
-@import url("../css/components/articlePreviews.css");
-@import url("../css/components/shareArticle.css");
-
-@import url("../css/partials/typography.css");
+@import url("partials/siteTypography.css");
