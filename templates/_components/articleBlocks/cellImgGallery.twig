@@ -9,7 +9,7 @@
     {% set gridImgStart = item.fGridStartWide ?? null %}
     {% set gridImgSpan = item.fGridSpanWide ?? null %}
 
-        {% for asset in item.fArticleImgI18n.all() %}
+        {% for asset in item.fImgI18n.all() %}
             <figure class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
                 {{ imgMacro.articleImage(asset, 'articleImage') }}
                 <figcaption>
