@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   cd92531f-51f0-4ab0-85e9-9e047bd871f7:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -94,11 +95,11 @@ name: Rubrik
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
     hasUrls: true
-    template: pages/articleByCat.twig
+    template: pages/articleByCategory.twig
     uriFormat: 'genre/{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     hasUrls: true
-    template: pages/articleByCat.twig
+    template: pages/articleByCategory.twig
     uriFormat: 'rubrik/{slug}'
 structure:
   maxLevels: 1

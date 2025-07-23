@@ -1,0 +1,44 @@
+{% extends "_layouts/main" %}
+
+{% block content %}
+
+	{% set allEntries = craft.entries.section('article').limit(null).all() %}
+
+
+	<div class="listingGrid" id="articleList">
+    <input class="search gridSpan12" placeholder="Search" />
+
+    <ul class="list gridSpan12">
+        {% for item in allEntries %}
+            <li class="item gridSpan12">
+                <div class="postDate">{{ item.postDate|date('Y-m-d') }}</div>
+                <div class="title"><a href="{{ item.url }}">{{ item.title }}</a></div>
+                <div class="genre">
+                    {% for cat in item.fCatGenre.all() %}
+                        <a href="{{ cat.url }}">{{ cat.title }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="subject">
+                    {% for cat in item.fCatSubject.all() %}
+                        <a href="{{ cat.url }}">{{ cat.title }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.0.2/list.min.js"></script>
+
+<script>
+    const options = {
+        valueNames: ['postDate', 'title', 'genre', 'subject']
+    };
+
+    const articleList = new List('articleList', options);
+</script>
+
+    
+
+{% endblock %}

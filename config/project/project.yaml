@@ -1,4 +1,4 @@
-dateModified: 1753263695
+dateModified: 1753267081
 elementSources:
   craft\elements\Asset:
     -
@@ -167,6 +167,7 @@ meta:
     5af8807d-9f2e-4703-a300-ba7f06531aea: 'Grid Span Wide' # Grid Span Wide
     5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle
     5f286764-7e74-4475-989a-21ca80692fad: 'Inforaum DE' # Inforaum DE
+    6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
@@ -194,7 +195,6 @@ meta:
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     a9c797df-ecf9-40a9-a1ce-daf522db66a6: 'Member Login' # Member Login
     b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Img i18n' # Img i18n
-    b140c349-b154-433f-9888-4b57792c9bdd: 'Alle Kategorien' # Alle Kategorien
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
     b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Start' # Grid Start

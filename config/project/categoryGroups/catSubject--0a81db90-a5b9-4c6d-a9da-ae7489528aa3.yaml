@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   c0ce0151-0aae-4d17-9caf-abd9200a90a1:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -94,11 +95,11 @@ name: Thema
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
     hasUrls: true
-    template: pages/articleByCat.twig
+    template: pages/articleByCategory.twig
     uriFormat: 'sujet/{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     hasUrls: true
-    template: pages/articleByCat.twig
+    template: pages/articleByCategory.twig
     uriFormat: 'thema/{slug}'
 structure:
   maxLevels: 1

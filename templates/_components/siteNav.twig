@@ -15,6 +15,7 @@
 	.relatedTo({ sourceElement: craft.entries.section('article') })
 	.all() %}
 
+{% set articleSearch = craft.entries.section('allArticles').with(['title','url']).one() %}
 
 <nav aria-label="{{'Main navigation'|t}}" role="navigation"> 
 	<ul class="siteNav">
@@ -25,6 +26,12 @@
 		</li>
 		{{ dropMacro.dropdown(navSubject, labelSubject) }}
 		{{ dropMacro.dropdown(navGenre, labelGenre) }}
+
+		<li class="navIcon">
+			<a href="{{ articleSearch.url }}">
+				{{ articleSearch.title }}
+			</a>
+		</li>
 		{% include "_components/navLangSwitcher.twig" %}
 	</ul>
 </nav>

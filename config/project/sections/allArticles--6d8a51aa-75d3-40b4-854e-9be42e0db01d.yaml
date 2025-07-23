@@ -3,9 +3,9 @@ enableVersioning: true
 entryTypes:
   -
     uid: 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
-handle: allCategories
+handle: allArticles
 maxAuthors: 1
-name: 'Alle Kategorien'
+name: 'All Articles'
 previewTargets:
   -
     __assoc__:
@@ -23,11 +23,11 @@ siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
     enabledByDefault: true
     hasUrls: true
-    template: pages/catOverview.twig
-    uriFormat: toutes-les-rubriques
+    template: pages/articlesAll.twig
+    uriFormat: tous-les-articles
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     enabledByDefault: true
     hasUrls: true
-    template: pages/catOverview.twig
-    uriFormat: alle-rubriken
+    template: pages/articlesAll.twig
+    uriFormat: alle-artikel
 type: single
