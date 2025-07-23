@@ -11,13 +11,13 @@
 <!doctype html>
 
 <html lang="{{ craft.app.language }}">
-	{% include "_incl/metaHead" %}
+	{% include "_components/siteMeta" %}
 	<body class="{{ bodyClass }}">
 		<div id="app">
-			{% include "_partials/siteHeader" %}
+			{% include "_components/siteHeader" %}
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
 		</div>
-		{% include "_partials/siteFooter" %}
+		{% include "_components/siteFooter" %}
 		{# {% include "_components/devBar" %} #}
 	</body>
 </html>

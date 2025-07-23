@@ -1,16 +1,17 @@
 {% macro listMacro(queryParam, classParam) %}
 
-	{% import '_macros/macroImage' as macroImg %}
+	{% import '_macros/macroImage' as macro %}
 	{% import '_macros/macroCatOverview' as macroCat %}
     {% import '_macros/macroPostDate' as macroPostDate %}
+
 
 	{% set image = queryParam.fArticleImgI18n.one() %}
 	{% set catGenre = queryParam.fCatGenre.all() %}
 	{% set catSubject = queryParam.fCatSubject.all() %}
 
-	<article class="articlePreview previewSizeXL {{ classParam }}">
-		<a href="{{ queryParam.url }}">
-			{{ macroImg.articleImage(image, 'articleThumb', 'previewImg') }}
+	<article class="articlePreview previewSizeL {{ classParam }}">
+		<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}">
+			{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 		</a>
 		<div class="tags">
 			{{ macroCat.catOverview(catGenre, 'genre', true) }}
@@ -24,10 +25,7 @@
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			<div class="previewPostDate">
 				{{ macroPostDate.postDate(queryParam) }}
-				{% include "_components/previewSunset.twig" %}
+				{% include "_components/articlePreviewSunset.twig" %}
 			</div>
 		</div>
-
-	</article>
-
-{% endmacro %}
+</article>{% endmacro %}

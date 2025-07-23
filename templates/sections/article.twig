@@ -18,11 +18,11 @@ The blocks are defined in the matrix field in the CMS.
 
 	<article>
 		
-		<header class="articleHead">{% include "_partials/articleHead" %}</header>
+		<header class="articleHead">{% include "_components/articleHead" %}</header>
 		<div class="gridArticle {{ articleSunsetClass }} articleContent">
-			{% include "_partials/articleMatrix" %}
+			{% include "_components/articleMatrix" %}
 		</div>
-		{% include "_components/ctaCall" %}
-		{% include "_components/moreArticles" %}
+		{% include "_components/articleCtaCall" %}
+		{% include "_components/articleMoreArticles" %}
 	</article>
 {% endblock %}

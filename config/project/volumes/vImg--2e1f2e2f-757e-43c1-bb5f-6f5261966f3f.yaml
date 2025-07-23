@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   a0ce3808-f12a-4f35-a8e9-687e41aee67e:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -46,19 +47,28 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-23T10:31:04+00:00'
-            editCondition: null
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2025-07-22T14:00:29+00:00'
+            disabled: false
             elementCondition: null
-            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
-            handle: null
+            id: null
             includeInCards: false
             instructions: null
-            label: 'Alt Text'
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
             providesThumbs: false
+            readonly: false
+            requirable: true
             required: false
-            tip: 'Bild beschrieb für Leser mit Sehbehinderung.'
-            type: craft\fieldlayoutelements\CustomField
-            uid: 90532aec-3315-4929-89a3-182fcdc3a2a1
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 79d33ed2-79f9-4776-99f7-d7fa98a075ec
             userCondition: null
             warning: null
             width: 100
