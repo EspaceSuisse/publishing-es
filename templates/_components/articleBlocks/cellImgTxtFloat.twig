@@ -1,8 +1,9 @@
+{% import '_macros/macroFields' as fieldsMacro %}
 {% set floatClass = block.fSwitch == 1 ? 'imgRight' : 'imgLeft' %}
 
 <div class="cellImgTxtFloatElements {{ floatClass }}">
 	{% include "_components/articleBlocks/cellImg.twig" %}
-	{{ block.fRichTextI18n|raw }}
+	{{ fieldsMacro.richText(block.fRichTextI18n) }}
 </div>
 
 

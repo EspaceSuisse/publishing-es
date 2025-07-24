@@ -1,18 +1,20 @@
-{% macro listMacro(queryParam, labelParam) %}
+{% macro listMacro(queryParam, labelParam, titleClassParam, listClassParam) %}
 
-	{% for item in queryParam %}
-		{% if loop.first %}
-			{% if labelParam %}
-				<h3 class="listTitle">{{ labelParam | t }}</h3>
-			{% endif %}
-			<ul>
-			{% endif %}
-			<li class="listItem">
-				<a href="{{ item.url }}">{{ item.title }}</a>
-			</li>
-			{% if loop.last %}
-			</ul>
+	{% if queryParam %}
+
+		{% if labelParam %}
+			<h3 class="listTitle {{ titleClassParam }}">{{ labelParam | t }}</h3>
 		{% endif %}
-	{% endfor %}
+
+
+		<ul class="{{ listClassParam }}">
+			{% for item in queryParam %}
+				<li class="listItem">
+					<a href="{{ item.url }}">{{ item.title }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+		
+	{% endif %}
 
 {% endmacro %}

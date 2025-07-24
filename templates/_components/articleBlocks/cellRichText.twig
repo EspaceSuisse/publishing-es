@@ -1,1 +1,3 @@
-{{ block.fRichTextI18n|raw }}
+{% import '_macros/macroFields' as fieldsMacro %}
+
+{{ fieldsMacro.richText(block.fRichTextI18n) }}

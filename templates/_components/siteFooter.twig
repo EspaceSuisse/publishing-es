@@ -1,4 +1,8 @@
 {% import '_macros/macroLinkList' as listMacro %}
+{% import '_macros/macroFields' as fieldsMacro %}
+
+{% set labelSubject = 'Themen' %}
+{% set labelGenre = 'Genres' %}
 
 {% set queryFooterSubject = craft.categories.group('catSubject')
 	.with(['title','url'])
@@ -24,20 +28,19 @@
 
 <footer>
 
-    <div>
-        <p class="footerContact">
-            <strong>EspaceSuisse</strong> <br>
-            Verband für Raumplanung <br>
-            Sulgenrain 20 <br>
-            CH 3007 Bern <br>
-
-            T: <a href="tel:"+41 380 + 76 76>+41 380 + 76 76</a> <br>
-            M: <a href="mailto:info@espacesuisse.ch">info@espacesuisse.ch</a>
-        </p>
+    <div class="footerContact gridRowStart2">
+        {{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
     </div>
 
-    <div>{{ listMacro.listMacro(queryFooterSubject, labelSubject) }}</div>
-    <div>{{ listMacro.listMacro(queryFooterGenre, labelGenre) }}</div>
-    <div class="gridSpan2 footerArticles">{{ listMacro.listMacro(queryLatestArticle, 'Die letzten Einträge') }}</div>
-    <div>{{ listMacro.listMacro(querySubpages, null) }}</div>
+    {{ listMacro.listMacro(queryFooterSubject, labelSubject, 'gridStart2','gridRowStart2') }}
+    {{ listMacro.listMacro(queryFooterGenre, labelGenre, '','gridStart3') }}
+    {{ listMacro.listMacro(queryLatestArticle, 'Die letzten Einträge' | t, 'gridStart4 gridRowStart1', 'entryList' ) }}
+    {{ listMacro.listMacro(querySubpages, 'Subpages' | t, 'gridRowStart1 gridStart5' ) }}
+    <div>
+        <ul>
+            {% for block in footerGlobals.fLinkList %}
+                <li class="listItem">{{ block.fLinkI18n.link }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </footer>

@@ -114,4 +114,16 @@
     .gridSpanAll {
         grid-column-span: 1 / -1;
     }
+    .gridRowStart1 {
+        grid-row-start: 1;
+    }
+    .gridRowStart2 {
+        grid-row-start: 2;
+    }
+    .gridRowStart3 {
+        grid-row-start: 3;
+    }
+    .gridRowStart4 {
+        grid-row-start: 4;
+    }
 }

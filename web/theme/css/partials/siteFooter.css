@@ -33,10 +33,22 @@ footer {
     }
 
     .footerContact {
-        color: var(--txtInvertColor);
-        font-size: var(--font-size-m);
-        font-family: var(--font-default);
-        line-height: 1.4;
-        margin: 0;
+        p {
+            color: var(--txtInvertColor);
+            font-size: var(--font-size-m);
+            font-family: var(--font-default);
+            line-height: 1.4;
+            margin: 0;
+        }
+        a {
+            text-decoration: underline;
+        }
+        h3, h4, strong, b {
+            color: var(--txtInvertColor);
+            font-size: var(--font-size-M);
+            font-family: var(--font-display);
+            color: var(--txtInvertColor);
+            margin: 0;
+        }
     }
 }
