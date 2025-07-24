@@ -3,15 +3,15 @@
   "prefer-stable": true,
   "require": {
     "craftcms/ckeditor": "4.9.0",
-    "craftcms/cms": "5.8.4",
+    "craftcms/cms": "5.8.8",
     "miranj/craft-obfuscator": "1.2.0",
     "nystudio107/craft-retour": "5.0.11",
     "nystudio107/craft-seomatic": "5.1.16",
     "putyourlightson/craft-sendgrid": "3.0.0",
-    "spacecatninja/imager-x": "5.1.4",
+    "spacecatninja/imager-x": "5.1.5",
     "spacecatninja/imager-x-pdf-adapter": "1.1.0",
     "topshelfcraft/environment-label": "5.0.0",
-    "verbb/knock-knock": "3.0.3",
+    "verbb/knock-knock": "3.0.4",
     "vlucas/phpdotenv": "^5.4.0",
     "webhubworks/craft-ohdear": "5.2.3"
   },
