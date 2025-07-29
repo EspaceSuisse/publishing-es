@@ -11,7 +11,10 @@
 }
 .irBranding {
     position: fixed;
-    top: var(--layoutGap);
+    top: 100px;
+    @media (min-width: 1024px) {
+        top: var(--layoutGap);
+    }
     z-index: 1000;
     right: var(--layoutGap);
     width: clamp(140px, 15vw, 20vw);

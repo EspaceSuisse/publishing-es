@@ -1,5 +1,6 @@
 .navIcon, .hasDropdown, .langSwitcher {
     aspect-ratio: 1 / 1;
+    max-width: var(--siteHeadWidth);
     display: flex;
     justify-content: center;
     align-items: center;
