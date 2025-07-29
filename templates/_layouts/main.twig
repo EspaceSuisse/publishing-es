@@ -11,7 +11,10 @@
 <!doctype html>
 
 <html lang="{{ craft.app.language }}">
+
 	{% include "_components/siteMeta" %}
+	{% include "_components/catColorChecker.twig" %}
+	
 	<body class="{{ bodyClass }}">
 		<div id="app">
 			{% include "_components/siteHeader" %}

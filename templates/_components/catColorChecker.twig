@@ -1,0 +1,28 @@
+
+
+    {# Add JavaScript to handle tag color inversion #}
+    {# checks background color and decides if the text color has to be reversed #}
+    {% js %}
+        document.addEventListener('DOMContentLoaded', function () {
+    function getContrastYIQ(hexcolor) {
+        hexcolor = hexcolor.replace('#', '');
+        const r = parseInt(hexcolor.substring(0, 2), 16);
+        const g = parseInt(hexcolor.substring(2, 4), 16);
+        const b = parseInt(hexcolor.substring(4, 6), 16);
+        const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        return (yiq >= 128) ? 'light' : 'dark';
+    }
+
+    document.querySelectorAll('.tag').forEach(tag => {
+        const hex = tag.dataset.color;
+        console.log('Tag:', tag, 'data-color:', hex);
+        if (!hex || !hex.startsWith('#')) return;
+
+        if (getContrastYIQ(hex) === 'dark') {
+            console.log('Adding invert class to:', tag);
+            tag.classList.add('invert');
+        }
+    });
+});
+
+    {% endjs %}

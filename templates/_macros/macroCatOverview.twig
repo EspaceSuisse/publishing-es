@@ -4,20 +4,13 @@
 
 {%- macro catOverview(catParam, classParam, linkParam) -%}
 	{% for item in catParam %}
-        {% set inlineStyle = item.fColor ? '--colorES-' ~ classParam ~ ':' ~ item.fColor ~ ';' : '' %}
-	    <span class="tag {{ ' ' ~ classParam }}" style="{{ inlineStyle }}">
+		{% set inlineStyle = item.fColor ? 'background-color:' ~ item.fColor ~ ';' : '' %}
+			<span class="tag {{ ' ' ~ classParam }}" style="{{ inlineStyle }}" data-color="{{ item.fColor }}"> 
             {%- if linkParam == true -%}
-                <a href="{{- item.url -}}">{{- item.title -}}</a>
-            {%- else -%}
-                {{- item.title -}}
-            {%- endif -%}
-        </span>
+				<a href="{{- item.url -}}">{{- item.title -}}</a>
+			{%- else -%}
+				{{- item.title -}}
+			{%- endif -%}
+		</span>
 	{%- endfor -%}
 {%- endmacro -%}
-
-{% css %}
-    :root {
-        --colorES-subject: {{ catParam.fColor}};
-    }
-{% endcss %}
-

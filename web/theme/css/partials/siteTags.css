@@ -13,7 +13,9 @@
             opacity: 0.6;
         }
     }
-
+    &.invert, &.invert a {
+        color: var(--txtInvertColor);
+    }
     &.subject {
         background-color: var(--colorES-subject);
         border-radius: 100px;
