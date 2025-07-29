@@ -3,15 +3,17 @@
 {% import '_components/previewCards/macroArticlePreviewXL' as macroPreviewXL %}
 {% import '_components/previewCards/macroArticlePreviewL' as macroPreviewL %}
 {% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+{% import '_macros/macroCatOverview' as macroCat %}
 
 {% block content %}
 
 	{% set allEntries = craft.entries.section('article').limit(null).all() %}
-	{% set genre = craft.categories.group('catGenre').all() %}
-	{% set subject = craft.categories.group('catSubject').all() %}
+	{% set catGenre = craft.categories.group('catGenre').all() %}
+	{% set catSubject = craft.categories.group('catSubject').all() %}
 
 
 	<div class="listingGrid">
+		{% include "_components/listingHeader.twig" %}
 		<section class="headliner">
 			{% set headliner = allEntries | first %}
 			{{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
@@ -21,6 +23,17 @@
 				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
 			{% endfor %}
 		</section>
+		<section class="latest">
+			{% for item in allEntries | slice(4,2) %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+			{% endfor %}
+		</section>
+		<aside class="gridSpan12">
+			<div class="tags">
+			{{ macroCat.catOverview(catGenre, 'genre', true) }}
+			{{ macroCat.catOverview(catSubject, 'subject', true) }}
+		</div>
+		</aside>
 		<section class="latest">
 			{% for item in allEntries | slice(6) %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
