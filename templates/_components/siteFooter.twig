@@ -1,5 +1,6 @@
 {% import '_macros/macroLinkList' as listMacro %}
 {% import '_macros/macroFields' as fieldsMacro %}
+{% import '_macros/macroCatOverview' as macroCat %}
 
 {% set labelSubject = 'Themen' %}
 {% set labelGenre = 'Genres' %}
@@ -25,22 +26,34 @@
     .all()
 %}
 
+{% set articleSearch = craft.entries.section('allArticles').with(['title','url']).one() %}
+
 
 <footer>
 
-    <div class="footerContact gridRowStart2">
-        {{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
-    </div>
-
-    {{ listMacro.listMacro(queryFooterSubject, labelSubject, 'gridStart2','gridRowStart2') }}
-    {{ listMacro.listMacro(queryFooterGenre, labelGenre, '','gridStart3') }}
-    {{ listMacro.listMacro(queryLatestArticle, 'Die letzten Einträge' | t, 'gridStart4 gridRowStart1', 'entryList' ) }}
-    {{ listMacro.listMacro(querySubpages, 'Subpages' | t, 'gridRowStart1 gridStart5' ) }}
-    <div>
-        <ul>
-            {% for block in footerGlobals.fLinkList %}
-                <li class="listItem">{{ block.fLinkI18n.link }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+	<div class="footerContact">
+		{{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
+	</div>
+	<div>
+        <h3 class="listTitle">{{ labelSubject }}</h3>
+        {{ macroCat.catOverview(queryFooterSubject, 'subject', true) }}
+	</div>
+	<div>
+		<h3 class="listTitle">{{ labelGenre }}</h3>
+        {{ macroCat.catOverview(queryFooterGenre, 'genre', true) }}
+	</div>
+	<div class="latestArticles">
+		{{ listMacro.listMacro(queryLatestArticle, 'Die letzten Artikel' | t, null, 'entryList' ) }}
+        <p class="listItem"><a href="{{ articleSearch.url }}">{{ articleSearch.title }}</a></p>
+	</div>
+	<div>
+		{{ listMacro.listMacro(querySubpages, 'Subpages' | t,) }}
+	</div>
+	<div>
+		<ul>
+			{% for block in footerGlobals.fLinkList %}
+				<li class="listItem">{{ block.fLinkI18n.link }}</li>
+			{% endfor %}
+		</ul>
+	</div>
 </footer>

@@ -2,10 +2,12 @@ footer {
     min-height: 50vh;
     background-color: var(--colorES-brand-blue);
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    position: sticky;
-    bottom: 0;
-    z-index: 1;
+    grid-template-columns: 1fr;
+    gap: var(--layoutGap);
+    @media (min-width: 1023px) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        
+    }
     padding: 5vw var(--layoutGap);
 
     a {
@@ -31,8 +33,19 @@ footer {
         font-family: var(--font-default);
         line-height: var(--line-height-base);
     }
-
+    .tag {
+        line-height: 3;
+    }
+    .latestArticles {
+        @media (min-width: 1023px) {
+            grid-column: span 2;
+        }
+    }
     .footerContact {
+        @media (max-width: 1023px) {
+            text-align: center;
+            padding: 10vw;
+        }
         p {
             color: var(--txtInvertColor);
             font-size: var(--font-size-m);
