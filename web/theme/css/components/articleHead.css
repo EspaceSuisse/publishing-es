@@ -1,4 +1,5 @@
 .articleHead {
+  position: relative;
   .articleHeadImg {
     width: 100%;   
     img {
@@ -41,6 +42,15 @@
         display: flex;
         gap: var(--layoutGap);
         flex-wrap: wrap;;
+    }
+    .articleId {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: var(--txtInvertColor);
+      font-family: var(--font-default);
+      font-size: var(--font-size-S);
+      padding: 3px;
     }
 }
 
