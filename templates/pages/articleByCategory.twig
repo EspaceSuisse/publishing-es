@@ -6,13 +6,13 @@
 
 {% block content %}
 
-	{% set allEntries = craft.entries().relatedTo(category).all()  %}
+	{% set allEntries = craft.entries().section('article').relatedTo(category).all()  %}
 	{% set genre = craft.categories.group('catGenre').all() %}
 	{% set subject = craft.categories.group('catSubject').all() %}
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
-	<h1>{{ category.title }}</h1>
 	<div class="listingGrid">
+		{% include "_components/listingHeader.twig" %}
 		<section class="headliner">
 			{% set headliner = allEntries | first %}
 			{{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
