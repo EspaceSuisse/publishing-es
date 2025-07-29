@@ -6,3 +6,10 @@
     }
     margin-bottom: var(--layoutGap);
 }
+
+.cellCard {
+    padding: var(--layoutGap);
+    margin-bottom: var(--layoutGap);
+    border: dashed 1px var(--txtColor);
+    border-radius: 4px;
+}

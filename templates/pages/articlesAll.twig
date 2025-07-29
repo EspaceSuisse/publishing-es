@@ -2,17 +2,34 @@
 
 {% block content %}
 
-	{% set allEntries = craft.entries.section('article').limit(null).all() %}
+	{% set allEntries = craft.entries()
+        .section('article')
+        .with(['fCatGenre', 'fCatSubject'])
+        .limit(null)
+        .all()
+    %}
+
 
 
 	<div class="listingGrid" id="articleList">
         {% include "_components/listingHeader.twig" %}
 		<input class="search gridSpan12" placeholder="Search"/>
 
-		<ul class="entryList gridSpan12">
+		<ul class="articleTable gridSpan12 list">
 			{% for item in allEntries %}
+                {% if loop.first %}
+                    <li class="item gridSpan12">
+                        <p>{{ 'Veröffentlichung' }}e</p>
+                        <p>ID</p>
+                        <p>{{ 'Title' | t }}</p>
+                        <p>{{ labelGenre}}</p>
+                        <p>{{ labelSubject }}</p>
+                    </li>
+                {% endif %}
+                
 				<li class="item gridSpan12">
 					<div class="postDate">{{ item.postDate|date('Y-m-d') }}</div>
+                    <div class="articleId">{{ item.id }}</div>
 					<div class="title">
 						<a href="{{ item.url }}">{{ item.title }}</a>
 					</div>
@@ -38,13 +55,15 @@
 
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.0.2/list.min.js"></script>
 
-	 <script>
-	    const options = {
-	        valueNames: ['postDate', 'title', 'genre', 'subject']
-	    };
-	
-	    const articleList = new List('articleList', options);
-	</script>
+	 {% js %}
+        document.addEventListener('DOMContentLoaded', function () {
+            const options = {
+                valueNames: ['postDate', 'title', 'genre', 'subject', 'articleId']
+            };
+            const articleList = new List('articleList', options);
+        });
+    {% endjs %}
+
 
 
 {% endblock %}

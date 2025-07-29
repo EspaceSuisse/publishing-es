@@ -1,0 +1,28 @@
+{% extends "_layouts/main" %}
+
+{% block content %}
+
+	{% set authorPosts = craft.users.group(['espacesuisse','externalAuthor','editor']).status('active').all() %}
+
+	{% set baseSegment = {
+            'de': 'autoren',
+            'fr': 'auteurs'
+        }[craft.app.language] ?? 'autoren' %}
+
+	<h1>{{ entry.title }}</h1>
+
+	{% for author in authorPosts %}
+
+		{% set authoredArticles = craft.entries.section('article').authorId(author.id).limit(1).one() %}
+		{% set authorSlug = author.username %}
+
+		{% if authoredArticles %}
+			<div class="authorPost">
+				<h4>{{ author.name }}</h4>
+				<a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}">{{ 'Alle Artikel von ' | t }}{{ author.name }} {{ 'anzeigen' | t | lower }}</a>
+			</div>
+		{% endif %}
+	{% endfor %}
+
+
+{% endblock %}

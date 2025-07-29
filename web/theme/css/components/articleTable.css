@@ -1,0 +1,8 @@
+.articleTable {
+    .item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        padding: var(--layoutGap);
+        border-bottom: 1px solid var(--txtColor);
+    }
+}

@@ -9,4 +9,7 @@
  * https://craftcms.com/docs/4.x/routing.html
  */
 
-return [];
+return [
+    'autoren/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
+    'auteurs/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
+];

@@ -1,17 +1,16 @@
-
-
 {% set authorQuery = entry.authors %}
 
 <ul class="articleAuthors gridStart2 gridSpan4">
-		{% for item in authorQuery %}
-			<li>
-                {% if item.photo %}
-                    {% set portrait = item.photo.url %}
-                    <img src="{{ portrait }}" alt="{{ item.name }}">
-                {% endif %}
-                <div class="authorInfo">
-                    <span>{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
-                </div>
-            </li>
-		{% endfor %}
+	{% for item in authorQuery %}
+		<li>
+			{% if item.photo %}
+				{% set portrait = item.photo.url %}
+				<img src="{{ portrait }}" alt="{{ item.name }}">
+			{% endif %}
+			<div class="authorInfo">
+                {# replace spaces with non-breaking space. #}
+				<span>{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
+			</div>
+		</li>
+	{% endfor %}
 </ul>

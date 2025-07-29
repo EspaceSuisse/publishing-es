@@ -6,7 +6,14 @@
 
 {% block content %}
 
-	{% set allEntries = craft.entries().section('article').relatedTo(category).all()  %}
+	{% set allEntries = craft.entries()
+		.section('article')
+		.relatedTo(category)
+		.with(['fCatGenre', 'fCatSubject'])
+		.limit(null)
+		.all()
+	%}
+
 	{% set genre = craft.categories.group('catGenre').all() %}
 	{% set subject = craft.categories.group('catSubject').all() %}
 

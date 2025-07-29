@@ -7,7 +7,13 @@
 
 {% block content %}
 
-	{% set allEntries = craft.entries.section('article').limit(null).all() %}
+	{% set allEntries = craft.entries()
+		.section('article')
+		.with(['fCatGenre', 'fCatSubject'])
+		.limit(null)
+		.all()
+	%}
+
 	{% set catGenre = craft.categories.group('catGenre').all() %}
 	{% set catSubject = craft.categories.group('catSubject').all() %}
 
@@ -29,10 +35,12 @@
 			{% endfor %}
 		</section>
 		<aside class="gridSpan12">
+			<h2>{{ labelGenre }} & {{ labelSubject }}</h2>
+			<p>Hier werden alle Möglichen {{ labelGenre }} & {{ labelSubject }} angezeigt. Auch die, welche noch keine Einträge haben. Später dann nur die, welche eintraäge haben.</p>
 			<div class="tags">
-			{{ macroCat.catOverview(catGenre, 'genre', true) }}
-			{{ macroCat.catOverview(catSubject, 'subject', true) }}
-		</div>
+				{{ macroCat.catOverview(catGenre, 'genre', true) }}
+				{{ macroCat.catOverview(catSubject, 'subject', true) }}
+			</div>
 		</aside>
 		<section class="latest">
 			{% for item in allEntries | slice(6) %}

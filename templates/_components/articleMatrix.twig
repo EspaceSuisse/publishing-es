@@ -43,7 +43,7 @@
 				{% include "_components/articleBlocks/cellImgGallery" %}
 			</div>
 		{% case "tRelEntry" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellRelEntry">
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellRelEntry cellCard">
 				{% include "_components/articleBlocks/cellRelEntry" %}
 			</div>
 		{% case "tMap" %}
@@ -51,7 +51,7 @@
 				{% include "_components/articleBlocks/cellMap" %}
 			</div>
 		{% case "tDownload" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload">
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload cellCard">
 				{% include "_components/articleBlocks/cellDownload" %}
 			</div>
 		{% case "imgTxtFloat" %}

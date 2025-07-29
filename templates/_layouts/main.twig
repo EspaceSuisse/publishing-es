@@ -5,7 +5,7 @@
 {% set labelGenre = 'Rubrik' | t %}
 
 {# Sets a body css class with the section or category handle for css toplevel scoping #}
-{% set handle = entry.section.handle ?? category %}
+{% set handle = entry.section.handle ?? category.group.handle ?? null %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}
 
 <!doctype html>
@@ -14,7 +14,7 @@
 
 	{% include "_components/siteMeta" %}
 	{% include "_components/catColorChecker.twig" %}
-	
+
 	<body class="{{ bodyClass }}">
 		<div id="app">
 			{% include "_components/siteHeader" %}

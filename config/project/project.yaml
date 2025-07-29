@@ -1,4 +1,4 @@
-dateModified: 1753775667
+dateModified: 1753793964
 elementSources:
   craft\elements\Asset:
     -
@@ -57,6 +57,7 @@ elementSources:
       type: native
     -
       heading: Channels
+      key: 'heading:8fd0fa10-3f82-43c9-a348-470d30a7e6cf'
       type: heading
     -
       defaultSort:
@@ -70,12 +71,21 @@ elementSources:
         - postDate
         - status
         - link
+        - authors
       type: native
     -
       heading: ''
+      key: 'heading:e575f80e-628e-486a-92ce-1b5abb798592'
       type: heading
     -
       key: 'section:bc7c6b58-e511-47e0-9216-7052ceafee56' # Sub Pages
+      type: native
+    -
+      heading: ''
+      key: 'heading:c1ca06e3-0efe-4060-bc40-f72586121e3d'
+      type: heading
+    -
+      key: 'section:cbd30d19-7bb8-4252-91df-a451ebb3d525' # Call to Action
       type: native
   craft\elements\User:
     -
@@ -206,6 +216,7 @@ meta:
     bf9959dc-941c-45ef-86b1-d05efb3e1626: Download # Download
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
+    c78633bb-34f0-471f-b7f5-45bb42559dab: 'Listing Author' # Listing Author
     cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Call to Action' # Call to Action
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Span' # Grid Span
     d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
@@ -266,6 +277,10 @@ plugins:
     enabled: true
     licenseKey: K6LZMFR5AVB04VFJEZ3O4Z9N
     schemaVersion: 3.0.13
+  translations-admin:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.0
 system:
   edition: pro
   live: true
