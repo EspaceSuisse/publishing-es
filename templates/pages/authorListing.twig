@@ -2,27 +2,36 @@
 
 {% block content %}
 
+    {# get all relevant authors #}
 	{% set authorPosts = craft.users.group(['espacesuisse','externalAuthor','editor']).status('active').all() %}
 
+    {# construct the language url segment becuse users have no urls functionality #}
 	{% set baseSegment = {
-            'de': 'autoren',
-            'fr': 'auteurs'
-        }[craft.app.language] ?? 'autoren' %}
+            'de-CH': 'autoren',
+            'fr-CH': 'auteurs'
+        }[craft.app.language] %}
 
-	<h1>{{ entry.title }}</h1>
+	
+    <div class="listingGrid">
+        <h1 class="gridSpan12">{{ entry.title }}</h1>
+        {% for author in authorPosts %}
 
-	{% for author in authorPosts %}
+            {# check if author has at least one article written #}
+            {% set authoredArticles = craft.entries.section('article').authorId(author.id).limit(1).one() %}
 
-		{% set authoredArticles = craft.entries.section('article').authorId(author.id).limit(1).one() %}
-		{% set authorSlug = author.username %}
+            {# construct the author slug. unfortunately umlauts are unavoidable right now #}
+            {% set authorSlug = author.username %}
 
-		{% if authoredArticles %}
-			<div class="authorPost">
-				<h4>{{ author.name }}</h4>
-				<a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}">{{ 'Alle Artikel von ' | t }}{{ author.name }} {{ 'anzeigen' | t | lower }}</a>
-			</div>
-		{% endif %}
-	{% endfor %}
-
+            {% if authoredArticles %}
+                <div class="authorPost gridSpan6">
+                    {% if author.photo %}
+                        <img src="{{ author.photo.url }}" alt="">
+                    {% endif %}
+                    <h4>{{ author.name }}</h4>
+                    <a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}">{{ 'Alle Artikel von ' | t }}{{ author.name }} {{ 'anzeigen' | t | lower }}</a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 
 {% endblock %}

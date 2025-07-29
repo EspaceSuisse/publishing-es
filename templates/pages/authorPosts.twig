@@ -12,23 +12,23 @@
 	{% endif %}
 
     {# Whats missing here still: cannonical url not correct + nav language switcher not working here #}
+    <div class="listingGrid">
+        {% if author %}
+            <h1 class="gridSpan12">{{ 'Artikel von' | t }} {{ author.name }}</h1>
+            {% set articles = craft.entries.section('article').authorId(author.id).all() %}
 
-	{% if author %}
-		<h1>{{ 'Artikel von' | t }} {{ author.name }}</h1>
-		{% set articles = craft.entries.section('article').authorId(author.id).all() %}
-
-		{% for article in articles %}
-			<article>
-				<h2>
-					<a href="{{ article.url }}">{{ article.title }}</a>
-				</h2>
-			</article>
-		{% else %}
-			<p>Keine Artikel gefunden.</p>
-		{% endfor %}
-	{% else %}
-		<p>Autor nicht gefunden.</p>
-	{% endif %}
-
+            {% for article in articles %}
+                <article>
+                    <h2>
+                        <a href="{{ article.url }}">{{ article.title }}</a>
+                    </h2>
+                </article>
+            {% else %}
+                <p>Keine Artikel gefunden.</p>
+            {% endfor %}
+        {% else %}
+            <p>Autor nicht gefunden.</p>
+        {% endif %}
+    </div>
 
 {% endblock %}
