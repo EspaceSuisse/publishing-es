@@ -2,6 +2,15 @@
 
 <ul class="articleAuthors gridStart2 gridSpan4">
 	{% for item in authorQuery %}
+
+        {# Construct relative url because authors have no url functionality #}
+        {% if currentSite.language == 'de-CH' %}
+            {% set authorUrl = 'autoren/' ~ item.username %}
+        {% else %}
+            {% set authorUrl = 'auteurs/' ~ item.username %}
+        {% endif %}
+        
+        
 		<li>
 			{% if item.photo %}
 				{% set portrait = item.photo.url %}
@@ -9,7 +18,7 @@
 			{% endif %}
 			<div class="authorInfo">
                 {# replace spaces with non-breaking space. #}
-				<span>{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
+				<span><a href="{{ url(authorUrl) }}">{{ item.name|replace({' ': '&nbsp;'})|raw }}</a></span>
 			</div>
 		</li>
 	{% endfor %}
