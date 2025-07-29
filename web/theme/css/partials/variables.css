@@ -4,21 +4,22 @@
     --font-display: "canada-type-gibson", sans-serif;
     --font-regular: 400;
     --font-bold: 600;
-    
-    --font-size-base: 1rem; /* 16px */
-    --font-size-XXL: 4rem; /* var(--layoutGap) */
-    --font-size-XL: 2.8rem; /* 14px */
-    --font-size-L: 1.7rem; /* 12px */
-    --font-size-M: 1.4rem; /* 10px */
-    --font-size-S: 0.9rem; /* 8px */
-    --font-size-XS: 0.375rem; /* 6px */
+
+    /* clamp(min, preferred, max) */
+    --font-size-base: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
+    --font-size-XXL: clamp(2rem, 5vw + 1rem, 4rem);
+    --font-size-XL: clamp(1.5rem, 3vw + 0.5rem, 2.8rem);
+    --font-size-L: clamp(1.2rem, 2vw + 0.4rem, 1.7rem);
+    --font-size-M: clamp(1rem, 1.5vw + 0.3rem, 1.4rem);
+    --font-size-S: clamp(0.8rem, 1vw + 0.2rem, 0.9rem);
+    --font-size-XS: clamp(0.5rem, 0.5vw + 0.1rem, 0.75rem);
     --font-size-XXS: 0.25rem; /* 4px */
     --line-height-base: 1.6;
     --line-height-multiplier: 1.5;
 
     --siteHeadWidth: 75px;
     --layoutGap: 20px;
-    --layoutMaxWidth: 1200px;
+    --layoutMaxWidth: clamp(300px, 90vw, 1100px);
 
     --colorLink: var(--txtColor);
     --hoverColor: rgb(14, 81, 135);
