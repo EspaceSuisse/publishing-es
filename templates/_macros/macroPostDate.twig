@@ -9,6 +9,6 @@
         <p class="postDate">{{ date(postDate|date('c')).diff(now).format('%d') }} {{ 'tage her' | t }}</p>
     {% else %}
         {# Absolute Time #}
-        <p class="postDate">{{ postDate | date('short') }}</p>
+        <p class="postDate">{{ postDate | date('d. F Y') }}</p>
     {% endif %}
 {% endmacro %}
