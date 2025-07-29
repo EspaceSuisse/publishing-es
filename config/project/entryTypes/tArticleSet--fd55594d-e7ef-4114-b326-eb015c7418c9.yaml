@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   a2bae6e5-b24f-480c-8840-77318c35fe87:
+    cardThumbAlignment: end
     cardView:
       - postDate
     tabs:
@@ -66,6 +68,23 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: bfab3bd8-d6eb-4c0f-a8ea-461ece283cb7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-29T07:53:44+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            handle: null
+            includeInCards: false
+            instructions: 'Willst du noch etwas Ballern mit dem Titel? Schrieb hier einen Catchy title (Wird nur in der Preview Card angezeigt)'
+            label: 'Catchy Title'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0fca0bd5-ade1-49b5-ae5d-fbe7f22d7304
             userCondition: null
             warning: null
             width: 100
