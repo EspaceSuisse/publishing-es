@@ -13,6 +13,8 @@ It doesnt allow that. So we take the value of the slider element and map it to %
 {% css %}
 	{% set widthPercent = (block.fGridSpanWide / 12) * 100 %}
 	.cellImgTxtFloat .articleImg {
-		width: {{ widthPercent }}%;
+		@media (min-width: 1023px) {
+			width: {{ widthPercent }}%;
+		}
 	}
 {% endcss %}

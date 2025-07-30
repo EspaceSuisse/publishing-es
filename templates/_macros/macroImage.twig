@@ -5,7 +5,7 @@
     {% set altText      = handleParam.fPlainTextI18nMultiline ?? '' %}
     {% set photographer = handleParam.fPlainTxt ?? '' | ascii | kebab | slice(0, 20) %}
     {% set provider     = handleParam.fTagProvider.one() ?? '' | ascii | kebab | slice(0, 20) %}
-    {% set cc           = (handleParam.imgLicence ?? '') | ascii | trim | lower | kebab %}
+    {% set cc           = (handleParam.fImgLicence ?? '') | ascii | trim | lower | kebab %}
     {% set transform    = transformKey | ascii | kebab | slice(0, 20) %}
     {% set projectTag   = 'espace-suisse' %}
 
