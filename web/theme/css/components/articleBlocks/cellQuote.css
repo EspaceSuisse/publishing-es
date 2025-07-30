@@ -1,5 +1,31 @@
 .cellQuote {
     blockquote {
-        border-left: solid 5px red;
+        margin: 0;
+        p {
+            font-size: var(--font-size-XL);
+            font-family: var(--font-default);
+            font-weight: var(--font-bold);
+            color: var(--colorES-brand-blue);
+            margin: 0;
+            &::before {
+                content: "«";
+                color: var(--txtColor);
+            }
+
+            &:after {
+                content: "»";
+                color: var(--txtColor);
+            }
+        }
+        .speaker {
+            font-size: var(--font-size-M);
+            font-family: var(--font-default);
+            font-weight: var(--font-regular);
+            color: var(--txtColor);
+            margin-top: 0.5rem;
+            &:before {
+                content: "— ";
+            }
+        }
     }
 }

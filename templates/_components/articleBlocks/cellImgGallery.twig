@@ -13,7 +13,7 @@
         {% for asset in item.fImgI18n.all() %}
             <figure class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
                 {{ imgMacro.articleImage(asset, 'articleImage') }}
-                {{ figCaption.figCaption(asset, item) }}
+                {{ figCaption.figCaption(asset, item.fPlainTextI18nMultiline) }}
             </figure>
         {% endfor %}
 {% endfor %}

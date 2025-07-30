@@ -11,8 +11,8 @@
     --font-size-XL: clamp(1.5rem, 3vw + 0.5rem, 2.8rem);
     --font-size-L: clamp(1.2rem, 2vw + 0.4rem, 1.7rem);
     --font-size-M: clamp(1rem, 1.5vw + 0.5rem, 1.4rem);
-    --font-size-S: clamp(0.8rem, 1vw + 0.2rem, 0.9rem);
-    --font-size-XS: clamp(0.5rem, 0.5vw + 0.1rem, 0.75rem);
+    --font-size-S: clamp(0.8rem, 1vw + 0.4rem, 1rem);
+    --font-size-XS: clamp(0.5rem, 0.8vw + 0.3rem, 0.8rem);
     --font-size-XXS: 0.25rem; /* 4px */
     --line-height-base: 1.6;
     --line-height-multiplier: 1.5;
