@@ -1,0 +1,50 @@
+columnSuffix: null
+handle: fBaseMap
+instructions: null
+name: Basemap
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - optgroup
+          - 'Swisstopo Default'
+    -
+      __assoc__:
+        -
+          - label
+          - Satellite
+        -
+          - value
+          - swissimage
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#45765d'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Swisstopt Balck/White'
+        -
+          - value
+          - pixelkarte-grau
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#8e8e8e'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

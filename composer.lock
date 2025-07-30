@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8137d320293b382a37f9ea1a3e0481d8",
+    "content-hash": "63661366f599f51fd3ce01f72e205daf",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3783,16 +3783,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.23",
+            "version": "1.0.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "0a206d73efa8f8d3bd7294ae68b3d70c696b19c5"
+                "reference": "13467e7710b76ec2c1065c6f55b376a3594fd95e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/0a206d73efa8f8d3bd7294ae68b3d70c696b19c5",
-                "reference": "0a206d73efa8f8d3bd7294ae68b3d70c696b19c5",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/13467e7710b76ec2c1065c6f55b376a3594fd95e",
+                "reference": "13467e7710b76ec2c1065c6f55b376a3594fd95e",
                 "shasum": ""
             },
             "require": {
@@ -3847,7 +3847,56 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-17T20:38:20+00:00"
+            "time": "2025-07-28T21:50:37+00:00"
+        },
+        {
+            "name": "nystudio107/craft-code-field",
+            "version": "5.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-field/zipball/5a8562ff469cdb055aa774680ed1269593e7a98b",
+                "reference": "5a8562ff469cdb055aa774680ed1269593e7a98b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "nystudio107/craft-code-editor": "^1.0.23",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Code Field",
+                "handle": "codefield",
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-code-field/v5/CHANGELOG.md",
+                "class": "nystudio107\\codefield\\CodeField"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\codefield\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Provides a Code Field that has a full-featured code editor with syntax highlighting & autocomplete",
+            "keywords": [
+                "cms",
+                "code field",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-code-field/blob/v5/README.md",
+                "issues": "https://github.com/nystudio107/craft-code-field/issues"
+            },
+            "time": "2025-05-17T20:48:38+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",

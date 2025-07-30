@@ -1,0 +1,32 @@
+columnSuffix: null
+handle: fCode
+instructions: null
+name: 'Code FIeld'
+searchable: false
+settings:
+  availableLanguages:
+    - css
+    - graphql
+    - html
+    - javascript
+    - json
+    - markdown
+    - mysql
+    - php
+    - shell
+    - twig
+    - typescript
+    - yaml
+  codeFolding: false
+  defaultValue: ''
+  fontSize: 14
+  language: xml
+  lineNumbers: false
+  monacoEditorOptions: ''
+  placeholder: ''
+  showLanguageDropdown: true
+  singleLineEditor: false
+  theme: vs-dark
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\codefield\fields\Code

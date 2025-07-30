@@ -1,4 +1,4 @@
-dateModified: 1753861008
+dateModified: 1753867510
 elementSources:
   craft\elements\Asset:
     -
@@ -179,6 +179,7 @@ meta:
     5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle
     5f286764-7e74-4475-989a-21ca80692fad: 'Inforaum DE' # Inforaum DE
     6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
+    6e9fa4fd-403d-45c4-a082-48d1c5882d71: Basemap # Basemap
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
@@ -231,6 +232,7 @@ meta:
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
+    fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
 plugins:
@@ -238,6 +240,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  codefield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   environment-label:
     edition: standard
     enabled: true
@@ -281,6 +287,7 @@ plugins:
   translations-admin:
     edition: standard
     enabled: true
+    licenseKey: LINW6FOG2CXFP5F7BHE5PF66
     schemaVersion: 1.1.0
 system:
   edition: pro

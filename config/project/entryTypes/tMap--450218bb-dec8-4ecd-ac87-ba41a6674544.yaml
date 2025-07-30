@@ -1,10 +1,21 @@
 color: null
+description: null
 fieldLayouts:
   09662c87-2347-406a-9fa0-55e34d3451d4:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
+          -
+            content: 'Am einfachsten alles auf [Swisstopo](https://map.geo.admin.ch) einrichten, dann die Werte aus der URL von Swisstopo kopieren.'
+            dateAdded: '2025-07-30T09:25:10+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 34804418-3e61-4fea-9980-eefabbacf537
+            userCondition: null
+            width: 100
           -
             autocapitalize: true
             autocomplete: false
@@ -34,7 +45,24 @@ fieldLayouts:
             uid: 3f76e6b3-a65a-424d-8ff2-59997ddf3f03
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            dateAdded: '2025-07-30T09:09:25+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6e9fa4fd-403d-45c4-a082-48d1c5882d71 # Basemap
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
+            userCondition: null
+            warning: null
+            width: 50
           -
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
@@ -51,7 +79,7 @@ fieldLayouts:
             uid: 86127263-566f-4104-abd0-847eb16a4b8a
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
@@ -68,7 +96,7 @@ fieldLayouts:
             uid: ed6634d3-6fa8-4e29-8353-695684a8e427
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
             dateAdded: '2025-05-21T06:47:55+00:00'
             editCondition: null
@@ -85,7 +113,24 @@ fieldLayouts:
             uid: c0517b57-25c0-4d82-88c5-55b2646ad152
             userCondition: null
             warning: null
-            width: 50
+            width: 25
+          -
+            dateAdded: '2025-07-30T09:25:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Show Marker'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f047d436-9b2c-4eb5-8a42-d92ee44f72e3
+            userCondition: null
+            warning: null
+            width: 25
           -
             dateAdded: '2025-05-21T09:44:46+00:00'
             editCondition: null
@@ -102,9 +147,32 @@ fieldLayouts:
             uid: 2a7010d6-61b7-4715-a503-5a0836dfa01b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Content
         uid: de8accf5-1a04-48d6-b18e-0e31b1a003f0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-07-30T09:04:21+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fd056fec-5843-47f0-a2ad-520a3044916d # Code FIeld
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Polygon Coordinates'
+            providesThumbs: false
+            required: false
+            tip: 'KLM Syntax'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60d06911-d58b-4dd0-a3ac-5f57852e4e65
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Polygon Coordinates'
+        uid: c2acb394-825c-4728-9b13-f2f9aa01b040
         userCondition: null
       -
         elementCondition: null
