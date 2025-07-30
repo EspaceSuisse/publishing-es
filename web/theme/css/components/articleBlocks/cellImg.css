@@ -1,18 +1,26 @@
 .articleImg {
     position: relative;
+
     picture {
         display: block;
     }
+
     p {
         margin: 0;
     }
+
     margin-bottom: var(--layoutGap);
-}
-.caption {
-    font-size: var(--font-size-S);
-    font-family: var(--font-default);
-}
-.assetSource {
-    font-size: var(--font-size-XS);
-    font-family: var(--font-default);
+
+
+    figcaption {
+        .caption {
+            font-size: var(--font-size-S);
+            font-family: var(--font-default);
+        }
+
+        .assetSource {
+            font-size: var(--font-size-XS);
+            font-family: var(--font-default);
+        }
+    }
 }

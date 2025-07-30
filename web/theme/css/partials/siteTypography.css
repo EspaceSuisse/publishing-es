@@ -2,13 +2,20 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     color: var(--txtColor);
 }
 .articleElement, .cellImgTxtFloatElements {
-    > p {
+    p {
         font-size: var(--font-size-M);
         font-family: var(--font-default);
         line-height: var(--line-height-base);
         margin-top: 0;
     }
-    > h3, > h4 {
+    ul {
+        list-style-type: disc;
+        padding-left: 30px;
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        line-height: var(--line-height-base);
+    }
+    h3, h4 {
         font-size: var(--font-size-L);
         font-family: var(--font-display);
         font-weight: var(--font-bold);
