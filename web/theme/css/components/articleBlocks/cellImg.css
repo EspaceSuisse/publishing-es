@@ -10,7 +10,9 @@
 }
 .caption {
     font-size: var(--font-size-S);
+    font-family: var(--font-default);
 }
 .assetSource {
     font-size: var(--font-size-XS);
+    font-family: var(--font-default);
 }

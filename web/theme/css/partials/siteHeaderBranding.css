@@ -17,7 +17,7 @@
     }
     z-index: 1000;
     right: var(--layoutGap);
-    width: clamp(140px, 15vw, 20vw);
+    width: clamp(80px, 15vw, 20vw);
     svg {
         width: 100%;
         height: 100%;

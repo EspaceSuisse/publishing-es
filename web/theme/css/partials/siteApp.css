@@ -10,9 +10,8 @@
   z-index: 2;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   #app {
-    background: red;
     flex-direction:column;
   }
 }

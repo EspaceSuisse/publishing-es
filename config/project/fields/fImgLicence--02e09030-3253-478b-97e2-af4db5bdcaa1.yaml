@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: fImgLicence
+instructions: null
+name: 'Image Licence'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSearchInput: true
+  showSiteMenu: false
+  source: 'taggroup:a0163ce3-0645-430f-a846-4f6d20d6fb51' # Licence
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Tags

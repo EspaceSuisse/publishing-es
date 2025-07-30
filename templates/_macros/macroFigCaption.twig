@@ -1,0 +1,12 @@
+{% macro figCaption(assetParam, captionParam) %}
+	<figcaption>
+		{% if captionParam %}
+			<p class="caption">{{ captionParam }}</p>
+		{% endif %}
+        <p class="assetSource">
+                {{- assetParam.fPlainTxt -}}
+                {%- if assetParam.fTagProvider.one() -%}{{- ', ' ~ assetParam.fTagProvider.one() }}{%- endif -%}
+                {%- if assetParam.fImgLicence.one() -%}{{- '–' ~ assetParam.fImgLicence.one() }}{%- endif -%}
+        </p>
+	</figcaption>
+{% endmacro %}

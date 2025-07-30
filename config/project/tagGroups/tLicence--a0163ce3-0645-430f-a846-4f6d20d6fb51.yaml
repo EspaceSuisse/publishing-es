@@ -1,5 +1,6 @@
 fieldLayouts:
-  da3f9d22-d122-442a-baf9-989d8e54aa5e:
+  014d8940-a8c7-489a-9546-e09d0c9acc78:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-06-17T12:03:13+00:00'
+            dateAdded: '2025-07-30T07:11:07+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -30,12 +31,12 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: 4ecad16d-9396-4b89-aae8-ba12dffb77e7
+            uid: 6f57d4e4-26b1-4bec-af3e-91d8dbb0738b
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 450e7838-af52-4071-862a-97527c9af70f
+        uid: 731e5707-5110-4d10-ba07-73a93d67d62c
         userCondition: null
-handle: provider
-name: Provider
+handle: tLicence
+name: Licence

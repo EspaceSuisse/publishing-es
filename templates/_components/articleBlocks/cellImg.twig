@@ -1,4 +1,5 @@
 {% import '_macros/macroImage' as macro %}
+{% import '_macros/macroFigCaption' as figCaption %}
 
 {% set image = block.fImgI18n.all() %}
 
@@ -7,15 +8,6 @@
 {% for asset in image %}
     <figure class="articleImg">
         {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
-        <figcaption>
-            {% if block.fPlainTextI18nMultiline %}
-                <p class="caption">{{ block.fPlainTextI18nMultiline }}</p>
-            {% endif %}
-            <p class="assetSource">
-                {{ asset.fPlainTxt }}
-                {% if asset.fTagProvider.one() %}, {{ asset.fTagProvider.one() }}{% endif %}
-                {% if asset.imgLicence %} – {{ asset.imgLicence }}{% endif %}
-            </p>
-        </figcaption>
+        {{ figCaption.figCaption(asset, block.fPlainTextI18nMultiline) }}
     </figure>
 {% endfor %}
