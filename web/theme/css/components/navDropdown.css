@@ -18,7 +18,7 @@ button.dropdownLink {
     height: 0;
     width: 0;
     /* Deifnitions for dekstop */
-    left: 0;
+    top: var(--siteHeadWidth);
     @media (min-width: 768px) {
         top: 0;
         left: var(--siteHeadWidth);
@@ -26,18 +26,20 @@ button.dropdownLink {
     }
     .relatedNav {
       opacity: 0;
-      transition: opacity 1s ease 0.4s;
+      transition: opacity var(--navSpeed) ease var(--navSpeed);
     }
     &.open {
         animation-name: foldOutTop;
-        animation-duration: 0.5s;
+        animation-duration: var(--navSpeed);
         animation-fill-mode: forwards;
         animation-timing-function: ease-out;
-        width: 100%;
+        width: 100vw;
+        left: 0;
         @media (min-width: 768px) {
             animation-name: foldOutLeft;
-            animation-duration: 0.5s;
+            animation-duration: var(--navSpeed);
             background-color: white;
+            left: var(--siteHeadWidth);
         }
         .relatedNav {
             opacity: 1;
@@ -46,7 +48,7 @@ button.dropdownLink {
 
     &.closing {
         animation-name: foldInTop;
-        animation-duration: 0.1s;
+        animation-duration: calc(var(--navSpeed) / 2);
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
         @media (min-width: 768px) {
@@ -54,7 +56,7 @@ button.dropdownLink {
         }
         .relatedNav {
             opacity: 0;
-            transition: opacity 0.05s ease 0s;
+            transition: opacity var(--navSpeed) ease 0s;
         }
     }
 }

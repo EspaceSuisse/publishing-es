@@ -10,7 +10,7 @@
     --font-size-XXL: clamp(2rem, 5vw + 1rem, 4rem);
     --font-size-XL: clamp(1.5rem, 3vw + 0.5rem, 2.8rem);
     --font-size-L: clamp(1.2rem, 2vw + 0.4rem, 1.7rem);
-    --font-size-M: clamp(1rem, 1.5vw + 0.3rem, 1.4rem);
+    --font-size-M: clamp(1rem, 1.5vw + 0.5rem, 1.4rem);
     --font-size-S: clamp(0.8rem, 1vw + 0.2rem, 0.9rem);
     --font-size-XS: clamp(0.5rem, 0.5vw + 0.1rem, 0.75rem);
     --font-size-XXS: 0.25rem; /* 4px */
@@ -19,7 +19,16 @@
 
     --siteHeadWidth: 75px;
     --layoutGap: 20px;
-    --layoutMaxWidth: clamp(300px, 60vw, 1200px);
+
+    /* 90vw on mobile */
+    --layoutMaxWidth: 90vw;
+
+    /* clamp on mobile and desktop */
+    @media (min-width: 768px) {
+        --layoutMaxWidth: clamp(300px, 70vw, 1200px);
+    }
+
+    --navSpeed: 0.2s;
 
     --colorLink: var(--txtColor);
     --hoverColor: rgb(14, 81, 135);
