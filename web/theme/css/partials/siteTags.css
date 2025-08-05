@@ -36,7 +36,13 @@
 .previewSizeL {
     .tags {
         position: absolute;
-        top: var(--layoutGap);
-        right: var(--layoutGap);
+        top: calc(var(--layoutGap) / 2);
+        right: calc(var(--layoutGap) / 2);
+    }
+}
+.articlePreview {
+    .tag {
+        font-size: var(--font-size-XS);
+        padding: 4px 9px 6px;
     }
 }
