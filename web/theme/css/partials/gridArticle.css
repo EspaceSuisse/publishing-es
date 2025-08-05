@@ -6,11 +6,16 @@
     max-width: var(--layoutMaxWidth);
     margin: 0 auto;
     padding: var(--layoutGap);
-     @media (min-width: 768px) {
+
+}
+
+aside.gridArticle {
+    padding: 0 var(--layoutGap);
+}
+
+@media (min-width: 1024px) {
+    .gridArticle {
         grid-template-columns: repeat(12, minmax(0, 1fr));
         padding: 0;
     }
-}
-aside.gridArticle {
-    padding: 0 var(--layoutGap);
 }
