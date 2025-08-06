@@ -37,6 +37,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-06T13:58:27+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46c4c0f9-4a48-44c1-9a81-053b7cf4c485
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-05-14T09:19:19+00:00'
             editCondition: null
             elementCondition: null
@@ -89,6 +106,46 @@ fieldLayouts:
             width: 100
         name: Inhalt
         uid: 8732783b-ab28-4e2b-9ceb-8f87d9ef6b90
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-08-06T13:58:27+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cda29638-a9de-44ba-b35b-fd1b13fa1467
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-06T13:58:27+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc608f80-026a-4b8f-8b3e-f31e9f693a1b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: 56af3aac-c639-434a-b9b5-45a14a7cb926
         userCondition: null
 handle: catSubject
 name: Thema

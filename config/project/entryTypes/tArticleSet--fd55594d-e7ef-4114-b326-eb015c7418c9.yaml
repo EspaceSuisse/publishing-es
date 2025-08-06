@@ -223,6 +223,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-08-06T13:56:43+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf9f4534-a990-4f46-9813-7ecab3338a51
+            userCondition: null
+            warning: null
+            width: 100
         name: Google
         uid: 132df382-76c4-4b56-ab8f-95fb71743dd4
         userCondition: null
