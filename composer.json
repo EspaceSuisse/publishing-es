@@ -4,6 +4,7 @@
   "require": {
     "craftcms/ckeditor": "4.9.0",
     "craftcms/cms": "5.8.12",
+    "doublesecretagency/craft-viewcount": "2.0.0",
     "miranj/craft-obfuscator": "1.2.0",
     "mutation/translate": "4.2.1",
     "nystudio107/craft-code-field": "5.0.1",

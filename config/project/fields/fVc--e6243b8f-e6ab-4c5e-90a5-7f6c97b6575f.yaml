@@ -1,0 +1,10 @@
+columnSuffix: null
+handle: fVc
+instructions: null
+name: VC
+searchable: false
+settings:
+  viewKey: null
+translationKeyFormat: null
+translationMethod: none
+type: doublesecretagency\viewcount\fields\TotalViews

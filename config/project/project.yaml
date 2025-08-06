@@ -1,4 +1,4 @@
-dateModified: 1754488112
+dateModified: 1754488994
 elementSources:
   craft\elements\Asset:
     -
@@ -72,6 +72,7 @@ elementSources:
         - status
         - link
         - authors
+        - 'field:e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f' # VC
       type: native
     -
       heading: ''
@@ -228,6 +229,7 @@ meta:
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e8b4cd0c-7d29-4d2a-a92c-3549a590ecd0: Mitglieder # Mitglieder
+    e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
@@ -290,6 +292,11 @@ plugins:
     enabled: true
     licenseKey: LINW6FOG2CXFP5F7BHE5PF66
     schemaVersion: 1.1.0
+  view-count:
+    edition: standard
+    enabled: true
+    licenseKey: XSSK91U797JEFEDY5UGKKPVI
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
