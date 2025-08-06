@@ -7,16 +7,27 @@
 
 {% block content %}
 
-	{% set allEntries = craft.entries()
+{% set catGenre = craft.categories.group('catGenre').all() %}
+	{% set catSubject = craft.categories.group('catSubject').all() %}
+
+	{% set realEntries = craft.entries()
 		.section('article')
 		.with(['fCatGenre', 'fCatSubject'])
 		.limit(null)
 		.all()
 	%}
 
-	{% set catGenre = craft.categories.group('catGenre').all() %}
-	{% set catSubject = craft.categories.group('catSubject').all() %}
+	{# faking entry count for dev purposes #}
 
+	{% set allEntries = [] %}
+
+	{% for i in 0..5 %}
+		{% set allEntries = allEntries|merge(realEntries) %}
+	{% endfor %}
+
+	{% set allEntries = allEntries|slice(0, 50) %}
+
+	{# end faking the entries #}
 
 	<div class="listingGrid">
 		{% include "_components/listingHeader.twig" %}
