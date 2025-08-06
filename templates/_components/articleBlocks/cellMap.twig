@@ -1,13 +1,21 @@
 {% set mapLatitude = block.fLat %}
 {% set mapLongitude = block.fLong %}
-{% set mapZoom = block.fNumber %}
+{% set mapZoom = block.fZoom ?? '10' %}
 {% set mapLayer = block.fPlainTxt %}
+{% set polygonPath = block.fCode.value ?? '' %}
+{% set markerEnabled = block.fSwitch ?? false %}
 
-<iframe 
-    src="https://map.geo.admin.ch/#/embed?lang=de&center={{ mapLatitude }},{{ mapLongitude }}&z={{ mapZoom }}&bgLayer=ch.swisstopo.pixelkarte-farbe&layers={{ mapLayer}}"
-    style="width: 100%; border: 0; min-height: 500px;"
-    frameborder="0"
-    scrolling="no"
-    sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-presentation"
-    allow="geolocation">
-</iframe>
+<div id="map-{{ block.id }}" class="cellMap"></div>
+
+<script type="module">
+
+    {% include "_components/articleBlocks/cellMap/cellMapImports.twig" %}
+    
+    {% include "_components/articleBlocks/cellMap/cellMapBasic.twig" %}
+  
+
+    {% include "_components/articleBlocks/cellMap/cellMapPolygonDraw.twig" %}
+    {% include "_components/articleBlocks/cellMap/cellMapMarker.twig" %}
+
+
+</script>

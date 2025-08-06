@@ -9,8 +9,20 @@ settings:
     -
       __assoc__:
         -
-          - optgroup
+          - label
           - 'Swisstopo Default'
+        -
+          - value
+          - pixelkarte-farbe
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#27b042'
+        -
+          - default
+          - '1'
     -
       __assoc__:
         -

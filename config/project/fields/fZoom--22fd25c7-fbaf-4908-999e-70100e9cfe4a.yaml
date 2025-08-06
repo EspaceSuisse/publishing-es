@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: fZoom
+instructions: null
+name: Zoom
+searchable: false
+settings:
+  defaultValue: 12
+  max: 18
+  min: 1
+  step: 1
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Range

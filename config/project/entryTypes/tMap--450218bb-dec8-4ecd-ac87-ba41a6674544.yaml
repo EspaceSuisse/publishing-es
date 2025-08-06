@@ -62,7 +62,24 @@ fieldLayouts:
             uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
             userCondition: null
             warning: null
-            width: 50
+            width: 25
+          -
+            dateAdded: '2025-07-30T09:25:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Show Marker'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f047d436-9b2c-4eb5-8a42-d92ee44f72e3
+            userCondition: null
+            warning: null
+            width: 25
           -
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
@@ -98,39 +115,22 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            dateAdded: '2025-05-21T06:47:55+00:00'
+            dateAdded: '2025-08-06T13:38:41+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 8caa68b5-9596-4170-82d2-20866078095e # Numer
+            fieldUid: 22fd25c7-fbaf-4908-999e-70100e9cfe4a # Zoom
             handle: null
             includeInCards: false
             instructions: null
-            label: ZoomStufe
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c0517b57-25c0-4d82-88c5-55b2646ad152
+            uid: 0a39c45c-7d47-426d-9ab4-278d89d55ca4
             userCondition: null
             warning: null
-            width: 25
-          -
-            dateAdded: '2025-07-30T09:25:10+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Show Marker'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f047d436-9b2c-4eb5-8a42-d92ee44f72e3
-            userCondition: null
-            warning: null
-            width: 25
+            width: 50
           -
             dateAdded: '2025-05-21T09:44:46+00:00'
             editCondition: null
