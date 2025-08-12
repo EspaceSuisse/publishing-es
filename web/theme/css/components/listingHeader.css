@@ -1,0 +1,17 @@
+.listingHeader {
+    grid-column: 1 / -1;
+    padding: var(--layoutGap);
+    margin-top: calc(var(--layoutGap) * 2);
+    border-bottom: var(--colorES-brand-blue) solid 2px;
+    h1 {
+       font-size: var(--font-size-L);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+    }
+    p {
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        line-height: 1.5;
+        color: var(--txtColor);
+    }
+}
