@@ -44,4 +44,6 @@
     --colorES-subject: rgb(249, 194, 0);
     --colorES-genre: rgb(48, 141, 192);
 
+    --shadow: 1px 3px 5px 1px rgba(0,0,0,0.2);
+
 }

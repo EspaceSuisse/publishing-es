@@ -1,50 +1,72 @@
-
-
 <div class="shareArticle">
-	<button class="js-share-button" aria-label="{{ 'Artikel Teilen' | t }}">
+    <button class="js-share-button" aria-label="{{ 'Artikel Teilen' | t }}">
         {{ svg('@webroot/theme/img/icon-share.svg')|raw }}
     </button>
-	<p class="result" aria-live="polite"></p>
+
+    <div class="tooltipContent">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ craft.app.request.absoluteUrl }}" target="_blank" rel="noopener">Facebook</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/intent/tweet?url={{ craft.app.request.absoluteUrl }}" target="_blank" rel="noopener">Twitter</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ craft.app.request.absoluteUrl }}" target="_blank" rel="noopener">LinkedIn</a>
+                </a>
+            </li>
+            <li>
+                <a href="https://mastodon.social/share?text={{ entry.title }}%20{{ craft.app.request.absoluteUrl }}" target="_blank" rel="noopener">Mastodon</a>
+            </li>
+            <li>
+                <a href="https://bsky.app/intent/compose?text={{ entry.title }}%20{{ craft.app.request.absoluteUrl }}" target="_blank" rel="noopener">Bluesky</a>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <p class="result" aria-live="polite"></p>
 </div>
 
 {% js %}
-    const btn = document.querySelector(".js-share-button");
+const btn = document.querySelector(".js-share-button");
+const tooltipContent = document.querySelector(".tooltipContent");
 const resultPara = document.querySelector(".result");
 
 if (navigator.share) {
     btn.addEventListener("click", async () => {
         const shareData = {
-        title: document.title || '',
-        text: (document.querySelector('meta[name="description"]')?.content) || '',
-        url: (document.querySelector('link[rel="canonical"]')?.href) || window.location.href,
+            title: document.title || '',
+            text: document.querySelector('meta[name="description"]')?.content || '',
+            url: document.querySelector('link[rel="canonical"]')?.href || window.location.href
         };
 
-        // Try to fetch og:image and attach as file if possible
         const imgUrl =
-        document.querySelector('meta[property="og:image"]')?.content ||
-        document.querySelector('meta[name="twitter:image"]')?.content;
+            document.querySelector('meta[property="og:image"]')?.content ||
+            document.querySelector('meta[name="twitter:image"]')?.content;
 
         if (imgUrl) {
-        try {
-            const response = await fetch(imgUrl);
-            const blob = await response.blob();
-            const file = new File([blob], "share-image.jpg", { type: blob.type });
-            shareData.files = [file];
-        } catch (e) {
-            console.warn("Failed to load share image:", e);
-        }
+            try {
+                const response = await fetch(imgUrl);
+                const blob = await response.blob();
+                const file = new File([blob], "share-image.jpg", { type: blob.type });
+                shareData.files = [file];
+            } catch (e) {
+                console.warn("Failed to load share image:", e);
+            }
         }
 
-        try {logo
-        await navigator.share(shareData);
-        resultPara.textContent = "Article shared successfully!";
+        try {
+            await navigator.share(shareData);
+            resultPara.textContent = "{{ 'Artikel erfolgreich geteilt!' | t }}";
         } catch (err) {
-        resultPara.textContent = `Share error: ${err.message}`;
+            resultPara.textContent = `{{ 'Fehler beim Teilen:' | t }} ${err.message}`;
         }
     });
-    } else {
-        btn.style.display = "none";
-        resultPara.innerHTML = "<img src='" + '/theme/img/icon-share-not-supported.svg' + "' alt='{{ 'Teilen nicht unterstützt' | t }}' />";
-    }
-
+} else {
+    btn.classList.add("tooltip");
+    btn.addEventListener("click", () => {
+        tooltipContent.classList.toggle("open");
+    });
+}
 {% endjs %}
