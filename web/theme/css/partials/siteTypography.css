@@ -47,11 +47,6 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         line-height: 1.4;
         margin-bottom: 0;
     }
-    .articleHeadDates {
-        display: flex;
-        gap: var(--layoutGap);
-        margin-top: calc(var(--layoutGap) * 2);
-    }
 }
 .postDate {
     font-size: var(--font-size-S);

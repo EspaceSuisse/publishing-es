@@ -1,7 +1,9 @@
 .articleHead {
   position: relative;
   .articleHeadImg {
-    width: 100%;   
+    width: 100%; 
+    max-height: 80vh;
+    overflow: hidden;  
     img {
       object-fit: cover;
       object-position: center;
@@ -34,7 +36,7 @@
     .articleHeadDates {
         display: flex;
         gap: var(--layoutGap);
-        margin-top: calc(var(--layoutGap) * 2);
+        margin-top: calc(var(--layoutGap));
         font-family: var(--font-default);
         font-size: var(--font-size-S);
     }
@@ -54,28 +56,10 @@
     }
 }
 
-.articleHeadTitle {
+.articleHeadTitleCard {
   position: relative;
-  background-color: blue;
+  background-color: var(--colorPreviewCard);
   padding-bottom: calc(var(--layoutGap) * 2);
   margin-bottom: calc(var(--layoutGap) * 2);
-}
-@media (min-width: 768px) {
-    .articleHeadTitle {
-        margin-top: -20vh;
-    }
-}
-
-/* If screen width is <1024px and aspect ratio is landscape (i.e., width > height), use 16:9 */
-@media (max-width: 1024px) and (max-aspect-ratio: 16/9) {
-  .articleHeadTitle {
-      background: green;
-  }
-}
-
-/* Extra condition: desktop-like size but shorter than a typical phone (short viewport height) */
-@media (max-width: 1024px) and (max-height: 500px) {
-  .articleHeadTitle {
-      background: red;
-  }
+  margin-top: -100px;
 }

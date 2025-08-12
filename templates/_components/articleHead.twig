@@ -13,7 +13,7 @@
 	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
 </div>
 
-<div class="articleHeadTitle gridArticle">
+<div class="articleHeadTitleCard gridArticle">
 	<div class="{{ smallerGrid }} articleHeadDates">
 		{{ macroPostDate.postDate(entry) }}
 		{% include "_components/articleSunset" %}
@@ -31,5 +31,6 @@
 			{{ macroCat.catOverview(articleSubject, 'subject', true) }}
 		</p>
 	</div>
+	
 	<span class="articleId">ID: {{ entry.id }}</span>
 </div>
