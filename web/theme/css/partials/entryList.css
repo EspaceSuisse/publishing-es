@@ -4,5 +4,6 @@
         gap: var(--layoutGap);
         padding: var(--layoutGap);
         border-bottom: 1px solid var(--txtColor);
+        max-width: var(--listingMaxWidth);
     }
 }

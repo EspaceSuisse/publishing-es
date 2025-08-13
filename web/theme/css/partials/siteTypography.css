@@ -25,7 +25,7 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
 }
 .articleHead {
     .articleAuthors span {
-        font-size: var(--font-size-M);
+        font-size: var(--font-size-S);
         font-family: var(--font-display);
     }
     .articlePostDate {
@@ -41,7 +41,7 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         margin: 0;
     }
     .articleLeadText {
-        font-size: var(--font-size-L);
+        font-size: var(--font-size-XL);
         font-family: var(--font-default);
         font-weight: var(--font-regular);
         line-height: 1.4;

@@ -8,26 +8,23 @@
     /* clamp(min, preferred, max) */
     --font-size-base: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
 
-    --font-size-XXL: clamp(1.2rem, 2vw + 1rem, 3rem);
-    --font-size-XL: clamp(1.3rem, 3vw + 0.5rem, 2.3rem);
-    --font-size-L: clamp(1.2rem, 2vw + 0.4rem, 1.5rem);
-    --font-size-M: clamp(1.1rem, 0.8vw + 0.5rem, 1.2rem);
-    --font-size-S: clamp(0.8rem, 1vw + 0.4rem, 1rem);
-    --font-size-XS: clamp(0.6rem, 0.7vw + 0.3rem, 0.8rem);
-    --font-size-XXS: 0.25rem; /* 4px */
-    --line-height-base: 1.6;
+    --font-size-XXL: 5rem;
+    --font-size-XL: 2.7rem;
+    --font-size-L: 2.3rem;
+    --font-size-M: 2rem;
+    --font-size-S: 1.6rem;
+    --font-size-XS: 1.3rem;
+    --font-size-XXS: 1rem;
+    --line-height-base: 3rem;
     --line-height-multiplier: 1.5;
 
     --siteHeadWidth: 75px;
     --layoutGap: 20px;
 
     /* 90vw on mobile */
-    --layoutMaxWidth: 90vw;
+    --articleMaxWidth: 80rem;
+    --listingMaxWidth: 145rem;
 
-    /* clamp on mobile and desktop */
-    @media (min-width: 768px) {
-        --layoutMaxWidth: clamp(300px, 70vw, 1150px);
-    }
 
     --navSpeed: 0.2s;
 

@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     container-name: articleContainer;
     gap: var(--layoutGap);
-    max-width: var(--layoutMaxWidth);
+    max-width: var(--articleMaxWidth);
     margin: 0 auto;
     padding: var(--layoutGap);
 

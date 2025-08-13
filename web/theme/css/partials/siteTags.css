@@ -3,7 +3,8 @@
     font-family: var(--font-display);
     white-space: nowrap;
     font-size: var(--font-size-S);
-    padding: 9px 14px 11px;
+    line-height: var(--line-height-base);
+    padding: 4px 9px 6px;
 
     a {
         text-decoration: none;
@@ -38,11 +39,5 @@
         position: absolute;
         top: calc(var(--layoutGap) / 2);
         right: calc(var(--layoutGap) / 2);
-    }
-}
-.articlePreview {
-    .tag {
-        font-size: var(--font-size-XS);
-        padding: 4px 9px 6px;
     }
 }

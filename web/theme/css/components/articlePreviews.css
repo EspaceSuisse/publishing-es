@@ -14,7 +14,7 @@
             font-weight: var(--font-bold);
             font-size: var(--font-size-L);
             color: var(--txtColor);
-            line-height: 1.2;
+            line-height: var(--line-height-base);
             margin: 0;
             text-decoration: none;
             text-transform: uppercase;

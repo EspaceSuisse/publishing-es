@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: var(--layoutGap);
-  max-width: var(--layoutMaxWidth);
+  max-width: var(--listingMaxWidth);
   padding: 0 var(--layoutGap);
   margin: auto;
   .headliner {
