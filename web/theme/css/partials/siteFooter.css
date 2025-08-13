@@ -29,7 +29,7 @@ footer {
     }
 
     .listItem {
-        font-size: var(--font-size-a);
+        font-size: var(--font-size-S);
         font-family: var(--font-default);
         line-height: var(--line-height-base);
     }
@@ -48,7 +48,7 @@ footer {
         }
         p {
             color: var(--txtInvertColor);
-            font-size: var(--font-size-m);
+            font-size: var(--font-size-S);
             font-family: var(--font-default);
             line-height: 1.4;
             margin: 0;
