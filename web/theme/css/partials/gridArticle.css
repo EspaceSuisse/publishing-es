@@ -5,12 +5,12 @@
     gap: var(--layoutGap);
     max-width: var(--articleMaxWidth);
     margin: 0 auto;
-    padding: var(--layoutGap);
+    padding: var(--airGap);
 
 }
 
 aside.gridArticle {
-    padding: 0 var(--layoutGap);
+    padding: 0 var(--airGap);
 }
 
 @media (min-width: 1024px) {

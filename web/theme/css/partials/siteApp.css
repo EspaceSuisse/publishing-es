@@ -1,5 +1,7 @@
 html {
   font-size: var(--font-size-base);
+  hyphens: auto;
+  font-variation-settings: "opsz" 6, "wght" 300;
 }
 #app {
   display: flex;

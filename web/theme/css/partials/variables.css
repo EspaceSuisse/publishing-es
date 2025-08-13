@@ -1,6 +1,6 @@
 :root {
     
-    --font-default: "canada-type-gibson", sans-serif;
+    --font-default: "adobe-aldine-variable", sans-serif;
     --font-display: "canada-type-gibson", sans-serif;
     --font-regular: 400;
     --font-bold: 600;
@@ -11,15 +11,15 @@
     --font-size-XXL: 5rem;
     --font-size-XL: 2.7rem;
     --font-size-L: 2.3rem;
-    --font-size-M: 2.1rem;
+    --font-size-M: 2.3rem;
     --font-size-S: 1.6rem;
     --font-size-XS: 1.3rem;
     --font-size-XXS: 1rem;
-    --line-height-base: 3.2rem;
-    --line-height-multiplier: 1.5;
+    --line-height-base: 3.1rem;
 
     --siteHeadWidth: 75px;
-    --layoutGap: 20px;
+    --layoutGap: var(--font-size-M);
+    --airGap: 7rem;
 
     /* 90vw on mobile */
     --articleMaxWidth: 110rem;
@@ -30,10 +30,10 @@
 
     --colorLink: var(--txtColor);
     --hoverColor: rgb(14, 81, 135);
-    --txtColor: rgb(98, 93, 90);
+    --txtColor: rgb(86, 86, 86);
     --txtInvertColor: white;
 
-    --backgroundColor: rgb(245, 239, 233);
+    --backgroundColor: rgb(255, 252, 244);
     --colorPreviewCard: white;
 
     --colorES-brand-blue: rgb(28, 112, 183);
