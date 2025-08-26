@@ -53,3 +53,8 @@
         flex-direction: row-reverse;
     }
 }
+.previewSizeS {
+    .previewTitle {
+        margin-top: 10px;
+    }
+}

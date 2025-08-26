@@ -10,24 +10,12 @@
 {% set catGenre = craft.categories.group('catGenre').all() %}
 	{% set catSubject = craft.categories.group('catSubject').all() %}
 
-	{% set realEntries = craft.entries()
+	{% set allEntries = craft.entries()
 		.section('article')
 		.with(['fCatGenre', 'fCatSubject'])
 		.limit(null)
 		.all()
 	%}
-
-	{# faking entry count for dev purposes #}
-
-	{% set allEntries = [] %}
-
-	{% for i in 0..5 %}
-		{% set allEntries = allEntries|merge(realEntries) %}
-	{% endfor %}
-
-	{% set allEntries = allEntries|slice(0, 50) %}
-
-	{# end faking the entries #}
 
 	<div class="listingGrid">
 		{% include "_components/listingHeader.twig" %}
@@ -45,9 +33,9 @@
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
 			{% endfor %}
 		</section>
-		<aside class="gridSpan12">
-			<h2>{{ labelGenre }} & {{ labelSubject }}</h2>
-			<p>Hier werden alle Möglichen {{ labelGenre }} & {{ labelSubject }} angezeigt. Auch die, welche noch keine Einträge haben. Später dann nur die, welche eintraäge haben.</p>
+		<aside class="gridSpan12 topicList">
+			<h2 class="topicTitle">{{ labelGenre }} & {{ labelSubject }}</h2>
+			<p class="topicLead">Hier werden alle Möglichen {{ labelGenre }} & {{ labelSubject }} angezeigt. Auch die, welche noch keine Einträge haben. Später dann nur die, welche eintraäge haben.</p>
 			<div class="tags">
 				{{ macroCat.catOverview(catGenre, 'genre', true) }}
 				{{ macroCat.catOverview(catSubject, 'subject', true) }}

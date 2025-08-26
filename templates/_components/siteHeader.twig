@@ -3,8 +3,8 @@
 
 <div class="siteHeader">
 	{% include "_components/siteNav" %}
-	<a href="https://www.espacesuisse.ch/" class="esBrandLink hideOnMobile">
+	<div class="esBrandLink hideOnMobile">
 		{# {{ svg('@webroot/theme/img/logo-espacesuisse-simple.svg')|raw }} #}
-		{{ currentSite.group }} - {{ currentSite.name }}
-	</a>
+		<a href="https://www.espacesuisse.ch/">{{ currentSite.group }}</a> • <a href="{{ siteUrl }}">{{ currentSite.name }}</a>
+	</div>
 </div>

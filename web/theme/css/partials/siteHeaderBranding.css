@@ -15,7 +15,11 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
-    color: white
+    color: var(--txtInvertColor);
+    a {
+        color: var(--txtInvertColor);
+        text-decoration: none;
+    }
 }
 /* .irBranding {
     position: fixed;
