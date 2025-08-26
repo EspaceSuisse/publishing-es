@@ -9,7 +9,8 @@
                 const parentLi = button.closest('li');
                 const dropdown = parentLi.querySelector('.dropdown');
 
-                document.querySelectorAll('ul.dropdown.open').forEach(openDropdown => {
+                // Close any other open dropdowns
+                document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
                     if (openDropdown !== dropdown) {
                         openDropdown.classList.remove('open');
                     }
@@ -20,7 +21,6 @@
                     dropdown.classList.add('closing');
                     dropdown.classList.remove('open');
 
-                    // Wait for animation to finish before removing .closing
                     setTimeout(() => {
                         dropdown.classList.remove('closing');
                     }, 300); // match transition duration
@@ -30,5 +30,6 @@
             });
         });
     });
+
 
 {% endjs %}

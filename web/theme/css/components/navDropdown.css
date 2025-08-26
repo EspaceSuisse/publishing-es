@@ -33,6 +33,7 @@ button.dropdownLink {
         animation-duration: var(--navSpeed);
         animation-fill-mode: forwards;
         animation-timing-function: ease-out;
+        box-shadow: var(--shadow);
         width: 100vw;
         left: 0;
         @media (min-width: 768px) {

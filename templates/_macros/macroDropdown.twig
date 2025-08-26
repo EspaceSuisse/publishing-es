@@ -3,26 +3,28 @@
 		<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-{{ paramLabel | ascii }}">
 			<span class="buttonTxt">{{ paramLabel | t }}</span>
 		</button>
-		<ul class="dropdown" id="dropdown-menu-2" role="menu">
-			{% for category in paramQuery %}
+		<div class="dropdown" id="dropdown-menu-{{ paramLabel | ascii }}" role="menu">
+			<ul>
+				{% for category in paramQuery %}
 
-				{% set relatedArticle = craft.entries()
-					.section('article')
-					.relatedTo(category)
-					.limit(3)
-					.all() 
-				%}
+					{% set relatedArticle = craft.entries()
+						.section('article')
+						.relatedTo(category)
+						.limit(3)
+						.all() 
+					%}
 
-				<li class="relatedNav">
-					<h2><a href="{{ category.url }}">{{ category.title }}</a></h2>
-					<ul class="catArticles">
-						{% for item in relatedArticle %}
-							<li><a href="{{ item.url }}">{{ item.title | truncate(40) }}</a></li>
-						{% endfor %}
-							<li class="allCatArticles"><a href="{{ category.url }}">{{ 'Alle Artikel' | t}}: {{ category.title }}</a></li>
-					</ul>
-				</li>
-			{% endfor %}
-		</ul>
+					<li class="relatedNav">
+						<h2><a href="{{ category.url }}">{{ category.title }}</a></h2>
+						<ul class="catArticles">
+							{% for item in relatedArticle %}
+								<li><a href="{{ item.url }}">{{ item.title | truncate(40) }}</a></li>
+							{% endfor %}
+								<li class="allCatArticles"><a href="{{ category.url }}">{{ 'Alle Artikel' | t}}: {{ category.title }}</a></li>
+						</ul>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</li>
 {%- endmacro -%}
