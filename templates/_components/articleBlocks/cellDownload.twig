@@ -1,7 +1,5 @@
 {% set downloadAsset = block.fFile.all() %}
 
-<h2 class="cellCardTitle">{{ 'Downloads' | t }}</h2>
-
 
 {% for item in downloadAsset %}
 	{% if item.extension == 'pdf' %}
@@ -12,13 +10,13 @@
 
 		{% if preview|length %}
 			<a href="{{ item.url }}" class="downloadLink" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
-				<h3>{{ item.title }}({{ item.extension }})</h3>
+				<h3 class="downloadTitle">{{ item.title }}</h3>
 				<img src="{{ preview[0].url }}" alt="{{ 'Voransicht von' | t }}: {{ item.title }}" class="pdfPreview">
 			</a>
 		{% endif %}
 	{% else %}
 		<a href="{{ item.url }}" class="downloadLink" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
-			<h3>{{ item.title }}({{ item.extension }})</h3>
+			<h3 class="downloadTitle">{{ item.title }}</h3>
 			<span class="downloadIcon">{{ item.extension }}</span>
 		</a>
 	{% endif %}

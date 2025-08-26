@@ -1,23 +1,30 @@
 .cellDownload {
     display: flex;
     flex-direction: column;
-    .cellDownloadTitle {
+    &.styleA {
+        padding: 0;
+    }
+    .downloadTitle {
         flex: 1;
         font-size: var(--font-size-M);
-        font-family: var(--font-display);
+        font-family: var(--font-default);
         line-height: var(--line-height-base);
+        font-weight: var(--font-regular);
         margin: 0;
     }
     .downloadLink {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: solid 1px green;
-        margin-bottom: var(--layoutGap);
-        padding-bottom: var(--layoutGap);
         text-decoration: none;
         img {
             max-width: 150px;
+        }
+        &:hover {
+            background: var(--hoverColor);
+            .downloadTitle {
+                color: var(--txtInvertColor)
+            }
         }
         .downloadIcon {
             width: 150px;
@@ -29,6 +36,11 @@
             color: white;
             font-size: var(--font-size-XXL);
             font-family: var(--font-display);
+        }
+    }
+    @media (max-width: 768px) {
+        .downloadLink {
+            flex-direction: column-reverse;
         }
     }
 }

@@ -51,7 +51,7 @@
 				{% include "_components/articleBlocks/cellMap" %}
 			</div>
 		{% case "tDownload" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload cellCard">
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload cellCard {{ 'style' ~ block.fStyling.value | upper }}">
 				{% include "_components/articleBlocks/cellDownload" %}
 			</div>
 		{% case "imgTxtFloat" %}
