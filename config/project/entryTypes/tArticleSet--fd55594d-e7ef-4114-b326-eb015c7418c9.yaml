@@ -168,6 +168,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 3993fac1-ba1c-454c-9013-425272f0f6b1
             userCondition: null
+        name: Head
+        uid: 111ec320-d642-467e-9a0a-54b565df12b6
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             dateAdded: '2025-04-23T08:12:38+00:00'
             dismissible: false

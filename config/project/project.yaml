@@ -1,4 +1,4 @@
-dateModified: 1754488994
+dateModified: 1756195090
 elementSources:
   craft\elements\Asset:
     -
@@ -297,6 +297,11 @@ plugins:
     enabled: true
     licenseKey: XSSK91U797JEFEDY5UGKKPVI
     schemaVersion: 1.0.0
+  workflow:
+    edition: standard
+    enabled: true
+    licenseKey: 00G5QTOD8510UXOE659FVH0Y
+    schemaVersion: 2.6.0
 system:
   edition: pro
   live: true
