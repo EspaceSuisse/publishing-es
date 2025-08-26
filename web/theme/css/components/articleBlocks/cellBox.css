@@ -1,22 +1,3 @@
 .cellBox {
-    background-color: var(--colorES-subject);
-    margin-bottom: var(--layoutGap);
-    .cellBoxTitle {
-        font-size: var(--font-size-L);
-        font-family: var(--font-display);
-        font-weight: var(--font-bold);
-        margin: 0;
-        border-bottom: solid 3px var(--backgroundColor);
-        padding: var(--layoutGap);
-    }
-    .cellBoxContent {
-        padding: var(--layoutGap);
-    }
-}
-
-.cellCard {
-    padding: var(--layoutGap);
-    margin-bottom: var(--layoutGap);
-    border: dashed 1px var(--txtColor);
-    border-radius: 4px;
+    
 }

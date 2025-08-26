@@ -1,6 +1,7 @@
 {% import '_macros/macroImage' as macroImg %}
 {% import '_macros/macroCatOverview' as macroCat %}
 {% import '_macros/macroPostDate' as macroPostDate %}
+{% import '_macros/macroFigCaption' as figCaption %}
 
 
 {% set articleGenre = entry.fCatGenre %}
@@ -11,6 +12,7 @@
 
 <div class="articleHeadImg">
 	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+	{{ figCaption.figCaption(aufmacherBild, null) }}
 </div>
 
 <div class="articleHeadTitleCard gridArticle">

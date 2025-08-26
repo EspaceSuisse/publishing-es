@@ -1,25 +1,26 @@
 {% set downloadAsset = block.fFile.all() %}
 
-<h2 class="cellDownloadTitle">{{ 'Downloads' | t }}</h2>
+<h2 class="cellCardTitle">{{ 'Downloads' | t }}</h2>
 
 
 {% for item in downloadAsset %}
 	{% if item.extension == 'pdf' %}
 		{# Generate a JPG preview of the first page using Imager X #}
 		{% set preview = craft.imagerx.transformImage(item, [
-                { width: 800, format: 'jpg', page: 1 }
-            ]) %}
+            { width: 800, format: 'jpg', page: 1 }
+        ]) %}
 
 		{% if preview|length %}
 			<a href="{{ item.url }}" class="downloadLink" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
+				<h3>{{ item.title }}({{ item.extension }})</h3>
 				<img src="{{ preview[0].url }}" alt="{{ 'Voransicht von' | t }}: {{ item.title }}" class="pdfPreview">
-                {{ item.title }}({{ item.extension }})
 			</a>
 		{% endif %}
 	{% else %}
 		<a href="{{ item.url }}" class="downloadLink" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
-            {{ item.title }}({{ item.extension }})
-        </a>
+			<h3>{{ item.title }}({{ item.extension }})</h3>
+			<span class="downloadIcon">{{ item.extension }}</span>
+		</a>
 	{% endif %}
 
 {% endfor %}

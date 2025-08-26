@@ -1,8 +1,9 @@
 .cellQuote {
     blockquote {
         margin: 0;
+        line-height: 2;
         p {
-            font-size: var(--font-size-XL);
+            font-size: var(--font-size-XXL);
             font-family: var(--font-default);
             font-weight: var(--font-bold);
             color: var(--colorES-brand-blue);
@@ -22,7 +23,6 @@
             font-family: var(--font-default);
             font-weight: var(--font-regular);
             color: var(--txtColor);
-            margin-top: 0.5rem;
             &:before {
                 content: "— ";
             }
