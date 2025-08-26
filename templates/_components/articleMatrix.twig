@@ -23,7 +23,7 @@
 				{% include "_components/articleBlocks/cellSubtitle" %}
 			</div>
 		{% case "tBox" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellBox cellCard">
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellBox {{ 'style' ~ block.fStyling.value | upper }}">
 				{% include "_components/articleBlocks/cellBox" %}
 			</div>
 		{% case "tTxtI18n" %}
@@ -43,7 +43,7 @@
 				{% include "_components/articleBlocks/cellImgGallery" %}
 			</div>
 		{% case "tRelEntry" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellRelEntry cellCard">
+			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellRelEntry">
 				{% include "_components/articleBlocks/cellRelEntry" %}
 			</div>
 		{% case "tMap" %}

@@ -1,4 +1,4 @@
-dateModified: 1756197936
+dateModified: 1756201772
 elementSources:
   craft\elements\Asset:
     -
@@ -175,6 +175,7 @@ meta:
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery
+    4d9d87d3-4cd6-486b-9a9b-35247259c4c3: Styling # Styling
     4f2a2908-da4b-46df-b9ab-a5a6d8078286: Downloads # Downloads
     5af8807d-9f2e-4703-a300-ba7f06531aea: 'Grid Span Wide' # Grid Span Wide
     5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle

@@ -2,12 +2,12 @@
     position: relative;
     background-color: var(--colorPreviewCard);
     border-radius: 3px;
-    box-shadow: -6px 10px 5px -6px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     overflow: hidden;
     display: flex;
     flex-direction: column;
 
-    h2 {
+    .previewTitle {
         margin: 0;
         a {
             font-family: var(--font-display);

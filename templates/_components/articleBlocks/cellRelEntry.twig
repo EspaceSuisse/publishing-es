@@ -7,7 +7,7 @@
     {% set img = item.fImgI18n.one() %}
     {{ imgMacro.articleImage(img, 'articleThumb') }}
     <a href="{{ item.url }}">
-        {{ 'Lesen Sie dazu auch' | t }} <br>
-        {{ item.title }}
+        <p>{{ 'Lesen Sie dazu auch' | t }}</p>
+        <h3 class="relatedEntryTitle">{{ item.title }}</h3>
     </a>
 {% endfor %}
