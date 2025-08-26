@@ -1,4 +1,4 @@
-dateModified: 1756195090
+dateModified: 1756197936
 elementSources:
   craft\elements\Asset:
     -
@@ -169,7 +169,7 @@ meta:
     2cde3ad5-20e4-48de-b7e4-fe9549f59f78: Footer # Footer
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'Inforum FR' # Inforum FR
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text
-    2e063293-328e-4b38-8c35-ec4074593593: 'EspaceSuisse Publishing' # EspaceSuisse Publishing
+    2e063293-328e-4b38-8c35-ec4074593593: EspaceSuisse # EspaceSuisse
     02e09030-3253-478b-97e2-af4db5bdcaa1: 'Image Licence' # Image Licence
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set

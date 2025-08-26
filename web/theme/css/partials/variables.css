@@ -1,6 +1,6 @@
 :root {
     
-    --font-default: "adobe-aldine-variable", sans-serif;
+    --font-default: "adobe-aldine", sans-serif;
     --font-display: "canada-type-gibson", sans-serif;
     --font-regular: 400;
     --font-bold: 600;
@@ -8,7 +8,7 @@
     /* clamp(min, preferred, max) */
     --font-size-base: 62.5%;
 
-    --font-size-XXL: 5rem;
+    --font-size-XXL: clamp(3rem, 4vw, 5rem);
     --font-size-XL: 2.7rem;
     --font-size-L: 2.3rem;
     --font-size-M: 2.3rem;

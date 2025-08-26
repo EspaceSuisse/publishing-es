@@ -28,10 +28,12 @@ footer {
         color: var(--txtInvertColor);
     }
 
-    .listItem {
+    .entryList li {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
         line-height: var(--line-height-base);
+        padding: 0;
+        border-color: var(--txtInvertColor);
     }
     .tag {
         line-height: 3;

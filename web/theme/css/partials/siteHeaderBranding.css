@@ -1,15 +1,23 @@
 .esBrandLink {
-    width: 150px;
     padding-bottom: var(--layoutGap);
     display: block;
     transform: rotate(-90deg) translateY(0);
-    transform-origin: 20% -120%;
+    transform-origin: 25% -170%;
     padding: 0;
+    white-space: nowrap;
     path {
         fill: var(--txtInvertColor);
     }
+
+    font-size: var(--font-size-XL);
+    font-family: var(--font-display);
+    font-weight: var(--font-bold);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: white
 }
-.irBranding {
+/* .irBranding {
     position: fixed;
     top: 100px;
     @media (min-width: 1024px) {
@@ -23,4 +31,4 @@
         height: 100%;
         object-fit: contain;
     }
-}
+} */

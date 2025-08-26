@@ -10,10 +10,10 @@
 
 {% set smallerGrid = 'gridStart2 gridSpan10' %}
 
-<div class="articleHeadImg">
+<figure class="articleHeadImg">
 	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
 	{{ figCaption.figCaption(aufmacherBild, null) }}
-</div>
+</figure>
 
 <div class="articleHeadTitleCard gridArticle">
 	<div class="gridStart2 gridSpan11 articleHeadDates">
@@ -28,7 +28,7 @@
 	{% endif %}
 	<div class="headMeta {{ smallerGrid }}">
 		{% include "_components/articleHeadAuthors" %}
-		<p>
+		<p class="tags">
 			{{ macroCat.catOverview(articleGenre, 'genre', true) }}
 			{{ macroCat.catOverview(articleSubject, 'subject', true) }}
 		</p>

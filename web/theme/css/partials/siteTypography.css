@@ -8,6 +8,9 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         font-family: var(--font-default);
         line-height: var(--line-height-base);
         margin-top: 0;
+        > strong {
+            font-weight: var(--font-bold);
+        }
     }
     ul, ol {
         padding-left: 30px;
@@ -50,6 +53,11 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         line-height: 1.4;
         margin-bottom: 0;
     }
+}
+.moreArticlesTitle {
+    font-size: var(--font-size-L);
+    font-family: var(--font-display);
+    font-weight: var(--font-bold);
 }
 .postDate {
     font-size: var(--font-size-S);

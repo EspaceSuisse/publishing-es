@@ -4,10 +4,23 @@
     width: 100%; 
     max-height: 80vh;
     overflow: hidden;  
+    position: relative;
     img {
       object-fit: cover;
       object-position: center;
       display: block;
+    }
+    figcaption {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      p {
+        font-size: var(--font-size-S);
+        font-family: var(--font-default);
+        margin-top: var(--layoutGap);
+        margin: 0;
+        padding: 0;
+      }
     }
   }
     .articleAuthors span {
@@ -39,6 +52,12 @@
         margin-top: calc(var(--layoutGap));
         font-family: var(--font-default);
         font-size: var(--font-size-S);
+        @media (max-width: 550px) {
+            flex-direction: column;
+            p {
+              margin: 0;
+            }
+        }
     }
     .headMeta {
         display: flex;

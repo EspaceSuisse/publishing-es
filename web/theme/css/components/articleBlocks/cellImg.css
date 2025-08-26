@@ -29,4 +29,10 @@
             margin-left: auto;
         }
     }
+    @media (max-width: 768px) {
+            figcaption {
+                flex-direction: column;
+                
+            }
+        }
 }

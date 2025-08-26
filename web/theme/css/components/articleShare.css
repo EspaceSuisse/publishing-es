@@ -25,6 +25,13 @@
         }
     }
 }
+@media (max-width: 550px) {
+        .shareArticle {
+            position: absolute;
+            top: 8rem;
+            right: 4rem;
+        }
+    }
 
 .tooltipContent {
     display: none;
