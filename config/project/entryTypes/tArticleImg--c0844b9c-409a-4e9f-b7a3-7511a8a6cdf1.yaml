@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   55060bd9-75b4-4130-b5cb-0fb44c1e3983:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -13,7 +15,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Bild
             providesThumbs: false
             required: false
             tip: null
@@ -23,10 +25,10 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: '2025-04-29T07:28:17+00:00'
+            dateAdded: '2025-08-27T08:20:07+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
             handle: null
             includeInCards: false
             instructions: null
@@ -35,7 +37,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8f941e2d-0d96-43b6-8e5b-26670955e460
+            uid: 35e68fec-8431-436b-b0d2-e7aa4ad4919d
             userCondition: null
             warning: null
             width: 75

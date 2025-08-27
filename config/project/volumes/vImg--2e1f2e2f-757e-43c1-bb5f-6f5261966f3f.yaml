@@ -73,19 +73,19 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-18T11:23:27+00:00'
+            dateAdded: '2025-08-27T08:14:15+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
             handle: null
             includeInCards: false
             instructions: null
             label: Quelle
             providesThumbs: false
             required: true
-            tip: 'Alain Beuret'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a5f36884-58d8-414b-a0fa-668660832f96
+            uid: d37829df-2557-4cd1-a34a-9aaecb41a273
             userCondition: null
             warning: null
             width: 100

@@ -1,25 +1,25 @@
 columnSuffix: null
-handle: fRichTextI18n
+handle: textSimpleI18n
 instructions: null
-name: 'Text i18n'
+name: 'Text SImple i18n'
 searchable: false
 settings:
   availableTransforms: ''
-  availableVolumes: ''
+  availableVolumes: '*'
   characterLimit: null
-  ckeConfig: 2a01649b-ab6a-4edd-a8f9-130d7d06dc53 # Article
+  ckeConfig: 2b0cc015-5b68-4dc4-9f91-752d21224806 # Reduced
   createButtonLabel: null
   defaultTransform: null
   expandEntryButtons: false
-  fullGraphqlData: false
+  fullGraphqlData: true
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  showWordCount: true
+  showWordCount: false
   sourceEditingGroups: '*'
   wordLimit: null
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\ckeditor\Field

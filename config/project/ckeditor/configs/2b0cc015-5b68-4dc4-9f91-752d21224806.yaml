@@ -1,0 +1,13 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: Reduced
+toolbar:
+  - bold
+  - italic
+  - '|'
+  - link

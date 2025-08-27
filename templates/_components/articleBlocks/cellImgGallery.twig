@@ -5,15 +5,17 @@
 {% set imgGallery = block.fMxImgGallery.all() %}
 
 
+
 {% for item in imgGallery %}
 
     {% set gridImgStart = item.fGridStartWide ?? null %}
     {% set gridImgSpan = item.fGridSpanWide ?? null %}
+    {% set imgCaption = item.textSimpleI18n %}
 
         {% for asset in item.fImgI18n.all() %}
             <figure class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
                 {{ imgMacro.articleImage(asset, 'articleImage') }}
-                {{ figCaption.figCaption(asset, item.fPlainTextI18nMultiline) }}
+                {{ figCaption.figCaption(asset, imgCaption) }}
             </figure>
         {% endfor %}
 {% endfor %}

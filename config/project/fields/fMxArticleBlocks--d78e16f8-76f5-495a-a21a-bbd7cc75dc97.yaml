@@ -53,18 +53,18 @@ settings:
       __assoc__:
         -
           - uid
-          - d4bed2bd-da16-4068-9c34-38184168514f # Bild Umfluss
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
           - c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1 # Image
         -
           - name
           - Bild
+        -
+          - group
+          - Media
+    -
+      __assoc__:
+        -
+          - uid
+          - d4bed2bd-da16-4068-9c34-38184168514f # Bild Umfluss
         -
           - group
           - Media

@@ -8,6 +8,6 @@
 {% for asset in image %}
     <figure class="articleImg">
         {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
-        {{ figCaption.figCaption(asset, block.fPlainTextI18nMultiline) }}
+        {{ figCaption.figCaption(asset, block.textSimpleI18n) }}
     </figure>
 {% endfor %}
