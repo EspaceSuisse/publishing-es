@@ -4,7 +4,17 @@
 			<p class="caption">{{ captionParam }}</p>
 		{% endif %}
         <p class="assetSource">
-                {{- assetParam.fPlainTextI18n -}}
+
+                {# Get image source information #}
+                {% for block in assetParam.fmImgSource.all() %}
+                        {% switch block.type %}
+                                {% case "person" %}
+                                        {{ block.fPlainTxt }}
+                                {% case "organization" %}
+                                        {{ block.fPlainTextI18n }}
+                        {% endswitch %}
+                {% endfor %}
+                
                 {%- if assetParam.fTagProvider.one() -%}{{- ', ' ~ assetParam.fTagProvider.one() }}{%- endif -%}
                 {%- if assetParam.fImgLicence.one() -%}{{- '–' ~ assetParam.fImgLicence.one() }}{%- endif -%}
         </p>

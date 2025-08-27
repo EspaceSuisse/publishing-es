@@ -1,0 +1,37 @@
+columnSuffix: null
+handle: fmImgSource
+instructions: null
+name: Bildquelle
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 2f21816e-21e0-4681-9644-9573089c1774 # Person
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - efc236a6-abb3-4ef8-b448-ddf8971ace68 # Organization
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

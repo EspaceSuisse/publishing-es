@@ -8,7 +8,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: "Bitte alles ausfüllen, so weit als möglich\r\n\r\n## Gängige Quellen:\r\n- Flickr\r\n- Unsplash\r\n- Wikimedia Commons\r\n- EspaceSuisse\r\n\r\n## Gängige Bildlizenzen:\r\n- CC BY-SA 2.0\r\n- CC BY-SA 4.0\r\n- Public Domain"
+            content: "Bitte alles ausfüllen, so weit als möglich\r\n\r\n## Gängige Platformen:\r\n- Flickr\r\n- Unsplash\r\n- Wikimedia Commons\r\n- EspaceSuisse\r\n\r\n## Gängige Bildlizenzen:\r\n- CC BY-SA 2.0\r\n- CC BY-SA 4.0\r\n- Public Domain"
             dateAdded: '2025-03-11T08:33:10+00:00'
             displayInPane: true
             elementCondition: null
@@ -73,19 +73,19 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-08-27T08:14:15+00:00'
+            dateAdded: '2025-08-27T09:35:33+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
             handle: null
             includeInCards: false
             instructions: null
-            label: Quelle
+            label: null
             providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d37829df-2557-4cd1-a34a-9aaecb41a273
+            uid: 4bd1622b-4ce6-42e7-a383-5e90c059a56a
             userCondition: null
             warning: null
             width: 100
@@ -97,7 +97,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Provider
+            label: Platform
             providesThumbs: false
             required: false
             tip: null

@@ -1,0 +1,40 @@
+color: null
+description: null
+fieldLayouts:
+  7390c9eb-71fa-4110-ac9a-271da2000432:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-08-27T09:34:28+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Name
+            providesThumbs: false
+            required: true
+            tip: 'Z.b. Bundesamt für Umwelt'
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf076b90-3668-4a07-b407-f389ddd35634
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e52bcd1a-bc66-479d-adb4-41c99bf1d764
+        userCondition: null
+handle: organization
+hasTitleField: false
+icon: buildings
+name: Organization
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: none
