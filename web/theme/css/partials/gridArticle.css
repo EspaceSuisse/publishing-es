@@ -6,10 +6,9 @@
     max-width: var(--articleMaxWidth);
     margin: 0 auto;
     padding: 0 var(--airGap);
-
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 80rem) {
     .gridArticle {
         grid-template-columns: repeat(12, minmax(0, 1fr));
     }
