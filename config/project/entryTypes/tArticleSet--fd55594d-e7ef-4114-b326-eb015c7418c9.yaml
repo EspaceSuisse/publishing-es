@@ -89,6 +89,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-28T13:01:33+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 6bffbca6-9009-41bd-97ad-1390dcb64e40
+            userCondition: null
+          -
             dateAdded: '2025-05-08T12:21:24+00:00'
             editCondition: null
             elementCondition: null
