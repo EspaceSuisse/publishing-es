@@ -4,25 +4,25 @@
         line-height: 2;
         p {
             font-size: var(--font-size-XXL);
-            font-family: var(--font-default);
-            font-weight: var(--font-bold);
-            color: var(--colorES-brand-blue);
+            font-family: var(--font-display);
+            font-weight: var(--font-regular);
+            line-height: calc(var(--line-height-base) + 3rem);
             margin: 0;
             &::before {
                 content: "«";
-                color: var(--txtColor);
+                color: var(--colorES-brand-blue);
             }
 
             &:after {
                 content: "»";
-                color: var(--txtColor);
+                color: var(--colorES-brand-blue);
             }
         }
         .speaker {
             font-size: var(--font-size-M);
             font-family: var(--font-default);
             font-weight: var(--font-regular);
-            color: var(--txtColor);
+            color: var(--colorES-brand-blue);
             &:before {
                 content: "— ";
             }
