@@ -12,7 +12,20 @@ The blocks are defined in the matrix field in the CMS.
 {% set articleSunset = entry.postDate|date_modify('+3 months') %}
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
-{% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
+
+{# Check if Live Preview #}
+{% set isPreview = craft.app.request.getParam('token') is not null %}
+
+
+
+{% if not isPreview %}
+	{% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
+{% else %}
+	{# dont blur content in preview mode #}
+	{% set articleSunsetClass = '' %}
+{% endif %}
+
+
 
 {% block content %}
 
