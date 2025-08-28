@@ -21,7 +21,8 @@
     view: new View({
       center: fromLonLat([0, 0]),
       zoom: {{ mapZoom }},
-    })
+    }),
+    interactions: defaultInteractions({ mouseWheelZoom: false })
   });
 
   const transformedCoordinates = transform(
