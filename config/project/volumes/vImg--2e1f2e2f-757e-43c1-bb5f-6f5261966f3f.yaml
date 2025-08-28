@@ -27,7 +27,7 @@ fieldLayouts:
             id: null
             includeInCards: false
             inputType: null
-            instructions: null
+            instructions: 'Wird nur im Control Panel verwendet'
             label: null
             max: null
             min: null
@@ -55,7 +55,7 @@ fieldLayouts:
             elementCondition: null
             id: null
             includeInCards: false
-            instructions: null
+            instructions: 'Bild beschrieb für User mit Sehschwäche'
             label: null
             name: null
             orientation: null
@@ -73,13 +73,40 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-08-27T09:35:33+00:00'
+            dateAdded: '2025-08-28T10:55:31+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
             handle: null
             includeInCards: false
             instructions: null
+            label: 'Keine Bildquelle'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dbdb4c38-7926-4642-873f-0ab20520c4b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-27T09:35:33+00:00'
+            editCondition: null
+            elementCondition:
+              class: craft\elements\conditions\assets\AssetCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+                  layoutElementUid: dbdb4c38-7926-4642-873f-0ab20520c4b4
+                  uid: 61b4573e-a9ff-477c-9a7f-67828bcae05b
+                  value: false
+              elementType: craft\elements\Asset
+              fieldContext: global
+            fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
+            handle: null
+            includeInCards: false
+            instructions: 'Person: Monolingual / Organization: Multilingual'
             label: null
             providesThumbs: false
             required: true
@@ -96,7 +123,7 @@ fieldLayouts:
             fieldUid: bc09de97-2997-40ed-9f92-fb366aaaebd6 # Tag Field Provider
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Z.b. Flickr, Unsplash'
             label: Platform
             providesThumbs: false
             required: false
@@ -113,7 +140,7 @@ fieldLayouts:
             fieldUid: 02e09030-3253-478b-97e2-af4db5bdcaa1 # Image Licence
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Z.b. CC BY-SA 2.0'
             label: null
             providesThumbs: false
             required: false

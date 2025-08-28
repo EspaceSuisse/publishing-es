@@ -112,11 +112,11 @@ fieldLayouts:
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Erscheint in der Google Suche und als Social media Preview Text'
             label: null
             providesThumbs: false
             required: true
-            tip: 'Wird in der Google Suche dargestellt.'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
             userCondition: null
