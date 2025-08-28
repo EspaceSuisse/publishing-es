@@ -9,24 +9,17 @@
         margin: 0;
     }
 
-    margin-bottom: var(--layoutGap);
-
 
     figcaption {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
         .caption {
-            font-size: var(--font-size-M);
+            font-size: var(--font-size-S);
             font-family: var(--font-default);
         }
 
         .assetSource {
             font-size: var(--font-size-S);
             font-family: var(--font-default);
-            line-height: 1;
-            text-align: right;
-            margin-left: auto;
+            opacity: 0.8;
         }
     }
     @media (max-width: 768px) {
