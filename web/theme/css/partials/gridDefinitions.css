@@ -127,7 +127,7 @@
 }
 
 .gridSpan12 {
-    grid-column: 12;
+    grid-column: span 12;
 }
 
 .gridSpanAll {
