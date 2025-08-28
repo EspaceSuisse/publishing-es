@@ -1,7 +1,7 @@
 {% import '_macros/macroFields' as fieldsMacro %}
 {% set floatClass = block.fSwitch == 1 ? 'imgRight' : 'imgLeft' %}
 
-<div class="cellImgTxtFloatElements {{ floatClass }}">
+<div class="cellImgTxtFloatElements block-{{ block.id }} {{ floatClass }}">
 	{% include "_components/articleBlocks/cellImg.twig" %}
 	{{ fieldsMacro.richText(block.fRichTextI18n) }}
 </div>
@@ -12,7 +12,7 @@ It doesnt allow that. So we take the value of the slider element and map it to %
 
 {% css %}
 	{% set widthPercent = (block.fGridSpanWide / 12) * 100 %}
-	.cellImgTxtFloat .articleImg {
+	.block-{{ block.id }} .articleImg {
 		@media (min-width: 1023px) {
 			width: {{ widthPercent }}%;
 		}
