@@ -1,6 +1,5 @@
 {% macro articleImage(handleParam, transformKey, paramClass) %}
 
-
     {% set title        = handleParam.title | default('image') | ascii | kebab | slice(0, 40) %}
     {% set altText      = handleParam.fPlainTextI18nMultiline ?? '' %}
     {% set photographer = handleParam.fPlainTxt ?? '' | ascii | kebab | slice(0, 20) %}
@@ -18,10 +17,18 @@
         '{fullname|shorthash}.{extension}'
     ]|filter(v => v|length) | join('-') %}
 
-    {# Transform image via Imager X #}
-    {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {
-        filenamePattern: filenamePattern
-    }) %}
+    {% set extension = handleParam.extension|lower %}
+
+    {% if extension == 'svg' %}
+        {% set transformedImages = [
+            { url: handleParam.url }
+        ] %}
+    {% else %}
+        {# Transform image via Imager X #}
+        {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {
+            filenamePattern: filenamePattern
+        }) %}
+    {% endif %}
 
     {# Device order: mobile first #}
     {% set deviceMap = ['mobile', 'desktop'] %}
