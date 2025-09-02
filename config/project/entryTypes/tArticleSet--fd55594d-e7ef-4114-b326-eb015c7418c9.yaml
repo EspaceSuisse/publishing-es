@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!"
+            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n# Foto Tool\r\n- Kein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)"
             dateAdded: '2025-04-29T06:25:34+00:00'
             displayInPane: true
             elementCondition: null
