@@ -1,4 +1,4 @@
-dateModified: 1756386093
+dateModified: 1756819862
 elementSources:
   craft\elements\Asset:
     -
@@ -129,14 +129,17 @@ elementSources:
       key: 'group:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
       type: native
 email:
-  fromEmail: $SYSTEM_EMAIL
-  fromName: 'EspaceSuisse Publishing'
-  replyToEmail: null
+  fromEmail: $SMTP_EMAIL
+  fromName: 'Publishing Bot'
+  replyToEmail: $SMTP_EMAIL
   template: ''
   transportSettings:
-    apiKey: $SENDGRID_API_KEY
-    categories: ''
-  transportType: putyourlightson\sendgrid\mail\SendgridAdapter
+    host: $SMTP_SERVER
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    useAuthentication: '1'
+    username: $SMTP_EMAIL
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   files:
     hasUrls: true
