@@ -34,7 +34,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\TitleField
             uid: 75b8d53e-980c-4181-9193-fb989c7305e2
             userCondition: null
-            warning: null
+            warning: 'Bei Änderung: nicht vergessen, auch den `Slug` zu ändern. `Slug` ist die `URL` der Kategorie.'
             width: 100
           -
             dateAdded: '2025-08-06T13:58:00+00:00'
@@ -43,11 +43,11 @@ fieldLayouts:
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Wird in der Google Suche angezeigt'
             label: null
             providesThumbs: false
             required: false
-            tip: null
+            tip: 'Extrem wichtiger Text: Aufgrund davon, klicken Leute in den Suchresultaten auf den Eintrag'
             type: craft\fieldlayoutelements\CustomField
             uid: bd544fbf-d830-44a6-8dde-02b9b807aba3
             userCondition: null
@@ -60,8 +60,8 @@ fieldLayouts:
             fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
             handle: null
             includeInCards: false
-            instructions: null
-            label: null
+            instructions: 'Wird z.b. auf LinkedIn als Vorschaubild angezeigt'
+            label: Vorschaubild
             providesThumbs: false
             required: false
             tip: null
@@ -94,7 +94,7 @@ fieldLayouts:
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
             label: null
             providesThumbs: false
             required: false
