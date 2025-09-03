@@ -1,12 +1,20 @@
 
 {% macro postDate(queryParam) %}
 
-    {% set diffSwitch = now|date_modify('-2 weeks') %}
-    {% set postDate = queryParam.postDate %}
+    {% set compareDate = 'Y-m-d' %}
+
+    {% set diffSwitch = now | date_modify('-2 weeks') | date(compareDate) %}
+    {% set postDate = queryParam.postDate | date(compareDate) %}
+    {% set today = now | date(compareDate) %}
 
     {% if postDate > diffSwitch %}
-        {# Relative Time #}
-        <p class="postDate">{{ date(postDate|date('c')).diff(now).format('%d') }} {{ 'tage her' | t }}</p>
+        
+        {% if postDate == today %}
+            <p class="postDate">{{ 'Heute' | t }}</p>
+        {% else %}
+            {# Relative Time #}
+            <p class="postDate">{{ date(postDate).diff(now).format('%d') }} {{ 'tage her' | t }}</p>
+        {% endif %}
     {% else %}
         {# Absolute Time #}
         <p class="postDate">{{ postDate | date('d. F Y') }}</p>
