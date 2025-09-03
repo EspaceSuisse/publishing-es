@@ -1,4 +1,52 @@
 {# This is the Article Element of the box in all articles #}
 
-<h3 class="cellCardTitle">{{ block.title }}</h3>
-<div class="cellBoxContent">{{ block.fRichTextI18n }}</div>
+{% set expanded = block.fSwitch %}
+{% set expandedClass = expanded ? 'expanded' : 'collapsed' %}
+<div class="boxHead">
+
+    <h3 class="cellCardTitle" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</h3>
+    {% if expandedClass == 'collapsed' %}
+        <button 
+            class="cellBoxToggle {% if expandedClass == 'collapsed' %}closed{% else %}open{% endif %}"
+            aria-expanded="{{ expanded ? 'true' : 'false' }}"
+            aria-controls="cellBoxContent-{{ block.id }}">
+
+        </button>
+    {% endif %}
+</div>
+
+<div class="cellBoxContent {{ expandedClass }}" id="cellBoxContent-{{ block.id }}" role="region" aria-labelledby="cellBoxTitle-{{ block.id }}">
+    {{ block.fRichTextI18n }}
+</div>
+
+{% js %}
+    document.addEventListener("click", (e) => {
+    if (e.target.matches(".cellBoxToggle")) {
+        const btn = e.target;
+        const content = document.getElementById(btn.getAttribute("aria-controls")); // <-- use aria-controls
+
+        if (content.classList.contains("expanded")) {
+            // collapse
+            content.style.height = content.scrollHeight + "px";
+            content.offsetHeight; // force reflow
+            content.style.height = "0px";
+            content.classList.remove("expanded");
+            btn.classList.remove("open");
+            btn.classList.add("closed");
+        } else {
+            // expand
+            content.style.height = content.scrollHeight + "px";
+            content.classList.add("expanded");
+            btn.classList.remove("closed");
+            btn.classList.add("open");
+
+            content.addEventListener("transitionend", function handler() {
+                content.style.height = "auto"; // reset to auto
+                content.removeEventListener("transitionend", handler);
+            });
+        }
+    }
+});
+
+
+{% endjs %}

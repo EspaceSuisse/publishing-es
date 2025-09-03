@@ -4,12 +4,18 @@
 
 {%- macro catOverview(catParam, classParam, linkParam) -%}
 	{% for item in catParam %}
+
 		{% set inlineStyle = item.fColor ? 'background-color:' ~ item.fColor ~ ';' : '' %}
-			<span class="tag {{ ' ' ~ classParam }}" style="{{ inlineStyle }}" data-color="{{ item.fColor }}"> 
+		{% set fullTitle = item.title %}
+
+
+			<span class="tag {{ ' ' ~ classParam }}" style="{{ inlineStyle }}"> 
             {%- if linkParam == true -%}
-				<a href="{{- item.url -}}">{{- item.title -}}</a>
+				<a href="{{- item.url -}}">
+					{{- fullTitle -}}
+				</a>
 			{%- else -%}
-				{{- item.title -}}
+				{{- fullTitle -}}
 			{%- endif -%}
 		</span>
 	{%- endfor -%}

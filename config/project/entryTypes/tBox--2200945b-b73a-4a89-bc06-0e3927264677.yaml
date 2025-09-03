@@ -8,13 +8,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-18T11:38:19+00:00'
-            elementCondition: null
-            heading: 'Der klassische blaue Kasten aus dem Inforaum für Zusatzinfos'
-            type: craft\fieldlayoutelements\Heading
-            uid: 0efc282b-8345-43f2-b1ed-9153ff62cfa4
-            userCondition: null
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -43,7 +36,24 @@ fieldLayouts:
             uid: 07ae4c59-b0ad-44d8-8bfd-a1cc493e6a39
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            dateAdded: '2025-09-03T13:13:26+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Ausgeklappt?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f310d0b0-0a44-436c-ab77-116a4466890f
+            userCondition: null
+            warning: null
+            width: 25
           -
             dateAdded: '2024-12-18T11:38:19+00:00'
             editCondition: null

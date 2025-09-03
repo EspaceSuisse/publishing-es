@@ -1,18 +1,57 @@
 .cellBox {
     border-top: solid 4px var(--colorES-brand-blue);
     padding: 0;
+
     &.styleB {
         background-color: var(--colorES-brand-blue-soft);
         padding: var(--layoutGap);
         box-shadow: var(--shadow);
     }
+
     &.styleC {
         background-color: var(--colorES-brand-petrol);
         padding: var(--layoutGap);
         box-shadow: var(--shadow);
         border: none;
-        p, li, a, .cellCardTitle {
+
+        p,
+        li,
+        a,
+        .cellCardTitle {
             color: var(--txtInvertColor);
+        }
+    }
+    .boxHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapsed {
+        overflow: hidden;
+        transition: height 0.4s ease;
+        height: 0;
+
+        &.expanded {
+            height: auto;
+        }
+    }
+    .cellBoxToggle {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cellBoxToggle {
+        color: var(--colorES-brand-blue);
+        font-size: var(--font-size-M);
+        &:hover {
+            color: var(--hoverColor);
+        }
+        &.closed::after {
+            content: "▼";
+        }
+        &.open::after {
+            content: "▲";
         }
     }
 }
