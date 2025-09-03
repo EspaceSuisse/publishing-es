@@ -106,7 +106,7 @@ fieldLayouts:
             fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
             handle: null
             includeInCards: false
-            instructions: 'Person: Monolingual / Organization: Multilingual'
+            instructions: null
             label: null
             providesThumbs: false
             required: true

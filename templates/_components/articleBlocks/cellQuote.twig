@@ -1,6 +1,16 @@
 <blockquote>
-	<p>{{ block.fPlainTextI18nMultiline }}</p>
-	{% if block.fPlainTxt %}
-		<span class="speaker">{{ block.fPlainTxt }}</span>
-	{% endif %}
+
+	{% set marks = block.fSwitchEnabled %}
+
+	<p class="{% if marks %}quoteMarks{% endif %}">{{ block.fPlainTextI18nMultiline }}</p>
+
+	{% for block in block.fmImgSource.all() %}
+		{% switch block.type %}
+			{% case "tMonolingual" %}
+				<span class="speaker">{{ block.fPlainTxt }}</span>
+			{% case "tMultilingual" %}
+				<span class="speaker">{{ block.fPlainTextI18n }}</span>
+		{% endswitch %}
+	{% endfor %}
+
 </blockquote>

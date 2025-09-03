@@ -1,36 +1,36 @@
 color: null
 description: null
 fieldLayouts:
-  7390c9eb-71fa-4110-ac9a-271da2000432:
+  3924e1cd-e4a8-4fe4-92ef-8569fc5f3213:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-08-27T09:34:28+00:00'
+            dateAdded: '2025-08-27T09:33:41+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
             includeInCards: false
             instructions: null
             label: Name
             providesThumbs: false
             required: true
-            tip: 'Z.b. Bundesamt für Umwelt'
+            tip: 'Z.b. Hans Huber'
             type: craft\fieldlayoutelements\CustomField
-            uid: bf076b90-3668-4a07-b407-f389ddd35634
+            uid: 2038c0b4-d032-4c79-82f4-167d5a960968
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: e52bcd1a-bc66-479d-adb4-41c99bf1d764
+        uid: 2d4cc6a7-6165-4049-834d-ec7eae99dd50
         userCondition: null
-handle: organization
+handle: tMonolingual
 hasTitleField: false
-icon: buildings
-name: Organization
+icon: person
+name: 'Person Monolingual'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

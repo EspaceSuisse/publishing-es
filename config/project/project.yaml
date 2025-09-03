@@ -1,4 +1,4 @@
-dateModified: 1756885007
+dateModified: 1756887122
 elementSources:
   craft\elements\Asset:
     -
@@ -176,7 +176,7 @@ meta:
     2e063293-328e-4b38-8c35-ec4074593593: EspaceSuisse # EspaceSuisse
     02e09030-3253-478b-97e2-af4db5bdcaa1: 'Image Licence' # Image Licence
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
-    2f21816e-21e0-4681-9644-9573089c1774: Person # Person
+    2f21816e-21e0-4681-9644-9573089c1774: 'Person Monolingual' # Person Monolingual
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery
@@ -217,6 +217,7 @@ meta:
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     a0163ce3-0645-430f-a846-4f6d20d6fb51: Licence # Licence
     a9c797df-ecf9-40a9-a1ce-daf522db66a6: 'Member Login' # Member Login
+    a2101ab1-8df4-4168-bc8c-56af5a24badb: Switch # Switch
     a38688d7-396c-45ae-b8b7-46b401c5e71f: 'Link ' # Link 
     b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Img i18n' # Img i18n
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
@@ -239,7 +240,7 @@ meta:
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
-    efc236a6-abb3-4ef8-b448-ddf8971ace68: Organization # Organization
+    efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude

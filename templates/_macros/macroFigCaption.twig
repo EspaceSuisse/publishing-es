@@ -11,9 +11,9 @@
                 
                         {% for block in assetParam.fmImgSource.all() %}
                                 {% switch block.type %}
-                                        {% case "person" %}
+                                        {% case "tMonolingual" %}
                                                 {{ block.fPlainTxt }}
-                                        {% case "organization" %}
+                                        {% case "tMultilingual" %}
                                                 {{ block.fPlainTextI18n }}
                                 {% endswitch %}
                         {% endfor %}

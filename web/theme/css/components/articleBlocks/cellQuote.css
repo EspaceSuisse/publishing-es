@@ -8,6 +8,8 @@
             font-weight: var(--font-regular);
             line-height: calc(var(--line-height-base) + 3rem);
             margin: 0;
+        }
+        .quoteMarks {
             &::before {
                 content: "«";
                 color: var(--colorES-brand-blue);

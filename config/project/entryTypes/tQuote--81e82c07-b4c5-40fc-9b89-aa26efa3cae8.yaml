@@ -23,12 +23,29 @@ fieldLayouts:
             uid: 7e098318-ddaf-4aad-9071-cfc5414098be
             userCondition: null
             warning: null
-            width: 75
+            width: 50
           -
-            dateAdded: '2025-04-23T10:26:30+00:00'
+            dateAdded: '2025-09-03T08:06:34+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+            fieldUid: a2101ab1-8df4-4168-bc8c-56af5a24badb # Switch
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Anführungszeichen
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8677a60e-ce78-4a3c-a1a0-6fc3f760da06
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-09-03T08:00:15+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
             handle: null
             includeInCards: false
             instructions: null
@@ -37,7 +54,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 69647ff8-3a46-4222-9134-7d3b6fffd58e
+            uid: 18df280a-ce33-487e-a43e-0c6469458442
             userCondition: null
             warning: null
             width: 25
@@ -46,6 +63,41 @@ fieldLayouts:
         userCondition: null
       -
         elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-09-03T08:00:15+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 49c73379-624e-465f-92eb-b17550eca753 # Grid Start Wide
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d94229de-4669-498b-a0fa-22a378cec595
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-09-03T08:00:15+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5ba0489-9693-4252-8738-6a260d27aef1
+            userCondition: null
+            warning: null
+            width: 50
         name: Layout
         uid: 6918e779-b83a-450e-a59e-0a4cb33a17bc
         userCondition: null
