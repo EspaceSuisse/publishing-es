@@ -9,7 +9,7 @@ permissions:
   - administrateusers
   - 'assignusergroup:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
   - 'assignusergroup:df079a13-bd61-4096-9e55-4607550dae28' # Editor
-  - 'assignusergroup:e8b4cd0c-7d29-4d2a-a92c-3549a590ecd0' # Mitglieder
+  - 'assignusergroup:e8b4cd0c-7d29-4d2a-a92c-3549a590ecd0'
   - 'assignusergroup:ee8b684c-14de-460c-89fd-f9fe7dd4b0cd' # EspaceSuisse
   - assignuserpermissions
   - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
@@ -21,14 +21,11 @@ permissions:
   - 'deleteassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
   - 'deletecategories:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
   - 'deletecategories:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
-  - 'deleteentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'deletepeerassets:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
   - 'deletepeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'deletepeerassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
   - 'deletepeercategorydrafts:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
   - 'deletepeercategorydrafts:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
-  - 'deletepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'deletepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - deleteusers
   - 'editimages:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
   - 'editimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
