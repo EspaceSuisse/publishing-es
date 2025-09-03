@@ -3,6 +3,8 @@ handle: webmasters
 name: Webmasters
 permissions:
   - accesscp
+  - accesscpwhensystemisoff
+  - accessplugin-translations-admin
   - accesssitewhensystemisoff
   - administrateusers
   - 'assignusergroup:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
@@ -34,6 +36,8 @@ permissions:
   - 'editpeerimages:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
   - 'editpeerimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   - 'editpeerimages:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'editsite:2d4ea7fb-3050-435d-806e-46986d5c58d2' # Inforum FR
+  - 'editsite:5f286764-7e74-4475-989a-21ca80692fad' # Inforaum DE
   - editusers
   - impersonateusers
   - moderateusers
