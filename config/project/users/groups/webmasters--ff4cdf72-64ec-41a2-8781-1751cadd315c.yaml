@@ -1,0 +1,80 @@
+description: null
+handle: webmasters
+name: Webmasters
+permissions:
+  - accesscp
+  - accesssitewhensystemisoff
+  - administrateusers
+  - 'assignusergroup:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
+  - 'assignusergroup:df079a13-bd61-4096-9e55-4607550dae28' # Editor
+  - 'assignusergroup:e8b4cd0c-7d29-4d2a-a92c-3549a590ecd0' # Mitglieder
+  - 'assignusergroup:ee8b684c-14de-460c-89fd-f9fe7dd4b0cd' # EspaceSuisse
+  - assignuserpermissions
+  - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'createfolders:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'createfolders:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'createfolders:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'deleteassets:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'deleteassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'deleteassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'deletecategories:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  - 'deletecategories:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  - 'deleteentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'deletepeerassets:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'deletepeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'deletepeerassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'deletepeercategorydrafts:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  - 'deletepeercategorydrafts:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  - 'deletepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'deletepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - deleteusers
+  - 'editimages:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'editimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'editimages:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'editpeerimages:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'editpeerimages:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'editpeerimages:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - registerusers
+  - 'replacefiles:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'replacefiles:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'replacefiles:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'replacepeerfiles:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'replacepeerfiles:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'replacepeerfiles:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'retour:dashboard'
+  - 'retour:redirects'
+  - 'retour:settings'
+  - 'retour:shortlinks'
+  - 'saveassets:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'saveassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'saveassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'savecategories:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  - 'savecategories:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  - 'saveentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'savepeerassets:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'savepeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'savepeerassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'savepeercategorydrafts:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  - 'savepeercategorydrafts:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  - 'savepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'savepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - savetranslations
+  - translationsutilities
+  - 'utility:clear-caches'
+  - 'viewassets:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'viewassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'viewassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'viewcategories:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  - 'viewcategories:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  - 'viewentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewpeerassets:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
+  - 'viewpeerassets:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
+  - 'viewpeerassets:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
+  - 'viewpeercategorydrafts:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  - 'viewpeercategorydrafts:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
+  - 'viewpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewpeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - viewusers
