@@ -106,7 +106,7 @@ fieldLayouts:
             fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Natürliche, oder juristische Person'
             label: null
             providesThumbs: false
             required: true
@@ -133,7 +133,7 @@ fieldLayouts:
             fieldUid: bc09de97-2997-40ed-9f92-fb366aaaebd6 # Tag Field Provider
             handle: null
             includeInCards: false
-            instructions: 'Z.b. Flickr, Unsplash'
+            instructions: 'Flickr, Unsplash, EspaceSuisse usw.'
             label: Platform
             providesThumbs: false
             required: false
@@ -160,7 +160,7 @@ fieldLayouts:
             fieldUid: 02e09030-3253-478b-97e2-af4db5bdcaa1 # Image Licence
             handle: null
             includeInCards: false
-            instructions: 'Z.b. CC BY-SA 2.0'
+            instructions: 'CC BY-SA 2.0 usw.'
             label: null
             providesThumbs: false
             required: false
