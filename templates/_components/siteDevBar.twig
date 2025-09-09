@@ -25,16 +25,18 @@
 {% endif %}
 
 
+
 {% js %}
 	function updateViewportRem() {
-	const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-	const viewportWidthRem = (window.innerWidth / rootFontSize).toFixed(2);
-	const viewportHeightRem = (window.innerHeight / rootFontSize).toFixed(2);
+		const span = document.querySelector('.remUnits');
+		if (!span) return;
 
-	const span = document.querySelector('.remUnits');
-	if (span) {
+		const initialRootFontSize = 16; // match the initial <html> font-size in your CSS
+
+		const viewportWidthRem = (window.innerWidth / initialRootFontSize).toFixed(2);
+		const viewportHeightRem = (window.innerHeight / initialRootFontSize).toFixed(2);
+
 		span.textContent = `${viewportWidthRem}rem × ${viewportHeightRem}rem`;
-	}
 	}
 
 	// Update on load
@@ -42,14 +44,14 @@
 
 	// Update on resize
 	window.addEventListener('resize', updateViewportRem);
-
 {% endjs %}
+
 
 {% css %}
 	.devBar {
 		z-index: 1000;
 		position: fixed;
-		top: 0;
+		bottom: 0;
 		right: 0;
 		background: #000;
 		color: #fff;
