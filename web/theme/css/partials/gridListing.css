@@ -1,6 +1,7 @@
 .listingGrid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  background-color: lightgreen;
   gap: var(--layoutGap);
   max-width: var(--listingMaxWidth);
   padding: 0 var(--airGap);
@@ -24,14 +25,16 @@
   }
 }
 /* make two rows on small devices */
-@media (min-width: 768px) {
+@media (min-width: 37rem) {
   .listingGrid {
     grid-template-columns: repeat(2, 1fr);
+    background-color: aliceblue;
   }
 }
 /* make 12 rows on large devices */
-@media (min-width: 1024px) {
+@media (min-width: 60rem) {
   .listingGrid {
     grid-template-columns: repeat(12, 1fr);
+    background-color: lightcoral;
   }
 }

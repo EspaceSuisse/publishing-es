@@ -1,4 +1,4 @@
-@media (min-width: 1024px) {
+@media (min-width: 60rem) {
     .gridStart0 {
         grid-column-start: 0;
     }
@@ -95,6 +95,10 @@
         grid-column-end: span 11;
     }
 
+    .gridSpan12 {
+        grid-column: span 12;
+    }
+
 
 
     .verticalPosMiddle {
@@ -124,10 +128,6 @@
     .gridRowStart4 {
         grid-row-start: 4;
     }
-}
-
-.gridSpan12 {
-    grid-column: span 12;
 }
 
 .gridSpanAll {
