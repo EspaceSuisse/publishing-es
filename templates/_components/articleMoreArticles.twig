@@ -4,12 +4,7 @@
 {% set firstSubject = entry.fCatGenre.one() %}
 {% set firstGenre = entry.fCatSubject.one() %}
 
-{# Show articles which contain the first subject and genre #}
-
-<aside class="gridArticle">
-	<h3 class="gridSpanAll moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}…</h3>
-
-	{% set relatedEntries = craft.entries()
+{% set relatedEntries = craft.entries()
         .section('article')
         .relatedTo([
             'and',
@@ -20,12 +15,24 @@
         .limit(7)
         .all() %}
 
-	{% for item in relatedEntries %}
-		{% if loop.index <= 4 %}
-			{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-		{% else %}
-			{{ macroPreviewS.listMacro(item,'gridSpan4') }}
-		{% endif %}
+{# Show articles which contain the first subject and genre #}
 
-	{% endfor %}
-</aside>
+{% if relatedEntries|length %}
+
+	<aside class="gridArticle">
+
+		{% for item in relatedEntries %}
+			{% if loop.first %}
+				<h3 class="gridSpanAll moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}…</h3>
+			{% endif %}
+			{% if loop.index <= 4 %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+			{% else %}
+				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+			{% endif %}
+	
+		{% endfor %}
+
+	</aside>
+
+{% endif %}
