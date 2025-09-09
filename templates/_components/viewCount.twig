@@ -1,36 +1,40 @@
-{% js %}
-    {% if category.id is defined %}
-        {% set elementId = category.id %}
-    {% else %}
-        {% set elementId = entry.id %}
-    {% endif %}
-    
-    const elementId = {{ elementId }};
+{% if getenv('CRAFT_ENVIRONMENT') == 'production' %}
 
-    const incrementViewCountUrl = '/actions/view-count/increment';
+    {% js %}
+        {% if category.id is defined %}
+            {% set elementId = category.id %}
+        {% else %}
+            {% set elementId = entry.id %}
+        {% endif %}
+        
+        const elementId = {{ elementId }};
 
-    const data = {
-        id: elementId
-    };
+        const incrementViewCountUrl = '/actions/view-count/increment';
 
-    async function incrementView() {
-        try {
-            const response = await fetch(incrementViewCountUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest'
-                },
-                body: JSON.stringify(data)
-            });
+        const data = {
+            id: elementId
+        };
 
-            const result = await response.json();
-            console.log('View count updated:', result);
-        } catch (err) {
-            console.error('View count error:', err);
+        async function incrementView() {
+            try {
+                const response = await fetch(incrementViewCountUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                console.log('View count updated:', result);
+            } catch (err) {
+                console.error('View count error:', err);
+            }
         }
-    }
 
-    incrementView();
-{% endjs %}
+        incrementView();
+    {% endjs %}
+    
+{% endif %}
