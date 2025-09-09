@@ -1,4 +1,4 @@
-dateModified: 1756895568
+dateModified: 1757409985
 elementSources:
   craft\elements\Asset:
     -
@@ -203,6 +203,7 @@ meta:
     432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
     746a28ba-cc90-41ff-8b16-82638446ed07: Provider # Provider
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
+    782c3a90-1552-4c56-aa8e-66c715a3a40d: 'Editor Kommentar' # Editor Kommentar
     826bddc1-fa89-4b66-b1ab-6924ab5aa9c3: 'Plain Text i18n Multiline' # Plain Text i18n Multiline
     898d8de1-26a8-46a2-be3b-ba455a3711cc: 'Related Article' # Related Article
     2897cc3f-95c9-4148-80b9-fd663d11f977: Thema # Thema

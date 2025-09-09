@@ -20,11 +20,11 @@ settings:
   codeFolding: false
   defaultValue: ''
   fontSize: 14
-  language: xml
+  language: markdown
   lineNumbers: false
   monacoEditorOptions: ''
   placeholder: ''
-  showLanguageDropdown: true
+  showLanguageDropdown: false
   singleLineEditor: false
   theme: vs-dark
 translationKeyFormat: null
