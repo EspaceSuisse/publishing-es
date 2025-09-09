@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fSeoDescription
-instructions: 'Erscheint nur in der Google Suche und in Social Media Previews.'
+instructions: 'For Social Media & Google Search results. Preview: `View > Social Media Preview`'
 name: 'Google Text'
 searchable: false
 settings:

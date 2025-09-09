@@ -118,7 +118,7 @@ fieldLayouts:
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             includeInCards: false
-            instructions: 'Erscheint in der Google Suche und als Social media Preview Text'
+            instructions: null
             label: null
             providesThumbs: false
             required: true
