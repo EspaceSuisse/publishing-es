@@ -25,9 +25,9 @@
   }
 }
 /* make two rows on small devices */
-@media (min-width: 37rem) {
+@media (min-width: 52rem) {
   .listingGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     background-color: aliceblue;
   }
 }

@@ -1,3 +1,4 @@
+/* Desktop Sizing */
 @media (min-width: 60rem) {
     .gridStart0 {
         grid-column-start: 0;
