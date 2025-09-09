@@ -19,7 +19,10 @@
 
     --siteHeadWidth: 75px;
     --layoutGap: var(--font-size-M);
-    --airGap: 7rem;
+    --airGap: calc(var(--font-size-M) * 0.5);
+    @media (min-width: 37rem) {
+        --airGap: calc(var(--font-size-M) * 3);
+    }
 
     /* 90vw on mobile */
     --articleMaxWidth: 100rem;

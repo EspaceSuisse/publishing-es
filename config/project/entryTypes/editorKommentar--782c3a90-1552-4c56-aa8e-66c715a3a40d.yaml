@@ -1,0 +1,40 @@
+color: null
+description: 'Feld für interne Kommentare. Wird nicht dargestellt.'
+fieldLayouts:
+  8161df16-04f9-4c1a-8786-f8f39267e0b4:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-09-09T09:24:36+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fd056fec-5843-47f0-a2ad-520a3044916d # Code FIeld
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 981312bc-c8b3-40e4-83f0-b9dad97badf0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a4ce5436-b53f-4c6f-bd7e-468af6770d00
+        userCondition: null
+handle: editorKommentar
+hasTitleField: false
+icon: comment-lines
+name: 'Editor Kommentar'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

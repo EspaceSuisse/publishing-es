@@ -103,6 +103,14 @@ settings:
         -
           - group
           - Special
+    -
+      __assoc__:
+        -
+          - uid
+          - 782c3a90-1552-4c56-aa8e-66c715a3a40d # Editor Kommentar
+        -
+          - group
+          - Special
   includeTableView: false
   maxEntries: null
   minEntries: null
