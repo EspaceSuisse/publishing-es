@@ -17,14 +17,16 @@
 		.all()
 	%}
 
+	{% set newsEntries = craft.entries.section('news').limit(3).all() %}
+
 	<div class="listingGrid">
 		{% include "_components/listingHeader.twig" %}
 		<section class="headliner">
 			{% set headliner = allEntries | first %}
 			{{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
 		</section>
-		<section class="teaser">
-			{% for item in allEntries | slice(1, 3) %}
+		<section class="teaser newsTeaser">
+			{% for item in newsEntries %}
 				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
 			{% endfor %}
 		</section>

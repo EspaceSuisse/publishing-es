@@ -1,0 +1,36 @@
+{% extends "_layouts/main" %}
+
+
+{# news template #}
+
+
+{% set articleSunset = entry.postDate|date_modify('+3 months') %}
+{% set isSunset = articleSunset < now %}
+{% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
+
+{# Check if Live Preview #}
+{% set isPreview = craft.app.request.getParam('token') is not null %}
+
+
+
+{% if not isPreview %}
+	{% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
+{% else %}
+	{# dont blur content in preview mode #}
+	{% set articleSunsetClass = '' %}
+{% endif %}
+
+
+
+{% block content %}
+
+	<article>
+		
+		<header class="articleHead">{% include "_components/articleHead" %}</header>
+		<div class="gridArticle {{ articleSunsetClass }} articleContent">
+			{% include "_components/articleMatrix" %}
+		</div>
+		{% include "_components/articleCtaCall" %}
+		{% include "_components/articleMoreArticles" %}
+	</article>
+{% endblock %}
