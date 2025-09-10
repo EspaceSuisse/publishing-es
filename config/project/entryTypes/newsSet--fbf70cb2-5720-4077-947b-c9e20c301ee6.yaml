@@ -17,7 +17,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ff2a5edb-c344-429f-9dd7-1c3648b3d165
@@ -81,7 +81,7 @@ fieldLayouts:
             instructions: null
             label: Lead
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5d997f23-c630-452b-b64e-646604b89829
@@ -98,7 +98,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: bef7572d-bb23-440f-b433-636cc7523943
@@ -121,7 +121,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a232c70a-63e5-4363-9328-e22170df9dfc

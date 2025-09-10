@@ -1,4 +1,4 @@
-dateModified: 1757512749
+dateModified: 1757515349
 elementSources:
   craft\elements\Asset:
     -
@@ -187,6 +187,7 @@ meta:
     5f286764-7e74-4475-989a-21ca80692fad: 'Inforaum DE' # Inforaum DE
     6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
     6e9fa4fd-403d-45c4-a082-48d1c5882d71: Basemap # Basemap
+    7a651ea5-c4e0-4bb0-9628-faafad747662: 'SEO News' # SEO News
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
@@ -241,6 +242,7 @@ meta:
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
+    ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link

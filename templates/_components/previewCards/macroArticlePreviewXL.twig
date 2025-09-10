@@ -5,8 +5,8 @@
     {% import '_macros/macroPostDate' as macroPostDate %}
 
 	{% set image = queryParam.fImgI18n.one() %}
-	{% set catGenre = queryParam.fCatGenre.all() %}
-	{% set catSubject = queryParam.fCatSubject.all() %}
+	{% set catGenre = queryParam.fCatGenre ? queryParam.fCatGenre.all() : [] %}
+	{% set catSubject = queryParam.fCatSubject ? queryParam.fCatSubject.all() : [] %}
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
 	{% set cardTitle = queryParam.fPlainTextI18n ?? queryParam.title %}
