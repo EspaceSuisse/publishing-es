@@ -1,4 +1,4 @@
-dateModified: 1757409985
+dateModified: 1757512749
 elementSources:
   craft\elements\Asset:
     -
@@ -193,6 +193,7 @@ meta:
     15e047b0-576a-4f08-83ff-0c064c9c8e29: 'Text SImple i18n' # Text SImple i18n
     22fd25c7-fbaf-4908-999e-70100e9cfe4a: Zoom # Zoom
     23be1cae-1521-4696-b3bd-cc2d9621ee56: 'Link List' # Link List
+    37e776f8-e885-4df4-abeb-4e00055818d6: 'Category Set' # Category Set
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text i18n' # Plain Text i18n
     49c73379-624e-465f-92eb-b17550eca753: 'Grid Start Wide' # Grid Start Wide
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
@@ -220,6 +221,7 @@ meta:
     a9c797df-ecf9-40a9-a1ce-daf522db66a6: 'Member Login' # Member Login
     a2101ab1-8df4-4168-bc8c-56af5a24badb: Switch # Switch
     a38688d7-396c-45ae-b8b7-46b401c5e71f: 'Link ' # Link 
+    ad4265b0-d0a8-4b4c-a37b-bf310b170758: News # News
     b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Img i18n' # Img i18n
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
@@ -244,6 +246,7 @@ meta:
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
+    fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5: Bildquelle # Bildquelle

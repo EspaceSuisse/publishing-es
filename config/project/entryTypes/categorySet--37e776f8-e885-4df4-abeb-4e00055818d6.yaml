@@ -1,0 +1,57 @@
+color: null
+description: null
+fieldLayouts:
+  3f53fe9c-e695-4415-8104-552dd9f413bf:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-09-10T13:59:09+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d15cf618-92a3-4fc8-8cc3-073dbfa49105
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-09-10T13:59:09+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 21880329-1530-4c45-8b46-8df1b7016409
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 8e67314d-65a6-456a-bc94-becf391bb45f
+        userCondition: null
+handle: categorySet
+hasTitleField: false
+icon: null
+name: 'Category Set'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
