@@ -21,12 +21,12 @@ previewTargets:
 propagationMethod: all
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
-    enabledByDefault: true
+    enabledByDefault: false
     hasUrls: true
     template: sections/news.twig
     uriFormat: 'news/{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
-    enabledByDefault: true
+    enabledByDefault: false
     hasUrls: true
     template: sections/news.twig
     uriFormat: 'news/{slug}'
