@@ -13,10 +13,12 @@
 	<article class="articlePreview previewSizeS {{ classParam }}">
 
 		<div class="txtPart">
-			<div class="tags">
-				{{ macroCat.catOverview(catGenre, 'genre', true) }}
-				{{ macroCat.catOverview(catSubject, 'subject', true) }}
-			</div>
+			{% if catGenre or catSubject %}
+				<div class="tags">
+					{{ macroCat.catOverview(catGenre, 'genre', true) }}
+					{{ macroCat.catOverview(catSubject, 'subject', true) }}
+				</div>
+			{% endif %}
 			<h2 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
