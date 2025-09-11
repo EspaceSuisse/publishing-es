@@ -52,6 +52,16 @@
         align-items: baseline;
         flex-direction: row-reverse;
     }
+    &.newsCard {
+        box-shadow: none;
+        background-color: transparent;
+        .previewTitle a {
+            font-size: var(--font-size-M);
+            font-family: var(--font-default);
+            font-weight: var(--font-normal);
+            text-transform: none;
+        }
+    }
 }
 .previewSizeS {
     .previewTitle {
