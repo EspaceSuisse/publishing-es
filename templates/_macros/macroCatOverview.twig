@@ -3,18 +3,28 @@
 {# The label is taken from the translation file #}
 
 {%- macro catOverview(catParam, classParam, linkParam) -%}
+
+	{% import '_macros/macroImage' as macro %}
+
 	{% for item in catParam %}
 
 		{% set inlineStyle = item.fColor ? 'background-color:' ~ item.fColor ~ ';' : '' %}
 		{% set fullTitle = item.title %}
-
+		{% set catIcon = item.fIcon.one() %}
+		{% set svgCatIcon %}
+			{%- if catIcon -%}
+				{{ svg(catIcon) | attr({ class: 'catIcon' }) }}
+			{%- endif -%}
+		{% endset %}
 
 			<span class="tag {{ ' ' ~ classParam }}" style="{{ inlineStyle }}"> 
             {%- if linkParam == true -%}
 				<a href="{{- item.url -}}">
+					{{ svgCatIcon }}
 					{{- fullTitle -}}
 				</a>
 			{%- else -%}
+				{{ svgCatIcon }}
 				{{- fullTitle -}}
 			{%- endif -%}
 		</span>

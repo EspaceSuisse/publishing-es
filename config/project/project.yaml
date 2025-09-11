@@ -1,4 +1,4 @@
-dateModified: 1757600483
+dateModified: 1757604204
 elementSources:
   craft\elements\Asset:
     -
@@ -148,6 +148,13 @@ fs:
       path: '@assetBasePath/files'
     type: craft\fs\Local
     url: '@assetBaseUrl/files'
+  iconFolder:
+    hasUrls: true
+    name: 'Icon Folder'
+    settings:
+      path: '@assetBasePath/icons'
+    type: craft\fs\Local
+    url: '@assetBaseUrl/icons'
   images:
     hasUrls: true
     name: 'Artikel Bilder'
@@ -187,9 +194,11 @@ meta:
     5f286764-7e74-4475-989a-21ca80692fad: 'Inforaum DE' # Inforaum DE
     6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
     6e9fa4fd-403d-45c4-a082-48d1c5882d71: Basemap # Basemap
+    6eb635d2-1d95-4d26-85d2-703c297243bd: Icon # Icon
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
+    8e19eab8-006c-4c90-9a33-31262f476b3a: Icons # Icons
     15e047b0-576a-4f08-83ff-0c064c9c8e29: 'Text SImple i18n' # Text SImple i18n
     22fd25c7-fbaf-4908-999e-70100e9cfe4a: Zoom # Zoom
     23be1cae-1521-4696-b3bd-cc2d9621ee56: 'Link List' # Link List
