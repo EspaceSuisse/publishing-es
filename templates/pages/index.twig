@@ -27,13 +27,16 @@
 		</section>
 		<section class="teaser newsTeaser">
 			{% for item in newsEntries %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+				{{ macroPreviewS.listMacro(item,'gridSpan4 newsCard') }}
 			{% endfor %}
 		</section>
 		<section class="latest">
-			{% for item in allEntries | slice(4,2) %}
+			{% for item in allEntries %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
 			{% endfor %}
+		</section>
+		<section class="superTopic">
+			<h2>Superthema</h2>
 		</section>
 		<aside class="gridSpanAll topicList">
 			<h2 class="topicTitle">{{ labelGenre }} & {{ labelSubject }}</h2>
@@ -43,8 +46,23 @@
 				{{ macroCat.catOverview(catSubject, 'subject', true) }}
 			</div>
 		</aside>
-		<section class="latest">
-			{% for item in allEntries | slice(6) %}
+		<section class="moreArticles">
+			{% for item in allEntries %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+			{% endfor %}
+			{% for item in allEntries %}
+				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+			{% endfor %}
+			{% for item in allEntries %}
+				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+			{% endfor %}
+			{% for item in allEntries %}
+				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+			{% endfor %}
+			{% for item in allEntries %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+			{% endfor %}
+			{% for item in allEntries %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
 			{% endfor %}
 		</section>
