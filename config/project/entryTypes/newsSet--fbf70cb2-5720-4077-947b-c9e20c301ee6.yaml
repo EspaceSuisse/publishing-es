@@ -15,9 +15,9 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: 'News Bild'
+            label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ff2a5edb-c344-429f-9dd7-1c3648b3d165
@@ -58,11 +58,45 @@ fieldLayouts:
             dateAdded: '2025-09-10T13:48:55+00:00'
             editCondition: null
             elementCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Catchy Title'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b2ff6346-a9c2-452d-a9d9-069f0ab3c992
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-10T13:48:55+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Lead
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d997f23-c630-452b-b64e-646604b89829
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-10T13:48:55+00:00'
+            editCondition: null
+            elementCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             includeInCards: false
-            instructions: 'Wird sowohl für Google & Socialmedia als auch auf der Website angezeigt.'
-            label: 'Googletext & Lead'
+            instructions: null
+            label: null
             providesThumbs: false
             required: true
             tip: null
@@ -87,7 +121,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a232c70a-63e5-4363-9328-e22170df9dfc

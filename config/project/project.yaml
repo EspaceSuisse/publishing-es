@@ -1,4 +1,4 @@
-dateModified: 1757604204
+dateModified: 1758025035
 elementSources:
   craft\elements\Asset:
     -
@@ -148,13 +148,6 @@ fs:
       path: '@assetBasePath/files'
     type: craft\fs\Local
     url: '@assetBaseUrl/files'
-  iconFolder:
-    hasUrls: true
-    name: 'Icon Folder'
-    settings:
-      path: '@assetBasePath/icons'
-    type: craft\fs\Local
-    url: '@assetBaseUrl/icons'
   images:
     hasUrls: true
     name: 'Artikel Bilder'
@@ -194,11 +187,10 @@ meta:
     5f286764-7e74-4475-989a-21ca80692fad: 'Inforaum DE' # Inforaum DE
     6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
     6e9fa4fd-403d-45c4-a082-48d1c5882d71: Basemap # Basemap
-    6eb635d2-1d95-4d26-85d2-703c297243bd: Icon # Icon
+    7a651ea5-c4e0-4bb0-9628-faafad747662: 'SEO News' # SEO News
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
-    8e19eab8-006c-4c90-9a33-31262f476b3a: Icons # Icons
     15e047b0-576a-4f08-83ff-0c064c9c8e29: 'Text SImple i18n' # Text SImple i18n
     22fd25c7-fbaf-4908-999e-70100e9cfe4a: Zoom # Zoom
     23be1cae-1521-4696-b3bd-cc2d9621ee56: 'Link List' # Link List
@@ -228,6 +220,7 @@ meta:
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     a0163ce3-0645-430f-a846-4f6d20d6fb51: Licence # Licence
     a9c797df-ecf9-40a9-a1ce-daf522db66a6: 'Member Login' # Member Login
+    a9e662fd-d372-4978-a879-a0b4962a89c1: Marker # Marker
     a2101ab1-8df4-4168-bc8c-56af5a24badb: Switch # Switch
     a38688d7-396c-45ae-b8b7-46b401c5e71f: 'Link ' # Link 
     ad4265b0-d0a8-4b4c-a37b-bf310b170758: News # News
@@ -250,10 +243,12 @@ meta:
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
+    ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
+    f8280914-6618-4ce0-8ed1-a3cc7b9c43b0: Marker # Marker
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld

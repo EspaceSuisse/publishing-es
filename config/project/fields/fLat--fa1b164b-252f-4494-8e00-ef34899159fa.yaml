@@ -9,7 +9,7 @@ settings:
   code: true
   initialRows: 4
   multiline: false
-  placeholder: null
+  placeholder: '46.798591'
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none
