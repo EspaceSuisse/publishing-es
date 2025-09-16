@@ -1,3 +1,12 @@
+
+
+{# https://maplibre.org/maplibre-gl-js/docs/ #}
+{# https://api3.geo.admin.ch/services/sdiservices.html#mapbox-vector-tiles #}
+{# Swisstopo Layers: https://wms.geo.admin.ch/?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0 #}
+
+<script src="https://unpkg.com/maplibre-gl@^5.7.1/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@^5.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+
 {% set mapLatitude = block.fLat %}
 {% set mapLongitude = block.fLong %}
 {% set mapZoom = block.fZoom ?? '10' %}
@@ -5,17 +14,101 @@
 {% set polygonPath = block.fCode.value ?? '' %}
 {% set markerEnabled = block.fSwitch ?? false %}
 
+{# add markers if they are present #}
+    {% set mapMarkers %}
+        {% if block.fMxMarker %}
+        
+            const markers = [
+                {% for item in block.fMxMarker %}
+                    {
+                        coords: [{{ item.fLong }}, {{ item.fLat }}],
+                        text: '{{ item.title }}'
+                    },
+                {% endfor %}  
+            ];
+
+            markers.forEach(m => {
+                const popup = new maplibregl.Popup({ offset: 25 }).setText(m.text);
+
+                new maplibregl.Marker()
+                    .setLngLat(m.coords)
+                    .setPopup(popup)
+                    .addTo(map);
+            });
+
+        {% endif %}
+    {% endset %}
+
+{# set base map style #}
+{%- set baseMapLayer -%}
+    {%- if block.fBaseMap -%}
+        {%- switch block.fBaseMap -%}
+            {%- case "pixelkarte-farbe" -%}
+                'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.basemap.vt/style.json'
+            {%- case "swissimage" -%}
+                'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.imagerybasemap.vt/style.json'
+            {%- case "pixelkarte-grau" -%}
+                'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.lightbasemap.vt/style.json'
+        {%- endswitch -%}
+    {%- endif -%}
+{%- endset -%}
+
+
+
 <div id="map-{{ block.id }}" class="cellMap"></div>
 
-<script type="module">
+<script>
 
-    {% include "_components/articleBlocks/cellMap/cellMapImports.twig" %}
+    {# Initialize the map #}
+    const map = new maplibregl.Map({
+        container: 'map-{{ block.id }}',
+        style: {{ baseMapLayer }},
+        center: [{{ mapLongitude }}, {{ mapLatitude }}],
+        zoom: {{ mapZoom }},
+    });
+
+    {{ mapMarkers }}
     
-    {% include "_components/articleBlocks/cellMap/cellMapBasic.twig" %}
-  
+    
+    
 
-    {% include "_components/articleBlocks/cellMap/cellMapPolygonDraw.twig" %}
-    {% include "_components/articleBlocks/cellMap/cellMapMarker.twig" %}
+    
+
+    // disable scroll zoom
+    map.scrollZoom.disable();
+
+    // add zoom controls
+    map.addControl(new maplibregl.NavigationControl({
+        showZoom: true,
+        showCompass: false
+    }));
+
+    map.on('load', () => {
+    // Add the WMS layer as a raster source
+    map.addSource('hiking-trails', {
+        'type': 'raster',
+        'tiles': [
+        'https://wms.geo.admin.ch/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
+        '&FORMAT=image/png' +
+        '&TRANSPARENT=true' +
+        '&LAYERS=ch.swisstopo.swisstlm3d-wanderwege' +
+        '&CRS=EPSG:3857' +
+        '&WIDTH=256&HEIGHT=256' +
+        '&BBOX={bbox-epsg-3857}'
+        ],
+        'tileSize': 256
+    });
+
+    // Add it as a visible layer
+    map.addLayer({
+        'id': 'hiking-trails-layer',
+        'type': 'raster',
+        'source': 'hiking-trails',
+        'paint': {
+        'raster-opacity': 0.8
+        }
+    });
+    });
 
 
 </script>

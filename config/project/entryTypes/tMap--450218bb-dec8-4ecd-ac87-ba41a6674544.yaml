@@ -64,23 +64,6 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: '2025-07-30T09:25:10+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Show Marker'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f047d436-9b2c-4eb5-8a42-d92ee44f72e3
-            userCondition: null
-            warning: null
-            width: 25
-          -
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
@@ -150,6 +133,29 @@ fieldLayouts:
             width: 50
         name: Content
         uid: de8accf5-1a04-48d6-b18e-0e31b1a003f0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-09-16T07:24:31+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: a9e662fd-d372-4978-a879-a0b4962a89c1 # Marker
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1ce5e088-2187-4f39-9380-57bc308f6ea8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Marker
+        uid: 07b17ff9-b4b2-489f-8ba8-76de25cd9a50
         userCondition: null
       -
         elementCondition: null
