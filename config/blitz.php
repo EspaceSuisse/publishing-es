@@ -6,6 +6,7 @@ return [
     '*' => [
         'cachingEnabled' => true,
         'warmCacheAutomatically' => true,
+        'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
         'includedUriPatterns' => [
             ['uriPattern' => '.*'],
