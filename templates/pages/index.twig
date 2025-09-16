@@ -28,18 +28,26 @@
 		</section>
 		<section class="teaser newsTeaser">
 			{% for item in newsEntries %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4 newsCard') }}
+				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
 			{% endfor %}
 			<a href="{{ goToAllNews.url }}">{{ goToAllNews.title }}</a>
 		</section>
-		<section class="latest">
-			{% for item in allEntries %}
+		{% for item in allEntries | slice(4,1) %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-			{% endfor %}
-		</section>
-		<section class="superTopic">
+		{% endfor %}
+		<div class="gridSpan6" style="background-color: #795e5eff; grid-row: span 3;">
 			<h2>Superthema</h2>
-		</section>
+		</div>
+		{% for item in allEntries | slice(4,) %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+		{% endfor %}
+		{% for item in allEntries | slice(4,2) %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+		{% endfor %}
+		{% for item in allEntries | slice(4,2) %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+		{% endfor %}
+		
 		<aside class="gridSpanAll topicList">
 			<h2 class="topicTitle">{{ labelGenre }} & {{ labelSubject }}</h2>
 			<p class="topicLead">Hier werden alle Möglichen {{ labelGenre }} & {{ labelSubject }} angezeigt. Auch die, welche noch keine Einträge haben. Später dann nur die, welche eintraäge haben.</p>
@@ -48,23 +56,8 @@
 				{{ macroCat.catOverview(catSubject, 'subject', true) }}
 			</div>
 		</aside>
-		<section class="moreArticles">
-			{% for item in allEntries %}
-				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-			{% endfor %}
-			{% for item in allEntries %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
-			{% endfor %}
-			{% for item in allEntries %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
-			{% endfor %}
-			{% for item in allEntries %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
-			{% endfor %}
-			{% for item in allEntries %}
-				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-			{% endfor %}
-			{% for item in allEntries %}
+		<section class="latest">
+			{% for item in allEntries | slice(6) %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
 			{% endfor %}
 		</section>
