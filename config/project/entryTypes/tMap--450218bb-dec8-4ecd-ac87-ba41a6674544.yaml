@@ -8,7 +8,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: 'Am einfachsten alles auf [Swisstopo](https://map.geo.admin.ch) einrichten, dann die Werte aus der URL von Swisstopo kopieren.'
+            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.'
             dateAdded: '2025-07-30T09:25:10+00:00'
             displayInPane: true
             elementCondition: null
