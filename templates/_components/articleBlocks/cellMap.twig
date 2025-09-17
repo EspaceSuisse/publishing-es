@@ -114,55 +114,60 @@
 <div id="map-{{ block.id }}" class="cellMap"></div>
 
 <script>
-    // --- Determine initial map state ---
-    let initialLat = {{ mapLatitude }};
-    let initialLng = {{ mapLongitude }};
-    let initialZoom = {{ mapZoom }};
+    (function() {
+        const mapId = 'map-{{ block.id }}';
+        const storageKey = `mapState-${mapId}`;
 
-    const savedState = localStorage.getItem('mapState');
-    if (savedState) {
-        try {
-            const state = JSON.parse(savedState);
-            if (state.lat && state.lng && state.zoom) {
-                initialLat = state.lat;
-                initialLng = state.lng;
-                initialZoom = state.zoom;
+        // --- Determine initial map state ---
+        let initialLat = {{ mapLatitude }};
+        let initialLng = {{ mapLongitude }};
+        let initialZoom = {{ mapZoom }};
+
+        const savedState = localStorage.getItem(storageKey);
+        if (savedState) {
+            try {
+                const state = JSON.parse(savedState);
+                if (typeof state.lat === 'number' && typeof state.lng === 'number' && typeof state.zoom === 'number') {
+                    initialLat = state.lat;
+                    initialLng = state.lng;
+                    initialZoom = state.zoom;
+                }
+            } catch(e) {
+                console.warn(`Failed to parse ${storageKey} from localStorage`, e);
             }
-        } catch(e) {
-            console.warn('Failed to parse mapState from localStorage', e);
         }
-    }
 
-    // --- Initialize the map ---
-    const map = new maplibregl.Map({
-        container: 'map-{{ block.id }}',
-        style: {{ baseMapLayer }},
-        center: [initialLng, initialLat],
-        zoom: initialZoom,
-    });
+        // --- Initialize the map ---
+        const map = new maplibregl.Map({
+            container: mapId,
+            style: {{ baseMapLayer }},
+            center: [initialLng, initialLat],
+            zoom: initialZoom,
+        });
 
-    {{ mapMarkers }}
-    {{ mapDataLayer }}
-    {{ polygonLines }}
+        {{ mapMarkers }}
+        {{ mapDataLayer }}
+        {{ polygonLines }}
 
-    // disable scroll zoom
-    map.scrollZoom.disable();
+        // disable scroll zoom
+        map.scrollZoom.disable();
 
-    // add zoom controls
-    map.addControl(new maplibregl.NavigationControl({
-        showZoom: true,
-        showCompass: false
-    }));
-
-    // --- Save map state on pan/zoom ---
-    map.on('moveend', () => {
-        const center = map.getCenter();
-        const zoom = map.getZoom();
-
-        localStorage.setItem('mapState', JSON.stringify({
-            lng: center.lng,
-            lat: center.lat,
-            zoom: zoom
+        // add zoom controls
+        map.addControl(new maplibregl.NavigationControl({
+            showZoom: true,
+            showCompass: false
         }));
-    });
+
+        // --- Save map state on pan/zoom ---
+        map.on('moveend', () => {
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+
+            localStorage.setItem(storageKey, JSON.stringify({
+                lng: center.lng,
+                lat: center.lat,
+                zoom: zoom
+            }));
+        });
+    })();
 </script>
