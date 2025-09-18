@@ -1,7 +1,7 @@
 {% macro figCaption(assetParam, captionParam, hasSourceParam) %}
 	<figcaption>
 		{% if captionParam %}
-			<p class="caption">{{ captionParam }}</p>
+			<div class="caption">{{ captionParam }}</div>
 		{% endif %}
         {% if hasSourceParam == false %}
                 <p class="assetSource">

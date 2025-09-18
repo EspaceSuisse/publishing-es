@@ -1,0 +1,8 @@
+<section class="teaser newsTeaser">
+	{% for item in newsEntries %}
+		{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+	{% endfor %}
+	{% if goToAllNews %}
+		<a href="{{ goToAllNews.url }}">{{ goToAllNews.title }}</a>
+	{% endif %}
+</section>

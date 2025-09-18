@@ -12,8 +12,12 @@
 
     figcaption {
         .caption {
-            font-size: var(--font-size-S);
-            font-family: var(--font-default);
+            padding-top: 5px;
+            p {
+                font-size: var(--font-size-S);
+                font-family: var(--font-default);
+                line-height: 1.5;
+            }
         }
 
         .assetSource {

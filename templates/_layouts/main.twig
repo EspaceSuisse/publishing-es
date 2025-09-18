@@ -4,6 +4,9 @@
 {% set labelSubject = 'Thema' | t %}
 {% set labelGenre = 'Rubrik' | t %}
 
+{% set labelSubjectP = 'Themen' | t %}
+{% set labelGenreP = 'Rubriken' | t %}
+
 {# Sets a body css class with the section or category handle for css toplevel scoping #}
 {% set handle = entry.section.handle ?? category.group.handle ?? null %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}
