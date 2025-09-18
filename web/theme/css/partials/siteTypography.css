@@ -32,6 +32,9 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
 }
 .articleElement > p {
     text-indent: calc(var(--font-size-M) * 1.5 );
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .articleHead {
     .articleAuthors span {

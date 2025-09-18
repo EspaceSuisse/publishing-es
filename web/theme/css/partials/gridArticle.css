@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: 1fr;
     container-name: articleContainer;
-    gap: var(--layoutGap);
+    row-gap: var(--layoutGap);
+    column-gap: calc( var(--layoutGap) / 2 );
     max-width: var(--articleMaxWidth);
     margin: 0 auto;
     padding: 0 var(--airGap);
