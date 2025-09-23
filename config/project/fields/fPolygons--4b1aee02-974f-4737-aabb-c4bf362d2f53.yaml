@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: fPolygons
+instructions: null
+name: Polygons
+searchable: false
+settings:
+  createButtonLabel: 'New Polygon'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 112a7657-3989-4fc8-a084-e60b67c371e4 # Polygons
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

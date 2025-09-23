@@ -1,4 +1,4 @@
-dateModified: 1758190676
+dateModified: 1758617474
 elementSources:
   craft\elements\Asset:
     -
@@ -178,6 +178,7 @@ meta:
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
     2f21816e-21e0-4681-9644-9573089c1774: 'Person Monolingual' # Person Monolingual
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
+    4b1aee02-974f-4737-aabb-c4bf362d2f53: Polygons # Polygons
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery
     4d9d87d3-4cd6-486b-9a9b-35247259c4c3: Styling # Styling
@@ -201,6 +202,7 @@ meta:
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
+    112a7657-3989-4fc8-a084-e60b67c371e4: Polygons # Polygons
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
     746a28ba-cc90-41ff-8b16-82638446ed07: Provider # Provider
@@ -258,6 +260,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
+    licenseKey: RQLRFXJIQ243O56I9B1CE9E6
     schemaVersion: 5.12.0
   ckeditor:
     edition: standard

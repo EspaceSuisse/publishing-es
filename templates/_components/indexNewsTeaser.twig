@@ -1,3 +1,5 @@
+{% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+
 <section class="teaser newsTeaser">
 	{% for item in newsEntries %}
 		{{ macroPreviewS.listMacro(item,'gridSpan4') }}
