@@ -17,29 +17,30 @@
 {% set mapKey = block.id %}
 
 {# add markers if they are present #}
-    {% set mapMarkers %}
-        {% if block.fMxMarker %}
-        
-            const markers = [
-                {% for item in block.fMxMarker %}
-                    {
-                        coords: [{{ item.fLong }}, {{ item.fLat }}],
-                        text: '{{ item.title }}'
-                    },
-                {% endfor %}  
-            ];
+{% set mapMarkers %}
+    {% if block.fMxMarker %}
 
-            markers.forEach(m => {
-                const popup = new maplibregl.Popup({ offset: 25 }).setText(m.text);
+        const markers = [
+            {% for item in block.fMxMarker %}
+                {
+                    coords: [{{ item.fLong }}, {{ item.fLat }}],
+                    text: '{{ item.title }}'
+                },
+            {% endfor %}
+        ];
 
-                new maplibregl.Marker()
-                    .setLngLat(m.coords)
-                    .setPopup(popup)
-                    .addTo(map);
-            });
+        markers.forEach(m => {
+            const popup = new maplibregl.Popup({ offset: 25 }).setText(m.text);
+            const randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+            new maplibregl.Marker({ color: randomColor})
+                .setLngLat(m.coords)
+                .setPopup(popup)
+                .addTo(map);
+        });
 
-        {% endif %}
-    {% endset %}
+    {% endif %}
+{% endset %}
+
 
 {# set base map style #}
 {%- set baseMapLayer -%}
@@ -145,6 +146,7 @@
 
 <div id="map-{{ mapKey }}" class="cellMap"></div>
 
+{# Construct the whole map #}
 <script>
     (function() {
         const mapId = 'map-{{ mapKey }}';
