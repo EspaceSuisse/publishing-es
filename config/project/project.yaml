@@ -1,4 +1,4 @@
-dateModified: 1758190676
+dateModified: 1758617255
 elementSources:
   craft\elements\Asset:
     -
@@ -258,6 +258,7 @@ plugins:
   blitz:
     edition: standard
     enabled: true
+    licenseKey: RQLRFXJIQ243O56I9B1CE9E6
     schemaVersion: 5.12.0
   ckeditor:
     edition: standard
