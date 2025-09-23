@@ -161,19 +161,19 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-07-30T09:04:21+00:00'
+            dateAdded: '2025-09-23T08:51:14+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: fd056fec-5843-47f0-a2ad-520a3044916d # Code FIeld
+            fieldUid: 4b1aee02-974f-4737-aabb-c4bf362d2f53 # Polygons
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Polygon Coordinates'
+            label: null
             providesThumbs: false
             required: false
-            tip: 'KLM Syntax'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 60d06911-d58b-4dd0-a3ac-5f57852e4e65
+            uid: dd5305ab-1f52-4ab5-ad8b-73ab932edce3
             userCondition: null
             warning: null
             width: 100
