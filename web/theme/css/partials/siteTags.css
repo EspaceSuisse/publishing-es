@@ -3,7 +3,9 @@
     white-space: nowrap;
     font-size: var(--font-size-S);
     line-height: var(--line-height-base);
-
+    position: relative;
+    width: fit-content;
+    display: inline-block;
     a {
         text-decoration: none;
         transition: all 0.3s ease-in-out;
@@ -23,6 +25,10 @@
             border-radius: 100px;
         }
     }
+    .catIcon {
+      width: calc( var(--font-size-S) * 2); 
+      height: calc( var(--font-size-S) * 2);   
+    }
 }
 
 .tags {
@@ -39,4 +45,15 @@
         left: calc(var(--layoutGap) / 2);
         right: calc(var(--layoutGap) / 2);
     }
+}
+.hasIcon {
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 2ch;
+    transition: max-width 0.3s ease;
+}
+
+.hasIcon:hover {
+    max-width: 20ch; /* enough for full text */
 }

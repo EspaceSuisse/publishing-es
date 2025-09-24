@@ -11,11 +11,11 @@
 
 	{% if superTopic %}
     
-        {{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan7 headlineNews') }}
-        <div class="gridSpan5 superTopic">
+        {{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan8 headlineNews') }}
+        <div class="gridSpan4 superTopic">
             <h2>{{ superTopic.title }}</h2>
             {% for item in superTopicEntries %}
-                {{ macroPreviewL.listMacro(item,'gridSpan5') }}
+                {{ macroPreviewL.listMacro(item, null) }}
             {% endfor %}
         </div>
 
@@ -33,17 +33,22 @@
     const superTopic = document.querySelector(".superTopic");
 
     if (headliner && superTopic) {
+
     const applyHeight = () => {
         const height = headliner.offsetHeight;
         if (height > 0) {
-        superTopic.style.maxHeight = `${height}px`; // limit height to headlineNews
-        superTopic.classList.add("is-ready"); // optional: for fade-in
+        superTopic.style.maxHeight = `${height}px`; // limit to headline height
+        superTopic.classList.add("is-ready");      // show with optional transition
         }
     };
 
-    // Wait for images/fonts
+    // Run once after images/fonts load
     window.addEventListener("load", applyHeight);
-    };
+
+    // Optional: adjust if viewport resizes
+    window.addEventListener("resize", applyHeight);
+    }
+
 
 
 {% endjs %}

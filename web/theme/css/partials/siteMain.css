@@ -14,7 +14,10 @@
   transition: max-height 0.3s ease;
   max-height: 0;
   visibility: hidden;
-  &.is-ready {
-    visibility: visible;
+  article {
+    margin-bottom: gap: var(--layoutGap);;
   }
 }
+.superTopic.is-ready {
+    visibility: visible;
+  }
