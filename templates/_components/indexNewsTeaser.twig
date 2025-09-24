@@ -4,7 +4,9 @@
 	{% for item in newsEntries %}
 		{{ macroPreviewS.listMacro(item,'gridSpan4') }}
 	{% endfor %}
-	{% if goToAllNews %}
-		<a href="{{ goToAllNews.url }}">{{ goToAllNews.title }}</a>
+	{% if goToAllNews and newsEntries | length %}
+		<div class="gridSpan4">
+			<a href="{{ goToAllNews.url }}" class="btn gridSpan4">{{ goToAllNews.title }}</a>
+		</div>
 	{% endif %}
 </section>

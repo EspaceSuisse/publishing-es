@@ -9,9 +9,9 @@
 		{% set fullTitle = item.title %}
 
 
-			<span class="tag {{ ' ' ~ classParam }}" style="{{ inlineStyle }}"> 
+			<span class="tag {{ ' ' ~ classParam }}"> 
             {%- if linkParam == true -%}
-				<a href="{{- item.url -}}">
+				<a href="{{- item.url -}}" style="{{ inlineStyle }}">
 					{{- fullTitle -}}
 				</a>
 			{%- else -%}
