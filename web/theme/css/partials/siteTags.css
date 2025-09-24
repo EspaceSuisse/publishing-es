@@ -1,29 +1,27 @@
 .tag {
-    background-color: var(--colorES-brand-blue);
     font-family: var(--font-display);
     white-space: nowrap;
     font-size: var(--font-size-S);
     line-height: var(--line-height-base);
-    padding: 4px 9px 6px;
 
     a {
         text-decoration: none;
         transition: all 0.3s ease-in-out;
         color: var(--txtColor);
+        padding: 4px 9px 6px;
+        text-decoration: none;
         &:hover {
-            opacity: 0.6;
+            background-color: var(--linkBgHoverColor) !important;
+            color: var(--linkTxtHoverColor);
         }
     }
     &.invert, &.invert a {
         color: var(--txtInvertColor);
     }
     &.subject {
-        background-color: var(--colorES-subject);
-        border-radius: 100px;
-    }
-
-    &.genre {
-        background-color: var(--colorES-genre);
+        a {
+            border-radius: 100px;
+        }
     }
 }
 

@@ -31,10 +31,7 @@
 
 	<div class="listingGrid">
 		{% include "_components/listingHeader.twig" %}
-		<section class="headliner">
-			{% set headliner = allEntries | first %}
-			{{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
-		</section>
+		{% include "_components/indexHeadliner.twig" %}
 		{% include "_components/indexNewsTeaser.twig" %}
 		{% for item in allEntries | slice(1,2) %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
@@ -48,4 +45,5 @@
 		{% endfor %}
 	</div>
 
+	
 {% endblock %}

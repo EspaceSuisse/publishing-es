@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
+    uid: 4e75f3d6-ff7d-43bf-8be9-7eef14e6f6eb # Homepage Set
 handle: homepage
 maxAuthors: 1
 name: Homepage

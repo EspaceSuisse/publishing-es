@@ -31,7 +31,11 @@
 
     --navSpeed: 0.2s;
 
-    --colorLink: var(--txtColor);
+    --linkTxtColor: brown;
+    --linkTxtHoverColor: rgb(255, 186, 112);
+    --linkBgColor: yellow;
+    --linkBgHoverColor: purple;
+
     --hoverColor: rgb(14, 81, 135);
     --txtColor: rgb(86, 86, 86);
     --txtInvertColor: white;

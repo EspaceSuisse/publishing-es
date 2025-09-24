@@ -10,15 +10,6 @@ footer {
     }
     padding: 5vw var(--layoutGap);
 
-    a {
-        color: var(--txtInvertColor);
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
     .listTitle {
         margin-top: 0;
         font-size: var(--font-size-L);

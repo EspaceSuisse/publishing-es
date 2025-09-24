@@ -1,16 +1,13 @@
 .cellBox {
     border-top: solid 4px var(--colorES-brand-blue);
-    padding: 0;
 
     &.styleB {
         background-color: var(--colorES-brand-blue-soft);
-        padding: var(--layoutGap);
         box-shadow: var(--shadow);
     }
 
     &.styleC {
         background-color: var(--colorES-brand-petrol);
-        padding: var(--layoutGap);
         box-shadow: var(--shadow);
         border: none;
 
@@ -20,6 +17,9 @@
         .cellCardTitle {
             color: var(--txtInvertColor);
         }
+    }
+    .nonCollapsable {
+        padding: var(--layoutGap);
     }
     .boxHead {
         display: flex;
@@ -40,12 +40,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex: 1;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: var(--layoutGap);
+        .cellCardTitle {
+            pointer-events: none;
+        }
+    }
+    .cellBoxInner {
+        padding: var(--layoutGap);
     }
     .cellBoxToggle {
         color: var(--colorES-brand-blue);
         font-size: var(--font-size-M);
         &:hover {
-            color: var(--hoverColor);
+            background-color: var(--linkBgHoverColor);
+            .cellCardTitle {
+                color: var(--linkTxtHoverColor);
+            }
         }
         &.closed::after {
             content: "▼";
