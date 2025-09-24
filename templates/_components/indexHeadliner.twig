@@ -1,0 +1,49 @@
+{% import '_components/previewCards/macroArticlePreviewXL' as macroPreviewXL %}
+{% import '_components/previewCards/macroArticlePreviewL' as macroPreviewL %}
+{% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+{% import '_macros/macroCatOverview' as macroCat %}
+
+{% set superTopic = entry.fSuperTopic.one() %}
+{% set headliner = allEntries | first %}
+{% set superTopicEntries = craft.entries.section('article').relatedTo(superTopic).limit(3).all() %}
+
+<section class="headliner">
+
+	{% if superTopic %}
+    
+        {{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan7 headlineNews') }}
+        <div class="gridSpan5 superTopic">
+            <h2>{{ superTopic.title }}</h2>
+            {% for item in superTopicEntries %}
+                {{ macroPreviewL.listMacro(item,'gridSpan5') }}
+            {% endfor %}
+        </div>
+
+    {% else %}
+
+         {{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
+        
+    {% endif %}
+</section>
+
+
+{% js %}
+
+    const headliner = document.querySelector(".headlineNews");
+    const superTopic = document.querySelector(".superTopic");
+
+    if (headliner && superTopic) {
+    const applyHeight = () => {
+        const height = headliner.offsetHeight;
+        if (height > 0) {
+        superTopic.style.maxHeight = `${height}px`; // limit height to headlineNews
+        superTopic.classList.add("is-ready"); // optional: for fade-in
+        }
+    };
+
+    // Wait for images/fonts
+    window.addEventListener("load", applyHeight);
+    };
+
+
+{% endjs %}
