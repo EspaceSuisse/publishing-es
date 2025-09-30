@@ -4,6 +4,8 @@
     list-style: none;
     display: flex;
     gap: var(--layoutGap);
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     img {
         width: 50px;
@@ -15,10 +17,11 @@
     li {
         display: flex;
         gap: var(--layoutGap);
-        .authorInfo {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        justify-content: center;
+        align-items: center;
+        .authorName {
+            font-family: var(--font-default);
+            font-size: var(--font-size-S);
         }
     }
 }

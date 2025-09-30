@@ -15,20 +15,28 @@ footer {
         font-size: var(--font-size-L);
         font-family: var(--font-display);
         font-weight: var(--font-bold);
-        line-height: var(--line-height-base);
         color: var(--txtInvertColor);
     }
 
-    .entryList li {
-        font-size: var(--font-size-S);
-        font-family: var(--font-default);
-        line-height: var(--line-height-base);
-        padding: 0;
-        border-color: var(--txtInvertColor);
+    .entryList li a {
+        font-size: var(--font-size-M);
+        line-height: calc(var(--line-height-base) * 1.3);
+        color: var(--txtInvertColor);
     }
     .latestArticles {
         @media (min-width: 1023px) {
             grid-column: span 2;
+        }
+    }
+    .footerCategories {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: var(--layoutGap);
+        justify-content: flex-start;
+        align-items: flex-start;
+        > * {
+            flex: 0 0 auto;
         }
     }
     .footerContact {

@@ -4,9 +4,9 @@
 			<span class="buttonTxt">{{ paramLabel | t }}</span>
 		</button>
 		<div class="dropdown" id="dropdown-menu-{{ paramLabel | ascii }}" role="menu">
-			<ul>
+			
 				{% for category in paramQuery %}
-
+				<ul>
 					{% set relatedArticle = craft.entries()
 						.section('article')
 						.relatedTo(category)
@@ -15,16 +15,17 @@
 					%}
 
 					<li class="relatedNav">
-						<h2><a href="{{ category.url }}">{{ category.title }}</a></h2>
+						<h2 class="subnavCatTitle"><a href="{{ category.url }}">{{ category.title }}</a></h2>
 						<ul class="catArticles">
 							{% for item in relatedArticle %}
-								<li><a href="{{ item.url }}">{{ item.title | truncate(40) }}</a></li>
+								<li class="catArticleTitle"><a href="{{ item.url }}">{{ item.title | truncate(40) }}</a></li>
 							{% endfor %}
-								<li class="allCatArticles"><a href="{{ category.url }}">{{ 'Alle Artikel' | t}}: {{ category.title }}</a></li>
+								<li class="catArticleTitle"><a href="{{ category.url }}" class="btn">{{ 'Alle Artikel zum Thema' | t}}</a></li>
 						</ul>
 					</li>
+					</ul>
 				{% endfor %}
-			</ul>
+			
 		</div>
 	</li>
 {%- endmacro -%}

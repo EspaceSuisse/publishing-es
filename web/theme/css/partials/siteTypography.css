@@ -24,13 +24,12 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     }
     a {
         color: var(--linkTxtColor);
+        &:visited {
+            color: var(--linkTxtColorVisited);
+        }
         &:hover {
             color: var(--linkTxtHoverColor);
             opacity: 1;
-        }
-        &:visited {
-            color: var(--linkTxtHoverColor);
-            opacity: 0.2;
         }
     }
     h3, h4, h2 {

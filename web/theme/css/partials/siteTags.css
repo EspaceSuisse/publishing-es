@@ -3,12 +3,7 @@
     white-space: nowrap;
     font-size: var(--font-size-S);
     line-height: var(--line-height-base);
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     a {
-        text-decoration: none;
         transition: all 0.3s ease-in-out;
         color: var(--txtColor);
         padding: 4px 9px 6px;

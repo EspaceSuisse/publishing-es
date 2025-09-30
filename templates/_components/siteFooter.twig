@@ -34,17 +34,17 @@
 	<div class="footerContact">
 		{{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
 	</div>
-	<div>
+	<div class="footerCategories">
         <h3 class="listTitle">{{ labelSubject }}</h3>
         {{ macroCat.catOverview(queryFooterSubject, 'subject', true) }}
 	</div>
-	<div>
+	<div class="footerCategories">
 		<h3 class="listTitle">{{ labelGenre }}</h3>
         {{ macroCat.catOverview(queryFooterGenre, 'genre', true) }}
 	</div>
 	<div class="latestArticles">
 		{{ listMacro.listMacro(queryLatestArticle, 'Die letzten Artikel' | t, null, 'entryList' ) }}
-        <p class="listItem"><a href="{{ articleSearch.url }}">{{ articleSearch.title }}</a></p>
+        <p class="listItem"><a href="{{ articleSearch.url }}" class="btn">{{ articleSearch.title }}</a></p>
 	</div>
 	<div>
 		{{ listMacro.listMacro(querySubpages, 'Subpages' | t,) }}
