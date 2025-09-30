@@ -4,8 +4,9 @@
     font-size: var(--font-size-S);
     line-height: var(--line-height-base);
     position: relative;
-    width: fit-content;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     a {
         text-decoration: none;
         transition: all 0.3s ease-in-out;
@@ -47,13 +48,12 @@
     }
 }
 .hasIcon {
-    display: inline-flex;
-    align-items: center;
-    overflow: hidden;
-    max-width: 2ch;
-    transition: max-width 0.3s ease;
+    .catReveal {
+        max-width: 0;
+    }
 }
 
 .hasIcon:hover {
-    max-width: 20ch; /* enough for full text */
+    .catReveal {
+    }
 }

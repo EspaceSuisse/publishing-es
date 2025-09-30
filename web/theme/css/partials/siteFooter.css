@@ -26,9 +26,6 @@ footer {
         padding: 0;
         border-color: var(--txtInvertColor);
     }
-    .tag {
-        line-height: 3;
-    }
     .latestArticles {
         @media (min-width: 1023px) {
             grid-column: span 2;
