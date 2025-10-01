@@ -42,13 +42,3 @@
         right: calc(var(--layoutGap) / 2);
     }
 }
-.hasIcon {
-    .catReveal {
-        max-width: 0;
-    }
-}
-
-.hasIcon:hover {
-    .catReveal {
-    }
-}
