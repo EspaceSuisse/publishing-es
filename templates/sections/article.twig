@@ -8,22 +8,20 @@ In the switch statement the different blocks are included.
 The blocks are defined in the matrix field in the CMS.
  #}
 
-
+{# check if the article is older than 3 months #}
 {% set articleSunset = entry.postDate|date_modify('+3 months') %}
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
-
-{# Check if Live Preview #}
 {% set isPreview = craft.app.request.getParam('token') is not null %}
 
+{# Default empty class #}
+{% set articleSunsetClass = '' %}
 
-
+{# Update based on logic #}
 {% if not isPreview %}
-	{% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
-{% else %}
-	{# dont blur content in preview mode #}
-	{% set articleSunsetClass = '' %}
+    {% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
 {% endif %}
+
 
 
 
