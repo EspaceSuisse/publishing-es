@@ -1,3 +1,5 @@
+{# Here the variables from the article template are repeated. I hate that. Will make it DRY so there are global variables written only once #}
+
 {% set articleSunset = queryParam.postDate|date_modify('+3 months') %}
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
