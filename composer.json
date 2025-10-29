@@ -1,6 +1,11 @@
 {
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
   "require": {
     "craftcms/ckeditor": "4.10.1",
     "craftcms/cms": "5.8.18",

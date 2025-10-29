@@ -24,4 +24,13 @@ use craft\helpers\App;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+    'modules' => [
+        'manageplus' => [
+            'class' => \modules\manageplus\Module::class,
+            'apiEndpoint' => App::env('MANAGEPLUS_API_ENDPOINT') ?: '',
+            'sharedUserEmail' => App::env('MANAGEPLUS_SHARED_USER_EMAIL') ?: '',
+            'logUsage' => App::env('MANAGEPLUS_LOG_USAGE') ?: false,
+        ],
+    ],
+    'bootstrap' => ['manageplus'],
 ];
