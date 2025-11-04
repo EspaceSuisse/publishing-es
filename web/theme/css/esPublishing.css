@@ -17,6 +17,8 @@
 @import url("partials/siteHeader.css");
 @import url("partials/siteHeaderBranding.css");
 @import url("partials/gridArticleHead.css");
+@import url("partials/loginForm.css");
+
 
 @import url("partials/siteFooter.css");
 @import url("components/navLangSwitcher.css");

@@ -1,0 +1,32 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    label {
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        line-height: var(--line-height-base);
+    }
+    input {
+        padding: 10px;
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        line-height: var(--line-height-base);
+    }
+    .formField {
+        display: flex;
+        flex-direction: column;
+    }
+    .formActions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.loginLinks {
+    p a {
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        line-height: var(--line-height-base);
+    }
+}
