@@ -31,4 +31,14 @@ return [
             'format' => 'avif'
         ],
     ],
+    'articlePreviewXLThumb' => [
+        'displayName' => 'Article Preview XL Thumb',
+        'transforms' => [
+            ['width' => 1920, 'ratio' => 4 / 5 , 'device' => 'desktop'],
+            ['width' => 1080, 'ratio' => 4 / 5, 'device' => 'mobile'],
+        ],
+        'defaults' => [
+            'format' => 'avif'
+        ],
+    ],
 ];
