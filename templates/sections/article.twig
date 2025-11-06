@@ -1,36 +1,31 @@
 {% extends "_layouts/main" %}
 
-
 {# 
 This is the template for all articles.
 It includes the header and the matrix include which contains a switch statement.
 In the switch statement the different blocks are included.
 The blocks are defined in the matrix field in the CMS.
- #}
+#}
 
-
+{# check if the article is older than 3 months #}
 {% set articleSunset = entry.postDate|date_modify('+3 months') %}
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
-
-{# Check if Live Preview #}
 {% set isPreview = craft.app.request.getParam('token') is not null %}
 
+{# Default empty class #}
+{% set articleSunsetClass = '' %}
 
+{# Check if user is logged in #}
+{% set isLoggedIn = craft.app.user.identity is not null %}
 
-{% if not isPreview %}
-	{% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
-{% else %}
-	{# dont blur content in preview mode #}
-	{% set articleSunsetClass = '' %}
+{# Update based on logic - don't sunset if logged in #}
+{% if not isPreview and not isLoggedIn %}
+    {% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
 {% endif %}
 
-
-
 {% block content %}
-
-	<article>
-		
+	<article>		
 		<header class="articleHead">{% include "_components/articleHead" %}</header>
 		<div class="gridArticle {{ articleSunsetClass }} articleContent">
 			{% include "_components/articleMatrix" %}

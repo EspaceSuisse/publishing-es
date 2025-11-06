@@ -8,32 +8,39 @@
 	{% set signUpDe = 'https://www.espacesuisse.ch/de/verband/mitglieder' %}
 	{% set signUpFr = 'https://www.espacesuisse.ch/fr/association/membres' %}
 
-
 	<div class="listingGrid memberLogin">
 		{% include "_components/listingHeader.twig" %}
 
-		<form method="post" accept-charset="UTF-8" class="gridSpan12 loginForm">
+		{% if craft.app.session.hasFlash('error') %}
+			<div class="gridSpan12 error-message" style="color: red; padding: 1rem; margin-bottom: 1rem; background: #fee; border: 1px solid red;">
+				{{ craft.app.session.getFlash('error') }}
+			</div>
+		{% endif %}
 
+	<form method="post" action="{{ actionUrl('manageplus/login') }}" accept-charset="UTF-8" class="gridSpan6 gridStart4 loginForm">
+		{{ csrfInput() }}
+		<input type="hidden" name="redirect" value="{{ craft.app.request.getParam('redirect') }}">
+		<input type="hidden" name="language" value="{{ craft.app.language }}">
 
-			<div class="formField gridSpan5">
-				<label for="loginName">{{ 'Username' | t }}</label>
-				<input type="text" name="username" autocomplete="username" required>
+		<div class="formField">
+				<label for="username">{{ 'Username' | t }}</label>
+				<input type="text" id="username" name="username" autocomplete="username" placeholder="Username" required>
 			</div>
 
-			<div class="formField gridSpan5">
-				<label for="loginName">{{ 'Passwort' | t }}</label>
-				<input type="text" name="username" autocomplete="username" required>
+			<div class="formField">
+				<label for="password">{{ 'Passwort' | t }}</label>
+				<input type="password" id="password" name="password" autocomplete="current-password" placeholder="Passwort" required>
 			</div>
-			<div class="formField gridSpan5">
-					<input type="checkbox" id="rememberUser" name="rememberUser" />
+			<div class="formField formActions">
+				<label>
+					<input type="checkbox" id="rememberMe" name="rememberMe" value="1" />
 					{{ 'Speichere mich' | t }}
 				</label>
+				<button class="btn" type="submit">Login</button>
 			</div>
+	</form>
 
-			<button class="btn">Login</button>
-
-		</form>
-
+	<div class="gridSpan6 gridStart4 loginLinks">
 		{% if craft.app.language == 'de-CH' %}
 			<p><a href="{{ passwordResetDe }}">{{ 'Passwort Vergessen?' | t }}</a></p>
 			<p><a href="{{ signUpDe }}">{{ 'Mitglied Werden' | t }}</a></p>
@@ -41,7 +48,8 @@
 			<p><a href="{{ passwordResetFr }}">{{ 'Passwort Vergessen?' | t }}</a></p>
 			<p><a href="{{ signUpFr }}">{{ 'Mitglied Werden' | t }}</a></p>
 		{% endif %}
-		
+	</div>
+
 		
 
 	</div>

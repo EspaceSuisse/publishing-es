@@ -17,12 +17,12 @@
             line-height: var(--line-height-base);
             margin: 0;
             text-decoration: none;
-            text-transform: uppercase;
 
             &:hover {
                 text-decoration: underline;
             }
         }
+        padding-bottom: calc(var(--layoutGap) / 2);
     }
 
     .txtPart {
