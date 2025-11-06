@@ -14,8 +14,8 @@
 @import url("components/articleHead.css");
 @import url("components/navDropdownContent.css");
 
-@import url("partials/siteHeader.css");
-@import url("partials/siteHeaderBranding.css");
+@import url("partials/sideBar.css");
+@import url("partials/sideBarBranding.css");
 @import url("partials/gridArticleHead.css");
 @import url("partials/loginForm.css");
 

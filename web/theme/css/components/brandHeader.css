@@ -9,6 +9,14 @@
         font-weight: var(--font-bold);
         color: var(--colorES-brand-blue);
         margin: 0;
+        display: inline;
+        background: var(--backgroundColor);
+        padding: 5px 10px 10px;
+        a {
+            text-decoration: none;
+            color: var(--colorES-brand-blue);
+            transition: all 0.3 s ease;
+        }
     }
     .brandMagazine {
         font-size: var(--font-size-M);
@@ -23,11 +31,6 @@
         position: absolute;
         z-index: 100;
         width: 100%;
-    }
-    .brandVerband {
-        display: inline;
-        background: var(--backgroundColor);
-        padding: 5px 10px 10px;
     }
     .brandMagazine {
         display: none;
