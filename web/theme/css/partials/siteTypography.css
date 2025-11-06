@@ -86,6 +86,7 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     font-size: var(--font-size-L);
     font-family: var(--font-display);
     font-weight: var(--font-bold);
+    margin: 0;
 }
 .topicLead {
     font-size: var(--font-size-M);
