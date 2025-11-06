@@ -1,0 +1,6 @@
+@media (min-width: 65rem) {
+    .previewSizeXL {
+        flex-direction: row;
+        background: red;
+    }
+}

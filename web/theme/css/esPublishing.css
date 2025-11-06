@@ -43,7 +43,8 @@
 @import url("components/articleHeadAuthors.css");
 @import url("components/articleHeadCat.css");
 @import url("partials/siteTags.css");
-@import url("components/articlePreviews.css");
+@import url("components/previewCards/articlePreviews.css");
+@import url("components/previewCards/articlePreviewXL.css");
 @import url("components/articleShare.css");
 @import url("partials/entryList.css");
 @import url("components/listingHeader.css");
