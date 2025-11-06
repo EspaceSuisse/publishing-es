@@ -31,7 +31,10 @@
 
 	<div class="listingGrid">
 		{% include "_components/listingHeader.twig" %}
-		{% include "_components/indexHeadliner.twig" %}
+		
+		{% for item in allEntries | slice(0,1) %}
+			{{ macroPreviewXL.listMacro(item,'gridSpan12') }}
+		{% endfor %}
 		{% include "_components/indexNewsTeaser.twig" %}
 		{% for item in allEntries | slice(1,2) %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
