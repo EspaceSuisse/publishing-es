@@ -25,6 +25,8 @@
 @import url("components/navTopLevelButtons.css");
 @import url("components/articleTable.css");
 @import url("components/memberLogin.css");
+@import url("components/listingSuperTopic.css");
+@import url("components/listingCatList.css");
 
 @import url("components/articleBlocks/cellSubtitle.css");
 @import url("components/articleBlocks/cellBox.css");

@@ -1,4 +1,4 @@
-dateModified: 1758721590
+dateModified: 1762424073
 elementSources:
   craft\elements\Asset:
     -
@@ -47,6 +47,7 @@ elementSources:
         - 'field:432db72f-cf6e-4d81-90df-eef5aeb18160' # Color
         - status
         - link
+        - 'field:c344dec6-0346-4e67-99e0-ec1552b8946f' # Lightswitch
       type: native
   craft\elements\Entry:
     -
@@ -207,7 +208,6 @@ meta:
     37e776f8-e885-4df4-abeb-4e00055818d6: 'Category Set' # Category Set
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text i18n' # Plain Text i18n
     49c73379-624e-465f-92eb-b17550eca753: 'Grid Start Wide' # Grid Start Wide
-    73c6879c-bd35-46fa-a4e2-6efc7adb2c12: SuperTopic # SuperTopic
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page

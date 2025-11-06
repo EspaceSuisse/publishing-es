@@ -1,0 +1,7 @@
+.listingSuperTopic {
+    background: var(--colorES-brand-blue-soft);
+    margin-top: var(--layoutGap);
+    margin-bottom: var(--layoutGap);
+    padding-top: var(--layoutGap);
+    padding-bottom: var(--layoutGap);
+}

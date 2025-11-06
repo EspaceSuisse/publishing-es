@@ -121,6 +121,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-11-06T10:01:14+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Supertopic
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 12c775f6-0dfa-4d12-98db-7afc6b4d8c65
+            userCondition: null
+            warning: null
+            width: 100
         name: Inhalt
         uid: 8732783b-ab28-4e2b-9ceb-8f87d9ef6b90
         userCondition: null
