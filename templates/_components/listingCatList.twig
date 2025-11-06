@@ -1,8 +1,8 @@
 {% import '_macros/macroCatOverview' as macroCat %}
 
-<aside class="gridSpanAll topicList">
-	<h2 class="topicTitle">{{ labelGenreP }} & {{ labelSubjectP }}</h2>
-	<div class="tags">
+<aside class="listingGrid listingCatList">
+	<h2 class="topicTitle gridSpan12">{{ labelGenreP }} & {{ labelSubjectP }}</h2>
+	<div class="tags gridSpan12">
 		{{ macroCat.catOverview(catGenre, 'genre', true) }}
 		{{ macroCat.catOverview(catSubject, 'subject', true) }}
 	</div>

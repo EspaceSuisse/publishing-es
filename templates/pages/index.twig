@@ -35,8 +35,8 @@
 		{% for item in allEntries | slice(0,1) %}
 			{{ macroPreviewXL.listMacro(item,'gridSpan12') }}
 		{% endfor %}
-		{% for item in allEntries | slice(1,3) %}
-				{{ macroPreviewL.listMacro(item,'gridSpan4') }}
+		{% for item in allEntries | slice(1,2) %}
+				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
 		{% endfor %}
 		{# {% include "_components/indexNewsTeaser.twig" %} #}
 	</div>
@@ -44,7 +44,7 @@
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid">
 		{% for item in allEntries | slice(4,4) %}
-			{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+			{{ macroPreviewL.listMacro(item,'gridSpan4') }}
 		{% endfor %}
 		{% for item in allEntries | slice(8) %}
 			{{ macroPreviewS.listMacro(item,'gridSpan6') }}
