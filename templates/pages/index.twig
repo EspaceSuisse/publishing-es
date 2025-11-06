@@ -30,7 +30,7 @@
 	{% set goToAllNews = craft.entries.section('listingNews').with(['title','url']).one() %}
 
 	<div class="listingGrid listingSection">
-		{% include "_components/listingHeader.twig" %}
+		{% include "_components/brandHeader.twig" %}
 		
 		{% for item in allEntries | slice(0,1) %}
 			{{ macroPreviewXL.listMacro(item,'gridSpan12') }}

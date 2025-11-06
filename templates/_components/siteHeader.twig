@@ -5,6 +5,6 @@
 	{% include "_components/siteNav" %}
 	<div class="esBrandLink hideOnMobile">
 		{# {{ svg('@webroot/theme/img/logo-espacesuisse-simple.svg')|raw }} #}
-		<a href="https://www.espacesuisse.ch/">{{ currentSite.group }}</a> • <a href="{{ siteUrl }}">{{ currentSite.name }}</a>
+		<a href="https://www.espacesuisse.ch/">{{ siteBrand.fPlainTxt }}</a> • <a href="{{ siteUrl }}">{{ siteBrand.fPlainTextI18n }}</a>
 	</div>
 </div>
