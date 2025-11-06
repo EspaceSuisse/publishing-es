@@ -1,4 +1,4 @@
-name: Deploy ES Publishing to Staging
+name: Deploy ES Publishing to LIVE
 
 on:
   push:
