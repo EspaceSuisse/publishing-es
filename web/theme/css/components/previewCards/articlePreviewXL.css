@@ -1,6 +1,26 @@
 @media (min-width: 65rem) {
     .previewSizeXL {
-        flex-direction: row;
-        background: red;
+        display: grid;
+        grid-template-columns: subgrid;
+        a {
+            grid-column: span 6;
+        }
+        .txtPart {
+            grid-column: span 6;
+            justify-content: center;
+            position: relative;
+        }
+        .metaStuff {
+            align-self: end;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--layoutGap);
+            width: 100%;
+            .tags {
+                position: relative;
+                left: 0;
+            }
+        }
     }
 }

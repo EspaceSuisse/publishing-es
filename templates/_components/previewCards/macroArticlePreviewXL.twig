@@ -21,22 +21,28 @@
 		<a href="{{ queryParam.url }}">
 			{{ macroImg.articleImage(image, 'articlePreviewXLThumb', 'previewImg', locationParam) }}
 		</a>
-		{# only show categories if there are any #}
-		{% if catGenre or catSubject %}
-			<div class="tags">
-				{{ macroCat.catOverview(catGenre, 'genre', true) }}
-				{{ macroCat.catOverview(catSubject, 'subject', true) }}
-			</div>
-		{% endif %}
 
 		<div class="txtPart">
+
+			
+
 			<h2 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			<div class="previewPostDate">
-				{{ macroPostDate.postDate(queryParam) }}
-				{% include "_components/articlePreviewSunset.twig" %}
+
+			<div class="metaStuff">
+				{# only show categories if there are any #}
+				{% if catGenre or catSubject %}
+					<div class="tags">
+						{{ macroCat.catOverview(catGenre, 'genre', true) }}
+						{{ macroCat.catOverview(catSubject, 'subject', true) }}
+					</div>
+				{% endif %}
+				<div class="previewPostDate">
+					{{ macroPostDate.postDate(queryParam) }}
+					{% include "_components/articlePreviewSunset.twig" %}
+				</div>
 			</div>
 		</div>
 
