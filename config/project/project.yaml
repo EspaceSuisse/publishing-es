@@ -1,4 +1,4 @@
-dateModified: 1762424073
+dateModified: 1762426840
 elementSources:
   craft\elements\Asset:
     -
@@ -186,6 +186,7 @@ meta:
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
     2f21816e-21e0-4681-9644-9573089c1774: 'Person Monolingual' # Person Monolingual
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
+    4afbf3df-b159-483b-8c7b-3a4f6fb3c0ff: 'Site Brand' # Site Brand
     4b1aee02-974f-4737-aabb-c4bf362d2f53: Polygons # Polygons
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery

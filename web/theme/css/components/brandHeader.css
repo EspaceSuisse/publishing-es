@@ -1,0 +1,35 @@
+.brandHeader {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: var(--layoutGap);
+    margin-top: calc(var(--layoutGap) * 2);
+    .brandVerband {
+       font-size: var(--font-size-L);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        color: var(--colorES-brand-blue);
+        margin: 0;
+    }
+    .brandMagazine {
+        font-size: var(--font-size-M);
+        font-family: var(--font-display);
+        font-weight: var(--font-normal);
+        color: var(--txtColor);
+        margin-top: 5px;
+    }
+}
+.bodyArticle {
+    .brandHeader {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+    }
+    .brandVerband {
+        display: inline;
+        background: var(--backgroundColor);
+        padding: 5px 10px 10px;
+    }
+    .brandMagazine {
+        display: none;
+    }
+}
