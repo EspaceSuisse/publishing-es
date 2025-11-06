@@ -29,7 +29,7 @@
 	{% set newsEntries = craft.entries.section('news').limit(3).all() %}
 	{% set goToAllNews = craft.entries.section('listingNews').with(['title','url']).one() %}
 
-	<div class="listingGrid">
+	<div class="listingGrid listingSection">
 		{% include "_components/listingHeader.twig" %}
 		
 		{% for item in allEntries | slice(0,1) %}
@@ -42,12 +42,14 @@
 	</div>
 		{% include "_components/listingSuperTopic" %}
 		{% include "_components/listingCatList" %}
-	<div class="listingGrid">
+	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(4,4) %}
 			{{ macroPreviewL.listMacro(item,'gridSpan4') }}
 		{% endfor %}
+	</div>
+	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(8) %}
-			{{ macroPreviewS.listMacro(item,'gridSpan6') }}
+			{{ macroPreviewS.listMacro(item,'gridSpan12') }}
 		{% endfor %}
 	</div>
 

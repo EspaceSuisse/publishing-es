@@ -21,6 +21,7 @@
 
 
 @import url("partials/siteFooter.css");
+@import url("partials/listingSection.css");
 @import url("components/navLangSwitcher.css");
 @import url("components/navTopLevelButtons.css");
 @import url("components/articleTable.css");
@@ -47,6 +48,7 @@
 @import url("partials/siteTags.css");
 @import url("components/previewCards/articlePreviews.css");
 @import url("components/previewCards/articlePreviewXL.css");
+@import url("components/previewCards/articlePreviewSizeS.css");
 @import url("components/articleShare.css");
 @import url("partials/entryList.css");
 @import url("components/listingHeader.css");
