@@ -1,6 +1,7 @@
 :root {
     
-    --font-default: "adobe-aldine", sans-serif;
+    --font-default: "freight-text-pro", serif;
+    --font-default-condensed: "freighttextcmp-pro", serif;
     --font-display: "canada-type-gibson", sans-serif;
     --font-regular: 400;
     --font-bold: 600;
@@ -15,7 +16,7 @@
     --font-size-S: 1.6rem;
     --font-size-XS: 1.3rem;
     --font-size-XXS: 1rem;
-    --line-height-base: 3.1rem;
+    --line-height-base: 3.5rem;
 
     --siteSideBarWidth: 75px;
     --layoutGap: var(--font-size-M);

@@ -19,12 +19,20 @@
             text-decoration: none;
 
             &:hover {
-                text-decoration: underline;
+                color: var(--linkTxtHoverColor);
             }
         }
         padding-bottom: calc(var(--layoutGap) / 2);
     }
-
+    a picture {
+        background-color: var(--linkTxtHoverColor);
+        img {
+            transition: all 0.1s ease-in-out;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
     .txtPart {
         padding: var(--layoutGap);
         display: flex;

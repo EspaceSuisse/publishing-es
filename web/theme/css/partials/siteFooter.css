@@ -11,6 +11,12 @@ footer {
         font-family: var(--font-default);
         font-size: var(--font-size-M);
     }
+    li a {
+        text-decoration: none;
+        &:hover {
+            color: var(--linkTxtHoverColor);
+        }
+    }
     .listTitle {
         color: var(--txtInvertColor);
         font-family: var(--font-display);

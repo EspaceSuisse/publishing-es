@@ -1,5 +1,4 @@
 .cellBox {
-    border-top: solid 4px var(--colorES-brand-blue);
 
     &.styleB {
         background-color: var(--colorES-brand-blue-soft);
@@ -43,7 +42,7 @@
         flex: 1;
         justify-content: space-between;
         align-items: baseline;
-        padding: var(--layoutGap);
+        padding-top: calc(var(--layoutGap) / 2 );
         .cellCardTitle {
             pointer-events: none;
         }
@@ -52,19 +51,44 @@
         padding: var(--layoutGap);
     }
     .cellBoxToggle {
-        color: var(--colorES-brand-blue);
-        font-size: var(--font-size-M);
-        &:hover {
-            background-color: var(--linkBgHoverColor);
-            .cellCardTitle {
-                color: var(--linkTxtHoverColor);
-            }
+        transition: all 0.1s ease-in-out;
+        border-top: solid 1px var(--colorES-brand-blue);
+        h3 {
+            color: var(--colorES-brand-blue);
+            font-size: var(--font-size-M);
         }
-        &.closed::after {
-            content: "▼";
-        }
-        &.open::after {
+        &::after {
             content: "▲";
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+            font-size: var(--font-size-M);
+            color: var(--colorES-brand-blue);
+            line-height: 0;
+        }
+
+        &:hover {
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+                color: var(--linkTxtHoverColor)
+            }
+            h3 {
+                color: var(--linkTxtHoverColor);
+            
+            border-color: var(--linkTxtHoverColor);
+        }
+       &.closed::after {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        &.open::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        &.closed:hover::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        &.open:hover::after {
+            transform: translateY(-50%) rotate(0deg);
         }
     }
 }
