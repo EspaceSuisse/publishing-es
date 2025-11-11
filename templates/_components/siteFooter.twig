@@ -1,6 +1,7 @@
 {% import '_macros/macroLinkList' as listMacro %}
 {% import '_macros/macroFields' as fieldsMacro %}
 {% import '_macros/macroCatOverview' as macroCat %}
+{% import '_components/previewCards/macroArticlePreviewXS' as macroPreviewXS %}
 
 {% set labelSubject = 'Themen' %}
 {% set labelGenre = 'Genres' %}
@@ -36,7 +37,9 @@
 		</div>
 		<div class="latestArticles gridSpan8">
 			{{ listMacro.listMacro(queryLatestArticle, 'Das neuste' | t, null, 'entryList' ) }}
-			<p class="listItem"><a href="{{ articleSearch.url }}" class="btn">{{ articleSearch.title }}</a></p>
+			{% for item in queryLatestArticle %}
+				{{ macroPreviewXS.listMacro(item, null) }}
+			{% endfor %}
 		</div>
 		<div class="footerCategories gridStart5 gridSpan8">
 			{{ macroCat.catOverview(queryFooterSubject, 'subject') }}

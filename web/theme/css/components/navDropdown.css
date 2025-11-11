@@ -19,7 +19,7 @@ button.dropdownLink {
     width: 0;
     /* Deifnitions for dekstop */
     top: var(--siteSideBarWidth);
-    @media (min-width: 768px) {
+    @media (min-width: 1023px) {
         top: 0;
         left: var(--siteSideBarWidth);
         height: 100vh;
@@ -36,7 +36,8 @@ button.dropdownLink {
         box-shadow: var(--shadow);
         width: 100vw;
         left: 0;
-        @media (min-width: 768px) {
+        overflow-y: auto;
+        @media (min-width: 1023px) {
             animation-name: foldOutLeft;
             animation-duration: var(--navSpeed);
             background-color: white;
