@@ -36,7 +36,6 @@
 			{{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
 		</div>
 		<div class="latestArticles gridSpan8">
-			{{ listMacro.listMacro(queryLatestArticle, 'Das neuste' | t, null, 'entryList' ) }}
 			{% for item in queryLatestArticle %}
 				{{ macroPreviewXS.listMacro(item, null) }}
 			{% endfor %}
