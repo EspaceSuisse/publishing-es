@@ -10,7 +10,7 @@
     --font-size-base: 62.5%;
 
     --font-size-XXL: clamp(3rem, 4vw, 5rem);
-    --font-size-XL: 2.7rem;
+    --font-size-XL: 3.7rem;
     --font-size-L: clamp(2.3rem, 2.7rem, 4rem);
     --font-size-M: 2.3rem;
     --font-size-S: 1.6rem;
@@ -50,6 +50,6 @@
     --colorES-subject: rgb(249, 194, 0);
     --colorES-genre: rgb(48, 141, 192);
 
-    --shadow: 1px 3px 15px 1px rgba(0,0,0,0.05);
+    --shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
 
 }

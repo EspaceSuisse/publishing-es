@@ -5,6 +5,7 @@
     max-height: 80vh;
     overflow: hidden;  
     position: relative;
+    box-shadow: var(--shadow);
     img {
       object-fit: cover;
       object-position: center;
@@ -42,7 +43,8 @@
     .articleLeadText {
         font-size: var(--font-size-L);
         font-family: var(--font-default);
-        font-weight: var(--font-regular);
+        font-weight: var(--font-bold);
+        font-style: italic;
         line-height: 1.4;
         margin-bottom: 0;
     }
