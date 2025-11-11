@@ -32,13 +32,3 @@
     flex-wrap: wrap;
     gap: calc(var(--layoutGap) / 2);
 }
-
-.previewSizeXL,
-.previewSizeL {
-    .tags {
-        position: absolute;
-        top: calc(var(--layoutGap) / 2);
-        left: calc(var(--layoutGap) / 2);
-        right: calc(var(--layoutGap) / 2);
-    }
-}
