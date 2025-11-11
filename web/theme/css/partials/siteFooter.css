@@ -1,71 +1,24 @@
 footer {
     min-height: 50vh;
     background-color: var(--colorES-brand-blue);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--layoutGap);
-    @media (min-width: 1023px) {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        
+    padding-top: calc(var(--layoutGap) * 3);
+    padding-bottom: calc(var(--layoutGap) * 6);
+    @media (min-width: 1024px) {
+        padding-left: var(--siteSideBarWidth);
     }
-    padding: 5vw var(--layoutGap);
-
-    .listTitle {
-        margin-top: 0;
-        font-size: var(--font-size-L);
-        font-family: var(--font-display);
-        font-weight: var(--font-bold);
+    p, li a {
         color: var(--txtInvertColor);
+        font-family: var(--font-default);
+        font-size: var(--font-size-M);
     }
-
-    .entryList {
-        margin: 0;
-        li {
-            a {
-                font-size: var(--font-size-M);
-                line-height: calc(var(--line-height-base) * 1);
-                color: var(--txtInvertColor);
-                text-decoration: none;
-                &:visited {
-                    color: var(--linkTxtColorVisited);
-                }
-                &:hover {
-                    color: var(--linkTxtHoverColor);
-                    text-decoration: underline;
-                }
-            }
-        }
-
+    .listTitle {
+        color: var(--txtInvertColor);
+        font-family: var(--font-display);
+        font-size: var(--font-size-L);
     }
-    .latestArticles {
-        @media (min-width: 1023px) {
-            grid-column: span 2;
-        }
-    }
-    .footerCategories {
-        line-height: calc(var(--line-height-base) * 1.2);
-    }
-    .footerContact {
-        @media (max-width: 1023px) {
+    @media (max-width: 830px) {
+       .footerContact {
             text-align: center;
-            padding: 10vw;
-        }
-        p {
-            color: var(--txtInvertColor);
-            font-size: var(--font-size-S);
-            font-family: var(--font-default);
-            line-height: 1.4;
-            margin: 0;
-        }
-        a {
-            text-decoration: underline;
-        }
-        h3, h4, strong, b {
-            color: var(--txtInvertColor);
-            font-size: var(--font-size-M);
-            font-family: var(--font-display);
-            color: var(--txtInvertColor);
-            margin: 0;
         }
     }
 }

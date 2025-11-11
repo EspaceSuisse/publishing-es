@@ -1,20 +1,19 @@
-{% macro listMacro(queryParam, labelParam, titleClassParam, listClassParam) %}
+{%- macro listMacro(queryParam, labelParam, titleClassParam, listClassParam) -%}
 
-	{% if queryParam %}
+	{%- if queryParam -%}
 
-		{% if labelParam %}
+		{%- if labelParam -%}
 			<h3 class="listTitle {{ titleClassParam }}">{{ labelParam | t }}</h3>
-		{% endif %}
-
+		{%- endif -%}
 
 		<ul class="{{ listClassParam }}">
-			{% for item in queryParam %}
+			{%- for item in queryParam -%}
 				<li class="listItem">
-					<a href="{{ item.url }}">{{ item.title }}</a>
+					<a href="{{- item.url -}}">{{- item.title -}}</a>
 				</li>
-			{% endfor %}
+			{%- endfor -%}
 		</ul>
 		
-	{% endif %}
+	{%- endif -%}
 
-{% endmacro %}
+{%- endmacro -%}

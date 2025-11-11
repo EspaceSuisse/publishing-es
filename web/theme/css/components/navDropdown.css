@@ -18,10 +18,10 @@ button.dropdownLink {
     height: 0;
     width: 0;
     /* Deifnitions for dekstop */
-    top: var(--siteHeadWidth);
+    top: var(--siteSideBarWidth);
     @media (min-width: 768px) {
         top: 0;
-        left: var(--siteHeadWidth);
+        left: var(--siteSideBarWidth);
         height: 100vh;
     }
     .relatedNav {
@@ -40,7 +40,7 @@ button.dropdownLink {
             animation-name: foldOutLeft;
             animation-duration: var(--navSpeed);
             background-color: white;
-            left: var(--siteHeadWidth);
+            left: var(--siteSideBarWidth);
         }
         .relatedNav {
             opacity: 1;

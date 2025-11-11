@@ -2,7 +2,7 @@
     font-family: var(--font-display);
     white-space: nowrap;
     font-size: var(--font-size-S);
-    line-height: var(--line-height-base);
+    line-height: calc(var(--line-height-base) * 1.2);
     a {
         transition: all 0.3s ease-in-out;
         color: var(--txtColor);

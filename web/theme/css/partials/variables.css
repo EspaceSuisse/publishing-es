@@ -17,7 +17,7 @@
     --font-size-XXS: 1rem;
     --line-height-base: 3.1rem;
 
-    --siteHeadWidth: 75px;
+    --siteSideBarWidth: 75px;
     --layoutGap: var(--font-size-M);
     --airGap: calc(var(--font-size-M) * 0.5);
     @media (min-width: 37rem) {

@@ -30,22 +30,20 @@
 
 
 <footer>
-
-	<div class="footerContact">
-		{{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
-	</div>
-	<div class="latestArticles">
-		{{ listMacro.listMacro(queryLatestArticle, 'Das neuste' | t, null, 'entryList' ) }}
-        <p class="listItem"><a href="{{ articleSearch.url }}" class="btn">{{ articleSearch.title }}</a></p>
-	</div>
-	<div class="footerCategories">
-        {{ macroCat.catOverview(queryFooterSubject, null, true) }}
-	</div>
-	<div class="footerCategories">
-        {{ macroCat.catOverview(queryFooterGenre, null, true) }}
-	</div>
-	
-	<div>
-		{{ listMacro.listMacro(querySubpages, null | t, null, 'entryList' ) }}
+	<div class="listingGrid">
+		<div class="footerContact gridSpan4">
+			{{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
+		</div>
+		<div class="latestArticles gridSpan8">
+			{{ listMacro.listMacro(queryLatestArticle, 'Das neuste' | t, null, 'entryList' ) }}
+			<p class="listItem"><a href="{{ articleSearch.url }}" class="btn">{{ articleSearch.title }}</a></p>
+		</div>
+		<div class="footerCategories gridStart5 gridSpan8">
+			{{ macroCat.catOverview(queryFooterSubject, 'subject') }}
+			{{ macroCat.catOverview(queryFooterGenre, 'genre') }}
+		</div>
+		<div class="subPages gridSpan4">
+			{{ listMacro.listMacro(querySubpages, null, null, 'entryList' ) }}
+		</div>
 	</div>
 </footer>
