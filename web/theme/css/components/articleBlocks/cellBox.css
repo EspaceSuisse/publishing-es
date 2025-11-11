@@ -2,6 +2,9 @@
     &.styleB {
         background-color: var(--colorES-brand-blue-soft);
         box-shadow: var(--shadow);
+        button {
+            padding: var(--layoutGap);
+        }
     }
 
     &.styleC {
