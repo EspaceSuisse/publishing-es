@@ -49,6 +49,7 @@
 				<a href="{{ esBase.genericUrl }}">{{ esBase.genericUrl }}</a><br>
 				<a href="tel:{{ esBase.genericTelephone }}">{{ esBase.genericTelephone }}</a>
 			</p>
+			{% include "_components/mailchimpForm" %}
 		</div>
 		<div class="latestArticles gridSpan8">
 			{% for item in queryLatestArticle %}
