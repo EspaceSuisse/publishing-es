@@ -19,10 +19,7 @@
 
 		{%- if catIcon -%}
 			<span class="tag {{ ' ' ~ classParam }}"> 
-				<a href="{{- item.url -}}" style="{{ inlineStyle }}" class="hasIcon">
-					{{ svgCatIcon }}
-					<span class="catReveal">{{- fullTitle -}}</span>
-				</a>
+				<a href="{{- item.url -}}" style="{{ inlineStyle }}" class="hasIcon">{{ svgCatIcon }}<span class="catReveal">{{- fullTitle -}}</span></a>
 			</span>
 		{% else %}
 			<span class="tag {{ ' ' ~ classParam }}"> 

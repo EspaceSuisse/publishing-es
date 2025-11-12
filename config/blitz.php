@@ -13,7 +13,6 @@ return [
         ],
         'excludedUriPatterns' => [
             ['uriPattern' => '^/knock-knock/who-is-there'],
-            // ['uriPattern' => '\.(json|xml|rss)$'],
         ],
     ],
     'dev' => [

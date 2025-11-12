@@ -95,23 +95,6 @@ fieldLayouts:
             uid: a359d0ad-236c-49c1-833c-5e3b5700b745
             userCondition: null
           -
-            dateAdded: '2025-09-24T13:26:25+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 73c6879c-bd35-46fa-a4e2-6efc7adb2c12 # SuperTopic
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1d715d34-cb11-4d5f-abc6-bdca816a38f4
-            userCondition: null
-            warning: null
-            width: 25
-          -
             content: 'Artikel die den Super Topic enthalten, werden auf der Homepage gesondert dargestellt.'
             dateAdded: '2025-09-24T13:26:25+00:00'
             displayInPane: true

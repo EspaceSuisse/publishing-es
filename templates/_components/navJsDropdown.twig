@@ -1,6 +1,4 @@
-{# Ads a .open class to the dropdown list and removes it if a dropdown is already open #}
 {% js %}
-
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.dropdownLink').forEach(button => {
             button.addEventListener('click', (event) => {
@@ -13,6 +11,8 @@
                 document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
                     if (openDropdown !== dropdown) {
                         openDropdown.classList.remove('open');
+                        const parentButton = openDropdown.closest('li').querySelector('.dropdownLink');
+                        if (parentButton) parentButton.classList.remove('open');
                     }
                 });
 
@@ -20,16 +20,16 @@
                     // Start slide-out animation
                     dropdown.classList.add('closing');
                     dropdown.classList.remove('open');
+                    button.classList.remove('open');
 
                     setTimeout(() => {
                         dropdown.classList.remove('closing');
                     }, 300); // match transition duration
                 } else {
                     dropdown.classList.add('open');
+                    button.classList.add('open');
                 }
             });
         });
     });
-
-
 {% endjs %}

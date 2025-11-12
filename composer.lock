@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4f4485c972c5fbf4c25eb2b1c8d00f3",
+    "content-hash": "821cd27df33dade505e72a7c019e22a9",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1485,11 +1485,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.8.18",
+            "version": "5.8.19",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/ff394ccb9e70c83f16f47ea159ab2331b5e05084",
-                "reference": "ff394ccb9e70c83f16f47ea159ab2331b5e05084",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2fdb2031cdf41875121c3f4b0094551ae95a2c38",
+                "reference": "2fdb2031cdf41875121c3f4b0094551ae95a2c38",
                 "shasum": ""
             },
             "require": {
@@ -1586,7 +1586,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-10-06T18:25:26+00:00"
+            "time": "2025-10-28T19:21:54+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -11035,11 +11035,11 @@
         },
         {
             "name": "verbb/workflow",
-            "version": "3.0.11",
+            "version": "3.0.12",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/workflow/zipball/01a7bef1aeecbed9643194a3838b5bd52d00817d",
-                "reference": "01a7bef1aeecbed9643194a3838b5bd52d00817d",
+                "url": "https://api.github.com/repos/verbb/workflow/zipball/23ddbf3ee61b74e421b9e2aeb6c6b7945f421b6e",
+                "reference": "23ddbf3ee61b74e421b9e2aeb6c6b7945f421b6e",
                 "shasum": ""
             },
             "require": {
@@ -11084,7 +11084,7 @@
                 "docs": "https://github.com/verbb/workflow",
                 "rss": "https://github.com/verbb/workflow/commits/v2.atom"
             },
-            "time": "2025-09-02T05:24:53+00:00"
+            "time": "2025-11-06T04:19:42+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -12798,11 +12798,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.4"
     },

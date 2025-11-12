@@ -15,4 +15,7 @@ return [
     'staging' => [
         'enabled' => true,
     ],
+    'production' => [
+        'enabled' => true,
+    ],
 ];

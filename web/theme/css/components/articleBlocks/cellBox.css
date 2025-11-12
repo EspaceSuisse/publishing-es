@@ -1,9 +1,10 @@
 .cellBox {
-    border-top: solid 4px var(--colorES-brand-blue);
-
     &.styleB {
         background-color: var(--colorES-brand-blue-soft);
         box-shadow: var(--shadow);
+        button {
+            padding: var(--layoutGap);
+        }
     }
 
     &.styleC {
@@ -18,14 +19,17 @@
             color: var(--txtInvertColor);
         }
     }
+
     .nonCollapsable {
         padding: var(--layoutGap);
     }
+
     .boxHead {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     .collapsed {
         overflow: hidden;
         transition: height 0.4s ease;
@@ -35,6 +39,7 @@
             height: auto;
         }
     }
+
     .cellBoxToggle {
         cursor: pointer;
         display: flex;
@@ -43,28 +48,62 @@
         flex: 1;
         justify-content: space-between;
         align-items: baseline;
-        padding: var(--layoutGap);
+        padding-top: calc(var(--layoutGap) / 2);
+
         .cellCardTitle {
             pointer-events: none;
         }
     }
+
     .cellBoxInner {
         padding: var(--layoutGap);
     }
+
     .cellBoxToggle {
-        color: var(--colorES-brand-blue);
-        font-size: var(--font-size-M);
+        transition: all 0.1s ease-in-out;
+        border-top: solid 1px var(--colorES-brand-blue);
+
+        h3 {
+            color: var(--colorES-brand-blue);
+            font-size: var(--font-size-M);
+        }
+
+        &::after {
+            content: "▲";
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+            font-size: var(--font-size-M);
+            color: var(--colorES-brand-blue);
+            line-height: 0;
+        }
+
         &:hover {
-            background-color: var(--linkBgHoverColor);
-            .cellCardTitle {
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
                 color: var(--linkTxtHoverColor);
             }
-        }
-        &.closed::after {
-            content: "▼";
-        }
-        &.open::after {
-            content: "▲";
+
+            h3 {
+                color: var(--linkTxtHoverColor);
+
+                border-color: var(--linkTxtHoverColor);
+            }
+
+            &.closed::after {
+                transform: translateY(-50%) rotate(0deg);
+            }
+
+            &.open::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            &.closed:hover::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            &.open:hover::after {
+                transform: translateY(-50%) rotate(0deg);
+            }
         }
     }
 }

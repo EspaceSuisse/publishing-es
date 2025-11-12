@@ -19,12 +19,20 @@
             text-decoration: none;
 
             &:hover {
-                text-decoration: underline;
+                color: var(--linkTxtHoverColor);
             }
         }
         padding-bottom: calc(var(--layoutGap) / 2);
     }
-
+    a picture {
+        background-color: var(--linkTxtHoverColor);
+        img {
+            transition: all 0.1s ease-in-out;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
     .txtPart {
         padding: var(--layoutGap);
         display: flex;
@@ -45,12 +53,15 @@
         font-family: var(--font-default);
     }
 
-    .previewPostDate {
+    .previewMeta {
         margin-top: auto;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        flex-direction: row-reverse;
+    }
+    .previewMetaHeader {
+        display: flex;
+        justify-content: space-between;
     }
     &.newsCard {
         box-shadow: none;
