@@ -1,0 +1,148 @@
+color: null
+description: null
+fieldLayouts:
+  1c24f3e1-4a89-430c-9c68-8e2e7ef4d959:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-09-24T13:23:46+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5c69bc2a-85df-4dc2-a252-92d5daf10135
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Google Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a3c79c5-3a47-449e-a323-e4a96ac875b6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d57a4ec-8fc4-4a92-81fc-968bde69d8f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85a74d5e-3def-48f9-a65a-5d1d90c00c2f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a359d0ad-236c-49c1-833c-5e3b5700b745
+            userCondition: null
+          -
+            content: 'Artikel die den Super Topic enthalten, werden auf der Homepage gesondert dargestellt.'
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: c89d4904-2d24-43fd-bd1c-dc8b5a3efc88
+            userCondition: null
+            width: 75
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 37b955f9-6052-4aab-8977-882460d5d355
+            userCondition: null
+        name: Content
+        uid: 7823158a-5679-4ea0-93ad-f2b4074cecc0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 91b81ff9-4af2-440b-b42a-16821f2d0d5c # SEO Page
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72f09d98-5736-409d-add0-57ffec1674fa
+            userCondition: null
+            warning: null
+            width: 100
+        name: Google
+        uid: b2c887e2-ba63-428a-a14a-813f6b5e54ea
+        userCondition: null
+handle: homepageSet
+hasTitleField: true
+icon: null
+name: 'Homepage Set'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

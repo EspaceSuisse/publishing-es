@@ -1,6 +1,7 @@
 :root {
     
-    --font-default: "adobe-aldine", sans-serif;
+    --font-default: "freight-text-pro", serif;
+    --font-default-condensed: "freighttextcmp-pro", serif;
     --font-display: "canada-type-gibson", sans-serif;
     --font-regular: 400;
     --font-bold: 600;
@@ -9,15 +10,15 @@
     --font-size-base: 62.5%;
 
     --font-size-XXL: clamp(3rem, 4vw, 5rem);
-    --font-size-XL: 2.7rem;
-    --font-size-L: clamp(2.3rem, 2.4rem, 2.5rem);
+    --font-size-XL: 3.7rem;
+    --font-size-L: clamp(2.3rem, 2.7rem, 4rem);
     --font-size-M: 2.3rem;
     --font-size-S: 1.6rem;
     --font-size-XS: 1.3rem;
     --font-size-XXS: 1rem;
-    --line-height-base: 3.1rem;
+    --line-height-base: 3.5rem;
 
-    --siteHeadWidth: 75px;
+    --siteSideBarWidth: 75px;
     --layoutGap: var(--font-size-M);
     --airGap: calc(var(--font-size-M) * 0.5);
     @media (min-width: 37rem) {
@@ -31,8 +32,12 @@
 
     --navSpeed: 0.2s;
 
-    --colorLink: var(--txtColor);
-    --hoverColor: rgb(14, 81, 135);
+    --linkTxtColor: var(--colorES-brand-blue);
+    --linkTxtHoverColor: rgb(240, 179, 80);
+    --linkBgColor: var(--colorES-brand-blue-soft);
+    --linkBgHoverColor: var(--colorES-brand-blue);
+    --linkTxtColorVisited: grey;
+
     --txtColor: rgb(86, 86, 86);
     --txtInvertColor: white;
 
@@ -45,6 +50,6 @@
     --colorES-subject: rgb(249, 194, 0);
     --colorES-genre: rgb(48, 141, 192);
 
-    --shadow: 1px 3px 5px 1px rgba(0,0,0,0.2);
+    --shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
 
 }

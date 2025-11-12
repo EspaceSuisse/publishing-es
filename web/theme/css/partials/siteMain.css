@@ -9,3 +9,15 @@
   opacity: 0.5;
   pointer-events: none;
 }
+.superTopic {
+  overflow-y: auto;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  visibility: hidden;
+  article {
+    margin-bottom: gap: var(--layoutGap);;
+  }
+}
+.superTopic.is-ready {
+    visibility: visible;
+  }

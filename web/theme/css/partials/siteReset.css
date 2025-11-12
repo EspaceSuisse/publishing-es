@@ -2,6 +2,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body, figure {
@@ -19,4 +22,7 @@ button {
 ul {
   list-style-type: none;
   padding-left: 0;
+}
+picture {
+    display: block;
 }

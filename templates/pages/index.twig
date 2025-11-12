@@ -7,8 +7,17 @@
 
 {% block content %}
 
-{% set catGenre = craft.categories.group('catGenre').all() %}
-	{% set catSubject = craft.categories.group('catSubject').all() %}
+	{% set catGenre = craft.categories()
+		.group('catGenre')
+		.relatedTo({ sourceElement: craft.entries.section('article').ids() })
+		.all()
+	%}
+
+	{% set catSubject = craft.categories()
+		.group('catSubject')
+		.relatedTo({ sourceElement: craft.entries.section('article').ids() })
+		.all()
+	%}
 
 	{% set allEntries = craft.entries()
 		.section('article')
@@ -20,36 +29,29 @@
 	{% set newsEntries = craft.entries.section('news').limit(3).all() %}
 	{% set goToAllNews = craft.entries.section('listingNews').with(['title','url']).one() %}
 
-	<div class="listingGrid">
-		{% include "_components/listingHeader.twig" %}
-		<section class="headliner">
-			{% set headliner = allEntries | first %}
-			{{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
-		</section>
-		<section class="teaser newsTeaser">
-			{% for item in newsEntries %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
-			{% endfor %}
-			<a href="{{ goToAllNews.url }}">{{ goToAllNews.title }}</a>
-		</section>
-		<section class="latest">
-			{% for item in allEntries | slice(4,2) %}
+	<div class="listingGrid listingSection">
+		{% include "_components/brandHeader.twig" %}
+		
+		{% for item in allEntries | slice(0,1) %}
+			{{ macroPreviewXL.listMacro(item,'gridSpan12') }}
+		{% endfor %}
+		{% for item in allEntries | slice(1,2) %}
 				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-			{% endfor %}
-		</section>
-		<aside class="gridSpanAll topicList">
-			<h2 class="topicTitle">{{ labelGenre }} & {{ labelSubject }}</h2>
-			<p class="topicLead">Hier werden alle Möglichen {{ labelGenre }} & {{ labelSubject }} angezeigt. Auch die, welche noch keine Einträge haben. Später dann nur die, welche eintraäge haben.</p>
-			<div class="tags">
-				{{ macroCat.catOverview(catGenre, 'genre', true) }}
-				{{ macroCat.catOverview(catSubject, 'subject', true) }}
-			</div>
-		</aside>
-		<section class="latest">
-			{% for item in allEntries | slice(6) %}
-				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-			{% endfor %}
-		</section>
+		{% endfor %}
+		{# {% include "_components/indexNewsTeaser.twig" %} #}
+	</div>
+		{% include "_components/listingSuperTopic" %}
+		{% include "_components/listingCatList" %}
+	<div class="listingGrid listingSection">
+		{% for item in allEntries | slice(4,4) %}
+			{{ macroPreviewL.listMacro(item,'gridSpan4') }}
+		{% endfor %}
+	</div>
+	<div class="listingGrid listingSection">
+		{% for item in allEntries | slice(8) %}
+			{{ macroPreviewS.listMacro(item,'gridSpan12') }}
+		{% endfor %}
 	</div>
 
+	
 {% endblock %}

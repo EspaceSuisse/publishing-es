@@ -1,0 +1,12 @@
+{% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+
+<section class="teaser newsTeaser">
+	{% for item in newsEntries %}
+		{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+	{% endfor %}
+	{% if goToAllNews and newsEntries | length %}
+		<div class="gridSpan4">
+			<a href="{{ goToAllNews.url }}" class="btn gridSpan4">{{ goToAllNews.title }}</a>
+		</div>
+	{% endif %}
+</section>

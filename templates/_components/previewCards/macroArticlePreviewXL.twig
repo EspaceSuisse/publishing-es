@@ -5,6 +5,11 @@
     {% import '_macros/macroPostDate' as macroPostDate %}
 
 	{% set image = queryParam.fImgI18n.one() %}
+
+	{% set locationParam = 'articlePreviewXL' %}
+	
+	
+	{# get related categories. if not defined, use empty array #}
 	{% set catGenre = queryParam.fCatGenre ? queryParam.fCatGenre.all() : [] %}
 	{% set catSubject = queryParam.fCatSubject ? queryParam.fCatSubject.all() : [] %}
 
@@ -14,21 +19,30 @@
 
 	<article class="articlePreview previewSizeXL {{ classParam }}">
 		<a href="{{ queryParam.url }}">
-			{{ macroImg.articleImage(image, 'articleThumb', 'previewImg') }}
+			{{ macroImg.articleImage(image, 'articlePreviewXLThumb', 'previewImg', locationParam) }}
 		</a>
-		<div class="tags">
-			{{ macroCat.catOverview(catGenre, 'genre', true) }}
-			{{ macroCat.catOverview(catSubject, 'subject', true) }}
-		</div>
 
 		<div class="txtPart">
+
+			
+
 			<h2 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			<div class="previewPostDate">
-				{{ macroPostDate.postDate(queryParam) }}
-				{% include "_components/articlePreviewSunset.twig" %}
+
+			<div class="metaStuff">
+				{# only show categories if there are any #}
+				{% if catGenre or catSubject %}
+					<div class="tags">
+						{{ macroCat.catOverview(catGenre, 'genre', true) }}
+						{{ macroCat.catOverview(catSubject, 'subject', true) }}
+					</div>
+				{% endif %}
+				<div class="previewPostDate">
+					{{ macroPostDate.postDate(queryParam) }}
+					{% include "_components/articlePreviewSunset.twig" %}
+				</div>
 			</div>
 		</div>
 

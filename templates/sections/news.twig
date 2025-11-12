@@ -1,15 +1,23 @@
 {% extends "_layouts/main" %}
-
+{% import '_macros/macroImage' as macro %}
 
 {# news template #}
 
 
 {% block content %}
 
+	{% set newsImg = entry.fImgI18n.one() %}
+
 	<article>
 		
 		<header class="newsHead">{% include "_components/newsHead" %}</header>
 		<div class="gridArticle articleContent">
+			{# News section does not have articles, so we use the articleMatrix here to display the news entries #}
+			{# The articleMatrix component is flexible enough to handle news entries as well #}
+			{# We just need to ensure that the articleMatrix can handle entries from the news #}
+
+			{{ macro.articleImage(newsImg, 'articleThumb', 'gridSpan8 gridStart3') }}
+
 			{% include "_components/articleMatrix" %}
 		</div>
         {# Not compatible with news section for now #}

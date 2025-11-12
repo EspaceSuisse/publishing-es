@@ -1,5 +1,6 @@
 .cellMap {
     aspect-ratio: 16 / 9;
+    box-shadow: var(--shadow);
 }
 @media (max-width: 768px) {
     .cellMap {

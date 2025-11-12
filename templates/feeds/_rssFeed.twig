@@ -7,8 +7,8 @@
 <channel>
     <title>{{ siteName }} - {{ 'Artikel' | t }} {{ language|slice(0,2) }}</title>
     <link>{{ siteUrl(language) }}</link>
-     <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/articled-' ~ language |slice(0,2) }}.rss" />
-    <description>{{ 'Latest articles in'|t(language) ~ ' ' ~ language }}</description>
+     <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/articles-' ~ language |slice(0,2) }}.rss" />
+    <description>{{ 'Neuste Artikel in' | t (language) ~ ' ' ~ language }}</description>
     <language>{{ language }}</language>
 
     {% set deSiteHandle = 'default' %}

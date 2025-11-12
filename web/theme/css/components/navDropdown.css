@@ -6,22 +6,19 @@ button.dropdownLink {
     text-decoration: underline;
     padding: 0;
     font-size: var(--font-size-base);
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 .dropdown {
     overflow: hidden;
-    background-color: white;
+    background-color: var(--backgroundColor);
     position: absolute;
     height: 0;
     width: 0;
     /* Deifnitions for dekstop */
-    top: var(--siteHeadWidth);
-    @media (min-width: 768px) {
+    top: var(--siteSideBarWidth);
+    @media (min-width: 1023px) {
         top: 0;
-        left: var(--siteHeadWidth);
+        left: var(--siteSideBarWidth);
         height: 100vh;
     }
     .relatedNav {
@@ -36,11 +33,12 @@ button.dropdownLink {
         box-shadow: var(--shadow);
         width: 100vw;
         left: 0;
-        @media (min-width: 768px) {
+        overflow-y: auto;
+        @media (min-width: 1023px) {
             animation-name: foldOutLeft;
             animation-duration: var(--navSpeed);
-            background-color: white;
-            left: var(--siteHeadWidth);
+            background-color: var(--backgroundColor);
+            left: var(--siteSideBarWidth);
         }
         .relatedNav {
             opacity: 1;

@@ -1,29 +1,29 @@
 .tag {
-    background-color: var(--colorES-brand-blue);
     font-family: var(--font-display);
     white-space: nowrap;
     font-size: var(--font-size-S);
-    line-height: var(--line-height-base);
-    padding: 4px 9px 6px;
-
+    line-height: calc(var(--line-height-base) * 1.2);
     a {
-        text-decoration: none;
         transition: all 0.3s ease-in-out;
         color: var(--txtColor);
+        padding: 4px 9px 6px;
+        text-decoration: none;
         &:hover {
-            opacity: 0.6;
+            background-color: var(--linkBgHoverColor) !important;
+            color: var(--linkTxtHoverColor);
         }
     }
     &.invert, &.invert a {
         color: var(--txtInvertColor);
     }
     &.subject {
-        background-color: var(--colorES-subject);
-        border-radius: 100px;
+        a {
+            border-radius: 100px;
+        }
     }
-
-    &.genre {
-        background-color: var(--colorES-genre);
+    .catIcon {
+      width: calc( var(--font-size-S) * 2); 
+      height: calc( var(--font-size-S) * 2);   
     }
 }
 
@@ -31,14 +31,4 @@
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--layoutGap) / 2);
-}
-
-.previewSizeXL,
-.previewSizeL {
-    .tags {
-        position: absolute;
-        top: calc(var(--layoutGap) / 2);
-        left: calc(var(--layoutGap) / 2);
-        right: calc(var(--layoutGap) / 2);
-    }
 }

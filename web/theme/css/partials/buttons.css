@@ -1,0 +1,15 @@
+.btn {
+    background-color: var(--linkBgColor);
+    color: var(--linkTxtColor);
+    padding: calc( var(--layoutGap) / 2);
+    display: inline-block;
+    font-family: var(--font-display);
+    font-weight: var(--fontBold);
+    font-size: var(--font-size-S);
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--linkBgHoverColor);
+        color: var(--linkTxtHoverColor);
+    }
+}

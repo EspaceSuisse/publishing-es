@@ -2,21 +2,28 @@
 
 {% set expanded = block.fSwitch %}
 {% set expandedClass = expanded ? 'expanded' : 'collapsed' %}
+
 <div class="boxHead">
 
-    <h3 class="cellCardTitle" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</h3>
+    
     {% if expandedClass == 'collapsed' %}
         <button 
             class="cellBoxToggle {% if expandedClass == 'collapsed' %}closed{% else %}open{% endif %}"
             aria-expanded="{{ expanded ? 'true' : 'false' }}"
             aria-controls="cellBoxContent-{{ block.id }}">
 
+            <h3 class="cellCardTitle" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</h3>
+            
         </button>
+    {% else %}
+
+        <h3 class="cellCardTitle nonCollapsable" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</h3>
+
     {% endif %}
 </div>
 
 <div class="cellBoxContent {{ expandedClass }}" id="cellBoxContent-{{ block.id }}" role="region" aria-labelledby="cellBoxTitle-{{ block.id }}">
-    {{ block.fRichTextI18n }}
+    <div class="cellBoxInner">{{ block.fRichTextI18n }}</div>
 </div>
 
 {% js %}

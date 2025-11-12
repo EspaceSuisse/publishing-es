@@ -1,0 +1,60 @@
+{% js %}
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.getElementById('mc-embedded-subscribe-form');
+		const emailInput = document.getElementById('mce-EMAIL');
+		const firstNameInput = document.getElementById('mce-FNAME');
+		const lastNameInput = document.getElementById('mce-LNAME');
+		const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+		const responseError = document.getElementById('mce-error-response');
+		const responseSuccess = document.getElementById('mce-success-response');
+
+		form.addEventListener('submit', (e) => {
+			let valid = true;
+			let messages = [];
+
+			// Reset messages
+			responseError.style.display = 'none';
+			responseSuccess.style.display = 'none';
+			responseError.textContent = '';
+
+			// Email validation
+			const emailValue = emailInput.value.trim();
+			const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+			if (!emailPattern.test(emailValue)) {
+			valid = false;
+			messages.push('{{ "Bitte eine gültige E-Mail-Adresse eingeben." | t }}');
+			}
+
+			// First name validation
+			if (firstNameInput.value.trim() === '') {
+			valid = false;
+			messages.push('{{ "Bitte Vorname eingeben." | t }}');
+			}
+
+			// Last name validation
+			if (lastNameInput.value.trim() === '') {
+			valid = false;
+			messages.push('{{ "Bitte Nachname eingeben." | t }}');
+			}
+
+			// Checkbox validation
+			const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
+			if (!anyChecked) {
+			valid = false;
+			messages.push('Bitte mindestens einen Newsletter auswählen.');
+			}
+
+			// If invalid, prevent form submission and show errors
+			if (!valid) {
+			e.preventDefault();
+			responseError.innerHTML = messages.join('<br>');
+			responseError.style.display = 'block';
+			responseError.style.color = '#b91c1c'; // red
+			return;
+			}
+
+			// Disable button temporarily to avoid double submissions
+			form.querySelector('#mc-embedded-subscribe').disabled = true;
+		});
+	});
+{% endjs %}

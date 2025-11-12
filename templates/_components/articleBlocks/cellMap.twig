@@ -14,31 +14,33 @@
 {% set mapLayer = block.fPlainTxt %}
 {% set polygonPath = block.fCode.value ?? '' %}
 {% set markerEnabled = block.fSwitch ?? false %}
+{% set mapKey = block.id %}
 
 {# add markers if they are present #}
-    {% set mapMarkers %}
-        {% if block.fMxMarker %}
-        
-            const markers = [
-                {% for item in block.fMxMarker %}
-                    {
-                        coords: [{{ item.fLong }}, {{ item.fLat }}],
-                        text: '{{ item.title }}'
-                    },
-                {% endfor %}  
-            ];
+{% set mapMarkers %}
+    {% if block.fMxMarker %}
 
-            markers.forEach(m => {
-                const popup = new maplibregl.Popup({ offset: 25 }).setText(m.text);
+        const markers = [
+            {% for item in block.fMxMarker %}
+                {
+                    coords: [{{ item.fLong }}, {{ item.fLat }}],
+                    text: '{{ item.title }}'
+                },
+            {% endfor %}
+        ];
 
-                new maplibregl.Marker()
-                    .setLngLat(m.coords)
-                    .setPopup(popup)
-                    .addTo(map);
-            });
+        markers.forEach(m => {
+            const popup = new maplibregl.Popup({ offset: 25 }).setText(m.text);
+            const randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+            new maplibregl.Marker({ color: randomColor})
+                .setLngLat(m.coords)
+                .setPopup(popup)
+                .addTo(map);
+        });
 
-        {% endif %}
-    {% endset %}
+    {% endif %}
+{% endset %}
+
 
 {# set base map style #}
 {%- set baseMapLayer -%}
@@ -86,83 +88,120 @@
 {% endset %}
 
 {# set polygon lines #}
+{# THis generates the polygon or circle lines drawn on the map in polyigon matrix fields #}
 {% set polygonLines %}
-    {% if block.fCode.value %}
-        map.on('load', () => {
-            map.addSource('polygon-source', {
+    map.on('load', () => {
+        {% for item in block.fPolygons %}
+            // Unique source id
+            map.addSource('polygon-source-{{ loop.index }}', {
                 'type': 'geojson',
                 'data': {
                     "type": "FeatureCollection",
-                    "features": {{ block.fCode.value | raw }}
+                    "features": {{ item.fCode.value | raw }}
                 }
             });
-
-            map.addLayer({
-                'id': 'polygon-layer',
-                'type': 'fill',
-                'source': 'polygon-source',
-                'layout': {},
-                'paint': {
-                    'fill-color': '#888888',
-                    'fill-opacity': 0.5
-                }
-            });
-        });
-    {% endif %}
+            {% if 'circle' in item.fCode.value %}
+                // Circle layer (based on Point + radius)
+                map.addLayer({
+                    'id': 'circle-layer-{{ loop.index }}',
+                    'type': 'circle',
+                    'source': 'polygon-source-{{ loop.index }}',
+                    'paint': {
+                        'circle-radius': [
+                            '*',
+                            ['get', 'radius'],  // get the radius from GeoJSON
+                            0.1                 // multiply by pixel factor
+                        ],
+                        'circle-color': ['get', 'color'],
+                        'circle-opacity': 0.1,
+                        'circle-stroke-color': ['get', 'color'],
+                        'circle-stroke-width': 4,
+                    }
+                });
+            {% else %}
+                // Fill layer
+                map.addLayer({
+                    'id': 'polygon-fill-{{ loop.index }}',
+                    'type': 'fill',
+                    'source': 'polygon-source-{{ loop.index }}',
+                    'paint': {
+                        'fill-color': ['get', 'color'],   // use color from properties
+                        'fill-opacity': 0.4
+                    }
+                });
+                // Outline layer
+                map.addLayer({
+                    'id': 'polygon-outline-{{ loop.index }}',
+                    'type': 'line',
+                    'source': 'polygon-source-{{ loop.index }}',
+                    'paint': {
+                        'line-color': ['get', 'color'],  // same property
+                        'line-width': 2
+                    }
+                });
+            {% endif %}
+        {% endfor %}
+    });
 {% endset %}
 
-<div id="map-{{ block.id }}" class="cellMap"></div>
+<div id="map-{{ mapKey }}" class="cellMap"></div>
 
+{# Construct the whole map #}
 <script>
-    // --- Determine initial map state ---
-    let initialLat = {{ mapLatitude }};
-    let initialLng = {{ mapLongitude }};
-    let initialZoom = {{ mapZoom }};
+    (function() {
+        const mapId = 'map-{{ mapKey }}';
+        const storageKey = `mapState-${mapId}`;
 
-    const savedState = localStorage.getItem('mapState');
-    if (savedState) {
-        try {
-            const state = JSON.parse(savedState);
-            if (state.lat && state.lng && state.zoom) {
-                initialLat = state.lat;
-                initialLng = state.lng;
-                initialZoom = state.zoom;
+        // --- Determine initial map state ---
+        let initialLat = {{ mapLatitude }};
+        let initialLng = {{ mapLongitude }};
+        let initialZoom = {{ mapZoom }};
+
+        const savedState = localStorage.getItem(storageKey);
+        if (savedState) {
+            try {
+                const state = JSON.parse(savedState);
+                if (typeof state.lat === 'number' && typeof state.lng === 'number' && typeof state.zoom === 'number') {
+                    initialLat = state.lat;
+                    initialLng = state.lng;
+                    initialZoom = state.zoom;
+                }
+            } catch(e) {
+                console.warn(`Failed to parse ${storageKey} from localStorage`, e);
             }
-        } catch(e) {
-            console.warn('Failed to parse mapState from localStorage', e);
         }
-    }
 
-    // --- Initialize the map ---
-    const map = new maplibregl.Map({
-        container: 'map-{{ block.id }}',
-        style: {{ baseMapLayer }},
-        center: [initialLng, initialLat],
-        zoom: initialZoom,
-    });
+        // --- Initialize the map ---
+        const map = new maplibregl.Map({
+            container: mapId,
+            style: {{ baseMapLayer }},
+            center: [initialLng, initialLat],
+            zoom: initialZoom,
+        });
 
-    {{ mapMarkers }}
-    {{ mapDataLayer }}
-    {{ polygonLines }}
+        {{ mapMarkers }}
+        {{ mapDataLayer }}
+        {{ polygonLines }}
 
-    // disable scroll zoom
-    map.scrollZoom.disable();
+        // disable scroll zoom
+        map.scrollZoom.disable();
 
-    // add zoom controls
-    map.addControl(new maplibregl.NavigationControl({
-        showZoom: true,
-        showCompass: false
-    }));
-
-    // --- Save map state on pan/zoom ---
-    map.on('moveend', () => {
-        const center = map.getCenter();
-        const zoom = map.getZoom();
-
-        localStorage.setItem('mapState', JSON.stringify({
-            lng: center.lng,
-            lat: center.lat,
-            zoom: zoom
+        // add zoom controls
+        map.addControl(new maplibregl.NavigationControl({
+            showZoom: true,
+            showCompass: false
         }));
-    });
+
+        // --- Save map state on pan/zoom ---
+        map.on('moveend', () => {
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+
+            localStorage.setItem(storageKey, JSON.stringify({
+                lng: center.lng,
+                lat: center.lat,
+                zoom: zoom
+            }));
+        });
+    })();
 </script>

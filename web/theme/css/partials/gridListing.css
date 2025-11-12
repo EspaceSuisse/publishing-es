@@ -17,6 +17,12 @@
     gap: var(--layoutGap);
   }
   .latest {
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: var(--layoutGap);
+  }
+  .moreArticles {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: subgrid;

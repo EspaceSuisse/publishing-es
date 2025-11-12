@@ -1,0 +1,65 @@
+name: Deploy ES Publishing to LIVE
+
+on:
+  push:
+    branches:
+      - LIVE
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare .ssh directory and Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.FTP_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Add SSH key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Deploy files with rsync (no vendor)
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          SSH_PATH: ${{ secrets.PATH_LIVE }}
+        run: |
+          rsync -az --delete \
+            --exclude='.git*' \
+            --exclude='.github' \
+            --exclude='.ddev' \
+            --exclude='*.jsx' \
+            --exclude='.env*' \
+            --exclude='.vscode' \
+            --exclude='tests/' \
+            --exclude='web/assets/' \
+            --exclude='web/cpresources/' \
+            --exclude='web/imager/' \
+            --exclude='node_modules/' \
+            --exclude='storage/' \
+            --exclude='*.log' \
+            --exclude='vendor/' \
+            -e "ssh -o StrictHostKeyChecking=no" \
+            ./ $SSH_USER@$SSH_HOST:$SSH_PATH
+
+      - name: Install Composer dependencies on remote
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          SSH_PATH: ${{ secrets.PATH_LIVE }}
+          COMPOSER_BIN: ${{ secrets.COMPOSER_BIN }}
+        run: |
+          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && $COMPOSER_BIN install --no-dev --optimize-autoloader --no-interaction"
+
+      - name: Apply Craft project config (remote)
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          SSH_PATH: ${{ secrets.PATH_LIVE }}
+        run: |
+          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && ./craft project-config/apply --interactive=0"

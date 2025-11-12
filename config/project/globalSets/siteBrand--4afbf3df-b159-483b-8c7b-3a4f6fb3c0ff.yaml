@@ -1,0 +1,64 @@
+fieldLayouts:
+  f5300907-70e3-44ef-85e5-e7e9d1abc288:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-06T11:00:40+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Brand Verband'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22c1ce18-dca2-4a8a-a0fc-9443a8f73d2b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-11-06T11:00:40+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Brand Magazin'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 75df05d5-aeec-4350-abd9-5f153b6f8ef6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-11-06T11:00:40+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Brand Magazin Claim'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a283dc66-fae3-41fd-bed6-177071514def
+            userCondition: null
+            warning: null
+            width: 100
+        name: Branding
+        uid: 6bf9728d-b41d-4164-87b1-5e192680c738
+        userCondition: null
+handle: siteBrand
+name: 'Site Brand'
+sortOrder: 3

@@ -16,10 +16,8 @@
 				{% set portrait = item.photo.url %}
 				<img src="{{ portrait }}" alt="{{ item.name }}">
 			{% endif %}
-			<div class="authorInfo">
-                {# replace spaces with non-breaking space. #}
-				<span><a href="{{ url(authorUrl) }}">{{ item.name|replace({' ': '&nbsp;'})|raw }}</a></span>
-			</div>
+				<span class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
+				{# <a href="{{ url(authorUrl) }}" class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</a> #}
 		</li>
 	{% endfor %}
 </ul>

@@ -24,6 +24,7 @@ return GeneralConfig::create()
     ->generateTransformsBeforePageLoad(true)
     ->convertFilenamesToAscii(true)
     ->transformGifs(false) 
+    ->enableTemplateCaching(false)
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
         '@assetBaseUrl' => rtrim(getenv('PRIMARY_SITE_URL') . '/assets'),

@@ -1,0 +1,36 @@
+
+{% import '_components/previewCards/macroArticlePreviewL' as macroPreviewL %}
+{% import '_macros/macroCatOverview' as macroCat %}
+
+{% for cat in catSubject %}
+
+    {# Check if the Lightswitch field is enabled #}
+    {% if cat.fSwitch %}
+
+        {# Grab all entries related to this category #}
+        {% set relatedEntries = craft.entries()
+            .section('article')
+            .relatedTo(cat)
+            .limit(4)
+            .all()
+        %}
+        <div class="listingSuperTopic listingSection" style="background-color: {{ cat.fColor }};">
+            <div class="listingGrid">
+
+            <h2 class="gridSpan12 topicTitle">{{ cat.title }}</h2>
+            
+            {# loop trough the entries which belong to the subject with supertopic enabled #}
+            {% for item in relatedEntries %}
+                {{ macroPreviewL.listMacro(item,'gridSpan6') }}
+            {% endfor %}
+
+                <div class="gridSpan12">
+                    <a href="{{ cat.url }}" class="btn">{{ 'Zum Thema' | t}} {{ cat.title }}</a>
+                </div>
+
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+

@@ -43,9 +43,17 @@
 				{% include "_components/articleBlocks/cellImgGallery" %}
 			</div>
 		{% case "tRelEntry" %}
-			<aside class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellRelEntry">
-				{% include "_components/articleBlocks/cellRelEntry" %}
-			</aside>
+
+			{# only render the aside if there is at least one live entry #}
+			{% set relEntryQuery = block.fRelEntry.all() %}
+			{% set liveEntries = relEntryQuery|filter(e => e.status == 'live') %}
+
+    		{% if liveEntries|length %}
+				<aside class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellRelEntry">
+					{% include "_components/articleBlocks/cellRelEntry" %}
+				</aside>
+			{% endif %}
+
 		{% case "tMap" %}
 			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellMap">
 				{% include "_components/articleBlocks/cellMap" %}

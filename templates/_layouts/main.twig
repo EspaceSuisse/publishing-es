@@ -4,6 +4,9 @@
 {% set labelSubject = 'Thema' | t %}
 {% set labelGenre = 'Rubrik' | t %}
 
+{% set labelSubjectP = 'Themen' | t %}
+{% set labelGenreP = 'Rubriken' | t %}
+
 {# Sets a body css class with the section or category handle for css toplevel scoping #}
 {% set handle = entry.section.handle ?? category.group.handle ?? null %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}
@@ -17,7 +20,7 @@
 
 	<body class="{{ bodyClass }}">
 		<div id="app">
-			{% include "_components/siteHeader" %}
+			{% include "_components/sideBar" %}
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
 		</div>
 		{% include "_components/siteFooter" %}

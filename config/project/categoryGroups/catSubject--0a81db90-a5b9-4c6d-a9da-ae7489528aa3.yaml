@@ -7,6 +7,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-09-11T15:21:56+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6eb635d2-1d95-4d26-85d2-703c297243bd
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd051b0b-dbb0-4533-bb41-b1e97ca7d5c9
+            userCondition: null
+            warning: null
+            width: 25
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -35,7 +52,7 @@ fieldLayouts:
             uid: 027679e6-e5a3-4981-8320-2767d1c784ca
             userCondition: null
             warning: 'Bei Änderung: nicht vergessen, auch den `Slug` zu ändern. `Slug` ist die `URL` der Kategorie.'
-            width: 100
+            width: 75
           -
             dateAdded: '2025-08-06T13:58:27+00:00'
             editCondition: null
@@ -101,6 +118,23 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e1f6544d-cbef-4a6e-93e9-bff1533e5fa3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-11-06T10:01:14+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Supertopic
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 12c775f6-0dfa-4d12-98db-7afc6b4d8c65
             userCondition: null
             warning: null
             width: 100

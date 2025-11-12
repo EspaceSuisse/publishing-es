@@ -4,10 +4,17 @@
 
 
 {% for item in relEntryQuery %}
-    {% set img = item.fImgI18n.one() %}
-    {{ imgMacro.articleImage(img, 'articleThumb') }}
-    <a href="{{ item.url }}">
-        <p>{{ 'Lesen Sie dazu auch' | t }}</p>
-        <h3 class="relatedEntryTitle">{{ item.title }}</h3>
-    </a>
+    
+    {% if item.status == 'live' %}
+
+        {% set img = item.fImgI18n.one() %}
+        
+            {{ imgMacro.articleImage(img, 'articleThumb') }}
+            <a href="{{ item.url }}">
+                <p>{{ 'Lesen Sie dazu auch' | t }}</p>
+                <h3 class="relatedEntryTitle">{{ item.title }}</h3>
+            </a>
+
+    {% endif %}
+
 {% endfor %}

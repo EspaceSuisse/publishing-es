@@ -1,6 +1,7 @@
 {% import '_macros/macroLinkList' as listMacro %}
 {% import '_macros/macroFields' as fieldsMacro %}
 {% import '_macros/macroCatOverview' as macroCat %}
+{% import '_components/previewCards/macroArticlePreviewXS' as macroPreviewXS %}
 
 {% set labelSubject = 'Themen' %}
 {% set labelGenre = 'Genres' %}
@@ -28,32 +29,21 @@
 
 {% set articleSearch = craft.entries.section('allArticles').with(['title','url']).one() %}
 
+{# Grabs the data from the seomaticPlugin site Identity #}
+{% set esBase = seomatic.site.identity %}
+
 
 <footer>
-
-	<div class="footerContact">
-		{{ fieldsMacro.richText(footerGlobals.fRichTextI18n) }}
-	</div>
-	<div>
-        <h3 class="listTitle">{{ labelSubject }}</h3>
-        {{ macroCat.catOverview(queryFooterSubject, 'subject', true) }}
-	</div>
-	<div>
-		<h3 class="listTitle">{{ labelGenre }}</h3>
-        {{ macroCat.catOverview(queryFooterGenre, 'genre', true) }}
-	</div>
-	<div class="latestArticles">
-		{{ listMacro.listMacro(queryLatestArticle, 'Die letzten Artikel' | t, null, 'entryList' ) }}
-        <p class="listItem"><a href="{{ articleSearch.url }}">{{ articleSearch.title }}</a></p>
-	</div>
-	<div>
-		{{ listMacro.listMacro(querySubpages, 'Subpages' | t,) }}
-	</div>
-	<div>
-		<ul>
-			{% for block in footerGlobals.fLinkList %}
-				<li class="listItem">{{ block.fLinkI18n.link }}</li>
-			{% endfor %}
-		</ul>
+	<div class="listingGrid">
+		<div class="footerContact gridSpan4">
+			{% include "_components/footer/siteFooterContact" %}
+			{% include "_components/footer/siteFooterSocialMedia" %}
+		</div>
+		<div class="newsletter gridSpan5">
+			{% include "_components/formNewsletter/mailchimpForm" %}
+		</div>
+		<div class="subPages gridSpan3">
+			{{ listMacro.listMacro(querySubpages, null, null, 'entryList' ) }}
+		</div>
 	</div>
 </footer>

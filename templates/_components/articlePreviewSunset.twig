@@ -1,8 +1,13 @@
+{# Here the variables from the article template are repeated. I hate that. Will make it DRY so there are global variables written only once #}
+
 {% set articleSunset = queryParam.postDate|date_modify('+3 months') %}
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
 {% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
+{% set freeForAll = queryParam.fSwitch %}
 
-{% if isSunset %}
+{% if freeForAll %}
+	<p class="sunsetHint">{{ 'Artikel frei Verfügbar' | t }}</p>
+{% elseif isSunset %}
 	<p class="sunsetHint">{{ 'Artikel nur für Mitglieder verfügbar.' | t }}</p>
 {% endif %}

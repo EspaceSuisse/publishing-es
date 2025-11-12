@@ -1,6 +1,6 @@
 .navIcon, .hasDropdown, .langSwitcher, .navToplevelLink {
     aspect-ratio: 1 / 1;
-    max-width: var(--siteHeadWidth);
+    max-width: var(--siteSideBarWidth);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,13 +20,23 @@
         span {
             color: var(--txtInvertColor);
         }
+        &.open, &:hover {
+            background: var(--backgroundColor);
+            .buttonTxt {
+                color: var(--txtColor);
+            }
+            svg {
+                polygon {
+                    stroke: var(--txtColor);
+                }
+            }
+        }
     }
 
     &.navIcon {
         svg {
             width: 30%;
             height: auto;
-
             polygon {
                 stroke: var(--txtInvertColor);
             }
