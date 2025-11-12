@@ -14,11 +14,8 @@
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
 	{% set cardTitle = queryParam.fPlainTextI18n ?? queryParam.title %}
 
-	<article class="articlePreview previewSizeL {{ classParam }}">
-		<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}">
-			{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
-		</a>
-		{# only show categories if there are any #}
+	{% set tagCloud %}
+
 		{% if catGenre or catSubject %}
 			<div class="tags">
 				{{ macroCat.catOverview(catGenre, 'genre', true) }}
@@ -26,14 +23,30 @@
 			</div>
 		{% endif %}
 
+	{% endset %}
+
+	<article class="articlePreview previewSizeL {{ classParam }}">
+		<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}">
+			{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
+		</a>
+		
+		
+
 		<div class="txtPart">
+			<div class="previewMetaHeader">
+				{{ macroPostDate.postDate(queryParam) }}
+				{% include "_components/articlePreviewSunset.twig" %}
+			</div>
 			<h2 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			<div class="previewPostDate">
-				{{ macroPostDate.postDate(queryParam) }}
-				{% include "_components/articlePreviewSunset.twig" %}
+			
+			
+			
+			<div class="previewMeta">
+				{{ tagCloud }}
+				<a href="{{ queryParam.url }}">{{ 'Lesen' | t }}</a>
 			</div>
 		</div>
 </article>{% endmacro %}

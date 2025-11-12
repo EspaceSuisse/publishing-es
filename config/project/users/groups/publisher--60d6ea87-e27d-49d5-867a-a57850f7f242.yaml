@@ -1,0 +1,31 @@
+description: null
+handle: publisher
+name: Publisher
+permissions:
+  - accesscp
+  - accessplugin-workflow
+  - accesssitewhensystemisoff
+  - administrateusers
+  - 'assignusergroup:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
+  - 'assignusergroup:df079a13-bd61-4096-9e55-4607550dae28' # Editor
+  - 'assignusergroup:ee8b684c-14de-460c-89fd-f9fe7dd4b0cd' # EspaceSuisse
+  - 'assignusergroup:ff4cdf72-64ec-41a2-8781-1751cadd315c' # Webmasters
+  - assignuserpermissions
+  - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'deleteentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'deletepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'deletepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - deleteusers
+  - 'editsite:2d4ea7fb-3050-435d-806e-46986d5c58d2' # Inforum FR
+  - 'editsite:5f286764-7e74-4475-989a-21ca80692fad' # Inforaum DE
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - registerusers
+  - 'saveentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'savepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'savepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewpeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - viewusers
