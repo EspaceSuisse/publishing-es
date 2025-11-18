@@ -1,8 +1,6 @@
 {% extends "_layouts/main" %}
 
-{% import '_components/previewCards/macroArticlePreviewXL' as macroPreviewXL %}
-{% import '_components/previewCards/macroArticlePreviewL' as macroPreviewL %}
-{% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+{% import '_components/previewCards/macroArticlePreview' as macroPreview %}
 {% import '_macros/macroCatOverview' as macroCat %}
 
 {% block content %}
@@ -33,23 +31,23 @@
 		{% include "_components/brandHeader.twig" %}
 		
 		{% for item in allEntries | slice(0,1) %}
-			{{ macroPreviewXL.listMacro(item,'gridSpan12') }}
+			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
 		{% endfor %}
 		{% for item in allEntries | slice(1,2) %}
-				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
+				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpan12','gridSpan12') }}
 		{% endfor %}
 		{# {% include "_components/indexNewsTeaser.twig" %} #}
 	</div>
-		{% include "_components/listingSuperTopic" %}
+		{# {% include "_components/listingSuperTopic" %} #}
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(4,4) %}
-			{{ macroPreviewL.listMacro(item,'gridSpan4') }}
+			{{ macroPreview.listMacro(item,'gridSpan12','gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
 		{% endfor %}
 	</div>
 	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(8) %}
-			{{ macroPreviewS.listMacro(item,'gridSpan12') }}
+			{{ macroPreview.listMacro(item,'gridSpan6','gridSpan12 gridMdSpan12','gridSpan12 gridMdSpan12') }}
 		{% endfor %}
 	</div>
 
