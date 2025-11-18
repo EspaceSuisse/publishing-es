@@ -4,7 +4,7 @@ footer {
     padding-top: calc(var(--layoutGap) * 3);
     padding-bottom: calc(var(--layoutGap) * 6);
 
-    @media (min-width: 1024px) {
+    @media (min-width: 48rem) {
         padding-left: var(--siteSideBarWidth);
     }
 
@@ -31,7 +31,7 @@ footer {
         font-size: var(--font-size-L);
     }
 
-    @media (max-width: 830px) {
+    @media (max-width: 48rem) {
         .footerContact {
             text-align: center;
         }

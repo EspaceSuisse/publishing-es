@@ -6,9 +6,11 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: subgrid;
-
+    container-type: inline-size;
+    container-name: previewCard;
     .previewTitle {
         margin: 0;
+
         a {
             font-family: var(--font-display);
             font-weight: var(--font-bold);
@@ -22,17 +24,27 @@
                 color: var(--linkTxtHoverColor);
             }
         }
+
         padding-bottom: calc(var(--layoutGap) / 2);
     }
-    a picture {
-        background-color: var(--linkTxtHoverColor);
-        img {
-            transition: all 0.1s ease-in-out;
-            &:hover {
-                opacity: 0.5;
+
+    .imgPart {
+        display: flex;
+        picture {
+            background-color: var(--linkTxtHoverColor);
+            display: flex;
+
+            img {
+                object-fit: cover;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    opacity: 0.5;
+                }
             }
         }
     }
+
     .txtPart {
         padding: var(--layoutGap);
         display: flex;
@@ -52,20 +64,26 @@
         font-size: var(--font-size-S);
         font-family: var(--font-default);
     }
-
-    .previewMeta {
-        margin-top: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+    .btnCard {
+        margin-left: auto;
     }
     .previewMetaHeader {
         display: flex;
         justify-content: space-between;
     }
+    @container  previewCard (max-width: 43rem) {
+        .previewMetaHeader {
+            flex-direction: column;
+            p {
+                margin: 0;
+            }
+        }
+    }
+
     &.newsCard {
         box-shadow: none;
         background-color: transparent;
+
         .previewTitle a {
             font-size: var(--font-size-M);
             font-family: var(--font-default);
@@ -74,6 +92,7 @@
         }
     }
 }
+
 .previewSizeS {
     .previewTitle {
         margin-top: 10px;

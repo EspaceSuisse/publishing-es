@@ -1,0 +1,10 @@
+/* this is to override the controlpanel css to differentiate between languages */
+:root {
+  --frenchColor: #db6c6c14;
+}
+body.site--espacesuissePublishingFr {
+  background-color: var(--frenchColor);
+  .global-sidebar {
+    background-color: var(--frenchColor);
+    }
+}
