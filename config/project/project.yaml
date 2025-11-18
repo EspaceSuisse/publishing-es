@@ -1,4 +1,4 @@
-dateModified: 1762861533
+dateModified: 1762949222
 elementSources:
   craft\elements\Asset:
     -
@@ -208,6 +208,7 @@ meta:
     37e776f8-e885-4df4-abeb-4e00055818d6: 'Category Set' # Category Set
     38c1e2e9-c1e3-4c80-acfe-f190d86317fa: 'Plain Text i18n' # Plain Text i18n
     49c73379-624e-465f-92eb-b17550eca753: 'Grid Start Wide' # Grid Start Wide
+    60d6ea87-e27d-49d5-867a-a57850f7f242: Publisher # Publisher
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
@@ -335,6 +336,59 @@ plugins:
     enabled: true
     licenseKey: 00G5QTOD8510UXOE659FVH0Y
     schemaVersion: 2.6.0
+    settings:
+      editorNotesRequired:
+        __assoc__:
+          -
+            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
+            - ''
+          -
+            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
+            - ''
+      editorNotifications: true
+      editorUserGroup:
+        __assoc__:
+          -
+            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
+            - df079a13-bd61-4096-9e55-4607550dae28 # Editor
+          -
+            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
+            - df079a13-bd61-4096-9e55-4607550dae28 # Editor
+      enabledSections: '*'
+      lockDraftSubmissions: true
+      pluginName: Workflow
+      publishedAuthorNotifications: false
+      publisherNotesRequired:
+        __assoc__:
+          -
+            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
+            - ''
+          -
+            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
+            - ''
+      publisherNotifications: true
+      publisherNotificationsUserGroup: 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
+      publisherUserGroup:
+        __assoc__:
+          -
+            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
+            - 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
+          -
+            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
+            - 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
+      reviewerApprovalNotifications: false
+      reviewerNotifications: true
+      reviewerUserGroups:
+        __assoc__:
+          -
+            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
+            -
+              -
+                - df079a13-bd61-4096-9e55-4607550dae28 # Editor
+          -
+            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
+            - ''
+      selectedPublishers: '*'
 system:
   edition: pro
   live: true
