@@ -1,12 +1,16 @@
 .sideBar {
   background-color: var(--colorES-brand-blue);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (min-width: 1024px) {
+  width: 100vw;
+}
+
+@media (min-width: 48rem) {
+  .sideBar {
     height: 100vh;
     width: var(--siteSideBarWidth);
     flex-shrink: 0;
