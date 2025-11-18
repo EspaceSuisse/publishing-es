@@ -3,21 +3,10 @@
     container-type: inline-size;
     width: 100%;
     padding-bottom: var(--layoutGap);
+    overflow: hidden;
 }
 .articleIsSunset {
   filter: blur(5px);
   opacity: 0.5;
   pointer-events: none;
 }
-.superTopic {
-  overflow-y: auto;
-  transition: max-height 0.3s ease;
-  max-height: 0;
-  visibility: hidden;
-  article {
-    margin-bottom: gap: var(--layoutGap);;
-  }
-}
-.superTopic.is-ready {
-    visibility: visible;
-  }

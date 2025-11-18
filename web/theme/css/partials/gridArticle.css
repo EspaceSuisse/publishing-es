@@ -1,16 +1,10 @@
 .gridArticle {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.5fr repeat(10, 1fr) 1.5fr;
     container-name: articleContainer;
     row-gap: var(--layoutGap);
     column-gap: calc( var(--layoutGap) / 2 );
     max-width: var(--articleMaxWidth);
     margin: 0 auto;
     padding: 0 var(--airGap);
-}
-
-@media (min-width: 60rem) {
-    .gridArticle {
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-    }
 }

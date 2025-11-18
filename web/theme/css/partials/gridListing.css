@@ -1,43 +1,13 @@
 .listingGrid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: var(--layoutGap);
   max-width: var(--listingMaxWidth);
   padding: 0 var(--airGap);
   margin: auto;
-  .headliner {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: subgrid;
-  }
-  .teaser {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: subgrid;
-    gap: var(--layoutGap);
-  }
-  .latest {
-    grid-column: span 6;
-    display: grid;
-    grid-template-columns: subgrid;
-    gap: var(--layoutGap);
-  }
-  .moreArticles {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: subgrid;
-    gap: var(--layoutGap);
-  }
 }
-/* make two rows on small devices */
-@media (min-width: 52rem) {
+@media (min-width: 48rem) and (max-width: 95rem) {
   .listingGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-/* make 12 rows on large devices */
-@media (min-width: 60rem) {
-  .listingGrid {
-    grid-template-columns: repeat(12, 1fr);
+    margin-left: calc( var(--siteSideBarWidth) * 1);
   }
 }
