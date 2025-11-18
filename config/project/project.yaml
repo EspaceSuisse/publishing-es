@@ -1,4 +1,4 @@
-dateModified: 1762949222
+dateModified: 1763458699
 elementSources:
   craft\elements\Asset:
     -
@@ -74,6 +74,7 @@ elementSources:
         - link
         - authors
         - 'field:e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f' # VC
+        - slug
       type: native
     -
       heading: ''
@@ -88,6 +89,13 @@ elementSources:
       type: heading
     -
       key: 'section:cbd30d19-7bb8-4252-91df-a451ebb3d525' # Call to Action
+      type: native
+    -
+      heading: ''
+      key: 'heading:29182fa9-94e7-426d-82cb-e6db8a6939de'
+      type: heading
+    -
+      key: 'section:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
       type: native
   craft\elements\User:
     -
