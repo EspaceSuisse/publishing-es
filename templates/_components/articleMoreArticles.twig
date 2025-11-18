@@ -1,5 +1,4 @@
-{% import '_components/previewCards/macroArticlePreviewL' as macroPreviewL %}
-{% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
 
 {% set firstSubject = entry.fCatGenre.one() %}
 {% set firstGenre = entry.fCatSubject.one() %}
@@ -19,18 +18,13 @@
 
 {% if relatedEntries|length %}
 
-	<aside class="gridArticle">
+	<aside class="gridArticle furtherArticles">
 
 		{% for item in relatedEntries %}
 			{% if loop.first %}
-				<h3 class="gridSpanAll moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}…</h3>
+				<h2 class="gridSpan12 moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}…</h2>
 			{% endif %}
-			{% if loop.index <= 4 %}
-				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-			{% else %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
-			{% endif %}
-	
+			{{ macroArticlePreview.listMacro(item,'gridSpan6', 'gridSpan12', 'gridSpan12' ) }}
 		{% endfor %}
 
 	</aside>

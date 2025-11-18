@@ -4,7 +4,6 @@
     list-style: none;
     display: flex;
     gap: var(--layoutGap);
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     img {
