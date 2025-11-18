@@ -16,7 +16,7 @@ button.dropdownLink {
     width: 0;
     /* Deifnitions for dekstop */
     top: var(--siteSideBarWidth);
-    @media (min-width: 1023px) {
+    @media (min-width: 48rem) {
         top: 0;
         left: var(--siteSideBarWidth);
         height: 100vh;
@@ -34,7 +34,7 @@ button.dropdownLink {
         width: 100vw;
         left: 0;
         overflow-y: auto;
-        @media (min-width: 1023px) {
+        @media (min-width: 48rem) {
             animation-name: foldOutLeft;
             animation-duration: var(--navSpeed);
             background-color: var(--backgroundColor);
@@ -50,7 +50,7 @@ button.dropdownLink {
         animation-duration: calc(var(--navSpeed) / 2);
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
-        @media (min-width: 768px) {
+        @media (min-width: 48rem) {
             animation-name: foldInLeft;
         }
         .relatedNav {

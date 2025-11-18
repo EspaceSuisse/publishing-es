@@ -3,21 +3,22 @@
     container-type: inline-size;
     width: 100%;
     padding-bottom: var(--layoutGap);
+    overflow: hidden;
 }
 .articleIsSunset {
   filter: blur(5px);
   opacity: 0.5;
   pointer-events: none;
 }
-.superTopic {
-  overflow-y: auto;
-  transition: max-height 0.3s ease;
-  max-height: 0;
-  visibility: hidden;
-  article {
-    margin-bottom: gap: var(--layoutGap);;
+/* When the sidebar is on the left side. push the main stuff to the left */
+@media (min-width: 48rem) {
+  #main {
+    padding-left: var(--siteSideBarWidth);
   }
 }
-.superTopic.is-ready {
-    visibility: visible;
+/* when the sidebar is on top, push the main a little bit down */
+@media (max-width: 48rem) {
+  #main {
+    padding-top: var(--siteSideBarWidth);
   }
+}

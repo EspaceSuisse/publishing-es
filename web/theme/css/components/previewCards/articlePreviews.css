@@ -4,8 +4,8 @@
     border-radius: 3px;
     box-shadow: var(--shadow);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: subgrid;
 
     .previewTitle {
         margin: 0;
