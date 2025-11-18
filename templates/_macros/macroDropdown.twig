@@ -1,6 +1,6 @@
 {%- macro dropdown(paramQuery, paramLabel) -%}
 
-	{% import '_components/previewCards/macroArticlePreviewXS' as macroPreviewXS %}
+	{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
 
 	<li class="hasDropdown navToplevelLink">
 		<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-{{ paramLabel | ascii }}">
@@ -21,7 +21,7 @@
 						<h2 class="subnavCatTitle"><a href="{{ category.url }}">{{ category.title }}</a></h2>
 						<ul class="catArticles">
 							{% for item in relatedArticle %}
-								<li class="catArticleTitle">{{ macroPreviewXS.listMacro(item, null) }}</li>
+								<li class="catArticleTitle">{{ macroArticlePreview.listMacro(item, null) }}</li>
 							{% endfor %}
 						</ul>
 					</li>

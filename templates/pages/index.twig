@@ -36,8 +36,8 @@
 		{% for item in allEntries | slice(1,2) %}
 				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpan12','gridSpan12') }}
 		{% endfor %}
-		{# {% include "_components/indexNewsTeaser.twig" %} #}
 	</div>
+		{% include "_components/indexNewsTeaser.twig" %}
 		{% include "_components/listingSuperTopic" %}
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">
