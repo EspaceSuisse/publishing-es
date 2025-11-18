@@ -1,0 +1,23 @@
+{% import '_macros/macroLinkList' as listMacro %}
+
+{% set querySubpages = craft.entries.section('subpages')
+    .with(['title','url'])
+    .all()
+%}
+
+<footer>
+	<div class="listingGrid">
+		<div class="footerContact gridSpan12 gridMdSpan6 gridLgSpan6">
+			{% include "_components/footer/siteFooterContact" %}
+		</div>
+		<div class="newsletter gridSpan12 gridMdSpan6">
+			{% include "_components/formNewsletter/mailchimpForm" %}
+		</div>
+		<div class="footerSocialMedia gridSpan12 gridMdSpan6">
+			{% include "_components/footer/siteFooterSocialMedia" %}
+		</div>
+		<div class="subPages gridSpan12 gridMdSpan6">
+			{{ listMacro.listMacro(querySubpages, null, null, 'entryList' ) }}
+		</div>
+	</div>
+</footer>

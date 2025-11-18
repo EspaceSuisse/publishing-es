@@ -11,7 +11,7 @@
 
 	<article class="articlePreview previewSizeL {{ classCardParam }}">
 
-		<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="{{ classImgParam }}">
+		<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
 			{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 		</a>
 		
@@ -26,12 +26,6 @@
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			
-			
-			
-			<div class="previewMeta">
-				<a href="{{ queryParam.url }}">{{ 'Lesen' | t }}</a>
-			</div>
 		</div>
 	</article>
 {% endmacro %}

@@ -38,7 +38,7 @@
 		{% endfor %}
 		{# {% include "_components/indexNewsTeaser.twig" %} #}
 	</div>
-		{# {% include "_components/listingSuperTopic" %} #}
+		{% include "_components/listingSuperTopic" %}
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(4,4) %}
