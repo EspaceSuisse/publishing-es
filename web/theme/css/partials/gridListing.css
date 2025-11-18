@@ -6,8 +6,3 @@
   padding: 0 var(--airGap);
   margin: auto;
 }
-@media (min-width: 48rem) and (max-width: 95rem) {
-  .listingGrid {
-    margin-left: calc( var(--siteSideBarWidth) * 1);
-  }
-}

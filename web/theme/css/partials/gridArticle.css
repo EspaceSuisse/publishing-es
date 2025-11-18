@@ -1,10 +1,15 @@
 .gridArticle {
     display: grid;
-    grid-template-columns: 1.5fr repeat(10, 1fr) 1.5fr;
+    grid-template-columns: 1.8fr repeat(10, 1fr) 1.8fr;
     container-name: articleContainer;
     row-gap: var(--layoutGap);
     column-gap: calc( var(--layoutGap) / 2 );
     max-width: var(--articleMaxWidth);
-    margin: 0 auto;
     padding: 0 var(--airGap);
+    margin: auto;
+}
+@media (max-width: 48rem) {
+  .gridArticle {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }

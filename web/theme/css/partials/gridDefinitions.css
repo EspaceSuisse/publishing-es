@@ -27,9 +27,6 @@
 .gridSpan10 { grid-column-end: span 10; }
 .gridSpan11 { grid-column-end: span 11; }
 .gridSpan12 { grid-column-end: span 12; }
-#app {
-    background-color: rgb(255, 255, 225) !important;
-  }
 
 
 /* ============================
@@ -62,9 +59,6 @@
   .gridMdSpan10 { grid-column-end: span 10; }
   .gridMdSpan11 { grid-column-end: span 11; }
   .gridMdSpan12 { grid-column-end: span 12; }
-  #app {
-    background-color: rgb(209, 250, 209) !important;
-  }
 }
 
 
@@ -98,7 +92,4 @@
   .gridLgSpan10 { grid-column-end: span 10; }
   .gridLgSpan11 { grid-column-end: span 11; }
   .gridLgSpan12 { grid-column-end: span 12; }
-  #app {
-    background-color: rgb(188, 188, 249) !important;
-  }
 }

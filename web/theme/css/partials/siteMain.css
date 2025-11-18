@@ -10,3 +10,15 @@
   opacity: 0.5;
   pointer-events: none;
 }
+/* When the sidebar is on the left side. push the main stuff to the left */
+@media (min-width: 48rem) {
+  #main {
+    padding-left: var(--siteSideBarWidth);
+  }
+}
+/* when the sidebar is on top, push the main a little bit down */
+@media (max-width: 48rem) {
+  #main {
+    padding-top: var(--siteSideBarWidth);
+  }
+}

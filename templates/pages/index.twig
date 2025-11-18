@@ -31,7 +31,7 @@
 		{% include "_components/brandHeader.twig" %}
 		
 		{% for item in allEntries | slice(0,1) %}
-			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
+			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
 		{% endfor %}
 		{% for item in allEntries | slice(1,2) %}
 				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpan12','gridSpan12') }}
