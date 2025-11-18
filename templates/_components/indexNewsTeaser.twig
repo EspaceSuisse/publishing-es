@@ -1,8 +1,8 @@
-{% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
 
 <section class="teaser newsTeaser">
 	{% for item in newsEntries %}
-		{{ macroPreviewS.listMacro(item,'gridSpan4') }}
+		{{ macroArticlePreview.listMacro(item,'gridSpan12', 'gridSpan6', 'gridSpan6') }}
 	{% endfor %}
 	{% if goToAllNews and newsEntries | length %}
 		<div class="gridSpan4">
