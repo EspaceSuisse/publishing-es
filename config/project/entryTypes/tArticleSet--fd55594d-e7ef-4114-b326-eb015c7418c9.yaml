@@ -10,15 +10,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n## Foto Tool\r\n- Kein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)\r\n\r\n## Texte Einfügen\r\nEs hilft, Text erst in einen [Raw Text Editor](https://code.visualstudio.com/) einzufügen, anstatt vom Word direkt ins CMS. So wird das Word Markup automatisch gelöscht. Das CMS putzt zwar auch das Word Markup weg. Aber nicht immer.\r\n\r\n## Artikel URL\r\nDie URL wird aus dem Titel generiert. Willst du in FR eine Französische URL lösche die Zeichen im Feld `Slug` und speichere. Dann wird die url `ASCI-Safe` neu generiert (ohne Sonderzeichen).\r\n\r\n## Übersetzung\r\nBeim ersten Speichern eines neuen Feldes, wird der Text einmalig als Referenz in die andere Sprache rüberkopiert.\r\n\r\n## Rubrik & Thema\r\nDienen dazu, den Artikel auf den Unterseiten zu verordnen. `Lesen Sie dazu auch` wird ebenfalls aus dieser Kategoriersung automatisch generiert."
-            dateAdded: '2025-04-29T06:25:34+00:00'
-            displayInPane: true
-            elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 02017aaf-a36b-4cac-9644-1ec620c81753
-            userCondition: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -179,6 +170,21 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
+          -
+            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n## Foto Tool\r\n- Kein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)\r\n\r\n## Texte Einfügen\r\nEs hilft, Text erst in einen [Raw Text Editor](https://code.visualstudio.com/) einzufügen, anstatt vom Word direkt ins CMS. So wird das Word Markup automatisch gelöscht. Das CMS putzt zwar auch das Word Markup weg. Aber nicht immer.\r\n\r\n## Artikel URL\r\nDie URL wird aus dem Titel generiert. Willst du in FR eine Französische URL lösche die Zeichen im Feld `Slug` und speichere. Dann wird die url `ASCI-Safe` neu generiert (ohne Sonderzeichen).\r\n\r\n## Übersetzung\r\nBeim ersten Speichern eines neuen Feldes, wird der Text einmalig als Referenz in die andere Sprache rüberkopiert.\r\n\r\n## Rubrik & Thema\r\nDienen dazu, den Artikel auf den Unterseiten zu verordnen. `Lesen Sie dazu auch` wird ebenfalls aus dieser Kategoriersung automatisch generiert."
+            dateAdded: '2025-04-29T06:25:34+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 02017aaf-a36b-4cac-9644-1ec620c81753
+            userCondition: null
+            width: 100
+          -
+            dateAdded: '2025-11-19T11:13:39+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 58a37ce4-5e68-4552-af28-35bbc9e4b008
+            userCondition: null
         name: Head
         uid: 111ec320-d642-467e-9a0a-54b565df12b6
         userCondition: null
@@ -186,14 +192,14 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-23T08:12:38+00:00'
-            dismissible: false
+            content: "# Was tun\r\n\r\nWürfle dir deinen Artikel aus den verschiedenen Matrix Elementen zusammen."
+            dateAdded: '2025-11-19T11:13:39+00:00'
+            displayInPane: true
             elementCondition: null
-            style: tip
-            tip: "Würfle dir den Artikel aus diesen Elementen zusammen.\r\n\r\nKein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)"
-            type: craft\fieldlayoutelements\Tip
-            uid: 43f60bf9-5e50-4d87-8353-567d716447de
+            type: craft\fieldlayoutelements\Markdown
+            uid: b96dd9d7-f955-4e60-881f-0d218d5b7676
             userCondition: null
+            width: 100
           -
             dateAdded: '2024-12-18T11:08:52+00:00'
             editCondition: null
