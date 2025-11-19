@@ -1,0 +1,3 @@
+{%- header "Content-Type: application/rss+xml; charset=utf-8" -%}
+{%- set site = craft.app.sites.getSiteByHandle('espacesuissePublishingFr') -%}
+{% include 'feeds/_rssFeed.twig' with { site } %}

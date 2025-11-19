@@ -1,3 +1,13 @@
+{%- set language = site.language -%}
+
+{%- set feedEntries = craft.entries()
+    .section(['article', 'news'])
+    .site(site)
+    .orderBy('postDate desc')
+    .limit(20)
+    .all()
+-%}
+
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/theme/rss-style.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
@@ -7,15 +17,14 @@
 <channel>
     <title>{{ siteName }} - {{ 'Artikel' | t }} {{ language|slice(0,2) }}</title>
     <link>{{ siteUrl(language) }}</link>
-     <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/articles-' ~ language |slice(0,2) }}.rss" />
+     <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/feed-' ~ language |slice(0,2) }}.rss" />
     <description>{{ 'Neuste Artikel in' | t (language) ~ ' ' ~ language }}</description>
     <language>{{ language }}</language>
 
     {% set deSiteHandle = 'default' %}
     {% set frSiteHandle = 'espacesuissePublishingFr' %}
 
-
-    {% for item in entries %}
+    {% for item in feedEntries %}
 
         {% set otherLang = craft.entries()
             .uid(item.uid)
@@ -23,19 +32,21 @@
             .one()
         %}
 
-        <item>
-            {{ macroImg.rssFeedImg(item.fImgI18n.one(), 'articleThumb') }}
-            <pubDate>{{ item.postDate.format('r') }}</pubDate>
-            <title>{{ item.title }}</title>
-            <description>{{ item.fSeoDescription }}</description>
+        {% set feedItemTitle = item.fPlainTextI18n ?: item.title %}
+        {% set feedItemDesc = item.fSeoDescription %}
 
+        <item>
+            {% if item.fImgI18n %}
+                {{ macroImg.rssFeedImg(item.fImgI18n.one(), 'articleThumb') }}
+            {% endif %}
+            <pubDate>{{ item.postDate.format('r') }}</pubDate>
+            <title>{{ feedItemTitle }}</title>
+            <description>{{ feedItemDesc }}</description>
              <link>{{ item.url }}</link>
              <guid isPermaLink="true">{{ item.url }}</guid>
-
             {%- if otherLang -%}
                 <atom:link rel="alternate" hreflang="fr" href="{{ otherLang.url }}" />
             {%- endif -%}
-
         </item>
     {% endfor %}
 </channel>

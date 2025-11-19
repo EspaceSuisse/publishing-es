@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aacd9c59653da1ec2d50d01aec72d1a3",
+    "content-hash": "96e8e0befe1d3d011113b68b48d831da",
     "packages": [
         {
             "name": "amphp/amp",
@@ -902,16 +902,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.359.4",
+            "version": "3.360.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "510cb4b7e2fa3ea09ad2154e7a13fe7675c36b30"
+                "reference": "09b2636a4afdf678b41659e3b0e507e078ca25b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/510cb4b7e2fa3ea09ad2154e7a13fe7675c36b30",
-                "reference": "510cb4b7e2fa3ea09ad2154e7a13fe7675c36b30",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/09b2636a4afdf678b41659e3b0e507e078ca25b1",
+                "reference": "09b2636a4afdf678b41659e3b0e507e078ca25b1",
                 "shasum": ""
             },
             "require": {
@@ -993,9 +993,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.359.4"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.360.1"
             },
-            "time": "2025-11-03T19:18:23+00:00"
+            "time": "2025-11-18T19:05:48+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -1485,11 +1485,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.8.19",
+            "version": "5.8.20",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2fdb2031cdf41875121c3f4b0094551ae95a2c38",
-                "reference": "2fdb2031cdf41875121c3f4b0094551ae95a2c38",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/cec2d4fa0d9d158df458ea7222e87a1d33fe60bb",
+                "reference": "cec2d4fa0d9d158df458ea7222e87a1d33fe60bb",
                 "shasum": ""
             },
             "require": {
@@ -1586,7 +1586,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2025-10-28T19:21:54+00:00"
+            "time": "2025-11-18T16:45:49+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -1957,55 +1957,6 @@
                 "symmetric key cryptography"
             ],
             "time": "2023-06-19T06:10:36+00:00"
-        },
-        {
-            "name": "diff/diff",
-            "version": "3.4.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wmde/Diff/zipball/19e5c8871868210ef2943c92bd7c223555b50b3f",
-                "reference": "19e5c8871868210ef2943c92bd7c223555b50b3f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "Diff.php"
-                ],
-                "psr-4": {
-                    "Diff\\": "src/"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jeroen De Dauw",
-                    "email": "jeroendedauw@gmail.com",
-                    "homepage": "https://www.entropywins.wtf",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Small standalone library for representing differences between data structures, computing such differences, and applying them as patches",
-            "homepage": "https://github.com/wmde/Diff",
-            "keywords": [
-                "diff",
-                "diffing",
-                "diffop",
-                "patch",
-                "patching",
-                "wikidata"
-            ],
-            "time": "2025-01-06T09:05:22+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -2641,16 +2592,16 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.48.1",
+            "version": "v1.49.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "023f41a2c80fb98a493dfb9dffcab643481a7ab0"
+                "reference": "68e3d88cb59a49f713e3db25d4f6bb3cc0b70764"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/023f41a2c80fb98a493dfb9dffcab643481a7ab0",
-                "reference": "023f41a2c80fb98a493dfb9dffcab643481a7ab0",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/68e3d88cb59a49f713e3db25d4f6bb3cc0b70764",
+                "reference": "68e3d88cb59a49f713e3db25d4f6bb3cc0b70764",
                 "shasum": ""
             },
             "require": {
@@ -2670,6 +2621,7 @@
                 "phpunit/phpunit": "^9.6",
                 "sebastian/comparator": ">=1.2.3",
                 "squizlabs/php_codesniffer": "^4.0",
+                "symfony/filesystem": "^6.3||^7.3",
                 "symfony/process": "^6.0||^7.0",
                 "webmozart/assert": "^1.11"
             },
@@ -2696,9 +2648,9 @@
             "support": {
                 "docs": "https://cloud.google.com/php/docs/reference/auth/latest",
                 "issues": "https://github.com/googleapis/google-auth-library-php/issues",
-                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.48.1"
+                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.49.0"
             },
-            "time": "2025-09-30T04:22:33+00:00"
+            "time": "2025-11-06T21:27:55+00:00"
         },
         {
             "name": "google/cloud-core",
@@ -2768,16 +2720,16 @@
         },
         {
             "name": "google/cloud-storage",
-            "version": "v1.48.6",
+            "version": "v1.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-storage.git",
-                "reference": "5bf41093390ab08d3287a291e67f3768ca35e66d"
+                "reference": "cf0849344cd3ffa1ad3f2d0705635c667dadcbd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/5bf41093390ab08d3287a291e67f3768ca35e66d",
-                "reference": "5bf41093390ab08d3287a291e67f3768ca35e66d",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/cf0849344cd3ffa1ad3f2d0705635c667dadcbd9",
+                "reference": "cf0849344cd3ffa1ad3f2d0705635c667dadcbd9",
                 "shasum": ""
             },
             "require": {
@@ -2819,9 +2771,9 @@
             ],
             "description": "Cloud Storage Client for PHP",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.48.6"
+                "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.48.7"
             },
-            "time": "2025-10-27T23:48:29+00:00"
+            "time": "2025-11-14T22:26:16+00:00"
         },
         {
             "name": "google/common-protos",
@@ -2884,20 +2836,20 @@
         },
         {
             "name": "google/gax",
-            "version": "v1.38.0",
+            "version": "v1.38.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/gax-php.git",
-                "reference": "0e1bce4a30722e85485bbb132b2fa811d66b397b"
+                "reference": "04ba0821b551f8788e23ea0335186d224a7278d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/0e1bce4a30722e85485bbb132b2fa811d66b397b",
-                "reference": "0e1bce4a30722e85485bbb132b2fa811d66b397b",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/04ba0821b551f8788e23ea0335186d224a7278d1",
+                "reference": "04ba0821b551f8788e23ea0335186d224a7278d1",
                 "shasum": ""
             },
             "require": {
-                "google/auth": "^1.45",
+                "google/auth": "^1.49",
                 "google/common-protos": "^4.4",
                 "google/grpc-gcp": "^0.4",
                 "google/longrunning": "~0.4",
@@ -2935,9 +2887,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/gax-php/issues",
-                "source": "https://github.com/googleapis/gax-php/tree/v1.38.0"
+                "source": "https://github.com/googleapis/gax-php/tree/v1.38.1"
             },
-            "time": "2025-09-17T18:22:14+00:00"
+            "time": "2025-11-06T22:48:43+00:00"
         },
         {
             "name": "google/grpc-gcp",
@@ -3030,16 +2982,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.33.0",
+            "version": "v4.33.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "b50269e23204e5ae859a326ec3d90f09efe3047d"
+                "reference": "0cd73ccf0cd26c3e72299cce1ea6144091a57e12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/b50269e23204e5ae859a326ec3d90f09efe3047d",
-                "reference": "b50269e23204e5ae859a326ec3d90f09efe3047d",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/0cd73ccf0cd26c3e72299cce1ea6144091a57e12",
+                "reference": "0cd73ccf0cd26c3e72299cce1ea6144091a57e12",
                 "shasum": ""
             },
             "require": {
@@ -3068,9 +3020,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.0"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.1"
             },
-            "time": "2025-10-15T20:10:28+00:00"
+            "time": "2025-11-12T21:58:05+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -5825,16 +5777,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.6.3",
+            "version": "5.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9"
+                "reference": "90a04bcbf03784066f16038e87e23a0a83cee3c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94f8051919d1b0369a6bcc7931d679a511c03fe9",
-                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/90a04bcbf03784066f16038e87e23a0a83cee3c2",
+                "reference": "90a04bcbf03784066f16038e87e23a0a83cee3c2",
                 "shasum": ""
             },
             "require": {
@@ -5883,9 +5835,9 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.3"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.4"
             },
-            "time": "2025-08-01T19:43:32+00:00"
+            "time": "2025-11-17T21:13:10+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -7377,11 +7329,11 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "5.1.6",
+            "version": "5.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/4178d05208c2c32052719694af42ebf1affd00f3",
-                "reference": "4178d05208c2c32052719694af42ebf1affd00f3",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/a0de6b334d3ae3dd79a21e64add844a13879f4a6",
+                "reference": "a0de6b334d3ae3dd79a21e64add844a13879f4a6",
                 "shasum": ""
             },
             "require": {
@@ -7438,7 +7390,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2025-07-24T20:11:18+00:00"
+            "time": "2025-11-14T12:35:28+00:00"
         },
         {
             "name": "spacecatninja/imager-x-pdf-adapter",
@@ -11142,59 +11094,6 @@
                 "rss": "https://github.com/verbb/knock-knock/commits/v2.atom"
             },
             "time": "2025-07-18T14:04:41+00:00"
-        },
-        {
-            "name": "verbb/workflow",
-            "version": "3.0.12",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/workflow/zipball/23ddbf3ee61b74e421b9e2aeb6c6b7945f421b6e",
-                "reference": "23ddbf3ee61b74e421b9e2aeb6c6b7945f421b6e",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0",
-                "diff/diff": "^3.3",
-                "php": "^8.2",
-                "verbb/base": "^3.0.8"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Workflow",
-                "handle": "workflow",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/workflow/craft-5/CHANGELOG.md",
-                "class": "verbb\\workflow\\Workflow"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\workflow\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Enforce multi-step review processes for creating entries.",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "workflow"
-            ],
-            "support": {
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/workflow/issues?state=open",
-                "source": "https://github.com/verbb/workflow",
-                "docs": "https://github.com/verbb/workflow",
-                "rss": "https://github.com/verbb/workflow/commits/v2.atom"
-            },
-            "time": "2025-11-06T04:19:42+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
