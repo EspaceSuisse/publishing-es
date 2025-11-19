@@ -13,10 +13,11 @@
 	{% set listingNews = craft.entries().section('listingNews').one() %}
 	
 
-	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
-	<div class="listingGrid">
+	<header class="pageHead subPageHead">
 		{% include "_components/brandHeader.twig" %}
-		<h1 class="topicTitle">{{ listingNews }}</h1>
+		{% include "_components/pageHead" %}
+	</header>
+	<div class="listingGrid">
 		{% for item in allNews %}
 			{{ macroArticlePreview.listMacro(item,'gridSpan12', 'gridSpan12', 'gridSpan12', true) }}
 		{% endfor %}
