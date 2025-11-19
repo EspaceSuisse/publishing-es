@@ -5,7 +5,8 @@
 @import url("partials/mobileVisibility.css");
 
 @import url("partials/gridArticle.css");
-@import url("partials/gridDefinitions.css");
+@import url("partials/gridColumnUtilities.css");
+@import url("partials/gridRowUtilities.css");
 @import url("partials/gridListing.css");
 @import url("partials/buttons.css");
 
