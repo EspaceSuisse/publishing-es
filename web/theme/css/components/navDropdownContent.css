@@ -1,7 +1,7 @@
 .dropdown {
     @media (min-width: 48rem) {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .relatedNav {
@@ -10,7 +10,8 @@
         .subnavCatTitle {
             font-family: var(--font-display);
             font-size: var(--font-size-M);
-
+            margin: 0;
+            margin-bottom: var(--layoutGap);
             a {
                 text-decoration: none;
                 color: var(--linkTxtColor);
@@ -18,8 +19,6 @@
                 &:hover {
                     color: var(--linkTxtHoverColor);
                 }
-
-                q
             }
         }
 
@@ -27,6 +26,7 @@
             .catArticle {
                 a {
                     text-decoration: none;
+                    display: block;
                     &:hover {
                         .catArticleTitle, .catArticleDescription {
                             color: var(--linkTxtHoverColor);
@@ -35,7 +35,9 @@
                 }
 
                 padding-bottom: var(--layoutGap);
-
+                .postDate {
+                    margin: 0;
+                }
                 .catArticleTitle {
                     font-size: var(--font-size-S);
                     font-family: var(--font-display);
