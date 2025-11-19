@@ -1,7 +1,7 @@
 .articlePreview {
     position: relative;
     background-color: var(--colorPreviewCard);
-    border-radius: 3px;
+    border-radius: var(--radiusPreviewCard);
     box-shadow: var(--shadow);
     overflow: hidden;
     display: grid;

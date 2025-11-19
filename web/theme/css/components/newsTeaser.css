@@ -1,0 +1,20 @@
+.newsTeaser {
+
+    text-align: center;
+    padding: calc(var(--layoutGap) * 3 ) 0;
+    .articlePreview {
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+        text-align: center;
+    }
+    @media (min-width: 48rem) {
+        .articlePreview {
+            border-right: solid 1px var(--txtColor);
+            &:last-of-type{
+                border-right: none;
+            }
+        }
+    }
+}
