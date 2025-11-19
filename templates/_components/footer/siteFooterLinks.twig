@@ -2,7 +2,6 @@
 
 
 {% for block in linkList %}
-    {% if loop.first %}<h2>{{ 'Sonstige Links' | t }}</h2>{% endif %}
     
     {% if loop.first %}<ul class="linkList">{% endif %}
         <li>{{ block.fLinkI18n.link }}</li>

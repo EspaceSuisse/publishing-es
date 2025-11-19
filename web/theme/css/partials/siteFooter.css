@@ -71,4 +71,9 @@ footer {
             margin-bottom: 20px;
         }
     }
+    @media (min-width: 52rem) {
+    input {
+        align-self: flex-start;
+    }
+}
 }
