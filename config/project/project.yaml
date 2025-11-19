@@ -1,4 +1,4 @@
-dateModified: 1763543165
+dateModified: 1763543573
 elementSources:
   craft\elements\Asset:
     -
@@ -270,6 +270,7 @@ meta:
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
     ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
+    eee49365-fab5-4241-a3e6-e24d9cd9a18e: Newsletter # Newsletter
     efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
