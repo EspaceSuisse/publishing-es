@@ -1,4 +1,4 @@
-dateModified: 1763550819
+dateModified: 1763563804
 elementSources:
   craft\elements\Asset:
     -
@@ -353,64 +353,6 @@ plugins:
     enabled: true
     licenseKey: XSSK91U797JEFEDY5UGKKPVI
     schemaVersion: 1.0.0
-  workflow:
-    edition: standard
-    enabled: true
-    licenseKey: 00G5QTOD8510UXOE659FVH0Y
-    schemaVersion: 2.6.0
-    settings:
-      editorNotesRequired:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - ''
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - ''
-      editorNotifications: true
-      editorUserGroup:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - df079a13-bd61-4096-9e55-4607550dae28 # Editor
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - df079a13-bd61-4096-9e55-4607550dae28 # Editor
-      enabledSections: '*'
-      lockDraftSubmissions: true
-      pluginName: Workflow
-      publishedAuthorNotifications: false
-      publisherNotesRequired:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - ''
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - ''
-      publisherNotifications: true
-      publisherNotificationsUserGroup: 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
-      publisherUserGroup:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
-      reviewerApprovalNotifications: false
-      reviewerNotifications: true
-      reviewerUserGroups:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            -
-              -
-                - df079a13-bd61-4096-9e55-4607550dae28 # Editor
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - ''
-      selectedPublishers: '*'
 system:
   edition: pro
   live: true

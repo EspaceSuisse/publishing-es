@@ -4,10 +4,10 @@
     {% import '_macros/macroPostDate' as macroPostDate %}
 
 
-	{% set image = queryParam.fImgI18n.one() %}
+	{% set image = queryParam.fImgI18n.one() ?? null %}
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
-	{% set cardTitle = queryParam.fPlainTextI18n ?? queryParam.title %}
+	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
 
 	<article class="articlePreview previewSizeL {{ classCardParam }}">
 

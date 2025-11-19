@@ -21,7 +21,7 @@ footer {
 
         &:hover,
         &:visited {
-            color: var(--linkTxtHoverColor);
+            color: var(--linkTxtColorVisited);
         }
     }
 

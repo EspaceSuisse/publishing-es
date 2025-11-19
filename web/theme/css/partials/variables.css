@@ -37,7 +37,7 @@
     --linkTxtActiveColor: var(--linkTxtColor);
     --linkBgColor: var(--colorES-brand-blue-soft);
     --linkBgHoverColor: var(--colorES-brand-blue);
-    --linkTxtColorVisited: grey;
+    --linkTxtColorVisited: var(--colorES-brand-blue-soft);
 
     --txtColor: rgb(86, 86, 86);
     --txtInvertColor: white;
@@ -47,7 +47,7 @@
     --radiusPreviewCard: 4px;
 
     --colorES-brand-blue: rgb(28, 112, 183);
-    --colorES-brand-blue-soft: rgb(245, 251, 255);
+    --colorES-brand-blue-soft: rgb(184, 212, 230);
     --colorES-brand-petrol: rgb(0, 201, 190);
     --colorES-subject: rgb(229, 51, 101);
     --colorES-genre: rgb(48, 141, 192);
