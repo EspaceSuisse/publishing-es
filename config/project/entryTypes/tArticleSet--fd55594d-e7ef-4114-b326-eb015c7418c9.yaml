@@ -10,37 +10,14 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-05-01T12:32:23+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
-            handle: null
-            includeInCards: false
-            instructions: 'Erscheint in den Übersichtskarten, als Vorschaubild auf Social Media und natürlich im Head vom Artikel'
-            label: Aufmacherbild
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: fcd00616-fbe2-4880-95b3-f71b685a20f9
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n# Foto Tool\r\n- Kein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)"
+            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n## Foto Tool\r\n- Kein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)\r\n\r\n## Texte Einfügen\r\nEs hilft, Text erst in einen [Raw Text Editor](https://code.visualstudio.com/) einzufügen, anstatt vom Word direkt ins CMS. So wird das Word Markup automatisch gelöscht. Das CMS putzt zwar auch das Word Markup weg. Aber nicht immer.\r\n\r\n## Artikel URL\r\nDie URL wird aus dem Titel generiert. Willst du in FR eine Französische URL lösche die Zeichen im Feld `Slug` und speichere. Dann wird die url `ASCI-Safe` neu generiert (ohne Sonderzeichen).\r\n\r\n## Übersetzung\r\nBeim ersten Speichern eines neuen Feldes, wird der Text einmalig als Referenz in die andere Sprache rüberkopiert.\r\n\r\n## Rubrik & Thema\r\nDienen dazu, den Artikel auf den Unterseiten zu verordnen. `Lesen Sie dazu auch` wird ebenfalls aus dieser Kategoriersung automatisch generiert."
             dateAdded: '2025-04-29T06:25:34+00:00'
             displayInPane: true
             elementCondition: null
             type: craft\fieldlayoutelements\Markdown
             uid: 02017aaf-a36b-4cac-9644-1ec620c81753
             userCondition: null
-            width: 75
-          -
-            dateAdded: '2025-04-23T08:10:27+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: ccb9dece-cc63-4b57-88ad-a3010159c036
-            userCondition: null
+            width: 100
           -
             autocapitalize: true
             autocomplete: false
@@ -89,6 +66,29 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: '2025-05-01T12:32:23+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Aufmacherbild
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fcd00616-fbe2-4880-95b3-f71b685a20f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-23T08:10:27+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: ccb9dece-cc63-4b57-88ad-a3010159c036
+            userCondition: null
+          -
             dateAdded: '2025-07-29T07:53:44+00:00'
             editCondition: null
             elementCondition: null
@@ -127,7 +127,7 @@ fieldLayouts:
             uid: 5c2a7f7d-3a80-47aa-bd26-89a7c4789197
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2024-12-18T10:45:45+00:00'
             editCondition: null
@@ -144,7 +144,7 @@ fieldLayouts:
             uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2025-04-23T08:10:27+00:00'
             elementCondition: null

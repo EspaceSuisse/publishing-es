@@ -13,12 +13,15 @@
 		{% include "_components/pageHead" %}
 	</header>
 
-	<article class="listingGrid memberLogin">
+	<article class="gridArticle memberLogin">
 		
-		{% include "_components/formMemberLogin" %}
-			
+		<div class="gridSpan12">
+			<div class="elementPanel">{% include "_components/formMemberLogin" %}
+			</div>
+		</div>
+		
 
-		<div class="gridSpan6 gridStart4 loginLinks">
+		<div class="gridSpan12 gridMdSpan10 gridMdStart2 loginLinks">
 			{% if craft.app.language == 'de-CH' %}
 				<p><a href="{{ passwordResetDe }}">{{ 'Passwort Vergessen?' | t }}</a></p>
 				<p><a href="{{ signUpDe }}">{{ 'Mitglied Werden' | t }}</a></p>
