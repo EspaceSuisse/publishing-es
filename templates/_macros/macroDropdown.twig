@@ -1,35 +1,50 @@
-{%- macro dropdown(paramQuery, paramLabel) -%}
+{%- macro dropdown(paramQuery, paramLabel, currentPathParam) -%}
 
-	  {% import '_macros/macroPostDate' as macroPostDate %}
-
+	{% import '_macros/macroPostDate' as macroPostDate %}
 	{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
 
-	<li class="hasDropdown navToplevelLink">
+	{#  check if toplecel link is active #}
+	{% set hasActiveChild = false %}
+	{% for cat in paramQuery %}
+		{% if currentPathParam starts with cat.uri %}
+			{% set hasActiveChild = true %}
+		{% endif %}
+	{% endfor %}
+
+
+	<li class="navToplevelLink hasDropdown {{ hasActiveChild ? 'isActive' : '' }}">
+	
+
 		<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu-{{ paramLabel | ascii }}">
 			<span class="buttonTxt">{{ paramLabel | t }}</span>
 		</button>
-		<div class="dropdown" id="dropdown-menu-{{ paramLabel | ascii }}" role="menu">
-			
-				{% for category in paramQuery %}
-				<ul>
-					{% set relatedArticle = craft.entries()
-						.section('article')
-						.relatedTo(category)
-						.limit(3)
-						.all() 
-					%}
 
-					<li class="relatedNav">
-						<h2 class="subnavCatTitle" style="border-bottom: solid 4px {{ category.fColor }};">
+		<div class="dropdown" id="dropdown-menu-{{ paramLabel | ascii }}" role="menu">
+
+			<div class="dropdownContents">
+
+				<h2 class="dropdownTitle">{{ 'Artikel grupiert nach' | t }} {{ paramLabel | t }}</h2>
+
+				{% for category in paramQuery %}
+
+				<ul class="relatedNav">
+				
+					{% set relatedArticle = craft.entries().section('article').relatedTo(category).limit(3).all() %}
+					{% set isActiveCat = category.uri == craft.app.request.getSegment(1) or category.uri == craft.app.request.pathInfo %}
+
+					<li>
+						<h3 class="subnavCatTitle {{ isActiveCat ? 'isActive' : '' }}">
 							<a href="{{ category.url }}">{{ category.title }}</a>
-						</h2>
+						</h3>
 						<ul class="subnavCatArticles">
 							{% for item in relatedArticle %}
-								<li class="catArticle">
+
+								{% set isActiveArt = item.uri ==  craft.app.request.pathInfo %}
+
+								<li class="catArticle {{ isActiveArt ? 'isActive' : '' }}">
 									<a href="{{ item.url }}">
+										<h4 class="catArticleTitle">{{ item.title }}</h4>
 										{{ macroPostDate.postDate(item) }}
-										<h3 class="catArticleTitle">{{ item.title }}</h3>
-										{# <p class="catArticleDescription">{{ item.fSeoDescription }}</p> #}
 									</a>
 								</li>
 							{% endfor %}
@@ -37,7 +52,7 @@
 					</li>
 					</ul>
 				{% endfor %}
-			
+			</div>
 		</div>
 	</li>
 {%- endmacro -%}

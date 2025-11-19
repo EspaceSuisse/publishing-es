@@ -14,7 +14,6 @@ button.dropdownLink {
     position: absolute;
     height: 0;
     width: 0;
-    /* Deifnitions for dekstop */
     top: var(--siteSideBarWidth);
     @media (min-width: 48rem) {
         top: 0;
