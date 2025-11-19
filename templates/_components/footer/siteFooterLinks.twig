@@ -1,0 +1,10 @@
+{% set linkList = globalLinks.mxFooterLinks.all() %}
+
+
+{% for block in linkList %}
+    {% if loop.first %}<h2>{{ 'Sonstige Links' | t }}</h2>{% endif %}
+    
+    {% if loop.first %}<ul class="linkList">{% endif %}
+        <li>{{ block.fLinkI18n.link }}</li>
+    {% if loop.last %}</ul>{% endif %}
+{% endfor %}

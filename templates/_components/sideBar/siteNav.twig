@@ -17,6 +17,8 @@
 
 {% set articleSearch = craft.entries.section('allArticles').with(['title','url']).one() %}
 
+
+
 <nav aria-label="{{'Main navigation'|t}}" role="navigation"> 
 	<ul class="siteNav">
 		<li class="navIcon">
@@ -32,8 +34,10 @@
 				{{ articleSearch.title }}
 			</a>
 		</li> #}
-		{% include "_components/navLangSwitcher.twig" %}
+
+		{% include "_components/sideBar/siteNavMoreLinks.twig" %}
+		{% include "_components/sideBar/navLangSwitcher.twig" %}
 	</ul>
 </nav>
 
-{% include "_components/navJsDropdown.twig" %}
+{% include "_components/sideBar/navJsDropdown.twig" %}

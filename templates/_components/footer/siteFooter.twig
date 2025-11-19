@@ -1,4 +1,4 @@
-{% import '_macros/macroLinkList' as listMacro %}
+
 
 {% set querySubpages = craft.entries.section('subpages')
     .with(['title','url'])
@@ -17,7 +17,7 @@
 			{% include "_components/footer/siteFooterSocialMedia" %}
 		</div>
 		<div class="subPages gridSpan12 gridMdSpan6">
-			{{ listMacro.listMacro(querySubpages, null, null, 'entryList' ) }}
+			{% include "_components/footer/siteFooterLinks" %}
 		</div>
 	</div>
 </footer>

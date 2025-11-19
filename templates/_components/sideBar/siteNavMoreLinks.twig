@@ -1,0 +1,24 @@
+{% set moreLinks = globalLinks.mxSidebarLinks.all() %}
+
+{% for item in moreLinks %}
+
+	{% if item.fIcon | length %}
+
+		{% set iconUrl = item.fIcon.one() %}
+
+		<li class="navIcon">
+			<a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
+				{{ svg(iconUrl)|raw }}
+			</a>
+		</li>
+
+	{% else %}
+		<li class="navToplevelLink">
+			<a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
+				{{ item.fLinkI18n.label }}
+			</a>
+		</li>
+	{% endif %}
+
+	
+{% endfor %}
