@@ -10,7 +10,7 @@ button.dropdownLink {
 
 .dropdown {
     overflow: hidden;
-    background-color: var(--backgroundColor);
+    background-color: var(--txtInvertColor);
     position: absolute;
     height: 0;
     width: 0;
@@ -37,7 +37,6 @@ button.dropdownLink {
         @media (min-width: 48rem) {
             animation-name: foldOutLeft;
             animation-duration: var(--navSpeed);
-            background-color: var(--backgroundColor);
             left: var(--siteSideBarWidth);
         }
         .relatedNav {

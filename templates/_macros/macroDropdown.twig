@@ -13,15 +13,20 @@
 					{% set relatedArticle = craft.entries()
 						.section('article')
 						.relatedTo(category)
-						.limit(null)
+						.limit(3)
 						.all() 
 					%}
 
 					<li class="relatedNav">
 						<h2 class="subnavCatTitle"><a href="{{ category.url }}">{{ category.title }}</a></h2>
-						<ul class="catArticles">
+						<ul class="subnavCatArticles">
 							{% for item in relatedArticle %}
-								<li class="catArticleTitle">xx</li>
+								<li class="catArticle">
+									<a href="{{ item.url }}">
+										<h3 class="catArticleTitle">{{ item.title }}</h3>
+										<p class="catArticleDescription">{{ item.fSeoDescription }}</p>
+									</a>
+								</li>
 							{% endfor %}
 						</ul>
 					</li>

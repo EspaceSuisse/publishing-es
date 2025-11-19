@@ -1,31 +1,51 @@
 .dropdown {
-    @media (min-width: 1025px) {
+    @media (min-width: 48rem) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
     .relatedNav {
         padding: var(--layoutGap);
+
         .subnavCatTitle {
             font-family: var(--font-display);
-            font-size: var(--font-size-L);
+            font-size: var(--font-size-M);
+
             a {
                 text-decoration: none;
                 color: var(--linkTxtColor);
+
                 &:hover {
                     color: var(--linkTxtHoverColor);
                 }
+
+                q
             }
         }
-        .catArticleTitle {
-            font-size: var(--font-size-M);
-            margin: 0;
-            line-height: calc(var(--line-height-base) * 1.3);
-            a {
-                text-decoration: none;
-                color: var(--linkTxtColor);
-                
-                &:hover {
-                    color: var(--linkTxtHoverColor);
+
+        .subnavCatArticles {
+            .catArticle {
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        .catArticleTitle, .catArticleDescription {
+                            color: var(--linkTxtHoverColor);
+                        }
+                    }
+                }
+
+                padding-bottom: var(--layoutGap);
+
+                .catArticleTitle {
+                    font-size: var(--font-size-S);
+                    font-family: var(--font-display);
+                    margin: 0;
+                }
+
+                .catArticleDescription {
+                    font-size: var(--font-size-S);
+                    font-family: var(--font-default-condensed);
+                    margin: 0;
                 }
             }
         }
