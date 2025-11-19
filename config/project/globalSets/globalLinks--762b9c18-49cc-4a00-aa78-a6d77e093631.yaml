@@ -1,0 +1,56 @@
+fieldLayouts:
+  98d4aca0-1c03-4158-8ece-926ec16cc42c:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-19T08:53:54+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 5f2bf8e1-4de5-4485-ae03-c0d1a67389af # Sidebar Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61685bd3-2781-4dac-89f0-16e45c4eebf1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-11-19T09:02:32+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: af5e5ef5-990b-4df0-8c9e-bebc1342a533 # Footer Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e967591a-1404-4fef-82fd-24272b593410
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            content: 'Die Links zu Social Media im Footer finden sich unter `SEOmatic > Site Settings > Social Media`'
+            dateAdded: '2025-11-19T09:02:32+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 371c3ae1-9fef-4bde-83cd-1413a92c6f34
+            userCondition: null
+            width: 100
+        name: Content
+        uid: 5f4d3d49-3869-4ce6-b226-7054b0108037
+        userCondition: null
+handle: globalLinks
+name: 'Global Links'
+sortOrder: 4

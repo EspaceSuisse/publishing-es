@@ -20,22 +20,35 @@
 
         {% set extension = handleParam.extension|lower %}
 
+        {% set deviceBreakpoints = {
+            'mobile': null,
+            'tablet': '(min-width: 48rem)',
+            'desktop': '(min-width: 63rem)'
+        } %}
+
         {% if extension == 'svg' %}
             {{ svg(handleParam) }}
         {% else %}
+        
+            {# Get the named transform configuration #}
+            {% set imagerConfig = craft.app.config.getConfigFromFile('imager-x-transforms') %}
+            {% set namedTransform = imagerConfig[transformKey] %}
+            
+            {# Extract device names dynamically from the transform configuration #}
+            {% set deviceMap = namedTransform.transforms|map(t => t.device) %}
         
             {# Transform image via Imager X #}
             {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {
                 filenamePattern: filenamePattern
             }) %}
 
-            {# Device order: mobile first #}
-            {% set deviceMap = ['mobile', 'desktop'] %}
-
             <picture class="{{ paramClass ?? 'imgItem' }}">
                 {% for img in transformedImages %}
+
                     {% set device = deviceMap[loop.index0] %}
-                    <source srcset="{{ img.url }}" media="{{ device == 'mobile' ? '(min-width: 1080px)' : '(max-width: 1081px)' }}">
+                    {% set mediaQuery = deviceBreakpoints[device] ?? null %}
+                    
+                    <source srcset="{{ img.url }}" media="{{ mediaQuery }}" data-device="{{ device }}">
                 {% endfor %}
                 <img src="{{ transformedImages[0].url }}" alt="{{ altText|e('html_attr') }}" title="{{ handleParam.title|e('html_attr') }}" loading="lazy" decoding="async">
             </picture>

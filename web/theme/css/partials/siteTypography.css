@@ -65,9 +65,10 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     font-weight: var(--font-bold);
     margin: 0;
 }
-.topicLead {
+.topicLead p{
     font-size: var(--font-size-M);
     font-family: var(--font-default);
     line-height: var(--line-height-base);
     color: var(--txtColor);
+    margin: 0;
 }

@@ -1,3 +1,6 @@
+{# Grabs the data from the seomaticPlugin site Identity #}
+{% set esBase = seomatic.site.identity %}
+
 <h2>{{ esBase.genericName }}</h2>
 <p>
 	{{ esBase.genericDescription}}
@@ -12,8 +15,8 @@
 	</a>
 </p>
 <p>
-	<a href="{{ esBase.genericEmail }}">{{ esBase.genericEmail }}</a>
+	<a href="{{ esBase.genericEmail }}">{{ esBase.genericEmail | enkode }}</a>
 	<br>
 	<a href="{{ esBase.genericUrl }}">{{ esBase.genericUrl }}</a><br>
-	<a href="tel:{{ esBase.genericTelephone }}">{{ esBase.genericTelephone }}</a>
+	<a href="tel:{{ esBase.genericTelephone }}">{{ esBase.genericTelephone | enkode }}</a>
 </p>
