@@ -8,7 +8,7 @@
 {% set articleSubject = entry.fCatSubject %}
 {% set aufmacherBild = entry.fImgI18n.one() %}
 
-{% set smallerGrid = 'gridSpan12 gridLgStart2 gridLgSpan10' %}
+{% set smallerGrid = 'gridSpan12' %}
 
 <figure class="articleHeadImg">
 	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
@@ -19,7 +19,6 @@
 	<div class="{{ smallerGrid }} articleHeadDates">
 		{{ macroPostDate.postDate(entry) }}
 		{% include "_components/articleSunset" %}
-		{% include "_components/articleShare" %}
 	</div>
 	<h1 class="{{ smallerGrid }} articleTitle">{{ entry.title }}</h1>
 	{# Lead Text #}
@@ -32,6 +31,7 @@
 			{{ macroCat.catOverview(articleGenre, 'genre', true) }}
 			{{ macroCat.catOverview(articleSubject, 'subject', true) }}
 		</p>
+		{% include "_components/articleShare" %}
 	</div>
 	
 	<span class="articleId">ID: {{ entry.id }}</span>

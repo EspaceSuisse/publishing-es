@@ -75,12 +75,4 @@
     .previewMetaFooter {
         margin-top: auto;
     }
-    @container  previewCard (min-width: 43rem) {
-        .previewMetaHeader {
-            flex-direction: column;
-            p {
-                margin: 0;
-            }
-        }
-    }
 }

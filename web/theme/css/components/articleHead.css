@@ -39,6 +39,7 @@
         font-weight: var(--font-bold);
         line-height: 1.2;
         margin: 0;
+        hyphens: none;
     }
     .articleLeadText {
         font-size: var(--font-size-L);
@@ -51,13 +52,13 @@
     .articleHeadDates {
         display: flex;
         gap: var(--layoutGap);
-        margin-top: calc(var(--layoutGap));
         font-family: var(--font-default);
         font-size: var(--font-size-S);
-        @media (max-width: 550px) {
+        @media (max-width: 48rem) {
             flex-direction: column;
             p {
               margin: 0;
+              padding: 0;
             }
         }
     }
