@@ -1,4 +1,4 @@
-{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
+{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
 
 {% set listingNews = craft.entries().section('listingNews').one() %}
 
@@ -10,7 +10,7 @@
 				<h2 class="gridSpan12 topicTitle">{{ listingNews.title }}</h2>
 			{% endif %}
 			
-			{{ macroArticlePreview.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4', 'gridSpan12', 'gridSpan12', true) }}
+			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4', 'gridSpan12', 'gridSpan12', true) }}
 
 			{% if loop.last %}
 				<div class="gridSpan12 gridMdSpan2 gridMdStart6">

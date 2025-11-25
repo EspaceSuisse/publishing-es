@@ -1,6 +1,6 @@
 {% extends "_layouts/main" %}
 
-{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
+{% import '_components/previewCards/macroPreviewArticle' as macroPreviewArticle %}
 
 {% block content %}
 
@@ -19,7 +19,7 @@
 	</header>
 	<div class="listingGrid">
 		{% for item in allNews %}
-			{{ macroArticlePreview.listMacro(item,'gridSpan12', 'gridSpan12', 'gridSpan12', true) }}
+			{{ macroPreviewArticle.listMacro(item,'gridSpan12', 'gridSpan12', 'gridSpan12', true) }}
 		{% endfor %}
 	</div>
 
