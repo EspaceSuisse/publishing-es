@@ -1,4 +1,4 @@
-.articlePreview {
+.previewCard {
     position: relative;
     background-color: var(--colorPreviewCard);
     border-radius: var(--radiusPreviewCard);

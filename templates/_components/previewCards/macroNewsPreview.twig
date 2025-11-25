@@ -1,6 +1,5 @@
 {% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage) %}
 
-	{% import '_macros/macroImage' as macro %}
     {% import '_macros/macroPostDate' as macroPostDate %}
 
 
@@ -9,14 +8,7 @@
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
 	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
 
-	<article class="previewCard previewArticle {{ classCardParam }}">
-
-		{% if hideImage != true %}
-			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
-				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
-			</a>
-		{% endif %}
-		
+	<article class="previewCard previewNews {{ classCardParam }}">
 
 		<div class="txtPart {{ classTxtParam }}">
 			<div class="previewMetaHeader">
