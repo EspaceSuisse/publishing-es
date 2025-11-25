@@ -41,7 +41,6 @@
     }
 
     .txtPart {
-        padding: var(--layoutGap);
         display: flex;
         flex-direction: column;
         flex: 1;

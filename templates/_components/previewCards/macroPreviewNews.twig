@@ -1,6 +1,6 @@
 {% macro listMacro(queryParam, classCardParam) %}
 
-    {% import '_macros/macroPostDate' as macroPostDate %}
+	{% import '_macros/macroPostDate' as macroPostDate %}
 
 
 	{% set image = queryParam.fImgI18n.one() ?? null %}
@@ -9,16 +9,16 @@
 	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
 
 	<article class="previewCard previewNews {{ classCardParam }}">
-
-		<div class="txtPart">
-			<div class="previewMetaHeader">
-				{{ macroPostDate.postDate(queryParam) }}
-				{% include "_components/articlePreviewSunset.twig" %}
-			</div>
-			<h4 class="previewTitle">
-				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
-			</h4>
-			<p class="lead">{{ queryParam.fSeoDescription}}</p>
+		<div class="previewMetaHeader">
+			{{ macroPostDate.postDate(queryParam) }}
+			{% include "_components/articlePreviewSunset.twig" %}
+		</div>
+		<h4 class="previewTitle">
+			<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
+		</h4>
+		<p class="lead">{{ queryParam.fSeoDescription}}</p>
+		<div class="previewMetaFooter">
+			<a href="{{ queryParam.url }}" class="btn btnSmall">{{ 'Lesen' | t }}</a>
 		</div>
 	</article>
 {% endmacro %}

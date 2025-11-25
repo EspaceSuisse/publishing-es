@@ -1,6 +1,7 @@
 .previewNews {
+    display: flex;
+    flex-direction: column;
     .previewTitle {
-        white-space: nowrap;
         a {
 
         }
