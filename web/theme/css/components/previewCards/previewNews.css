@@ -1,4 +1,8 @@
 .previewNews {
-    border: none;
-    background: transparent;
+    .previewTitle {
+        white-space: nowrap;
+        a {
+
+        }
+    }
 }

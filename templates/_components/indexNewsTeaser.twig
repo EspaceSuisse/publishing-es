@@ -7,14 +7,14 @@
 		{% for item in newsEntries %}
 
 			{% if loop.first %}
-				<h2 class="gridSpan12 topicTitle">{{ listingNews.title }}</h2>
+				<h3 class="gridSpan12 topicTitle">{{ listingNews.title }}</h3>
 			{% endif %}
 			
-			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4', 'gridSpan12', 'gridSpan12', true) }}
+			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4') }}
 
 			{% if loop.last %}
-				<div class="gridSpan12 gridMdSpan2 gridMdStart6">
-					<a href="{{ listingNews.slug }}" class="btn gridSpan4">{{ listingNews.title }}</a>
+				<div class="gridSpan12 gridMdSpan6 gridMdStart4">
+					<a href="{{ listingNews.slug }}" class="btn gridSpan4">{{ 'Zu den' | t }} {{ listingNews.title }}</a>
 				</div>
 			{% endif %}
 

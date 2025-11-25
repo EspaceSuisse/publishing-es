@@ -8,8 +8,13 @@
     font-size: var(--font-size-S);
     text-transform: uppercase;
     text-decoration: none;
+    white-space: nowrap;
     &:hover {
         background-color: var(--linkBgHoverColor);
         color: var(--linkTxtHoverColor);
+    }
+    &.btnSmall {
+        padding: 0;
+        background-color: transparent;
     }
 }

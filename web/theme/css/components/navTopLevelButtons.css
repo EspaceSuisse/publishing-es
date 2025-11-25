@@ -50,7 +50,7 @@
         }
         svg {
             polygon, line, rect {
-                stroke: var(--txtInvertColor); 
+                stroke: var(--linkTxtActiveColor); 
             }
         }
     }

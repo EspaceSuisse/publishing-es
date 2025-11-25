@@ -1,4 +1,4 @@
-{% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage) %}
+{% macro listMacro(queryParam, classCardParam) %}
 
     {% import '_macros/macroPostDate' as macroPostDate %}
 
@@ -10,14 +10,14 @@
 
 	<article class="previewCard previewNews {{ classCardParam }}">
 
-		<div class="txtPart {{ classTxtParam }}">
+		<div class="txtPart">
 			<div class="previewMetaHeader">
 				{{ macroPostDate.postDate(queryParam) }}
 				{% include "_components/articlePreviewSunset.twig" %}
 			</div>
-			<h2 class="previewTitle">
+			<h4 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
-			</h2>
+			</h4>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 		</div>
 	</article>
