@@ -7,16 +7,16 @@
 
 
 
-<header class="newsHeadCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
-	<div class="gridStart2 gridSpan11 newsCardHead">
+<header class="headerCard newsHeadCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
+	<div class="{{ smallerGrid }} articleHeadDates">
 		{{ macroPostDate.postDate(entry) }}
-		{% include "_components/articleShare" %}
 	</div>
-	<h1 class="{{ smallerGrid }} newsTitle">{{ entry.title }}</h1>
+	<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
 	{# Lead Text #}
-	<p class="{{ smallerGrid }} newsLeadText">{{ entry.fSeoDescription }}</p>
+	<p class="{{ smallerGrid }} topicLead">{{ entry.fSeoDescription }}</p>
 	<div class="headMeta {{ smallerGrid }}">
 		{% include "_components/listingAuthors" %}
+		{% include "_components/articleShare" %}
 	</div>
 	
 	<span class="articleId">ID: {{ entry.id }}</span>

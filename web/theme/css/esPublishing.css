@@ -42,7 +42,9 @@
 @import url("components/articleCtaCall.css");
 
 @import url("components/header/headerNews.css");
+@import url("components/header/headerCard.css");
 @import url("components/newsTeaser.css");
+@import url("components/listingAuthors.css");
 
 @import url("partials/siteTags.css");
 @import url("components/previewCards/previewCard.css");

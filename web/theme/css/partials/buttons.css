@@ -16,5 +16,6 @@
     &.btnSmall {
         padding: 0;
         background-color: transparent;
+        font-size: var(--font-size-XS);
     }
 }

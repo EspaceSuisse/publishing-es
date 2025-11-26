@@ -1,0 +1,44 @@
+.headerCard {
+    .articleAuthors span {
+        font-size: var(--font-size-M);
+        font-family: var(--font-display);
+    }
+
+    .articlePostDate {
+        font-size: var(--font-size-S);
+        font-family: var(--font-default);
+        margin: 0;
+    }
+    .articleHeadDates {
+        display: flex;
+        gap: var(--layoutGap);
+        font-family: var(--font-default);
+        font-size: var(--font-size-S);
+
+        @media (max-width: 48rem) {
+            flex-direction: column;
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .headMeta {
+        display: flex;
+        gap: var(--layoutGap);
+        flex-wrap: wrap;
+        ;
+    }
+
+    .articleId {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: var(--txtInvertColor);
+        font-family: var(--font-default);
+        font-size: var(--font-size-S);
+        padding: 3px;
+    }
+}
