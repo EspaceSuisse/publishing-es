@@ -1,5 +1,9 @@
 .headerSectionNews {
     box-shadow: none;
-    margin-top: max(200px, 20vw);
+    margin-top: max(200px, 20vh);
     background-color: transparent;
+    margin-bottom: calc( var(--layoutGap) * 3 );
+    .postDate {
+        margin: 0;
+    }
 }
