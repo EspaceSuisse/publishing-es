@@ -1,0 +1,14 @@
+.articleSubnav {
+    margin-top: calc( var(--layoutGap) * 3 );
+    display: flex;
+    justify-content: space-between;
+}
+.prevNext {
+    font-size: var(--font-size-M);
+    font-family: var(--font-default-condensed);
+    text-decoration: none;
+    color: var(--linkTxtColor);
+    &:hover {
+        color: var(--linkTxtHoverColor)
+    }
+}
