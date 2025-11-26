@@ -9,17 +9,14 @@
 	{% set newsImg = entry.fImgI18n.one() ?? null %}
 
 	<article>
-		
-		<header class="pageHead newsHead">
-			{% include "_components/newsHead" %}
+		<header class="pageHead articleHead">
+			{% include "_components/header/headerBrand" %}
+			{% include "_components/header/headerNews" %}
 		</header>
 		<div class="gridArticle articleContent">
 			{# News section does not have articles, so we use the articleMatrix here to display the news entries #}
 			{# The articleMatrix component is flexible enough to handle news entries as well #}
 			{# We just need to ensure that the articleMatrix can handle entries from the news #}
-			
-			{{ macro.articleImage(newsImg, 'articleThumb', 'gridSpan8 gridStart3') }}
-
 			{% include "_components/articleMatrix" %}
 		</div>
 	</article>

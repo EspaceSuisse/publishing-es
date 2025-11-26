@@ -27,8 +27,8 @@ The blocks are defined in the matrix field in the CMS.
 {% block content %}
 	<article>		
 		<header class="pageHead articleHead">
-			{% include "_components/brandHeader.twig" %}
-			{% include "_components/articleHead" %}
+			{% include "_components/header/headerBrand" %}
+			{% include "_components/header/headerArticle" %}
 		</header>
 		<div class="gridArticle {{ articleSunsetClass }} articleContent">
 			{% include "_components/articleMatrix" %}
