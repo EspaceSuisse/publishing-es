@@ -9,29 +9,32 @@
         font-family: var(--font-default);
         margin: 0;
     }
-    .articleHeadDates {
+    .articleHeadMeta {
         display: flex;
         gap: var(--layoutGap);
         font-family: var(--font-default);
         font-size: var(--font-size-S);
-
-        @media (max-width: 48rem) {
-            flex-direction: column;
-
-            p {
+        justify-content: space-between;
+        p {
                 margin: 0;
                 padding: 0;
             }
+        @media (max-width: 48rem) {
+            flex-direction: column;
+
+            
         }
     }
 
-    .headMeta {
+    .headMetaFooter {
         display: flex;
         gap: var(--layoutGap);
         flex-wrap: wrap;
-        ;
+        justify-content: space-between;
     }
-
+    .accessMessage {
+        text-align: right;
+    }
     .articleId {
         position: absolute;
         right: 0;
