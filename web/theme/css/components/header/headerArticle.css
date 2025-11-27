@@ -36,7 +36,8 @@
       position: absolute;
       right: 10px;
       top: 10px;
-
+      background-color: var(--txtInvertColor);
+      padding: 4px;
       p {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
