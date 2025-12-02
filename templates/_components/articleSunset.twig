@@ -1,7 +1,11 @@
+{% set freeForAll = entry.fSwitch %}
+
 {% set accessMessage %}
     {% if not isSunset %}
         {{ 'Artikel für Nichtmitglieder noch' | t }} {{ daysLeft }} {{ 'Tage verfügbar.' | t }} <br>
         <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Mitglied werden' | t }}</a>
+    {% elseif freeForAll == true %}
+        {{ 'Artikel frei Verfügbar' | t }}
     {% else %}
         {{ 'Artikel nur für Mitglieder verfügbar.' | t }}
         <a href="{{ url('member-login', {redirect: craft.app.request.url}) }}">{{ 'Loggen Sie sich ein' | t }}</a>.  <br>
