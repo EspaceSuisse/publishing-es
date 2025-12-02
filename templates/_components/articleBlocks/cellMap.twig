@@ -79,8 +79,7 @@
                 'type': 'raster',
                 'source': 'wms-source',
                 'paint': {
-                    'fill-color': '#888888',   // fill color
-                    'fill-opacity': 0.5        // transparency
+                    'raster-opacity': 0.5
                 }
             });
         });
@@ -156,6 +155,17 @@
         let initialLat = {{ mapLatitude }};
         let initialLng = {{ mapLongitude }};
         let initialZoom = {{ mapZoom }};
+
+                // Validate coordinates
+        if (initialLat < -90 || initialLat > 90) {
+            console.warn('Invalid latitude, using default');
+            initialLat = 46.798591;
+        }
+        if (initialLng < -180 || initialLng > 180) {
+            console.warn('Invalid longitude, using default');
+            initialLng = 8.231772;
+        }
+
 
         const savedState = localStorage.getItem(storageKey);
         if (savedState) {
