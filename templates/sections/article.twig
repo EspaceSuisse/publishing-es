@@ -12,6 +12,7 @@ The blocks are defined in the matrix field in the CMS.
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
 {% set isPreview = craft.app.request.getParam('token') is not null %}
+{% set freeForAll = entry.fSwitch %}
 
 {# Default empty class #}
 {% set articleSunsetClass = '' %}
@@ -20,7 +21,7 @@ The blocks are defined in the matrix field in the CMS.
 {% set isLoggedIn = craft.app.user.identity is not null %}
 
 {# Update based on logic - don't sunset if logged in #}
-{% if not isPreview and not isLoggedIn %}
+{% if not isPreview and not isLoggedIn and not freeForAll %}
     {% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
 {% endif %}
 
@@ -36,4 +37,5 @@ The blocks are defined in the matrix field in the CMS.
 		{% include "_components/articleCtaCall" %}
 		{% include "_components/articleMoreArticles" %}
 	</article>
+	{% include "_components/lightboxInitiator" %}
 {% endblock %}

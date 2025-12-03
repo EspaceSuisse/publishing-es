@@ -11,6 +11,15 @@ return [
             'format' => 'avif'
         ],
     ],
+    'articleImageLightbox' => [
+        'displayName' => 'Article Image Lightbox',
+        'transforms' => [
+            ['width' => 1920,],
+        ],
+        'defaults' => [
+            'format' => 'avif',
+        ],
+    ],
     'articleImage' => [
         'displayName' => 'Article Image',
         'transforms' => [

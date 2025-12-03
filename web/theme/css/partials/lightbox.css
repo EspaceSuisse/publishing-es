@@ -1,0 +1,27 @@
+.pswp {
+    .pswp__counter {
+        font-family: var(--font-default);
+        font-size: var(--font-size-M);
+    }
+    .pswp__custom-caption {
+        font-family: var(--font-default);
+        font-size: var(--font-size-M);
+        position: absolute;
+        left: var(--layoutGap);
+        bottom: calc( var(--layoutGap) * 3 );
+        color: var(--txtInvertColor);
+        p {
+            margin: 0;
+            color:  var(--txtInvertColor);
+        }
+    }
+
+    .pswp__custom-caption a {
+        color: var(--txtInvertColor);
+        text-decoration: underline;
+    }
+
+    .hidden-caption-content {
+        display: none;
+    }
+}

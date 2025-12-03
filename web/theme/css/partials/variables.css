@@ -26,7 +26,7 @@
     }
 
     /* 90vw on mobile */
-    --articleMaxWidth: 100rem;
+    --maxContentWidth: 120rem;
     --listingMaxWidth: 145rem;
 
 
