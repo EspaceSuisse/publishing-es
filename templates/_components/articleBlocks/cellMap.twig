@@ -199,8 +199,11 @@
         // add zoom controls
         map.addControl(new maplibregl.NavigationControl({
             showZoom: true,
-            showCompass: false
+            showCompass: false,
+            showFullscreen: true
         }));
+
+        map.addControl(new maplibregl.FullscreenControl(), 'top-right');
 
         // --- Save map state on pan/zoom ---
         map.on('moveend', () => {

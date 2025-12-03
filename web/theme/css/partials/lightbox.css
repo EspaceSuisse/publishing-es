@@ -1,20 +1,23 @@
 .pswp {
+    .pswp__counter {
+        font-family: var(--font-default);
+        font-size: var(--font-size-M);
+    }
     .pswp__custom-caption {
-        background: rgba(75, 150, 75, 0.75);
-        font-size: 16px;
-        color: #fff;
-        width: calc(100% - 32px);
-        max-width: 400px;
-        padding: 2px 8px;
-        border-radius: 4px;
+        font-family: var(--font-default);
+        font-size: var(--font-size-M);
         position: absolute;
-        left: 50%;
-        bottom: 16px;
-        transform: translateX(-50%);
+        left: var(--layoutGap);
+        bottom: calc( var(--layoutGap) * 3 );
+        color: var(--txtInvertColor);
+        p {
+            margin: 0;
+            color:  var(--txtInvertColor);
+        }
     }
 
     .pswp__custom-caption a {
-        color: #fff;
+        color: var(--txtInvertColor);
         text-decoration: underline;
     }
 
