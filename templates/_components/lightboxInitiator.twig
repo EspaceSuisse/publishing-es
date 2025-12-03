@@ -10,5 +10,30 @@
         children: 'a.lightboxImg',
         pswpModule: PhotoSwipe
     });
+    
+    lightbox.on('uiRegister', function() {
+        lightbox.pswp.ui.registerElement({
+            name: 'custom-caption',
+            order: 9,
+            isButton: false,
+            appendTo: 'root',
+            html: '',
+            onInit: (el, pswp) => {
+                lightbox.pswp.on('change', () => {
+                    const currSlideElement = lightbox.pswp.currSlide.data.element;
+                    let captionHTML = '';
+                    if (currSlideElement) {
+                        // Get the parent figure and find figcaption
+                        const figcaption = currSlideElement.parentElement.querySelector('figcaption');
+                        if (figcaption) {
+                            captionHTML = figcaption.innerHTML;
+                        }
+                    }
+                    el.innerHTML = captionHTML || '';
+                });
+            }
+        });
+    });
+    
     lightbox.init();
 {% endjs %}
