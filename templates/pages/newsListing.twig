@@ -1,6 +1,6 @@
 {% extends "_layouts/main" %}
 
-{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
+{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
 
 {% block content %}
 
@@ -14,12 +14,12 @@
 	
 
 	<header class="pageHead subPageHead">
-		{% include "_components/brandHeader.twig" %}
-		{% include "_components/pageHead" %}
+		{% include "_components/header/headerBrand" %}
+		{% include "_components/header/headerPage" %}
 	</header>
 	<div class="listingGrid">
 		{% for item in allNews %}
-			{{ macroArticlePreview.listMacro(item,'gridSpan12', 'gridSpan12', 'gridSpan12', true) }}
+			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridLgSpan6') }}
 		{% endfor %}
 	</div>
 

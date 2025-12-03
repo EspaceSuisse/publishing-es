@@ -34,8 +34,10 @@
         color: var(--txtInvertColor);
     }
     /* the svg color when not active or not clicked */
-    svg polygon {
-        stroke: var(--txtInvertColor); 
+    svg {
+        polygon, line, rect {
+            stroke: var(--txtInvertColor); 
+        }
     }
     
 
@@ -46,8 +48,10 @@
             color: var(--linkTxtHoverColor);
             font-weight: var(--font-bold);
         }
-        svg polygon {
-            stroke: var(--linkTxtHoverColor); 
+        svg {
+            polygon, line, rect {
+                stroke: var(--linkTxtActiveColor); 
+            }
         }
     }
 }

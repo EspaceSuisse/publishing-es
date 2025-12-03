@@ -1,0 +1,9 @@
+.previewNews {
+    display: flex;
+    flex-direction: column;
+    .previewTitle {
+        a {
+
+        }
+    }
+}
