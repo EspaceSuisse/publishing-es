@@ -1,0 +1,66 @@
+{% macro articleImage(handleParam, transformKey, paramClass) %}
+    {% if handleParam is not null %}
+    
+        {% set title        = handleParam.title | default('image') | ascii | kebab | slice(0, 40) %}
+        {% set altText      = handleParam.fPlainTextI18nMultiline ?? '' %}
+        {% set photographer = handleParam.fPlainTxt ?? '' | ascii | kebab | slice(0, 20) %}
+        {% set provider     = handleParam.fTagProvider.one() ?? '' | ascii | kebab | slice(0, 20) %}
+        {% set cc           = (handleParam.fImgLicence ?? '') | ascii | trim | lower | kebab %}
+        {% set transform    = transformKey | ascii | kebab | slice(0, 20) %}
+        {% set projectTag   = 'espace-suisse' %}
+
+        {% set filenamePattern = [
+            title,
+            provider,
+            cc,
+            transform,
+            projectTag,
+            '{fullname|shorthash}.{extension}'
+        ]|filter(v => v|length) | join('-') %}
+
+        {% set extension = handleParam.extension|lower %}
+
+        {% set deviceBreakpoints = {
+            'mobile': null,
+            'tablet': '(min-width: 48rem)',
+            'desktop': '(min-width: 63rem)'
+        } %}
+
+        {% if extension == 'svg' %}
+            {{ svg(handleParam) }}
+        {% else %}
+        
+            {# Get the named transform configuration #}
+            {% set imagerConfig = craft.app.config.getConfigFromFile('imager-x-transforms') %}
+            {% set namedTransform = imagerConfig[transformKey] %}
+            
+            {# Extract device names dynamically from the transform configuration #}
+            {% set deviceMap = namedTransform.transforms|map(t => t.device) %}
+        
+            {# Transform image via Imager X #}
+            {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey, {
+                filenamePattern: filenamePattern
+            }) %}
+
+            {# Transform for lightbox - using the articleImageLightbox named transform #}
+            {% set lightboxImage = craft.imagerx.transformImage(handleParam, 'articleImageLightbox')[0] %}
+            
+            <a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
+
+                <picture class="{{ paramClass ?? 'imgItem' }}">
+                    {% for img in transformedImages %}
+
+                        {% set device = deviceMap[loop.index0] %}
+                        {% set mediaQuery = deviceBreakpoints[device] ?? null %}
+                        
+                        <source srcset="{{ img.url }}" media="{{ mediaQuery }}" data-device="{{ device }}">
+                    {% endfor %}
+                    <img src="{{ transformedImages[0].url }}" alt="{{ altText|e('html_attr') }}" title="{{ handleParam.title|e('html_attr') }}" loading="lazy" decoding="async">
+                </picture>
+            </a>
+        {% endif %}
+    {% else %}
+        no image
+    {% endif %}
+
+{% endmacro %}
