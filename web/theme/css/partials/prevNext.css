@@ -1,0 +1,16 @@
+.articleSubnav {
+    margin-top: calc( var(--layoutGap) * 3 );
+    display: flex;
+    justify-content: space-between;
+}
+.prevNext {
+    font-size: var(--font-size-S);
+    font-family: var(--font-display);
+    text-decoration: none;
+    color: var(--linkTxtColor);
+    display: flex;
+    align-items: center;
+    &:hover {
+        color: var(--linkTxtHoverColor)
+    }
+}

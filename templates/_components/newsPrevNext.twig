@@ -1,0 +1,18 @@
+{# Get the prev/next elements #}
+{% set prevEntry = entry.getPrev({ section: 'news', orderBy: 'postDate ASC' }) %}
+
+{% set nextEntry = entry.getNext({
+  section: 'news',
+  orderBy: 'postDate ASC'
+}) %}
+
+{# Output the links #}
+<div class="gridSpan10 gridStart2 articleSubnav">
+    {% if prevEntry %}
+        <a href="{{ prevEntry.url }}" class="prevNext linkPrev">&#9664; {{ prevEntry.title }}</a>
+    {% endif %}
+
+    {% if nextEntry %}
+        <a href="{{ nextEntry.url }}" class="prevNext linkNext">{{ nextEntry.title }} &#9654;</a>
+    {% endif %}
+</div>

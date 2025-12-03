@@ -1,11 +1,6 @@
-.articlePreview {
+.previewCard {
     position: relative;
-    background-color: var(--colorPreviewCard);
-    border-radius: 3px;
-    box-shadow: var(--shadow);
     overflow: hidden;
-    display: grid;
-    grid-template-columns: subgrid;
     container-type: inline-size;
     container-name: previewCard;
     .previewTitle {
@@ -46,7 +41,6 @@
     }
 
     .txtPart {
-        padding: var(--layoutGap);
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -67,34 +61,18 @@
     .btnCard {
         margin-left: auto;
     }
-    .previewMetaHeader {
+    .previewMetaHeader, .previewMetaFooter {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
     }
-    @container  previewCard (max-width: 43rem) {
-        .previewMetaHeader {
+    @media (min-width: 48rem ) and (max-width: 68rem)  {
+        .previewMetaHeader, .previewMetaFooter {
             flex-direction: column;
-            p {
-                margin: 0;
-            }
         }
     }
-
-    &.newsCard {
-        box-shadow: none;
-        background-color: transparent;
-
-        .previewTitle a {
-            font-size: var(--font-size-M);
-            font-family: var(--font-default);
-            font-weight: var(--font-normal);
-            text-transform: none;
-        }
-    }
-}
-
-.previewSizeS {
-    .previewTitle {
-        margin-top: 10px;
+    .previewMetaFooter {
+        margin-top: auto;
     }
 }

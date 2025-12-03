@@ -4,7 +4,7 @@ use craft\helpers\App;
 
 return [
     '*' => [
-        'cachingEnabled' => true,
+        'cachingEnabled' => false,
         'warmCacheAutomatically' => true,
         'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
@@ -20,5 +20,8 @@ return [
     ],
     'staging' => [
         'cachingEnabled' => false,
+    ],
+    'production' => [
+        'cachingEnabled' => true,
     ],
 ];

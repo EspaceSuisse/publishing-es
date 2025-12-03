@@ -1,6 +1,0 @@
-.articleHeadCat {
-    display: flex;
-    gap: var(--layoutGap);
-    justify-content: center;
-    align-items: center;
-}

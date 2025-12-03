@@ -2,5 +2,13 @@
 
 
 {% block content %}
-    {{ entry.title }}
+	<article>		
+		<header class="pageHead subPageHead">
+			{% include "_components/header/headerBrand" %}
+			{% include "_components/header/headerPage" %}
+		</header>
+		<div class="gridArticle articleContent">
+			{% include "_components/articleMatrix" %}
+		</div>
+	</article>
 {% endblock %}
