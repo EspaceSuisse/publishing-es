@@ -31,13 +31,14 @@ input {
     line-height: var(--line-height-base);
     color: var(--txtColor);
 }
-@media (min-width: 52rem) {
-    input {
-        align-self: flex-start;
-    }
-}
 .formField,
 .mc-field-group {
     display: flex;
     flex-direction: column;
+}
+.elementPanel {
+    padding: var(--layoutGap);
+    background-color: var(--colorPreviewCard);
+    box-shadow: var(--shadow);
+    border-radius: var(--radiusPreviewCard);
 }

@@ -17,23 +17,23 @@
 
 {% set articleSearch = craft.entries.section('allArticles').with(['title','url']).one() %}
 
+{% set currentPath = craft.app.request.pathInfo %}
+
 <nav aria-label="{{'Main navigation'|t}}" role="navigation"> 
 	<ul class="siteNav">
-		<li class="navIcon">
-			<a href="{{ siteUrl }}" aria-label="{{ 'Home' | t }}">
-				{{ svg('@webroot/theme/img/icon-home.svg')|raw }}
-			</a>
-		</li>
-		{{ dropMacro.dropdown(navSubject, labelSubject) }}
-		{{ dropMacro.dropdown(navGenre, labelGenre) }}
+		{% include "_components/sideBar/homepageLink.twig" %}
+		{{ dropMacro.dropdown(navSubject, labelSubject, currentPath) }}
+		{{ dropMacro.dropdown(navGenre, labelGenre, currentPath) }}
 
 		{# <li class="navIcon">
 			<a href="{{ articleSearch.url }}">
 				{{ articleSearch.title }}
 			</a>
 		</li> #}
-		{% include "_components/navLangSwitcher.twig" %}
+
+		{% include "_components/sideBar/siteNavMoreLinks.twig" %}
+		{% include "_components/sideBar/navLangSwitcher.twig" %}
 	</ul>
 </nav>
 
-{% include "_components/navJsDropdown.twig" %}
+{% include "_components/sideBar/navJsDropdown.twig" %}

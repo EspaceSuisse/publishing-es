@@ -10,38 +10,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-05-01T12:32:23+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
-            handle: null
-            includeInCards: false
-            instructions: 'Erscheint in den Übersichtskarten, als Vorschaubild auf Social Media und natürlich im Head vom Artikel'
-            label: Aufmacherbild
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: fcd00616-fbe2-4880-95b3-f71b685a20f9
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n# Foto Tool\r\n- Kein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)"
-            dateAdded: '2025-04-29T06:25:34+00:00'
-            displayInPane: true
-            elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 02017aaf-a36b-4cac-9644-1ec620c81753
-            userCondition: null
-            width: 75
-          -
-            dateAdded: '2025-04-23T08:10:27+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: ccb9dece-cc63-4b57-88ad-a3010159c036
-            userCondition: null
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -69,7 +37,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: bfab3bd8-d6eb-4c0f-a8ea-461ece283cb7
             userCondition: null
-            warning: 'Wenn du den Titel nachträglich änderst, solltest du auch `Slug` ändern. `Slug` ist die artikel `URL`'
+            warning: null
             width: 75
           -
             dateAdded: '2025-09-17T09:35:22+00:00'
@@ -106,10 +74,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-08-28T13:01:33+00:00'
+            dateAdded: '2025-04-23T08:10:27+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 6bffbca6-9009-41bd-97ad-1390dcb64e40
+            uid: ccb9dece-cc63-4b57-88ad-a3010159c036
             userCondition: null
           -
             dateAdded: '2025-05-08T12:21:24+00:00'
@@ -127,7 +95,7 @@ fieldLayouts:
             uid: 5c2a7f7d-3a80-47aa-bd26-89a7c4789197
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2024-12-18T10:45:45+00:00'
             editCondition: null
@@ -144,13 +112,30 @@ fieldLayouts:
             uid: 354464c7-9d21-4189-9f3a-1d1349ebce86
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2025-04-23T08:10:27+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 3ccdefd8-e23f-41dd-95e5-7aa281a823f0
             userCondition: null
+          -
+            dateAdded: '2025-05-01T12:32:23+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Aufmacherbild
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fcd00616-fbe2-4880-95b3-f71b685a20f9
+            userCondition: null
+            warning: null
+            width: 25
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
             editCondition: null
@@ -167,7 +152,7 @@ fieldLayouts:
             uid: e058395e-3601-40ef-88b6-c85b0e9dcfb1
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
             editCondition: null
@@ -184,12 +169,21 @@ fieldLayouts:
             uid: 0d4dc202-9a02-4984-8cc1-3a6840b5229c
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
-            dateAdded: '2024-12-18T14:33:52+00:00'
+            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n## Foto Tool\r\n- Kein Plan, wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)\r\n\r\n## Texte Einfügen\r\nEs hilft, Text erst in einen [Raw Text-Editor](https://code.visualstudio.com/) einzufügen, anstatt vom Word direkt ins CMS. So wird das Word Markup automatisch gelöscht. Das CMS putzt zwar auch das Word Markup weg. Aber nicht immer.\r\n\r\n## Artikel URL\r\nDie URL wird aus dem Titel generiert. Willst du in FR eine französische URL, lösche die Zeichen im Feld `Slug` und speichere. Dann wird die URL `ASCI-Safe` neu generiert (ohne Sonderzeichen).\r\n\r\n## Catchy Title\r\nFür die Kacheln kannst du einen polemischen / lustigeren / griffigeren Titel verwenden, der dann nur auf den Kacheln dargestellt wird. Im Artikel selber kommt immer der normale titel.\r\n\r\n## Übersetzung\r\nBeim ersten Speichern eines neuen Feldes wird der Text einmalig als Referenz in die andere Sprache hinüber kopiert.\r\n\r\n## Rubrik & Thema\r\nDienen dazu, den Artikel auf den Unterseiten zu verordnen. `Lesen Sie dazu auch` wird ebenfalls aus dieser Kategorisierung automatisch generiert."
+            dateAdded: '2025-04-29T06:25:34+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 02017aaf-a36b-4cac-9644-1ec620c81753
+            userCondition: null
+            width: 100
+          -
+            dateAdded: '2025-11-19T11:13:39+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 3993fac1-ba1c-454c-9013-425272f0f6b1
+            uid: 58a37ce4-5e68-4552-af28-35bbc9e4b008
             userCondition: null
         name: Head
         uid: 111ec320-d642-467e-9a0a-54b565df12b6
@@ -198,14 +192,14 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-23T08:12:38+00:00'
-            dismissible: false
+            content: "# Was tun\r\n\r\nWürfle dir deinen Artikel aus den verschiedenen Matrix Elementen zusammen."
+            dateAdded: '2025-11-19T11:13:39+00:00'
+            displayInPane: true
             elementCondition: null
-            style: tip
-            tip: "Würfle dir den Artikel aus diesen Elementen zusammen.\r\n\r\nKein Plan wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)"
-            type: craft\fieldlayoutelements\Tip
-            uid: 43f60bf9-5e50-4d87-8353-567d716447de
+            type: craft\fieldlayoutelements\Markdown
+            uid: b96dd9d7-f955-4e60-881f-0d218d5b7676
             userCondition: null
+            width: 100
           -
             dateAdded: '2024-12-18T11:08:52+00:00'
             editCondition: null

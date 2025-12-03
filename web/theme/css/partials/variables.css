@@ -26,28 +26,30 @@
     }
 
     /* 90vw on mobile */
-    --articleMaxWidth: 100rem;
+    --maxContentWidth: 120rem;
     --listingMaxWidth: 145rem;
 
 
     --navSpeed: 0.2s;
 
     --linkTxtColor: var(--colorES-brand-blue);
-    --linkTxtHoverColor: rgb(240, 179, 80);
+    --linkTxtHoverColor: rgb(0, 102, 68);
+    --linkTxtActiveColor: var(--linkTxtColor);
     --linkBgColor: var(--colorES-brand-blue-soft);
     --linkBgHoverColor: var(--colorES-brand-blue);
-    --linkTxtColorVisited: grey;
+    --linkTxtColorVisited: var(--colorES-brand-blue-soft);
 
     --txtColor: rgb(86, 86, 86);
     --txtInvertColor: white;
 
     --backgroundColor: rgb(240, 240, 240);
     --colorPreviewCard: white;
+    --radiusPreviewCard: 4px;
 
     --colorES-brand-blue: rgb(28, 112, 183);
-    --colorES-brand-blue-soft: rgb(245, 251, 255);
+    --colorES-brand-blue-soft: rgb(184, 212, 230);
     --colorES-brand-petrol: rgb(0, 201, 190);
-    --colorES-subject: rgb(249, 194, 0);
+    --colorES-subject: rgb(229, 51, 101);
     --colorES-genre: rgb(48, 141, 192);
 
     --shadow: 0 1px 2px 0 rgba(0,0,0,0.08);

@@ -72,10 +72,10 @@ fieldLayouts:
             warning: null
             width: 75
           -
-            dateAdded: '2024-12-18T10:44:59+00:00'
+            dateAdded: '2025-11-19T08:36:29+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # ArticleBlocks
             handle: null
             includeInCards: false
             instructions: null
@@ -84,7 +84,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 23d1efa2-4667-456d-8023-fa0b8b825a0a
+            uid: 3e523fd0-9df7-4a0b-a701-13bfbb15c7db
             userCondition: null
             warning: null
             width: 100

@@ -1,0 +1,10 @@
+.previewArticle {
+    background-color: var(--colorPreviewCard);
+    border-radius: var(--radiusPreviewCard);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: subgrid;
+    .txtPart {
+        padding: var(--layoutGap);
+    }
+}
