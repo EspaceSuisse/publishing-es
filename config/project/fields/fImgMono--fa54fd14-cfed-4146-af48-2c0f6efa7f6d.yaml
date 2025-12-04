@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: imgMono
+handle: fImgMono
 instructions: null
 name: Img
 searchable: false
@@ -24,7 +24,7 @@ settings:
   selectionLabel: null
   showCardsInGrid: false
   showSearchInput: true
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'
