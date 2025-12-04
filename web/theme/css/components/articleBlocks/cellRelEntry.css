@@ -1,26 +1,29 @@
 .cellRelEntry {
     display: grid;
     grid-template-columns: subgrid;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--shadow);
+    border: solid 1px var(--colorES-brand-blue);
     a {
+        display: grid;
+        grid-template-columns: subgrid;
         text-decoration: none;
-        padding: 20px;
-        &:hover h3 {
-            color: var(--hoverColor)
+        .txtPart {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .relEntryHeadMeta {
+                font-size: var(--font-size-M);
+                font-family: var(--font-default);
+                margin: 0;
+            }
         }
-    }
-    .relatedEntryTitle, p {
-        padding: 0;
-        margin: 0;
-    }
-    @media (min-width: 1024px) {
-        picture {
-            grid-column: span 4;
-        }
-        a {
-            grid-column: span 6;
+        &:hover {
+            background-color: var(--linkBgHoverColor);
+            .relatedEntryTitle {
+                color: var(--txtInvertColor);
+            }
+            .relEntryHeadMeta {
+                color: var(--txtInvertColor);
+            }
         }
     }
 }

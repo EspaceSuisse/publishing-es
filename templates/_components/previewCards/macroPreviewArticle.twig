@@ -5,7 +5,7 @@
 	{% import '_macros/macroCatOverview' as macroCat %}
 
 
-	{% set image = queryParam.fImgI18n.one() ?? null %}
+	{% set image = queryParam.fImgMono.one() ?? null %}
 	{% set catGenre = queryParam.fCatGenre.all() %}
 	{% set catSubject = queryParam.fCatSubject.all() %}
 
