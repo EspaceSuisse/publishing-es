@@ -1,0 +1,28 @@
+{% set moreLinks = globalLinks.mxSidebarLinks.all() %}
+
+
+{% for item in moreLinks %}
+
+	{% set isSubPage = item.fLinkI18n.url == craft.app.request.absoluteUrl  %}
+
+	{% if item.fIcon | length %}
+
+		{% set iconUrl = item.fIcon.one() %}
+		
+		
+		<li class="navToplevelLink navIcon {{ isSubPage ? 'isActive' : '' }}">
+			<a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
+				{{ svg(iconUrl)|raw }}
+			</a>
+		</li>
+
+	{% else %}
+		<li class="navToplevelLink {{ isSubPage ? 'isActive' : '' }}">
+			<a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
+				{{ item.fLinkI18n.label }}
+			</a>
+		</li>
+	{% endif %}
+
+	
+{% endfor %}

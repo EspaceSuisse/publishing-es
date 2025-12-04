@@ -8,23 +8,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-09-10T13:56:48+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: ff2a5edb-c344-429f-9dd7-1c3648b3d165
-            userCondition: null
-            warning: null
-            width: 25
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -53,7 +36,7 @@ fieldLayouts:
             uid: 5f19d603-acc0-4629-bfe2-1ba16f722bae
             userCondition: null
             warning: null
-            width: 75
+            width: 100
           -
             dateAdded: '2025-09-10T13:48:55+00:00'
             editCondition: null
@@ -68,23 +51,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b2ff6346-a9c2-452d-a9d9-069f0ab3c992
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-09-10T13:48:55+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: Lead
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5d997f23-c630-452b-b64e-646604b89829
             userCondition: null
             warning: null
             width: 100

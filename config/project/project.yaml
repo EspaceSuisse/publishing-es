@@ -1,4 +1,4 @@
-dateModified: 1762949222
+dateModified: 1764765229
 elementSources:
   craft\elements\Asset:
     -
@@ -74,6 +74,7 @@ elementSources:
         - link
         - authors
         - 'field:e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f' # VC
+        - slug
       type: native
     -
       heading: ''
@@ -88,6 +89,13 @@ elementSources:
       type: heading
     -
       key: 'section:cbd30d19-7bb8-4252-91df-a451ebb3d525' # Call to Action
+      type: native
+    -
+      heading: ''
+      key: 'heading:29182fa9-94e7-426d-82cb-e6db8a6939de'
+      type: heading
+    -
+      key: 'section:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
       type: native
   craft\elements\User:
     -
@@ -178,6 +186,7 @@ meta:
     1fb49816-e800-4eb3-a679-27ea164fb72d: 'CTA Type' # CTA Type
     2a01649b-ab6a-4edd-a8f9-130d7d06dc53: Article # Article
     2b0cc015-5b68-4dc4-9f91-752d21224806: Reduced # Reduced
+    02bbff76-fc9f-4cb1-b049-c4426dba23de: SidebarLinks # SidebarLinks
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'Inforum FR' # Inforum FR
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text
     2e063293-328e-4b38-8c35-ec4074593593: EspaceSuisse # EspaceSuisse
@@ -193,7 +202,9 @@ meta:
     4e75f3d6-ff7d-43bf-8be9-7eef14e6f6eb: 'Homepage Set' # Homepage Set
     4f2a2908-da4b-46df-b9ab-a5a6d8078286: Downloads # Downloads
     5af8807d-9f2e-4703-a300-ba7f06531aea: 'Grid Span Wide' # Grid Span Wide
+    5b8d8b99-77e0-4cac-935c-3b3eca4413c7: 'Internal Link' # Internal Link
     5ca31310-0358-4910-9e30-5605bc0c3c17: Subtitle # Subtitle
+    5f2bf8e1-4de5-4485-ae03-c0d1a67389af: 'Sidebar Links' # Sidebar Links
     5f286764-7e74-4475-989a-21ca80692fad: 'Inforaum DE' # Inforaum DE
     6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
     6e9fa4fd-403d-45c4-a082-48d1c5882d71: Basemap # Basemap
@@ -217,6 +228,7 @@ meta:
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
     432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
     746a28ba-cc90-41ff-8b16-82638446ed07: Provider # Provider
+    762b9c18-49cc-4a00-aa78-a6d77e093631: 'Global Links' # Global Links
     766fa7b3-abd7-40fb-aa55-b6bda45069cd: 'Google Text' # Google Text
     782c3a90-1552-4c56-aa8e-66c715a3a40d: 'Editor Kommentar' # Editor Kommentar
     826bddc1-fa89-4b66-b1ab-6924ab5aa9c3: 'Plain Text i18n Multiline' # Plain Text i18n Multiline
@@ -236,6 +248,7 @@ meta:
     a2101ab1-8df4-4168-bc8c-56af5a24badb: Switch # Switch
     a38688d7-396c-45ae-b8b7-46b401c5e71f: 'Link ' # Link 
     ad4265b0-d0a8-4b4c-a37b-bf310b170758: News # News
+    af5e5ef5-990b-4df0-8c9e-bebc1342a533: 'Footer Links' # Footer Links
     b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Img i18n' # Img i18n
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
     b885bd92-90c0-47e9-abe5-dd9464f9c0b5: Artikel # Artikel
@@ -257,6 +270,7 @@ meta:
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
     ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
+    eee49365-fab5-4241-a3e6-e24d9cd9a18e: Newsletter # Newsletter
     efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
@@ -281,6 +295,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: ''
+      cacheBusting: true
+      cssFile: $PRIMARY_SITE_URL/theme/css/components/backendCP.css
   environment-label:
     edition: standard
     enabled: true
@@ -331,64 +353,6 @@ plugins:
     enabled: true
     licenseKey: XSSK91U797JEFEDY5UGKKPVI
     schemaVersion: 1.0.0
-  workflow:
-    edition: standard
-    enabled: true
-    licenseKey: 00G5QTOD8510UXOE659FVH0Y
-    schemaVersion: 2.6.0
-    settings:
-      editorNotesRequired:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - ''
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - ''
-      editorNotifications: true
-      editorUserGroup:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - df079a13-bd61-4096-9e55-4607550dae28 # Editor
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - df079a13-bd61-4096-9e55-4607550dae28 # Editor
-      enabledSections: '*'
-      lockDraftSubmissions: true
-      pluginName: Workflow
-      publishedAuthorNotifications: false
-      publisherNotesRequired:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - ''
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - ''
-      publisherNotifications: true
-      publisherNotificationsUserGroup: 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
-      publisherUserGroup:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            - 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - 60d6ea87-e27d-49d5-867a-a57850f7f242 # Publisher
-      reviewerApprovalNotifications: false
-      reviewerNotifications: true
-      reviewerUserGroups:
-        __assoc__:
-          -
-            - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-            -
-              -
-                - df079a13-bd61-4096-9e55-4607550dae28 # Editor
-          -
-            - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-            - ''
-      selectedPublishers: '*'
 system:
   edition: pro
   live: true

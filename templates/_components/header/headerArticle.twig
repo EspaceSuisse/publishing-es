@@ -1,0 +1,38 @@
+{% import '_macros/macroImage' as macroImg %}
+{% import '_macros/macroCatOverview' as macroCat %}
+{% import '_macros/macroPostDate' as macroPostDate %}
+{% import '_macros/macroFigCaption' as figCaption %}
+
+
+{% set articleGenre = entry.fCatGenre %}
+{% set articleSubject = entry.fCatSubject %}
+{% set aufmacherBild = entry.fImgI18n.one() %}
+
+{% set smallerGrid = 'gridSpan10 gridLgSpan10 gridLgStart2' %}
+
+<figure class="articleHeadImg">
+	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+	{{ figCaption.figCaption(aufmacherBild, null) }}
+</figure>
+
+<div class="headerCard articleHeadTitleCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
+	<h1 class="{{ smallerGrid }} articleTitle">{{ entry.title }}</h1>
+	{% if entry.fPlainTextI18nMultiline %}
+		<h3 class="{{ smallerGrid }} articleLeadText">{{ entry.fPlainTextI18nMultiline }}</h3>
+	{% endif %}
+	<div class="{{ smallerGrid }} articleHeadMeta">
+		{{ macroPostDate.postDate(entry) }}
+		{% include "_components/articleSunset" %}
+	</div>
+	
+	<div class="headMetaFooter {{ smallerGrid }}">
+		{% include "_components/listingAuthors" %}
+		<p class="tags">
+			{{ macroCat.catOverview(articleGenre, 'genre', true) }}
+			{{ macroCat.catOverview(articleSubject, 'subject', true) }}
+		</p>
+		{# {% include "_components/articleShare" %} #}
+	</div>
+	
+	<span class="articleId">ID: {{ entry.id }}</span>
+</div>

@@ -1,0 +1,26 @@
+.newsTeaser {
+
+    .topicTitle {
+        text-align: center;
+    }
+    padding: calc(var(--layoutGap) * 3 ) 0;
+    .previewNews {
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+    }
+    @media (min-width: 48rem) {
+        .previewNews {
+            border-right: solid 1px var(--txtColor);
+            padding-right: var(--layoutGap);
+            &:last-of-type{
+                border-right: none;
+            }
+        }
+    }
+    .newsTeaserFooter {
+        padding-top: calc( var(--layoutGap) * 3 );
+        text-align: center;
+    }
+}

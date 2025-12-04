@@ -11,6 +11,15 @@ return [
             'format' => 'avif'
         ],
     ],
+    'articleImageLightbox' => [
+        'displayName' => 'Article Image Lightbox',
+        'transforms' => [
+            ['width' => 1920,],
+        ],
+        'defaults' => [
+            'format' => 'avif',
+        ],
+    ],
     'articleImage' => [
         'displayName' => 'Article Image',
         'transforms' => [
@@ -25,7 +34,8 @@ return [
         'displayName' => 'Article Thumb',
         'transforms' => [
             ['width' => 1920, 'ratio' => 16 / 9, 'device' => 'desktop'],
-            ['width' => 1080, 'ratio' => 4 / 5, 'device' => 'mobile'],
+            ['width' => 1080, 'ratio' => 4 / 5, 'device' => 'tablet'],
+            ['width' => 1080, 'ratio' => 1 / 1, 'device' => 'mobile'],
         ],
         'defaults' => [
             'format' => 'avif'

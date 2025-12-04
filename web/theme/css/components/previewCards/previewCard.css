@@ -1,0 +1,78 @@
+.previewCard {
+    position: relative;
+    overflow: hidden;
+    container-type: inline-size;
+    container-name: previewCard;
+    .previewTitle {
+        margin: 0;
+
+        a {
+            font-family: var(--font-display);
+            font-weight: var(--font-bold);
+            font-size: var(--font-size-L);
+            color: var(--txtColor);
+            line-height: var(--line-height-base);
+            margin: 0;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--linkTxtHoverColor);
+            }
+        }
+
+        padding-bottom: calc(var(--layoutGap) / 2);
+    }
+
+    .imgPart {
+        display: flex;
+        picture {
+            background-color: var(--linkTxtHoverColor);
+            display: flex;
+
+            img {
+                object-fit: cover;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .txtPart {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .lead {
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        line-height: var(--line-height-base);
+        color: var(--txtColor);
+        margin: 0;
+    }
+
+    .sunsetHint {
+        font-size: var(--font-size-S);
+        font-family: var(--font-default);
+    }
+    .btnCard {
+        margin-left: auto;
+    }
+    .previewMetaHeader, .previewMetaFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+    }
+    @media (min-width: 48rem ) and (max-width: 68rem)  {
+        .previewMetaHeader, .previewMetaFooter {
+            flex-direction: column;
+        }
+    }
+    .previewMetaFooter {
+        margin-top: auto;
+    }
+}

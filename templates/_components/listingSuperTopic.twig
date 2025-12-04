@@ -1,5 +1,5 @@
 
-{% import '_components/previewCards/macroArticlePreviewL' as macroPreviewL %}
+{% import '_components/previewCards/macroPreviewArticle' as macroPreviewArticle %}
 {% import '_macros/macroCatOverview' as macroCat %}
 
 {% for cat in catSubject %}
@@ -21,7 +21,7 @@
             
             {# loop trough the entries which belong to the subject with supertopic enabled #}
             {% for item in relatedEntries %}
-                {{ macroPreviewL.listMacro(item,'gridSpan6') }}
+                {{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan12', 'gridSpan3 gridMdSpan6', 'gridSpan9 gridMdSpan6') }}
             {% endfor %}
 
                 <div class="gridSpan12">

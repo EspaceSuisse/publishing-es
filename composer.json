@@ -8,7 +8,8 @@
   },
   "require": {
     "craftcms/ckeditor": "4.10.1",
-    "craftcms/cms": "5.8.19",
+    "craftcms/cms": "5.8.20",
+    "doublesecretagency/craft-cpcss": "3.0.0",
     "doublesecretagency/craft-viewcount": "2.0.0",
     "miranj/craft-obfuscator": "1.2.0",
     "mutation/translate": "4.2.1",
@@ -17,11 +18,10 @@
     "nystudio107/craft-seomatic": "5.1.19",
     "putyourlightson/craft-blitz": "5.12.5",
     "putyourlightson/craft-sendgrid": "3.0.0",
-    "spacecatninja/imager-x": "5.1.6",
+    "spacecatninja/imager-x": "5.1.7",
     "spacecatninja/imager-x-pdf-adapter": "1.1.0",
     "topshelfcraft/environment-label": "5.0.0",
     "verbb/knock-knock": "3.0.4",
-    "verbb/workflow": "3.0.12",
     "vlucas/phpdotenv": "^5.4.0",
     "webhubworks/craft-ohdear": "5.3.1"
   },
