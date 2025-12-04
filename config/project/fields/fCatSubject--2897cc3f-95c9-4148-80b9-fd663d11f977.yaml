@@ -12,7 +12,8 @@ settings:
   minRelations: 1
   selectionLabel: '+ Thema'
   showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: false
+  showSiteMenu: true
   source: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
   targetSiteId: null
   validateRelatedElements: false
