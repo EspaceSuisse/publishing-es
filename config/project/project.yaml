@@ -1,4 +1,4 @@
-dateModified: 1764838099
+dateModified: 1764845305
 elementSources:
   craft\elements\Asset:
     -
@@ -275,6 +275,7 @@ meta:
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
+    fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Img # Img
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set

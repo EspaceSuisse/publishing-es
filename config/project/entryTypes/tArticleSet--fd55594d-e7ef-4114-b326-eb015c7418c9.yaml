@@ -120,22 +120,28 @@ fieldLayouts:
             uid: 3ccdefd8-e23f-41dd-95e5-7aa281a823f0
             userCondition: null
           -
-            dateAdded: '2025-05-01T12:32:23+00:00'
+            dateAdded: '2025-12-04T10:47:32+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            fieldUid: fa54fd14-cfed-4146-af48-2c0f6efa7f6d # Img
             handle: null
             includeInCards: false
             instructions: null
-            label: Aufmacherbild
+            label: 'Aufmacher Bild'
             providesThumbs: false
             required: true
-            tip: null
+            tip: 'Schön und Toll soll es sein'
             type: craft\fieldlayoutelements\CustomField
-            uid: fcd00616-fbe2-4880-95b3-f71b685a20f9
+            uid: b5f2e5ed-1406-4291-a390-3a82b418d720
             userCondition: null
             warning: null
-            width: 25
+            width: 100
+          -
+            dateAdded: '2025-11-19T11:13:39+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 58a37ce4-5e68-4552-af28-35bbc9e4b008
+            userCondition: null
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
             editCondition: null
@@ -179,12 +185,6 @@ fieldLayouts:
             uid: 02017aaf-a36b-4cac-9644-1ec620c81753
             userCondition: null
             width: 100
-          -
-            dateAdded: '2025-11-19T11:13:39+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 58a37ce4-5e68-4552-af28-35bbc9e4b008
-            userCondition: null
         name: Head
         uid: 111ec320-d642-467e-9a0a-54b565df12b6
         userCondition: null
