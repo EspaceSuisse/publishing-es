@@ -1,25 +1,5 @@
 .cellBox {
-    &.styleB {
-        background-color: var(--colorES-brand-blue-soft);
-        box-shadow: var(--shadow);
-        button {
-            padding: var(--layoutGap);
-        }
-    }
-
-    &.styleC {
-        background-color: var(--colorES-brand-petrol);
-        box-shadow: var(--shadow);
-        border: none;
-
-        p,
-        li,
-        a,
-        .cellCardTitle {
-            color: var(--txtInvertColor);
-        }
-    }
-
+    border: 1px solid var(--colorES-brand-blue);
     .nonCollapsable {
         padding: var(--layoutGap);
     }
@@ -48,8 +28,7 @@
         flex: 1;
         justify-content: space-between;
         align-items: baseline;
-        padding-top: calc(var(--layoutGap) / 2);
-
+        padding: var(--layoutGap);
         .cellCardTitle {
             pointer-events: none;
         }
@@ -57,11 +36,20 @@
 
     .cellBoxInner {
         padding: var(--layoutGap);
+        border-top: solid 1px var(--colorES-brand-blue);
+        p {
+            font-size: var(--font-size-M);
+            font-family: var(--font-default);
+            line-height: var(--line-height-base);
+            text-indent: 6rem;
+            > strong {
+                font-weight: var(--font-bold);
+            }
+        }
     }
 
     .cellBoxToggle {
         transition: all 0.1s ease-in-out;
-        border-top: solid 1px var(--colorES-brand-blue);
 
         h3 {
             color: var(--colorES-brand-blue);
@@ -78,17 +66,15 @@
         }
 
         &:hover {
+            background-color: var(--linkBgHoverColor);
             &::after {
                 transform: translateY(-50%) rotate(180deg);
-                color: var(--linkTxtHoverColor);
+                color: var(--txtInvertColor);
             }
 
             h3 {
-                color: var(--linkTxtHoverColor);
-
-                border-color: var(--linkTxtHoverColor);
+                color: var(--txtInvertColor);
             }
-
             &.closed::after {
                 transform: translateY(-50%) rotate(0deg);
             }
