@@ -1,4 +1,4 @@
-dateModified: 1763563804
+dateModified: 1764846131
 elementSources:
   craft\elements\Asset:
     -
@@ -68,13 +68,12 @@ elementSources:
       disabled: false
       key: 'section:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
       tableAttributes:
+        - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
         - id
         - postDate
         - status
         - link
-        - authors
         - 'field:e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f' # VC
-        - slug
       type: native
     -
       heading: ''
@@ -275,6 +274,7 @@ meta:
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
+    fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Img # Img
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set

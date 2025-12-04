@@ -12,13 +12,14 @@
 
 @import url("components/nav.css");
 @import url("components/navDropdown.css");
-@import url("components/articleHead.css");
+@import url("components/header/headerArticle.css");
 @import url("components/navDropdownContent.css");
 
 @import url("partials/sideBar.css");
 @import url("partials/sideBarBranding.css");
-@import url("partials/gridArticleHead.css");
+@import url("partials/header/gridArticleHead.css");
 @import url("partials/loginForm.css");
+@import url("partials/lightbox.css");
 
 
 @import url("partials/siteFooter.css");
@@ -41,18 +42,19 @@
 @import url("components/articleBlocks/cellMap.css");
 @import url("components/articleCtaCall.css");
 
-@import url("components/newsHead.css");
+@import url("components/header/headerNews.css");
+@import url("components/header/headerCard.css");
 @import url("components/newsTeaser.css");
+@import url("components/listingAuthors.css");
 
-@import url("components/articleHeadAuthors.css");
-@import url("components/articleHeadCat.css");
 @import url("partials/siteTags.css");
-@import url("components/previewCards/articlePreviews.css");
-@import url("components/previewCards/articlePreviewXL.css");
-@import url("components/previewCards/articlePreviewSizeS.css");
+@import url("components/previewCards/previewCard.css");
+@import url("components/previewCards/previewArticle.css");
+@import url("components/previewCards/previewNews.css");
 @import url("components/articleShare.css");
 @import url("partials/entryList.css");
-@import url("components/brandHeader.css");
+@import url("components/header/headerBrand.css");
 @import url("components/articleBlocks/cellCard.css");
 
 @import url("partials/siteTypography.css");
+@import url("partials/prevNext.css");

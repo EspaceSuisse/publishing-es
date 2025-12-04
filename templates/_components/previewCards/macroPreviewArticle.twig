@@ -1,22 +1,25 @@
 {% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage) %}
 
 	{% import '_macros/macroImage' as macro %}
-    {% import '_macros/macroPostDate' as macroPostDate %}
+	{% import '_macros/macroPostDate' as macroPostDate %}
+	{% import '_macros/macroCatOverview' as macroCat %}
 
 
-	{% set image = queryParam.fImgI18n.one() ?? null %}
+	{% set image = queryParam.fImgMono.one() ?? null %}
+	{% set catGenre = queryParam.fCatGenre.all() %}
+	{% set catSubject = queryParam.fCatSubject.all() %}
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
 	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
 
-	<article class="articlePreview previewSizeL {{ classCardParam }}">
+	<article class="previewCard previewArticle {{ classCardParam }}">
 
 		{% if hideImage != true %}
 			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
 				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 			</a>
 		{% endif %}
-		
+
 
 		<div class="txtPart {{ classTxtParam }}">
 			<div class="previewMetaHeader">
@@ -27,6 +30,13 @@
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
+			<div class="previewMetaFooter">
+				<div>
+					{{ macroCat.catOverview(catGenre, 'genre', true) }}
+					{{ macroCat.catOverview(catSubject, 'subject', true) }}
+				</div>
+				<a href="{{ queryParam.url }}" class="btn btnSmall">{{ 'Lesen' | t }}</a>
+			</div>
 		</div>
 	</article>
 {% endmacro %}

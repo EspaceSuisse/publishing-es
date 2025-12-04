@@ -1,6 +1,6 @@
 {% extends "_layouts/main" %}
 
-{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
+{% import '_components/previewCards/macroPreviewArticle' as macroPreviewArticle %}
 
 {% block content %}
 
@@ -17,7 +17,7 @@
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 	<div class="listingGrid">
-		{% include "_components/brandHeader.twig" %}
+		{% include "_components/header/headerBrand" %}
 		<h1 class="topicTitle gridSpan12">{{ category.title }}</h1>
 		{% if category.fRichTextI18n %}
 			<div class="topicLead gridSpan12">
@@ -26,10 +26,10 @@
 		{% endif %}
 		
 		{% for item in allEntries | slice(0,1) %}
-				{{ macroArticlePreview.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
+				{{ macroPreviewArticle.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
 		{% endfor %}
 		{% for item in allEntries | slice(1, null) %}
-				{{ macroArticlePreview.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12') }}
+				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12') }}
 		{% endfor %}
 	</div>
 

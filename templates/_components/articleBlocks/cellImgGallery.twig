@@ -5,7 +5,6 @@
 {% set imgGallery = block.fMxImgGallery.all() %}
 
 
-
 {% for item in imgGallery %}
 
     {% set gridImgStart = item.fGridStartWide ?? null %}
@@ -13,8 +12,14 @@
     {% set imgCaption = item.textSimpleI18n %}
 
         {% for asset in item.fImgI18n.all() %}
+
+            {# Transform for lightbox - using the articleImageLightbox named transform #}
+            {% set lightboxImage = craft.imagerx.transformImage(asset, 'articleImageLightbox')[0] %}
+
             <figure class="articleImg {{ layoutMacro.gridClasses(gridImgStart, gridImgSpan) }}">
-                {{ imgMacro.articleImage(asset, 'articleImage') }}
+                <a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
+                    {{ imgMacro.articleImage(asset, 'articleImage') }}
+                </a>
                 {{ figCaption.figCaption(asset, imgCaption, asset.fSwitch) }}
             </figure>
         {% endfor %}
