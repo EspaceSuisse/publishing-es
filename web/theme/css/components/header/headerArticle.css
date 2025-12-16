@@ -9,6 +9,21 @@
     margin: 0;
     hyphens: none;
   }
+  &.noImg {
+    padding-top: 1px;
+    .headerCard {
+      margin-top: calc( var(--headerNoImageHeight) - 10vh  );
+    }
+    .colorHead {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc( var(--headerNoImageHeight) );
+      background-color: var(--colorES-brand-blue);
+      z-index: -1;
+    }
+  }
 
   .articleLeadText {
     font-size: var(--font-size-L);
@@ -21,7 +36,7 @@
 
   .articleHeadImg {
     width: 100%;
-    max-height: 80vh;
+    max-height: var(--headerFigureHeight);
     overflow: hidden;
     position: relative;
     box-shadow: var(--shadow);
@@ -57,4 +72,7 @@
   margin-top: -100px;
   box-shadow: var(--shadow);
   padding-top: calc(var(--layoutGap) * 3);
+  &.noImg {
+    margin-top: 50vh;
+  }
 }

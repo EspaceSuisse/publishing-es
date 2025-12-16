@@ -8,20 +8,22 @@
 	{% set image = queryParam.fImgMono.one() ?? null %}
 	{% set catGenre = queryParam.fCatGenre.all() %}
 	{% set catSubject = queryParam.fCatSubject.all() %}
+	{% set noImg = image ? false : true %}
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
 	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
 
 	<article class="previewCard previewArticle {{ classCardParam }}">
-
-		{% if hideImage != true %}
+		{% if image %}
+		
 			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
 				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 			</a>
+
 		{% endif %}
 
 
-		<div class="txtPart {{ classTxtParam }}">
+		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
 			<div class="previewMetaHeader">
 				{{ macroPostDate.postDate(queryParam) }}
 				{% include "_components/articlePreviewSunset.twig" %}

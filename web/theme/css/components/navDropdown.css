@@ -84,7 +84,7 @@ button.dropdownLink {
   }
 
   100% {
-    height: 80vh;
+    height: var(--headerFigureHeight);
   }
 }
 

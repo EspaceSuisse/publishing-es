@@ -6,14 +6,17 @@
 
 {% set articleGenre = entry.fCatGenre %}
 {% set articleSubject = entry.fCatSubject %}
-{% set aufmacherBild = entry.fImgMono.one() %}
-
+{% set aufmacherBild = entry.fImgMono.one() ?? null %}
 {% set smallerGrid = 'gridSpan10 gridLgSpan10 gridLgStart2' %}
 
-<figure class="articleHeadImg">
-	{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
-	{{ figCaption.figCaption(aufmacherBild, null) }}
-</figure>
+{% if aufmacherBild %}
+
+	<figure class="articleHeadImg">
+		{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+		{{ figCaption.figCaption(aufmacherBild, null) }}
+	</figure>
+
+{% endif %}
 
 <div class="headerCard articleHeadTitleCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
 	<h1 class="{{ smallerGrid }} articleTitle">{{ entry.title }}</h1>
