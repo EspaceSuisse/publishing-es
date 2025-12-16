@@ -1,0 +1,29 @@
+{# templates/feed/index.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Feeds</title>
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <h1>Available Feeds</h1>
+    <ul>
+        {% set folder = 'feeds/' %}
+
+        {% set feeds = [
+            { title: 'JSON Feed Latest News DE', path: folder ~ 'latest-news-de.json' },
+            { title: 'JSON Feed Latest News FR', path: folder ~ 'latest-news-fr.json' },
+            { title: 'JSON Feed Latest Articles DE', path: folder ~ 'latest-articles-de.json' },
+            { title: 'JSON Feed Latest Articles FR', path: folder ~ 'latest-articles-fr.json' },
+            { title: 'RSS Feed DE', path: folder ~ 'feed-de.rss' },
+            { title: 'RSS Feed FR', path: folder ~ 'feed-fr.rss' }
+        ] %}
+        
+        {% for feed in feeds %}
+            <li>
+                <a href="{{ siteUrl(feed.path) }}">{{ feed.title }}</a> {{ siteUrl(feed.path) }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

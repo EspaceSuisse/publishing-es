@@ -1,0 +1,16 @@
+{% set latestNews = craft.entries.section('news').site(site).limit(3).all() %}
+{% set language = site.language %}
+
+[
+{% for item in latestNews %}
+    {
+        "id": "{{ item.id }}",
+        "title": "{{  item.fPlainTextI18n ??  item.title}}",
+        "description": "{{ item.fSeoDescription }}",
+        "url": "{{ item.url }}",
+        "postDate": "{{ item.postDate | date('c') }}",
+        "postDateUnix": {{ item.postDate | date('U') }},
+        "language": "{{ language }}"
+    }{% if not loop.last %},{% endif %}
+{% endfor %}
+]

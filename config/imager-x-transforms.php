@@ -11,6 +11,15 @@ return [
             'format' => 'avif'
         ],
     ],
+    'feedImageTransform' => [
+        'displayName' => 'Feed Image',
+        'transforms' => [
+            ['width' => 1920, 'height' => 1080],
+        ],
+        'defaults' => [
+            'format' => 'jpg',
+        ],
+    ],
     'articleImageLightbox' => [
         'displayName' => 'Article Image Lightbox',
         'transforms' => [
