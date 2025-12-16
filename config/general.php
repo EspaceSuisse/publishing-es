@@ -10,6 +10,8 @@
 
 use craft\config\GeneralConfig;
 use craft\helpers\App;
+use mikehaertl\shellcommand\Command as ShellCommand;
+
 
 return GeneralConfig::create()
     ->defaultWeekStartDay(1)
@@ -25,6 +27,7 @@ return GeneralConfig::create()
     ->convertFilenamesToAscii(true)
     ->transformGifs(false) 
     ->enableTemplateCaching(false)
+    ->backupCommand(fn(ShellCommand $command) => $command->addArg('--set-gtid-purged=OFF')) 
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
         '@assetBaseUrl' => rtrim(getenv('PRIMARY_SITE_URL') . '/assets'),
