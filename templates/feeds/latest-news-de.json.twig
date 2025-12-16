@@ -1,0 +1,3 @@
+{%- header "Content-Type: application/json; charset=utf-8" -%}
+{%- set site = craft.app.sites.getSiteByHandle('default') -%}
+{% include 'feeds/_jsonApiLatestNews.twig' with { site } %}
