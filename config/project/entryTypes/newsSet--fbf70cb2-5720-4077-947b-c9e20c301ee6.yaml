@@ -72,6 +72,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-12-17T10:15:25+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14238941-64ec-4951-8f76-71ae79200b4d
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-09-10T13:48:55+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule

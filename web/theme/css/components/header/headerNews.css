@@ -2,7 +2,8 @@
     box-shadow: none;
     margin-top: max(200px, 20vh);
     background-color: transparent;
-    margin-bottom: calc( var(--layoutGap) * 3 );
+    margin-bottom: calc( var(--layoutGap) * 1.5 );
+    row-gap: 0;
     .postDate {
         margin: 0;
     }

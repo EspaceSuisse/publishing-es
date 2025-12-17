@@ -1,7 +1,7 @@
 .articleHead {
   position: relative;
 
-  .articleTitle {
+  .topicTitle {
     font-size: var(--font-size-XXL);
     font-family: var(--font-display);
     font-weight: var(--font-bold);
@@ -25,7 +25,7 @@
     }
   }
 
-  .articleLeadText {
+  .topicLead {
     font-size: var(--font-size-L);
     font-family: var(--font-default);
     font-weight: var(--font-bold);

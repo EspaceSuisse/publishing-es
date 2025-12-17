@@ -19,9 +19,9 @@
 {% endif %}
 
 <div class="headerCard articleHeadTitleCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
-	<h1 class="{{ smallerGrid }} articleTitle">{{ entry.title }}</h1>
+	<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
 	{% if entry.fPlainTextI18nMultiline %}
-		<h3 class="{{ smallerGrid }} articleLeadText">{{ entry.fPlainTextI18nMultiline }}</h3>
+		<h3 class="{{ smallerGrid }} topicLead">{{ entry.fPlainTextI18nMultiline }}</h3>
 	{% endif %}
 	<div class="{{ smallerGrid }} articleHeadMeta">
 		{{ macroPostDate.postDate(entry) }}
