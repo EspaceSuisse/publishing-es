@@ -9,12 +9,14 @@
         {% else %}
             {% set authorUrl = 'auteurs/' ~ item.username %}
         {% endif %}
-        
-        
+
 		<li>
 			{% if item.photo %}
-				{% set portrait = item.photo.url %}
-				<img src="{{ portrait }}" alt="{{ item.name }}">
+
+				{# Transform the Authors Portrait #}
+    			{% set portraitImage = craft.imagerx.transformImage(item.photo, 'authorPortrait')[0] %}
+
+				<img src="{{ portraitImage.url }}" alt="{{ item.name }}">
 			{% endif %}
 				<span class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
 				{# <a href="{{ url(authorUrl) }}" class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</a> #}
