@@ -66,9 +66,16 @@
     }
     .previewMetaHeader, .previewMetaFooter {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        align-items: baseline;
+        flex-wrap: wrap;
         width: 100%;
+        gap: calc( var(--layoutGap) / 2);
+        .postDate {
+            margin-right: auto;
+        }
+        .btnGotoRead {
+            margin-left: auto;
+        }
     }
     @media (min-width: 48rem ) and (max-width: 68rem)  {
         .previewMetaHeader, .previewMetaFooter {
