@@ -1,0 +1,13 @@
+<h1 class="topicTitle gridSpan12">{{ category.title }}</h1>
+{% if category.fRichTextI18n %}
+	<div class="topicLead gridSpan12">
+		{{ category.fRichTextI18n }}
+	</div>
+{% endif %}
+
+{# Add filter buttons #}
+<div class="sectionFilter">
+	<a href="{{ category.url }}" class="{% if not sectionFilter %}active{% endif %}">{{ 'Alles' | t }}</a>
+	<a href="{{ category.url }}?section=article" class="{% if sectionFilter == 'article' %}active{% endif %}">{{ labelArticle }}</a>
+	<a href="{{ category.url }}?section=news" class="{% if sectionFilter == 'news' %}active{% endif %}">{{ labelNews }}</a>
+</div>

@@ -1,4 +1,4 @@
-dateModified: 1765966525
+dateModified: 1765972681
 elementSources:
   craft\elements\Asset:
     -
@@ -94,7 +94,19 @@ elementSources:
       key: 'heading:29182fa9-94e7-426d-82cb-e6db8a6939de'
       type: heading
     -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
+      tableAttributes:
+        - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
       type: native
   craft\elements\User:
     -

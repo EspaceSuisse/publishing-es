@@ -2,7 +2,7 @@
 {# It takes the url params for the two languages and a class for the link #}
 {# The label is taken from the translation file #}
 
-{%- macro catOverview(catParam, classParam) -%}
+{%- macro catOverview(catParam, classParam, sectionParam) -%}
 
 	{% import '_macros/macroImage' as macro %}
 
@@ -10,6 +10,7 @@
 
 		{% set inlineStyle = item.fColor ? 'background-color:' ~ item.fColor ~ ';' : '' %}
 		{% set fullTitle = item.title %}
+		{% set sectionUrlSegment = sectionParam ? '?section=' ~ sectionParam %}
 		{% set catIcon = item.fIcon.one() %}
 		{% set svgCatIcon %}
 			{%- if catIcon -%}
@@ -19,11 +20,11 @@
 
 		{%- if catIcon -%}
 			<span class="tag {{ ' ' ~ classParam }}"> 
-				<a href="{{- item.url -}}" style="{{ inlineStyle }}" class="hasIcon">{{ svgCatIcon }}<span class="catReveal">{{- fullTitle -}}</span></a>
+				<a href="{{- item.url ~ sectionUrlSegment-}}" style="{{ inlineStyle }}" class="hasIcon">{{ svgCatIcon }}<span class="catReveal">{{- fullTitle -}}</span></a>
 			</span>
 		{% else %}
 			<span class="tag {{ ' ' ~ classParam }}"> 
-				<a href="{{- item.url -}}" style="{{ inlineStyle }}">{{- fullTitle -}}</a>
+				<a href="{{- item.url ~ sectionUrlSegment -}}" style="{{ inlineStyle }}">{{- fullTitle -}}</a>
 			</span>
 		{%- endif -%}
 

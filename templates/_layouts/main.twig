@@ -7,6 +7,9 @@
 {% set labelSubjectP = 'Themen' | t %}
 {% set labelGenreP = 'Rubriken' | t %}
 
+{% set labelArticle = 'Artikel' | t %}
+{% set labelNews = 'News' | t %}
+
 {# Sets a body css class with the section or category handle for css toplevel scoping #}
 {% set handle = entry.section.handle ?? category.group.handle ?? null %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}
