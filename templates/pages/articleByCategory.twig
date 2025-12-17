@@ -23,7 +23,7 @@
 	{% set allEntries = query.all() %}
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
-	<div class="listingGrid">
+	<article class="listingGrid">
 		{% include "_components/header/headerBrand" %}
 		{% include "_components/header/headerCatList" %}
 		{% for item in allEntries | slice(0,1) %}
@@ -43,6 +43,6 @@
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12') }}
 			{% endif %}
 		{% endfor %}
-	</div>
+	</article>
 
 {% endblock %}
