@@ -66,13 +66,17 @@
 
 .articleHeadTitleCard {
   position: relative;
-  background-color: var(--colorPreviewCard);
-  padding-bottom: calc(var(--layoutGap) * 2);
   margin-bottom: calc(var(--layoutGap) * 2);
   margin-top: -100px;
-  box-shadow: var(--shadow);
-  padding-top: calc(var(--layoutGap) * 3);
   &.noImg {
     margin-top: 50vh;
+  }
+  .headCardGrid {
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: var(--layoutGap);
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 73%, rgba(255, 255, 255, 0) 100%);
+    grid-column: 1/-1;
+    padding: 100px 0;
   }
 }

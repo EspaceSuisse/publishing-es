@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-right: 30px;
     svg,
     img {
         width: 24px;
@@ -15,13 +14,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        &:hover {
-            background-color: var(--colorES-brand-blue);
-            border-radius: 100px;
-            cursor: pointer;
-            line, polyline {
+        background-color: var(--linkBgColor);
+        border-radius: 100px;
+        line, polyline {
                 stroke: white;
             }
+        &:hover {
+            background-color: var(--linkBgHoverColor);
         }
     }
 }

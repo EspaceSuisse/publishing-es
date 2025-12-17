@@ -8,8 +8,7 @@
     font-size: var(--font-size-S);
     text-decoration: none;
     white-space: nowrap;
-    transition: all var(--navSpeed) ease-in-out;
-    border-radius: 2px;
+    border-radius: var(--linkDescorationThikness);
     &:hover {
         background-color: var(--linkBgHoverColor);
         color: var(--linkBgTxtHoverColor);

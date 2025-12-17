@@ -9,7 +9,7 @@
         font-family: var(--font-default);
         margin: 0;
     }
-    .articleHeadMeta {
+    .headMeta {
         display: flex;
         gap: var(--layoutGap);
         font-family: var(--font-default);
@@ -44,5 +44,34 @@
         font-family: var(--font-default);
         font-size: var(--font-size-S);
         padding: 3px;
+    }
+}
+.sectionFilter {
+    display: flex;
+    gap: var(--layoutGap);
+    a {
+        font-family: var(--font-display);
+        font-size: var(--font-size-M);
+        color: var(--linkTxtColor);
+        text-decoration-thickness: var(--linkDescorationThikness);
+        &:hover, &:visited, &.active {
+            color: var(--linkTxtHoverColor);
+            border-color: var(--linkTxtHoverColor);
+            text-decoration: none;
+        }
+    }
+
+}
+.accessMessage {
+    font-size: var(--font-size-S);
+    font-family: var(--font-display);
+    a {
+        color: var(--linkTxtColor);
+        text-decoration-thickness: var(--linkDescorationThikness);
+        &:hover {
+            color: var(--linkTxtHoverColor);
+            text-decoration: none;
+            opacity: 1;
+        }
     }
 }

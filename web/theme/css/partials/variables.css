@@ -36,16 +36,17 @@
 
     /* Links without background */
     --linkTxtColor: #478cc6;
-    --linkTxtHoverColor: rgb(0, 102, 68);
+    --linkTxtHoverColor: var(--colorES-brand-blue);
     --linkTxtActiveColor: var(--linkTxtColor);
 
     /* Links with background */
     --linkBgTxtColor: white;
     --linkBgColor: var(--linkTxtColor);
     --linkBgHoverColor: var(--colorES-brand-blue);
-    --linkBgTxtHoverColor: green;
+    --linkBgTxtHoverColor: var(--linkBgTxtColor);
 
     --linkTxtColorVisited: var(--colorES-brand-blue-soft);
+    --linkDescorationThikness: 2px;
 
     --txtColor: rgb(86, 86, 86);
     --txtInvertColor: white;

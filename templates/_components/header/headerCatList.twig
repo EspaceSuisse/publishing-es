@@ -6,7 +6,7 @@
 {% endif %}
 
 {# Add filter buttons #}
-<div class="sectionFilter">
+<div class="sectionFilter gridSpan12">
 	<a href="{{ category.url }}" class="{% if not sectionFilter %}active{% endif %}">{{ 'Alles' | t }}</a>
 	<a href="{{ category.url }}?section=article" class="{% if sectionFilter == 'article' %}active{% endif %}">{{ labelArticle }}</a>
 	<a href="{{ category.url }}?section=news" class="{% if sectionFilter == 'news' %}active{% endif %}">{{ labelNews }}</a>

@@ -4,7 +4,6 @@
     font-size: var(--font-size-S);
     line-height: calc(var(--line-height-base) * 1.2);
     a {
-        transition: all var(--navSpeed) ease-in-out;
         color: var(--txtColor);
         padding: var(--paddingBtnSmall);
         text-decoration: none;

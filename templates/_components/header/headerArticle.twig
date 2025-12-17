@@ -19,23 +19,25 @@
 {% endif %}
 
 <div class="headerCard articleHeadTitleCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
-	<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
-	{% if entry.fPlainTextI18nMultiline %}
-		<h3 class="{{ smallerGrid }} topicLead">{{ entry.fPlainTextI18nMultiline }}</h3>
-	{% endif %}
-	<div class="{{ smallerGrid }} articleHeadMeta">
-		{{ macroPostDate.postDate(entry) }}
-		{% include "_components/articleSunset" %}
-	</div>
-	
-	<div class="headMetaFooter {{ smallerGrid }}">
+	<div class="headCardGrid">
+		<div class="{{ smallerGrid }} headMeta">
+			{{ macroPostDate.postDate(entry) }}
+		</div>
+		<div class="{{ smallerGrid }} headMeta">
+			<p class="tags">
+				{{ macroCat.catOverview(articleGenre, 'genre', true) }}
+				{{ macroCat.catOverview(articleSubject, 'subject', true) }}
+			</p>
+			{% include "_components/articleShare" %}
+		</div>
+		<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
 		{% include "_components/listingAuthors" %}
-		<p class="tags">
-			{{ macroCat.catOverview(articleGenre, 'genre', true) }}
-			{{ macroCat.catOverview(articleSubject, 'subject', true) }}
-		</p>
-		{# {% include "_components/articleShare" %} #}
+		{% if entry.fPlainTextI18nMultiline %}
+			<h3 class="{{ smallerGrid }} topicLead">{{ entry.fPlainTextI18nMultiline }}</h3>
+		{% endif %}
+		<div class="{{ smallerGrid }}  headMetaFooter">
+			{% include "_components/articleSunsetMsg" %}
+		</div>
 	</div>
-	
-	<span class="articleId">ID: {{ entry.id }}</span>
+	{# <span class="articleId">ID: {{ entry.id }}</span> #}
 </div>

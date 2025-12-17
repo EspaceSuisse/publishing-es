@@ -1,5 +1,5 @@
 .cellBox {
-    border: 1px solid var(--colorES-brand-blue);
+    border: 1px solid var(--linkTxtColor);
     .nonCollapsable {
         padding: var(--layoutGap);
     }
@@ -36,7 +36,7 @@
 
     .cellBoxInner {
         padding: var(--layoutGap);
-        border-top: solid 1px var(--colorES-brand-blue);
+        border-top: solid 1px var(--linkTxtColor);
         p {
             font-size: var(--font-size-M);
             font-family: var(--font-default);
@@ -52,7 +52,7 @@
         transition: all 0.1s ease-in-out;
 
         h3 {
-            color: var(--colorES-brand-blue);
+            color: var(--linkTxtColor);
             font-size: var(--font-size-M);
         }
 
@@ -61,7 +61,7 @@
             transform: translateY(-50%) rotate(0deg);
             transition: transform 0.3s ease-in-out;
             font-size: var(--font-size-M);
-            color: var(--colorES-brand-blue);
+            color: var(--linkTxtColor);
             line-height: 0;
         }
 
@@ -69,11 +69,11 @@
             background-color: var(--linkBgHoverColor);
             &::after {
                 transform: translateY(-50%) rotate(180deg);
-                color: var(--txtInvertColor);
+                color: var(--linkBgTxtHoverColor);
             }
 
             h3 {
-                color: var(--txtInvertColor);
+                color: var(--linkBgTxtHoverColor);
             }
             &.closed::after {
                 transform: translateY(-50%) rotate(0deg);
