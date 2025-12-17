@@ -70,7 +70,8 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
 .topicLead p, .topicLead {
     font-size: var(--font-size-M);
     font-family: var(--font-default);
-    line-height: var(--line-height-base);
-    color: var(--txtColor);
+    font-weight: var(--font-bold);
+    font-style: italic;
+    line-height: 1.4;
     margin: 0;
 }
