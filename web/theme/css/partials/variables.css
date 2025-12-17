@@ -32,12 +32,19 @@
     --headerFigureHeight: 80vh;
 
     --navSpeed: 0.2s;
+    --paddingBtnSmall: 4px 9px 6px;
 
-    --linkTxtColor: var(--colorES-brand-blue);
+    /* Links without background */
+    --linkTxtColor: #478cc6;
     --linkTxtHoverColor: rgb(0, 102, 68);
     --linkTxtActiveColor: var(--linkTxtColor);
-    --linkBgColor: var(--colorES-brand-blue-soft);
+
+    /* Links with background */
+    --linkBgTxtColor: white;
+    --linkBgColor: var(--linkTxtColor);
     --linkBgHoverColor: var(--colorES-brand-blue);
+    --linkBgTxtHoverColor: green;
+
     --linkTxtColorVisited: var(--colorES-brand-blue-soft);
 
     --txtColor: rgb(86, 86, 86);

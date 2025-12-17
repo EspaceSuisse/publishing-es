@@ -24,11 +24,14 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     }
     a {
         color: var(--linkTxtColor);
+        text-decoration-thickness: 2px;
+        transition: all var(--navSpeed) ease-in-out;
         &:visited {
             color: var(--linkTxtColorVisited);
         }
         &:hover {
             color: var(--linkTxtHoverColor);
+            text-decoration: none;
             opacity: 1;
         }
     }

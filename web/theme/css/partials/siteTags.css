@@ -4,13 +4,13 @@
     font-size: var(--font-size-S);
     line-height: calc(var(--line-height-base) * 1.2);
     a {
-        transition: all 0.3s ease-in-out;
+        transition: all var(--navSpeed) ease-in-out;
         color: var(--txtColor);
-        padding: 4px 9px 6px;
+        padding: var(--paddingBtnSmall);
         text-decoration: none;
         &:hover {
             background-color: var(--linkBgHoverColor) !important;
-            color: var(--linkTxtHoverColor);
+            color: var(--linkBgTxtHoverColor);
         }
     }
     &.invert, &.invert a {
@@ -28,6 +28,11 @@
 }
 
 .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--layoutGap) / 2);
+}
+.tagList {
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--layoutGap) / 2);
