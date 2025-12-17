@@ -6,18 +6,13 @@
 {% set smallerGrid = 'gridStart2 gridSpan10' %}
 
 
-
 <header class="headerCard newsHeadCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
 	<div class="{{ smallerGrid }} articleHeadMeta">
 		{{ macroPostDate.postDate(entry) }}
+		{% include "_components/articleShare" %}
 	</div>
 	<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
 	{# Lead Text #}
 	<p class="{{ smallerGrid }} topicLead">{{ entry.fSeoDescription }}</p>
-	<div class="headMetaFooter {{ smallerGrid }}">
-		{% include "_components/listingAuthors" %}
-		{% include "_components/articleShare" %}
-	</div>
-	
 	<span class="articleId">ID: {{ entry.id }}</span>
 </header>
