@@ -1,4 +1,6 @@
 {% macro figCaption(assetParam, captionParam, hasSourceParam) %}
+
+        {% import '_macros/macroFields' as macroFields %}
 	<figcaption>
 		{% if captionParam %}
 			<div class="caption">{{ captionParam }}</div>
@@ -14,7 +16,7 @@
                                         {% case "tMonolingual" %}
                                                 {{ block.fPlainTxt }}
                                         {% case "tMultilingual" %}
-                                                {{ block.fPlainTextI18n }}
+                                                {{ macroFields.richText(block.fPlainTextI18n) }}
                                 {% endswitch %}
                         {% endfor %}
 
