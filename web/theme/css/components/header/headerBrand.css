@@ -36,3 +36,8 @@
         text-shadow: 0 0 8px #ffffff70;
     }
 }
+@media (max-width: 48rem) {
+    .brandHeader {
+        margin-bottom: calc(var(--layoutGap) * 1);
+    }
+}
