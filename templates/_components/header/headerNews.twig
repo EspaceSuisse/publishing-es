@@ -9,7 +9,6 @@
 <header class="headerCard newsHeadCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
 	<div class="{{ smallerGrid }} headMeta">
 		{{ macroPostDate.postDate(entry) }}
-		{% include "_components/articleShare" %}
 	</div>
 	<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
 	{# Lead Text #}
