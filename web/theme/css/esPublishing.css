@@ -17,7 +17,7 @@
 
 @import url("partials/sideBar.css");
 @import url("partials/sideBarBranding.css");
-@import url("partials/header/gridArticleHead.css");
+@import url("components/header/gridArticleHead.css");
 @import url("partials/loginForm.css");
 @import url("partials/lightbox.css");
 
