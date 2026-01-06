@@ -15,7 +15,6 @@
         font-family: var(--font-default);
         font-size: var(--font-size-S);
         justify-content: space-between;
-        align-items: center;
         p {
                 margin: 0;
                 padding: 0;

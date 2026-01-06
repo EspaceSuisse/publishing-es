@@ -8,3 +8,8 @@
         margin: 0;
     }
 }
+@media (max-width: 48rem) {
+    .headerSectionNews {
+        margin-top: calc( var(--layoutGap) * 2 );
+    }
+}
