@@ -68,6 +68,13 @@
     row-gap: var(--layoutGap);
     background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 73%, rgba(255, 255, 255, 0) 100%);
     grid-column: 1/-1;
-    padding: 100px 0;
+    padding: calc(var(--layoutGap) * 3) 0;
+  }
+}
+@media (max-width: 63rem) {
+  .articleHeadTitleCard {
+    .headCardGrid {
+      padding: calc(var(--layoutGap) * 1.5) 0;
+    }
   }
 }
