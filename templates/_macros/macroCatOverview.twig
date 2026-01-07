@@ -24,7 +24,9 @@
 			</span>
 		{% else %}
 			<span class="tag {{ ' ' ~ classParam }}"> 
-				<a href="{{- item.url ~ sectionUrlSegment -}}" style="{{ inlineStyle }}">{{- fullTitle -}}</a>
+				<a href="{{- item.url ~ sectionUrlSegment -}}" style="{{ inlineStyle }}">
+					<span class="catReveal">{{- fullTitle -}}</span>
+				</a>
 			</span>
 		{%- endif -%}
 

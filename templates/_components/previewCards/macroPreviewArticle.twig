@@ -26,18 +26,18 @@
 		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
 			<div class="previewMetaHeader">
 				{{ macroPostDate.postDate(queryParam) }}
-				{% include "_components/articlePreviewSunset.twig" %}
+				<div class="tagList">
+					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
+					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}
+				</div>
+				
 			</div>
 			<h2 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			<div class="previewMetaFooter">
-				<div class="tagList">
-					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
-					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}
-				</div>
-				<a href="{{ queryParam.url }}" class="btn btnSmall btnGotoRead">{{ 'Lesen' | t }}</a>
+				{% include "_components/articlePreviewSunset.twig" %}
 			</div>
 		</div>
 	</article>
