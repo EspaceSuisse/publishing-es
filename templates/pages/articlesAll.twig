@@ -10,59 +10,158 @@
     %}
 
 
-
 	<div class="listingGrid" id="articleList">
         {% include "_components/header/headerBrand" %}
-		<input class="search gridSpan12" placeholder="Search"/>
 
-		<ul class="articleTable gridSpan12 list">
+		<table class="articleTable gridSpan12 list">
 			{% for item in allEntries %}
+
+				{% set availability %}
+					{% if item.fSwitch %}
+						{{ 'Free for All' | t }}
+					{% else %}
+						{% set cutoff = "now"|date_modify(cutoffDate) %}
+						{{ (item.postDate < cutoff ? 'Archiv' : 'Offen') | t }}
+					{% endif %}
+				{% endset %}
+
+
                 {% if loop.first %}
-                    <li class="item gridSpan12">
-                        <p>{{ 'Veröffentlichung' }}e</p>
-                        <p>ID</p>
-                        <p>{{ 'Title' | t }}</p>
-                        <p>{{ labelGenre}}</p>
-                        <p>{{ labelSubject }}</p>
-                    </li>
+                    <tr class="item tHead gridSpan12">
+						<th data-type="date">{{ 'Veröffentlichung' }}</th>
+						<th data-type="string">{{ 'Title' | t }}</th>
+						<th data-type="string">{{ 'Lead' | t }}</th>
+						<th data-type="string">{{ labelGenre }}</th>
+						<th data-type="string">{{ labelSubject }}</th>
+						<th data-type="date">{{ 'Letztes Update' | t }}</th>
+						<th data-type="string">{{ 'Verfügbarkeit' | t }}</th>
+						<th data-type="number">ID</th>
+					</tr>
                 {% endif %}
-                
-				<li class="item gridSpan12">
-					<div class="postDate">{{ item.postDate|date('Y-m-d') }}</div>
-                    <div class="articleId">{{ item.id }}</div>
-					<div class="title">
+
+				<tr class="item gridSpan12">
+					<td class="postDate">{{ item.postDate|date('j.m.Y') }}</td>
+					<td class="title">
 						<a href="{{ item.url }}">{{ item.title }}</a>
-					</div>
-					<div class="genre">
+					</td>
+					<td class="description">{{ item.fSeoDescription }}</td>
+					<td class="genre">
 						{% for cat in item.fCatGenre.all() %}
 							<a href="{{ cat.url }}">{{ cat.title }}</a>
 							{% if not loop.last %},
 							{% endif %}
 						{% endfor %}
-					</div>
-					<div class="subject">
+					</td>
+					<td class="subject">
 						{% for cat in item.fCatSubject.all() %}
 							<a href="{{ cat.url }}">{{ cat.title }}</a>
-							{% if not loop.last %},
-							{% endif %}
+							{% if not loop.last %},{% endif %}
 						{% endfor %}
-					</div>
-				</li>
+					</td>
+					<td>{{ item.dateUpdated|date('d. M Y') }}</td>
+					<td>{{ availability }}</td>
+                    <td class="articleId">{{ item.id }}</td>
+				</tr>
 			{% endfor %}
-		</ul>
+		</table>
 	</div>
 
+	{% js %}
+		document.addEventListener('DOMContentLoaded', function () {
+			const table = document.querySelector('.articleTable');
+			if (!table) return;
 
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.0.2/list.min.js"></script>
+			const headerRow = table.querySelector('tr.tHead');
+			if (!headerRow) return;
 
-	 {% js %}
-        document.addEventListener('DOMContentLoaded', function () {
-            const options = {
-                valueNames: ['postDate', 'title', 'genre', 'subject', 'articleId']
-            };
-            const articleList = new List('articleList', options);
-        });
-    {% endjs %}
+			const headers = headerRow.querySelectorAll('th');
+
+			headers.forEach((th, colIndex) => {
+				th.style.cursor = 'pointer'; // visual hint
+
+				th.addEventListener('click', () => {
+					const type = th.dataset.type || 'string';
+
+					// Toggle direction: top -> bottom (asc) / bottom -> top (desc)
+					const currentDir = th.dataset.sortDir === 'asc' ? 'desc' : 'asc';
+
+					// Reset all headers (remove arrows + active state)
+					headers.forEach(h => {
+						h.removeAttribute('data-sort-dir');
+						h.classList.remove('is-active');
+					});
+
+					// Set direction + active state on clicked header
+					th.dataset.sortDir = currentDir;
+					th.classList.add('is-active');
+
+					// Get all rows except the header
+					const rows = Array.from(
+						table.querySelectorAll('tr.item.gridSpan12:not(.tHead)')
+					);
+
+					rows.sort((rowA, rowB) => {
+						const cellA = rowA.children[colIndex];
+						const cellB = rowB.children[colIndex];
+						const textA = cellA ? cellA.textContent.trim() : '';
+						const textB = cellB ? cellB.textContent.trim() : '';
+
+						let cmp = 0;
+
+						if (type === 'number') {
+							const aNum = parseFloat(textA.replace(',', '.')) || 0;
+							const bNum = parseFloat(textB.replace(',', '.')) || 0;
+							cmp = aNum - bNum;
+						} else if (type === 'date') {
+							const aDate = new Date(textA);
+							const bDate = new Date(textB);
+							cmp = aDate - bDate;
+						} else {
+							// default: string
+							cmp = textA.localeCompare(textB, 'de', { sensitivity: 'base' });
+						}
+
+						return currentDir === 'asc' ? cmp : -cmp;
+					});
+
+					// Re-attach rows in new order
+					const tbody = table.querySelector('tbody') || table;
+					rows.forEach(row => tbody.appendChild(row));
+				});
+			});
+		});
+	{% endjs %}
+
+	{% css %}
+		/* Make headers look clickable */
+		.articleTable .tHead th {
+			cursor: pointer;
+		}
+
+		/* Base: reserve space for arrow */
+		.articleTable .tHead th::after {
+			content: '';
+			display: inline-block;
+			margin-left: 0.25rem;
+		}
+
+		/* Ascending ▲ */
+		.articleTable .tHead th[data-sort-dir="asc"]::after {
+			content: '▲';
+		}
+
+		/* Descending ▼ */
+		.articleTable .tHead th[data-sort-dir="desc"]::after {
+			content: '▼';
+		}
+
+		/* Active column styling (customize as you like) */
+		.articleTable .tHead th.is-active {
+			background-color: #eee;
+			font-weight: bold;
+		}
+	{% endcss %}
+	
 
 
 
