@@ -3,7 +3,7 @@
 {% block content %}
 
 	{% set allEntries = craft.entries()
-        .section('article')
+        .section('article, news')
         .with(['fCatGenre', 'fCatSubject'])
         .limit(null)
         .all()
@@ -29,6 +29,7 @@
                 {% if loop.first %}
                     <tr class="item tHead gridSpan12">
 						<th data-type="date">{{ 'Veröffentlichung' }}</th>
+						<th data-type="string">Art.</th>
 						<th data-type="string">{{ 'Title' | t }}</th>
 						<th data-type="string">{{ 'Lead' | t }}</th>
 						<th data-type="string">{{ labelGenre }}</th>
@@ -41,6 +42,7 @@
 
 				<tr class="item gridSpan12">
 					<td class="postDate">{{ item.postDate|date('j.m.Y') }}</td>
+					<td>{{ item.section.handle | capitalize | t }}</td>
 					<td class="title">
 						<a href="{{ item.url }}">{{ item.title }}</a>
 					</td>
