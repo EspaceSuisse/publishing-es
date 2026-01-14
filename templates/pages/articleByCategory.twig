@@ -1,36 +1,48 @@
 {% extends "_layouts/main" %}
 
 {% import '_components/previewCards/macroPreviewArticle' as macroPreviewArticle %}
+{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
 
 {% block content %}
 
-	{% set allEntries = craft.entries()
-		.section('article')
+	{# check if the url contains a url param with section #}
+	{% set sectionFilter = craft.app.request.getParam('section') %}
+
+	{# Get all entries associated with this genre or subject no matter the section #}
+	{% set query = craft.entries()
 		.relatedTo(category)
 		.with(['fCatGenre', 'fCatSubject'])
 		.limit(null)
-		.all()
 	%}
 
-	{% set genre = craft.categories.group('catGenre').all() %}
-	{% set subject = craft.categories.group('catSubject').all() %}
+	{# if ther is a param in the url get the value of said param and use it to filter for section #}
+	{% if sectionFilter %}
+		{% set query = query.section(sectionFilter) %}
+	{% endif %}
+
+	{% set allEntries = query.all() %}
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
-	<div class="listingGrid">
+	<article class="listingGrid">
 		{% include "_components/header/headerBrand" %}
-		<h1 class="topicTitle gridSpan12">{{ category.title }}</h1>
-		{% if category.fRichTextI18n %}
-			<div class="topicLead gridSpan12">
-				{{ category.fRichTextI18n }}
-			</div>
-		{% endif %}
-		
+		{% include "_components/header/headerCatList" %}
 		{% for item in allEntries | slice(0,1) %}
+			{% if item.section.handle == 'news' %}
+				{{ macroPreviewNews.listMacro(item,'gridSpan12', ) }}
+			{% else %}
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
+			{% endif %}
 		{% endfor %}
 		{% for item in allEntries | slice(1, null) %}
+			{% if item.section.handle == 'news' %}
+			{% else %}
+			{% endif %}
+			{% if item.section.handle == 'news' %}
+				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6') }}
+			{% else %}
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12') }}
+			{% endif %}
 		{% endfor %}
-	</div>
+	</article>
 
 {% endblock %}

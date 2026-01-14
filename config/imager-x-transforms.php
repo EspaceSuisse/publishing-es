@@ -14,10 +14,19 @@ return [
     'feedImageTransform' => [
         'displayName' => 'Feed Image',
         'transforms' => [
-            ['width' => 1920, 'height' => 1080],
+            ['width' => 1920, 'ratio' => 16 / 9],
         ],
         'defaults' => [
-            'format' => 'jpg',
+            'format' => 'avif',
+        ],
+    ],
+    'authorPortrait' => [
+        'displayName' => 'Author Portrait',
+        'transforms' => [
+            ['width' => 100, 'ratio' => 1 / 1],
+        ],
+        'defaults' => [
+            'format' => 'avif',
         ],
     ],
     'articleImageLightbox' => [

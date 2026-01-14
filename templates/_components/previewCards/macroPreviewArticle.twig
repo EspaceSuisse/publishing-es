@@ -8,34 +8,36 @@
 	{% set image = queryParam.fImgMono.one() ?? null %}
 	{% set catGenre = queryParam.fCatGenre.all() %}
 	{% set catSubject = queryParam.fCatSubject.all() %}
+	{% set noImg = image ? false : true %}
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
 	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
 
 	<article class="previewCard previewArticle {{ classCardParam }}">
-
-		{% if hideImage != true %}
+		{% if image %}
+		
 			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
 				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 			</a>
+
 		{% endif %}
 
 
-		<div class="txtPart {{ classTxtParam }}">
+		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
 			<div class="previewMetaHeader">
 				{{ macroPostDate.postDate(queryParam) }}
-				{% include "_components/articlePreviewSunset.twig" %}
+				<div class="tagList">
+					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
+					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}
+				</div>
+				
 			</div>
 			<h2 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			<div class="previewMetaFooter">
-				<div>
-					{{ macroCat.catOverview(catGenre, 'genre', true) }}
-					{{ macroCat.catOverview(catSubject, 'subject', true) }}
-				</div>
-				<a href="{{ queryParam.url }}" class="btn btnSmall">{{ 'Lesen' | t }}</a>
+				{% include "_components/articlePreviewSunset.twig" %}
 			</div>
 		</div>
 	</article>

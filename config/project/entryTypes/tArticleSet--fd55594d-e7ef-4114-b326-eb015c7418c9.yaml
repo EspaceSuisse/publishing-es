@@ -129,7 +129,7 @@ fieldLayouts:
             instructions: null
             label: 'Aufmacher Bild'
             providesThumbs: false
-            required: true
+            required: false
             tip: 'Schön und Toll soll es sein'
             type: craft\fieldlayoutelements\CustomField
             uid: b5f2e5ed-1406-4291-a390-3a82b418d720

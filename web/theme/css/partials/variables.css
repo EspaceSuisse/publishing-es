@@ -28,16 +28,25 @@
     /* 90vw on mobile */
     --maxContentWidth: 120rem;
     --listingMaxWidth: 145rem;
-
+    --headerNoImageHeight: 40vh;
+    --headerFigureHeight: 80vh;
 
     --navSpeed: 0.2s;
+    --paddingBtnSmall: 4px 9px 6px;
 
-    --linkTxtColor: var(--colorES-brand-blue);
-    --linkTxtHoverColor: rgb(0, 102, 68);
+    /* Links without background */
+    --linkTxtColor: #478cc6;
+    --linkTxtHoverColor: var(--colorES-brand-blue);
     --linkTxtActiveColor: var(--linkTxtColor);
-    --linkBgColor: var(--colorES-brand-blue-soft);
+
+    /* Links with background */
+    --linkBgTxtColor: white;
+    --linkBgColor: var(--linkTxtColor);
     --linkBgHoverColor: var(--colorES-brand-blue);
+    --linkBgTxtHoverColor: var(--linkBgTxtColor);
+
     --linkTxtColorVisited: var(--colorES-brand-blue-soft);
+    --linkDescorationThikness: 2px;
 
     --txtColor: rgb(86, 86, 86);
     --txtInvertColor: white;

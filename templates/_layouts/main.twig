@@ -7,6 +7,17 @@
 {% set labelSubjectP = 'Themen' | t %}
 {% set labelGenreP = 'Rubriken' | t %}
 
+{% set labelArticle = 'Artikel' | t %}
+{% set labelNews = 'News' | t %}
+
+{# Cutoff date for articles to be considered archive articles #}
+{# Default to 90 days if no brand specific number is set #}
+{% set cutoffDays = (siteBrand.fNumber | default(90)) | integer %}
+{% set cutoffDate = '-' ~ cutoffDays ~ ' days' %}
+{% set cutoff = "now"|date_modify(cutoffDate) %}
+
+
+
 {# Sets a body css class with the section or category handle for css toplevel scoping #}
 {% set handle = entry.section.handle ?? category.group.handle ?? null %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}

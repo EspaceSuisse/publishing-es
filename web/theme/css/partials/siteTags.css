@@ -2,28 +2,28 @@
     font-family: var(--font-display);
     white-space: nowrap;
     font-size: var(--font-size-S);
-    line-height: calc(var(--line-height-base) * 1.2);
     a {
-        transition: all 0.3s ease-in-out;
         color: var(--txtColor);
-        padding: 4px 9px 6px;
+        padding: var(--paddingBtnSmall);
         text-decoration: none;
-        &:hover {
-            background-color: var(--linkBgHoverColor) !important;
-            color: var(--linkTxtHoverColor);
-        }
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
     }
-    &.invert, &.invert a {
+
+    &.invert,
+    &.invert a {
         color: var(--txtInvertColor);
     }
+
     &.subject {
-        a {
-            border-radius: 100px;
-        }
+        border-radius: 100px;
     }
+
     .catIcon {
-      width: calc( var(--font-size-S) * 2); 
-      height: calc( var(--font-size-S) * 2);   
+        width: calc(var(--font-size-S) * 2);
+        height: calc(var(--font-size-S) * 2);
     }
 }
 
@@ -31,4 +31,37 @@
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--layoutGap) / 2);
+}
+
+.tagList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--layoutGap) / 2);
+}
+
+.previewCard {
+    .tag {
+        display: inline-flex;
+        overflow: hidden;
+        max-width: calc(var(--font-size-S) * 2.6);
+        transition: max-width 0.35s ease 0.2s;
+        &:hover {
+            max-width: 1000px;
+            transition-delay: 0s;
+        }
+    }
+    .catReveal {
+        display: inline-block;
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
+
+        /* hide text by moving it left */
+        transform: translateX(calc(-100% - 0.75rem));
+        transition: transform 0.35s ease;
+    }
+
+    /* reveal on hover */
+    .tag:hover .catReveal {
+        transform: translateX(0);
+    }
 }
