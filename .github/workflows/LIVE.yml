@@ -1,16 +1,15 @@
-name: Deploy Craft CMS to LIVE (fortrabbit)
+name: Deploy Craft CMS to LIVE
 
 on:
   push:
-    branches:
-      - LIVE
+    branches: [ LIVE ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Prepare SSH
@@ -23,11 +22,11 @@ jobs:
           ssh-keyscan -H "${{ secrets.FTP_HOST }}" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
-      - name: Deploy files with rsync (no vendor)
+      - name: Rsync deploy (no vendor)
         env:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
-          SSH_PATH: ${{ secrets.PATH_LIVE_HTDOCS }}   # e.g. /srv/app/inforaum/htdocs
+          SSH_PATH: ${{ secrets.PATH_LIVE_HTDOCS }}
         run: |
           set -euxo pipefail
           rsync -az --delete \
@@ -47,20 +46,20 @@ jobs:
             -e "ssh -o StrictHostKeyChecking=no" \
             ./ "${SSH_USER}@${SSH_HOST}:${SSH_PATH}"
 
-      - name: Install Composer dependencies on remote
+      - name: Composer install (remote)
         env:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
-          APP_PATH: ${{ secrets.PATH_LIVE_APP }}       # e.g. /srv/app/inforaum/htdocs
+          APP_PATH: ${{ secrets.PATH_LIVE_APP }}
         run: |
           set -euxo pipefail
           ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && composer install --no-dev --prefer-dist --no-progress --no-interaction"
 
-      # - name: Run migrations and apply project config (remote)
-      #   env:
-      #     SSH_USER: ${{ secrets.FTP_USER }}
-      #     SSH_HOST: ${{ secrets.FTP_HOST }}
-      #     APP_PATH: ${{ secrets.PATH_LIVE_APP }}       # e.g. /srv/app/inforaum/htdocs
-      #   run: |
-      #     set -euxo pipefail
-      #     ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft migrate/all --no-interaction && php craft project-config/apply --force --no-interaction"
+      - name: Migrate and apply project config (remote)
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          APP_PATH: ${{ secrets.PATH_LIVE_APP }}
+        run: |
+          set -euxo pipefail
+          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft migrate/all --no-interaction && php craft project-config/apply --force --no-interaction"
