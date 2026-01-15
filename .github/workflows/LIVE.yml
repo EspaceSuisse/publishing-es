@@ -62,4 +62,4 @@ jobs:
           APP_PATH: ${{ secrets.PATH_LIVE_APP }}
         run: |
           set -euxo pipefail
-          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply --force --interactive=0"
+          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply"
