@@ -1,11 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # remove www
-    RewriteCond %{HTTP_HOST} ^www\.(.+)
-    RewriteCond %{HTTPS}s/%1 ^(on(s)|offs)/(.+)
-    RewriteRule ^ http%2://%3%{REQUEST_URI} [L,R=301]
-
     # Route 404s to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
