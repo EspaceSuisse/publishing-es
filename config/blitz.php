@@ -12,9 +12,7 @@ return [
             ['uriPattern' => '.*'],
         ],
         'excludedUriPatterns' => [
-            ['uriPattern' => '^/knock-knock/'],
-            ['uriPattern' => '^knock-knock/'],
-            ['uriPattern' => '^/knock-knock/*'],
+           ['uriPattern' => '^/knock-knock/who-is-there'],
         ],
     ],
     'dev' => [
