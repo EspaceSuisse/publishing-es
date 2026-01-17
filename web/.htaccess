@@ -1,10 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # force https
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
     # Route 404s to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
