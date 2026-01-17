@@ -15,7 +15,6 @@ return [
             ['uriPattern' => '^/knock-knock/'],
             ['uriPattern' => '^knock-knock/'],
             ['uriPattern' => '^/knock-knock/*'],
-            ['uriPattern' => '^actions/knock-knock'],
         ],
     ],
     'dev' => [
