@@ -11,7 +11,7 @@
     <figure class="articleImg">
 
         {% if asset.extension == 'svg' %}
-            {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
+            {{ svg(asset) }}
         {% else %}
             <a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
                 {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
