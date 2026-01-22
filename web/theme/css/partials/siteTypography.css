@@ -7,7 +7,6 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         font-size: var(--font-size-M);
         font-family: var(--font-default);
         line-height: var(--line-height-base);
-        text-indent: 6rem;
         > strong {
             font-weight: var(--font-bold);
         }
@@ -42,13 +41,8 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         margin: 0;
     }
     h2 {
-        font-size: var(--font-size-XL);
-    }
-}
-.articleElement > p {
-    text-indent: calc(var(--font-size-M) * 1.5 );
-    &:last-child {
-        margin-bottom: 0;
+        font-size: var(--font-size-L);
+        padding-top: calc(var(--layoutGap));
     }
 }
 .moreArticlesTitle {
