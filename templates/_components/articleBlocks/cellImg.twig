@@ -9,9 +9,15 @@
     {% set lightboxImage = craft.imagerx.transformImage(asset, 'articleImageLightbox')[0] %}
 
     <figure class="articleImg">
-        <a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
+
+        {% if asset.extension == 'svg' %}
             {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
-        </a>
+        {% else %}
+            <a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
+                {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
+            </a>
+        {% endif %}
+
         {{ figCaption.figCaption(asset, block.textSimpleI18n, asset.fSwitch) }}
     </figure>
 {% endfor %}
