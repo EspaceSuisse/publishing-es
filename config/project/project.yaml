@@ -1,4 +1,4 @@
-dateModified: 1769079184
+dateModified: 1769095743
 elementSources:
   craft\elements\Asset:
     -
@@ -304,18 +304,6 @@ plugins:
     enabled: true
     schemaVersion: 3.0.0.0
   codefield:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  cp-css:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
-    settings:
-      additionalCss: ''
-      cacheBusting: true
-      cssFile: $PRIMARY_SITE_URL/theme/css/components/backendCP.css
-  environment-label:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
