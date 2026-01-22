@@ -1,4 +1,4 @@
-dateModified: 1768402171
+dateModified: 1769078006
 elementSources:
   craft\elements\Asset:
     -
@@ -336,20 +336,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  ohdear:
-    edition: standard
-    enabled: true
-    licenseKey: NE67WJ7K4BNECPA4BCBNHFI2
-    schemaVersion: 1.0.0
   retour:
     edition: standard
     enabled: true
     licenseKey: VJR8JIXNP3X424S665JMYRYZ
     schemaVersion: 3.0.12
-  sendgrid:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true

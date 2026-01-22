@@ -5,5 +5,5 @@
 	{% for item in esSocialMedia %}
 		<li><a href="{{ item.url }}">{{ item.siteName }}</a></li>
 	{% endfor %}
-	<li><a href="{{ siteUrl ~ 'feeds/articles-' ~ craft.app.language |slice(0,2) }}.rss">RSS ({{ craft.app.language }})</a></li>
+	<li><a href="{{ siteUrl ~ 'feeds/feed-' ~ craft.app.language |slice(0,2) }}.rss">RSS ({{ craft.app.language }})</a></li>
 </ul>
