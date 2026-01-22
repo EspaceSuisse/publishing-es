@@ -42,12 +42,12 @@
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(4,4) %}
-			{{ macroPreview.listMacro(item,'gridSpan12','gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
+			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpan12','gridSpan12 gridMdSpan8') }}
 		{% endfor %}
 	</div>
 	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(8) %}
-			{{ macroPreview.listMacro(item,'gridSpan6','gridSpan12 gridMdSpan12','gridSpan12 gridMdSpan12') }}
+			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan12','gridSpan12 gridMdSpan12') }}
 		{% endfor %}
 	</div>
 
