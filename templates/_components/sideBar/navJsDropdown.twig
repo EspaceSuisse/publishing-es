@@ -1,35 +1,45 @@
 {% js %}
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.dropdownLink').forEach(button => {
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('nav'); // select your nav element
 
-                const parentLi = button.closest('li');
-                const dropdown = parentLi.querySelector('.dropdown');
+    document.querySelectorAll('.dropdownLink').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
 
-                // Close any other open dropdowns
-                document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
-                    if (openDropdown !== dropdown) {
-                        openDropdown.classList.remove('open');
-                        const parentButton = openDropdown.closest('li').querySelector('.dropdownLink');
-                        if (parentButton) parentButton.classList.remove('open');
-                    }
-                });
+            const parentLi = button.closest('li');
+            const dropdown = parentLi.querySelector('.dropdown');
 
-                if (dropdown.classList.contains('open')) {
-                    // Start slide-out animation
-                    dropdown.classList.add('closing');
-                    dropdown.classList.remove('open');
-                    button.classList.remove('open');
-
-                    setTimeout(() => {
-                        dropdown.classList.remove('closing');
-                    }, 300); // match transition duration
-                } else {
-                    dropdown.classList.add('open');
-                    button.classList.add('open');
+            // Close any other open dropdowns
+            document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
+                if (openDropdown !== dropdown) {
+                    openDropdown.classList.remove('open');
+                    const parentButton = openDropdown.closest('li').querySelector('.dropdownLink');
+                    if (parentButton) parentButton.classList.remove('open');
                 }
             });
+
+            if (dropdown.classList.contains('open')) {
+                // Start slide-out animation
+                dropdown.classList.add('closing');
+                dropdown.classList.remove('open');
+                button.classList.remove('open');
+
+                setTimeout(() => {
+                    dropdown.classList.remove('closing');
+
+                    // Remove nav open class if no dropdowns are open
+                    if (!document.querySelector('.dropdown.open')) {
+                        nav.classList.remove('open');
+                    }
+                }, 300); // match transition duration
+            } else {
+                dropdown.classList.add('open');
+                button.classList.add('open');
+
+                // Add nav open class
+                nav.classList.add('open');
+            }
         });
     });
+});
 {% endjs %}
