@@ -7,23 +7,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-09-11T15:21:40+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 6eb635d2-1d95-4d26-85d2-703c297243bd
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bc26da72-ed64-4abc-b146-e95c58806860
-            userCondition: null
-            warning: null
-            width: 25
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -52,7 +35,7 @@ fieldLayouts:
             uid: 75b8d53e-980c-4181-9193-fb989c7305e2
             userCondition: null
             warning: 'Bei Änderung: nicht vergessen, auch den `Slug` zu ändern. `Slug` ist die `URL` der Kategorie.'
-            width: 75
+            width: 100
           -
             dateAdded: '2025-08-06T13:58:00+00:00'
             editCondition: null
@@ -74,19 +57,19 @@ fieldLayouts:
             dateAdded: '2025-05-14T09:19:04+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             includeInCards: false
-            instructions: 'Wird z.b. auf LinkedIn als Vorschaubild angezeigt'
-            label: Vorschaubild
+            instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 30912ba0-5488-4b75-acaa-64d9660565ac
+            uid: 658dbbad-60cc-4ee1-a3f6-ea4bb6194d65
             userCondition: null
             warning: null
-            width: 75
+            width: 100
           -
             dateAdded: '2025-06-17T09:16:31+00:00'
             editCondition: null
@@ -105,22 +88,39 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: '2025-05-14T09:19:04+00:00'
+            dateAdded: '2025-09-11T15:21:40+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            fieldUid: 6eb635d2-1d95-4d26-85d2-703c297243bd
             handle: null
             includeInCards: false
-            instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
+            instructions: null
             label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 658dbbad-60cc-4ee1-a3f6-ea4bb6194d65
+            uid: bc26da72-ed64-4abc-b146-e95c58806860
             userCondition: null
             warning: null
-            width: 100
+            width: 25
+          -
+            dateAdded: '2025-05-14T09:19:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            handle: null
+            includeInCards: false
+            instructions: 'Wird z.b. auf LinkedIn als Vorschaubild angezeigt'
+            label: Vorschaubild
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30912ba0-5488-4b75-acaa-64d9660565ac
+            userCondition: null
+            warning: null
+            width: 50
         name: Inhalt
         uid: e72ed69c-5962-432b-b873-1a6ab58c61bb
         userCondition: null
