@@ -1,4 +1,4 @@
-{% import '_macros/macroDropdown' as dropMacro %}
+
 
 {# This is the site navigation for the header #}
 {# It uses the macro to print out the category overview link #}
@@ -21,18 +21,7 @@
 
 <nav aria-label="{{'Main navigation'|t}}" role="navigation"> 
 	<ul class="siteNav">
-		{% include "_components/sideBar/homepageLink.twig" %}
-		{{ dropMacro.dropdown(navSubject, labelSubject, currentPath) }}
-		{{ dropMacro.dropdown(navGenre, labelGenre, currentPath) }}
-
-		{# <li class="navIcon">
-			<a href="{{ articleSearch.url }}">
-				{{ articleSearch.title }}
-			</a>
-		</li> #}
-
-		{% include "_components/sideBar/siteNavMoreLinks.twig" %}
-		{% include "_components/sideBar/navLangSwitcher.twig" %}
+		{% include "_components/sideBar/navInnerContent.twig" %}
 	</ul>
 </nav>
 
