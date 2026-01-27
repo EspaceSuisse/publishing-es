@@ -1,70 +1,60 @@
 .dropdown {
-   .dropdownContents {
-    padding: var(--layoutGap);
-     @media (min-width: 48rem) {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--layoutGap);
+    background-color: var(--colorES-brand-blue);
+
+    .dropdownContents {
+        padding: calc(var(--layoutGap) * 2);
+        display: grid;
+        gap: var(--layoutGap);
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        p,
+        a,
+        label,
+        .formTitle {
+            color: var(--txtInvertColor);
         }
-   }
-   .dropdownTitle {
-        grid-column: 1 / -1;
-        font-size: var(--font-size-L);
-        font-family: var(--font-display);
-        margin: 0;
-    }
-    .relatedNav {
-        border-left: solid 1px var(--txtColor);
-        padding-left: var(--layoutGap);
-        .subnavCatTitle {
-            font-family: var(--font-display);
-            font-size: var(--font-size-M);
-            margin: 0;
-            margin-bottom: calc( var(--layoutGap) / 2 );
+
+        input {
+            background-color: var(--colorES-brand-blue);
+            color: var(--txtInvertColor);
+            border: solid 1px var(--txtInvertColor);
+        }
+
+        .majorLinks {
             a {
+                font-family: var(--font-default);
+                font-size: var(--font-size-XL);
+                color: var(--linkBgTxtColor);
                 text-decoration: none;
-                color: var(--linkTxtColor);
+
                 &:hover {
-                    color: var(--linkTxtHoverColor);
+                    text-decoration: underline;
                 }
-            }
-            &.isActive a {
-                color: var(--linkTxtHoverColor);
             }
         }
-        .subnavCatArticles {
-            .catArticle {
-                a {
-                    text-decoration: none;
-                    display: block;
-                    .catArticleTitle:hover {
-                        color: var(--linkTxtHoverColor);
-                    }
-                }
-                &:last-of-type {
-                    padding-bottom: 0;
-                }
-                &.isActive .catArticleTitle {
-                    color: var(--linkTxtHoverColor);
-                }
 
-                padding-bottom: calc( var(--layoutGap) / 2 );
-                .postDate {
-                    margin: 0;
-                }
-                .catArticleTitle {
-                    font-size: var(--font-size-S);
-                    font-family: var(--font-display);
-                    margin: 0;
-                }
+        .latestEntries {
+            h2 {
+                font-family: var(--font-display);
+                font-size: var(--font-size-L);
+                color: var(--txtInvertColor);
+            }
 
-                .catArticleDescription {
-                    font-size: var(--font-size-S);
-                    font-family: var(--font-default-condensed);
+            .latestLink {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+                p, h3 {
+                    font-size: var(--font-size-M);
+                    color: var(--txtInvertColor);
                     margin: 0;
                 }
             }
+        }
+
+        #mc_embed_shell {
+            max-width: 300px;
         }
     }
 }
-

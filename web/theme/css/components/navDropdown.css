@@ -6,6 +6,22 @@ button.dropdownLink {
     text-decoration: underline;
     padding: 0;
     font-size: var(--font-size-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    span {
+      height: 3px;
+      background-color: var(--txtInvertColor);
+      width: 100%;
+    }
+    @media (max-width: 48rem) {
+        span {
+            background-color: var(--txtColor);
+        }
+    }
 }
 
 .dropdown {

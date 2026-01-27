@@ -1,49 +1,55 @@
 
 	{% import '_macros/macroPostDate' as macroPostDate %}
 
-	{% set latestNews = craft.entries.section('news').limit(5).all() %}
-	{% set latestArticles = craft.entries.section('articles').limit(5).all() %}
+	{% set latestNews = craft.entries.section('news').limit(3).all() %}
+	{% set latestArticles = craft.entries.section('article').limit(3).all() %}
 	<li class="navToplevelLink hasDropdown">
 	
 
 		<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu">
-			<span class="buttonTxt">Nav</span>
+			<span class="hamburger lineUpper"></span>
+			<span class="hamburger lineMiddle"></span>
+			<span class="hamburger lineLower"></span>
 		</button>
 
-		<div class="dropdown" id="dropdown-menu" role="menu">
+
+		<aside class="dropdown" id="dropdown-menu" role="menu">
 
 			<div class="dropdownContents">
-				<ul>
+				<ul class="majorLinks">>
 					{% include "_components/sideBar/homepageLink.twig" %}
 					{% include "_components/sideBar/siteNavMoreLinks.twig" %}
 					{% include "_components/sideBar/navLangSwitcher.twig" %}
 				</ul>
-				<div>
+				<div class="latestEntries">
 					{% for item in latestNews %}
 						{% if loop.first %}
 							<h2>{{ 'Neuste News' | t }}</h2>
 						{% endif %}
 						
-						<a href="{{ item.url }}">
-						{{ macroPostDate.postDate(item) }}
-						{{ item.title }}
+						<a href="{{ item.url }}"  class="latestLink">
+							{{ macroPostDate.postDate(item) }}
+							<h3>{{ item.title }}</h3>
+						</a>
+						
+					{% endfor %}
+				</div>
+				{% include "_components/formNewsletter/mailchimpForm" %}
+				<div class="latestEntries">
+					
+					{% for item in latestArticles %}
+						{% if loop.first %}
+							<h2>{{ 'Neuste Artikel' | t }}</h2>
+						{% endif %}
+
+						<a href="{{ item.url }}" class="latestLink">
+							{{ macroPostDate.postDate(item) }}
+							<h3>{{ item.title }}</h3>
 						</a>
 
 					{% endfor %}
 				</div>
-				<div>
-					
-					{% for item in latestArticles %}
-						{% if loop.first %}
-							<h2>{{ 'NeusteArtikel' | t }}</h2>
-						{% endif %}
-						
-						{{ macroPostDate.postDate(item) }}
-						<a href="{{ item.url }}">{{ item.title }}</a><br>
-					{% endfor %}
-				</div>
-				{% include "_components/formNewsletter/mailchimpForm" %}
 			</div>
 
-		</div>
+		</aside>
 	</li>
