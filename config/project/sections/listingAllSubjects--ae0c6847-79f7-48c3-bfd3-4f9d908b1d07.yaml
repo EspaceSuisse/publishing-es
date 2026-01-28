@@ -17,10 +17,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: pages/listingAllSubjects.twig
-    uriFormat: listing-all-subjects
+    uriFormat: '{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     enabledByDefault: true
     hasUrls: true
     template: pages/listingAllSubjects.twig
-    uriFormat: listing-all-subjects
+    uriFormat: '{slug}'
 type: single
