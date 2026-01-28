@@ -3,6 +3,7 @@ button.dropdownLink {
     transition: transform 0.6s ease;
     max-width: 29px;
     max-height: 29px;
+    z-index: 1000;
     span {
       transition: transform 0.6s ease, opacity 0.4s ease;
     }
