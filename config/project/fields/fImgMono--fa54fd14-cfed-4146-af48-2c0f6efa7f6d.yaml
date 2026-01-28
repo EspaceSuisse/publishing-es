@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fImgMono
-instructions: null
+instructions: 'Lange Seite: `2400px` /  [Img Resizer](https://kaspar-allenbach.github.io/image-resizer/)'
 name: Img
 searchable: false
 settings:

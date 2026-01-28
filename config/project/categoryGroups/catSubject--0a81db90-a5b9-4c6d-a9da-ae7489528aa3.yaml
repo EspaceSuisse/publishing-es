@@ -29,12 +29,12 @@ fieldLayouts:
             requirable: false
             size: null
             step: null
-            tip: null
+            tip: 'Bei Änderung: nicht vergessen, auch den `Slug` zu ändern. `Slug` ist die `URL` der Kategorie.'
             title: null
             type: craft\fieldlayoutelements\TitleField
             uid: 027679e6-e5a3-4981-8320-2767d1c784ca
             userCondition: null
-            warning: 'Bei Änderung: nicht vergessen, auch den `Slug` zu ändern. `Slug` ist die `URL` der Kategorie.'
+            warning: null
             width: 100
           -
             dateAdded: '2025-08-06T13:58:27+00:00'
@@ -120,7 +120,7 @@ fieldLayouts:
             uid: 12c775f6-0dfa-4d12-98db-7afc6b4d8c65
             userCondition: null
             warning: null
-            width: 25
+            width: 50
         name: Inhalt
         uid: 8732783b-ab28-4e2b-9ceb-8f87d9ef6b90
         userCondition: null
