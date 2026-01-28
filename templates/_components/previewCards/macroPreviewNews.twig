@@ -9,7 +9,7 @@
 	<article class="previewCard previewNews {{ classCardParam }}">
 		<div class="txtPart">
 			<div class="previewMetaHeader">
-				{{ macroPostDate.postDate(queryParam) }}
+				{{ macroPostDate.postDate(queryParam.postDate, true) }}
 				{{ macroCat.catOverview(newsCat, 'subject', 'news') }}
 			</div>
 			<h4 class="previewTitle">

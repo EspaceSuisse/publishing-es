@@ -25,7 +25,7 @@
 
 		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
 			<div class="previewMetaHeader">
-				{{ macroPostDate.postDate(queryParam) }}
+				{{ macroPostDate.postDate(queryParam.postDate, true) }}
 				<div class="tagList">
 					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
 					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}

@@ -27,7 +27,7 @@
 						{% endif %}
 						
 						<a href="{{ item.url }}"  class="latestLink">
-							{{ macroPostDate.postDate(item) }}
+							{{ macroPostDate.postDate(item.postDate, true) }}
 							<h3>{{ item.title }}</h3>
 						</a>
 						
@@ -42,7 +42,7 @@
 						{% endif %}
 
 						<a href="{{ item.url }}" class="latestLink">
-							{{ macroPostDate.postDate(item) }}
+							{{ macroPostDate.postDate(item.postDate, true) }}
 							<h3>{{ item.title }}</h3>
 						</a>
 

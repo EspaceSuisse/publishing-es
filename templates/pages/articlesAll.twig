@@ -2,6 +2,8 @@
 
 {% block content %}
 
+	{% import '_macros/macroPostDate' as macroPostDate %}
+
 	{% set allEntries = craft.entries()
         .section('article, news')
         .with(['fCatGenre', 'fCatSubject'])
@@ -41,7 +43,7 @@
                 {% endif %}
 
 				<tr class="item gridSpan12">
-					<td class="postDate">{{ item.postDate|date('j.m.Y') }}</td>
+					<td class="postDate">{{ macroPostDate.postDate(item.postDate, false) }}</td>
 					<td>{{ item.section.handle | capitalize | t }}</td>
 					<td class="title">
 						<a href="{{ item.url }}">{{ item.title }}</a>
@@ -60,7 +62,7 @@
 							{% if not loop.last %},{% endif %}
 						{% endfor %}
 					</td>
-					<td>{{ item.dateUpdated|date('d. M Y') }}</td>
+					<td>{{ macroPostDate.postDate(item.dateUpdated, false) }}</td>
 					<td>{{ availability }}</td>
                     <td class="articleId">{{ item.id }}</td>
 				</tr>

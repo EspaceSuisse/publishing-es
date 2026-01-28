@@ -1,25 +1,31 @@
-{% macro postDate(queryParam) %}
+{% macro postDate(queryParam, htmlParam) %}
 
     {# Normalize to start of day (midnight) for comparison #}
     {# COmpare the whole day, not exact timestamp #}
-    {% set postDateMidnight = queryParam.postDate | date('Y-m-d 00:00:00') | date('U') %}
+    {% set postDateMidnight = queryParam | date('Y-m-d 00:00:00') | date('U') %}
     {% set todayMidnight = 'now' | date('Y-m-d 00:00:00') | date('U') %}
     
     {# Convert seconds to days (86400 = seconds per day) #}
     {% set daysDiff = ((todayMidnight - postDateMidnight) / 86400)|round(0, 'floor') %}
     {% set timeStampSwitch = now | date_modify('- 1 week') | date('U') %}
 
-    {% if queryParam.postDate | date('U') > timeStampSwitch %}
+    {% if htmlParam == true %}
+        <p class="postDate">
+    {% endif %}
+    {% if queryParam | date('U') > timeStampSwitch %}
         {% if daysDiff == 0 %}
-            <p class="postDate">{{ 'Heute' | t }}</p>
+            {{ 'Heute' | t }}
         {% elseif daysDiff == 1 %}
-            <p class="postDate">{{ 'Gestern' | t }}</p>
+            {{ 'Gestern' | t }}
         {% elseif daysDiff == 2 %}
-            <p class="postDate">{{ 'Vorgestern' | t }}</p>
+            {{ 'Vorgestern' | t }}
         {% else %}
-            <p class="postDate">{{ daysDiff | date('l') }}</p>
+            {{ daysDiff | date('l') }}
         {% endif %}
     {% else %}
-        <p class="postDate">{{ queryParam.postDate | date('d. M Y') }}</p>
+        {{ queryParam | date('d. M Y') }}
+    {% endif %}
+    {% if htmlParam == true %}
+        </p>
     {% endif %}
 {% endmacro %}
