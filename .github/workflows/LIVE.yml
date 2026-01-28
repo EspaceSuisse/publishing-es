@@ -54,6 +54,11 @@ jobs:
         run: |
           set -euxo pipefail
           ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && composer install --no-dev --prefer-dist --no-progress --no-interaction"
+      
+      - name: Set Deploy Version
+        run: |
+          DEPLOY_VERSION=$(date +%s)
+          echo "DEPLOY_VERSION=$DEPLOY_VERSION" >> .env
 
       - name: Apply project config (remote)
         env:

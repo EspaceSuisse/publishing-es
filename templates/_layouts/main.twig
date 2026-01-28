@@ -1,10 +1,14 @@
 {# Tell the browser to cache this page for X time #}
 {% if craft.app.env != 'dev' %}
-	{% set expiry = now|date_modify('+1 hours') %}
-	{% header "Cache-Control: max-age=" ~ expiry.timestamp %}
-	{% header "Pragma: cache" %}
-	{% header "Expires: " ~ expiry|date('D, d M Y H:i:s', 'GMT') ~ " GMT" %}
+	{% set expiry = now|date_modify('+1 hour') %}
+	{% set seconds = expiry|date('U') - now|date('U') %}
+	{% set deployVersion = getenv('DEPLOY_VERSION') %}
+
+	{% header "ETag: \"" ~ deployVersion ~ "\"" %}
+	{% header "Cache-Control: public, max-age=" ~ seconds ~ ", must-revalidate" %}
+	{% header "Expires: " ~ expiry|datetime('r') %}
 {% endif %}
+
 
 {# All other templates inherit this and the content is printed in block content #}
 
