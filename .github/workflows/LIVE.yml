@@ -55,11 +55,12 @@ jobs:
           set -euxo pipefail
           ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && composer install --no-dev --prefer-dist --no-progress --no-interaction"
 
-      # - name: Apply project config (remote)
-      #   env:
-      #     SSH_USER: ${{ secrets.FTP_USER }}
-      #     SSH_HOST: ${{ secrets.FTP_HOST }}
-      #     APP_PATH: ${{ secrets.PATH_LIVE_APP }}
-      #   run: |
-      #     set -euxo pipefail
-      #     ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply"
+      - name: Apply project config (remote)
+        env:
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          APP_PATH: ${{ secrets.PATH_LIVE_APP }}
+        run: |
+          set -euxo pipefail
+          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply"
+          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply"
