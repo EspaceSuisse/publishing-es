@@ -1,5 +1,0 @@
-{% set isHomepage = entry is defined and entry.section.handle == 'homepage' %}
-
-	<li class="{{ isHomepage ? 'isActive' : '' }}">
-		<a href="{{ siteUrl }}" aria-label="{{ 'Home' | t }}">{{ 'Home' | t }}</a>
-	</li>

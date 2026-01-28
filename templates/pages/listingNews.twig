@@ -1,0 +1,26 @@
+{% extends "_layouts/main" %}
+
+{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
+
+{% block content %}
+
+	{% set allNews = craft.entries()
+		.section('news')
+		.limit(null)
+		.all()
+	%}
+
+	{% set listingNews = craft.entries().section('listingNews').one() %}
+	
+
+	<header class="pageHead subPageHead">
+		{% include "_components/header/headerBrand" %}
+		{% include "_components/header/headerPage" %}
+	</header>
+	<div class="listingGrid">
+		{% for item in allNews %}
+			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridLgSpan6') }}
+		{% endfor %}
+	</div>
+
+{% endblock %}
