@@ -1,4 +1,4 @@
-dateModified: 1769587413
+dateModified: 1769589218
 elementSources:
   craft\elements\Asset:
     -
@@ -203,7 +203,7 @@ meta:
     2e063293-328e-4b38-8c35-ec4074593593: EspaceSuisse # EspaceSuisse
     02e09030-3253-478b-97e2-af4db5bdcaa1: 'Image Licence' # Image Licence
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
-    2e649e3f-bf0c-40c5-a731-f9dc52e50953: 'Listing All Topics' # Listing All Topics
+    2e649e3f-bf0c-40c5-a731-f9dc52e50953: 'Listing All Genres' # Listing All Genres
     2f21816e-21e0-4681-9644-9573089c1774: 'Person Monolingual' # Person Monolingual
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
     4afbf3df-b159-483b-8c7b-3a4f6fb3c0ff: 'Site Brand' # Site Brand
