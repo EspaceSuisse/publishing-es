@@ -1,4 +1,4 @@
-name: Deploy Craft CMS to LIVE
+name: Deploy Craft CMS to LIVE on Green Hosting
 
 on:
   push:
