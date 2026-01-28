@@ -1,6 +1,6 @@
 {% set moreLinks = globalLinks.mxSidebarLinks.all() %}
 
-{% set currentLink = entry.section.handle %}
+{% set currentLink = entry.section.handle ?? null %}
 
 
 {% for item in moreLinks %}
