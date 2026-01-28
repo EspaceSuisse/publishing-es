@@ -1,6 +1,6 @@
 {% extends "_layouts/main" %}
 
-{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
+{% import '_components/previewCards/macroPreviewCat' as macroPreview %}
 
 {% block content %}
 
@@ -20,17 +20,15 @@
 
 
 	<div class="listingGrid">
-		<ul>
 			{% for item in allItems %}
 				{% set hasEntries = craft.entries()
 					.relatedTo(item)
 					.exists()
 				%}
 				{% if hasEntries %}
-					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpan12','gridSpan12 gridMdSpan8') }}
 				{% endif %}
 			{% endfor %}
-		</ul>
 	</div>
 
 {% endblock %}

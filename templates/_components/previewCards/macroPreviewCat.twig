@@ -1,0 +1,30 @@
+{% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage) %}
+
+	{% import '_macros/macroPostDate' as macroPostDate %}
+	{% import '_macros/macroImage' as macro %}
+
+
+	{% set image = queryParam.fImgMono.one() ?? null %}
+	{% set noImg = image ? false : true %}
+
+	<article class="previewCard previewCat {{ classCardParam }}" style="background-color: {{ queryParam.fColor ?? 'var(--colorES-brand-blue)' }};">
+
+		{% if image %}
+		
+			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
+				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
+			</a>
+
+		{% endif %}
+
+		<div class="txtPart">
+			<div class="previewMetaHeader">
+			</div>
+			<h4 class="previewTitle">
+				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
+			</h4>
+			<p class="lead">{{ queryParam.fSeoDescription}}</p>
+		</div>
+	</article>
+	
+{% endmacro %}
