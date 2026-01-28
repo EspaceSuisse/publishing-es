@@ -65,6 +65,9 @@
     .btnCard {
         margin-left: auto;
     }
+    .tag {
+        font-size: var(--font-size-XS);
+    }
     .previewMetaHeader, .previewMetaFooter {
         display: flex;
         align-items: baseline;
