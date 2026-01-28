@@ -24,9 +24,9 @@ jobs:
 
       - name: Rsync deploy (no vendor)
         env:
-          SSH_USER: ${{ secrets.FTP_USER }}
-          SSH_HOST: ${{ secrets.FTP_HOST }}
-          SSH_PATH: ${{ secrets.PATH_LIVE_HTDOCS }}
+          SSH_USER: ${{ secrets.GREEN_USER }}
+          SSH_HOST: ${{ secrets.GREEN_HOST }}
+          SSH_PATH: ${{ secrets.GREEN_SSH_PATH }}
         run: |
           set -euxo pipefail
           rsync -az --delete \
@@ -48,18 +48,18 @@ jobs:
 
       - name: Composer install (remote)
         env:
-          SSH_USER: ${{ secrets.FTP_USER }}
-          SSH_HOST: ${{ secrets.FTP_HOST }}
-          APP_PATH: ${{ secrets.PATH_LIVE_APP }}
+          SSH_USER: ${{ secrets.GREEN_USER }}
+          SSH_HOST: ${{ secrets.GREEN_HOST }}
+          APP_PATH: ${{ secrets.GREEN_APP_PATH }}
         run: |
           set -euxo pipefail
           ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && composer install --no-dev --prefer-dist --no-progress --no-interaction"
 
       # - name: Apply project config (remote)
       #   env:
-      #     SSH_USER: ${{ secrets.FTP_USER }}
-      #     SSH_HOST: ${{ secrets.FTP_HOST }}
-      #     APP_PATH: ${{ secrets.PATH_LIVE_APP }}
+      #     SSH_USER: ${{ secrets.GREEN_USER }}
+      #     SSH_HOST: ${{ secrets.GREEN_HOST }}
+      #     APP_PATH: ${{ secrets.GREEN_APP_PATH }}
       #   run: |
       #     set -euxo pipefail
       #     ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply"
