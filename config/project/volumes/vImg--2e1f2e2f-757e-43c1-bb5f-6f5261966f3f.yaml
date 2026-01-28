@@ -39,12 +39,12 @@ fieldLayouts:
             requirable: false
             size: null
             step: null
-            tip: null
+            tip: 'Was sieht man auf dem Bild?'
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
             uid: 31299409-3c2b-499a-9053-1b108e655ad9
             userCondition: null
-            warning: null
+            warning: 'Nicht beschreiben, wo das Bild auf der Website verwendet wird!'
             width: 100
           -
             attribute: alt
