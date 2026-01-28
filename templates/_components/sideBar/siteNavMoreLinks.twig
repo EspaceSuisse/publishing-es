@@ -1,9 +1,15 @@
 {% set moreLinks = globalLinks.mxSidebarLinks.all() %}
 
+{% set currentLink = entry.section.handle %}
+
 
 {% for item in moreLinks %}
+
+	{% set linkComparator = item.fLinkI18n.element.section.handle ?? null %}
+	{% set isActive = linkComparator == currentLink %}
+
 	{% if loop.first %}<ul>{% endif %}
-	<li>
+	<li class="{{ isActive ? 'isActive' : '' }}">
 		<a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
 			{{ item.fLinkI18n.label }}
 		</a>

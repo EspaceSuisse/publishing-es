@@ -13,7 +13,6 @@
         .formTitle {
             color: var(--txtInvertColor);
         }
-
         input {
             background-color: var(--colorES-brand-blue);
             color: var(--txtInvertColor);
@@ -29,6 +28,14 @@
 
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+            .isActive {
+                a {
+                    font-weight: var(--font-bold);
+                    text-decoration: underline;
+                    text-decoration-thickness: 5px;
+                    color: var(--linkBgTxtHoverColor);
                 }
             }
         }
