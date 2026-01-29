@@ -14,6 +14,8 @@ return [
         'excludedUriPatterns' => [
             ['uriPattern' => '^actions/knock-knock'],
             ['uriPattern' => '^knock-knock'],
+            ['uriPattern' => '^mitglieder-login'],
+            ['uriPattern' => '^connexion-des-membres'],
         ],
     ],
     'dev' => [
@@ -23,6 +25,6 @@ return [
         'cachingEnabled' => false,
     ],
     'production' => [
-        'cachingEnabled' => false,
+        'cachingEnabled' => true,
     ],
 ];
