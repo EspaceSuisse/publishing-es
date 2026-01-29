@@ -1,4 +1,4 @@
-dateModified: 1769607423
+dateModified: 1769679980
 elementSources:
   craft\elements\Asset:
     -
@@ -301,6 +301,179 @@ plugins:
     enabled: true
     licenseKey: RQLRFXJIQ243O56I9B1CE9E6
     schemaVersion: 5.12.0
+    settings:
+      apiKey: ''
+      cacheActionRequests: false
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheControlHeaderExpired: 'public, s-maxage=5, max-age=0'
+      cacheDuration: null
+      cacheGeneratorSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+          -
+            - useBasicAuth
+            - ''
+          -
+            - username
+            - ''
+          -
+            - password
+            - ''
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      cacheNonHtmlResponses: false
+      cachePurgerSettings:
+        __assoc__:
+          -
+            - zoneIds
+            -
+              __assoc__:
+                -
+                  - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
+                  -
+                    __assoc__:
+                      -
+                        - zoneId
+                        - $CLOUDFLARE_ZONE_ID
+                -
+                  - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
+                  -
+                    __assoc__:
+                      -
+                        - zoneId
+                        - $CLOUDFLARE_ZONE_ID
+          -
+            - authenticationMethod
+            - apiKey
+          -
+            - apiToken
+            - ''
+          -
+            - apiKey
+            - $CLOUDFLARE_GLOBAL_API
+          -
+            - email
+            - $CLOUDFLARE_EMAIL
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\CloudflarePurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - compressCachedValues
+            - ''
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cachedIncludePathParam: p
+      cachingEnabled: false
+      debug: true
+      defaultCacheControlHeader: no-store
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      detectSsiEnabled: true
+      driverJobBatchSize: 100
+      driverJobPriority: 100
+      esiEnabled: false
+      excludedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - gclid
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - fbclid
+      excludedUriPatterns:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^actions/knock-knock
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^knock-knock
+      generatePagesWithQueryStringParams: true
+      hintsEnabled: false
+      includedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - '.*'
+      includedUriPatterns:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - '.*'
+      injectScriptEvent: DOMContentLoaded
+      injectScriptPosition: 3
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
+        - putyourlightson\blitz\drivers\integrations\DatastarIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      maxRetryAttempts: 10
+      maxUriIndexLength: 767
+      maxUriLength: 2048
+      mutexTimeout: 1
+      onlyCacheLowercaseUris: false
+      outputComments: true
+      purgeAssetImagesWhenChanged: true
+      queryStringCaching: 0
+      queueJobTtr: 300
+      refreshCacheAutomaticallyForGlobals: false
+      refreshCacheEnabled: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementMovedInStructure: true
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      refreshExpiredCacheAfterVisit: true
+      refreshMode: 3
+      sendPoweredByHeader: true
+      ssiEnabled: false
+      ssiTagFormat: '<!--#include virtual="{uri}" -->'
+      trackElementQueries: true
+      trackElements: true
   ckeditor:
     edition: standard
     enabled: true
