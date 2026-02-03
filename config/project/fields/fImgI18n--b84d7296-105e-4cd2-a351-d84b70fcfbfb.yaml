@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fImgI18n
-instructions: null
+instructions: 'Lange Seite: `2400px` /  [Img Resizer](https://kaspar-allenbach.github.io/image-resizer/)'
 name: 'Img i18n'
 searchable: false
 settings:
@@ -22,6 +22,43 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\FileSizeConditionRule
+              -
+                - uid
+                - 2d0b1ccb-d43b-4da1-a235-3afa51cd457c
+              -
+                - operator
+                - '<'
+              -
+                - value
+                - '2'
+              -
+                - maxValue
+                - ''
+              -
+                - step
+                - 1
+              -
+                - unit
+                - MB
   selectionLabel: 'Bild hinzufügen'
   showCardsInGrid: false
   showSearchInput: true

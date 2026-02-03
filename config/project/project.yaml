@@ -1,4 +1,4 @@
-dateModified: 1769679980
+dateModified: 1770117308
 elementSources:
   craft\elements\Asset:
     -
@@ -268,7 +268,7 @@ meta:
     b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Start' # Grid Start
     bc09de97-2997-40ed-9f92-fb366aaaebd6: 'Tag Field Provider' # Tag Field Provider
     bc7c6b58-e511-47e0-9216-7052ceafee56: 'Sub Pages' # Sub Pages
-    bf9959dc-941c-45ef-86b1-d05efb3e1626: Download # Download
+    bf9959dc-941c-45ef-86b1-d05efb3e1626: Dokument # Dokument
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
     c78633bb-34f0-471f-b7f5-45bb42559dab: 'Listing Author' # Listing Author
@@ -288,7 +288,7 @@ meta:
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
-    fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Img # Img
+    fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Bild # Bild
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
