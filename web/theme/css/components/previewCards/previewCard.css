@@ -87,6 +87,6 @@
         }
     }
     .previewMetaFooter {
-        margin-top: var(--layoutGap);
+        margin-top: auto;
     }
 }

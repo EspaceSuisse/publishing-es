@@ -1,4 +1,4 @@
-dateModified: 1770126342
+dateModified: 1770129557
 elementSources:
   craft\elements\Asset:
     -
@@ -33,6 +33,7 @@ elementSources:
       key: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
       tableAttributes:
         - 'field:432db72f-cf6e-4d81-90df-eef5aeb18160' # Color
+        - slug
         - status
         - link
       type: native
@@ -45,6 +46,7 @@ elementSources:
       key: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
       tableAttributes:
         - 'field:432db72f-cf6e-4d81-90df-eef5aeb18160' # Color
+        - slug
         - status
         - link
         - 'field:c344dec6-0346-4e67-99e0-ec1552b8946f' # Lightswitch
