@@ -59,7 +59,6 @@ settings:
                 - unit
                 - MB
   selectionLabel: 'Aufmacherbild hinzufügen'
-  showCardsInGrid: false
   showSearchInput: false
   showSiteMenu: true
   showUnpermittedFiles: false
@@ -67,7 +66,7 @@ settings:
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: large
+  viewMode: thumbs
 translationKeyFormat: null
-translationMethod: language
+translationMethod: none
 type: craft\fields\Assets
