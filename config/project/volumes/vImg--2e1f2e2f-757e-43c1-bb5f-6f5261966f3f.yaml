@@ -25,7 +25,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: 'Wird nur im Control Panel verwendet'
             label: null
@@ -34,7 +33,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -54,13 +52,11 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             instructions: 'Bild beschrieb für User mit Sehschwäche'
             label: null
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: true
             required: false
@@ -78,10 +74,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
             handle: null
-            includeInCards: false
             instructions: null
             label: 'Keine Bildquelle'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -105,10 +99,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
             handle: null
-            includeInCards: false
             instructions: 'Natürliche, oder juristische Person'
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -132,10 +124,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: bc09de97-2997-40ed-9f92-fb366aaaebd6 # Tag Field Provider
             handle: null
-            includeInCards: false
             instructions: 'Flickr, Unsplash, EspaceSuisse usw.'
             label: Platform
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -159,10 +149,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 02e09030-3253-478b-97e2-af4db5bdcaa1 # Image Licence
             handle: null
-            includeInCards: false
             instructions: 'CC BY-SA 2.0 usw.'
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

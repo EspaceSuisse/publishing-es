@@ -11,7 +11,6 @@ tabs:
         disabled: false
         elementCondition: null
         id: null
-        includeInCards: false
         inputType: null
         instructions: null
         label: null
@@ -20,7 +19,6 @@ tabs:
         name: null
         orientation: null
         placeholder: null
-        providesThumbs: false
         readonly: false
         requirable: false
         size: null
@@ -38,10 +36,8 @@ tabs:
         elementCondition: null
         fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
         handle: null
-        includeInCards: false
         instructions: null
         label: Honorific
-        providesThumbs: false
         required: false
         tip: 'Prof. Dr.'
         type: craft\fieldlayoutelements\CustomField
@@ -59,7 +55,6 @@ tabs:
         disabled: false
         elementCondition: null
         id: null
-        includeInCards: false
         inputType: null
         instructions: null
         label: null
@@ -68,7 +63,6 @@ tabs:
         name: null
         orientation: null
         placeholder: null
-        providesThumbs: false
         readonly: false
         requirable: true
         required: false
@@ -85,11 +79,9 @@ tabs:
         dateAdded: '2024-12-18T12:04:41+00:00'
         elementCondition: null
         id: null
-        includeInCards: false
         instructions: null
         label: null
         orientation: null
-        providesThumbs: false
         requirable: false
         tip: null
         type: craft\fieldlayoutelements\users\PhotoField
@@ -106,7 +98,6 @@ tabs:
         disabled: false
         elementCondition: null
         id: null
-        includeInCards: false
         inputType: null
         instructions: null
         label: null
@@ -115,7 +106,6 @@ tabs:
         name: null
         orientation: null
         placeholder: null
-        providesThumbs: false
         readonly: false
         requirable: false
         size: null
@@ -132,10 +122,8 @@ tabs:
         elementCondition: null
         fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
         handle: null
-        includeInCards: false
         instructions: null
         label: Aubildung
-        providesThumbs: false
         required: false
         tip: 'Journalistin, Redaktorin'
         type: craft\fieldlayoutelements\CustomField
@@ -149,10 +137,8 @@ tabs:
         elementCondition: null
         fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
         handle: null
-        includeInCards: false
         instructions: null
         label: Funktion
-        providesThumbs: false
         required: false
         tip: 'Anwältin, stellvertretende Direktorin von EspaceSuisse'
         type: craft\fieldlayoutelements\CustomField
@@ -166,10 +152,8 @@ tabs:
         elementCondition: null
         fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
         handle: null
-        includeInCards: false
         instructions: null
         label: Bio
-        providesThumbs: false
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField

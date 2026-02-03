@@ -25,7 +25,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: Ort
@@ -34,7 +33,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -52,10 +50,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 6e9fa4fd-403d-45c4-a082-48d1c5882d71 # Basemap
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -69,10 +65,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: fa1b164b-252f-4494-8e00-ef34899159fa # Latitude
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -86,10 +80,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 004b97b7-ef5f-4e9e-a79e-0f94bebe89a8 # Longitude
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -103,10 +95,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 22fd25c7-fbaf-4908-999e-70100e9cfe4a # Zoom
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -120,10 +110,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
-            includeInCards: false
             instructions: null
             label: Kartenlayer
-            providesThumbs: false
             required: false
             tip: 'Layer aus der url kopieren: "ch.are.wohnungsinventar-zweitwohnungsanteil"'
             type: craft\fieldlayoutelements\CustomField
@@ -143,10 +131,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a9e662fd-d372-4978-a879-a0b4962a89c1
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -166,10 +152,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 4b1aee02-974f-4737-aabb-c4bf362d2f53 # Polygons
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -189,10 +173,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 49c73379-624e-465f-92eb-b17550eca753 # Grid Start Wide
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -206,10 +188,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -223,10 +203,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

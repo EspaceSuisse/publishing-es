@@ -1,4 +1,4 @@
-dateModified: 1770129557
+dateModified: 1770132537
 elementSources:
   craft\elements\Asset:
     -
@@ -290,6 +290,7 @@ meta:
     efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
+    f8280914-6618-4ce0-8ed1-a3cc7b9c43b0: Marker # Marker
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
     fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Bild # Bild
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
@@ -549,5 +550,5 @@ system:
   live: true
   name: 'EspaceSuisse Publishing'
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: $TZ

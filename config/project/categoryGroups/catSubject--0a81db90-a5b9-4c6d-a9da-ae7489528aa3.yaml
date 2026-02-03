@@ -15,7 +15,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -24,7 +23,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -42,10 +40,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
-            includeInCards: false
             instructions: 'Wird in der Google Suche angezeigt'
             label: null
-            providesThumbs: false
             required: false
             tip: 'Extrem wichtiger Text: Aufgrund davon, klicken Leute in den Suchresultaten auf den Eintrag'
             type: craft\fieldlayoutelements\CustomField
@@ -59,10 +55,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
-            includeInCards: false
             instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -76,10 +70,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: fa54fd14-cfed-4146-af48-2c0f6efa7f6d # Bild
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -93,10 +85,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
             handle: null
-            includeInCards: false
             instructions: 'Hintergrundfarbe des Kategorien Buttons'
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -110,10 +100,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
             handle: null
-            includeInCards: false
             instructions: 'Thema, welches auf der Startseite hervorgehoben wird'
             label: Supertopic
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -133,10 +121,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -150,10 +136,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
