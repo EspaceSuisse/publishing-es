@@ -1,4 +1,4 @@
-dateModified: 1770118649
+dateModified: 1770126342
 elementSources:
   craft\elements\Asset:
     -
@@ -223,6 +223,7 @@ meta:
     7a651ea5-c4e0-4bb0-9628-faafad747662: 'SEO News' # SEO News
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
+    8cbcac22-e63c-4df9-a8db-040cdd55daa2: 'Aufmacher Bild' # Aufmacher Bild
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
     8e19eab8-006c-4c90-9a33-31262f476b3a: Icons # Icons
     15e047b0-576a-4f08-83ff-0c064c9c8e29: 'Text SImple i18n' # Text SImple i18n

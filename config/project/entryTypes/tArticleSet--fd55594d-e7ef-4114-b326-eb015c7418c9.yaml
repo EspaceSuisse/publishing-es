@@ -47,7 +47,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Auch für Non-Member'
+            label: 'Immer frei Verfügbar'
             providesThumbs: false
             required: false
             tip: null
@@ -120,19 +120,19 @@ fieldLayouts:
             uid: 3ccdefd8-e23f-41dd-95e5-7aa281a823f0
             userCondition: null
           -
-            dateAdded: '2025-12-04T10:47:32+00:00'
+            dateAdded: '2026-02-03T13:45:06+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: fa54fd14-cfed-4146-af48-2c0f6efa7f6d # Bild
+            fieldUid: 8cbcac22-e63c-4df9-a8db-040cdd55daa2 # Aufmacher Bild
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Aufmacher Bild'
+            label: null
             providesThumbs: false
             required: false
-            tip: 'Schön und Toll soll es sein'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b5f2e5ed-1406-4291-a390-3a82b418d720
+            uid: 6e1e88be-5ef2-4ec3-a528-650a2526e112
             userCondition: null
             warning: null
             width: 100

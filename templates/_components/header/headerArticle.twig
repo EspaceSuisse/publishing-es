@@ -6,7 +6,7 @@
 
 {% set articleGenre = entry.fCatGenre %}
 {% set articleSubject = entry.fCatSubject %}
-{% set aufmacherBild = entry.fImgMono.one() ?? null %}
+{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
 {% set smallerGrid = 'gridSpan10 gridStart2' %}
 
 {% if aufmacherBild %}

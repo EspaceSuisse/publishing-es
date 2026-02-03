@@ -21,7 +21,7 @@ The blocks are defined in the matrix field in the CMS.
 {% set isLoggedIn = craft.app.user.identity is not null %}
 
 {# Check if article has Image #}
-{% set hasNoImage = entry.fImgMono.one() is null %}
+{% set hasNoImage = entry.imgAufmacher.one() is null %}
 {% set noImageSubjectColor = entry.fCatGenre.one() %}
 
 {# Update based on logic - don't sunset if logged in #}
@@ -30,6 +30,9 @@ The blocks are defined in the matrix field in the CMS.
 {% endif %}
 
 {% block content %}
+
+	{% include "_dynamic/devSunsetPanel" %}
+
 	<article>		
 		<header class="pageHead articleHead {{ hasNoImage ? 'noImg' : '' }}">
 			{% include "_components/header/headerBrand" %}
