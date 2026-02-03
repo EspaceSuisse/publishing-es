@@ -1,4 +1,4 @@
-dateModified: 1770118543
+dateModified: 1770118649
 elementSources:
   craft\elements\Asset:
     -
@@ -363,7 +363,7 @@ plugins:
             - '@webroot/cache/blitz'
           -
             - compressCachedValues
-            - ''
+            - '1'
       cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
       cachedIncludePathParam: p
       cachingEnabled: false
@@ -420,6 +420,28 @@ plugins:
             -
               - uriPattern
               - ^knock-knock
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^mitglieder-login
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^connexion-des-membres
       generatePagesWithQueryStringParams: true
       hintsEnabled: false
       includedQueryStringParams:
