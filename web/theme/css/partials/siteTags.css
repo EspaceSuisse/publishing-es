@@ -37,5 +37,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--layoutGap) / 2);
+    padding-bottom: calc(var(--layoutGap) / 2);
 }
 
