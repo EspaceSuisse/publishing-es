@@ -3,14 +3,7 @@
 <ul class="articleAuthors gridStart2 gridSpan10">
 	{% for item in authorQuery %}
 
-        {# Construct relative url because authors have no url functionality #}
-        {% if currentSite.language == 'de-CH' %}
-            {% set authorUrl = 'autoren/' ~ item.username %}
-        {% else %}
-            {% set authorUrl = 'auteurs/' ~ item.username %}
-        {% endif %}
-
-		<li>
+		<li class="authorItem">
 			{% if item.photo %}
 
 				{# Transform the Authors Portrait #}
@@ -18,8 +11,16 @@
 
 				<img src="{{ portraitImage.url }}" alt="{{ item.name }}">
 			{% endif %}
-				<span class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
-				{# <a href="{{ url(authorUrl) }}" class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</a> #}
+				<div>
+					<p class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</p>
+					<p class="authorMeta">
+						{% for cat in item.fTeam %}
+							<span class="authorTeam">{{ cat.title  ~ '.' }}</span>
+						{% endfor %}
+						{% if item.fPlainTextI18n2 %}<span class="authorEducation">{{ item.fPlainTextI18n2 ~ ',' }}</span>{% endif %}
+						{% if item.fPlainTextI18n %}<span class="authorFunction">{{ item.fPlainTextI18n }}</span><br>{% endif %}
+					</p>
+				</div>
 		</li>
 	{% endfor %}
 </ul>

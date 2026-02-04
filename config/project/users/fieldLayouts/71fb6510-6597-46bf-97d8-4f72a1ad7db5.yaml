@@ -1,3 +1,4 @@
+cardThumbAlignment: end
 tabs:
   -
     elementCondition: null
@@ -34,6 +35,7 @@ tabs:
         dateAdded: '2025-05-20T10:53:42+00:00'
         editCondition: null
         elementCondition: null
+        elementEditCondition: null
         fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
         handle: null
         instructions: null
@@ -88,7 +90,23 @@ tabs:
         uid: 8710e08e-b531-428a-a8cf-30f72f97a274
         userCondition: null
         warning: null
-        width: 100
+        width: 75
+      -
+        dateAdded: '2026-02-04T10:36:57+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: 397fd1ab-a87a-4c2d-8286-283145152ca8 # Team
+        handle: null
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: f12b6d86-29fb-4642-8b64-b0a9c009a66f
+        userCondition: null
+        warning: null
+        width: 25
       -
         autocapitalize: true
         autocomplete: false
@@ -120,6 +138,7 @@ tabs:
         dateAdded: '2025-05-21T07:53:10+00:00'
         editCondition: null
         elementCondition: null
+        elementEditCondition: null
         fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
         handle: null
         instructions: null
@@ -135,6 +154,7 @@ tabs:
         dateAdded: '2025-04-29T07:06:49+00:00'
         editCondition: null
         elementCondition: null
+        elementEditCondition: null
         fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
         handle: null
         instructions: null
@@ -150,6 +170,7 @@ tabs:
         dateAdded: '2024-12-18T12:06:18+00:00'
         editCondition: null
         elementCondition: null
+        elementEditCondition: null
         fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
         handle: null
         instructions: null
@@ -164,3 +185,4 @@ tabs:
     name: Inhalt
     uid: 766bde34-59ba-4113-824c-677fcecba61c
     userCondition: null
+thumbFieldKey: null

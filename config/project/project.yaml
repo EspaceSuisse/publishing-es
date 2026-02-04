@@ -1,4 +1,4 @@
-dateModified: 1770191499
+dateModified: 1770201503
 elementSources:
   craft\elements\Asset:
     -
@@ -239,8 +239,10 @@ meta:
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
+    97cbec37-641a-47b3-b5e7-4924983b73f3: Team # Team
     112a7657-3989-4fc8-a084-e60b67c371e4: Polygons # Polygons
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
+    397fd1ab-a87a-4c2d-8286-283145152ca8: Team # Team
     432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
     746a28ba-cc90-41ff-8b16-82638446ed07: Provider # Provider
     762b9c18-49cc-4a00-aa78-a6d77e093631: 'Global Links' # Global Links
