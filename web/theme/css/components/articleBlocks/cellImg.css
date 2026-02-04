@@ -1,6 +1,6 @@
 .articleImg {
     position: relative;
-
+    padding-bottom: calc(var(--layoutGap));
     picture {
         display: block;
     }

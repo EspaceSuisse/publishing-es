@@ -1,5 +1,6 @@
 .cellBox {
     border: 1px solid var(--linkTxtColor);
+    margin-bottom: calc(var(--layoutGap));
     .nonCollapsable {
         padding: var(--layoutGap);
     }
@@ -36,12 +37,15 @@
 
     .cellBoxInner {
         padding: var(--layoutGap);
+        padding-bottom: 0;
         border-top: solid 1px var(--linkTxtColor);
-        p {
+        p, ul, ol {
             font-size: var(--font-size-M);
             font-family: var(--font-default);
             line-height: var(--line-height-base);
-            text-indent: 6rem;
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: var(--layoutGap);
             > strong {
                 font-weight: var(--font-bold);
             }
@@ -51,9 +55,11 @@
     .cellBoxToggle {
         transition: all 0.1s ease-in-out;
 
-        h3 {
+        .cellCardTitle {
             color: var(--linkTxtColor);
             font-size: var(--font-size-M);
+            margin: 0;
+            padding: 0;
         }
 
         &::after {
