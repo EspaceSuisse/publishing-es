@@ -32,5 +32,6 @@ return GeneralConfig::create()
         '@webroot' => dirname(__DIR__) . '/web',
         '@assetBaseUrl' => rtrim(getenv('PRIMARY_SITE_URL') . '/assets'),
         '@assetBasePath' => rtrim(getenv('CRAFT_WEB_ROOT') . '/assets'),
+        '@web' => getenv('PRIMARY_SITE_URL'),
     ])
 ;

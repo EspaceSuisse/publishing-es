@@ -3,7 +3,7 @@
   --frenchColor: #db6c6c14;
 }
 body.site--espacesuissePublishingFr {
-  background-color: var(--frenchColor);
+  background-color: var(--frenchColor) !important;
   .global-sidebar {
     background-color: var(--frenchColor);
     }

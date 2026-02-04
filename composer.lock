@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43b8995a76f58a0650306ef61d197864",
+    "content-hash": "96d2e2d5e1ac2073c3d524afff283bca",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1036,17 +1036,66 @@
             "time": "2022-12-07T17:46:57+00:00"
         },
         {
+            "name": "born05/craft-assetusage",
+            "version": "4.1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/born05/craft-assetusage/zipball/dc6b7575ef710498be684150be959254d5147ecd",
+                "reference": "dc6b7575ef710498be684150be959254d5147ecd",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Asset Usage",
+                "handle": "assetusage",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/born05/craft-assetusage/craft4/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "born05\\assetusage\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Born05",
+                    "homepage": "https://www.born05.com/"
+                }
+            ],
+            "description": "Adds a column to see which assets are used or unused.",
+            "keywords": [
+                "asset usage",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/born05/craft-assetusage/blob/craft4/README.md",
+                "issues": "https://github.com/born05/craft-assetusage/issues"
+            },
+            "time": "2024-09-24T13:58:22+00:00"
+        },
+        {
             "name": "brick/math",
-            "version": "0.14.4",
+            "version": "0.14.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "a8b53e6cc4d3a336543f042a4dfa0e3f2f2356a4"
+                "reference": "618a8077b3c326045e10d5788ed713b341fcfe40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/a8b53e6cc4d3a336543f042a4dfa0e3f2f2356a4",
-                "reference": "a8b53e6cc4d3a336543f042a4dfa0e3f2f2356a4",
+                "url": "https://api.github.com/repos/brick/math/zipball/618a8077b3c326045e10d5788ed713b341fcfe40",
+                "reference": "618a8077b3c326045e10d5788ed713b341fcfe40",
                 "shasum": ""
             },
             "require": {
@@ -1085,7 +1134,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.14.4"
+                "source": "https://github.com/brick/math/tree/0.14.5"
             },
             "funding": [
                 {
@@ -1093,7 +1142,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-02T16:57:31+00:00"
+            "time": "2026-02-03T18:06:51+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -2194,6 +2243,56 @@
                 "php"
             ],
             "time": "2024-02-05T11:56:58+00:00"
+        },
+        {
+            "name": "doublesecretagency/craft-cpcss",
+            "version": "3.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublesecretagency/craft-cpcss/zipball/36ecacb6eed97a452e52d6b321834ed6c0a59522",
+                "reference": "36ecacb6eed97a452e52d6b321834ed6c0a59522",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0-beta",
+                "nystudio107/craft-code-editor": "^1.0.7"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Control Panel CSS",
+                "handle": "cp-css",
+                "schemaVersion": "2.0.0",
+                "changelogUrl": "https://raw.githubusercontent.com/doublesecretagency/craft-cpcss/v3/CHANGELOG.md",
+                "class": "doublesecretagency\\cpcss\\CpCss"
+            },
+            "autoload": {
+                "psr-4": {
+                    "doublesecretagency\\cpcss\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Double Secret Agency",
+                    "homepage": "https://www.doublesecretagency.com/plugins"
+                }
+            ],
+            "description": "Add custom CSS to your Control Panel.",
+            "keywords": [
+                "cms",
+                "cp-css",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "css"
+            ],
+            "support": {
+                "docs": "https://github.com/doublesecretagency/craft-cpcss/blob/v3/README.md",
+                "issues": "https://github.com/doublesecretagency/craft-cpcss/issues"
+            },
+            "time": "2024-02-21T03:01:11+00:00"
         },
         {
             "name": "doublesecretagency/craft-viewcount",
@@ -5216,16 +5315,16 @@
         },
         {
             "name": "nystudio107/craft-code-editor",
-            "version": "1.0.28",
+            "version": "1.0.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "7ffd5e9291e2b42d6f9f859d1734eb6500d042ac"
+                "reference": "5b071512ee2ad2b8004f979f88ff3bf722bbcb4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/7ffd5e9291e2b42d6f9f859d1734eb6500d042ac",
-                "reference": "7ffd5e9291e2b42d6f9f859d1734eb6500d042ac",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/5b071512ee2ad2b8004f979f88ff3bf722bbcb4d",
+                "reference": "5b071512ee2ad2b8004f979f88ff3bf722bbcb4d",
                 "shasum": ""
             },
             "require": {
@@ -5280,7 +5379,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-17T22:43:40+00:00"
+            "time": "2026-01-30T19:10:22+00:00"
         },
         {
             "name": "nystudio107/craft-code-field",
