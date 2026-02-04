@@ -15,7 +15,11 @@
 					<p class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</p>
 					<p class="authorMeta">
 						{% for cat in item.fTeam %}
-							<span class="authorTeam">{{ cat.title  ~ '.' }}</span>
+							{% if cat.fBlankUrlString %}
+								<a class="authorTeam" href="{{ cat.fBlankUrlString }}">{{ cat.title ~ '.' }}</a>
+							{% else %}
+								<span class="authorTeam" >{{ cat.title ~ '.' }}</span>
+							{% endif %}
 						{% endfor %}
 						{% if item.fPlainTextI18n2 %}<span class="authorEducation">{{ item.fPlainTextI18n2 ~ ',' }}</span>{% endif %}
 						{% if item.fPlainTextI18n %}<span class="authorFunction">{{ item.fPlainTextI18n }}</span><br>{% endif %}

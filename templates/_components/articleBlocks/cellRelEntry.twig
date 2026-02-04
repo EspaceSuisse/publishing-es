@@ -8,7 +8,7 @@
     
     {% if item.status == 'live' %}
 
-        {% set img = item.fImgMono.one() %}
+        {% set img = item.imgAufmacher.one() %}
         
 
             <a href="{{ item.url }}" class="gridSpan12">

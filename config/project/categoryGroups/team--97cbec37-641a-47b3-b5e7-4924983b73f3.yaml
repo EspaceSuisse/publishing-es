@@ -34,6 +34,31 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-02-04T11:04:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3bfc9fe5-3cbb-4ab0-bac7-c14c201c9bf1 # Blank Url String
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9de9ac34-8b2e-46ae-b00a-6dbdc5b8f56c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            content: "# URL\r\n\r\nDiese URL sollte auf die Teamseite auf der Originalen [EspaceSuisse](https://www.espacesuisse.ch/de) Seite verweisen. Wenn also jemand auf Team Siedlungsberatung klickt, dann kommt er auf das Angebot der Siedlungsberatung resp. Juristerei."
+            dateAdded: '2026-02-04T11:07:36+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 510cd4c2-0e02-4f86-9369-dc610eb64066
+            userCondition: null
+            width: 100
         name: Content
         uid: cc536286-70d9-4acb-b56e-52a0f4dfb9c1
         userCondition: null
