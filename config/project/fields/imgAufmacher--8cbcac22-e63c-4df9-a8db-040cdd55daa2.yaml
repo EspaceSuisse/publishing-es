@@ -65,7 +65,7 @@ settings:
   showUnpermittedVolumes: false
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: thumbs
 translationKeyFormat: null
 translationMethod: none
