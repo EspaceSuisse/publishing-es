@@ -28,6 +28,7 @@ return GeneralConfig::create()
     ->convertFilenamesToAscii(true)
     ->transformGifs(false) 
     ->enableTemplateCaching(false)
+    ->runQueueAutomatically(false)
     ->backupCommand(fn(ShellCommand $command) => $command->addArg('--set-gtid-purged=OFF')) 
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
