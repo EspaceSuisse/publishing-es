@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -11,11 +12,12 @@ fieldLayouts:
             dateAdded: '2025-05-01T12:30:08+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
             handle: null
             instructions: null
             label: Bild
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 51e94f97-bc2e-44ac-9a0c-251ad12a8fb1
@@ -26,6 +28,7 @@ fieldLayouts:
             dateAdded: '2025-08-27T08:20:07+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
             handle: null
             instructions: null
@@ -47,6 +50,7 @@ fieldLayouts:
             dateAdded: '2025-05-27T10:09:10+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 49c73379-624e-465f-92eb-b17550eca753 # Grid Start Wide
             handle: null
             instructions: null
@@ -62,6 +66,7 @@ fieldLayouts:
             dateAdded: '2025-05-27T10:09:10+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
             handle: null
             instructions: null
@@ -77,6 +82,7 @@ fieldLayouts:
             dateAdded: '2025-05-21T08:09:16+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
             instructions: null
@@ -91,6 +97,7 @@ fieldLayouts:
         name: Layout
         uid: 9a7652c2-646e-4191-9775-3f779d72f259
         userCondition: null
+    thumbFieldKey: null
 handle: tArticleImg
 hasTitleField: false
 icon: image
@@ -102,3 +109,4 @@ slugTranslationMethod: none
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: none
+uiLabelFormat: '{title}'

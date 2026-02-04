@@ -58,8 +58,7 @@ settings:
               -
                 - unit
                 - MB
-  selectionLabel: null
-  showCardsInGrid: false
+  selectionLabel: 'Bild hinzufügen'
   showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: false
@@ -67,7 +66,7 @@ settings:
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: list
+  viewMode: thumbs
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets
