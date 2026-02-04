@@ -1,4 +1,4 @@
-dateModified: 1770190067
+dateModified: 1770191076
 elementSources:
   craft\elements\Asset:
     -
@@ -283,7 +283,7 @@ meta:
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
-    eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
+    eb32810d-6901-4788-b8bb-d4ca4124652b: 'Headline Level' # Headline Level
     ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     eee49365-fab5-4241-a3e6-e24d9cd9a18e: Newsletter # Newsletter

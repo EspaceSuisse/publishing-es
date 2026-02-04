@@ -3,6 +3,7 @@
 
 {% set expanded = block.fSwitch %}
 {% set expandedClass = expanded ? 'expanded' : 'collapsed' %}
+{% set hLevel = block.fHLevel ?? 'h2' %}
 
 <div class="boxHead">
 
@@ -13,7 +14,7 @@
             aria-expanded="{{ expanded ? 'true' : 'false' }}"
             aria-controls="cellBoxContent-{{ block.id }}">
 
-            <h3 class="cellCardTitle" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</h3>
+            <{{hLevel}} class="cellCardTitle" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</{{hLevel}}>
             
         </button>
     {% else %}
