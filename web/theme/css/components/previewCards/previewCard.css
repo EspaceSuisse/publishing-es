@@ -89,4 +89,7 @@
     .previewMetaFooter {
         margin-top: auto;
     }
+    &.subjectCard {
+        border-radius: 8px;
+    }
 }
