@@ -10,9 +10,6 @@
 		.all()
 	%}
 
-
-	
-
 	<header class="pageHead subPageHead">
 		{% include "_components/header/headerBrand" %}
 		{% include "_components/header/headerPage" %}
@@ -26,7 +23,7 @@
 					.exists()
 				%}
 				{% if hasEntries %}
-					{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan4','gridSpan12','gridSpan12 gridMdSpan8') }}
+					{{ macroPreview.listMacro(item,'gridSpan12','gridSpan12 gridMdSpan3','gridSpan12 gridMdSpan9') }}
 				{% endif %}
 			{% endfor %}
 	</div>

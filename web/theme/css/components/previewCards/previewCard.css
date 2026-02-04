@@ -1,8 +1,8 @@
 .previewCard {
     position: relative;
     overflow: hidden;
-    container-type: inline-size;
-    container-name: previewCard;
+    display: grid;
+    grid-template-columns: subgrid;
     .previewTitle {
         margin: 0;
 
