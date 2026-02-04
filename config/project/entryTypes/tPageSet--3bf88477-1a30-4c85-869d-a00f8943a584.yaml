@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -34,19 +35,20 @@ fieldLayouts:
             uid: f48d648f-07d9-4d2d-9e1b-0fc104ab5e91
             userCondition: null
             warning: null
-            width: 100
+            width: 75
           -
-            dateAdded: '2025-08-06T14:03:14+00:00'
+            dateAdded: '2026-02-04T14:31:38+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            elementEditCondition: null
+            fieldUid: 8b00b1ad-3829-48d0-b91f-f3a597e32588 # Google Image
             handle: null
             instructions: null
-            label: 'Google Image'
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b3c863b4-68f3-498a-bb26-9dd86a79a959
+            uid: c8d0736a-afdc-44a9-9758-813a54cb32f0
             userCondition: null
             warning: null
             width: 25
@@ -54,6 +56,7 @@ fieldLayouts:
             dateAdded: '2024-12-18T10:44:16+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             instructions: null
@@ -69,6 +72,7 @@ fieldLayouts:
             dateAdded: '2025-11-19T08:36:29+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # ArticleBlocks
             handle: null
             instructions: null
@@ -90,6 +94,7 @@ fieldLayouts:
             dateAdded: '2024-12-18T10:51:17+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 91b81ff9-4af2-440b-b42a-16821f2d0d5c # SEO Page
             handle: null
             instructions: null
@@ -104,6 +109,7 @@ fieldLayouts:
         name: Google
         uid: c068604f-53b1-4979-915c-f4215695ea3a
         userCondition: null
+    thumbFieldKey: null
 handle: tPageSet
 hasTitleField: true
 icon: null
@@ -115,3 +121,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

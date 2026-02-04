@@ -1,4 +1,4 @@
-dateModified: 1770212911
+dateModified: 1770215506
 elementSources:
   craft\elements\Asset:
     -
@@ -243,6 +243,7 @@ meta:
     6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
     6e9fa4fd-403d-45c4-a082-48d1c5882d71: Basemap # Basemap
     7a651ea5-c4e0-4bb0-9628-faafad747662: 'SEO News' # SEO News
+    8b00b1ad-3829-48d0-b91f-f3a597e32588: 'Google Image' # Google Image
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
     8cbcac22-e63c-4df9-a8db-040cdd55daa2: 'Aufmacher Bild' # Aufmacher Bild
