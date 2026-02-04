@@ -1,4 +1,4 @@
-dateModified: 1770209272
+dateModified: 1770212911
 elementSources:
   craft\elements\Asset:
     -
@@ -54,13 +54,16 @@ elementSources:
   craft\elements\Entry:
     -
       key: '*'
+      page: Entries
       type: native
     -
       key: singles
+      page: Entries
       type: native
     -
       heading: Channels
       key: 'heading:8fd0fa10-3f82-43c9-a348-470d30a7e6cf'
+      page: Entries
       type: heading
     -
       defaultSort:
@@ -69,31 +72,46 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+      page: Entries
       tableAttributes:
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
-        - id
+        - slug
         - postDate
         - status
         - link
-        - 'field:e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f' # VC
       type: native
     -
       heading: ''
       key: 'heading:e575f80e-628e-486a-92ce-1b5abb798592'
+      page: Entries
       type: heading
     -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:bc7c6b58-e511-47e0-9216-7052ceafee56' # Sub Pages
+      page: Entries
+      tableAttributes:
+        - status
+        - slug
+        - postDate
+        - link
       type: native
     -
       heading: ''
       key: 'heading:c1ca06e3-0efe-4060-bc40-f72586121e3d'
+      page: Entries
       type: heading
     -
       key: 'section:cbd30d19-7bb8-4252-91df-a451ebb3d525' # Call to Action
+      page: Entries
       type: native
     -
       heading: ''
       key: 'heading:29182fa9-94e7-426d-82cb-e6db8a6939de'
+      page: Entries
       type: heading
     -
       defaultSort:
@@ -102,6 +120,7 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
+      page: Entries
       tableAttributes:
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
         - status
