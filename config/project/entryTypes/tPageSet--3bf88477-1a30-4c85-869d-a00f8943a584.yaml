@@ -35,23 +35,7 @@ fieldLayouts:
             uid: f48d648f-07d9-4d2d-9e1b-0fc104ab5e91
             userCondition: null
             warning: null
-            width: 75
-          -
-            dateAdded: '2026-02-04T14:31:38+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 8b00b1ad-3829-48d0-b91f-f3a597e32588 # Google Image
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c8d0736a-afdc-44a9-9758-813a54cb32f0
-            userCondition: null
-            warning: null
-            width: 25
+            width: 100
           -
             dateAdded: '2024-12-18T10:44:16+00:00'
             editCondition: null
@@ -67,7 +51,29 @@ fieldLayouts:
             uid: fe25a13d-22f3-4f98-9d62-8cfbbb56c3b1
             userCondition: null
             warning: null
-            width: 75
+            width: 100
+          -
+            dateAdded: '2026-02-04T14:31:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8b00b1ad-3829-48d0-b91f-f3a597e32588 # Google Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8d0736a-afdc-44a9-9758-813a54cb32f0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-02-04T14:48:03+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 80892196-8c5d-4f5a-a00d-3f4e2b8d9add
+            userCondition: null
           -
             dateAdded: '2025-11-19T08:36:29+00:00'
             editCondition: null
