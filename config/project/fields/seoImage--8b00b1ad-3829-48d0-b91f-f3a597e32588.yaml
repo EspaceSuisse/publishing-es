@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: seoImage
-instructions: null
+instructions: 'Lange Seite: `2400px` /  [Img Resizer](https://kaspar-allenbach.github.io/image-resizer/)'
 name: 'Google Image'
 searchable: false
 settings:
