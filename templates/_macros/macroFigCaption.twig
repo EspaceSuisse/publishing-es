@@ -19,8 +19,8 @@
                                 {% endswitch %}
                         {% endfor %}
 
-                        {%- if assetParam.fTagProvider.one() -%}{{- assetParam.fTagProvider.one() -}}{%- endif -%}
-                        {%- if assetParam.fImgLicence.one() -%}{{- assetParam.fImgLicence.one() -}}{%- endif -%}
+                        {%- if assetParam.fTagProvider.one() -%}{{- assetParam.fTagProvider.one()  -}}{%- endif -%}
+                        {%- if assetParam.fImgLicence.one() -%}{{- '' ~ assetParam.fImgLicence.one() -}}{%- endif -%}
 
                 )</p>
         {% endif %}
