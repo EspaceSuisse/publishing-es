@@ -1,18 +1,14 @@
 {% set moreLinks = globalLinks.mxSidebarLinks.all() %}
-
-{% set currentLink = entry.section.handle ?? null %}
-
+{% set currentUrl = entry.url ?? null %}
 
 {% for item in moreLinks %}
+    {% set isActive = currentUrl and item.fLinkI18n.url == currentUrl %}
 
-	{% set linkComparator = item.fLinkI18n.element.section.handle ?? null %}
-	{% set isActive = linkComparator == currentLink %}
-
-	{% if loop.first %}<ul>{% endif %}
-	<li class="{{ isActive ? 'isActive' : '' }}">
-		<a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
-			{{ item.fLinkI18n.label }}
-		</a>
-	</li>
-	{% if loop.last %}</ul>{% endif %}
+    {% if loop.first %}<ul>{% endif %}
+    <li class="{{ isActive ? 'isActive' : '' }}">
+        <a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
+            {{ item.fLinkI18n.label }}
+        </a>
+    </li>
+    {% if loop.last %}</ul>{% endif %}
 {% endfor %}

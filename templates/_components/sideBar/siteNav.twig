@@ -5,21 +5,28 @@
 {# The two categories are fetched with only url and title #}
 
 
-{% set navSubject = craft.categories.group('catSubject')
-	.with(['title','url'])
-	.relatedTo({ sourceElement: craft.entries.section('article') })
-	.all() %}
+{% set articleIds = craft.entries()
+    .section('article')
+    .status('live')
+    .ids() %}
 
-{% set navGenre = craft.categories.group('catGenre')
-	.with(['title','url'])
-	.relatedTo({ sourceElement: craft.entries.section('article') })
-	.all() %}
+{% set navSubject = craft.categories()
+    .group('catSubject')
+    .relatedTo({ sourceElement: articleIds })
+    .all() %}
 
-{% set articleSearch = craft.entries.section('allArticles').with(['title','url']).one() %}
+{% set navGenre = craft.categories()
+    .group('catGenre')
+    .relatedTo({ sourceElement: articleIds })
+    .all() %}
+
+{% set articleSearch = craft.entries()
+    .section('allArticles')
+    .one() %}
 
 {% set currentPath = craft.app.request.pathInfo %}
 
-<nav aria-label="{{'Main navigation'|t}}" role="navigation"> 
+<nav aria-label="{{ 'Navigation' | t }}" role="navigation"> 
 	<ul class="siteNav">
 		{% include "_components/sideBar/navInnerContent.twig" %}
 	</ul>
