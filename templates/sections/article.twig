@@ -8,11 +8,15 @@ The blocks are defined in the matrix field in the CMS.
 #}
 
 {# check if the article is older than 3 months #}
-{% set articleSunset = entry.postDate|date_modify('+3 months') %}
+{% set articleSunset = entry.postDate|date_modify('+' ~ siteBrand.fNumber ~ ' days') %}
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
 {% set isPreview = craft.app.request.getParam('token') is not null %}
 {% set freeForAll = entry.fSwitch %}
+
+{# Set Blitz cache to expire exactly on sunset date #}
+{% do craft.blitz.options().cacheDuration(articleSunset.timestamp - 'now'|timestamp).expiryDate(articleSunset) %}
+
 
 {# Default empty class #}
 {% set articleSunsetClass = '' %}
@@ -46,4 +50,12 @@ The blocks are defined in the matrix field in the CMS.
 		{% include "_components/articleMoreArticles" %}
 	</article>
 	{% include "_components/lightboxInitiator" %}
+
+
+{# 3. Inject the Dynamic Eraser #}
+{#    Only necessary if the article IS currently sunset #}
+{% if isSunset %}
+    {{ craft.blitz.includeDynamic('_dynamic/unlockScript.twig') }}
+{% endif %}
+
 {% endblock %}
