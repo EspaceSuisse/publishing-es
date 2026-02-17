@@ -1,0 +1,11 @@
+.anchor {
+   font-size: var(--font-size-M);
+    font-family: var(--font-default); 
+    text-decoration: none;
+}
+.cellBox {
+   >  .anchor {
+        position: absolute;
+        right: -30px;
+    }
+}

@@ -36,7 +36,7 @@
     --paddingBtnSmall: 4px 9px 6px;
 
     /* Links without background */
-    --linkTxtColor: #478cc6;
+    --linkTxtColor: #468bc3;
     --linkTxtHoverColor: var(--colorES-brand-blue);
     --linkTxtActiveColor: var(--linkTxtColor);
 
@@ -55,6 +55,9 @@
     --backgroundColor: rgb(240, 240, 240);
     --colorPreviewCard: white;
     --radiusPreviewCard: 4px;
+
+    --color-highlight-soft: rgb(227, 227, 227);
+    --color-highlight-strong: rgb(236, 185, 190);
 
     --colorES-brand-blue: rgb(28, 112, 183);
     --colorES-brand-blue-soft: rgb(152, 189, 212);

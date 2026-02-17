@@ -1,27 +1,22 @@
 .cellBox {
     border: 1px solid var(--linkTxtColor);
     margin-bottom: calc(var(--layoutGap));
+    position: relative;
     .nonCollapsable {
         padding: var(--layoutGap);
     }
     &.styleB {
-        background-color: var(--txtColor);
+        background-color: var(--color-highlight-soft);
         border: none;
         box-shadow: var(--shadow);
-        .cellCardTitle, a, p, li {
-            color: var(--txtInvertColor);
-        }
         .cellBoxInner {
             border: none
         }
     }
     &.styleC {
-        background-color: var(--colorES-subject);
+        background-color: var(--color-highlight-strong);
         border: none;
         box-shadow: var(--shadow);
-        .cellCardTitle {
-            color: var(--txtColor);
-        }
         .cellBoxInner {
             border: none
         }

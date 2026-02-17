@@ -26,13 +26,23 @@
 
 	{% set goToAllNews = craft.entries.section('listingNews').one() %}
 
+	{# --- Layout config --- #}
+	{% set sliceA = 2 %}
+	{% set sliceB = 2 %}
+	{% set sliceC = 4 %}
+
+	{# Offsets calculate themselves #}
+	{% set offsetB = sliceA %}
+	{% set offsetC = sliceA + sliceB %}
+	{% set offsetD = sliceA + sliceB + sliceC %}
+
 	<div class="listingGrid listingSection">
 		{% include "_components/header/headerBrand" %}
 		
-		{% for item in allEntries | slice(0,1) %}
+		{% for item in allEntries | slice(0, sliceA) %}
 			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
 		{% endfor %}
-		{% for item in allEntries | slice(1,2) %}
+		{% for item in allEntries | slice(offsetB, sliceB) %}
 				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpanFull','gridSpanFull') }}
 		{% endfor %}
 	</div>
@@ -40,12 +50,12 @@
 		{% include "_components/listingSuperTopic" %}
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">
-		{% for item in allEntries | slice(4,4) %}
+		{% for item in allEntries | slice(offsetC, sliceC) %}
 			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpanFull','gridSpanFull') }}
 		{% endfor %}
 	</div>
 	<div class="listingGrid listingSection">
-		{% for item in allEntries | slice(8) %}
+		{% for item in allEntries | slice(offsetD) %}
 			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan4','gridSpanFull','gridSpanFull') }}
 		{% endfor %}
 	</div>
