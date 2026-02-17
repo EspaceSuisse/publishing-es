@@ -4,9 +4,7 @@
 {% import '_macros/macroFigCaption' as figCaption %}
 
 
-{% set articleGenre = entry.fCatGenre %}
-{% set articleSubject = entry.fCatSubject %}
-{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
+
 {% set smallerGrid = 'gridSpan10 gridStart2' %}
 
 {% if aufmacherBild %}

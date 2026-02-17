@@ -1,7 +1,6 @@
 
 	{% import '_macros/macroPostDate' as macroPostDate %}
 
-	{% set latestNews = craft.entries.section('news').limit(3).all() %}
 	{% set latestArticles = craft.entries.section('article').limit(3).all() %}
 	<li class="navToplevelLink hasDropdown">
 	

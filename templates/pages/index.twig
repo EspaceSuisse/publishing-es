@@ -5,8 +5,6 @@
 
 {% block content %}
 
-	{% set articleIds = craft.entries().section('article').ids() %}
-
 	{% set catGenre = craft.categories()
 		.group('catGenre')
 		.relatedTo({ sourceElement: articleIds })
@@ -26,14 +24,8 @@
 		.all()
 	%}
 
-	{% set newsEntries = craft.entries()
-		.section('news')
-		.limit(3)
-		.with(articleEagerLoad)
-    .all() %}
-
 	{% set goToAllNews = craft.entries.section('listingNews').one() %}
-<pre>{{ craft.assets().id(2056).one().filename }}</pre>
+
 	<div class="listingGrid listingSection">
 		{% include "_components/header/headerBrand" %}
 		

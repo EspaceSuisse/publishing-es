@@ -43,6 +43,15 @@
     'fCatSubject',
 ] %}
 
+{# is used in sidebar #}
+{% set articleIds = craft.entries().section('article').ids() %}
+
+{# is used in sidebar #}
+{% set latestNews = craft.entries()
+    .section('news')
+    .limit(3)
+	.with(articleEagerLoad)
+    .all() %}
 
 <!doctype html>
 

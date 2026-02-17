@@ -1,5 +1,25 @@
 {% extends "_layouts/main" %}
 
+{# Eager Load this stuff which is possible #}
+{% do craft.app.elements.eagerLoadElements(
+    className(entry),
+    [entry],
+    [
+        'imgAufmacher',
+        'imgAufmacher.fTagProvider',
+        'imgAufmacher.fImgLicence',
+        'imgAufmacher.fmImgSource',
+        'fCatGenre',
+        'fCatSubject',
+        'fMxArticleBlocks',
+    ]
+) %}
+
+{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
+{% set articleGenre = entry.fCatGenre %}
+{% set articleSubject = entry.fCatSubject %}
+{% set hasNoImage = aufmacherBild is null %}
+
 {# 
 This is the template for all articles.
 It includes the header and the matrix include which contains a switch statement.
@@ -46,7 +66,7 @@ The blocks are defined in the matrix field in the CMS.
 		<div class="gridArticle {{ articleSunsetClass }} articleContent">
 			{% include "_components/articleMatrix" %}
 		</div>
-		{% include "_components/articleCtaCall" %}
+		{# {% include "_components/articleCtaCall" %} #}
 		{% include "_components/articleMoreArticles" %}
 	</article>
 	{% include "_components/lightboxInitiator" %}

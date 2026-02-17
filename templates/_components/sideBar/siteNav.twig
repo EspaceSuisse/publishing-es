@@ -5,11 +5,6 @@
 {# The two categories are fetched with only url and title #}
 
 
-{% set articleIds = craft.entries()
-    .section('article')
-    .status('live')
-    .ids() %}
-
 {% set navSubject = craft.categories()
     .group('catSubject')
     .relatedTo({ sourceElement: articleIds })
@@ -19,10 +14,6 @@
     .group('catGenre')
     .relatedTo({ sourceElement: articleIds })
     .all() %}
-
-{% set articleSearch = craft.entries()
-    .section('allArticles')
-    .one() %}
 
 {% set currentPath = craft.app.request.pathInfo %}
 
