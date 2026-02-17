@@ -1,29 +1,38 @@
-{# templates/feed/index.twig #}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Available Feeds</title>
-    <meta name="robots" content="noindex">
-</head>
-<body>
-    <h1>Available Feeds</h1>
-    <ul>
-        {% set folder = 'feeds/' %}
+{% extends "_layouts/main" %}
 
-        {% set feeds = [
-            { title: 'JSON Feed Latest News DE', path: folder ~ 'latest-news-de.json' },
-            { title: 'JSON Feed Latest News FR', path: folder ~ 'latest-news-fr.json' },
-            { title: 'JSON Feed Latest Articles DE', path: folder ~ 'latest-articles-de.json' },
-            { title: 'JSON Feed Latest Articles FR', path: folder ~ 'latest-articles-fr.json' },
-            { title: 'RSS Feed DE', path: folder ~ 'feed-de.rss' },
-            { title: 'RSS Feed FR', path: folder ~ 'feed-fr.rss' }
-        ] %}
-        
-        {% for feed in feeds %}
-            <li>
-                <a href="{{ siteUrl(feed.path) }}">{{ feed.title }}</a> {{ siteUrl(feed.path) }}
-            </li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% block content %}
+	<header class="pageHead subPageHead">
+		{% include "_components/header/headerBrand" %}
+		<div class="gridArticle">
+			<h1 class="topicTitle gridSpan12">{{ 'Alle Feeds' | t }}</h1>
+		</div>
+	</header>
+	<div class="listingGrid articleElement">
+		<div class="gridSpan12">
+			<ul>
+				{% set folder = 'feeds/' %}
+
+				{% set feeds = [
+                    { title: 'JSON Feed Latest News DE', path: folder ~ 'latest-news-de.json' },
+                    { title: 'JSON Feed Latest News FR', path: folder ~ 'latest-news-fr.json' },
+                    { title: 'JSON Feed Latest Articles DE', path: folder ~ 'latest-articles-de.json' },
+                    { title: 'JSON Feed Latest Articles FR', path: folder ~ 'latest-articles-fr.json' },
+                    { title: 'RSS Feed DE', path: folder ~ 'feed-de.rss' },
+                    { title: 'RSS Feed FR', path: folder ~ 'feed-fr.rss' }
+                ] %}
+
+				{% for feed in feeds %}
+					<li>
+						<a href="{{ siteUrl(feed.path) }}">{{ feed.title }}</a>
+						{{ siteUrl(feed.path) }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+        {% apply enkode_emails %}
+			<p class="gridSpan12">Do you need another Format?
+				<a href="mailto:kaspaar.allenbach@espacesuisse.ch">Drop a Line</a>
+			</p>
+		{% endapply %}
+	</div>
+{% endblock %}

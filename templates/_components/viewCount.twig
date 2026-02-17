@@ -1,10 +1,20 @@
 {% if getenv('CRAFT_ENVIRONMENT') == 'dev' %}
 
     {% js %}
+
+        {% set elementId = null %}
+
+        {% if entry is defined %}
+            {% set elementId = entry.id %}
+        {% elseif category is defined %}
+            {% set elementId = category.id %}
+        {% endif %}
+
+
         // Action URLs
         const csrfTokenUrl = '/actions/blitz/csrf/token';
         const incrementViewCountUrl = '/actions/view-count/increment';
-        const elementId = {{ entry.id ?? category.id }};
+        const elementId = {{ elementId ?? 'null' }};
 
         // Set view data
         var data = {
