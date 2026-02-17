@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96d2e2d5e1ac2073c3d524afff283bca",
+    "content-hash": "63b1ccfc8e92a76efaa45afca5759fae",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1037,11 +1037,11 @@
         },
         {
             "name": "born05/craft-assetusage",
-            "version": "4.1.3",
+            "version": "4.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/born05/craft-assetusage/zipball/dc6b7575ef710498be684150be959254d5147ecd",
-                "reference": "dc6b7575ef710498be684150be959254d5147ecd",
+                "url": "https://api.github.com/repos/born05/craft-assetusage/zipball/ac2fc85fedeb673370c61bc7d940fa49ae6354bf",
+                "reference": "ac2fc85fedeb673370c61bc7d940fa49ae6354bf",
                 "shasum": ""
             },
             "require": {
@@ -1054,17 +1054,21 @@
                 "handle": "assetusage",
                 "hasCpSettings": false,
                 "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/born05/craft-assetusage/craft4/CHANGELOG.md"
+                "changelogUrl": "https://raw.githubusercontent.com/roelvanhintum/craft-assetusage/craft4/CHANGELOG.md"
             },
             "autoload": {
                 "psr-4": {
-                    "born05\\assetusage\\": "src/"
+                    "roelvanhintum\\assetusage\\": "src/"
                 }
             },
             "license": [
                 "MIT"
             ],
             "authors": [
+                {
+                    "name": "Roel van Hintum",
+                    "homepage": "https://roel.vanhintum.eu/"
+                },
                 {
                     "name": "Born05",
                     "homepage": "https://www.born05.com/"
@@ -1079,23 +1083,23 @@
                 "craftcms"
             ],
             "support": {
-                "docs": "https://github.com/born05/craft-assetusage/blob/craft4/README.md",
-                "issues": "https://github.com/born05/craft-assetusage/issues"
+                "docs": "https://github.com/roelvanhintum/craft-assetusage/blob/craft4/README.md",
+                "issues": "https://github.com/roelvanhintum/craft-assetusage/issues"
             },
-            "time": "2024-09-24T13:58:22+00:00"
+            "time": "2026-02-08T10:45:57+00:00"
         },
         {
             "name": "brick/math",
-            "version": "0.14.5",
+            "version": "0.14.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "618a8077b3c326045e10d5788ed713b341fcfe40"
+                "reference": "63422359a44b7f06cae63c3b429b59e8efcc0629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/618a8077b3c326045e10d5788ed713b341fcfe40",
-                "reference": "618a8077b3c326045e10d5788ed713b341fcfe40",
+                "url": "https://api.github.com/repos/brick/math/zipball/63422359a44b7f06cae63c3b429b59e8efcc0629",
+                "reference": "63422359a44b7f06cae63c3b429b59e8efcc0629",
                 "shasum": ""
             },
             "require": {
@@ -1134,7 +1138,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.14.5"
+                "source": "https://github.com/brick/math/tree/0.14.8"
             },
             "funding": [
                 {
@@ -1142,7 +1146,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-03T18:06:51+00:00"
+            "time": "2026-02-10T14:33:43+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1551,11 +1555,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.9.5",
+            "version": "5.9.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/a0f43797e571059945fb754ac22fae845a4ad05f",
-                "reference": "a0f43797e571059945fb754ac22fae845a4ad05f",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2f5149d4d64a5dafae9db99357823655422ba77d",
+                "reference": "2f5149d4d64a5dafae9db99357823655422ba77d",
                 "shasum": ""
             },
             "require": {
@@ -1655,7 +1659,7 @@
                 "docs": "https://craftcms.com/docs/5.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2026-01-31T18:05:38+00:00"
+            "time": "2026-02-13T00:01:18+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -2062,29 +2066,29 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38"
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "phpunit/phpunit": "<=7.5 || >=13"
+                "phpunit/phpunit": "<=7.5 || >=14"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^9 || ^12 || ^13",
-                "phpstan/phpstan": "1.4.10 || 2.1.11",
+                "doctrine/coding-standard": "^9 || ^12 || ^14",
+                "phpstan/phpstan": "1.4.10 || 2.1.30",
                 "phpstan/phpstan-phpunit": "^1.0 || ^2",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12.4 || ^13.0",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "suggest": {
@@ -2104,9 +2108,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.5"
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.6"
             },
-            "time": "2025-04-07T20:06:18+00:00"
+            "time": "2026-02-07T07:09:04+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -5383,16 +5387,16 @@
         },
         {
             "name": "nystudio107/craft-code-field",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-field/zipball/5a8562ff469cdb055aa774680ed1269593e7a98b",
-                "reference": "5a8562ff469cdb055aa774680ed1269593e7a98b",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-field/zipball/6345222d121d8e5826620ded3b08f612f6e64abd",
+                "reference": "6345222d121d8e5826620ded3b08f612f6e64abd",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.0.0",
-                "nystudio107/craft-code-editor": "^1.0.23",
+                "craftcms/cms": "^5.3.0",
+                "nystudio107/craft-code-editor": "^1.0.29",
                 "php": "^8.2"
             },
             "type": "craft-plugin",
@@ -5428,7 +5432,7 @@
                 "docs": "https://github.com/nystudio107/craft-code-field/blob/v5/README.md",
                 "issues": "https://github.com/nystudio107/craft-code-field/issues"
             },
-            "time": "2025-05-17T20:48:38+00:00"
+            "time": "2026-02-05T21:21:13+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
@@ -5471,11 +5475,11 @@
         },
         {
             "name": "nystudio107/craft-retour",
-            "version": "5.0.13",
+            "version": "5.0.14",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/ddcf01728839949213d916dce239edcda52bb329",
-                "reference": "ddcf01728839949213d916dce239edcda52bb329",
+                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/b16c8486f673be3402a100ec1d04e92756f9412f",
+                "reference": "b16c8486f673be3402a100ec1d04e92756f9412f",
                 "shasum": ""
             },
             "require": {
@@ -5519,7 +5523,7 @@
                 "issues": "https://nystudio107.com/plugins/retour/support",
                 "source": "https://github.com/nystudio107/craft-retour"
             },
-            "time": "2026-01-22T21:00:37+00:00"
+            "time": "2026-02-06T19:51:05+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
@@ -6763,11 +6767,11 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "5.12.6",
+            "version": "5.12.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/2acc44f435a12841f54163e73f5b84807b786163",
-                "reference": "2acc44f435a12841f54163e73f5b84807b786163",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/51718e5f9b588650c119a8e8c08462fabdb2dc33",
+                "reference": "51718e5f9b588650c119a8e8c08462fabdb2dc33",
                 "shasum": ""
             },
             "require": {
@@ -6811,7 +6815,7 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2026-01-06T17:01:39+00:00"
+            "time": "2026-02-15T23:03:04+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
@@ -8081,16 +8085,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v7.4.3",
+            "version": "v7.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "fffe05569336549b20a1be64250b40516d6e8d06"
+                "reference": "ad4daa7c38668dcb031e63bc99ea9bd42196a2cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/fffe05569336549b20a1be64250b40516d6e8d06",
-                "reference": "fffe05569336549b20a1be64250b40516d6e8d06",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/ad4daa7c38668dcb031e63bc99ea9bd42196a2cb",
+                "reference": "ad4daa7c38668dcb031e63bc99ea9bd42196a2cb",
                 "shasum": ""
             },
             "require": {
@@ -8125,7 +8129,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v7.4.3"
+                "source": "https://github.com/symfony/finder/tree/v7.4.5"
             },
             "funding": [
                 {
@@ -8145,7 +8149,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-23T14:50:43+00:00"
+            "time": "2026-01-26T15:07:59+00:00"
         },
         {
             "name": "symfony/http-client",
@@ -10760,11 +10764,16 @@
         },
         {
             "name": "web-auth/webauthn-lib",
-            "version": "4.9.2",
+            "version": "4.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-auth/webauthn-lib.git",
+                "reference": "129fbaccd22163429a39bf85e320fb9eddad035c"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/008b25171c27cf4813420d0de31cc059bcc71f1a",
-                "reference": "008b25171c27cf4813420d0de31cc059bcc71f1a",
+                "url": "https://api.github.com/repos/web-auth/webauthn-lib/zipball/129fbaccd22163429a39bf85e320fb9eddad035c",
+                "reference": "129fbaccd22163429a39bf85e320fb9eddad035c",
                 "shasum": ""
             },
             "require": {
@@ -10807,6 +10816,7 @@
                     "Webauthn\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -10827,20 +10837,33 @@
                 "fido",
                 "webauthn"
             ],
-            "time": "2025-01-04T09:47:58+00:00"
+            "support": {
+                "source": "https://github.com/web-auth/webauthn-lib/tree/4.9.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Spomky",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/FlorentMorselli",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2026-02-05T12:48:16+00:00"
         },
         {
             "name": "webmozart/assert",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "ce6a2f100c404b2d32a1dd1270f9b59ad4f57649"
+                "reference": "6976757ba8dd70bf8cbaea0914ad84d8b51a9f46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/ce6a2f100c404b2d32a1dd1270f9b59ad4f57649",
-                "reference": "ce6a2f100c404b2d32a1dd1270f9b59ad4f57649",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/6976757ba8dd70bf8cbaea0914ad84d8b51a9f46",
+                "reference": "6976757ba8dd70bf8cbaea0914ad84d8b51a9f46",
                 "shasum": ""
             },
             "require": {
@@ -10887,9 +10910,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/2.1.2"
+                "source": "https://github.com/webmozarts/assert/tree/2.1.3"
             },
-            "time": "2026-01-13T14:02:24+00:00"
+            "time": "2026-02-13T21:01:40+00:00"
         },
         {
             "name": "webonyx/graphql-php",
