@@ -5,7 +5,7 @@
 {% set expandedClass = expanded ? 'expanded' : 'collapsed' %}
 {% set hLevel = block.fHLevel ?? 'h2' %}
 
-{% set anchorID = "box-content-" ~ block.id %}
+{% set anchorID = "box-content-" ~ block.title | ascii | kebab %}
 
 <a class="anchor" href="#{{ anchorID }}">#</a>
 
