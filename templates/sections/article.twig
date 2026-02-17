@@ -15,7 +15,7 @@ The blocks are defined in the matrix field in the CMS.
 {% set freeForAll = entry.fSwitch %}
 
 {# Set Blitz cache to expire exactly on sunset date #}
-{% do craft.blitz.options().cacheDuration(articleSunset.timestamp - 'now'|timestamp).expiryDate(articleSunset) %}
+{% do craft.blitz.options().expiryDate(articleSunset) %}
 
 
 {# Default empty class #}

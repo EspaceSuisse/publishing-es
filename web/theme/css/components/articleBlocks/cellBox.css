@@ -4,7 +4,33 @@
     .nonCollapsable {
         padding: var(--layoutGap);
     }
-
+    &.styleB {
+        background-color: var(--txtColor);
+        border: none;
+        box-shadow: var(--shadow);
+        .cellCardTitle, a, p, li {
+            color: var(--txtInvertColor);
+        }
+        .cellBoxInner {
+            border: none
+        }
+    }
+    &.styleC {
+        background-color: var(--colorES-subject);
+        border: none;
+        box-shadow: var(--shadow);
+        .cellCardTitle {
+            color: var(--txtColor);
+        }
+        .cellBoxInner {
+            border: none
+        }
+        a {
+            &:visited {
+                color: var(--txtColor);
+            }
+        }
+    }
     .boxHead {
         display: flex;
         justify-content: space-between;
