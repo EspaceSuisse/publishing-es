@@ -15,7 +15,7 @@
 {% import '_macros/macroRssImg' as macroImg %}
 
 <channel>
-    <title>{{ siteName }} - {{ 'Artikel' | t }} {{ language|slice(0,2) }}</title>
+    <title>{{ siteBrand.fPlainTextI18n }} - {{ 'News & Artikel' | t }} ({{ language|slice(0,2) | upper }})</title>
     <link>{{ siteUrl(language) }}</link>
     <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/feed-' ~ language |slice(0,2) }}.rss" />
     <description>{{ 'Neuste Artikel in' | t (language) ~ ' ' ~ language }}</description>
