@@ -37,8 +37,8 @@
         {% set feedItemDesc = item.fSeoDescription %}
 
         <item>
-            {% if item.fImgMono %}
-                {{ macroImg.rssFeedImg(item.fImgMono.one(), 'feedImageTransform') }}
+            {% if item.imgAufmacher %}
+                {{ macroImg.rssFeedImg(item.imgAufmacher.one(), 'feedImageTransform') }}
             {% endif %}
             <pubDate>{{ item.postDate.format('r') }}</pubDate>
             <title>{{ feedItemTitle }}</title>
