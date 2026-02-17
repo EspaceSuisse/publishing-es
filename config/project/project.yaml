@@ -1,4 +1,4 @@
-dateModified: 1771323803
+dateModified: 1771330753
 elementSources:
   craft\elements\Asset:
     -
@@ -152,6 +152,7 @@ elementSources:
       type: native
     -
       heading: 'Account Type'
+      key: 'heading:2292f90b-72d2-49dc-a3ac-bd9577b9dd01'
       type: heading
     -
       key: credentialed
@@ -161,15 +162,36 @@ elementSources:
       type: native
     -
       heading: Groups
+      key: 'heading:f1807506-f21a-4f83-91d7-9820b09d06e2'
       type: heading
     -
       key: 'group:df079a13-bd61-4096-9e55-4607550dae28' # Editor
       type: native
     -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'group:ee8b684c-14de-460c-89fd-f9fe7dd4b0cd' # EspaceSuisse
+      tableAttributes:
+        - 'field:9173344f-7095-45e6-a477-c0273f2b99e3' # Plain Text I18n 2
+        - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
+        - 'field:397fd1ab-a87a-4c2d-8286-283145152ca8' # Team
+        - status
       type: native
     -
       key: 'group:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
+      type: native
+    -
+      heading: ''
+      key: 'heading:d1df9d92-6af5-44b8-8c32-a83dd0d6f834'
+      type: heading
+    -
+      key: 'group:60d6ea87-e27d-49d5-867a-a57850f7f242' # Publisher
+      type: native
+    -
+      key: 'group:ff4cdf72-64ec-41a2-8781-1751cadd315c' # Webmasters
       type: native
 email:
   fromEmail: $SMTP_EMAIL
