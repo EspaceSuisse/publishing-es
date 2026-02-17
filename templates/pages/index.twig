@@ -5,27 +5,34 @@
 
 {% block content %}
 
+	{% set articleIds = craft.entries().section('article').ids() %}
+
 	{% set catGenre = craft.categories()
 		.group('catGenre')
-		.relatedTo({ sourceElement: craft.entries.section('article').ids() })
+		.relatedTo({ sourceElement: articleIds })
 		.all()
 	%}
 
 	{% set catSubject = craft.categories()
 		.group('catSubject')
-		.relatedTo({ sourceElement: craft.entries.section('article').ids() })
+		.relatedTo({ sourceElement: articleIds })
 		.all()
 	%}
 
 	{% set allEntries = craft.entries()
 		.section('article')
-		.with(['fCatGenre', 'fCatSubject'])
+		    .with(articleEagerLoad)
 		.limit(null)
 		.all()
 	%}
 
-	{% set newsEntries = craft.entries.section('news').limit(3).all() %}
-	{% set goToAllNews = craft.entries.section('listingNews').with(['title','url']).one() %}
+	{% set newsEntries = craft.entries()
+		.section('news')
+		.limit(3)
+		.with(articleEagerLoad)
+    .all() %}
+
+	{% set goToAllNews = craft.entries.section('listingNews').one() %}
 
 	<div class="listingGrid listingSection">
 		{% include "_components/header/headerBrand" %}

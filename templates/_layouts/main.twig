@@ -34,6 +34,16 @@
 {% set handle = entry.section.handle ?? category.group.handle ?? null %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}
 
+{% set articleEagerLoad = [
+    'imgAufmacher',
+    'imgAufmacher.fTagProvider',
+    'imgAufmacher.fImgLicence',
+    'imgAufmacher.fmImgSource',
+    'fCatGenre',
+    'fCatSubject',
+] %}
+
+
 <!doctype html>
 
 <html lang="{{ craft.app.language }}">
