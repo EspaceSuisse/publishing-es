@@ -9,3 +9,6 @@
         right: -30px;
     }
 }
+[id] {
+    scroll-margin-top: var(--layoutGap); /* height of your sticky header */
+}
