@@ -93,3 +93,6 @@
   .gridLgSpan11 { grid-column-end: span 11; }
   .gridLgSpan12 { grid-column-end: span 12; }
 }
+.gridSpanFull {
+  grid-column: 1 / -1;
+}
