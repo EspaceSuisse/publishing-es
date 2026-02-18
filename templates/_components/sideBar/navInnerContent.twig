@@ -15,7 +15,7 @@
 		<aside class="dropdown" id="dropdown-menu" role="menu">
 
 			<div class="dropdownContents">
-				<ul class="majorLinks">
+				<ul class="majorLinks gridMdSpan2">
 					{% include "_components/sideBar/siteNavMoreLinks.twig" %}
 					{% include "_components/sideBar/navLangSwitcher.twig" %}
 				</ul>
@@ -32,7 +32,7 @@
 						
 					{% endfor %}
 				</div>
-				{% include "_components/formNewsletter/mailchimpForm" %}
+				<div class="gridRowMdSpan4">{% include "_components/formNewsletter/mailchimpForm" %}</div>
 				<div class="latestEntries">
 					
 					{% for item in latestArticles %}

@@ -65,3 +65,21 @@
         }
     }
 }
+@media (max-width: 48rem) {
+    .dropdown {
+        .dropdownContents {
+            grid-template-columns: 1fr;
+            .majorLinks {
+                a {
+                    font-size: var(--font-size-L);
+                    padding-bottom: calc( var(--layoutGap) * 0.5 );
+                    display: block;
+                    text-align: center;
+                }
+            }
+            #mc_embed_shell {
+                display: none;
+            }
+        }
+    }
+}
