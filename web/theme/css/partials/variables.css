@@ -36,7 +36,7 @@
     --paddingBtnSmall: 4px 9px 6px;
 
     /* Links without background */
-    --linkTxtColor: #468bc3;
+    --linkTxtColor: rgb(70, 139, 195);
     --linkTxtHoverColor: var(--colorES-brand-blue);
     --linkTxtActiveColor: var(--linkTxtColor);
 
