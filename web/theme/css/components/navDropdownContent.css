@@ -49,10 +49,18 @@
 
             .latestLink {
                 text-decoration: none;
+                padding-bottom: calc(var(--layoutGap) * 0.5);
+                display: block;
                 &:hover {
                     text-decoration: underline;
                 }
-                p, h3 {
+                h3 {
+                    font-size: var(--font-size-M);
+                    font-family: var(--font-display);
+                    color: var(--txtInvertColor);
+                    margin: 0;
+                }
+                p {
                     font-size: var(--font-size-M);
                     color: var(--txtInvertColor);
                     margin: 0;
