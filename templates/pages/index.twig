@@ -28,7 +28,7 @@
 
 	{# --- Layout config --- #}
 	{% set sliceA = 2 %}
-	{% set sliceB = 2 %}
+	{% set sliceB = 6 %}
 	{% set sliceC = 4 %}
 
 	{# Offsets calculate themselves #}
@@ -40,10 +40,10 @@
 		{% include "_components/header/headerBrand" %}
 		
 		{% for item in allEntries | slice(0, sliceA) %}
-			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
+			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
 		{% endfor %}
 		{% for item in allEntries | slice(offsetB, sliceB) %}
-				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpanFull','gridSpanFull') }}
+				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4','gridSpanFull','gridSpanFull') }}
 		{% endfor %}
 	</div>
 		{% include "_components/indexNewsTeaser.twig" %}
@@ -51,12 +51,12 @@
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(offsetC, sliceC) %}
-			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpanFull','gridSpanFull') }}
+			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6 gridMdSpan4','gridSpanFull','gridSpanFull') }}
 		{% endfor %}
 	</div>
 	<div class="listingGrid listingSection">
 		{% for item in allEntries | slice(offsetD) %}
-			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan4','gridSpanFull','gridSpanFull') }}
+			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
 		{% endfor %}
 	</div>
 
