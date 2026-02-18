@@ -1,29 +1,46 @@
 {% macro figCaption(assetParam, captionParam, hasSourceParam) %}
     {% import '_macros/macroFields' as macroFields %}
 
-    <figcaption>
-        {% if captionParam %}
-            <div class="caption">{{ captionParam }}</div>
-        {% endif %}
+    {% if captionParam or (hasSourceParam != true) %}
+        <figcaption>
+            {% if captionParam %}
+                <div class="caption">{{ captionParam }}</div>
+            {% endif %}
+            {% if hasSourceParam != true %}
+                {% set provider = assetParam.fTagProvider.one() %}
+                {% set licence = assetParam.fImgLicence.one() %}
 
-        {% if hasSourceParam == false %}
-            {% set provider = assetParam.fTagProvider.one() %}
-            {% set licence = assetParam.fImgLicence.one() %}
+                <p class="assetSource">
+                    ({{ 'Quelle' | t }}:
+                    {% set sourceParts = [] %}
 
-            <p class="assetSource">
-                ({{ 'Quelle' | t }}:
-                {% for block in assetParam.fmImgSource.all() %}
-                    {% switch block.type %}
-                        {% case "tMonolingual" %}
-                            {{ block.fPlainTxt ~ ', ' }}
-                        {% case "tMultilingual" %}
-                            {{ macroFields.richText(block.fPlainTextI18n ~ ', ') }}
-                    {% endswitch %}
-                {% endfor %}
-                {%- if provider -%}{{- provider -}}{%- endif -%}
-                {%- if licence -%}{{- '' ~ licence -}}{%- endif -%}
-                )
-            </p>
-        {% endif %}
-    </figcaption>
+                    {%- for block in assetParam.fmImgSource.all() -%}
+                        {%- switch block.type -%}
+                            {%- case "tMonolingual" -%}
+                                {%- if block.fPlainTxt -%}
+                                    {%- set sourceParts = sourceParts | merge([block.fPlainTxt]) -%}
+                                {%- endif -%}
+                            {%- case "tMultilingual" -%}
+                                {%- set rtContent = macroFields.richText(block.fPlainTextI18n) -%}
+                                {%- if rtContent -%}
+                                    {%- set sourceParts = sourceParts | merge([rtContent]) -%}
+                                {%- endif -%}
+                        {%- endswitch -%}
+                    {%- endfor -%}
+
+                    {%- if provider -%}
+                        {%- set sourceParts = sourceParts | merge([provider]) -%}
+                    {%- endif -%}
+
+                    {%- if licence -%}
+                        {%- set sourceParts = sourceParts | merge([licence]) -%}
+                    {%- endif -%}
+
+                    {{- sourceParts | join(', ') -}}
+                    )
+                </p>
+            {% endif %}
+        </figcaption>
+
+    {% endif %}
 {% endmacro %}

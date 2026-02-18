@@ -1,6 +1,6 @@
 .articleImg {
     position: relative;
-    padding-bottom: calc(var(--layoutGap));
+    padding-bottom: calc(var(--layoutGap) * 1.5 );
     picture {
         display: block;
     }
@@ -11,10 +11,13 @@
 
 
     figcaption {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
         .caption {
             padding-top: 5px;
             p {
-                font-size: var(--font-size-S);
+                font-size: var(--font-size-M);
                 font-family: var(--font-default);
                 line-height: 1.5;
             }
