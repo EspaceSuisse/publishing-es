@@ -18,9 +18,6 @@ button.dropdownLink {
       width: 100%;
     }
     @media (max-width: 48rem) {
-        span {
-            background-color: var(--txtColor);
-        }
     }
 }
 
