@@ -20,7 +20,6 @@
     "nystudio107/craft-seomatic": "5.1.20",
     "putyourlightson/craft-blitz": "^5.12.7",
     "spacecatninja/imager-x": "5.1.7",
-    "spacecatninja/imager-x-pdf-adapter": "1.1.0",
     "verbb/knock-knock": "3.0.5",
     "vlucas/phpdotenv": "^5.4.0"
   },

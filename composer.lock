@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "479e111960e3484076594823e9f03617",
+    "content-hash": "62ced2159366bd0c98a075a27517f378",
     "packages": [
         {
             "name": "amphp/amp",
@@ -7362,61 +7362,6 @@
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
             "time": "2025-11-14T12:35:28+00:00"
-        },
-        {
-            "name": "spacecatninja/imager-x-pdf-adapter",
-            "version": "1.1.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x-pdf-adapter/zipball/95c7d69306d3c24ba6e2262afad055d029066b3f",
-                "reference": "95c7d69306d3c24ba6e2262afad055d029066b3f",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0|^5.0.0-beta.1",
-                "ext-imagick": "*",
-                "php": "^8.0.2",
-                "spacecatninja/imager-x": "^4.1.0|^5.0.0-beta.1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Imager X PDF Adapter",
-                "handle": "imager-x-pdf-adapter",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/spacecatninja/craft-imager-x-pdf-adapter/master/CHANGELOG.md",
-                "components": [],
-                "class": "spacecatninja\\imagerxpdfadapter\\PDFAdapter"
-            },
-            "autoload": {
-                "psr-4": {
-                    "spacecatninja\\imagerxpdfadapter\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "SPACECATNINJA",
-                    "homepage": "https://www.spacecat.ninja"
-                }
-            ],
-            "description": "File adapter for transforming PDFs in Imager X",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "imager",
-                "pdf"
-            ],
-            "support": {
-                "docs": "https://github.com/spacecatninja/craft-imager-x-pdf-adapter/blob/master/README.md",
-                "issues": "https://github.com/spacecatninja/craft-imager-x-pdf-adapter/issues"
-            },
-            "time": "2024-02-09T20:16:19+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",

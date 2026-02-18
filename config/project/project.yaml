@@ -1,4 +1,4 @@
-dateModified: 1771341837
+dateModified: 1771407430
 elementSources:
   craft\elements\Asset:
     -
@@ -575,10 +575,6 @@ plugins:
     enabled: true
     licenseKey: Q66KERQ0US0VFVKAFRDGYOPG
     schemaVersion: 4.0.0
-  imager-x-pdf-adapter:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   knock-knock:
     edition: standard
     enabled: true
