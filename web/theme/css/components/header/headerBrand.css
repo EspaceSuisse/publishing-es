@@ -14,8 +14,9 @@
         margin: 0;
         a {
             text-decoration: none;
+            color: var(--txtInvertColor);
+            transition: all 0.3s ease;
             color: var(--colorES-brand-blue);
-            transition: all 0.3 s ease;
         }
     }
     .brandMagazine {
@@ -32,12 +33,16 @@
         z-index: 100;
         width: 100%;
     }
-    .brandVerband, .brandMagazine {
-        text-shadow: 0 0 8px #ffffff70;
-    }
 }
 @media (max-width: 48rem) {
     .brandHeader {
         margin-bottom: calc(var(--layoutGap) * 1);
+    }
+}
+.bodyArticle {
+    .brandHeader a, .claim {
+        background-color: var(--colorES-brand-blue);
+        color: var(--txtInvertColor);
+        padding: 5px 13px 7px;
     }
 }
