@@ -85,7 +85,7 @@ The blocks are defined in the matrix field in the CMS.
 		<header class="pageHead articleHead {{ hasNoImage ? 'noImg' : '' }}">
 			{% include "_components/header/headerBrand" %}
 			{% include "_components/header/headerArticle" %}
-			{% if hasNoImage %}<div class="colorHead" style="background-color: {{ noImageSubjectColor.fColor }};"></div>{% endif %}
+			{% if hasNoImage %}<div class="colorHead" style="background-color: {{ noImageSubjectColor.fColor ?? 'var(--colorES-brand-blue)' }};"></div>{% endif %}
 		</header>
 		<div class="gridArticle {{ articleSunsetClass }} articleContent">
 			{% include "_components/articleMatrix" %}
