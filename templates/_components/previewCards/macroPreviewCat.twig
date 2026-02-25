@@ -7,7 +7,7 @@
 	{% set image = queryParam.fImgMono.one() ?? null %}
 	{% set noImg = image ? false : true %}
 
-	<article class="previewCard previewCat {{ classCardParam }}" style="background-color: {{ queryParam.fColor ?? 'var(--colorES-brand-blue)' }};">
+	<article class="previewCard previewCat {{ classCardParam }}">
 
 		{% if image %}
 		
@@ -20,7 +20,7 @@
 		<div class="txtPart {{ classTxtParam }}">
 			<div class="previewMetaHeader">
 			</div>
-			<h4 class="previewTitle">
+			<h4 class="previewTitle" style="background-color: {{ queryParam.fColor ?? 'var(--colorES-brand-blue)' }};">
 				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
 			</h4>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>

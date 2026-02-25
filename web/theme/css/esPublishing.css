@@ -49,6 +49,7 @@
 
 @import url("partials/siteTags.css");
 @import url("components/previewCards/previewCard.css");
+@import url("components/previewCards/previewCat.css");
 @import url("components/previewCards/previewArticle.css");
 @import url("components/previewCards/previewNews.css");
 @import url("partials/entryList.css");
