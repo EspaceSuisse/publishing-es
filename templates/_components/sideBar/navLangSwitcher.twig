@@ -27,12 +27,13 @@
 		{% if localized and localized.enabled %}
 			{% set localizedUrl = queryParams|length ? localized.url ~ '?' ~ queryParams|url_encode : localized.url %}
 			
-			<li class="navToplevelLink langSwitcher {{ isActive ? 'isActive' : '' }}">
+			<li class="langSwitcher {{ isActive ? 'isActive' : '' }}">
 				{# Create a link to the localized version of the current element with query params #}
 				<a href="{{ localizedUrl }}">
-					<span class="buttonTxt">{{ site.language |replace({'de-CH': 'de', 'fr-CH': "fr"}) }}</span>
+					{{ site.language |replace({'de-CH': 'de', 'fr-CH': "fr"}) }}
 				</a>
 			</li>
 		{% endif %}
+
 	{% endfor %}
 {% endif %}

@@ -6,3 +6,4 @@
 /web/assets
 .env.web
 /web/imager
+/web/cache

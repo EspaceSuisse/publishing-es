@@ -3,39 +3,19 @@
 
 {% for item in downloadAsset %}
 
-	{% set imgGridSpans = 'gridSpan2' %}
-	{% set txtGridSpans = 'gridSpan10' %}
+	{% set imgGridSpans = 'gridSpan12 gridMdSpan3 gridMdStart2' %}
+	{% set txtGridSpans = 'gridSpan12 gridMdSpan4 gridMdStart6' %}
 	{% set subLine = item.extension ~ ', ' ~ (item.size / 1000) | number_format(0, '.', ',') ~ ' KB' %}
 
-	{% if item.extension == 'pdf' %}
-		{# Generate a JPG preview of the first page using Imager X #}
-		{% set preview = craft.imagerx.transformImage(item, [
-            { width: 800, format: 'jpg', page: 1 }
-        ]) %}
-
-		{% if preview|length %}
-			<a href="{{ item.url }}" class="downloadLink gridSpan12" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
-				<div class="txtPart {{ txtGridSpans }}">
-					<span class="cellTag">{{ 'Download' | t }}</span>
-					<h3 class="downloadTitle">{{ item.title }}</h3>
-					<p>{{ subLine }}</p>
-				</div>
-				<div class="imgPart {{ imgGridSpans }}">
-					<img src="{{ preview[0].url }}" alt="{{ 'Voransicht von' | t }}: {{ item.title }}" class="pdfPreview">
-				</div>
-			</a>
-		{% endif %}
-	{% else %}
-		<a href="{{ item.url }}" class="downloadLink gridSpan12" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
-			<div class="txtPart {{ txtGridSpans }}">
-				<span class="cellTag">{{ 'Download' | t }}</span>
-				<h3 class="downloadTitle">{{ item.title }}</h3>
-				<p>{{ subLine }}</p>
-			</div>
-			<div class="imgPart {{ imgGridSpans }}">
-				<span class="downloadIcon">.{{ item.extension }}</span>
-			</div>
-		</a>
-	{% endif %}
-
+	<a href="{{ item.url }}" class="downloadLink gridSpan12" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
+		<div class="imgPart {{ imgGridSpans }}">
+			<img src="/theme/img/icon-file.svg" alt="">
+			<span class="downloadExtension">.{{ item.extension }}</span>
+		</div>
+		<div class="txtPart {{ txtGridSpans }}">
+			<h3 class="downloadTitle">{{ item.title }}</h3>
+			<p>{{ subLine }}</p>
+		</div>
+		
+	</a>
 {% endfor %}

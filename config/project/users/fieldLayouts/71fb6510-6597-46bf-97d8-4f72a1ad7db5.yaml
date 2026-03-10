@@ -1,3 +1,4 @@
+cardThumbAlignment: end
 tabs:
   -
     elementCondition: null
@@ -11,7 +12,6 @@ tabs:
         disabled: false
         elementCondition: null
         id: null
-        includeInCards: false
         inputType: null
         instructions: null
         label: null
@@ -20,7 +20,6 @@ tabs:
         name: null
         orientation: null
         placeholder: null
-        providesThumbs: false
         readonly: false
         requirable: false
         size: null
@@ -33,23 +32,6 @@ tabs:
         warning: null
         width: 100
       -
-        dateAdded: '2025-05-20T10:53:42+00:00'
-        editCondition: null
-        elementCondition: null
-        fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
-        handle: null
-        includeInCards: false
-        instructions: null
-        label: Honorific
-        providesThumbs: false
-        required: false
-        tip: 'Prof. Dr.'
-        type: craft\fieldlayoutelements\CustomField
-        uid: 39f1046a-3b3a-4f60-8592-00b4c1ce9154
-        userCondition: null
-        warning: null
-        width: 25
-      -
         attribute: fullName
         autocapitalize: true
         autocomplete: false
@@ -59,7 +41,6 @@ tabs:
         disabled: false
         elementCondition: null
         id: null
-        includeInCards: false
         inputType: null
         instructions: null
         label: null
@@ -68,7 +49,6 @@ tabs:
         name: null
         orientation: null
         placeholder: null
-        providesThumbs: false
         readonly: false
         requirable: true
         required: false
@@ -80,20 +60,34 @@ tabs:
         uid: 57910cdb-434b-4fa6-9b92-f0ac9b0fd45f
         userCondition: null
         warning: null
-        width: 75
+        width: 100
       -
         dateAdded: '2024-12-18T12:04:41+00:00'
         elementCondition: null
         id: null
-        includeInCards: false
         instructions: null
         label: null
         orientation: null
-        providesThumbs: false
         requirable: false
         tip: null
         type: craft\fieldlayoutelements\users\PhotoField
         uid: 8710e08e-b531-428a-a8cf-30f72f97a274
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        dateAdded: '2026-02-04T10:36:57+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: 397fd1ab-a87a-4c2d-8286-283145152ca8 # Team
+        handle: null
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: f12b6d86-29fb-4642-8b64-b0a9c009a66f
         userCondition: null
         warning: null
         width: 100
@@ -106,7 +100,6 @@ tabs:
         disabled: false
         elementCondition: null
         id: null
-        includeInCards: false
         inputType: null
         instructions: null
         label: null
@@ -115,7 +108,6 @@ tabs:
         name: null
         orientation: null
         placeholder: null
-        providesThumbs: false
         readonly: false
         requirable: false
         size: null
@@ -130,12 +122,11 @@ tabs:
         dateAdded: '2025-05-21T07:53:10+00:00'
         editCondition: null
         elementCondition: null
+        elementEditCondition: null
         fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
         handle: null
-        includeInCards: false
         instructions: null
         label: Aubildung
-        providesThumbs: false
         required: false
         tip: 'Journalistin, Redaktorin'
         type: craft\fieldlayoutelements\CustomField
@@ -147,12 +138,11 @@ tabs:
         dateAdded: '2025-04-29T07:06:49+00:00'
         editCondition: null
         elementCondition: null
+        elementEditCondition: null
         fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
         handle: null
-        includeInCards: false
         instructions: null
         label: Funktion
-        providesThumbs: false
         required: false
         tip: 'Anwältin, stellvertretende Direktorin von EspaceSuisse'
         type: craft\fieldlayoutelements\CustomField
@@ -164,12 +154,11 @@ tabs:
         dateAdded: '2024-12-18T12:06:18+00:00'
         editCondition: null
         elementCondition: null
+        elementEditCondition: null
         fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
         handle: null
-        includeInCards: false
         instructions: null
         label: Bio
-        providesThumbs: false
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField
@@ -180,3 +169,4 @@ tabs:
     name: Inhalt
     uid: 766bde34-59ba-4113-824c-677fcecba61c
     userCondition: null
+thumbFieldKey: null

@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
             handle: null
-            includeInCards: false
             instructions: null
             label: Bild
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -30,10 +28,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
             handle: null
-            includeInCards: false
             instructions: null
             label: Bildlegende
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -62,10 +58,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
-            includeInCards: false
             instructions: null
             label: Lauftext
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -85,10 +79,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -102,10 +94,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -119,10 +109,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
             handle: null
-            includeInCards: false
             instructions: null
             label: 'Bild Grösse'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -136,10 +124,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
             handle: null
-            includeInCards: false
             instructions: null
             label: 'Bild Position'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

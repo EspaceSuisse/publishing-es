@@ -5,7 +5,7 @@
 {% for item in latestArticles %}
 
     {% set articleImage = '' %}
-    {% set image = item.fImgMono.one() %}
+    {% set image = item.imgAufmacher.one() %}
     {% if image %}
         {% set transform = craft.imagerx.transformImage(image, 'feedImageTransform') | first %}
         {% set articleImage = craft.app.sites.getSiteByHandle('default').baseUrl|trim(  '/', 'right' ) ~ transform.url %}

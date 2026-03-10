@@ -1,0 +1,15 @@
+{# _dynamic/unlockScript.twig #}
+
+{# Check if we have a valid session (Your LoginController creates this) #}
+{% if craft.app.user.identity %}
+    <script>
+        // Use a self-executing function to avoid global variable pollution
+        (function() {
+            var article = document.getElementById('protected-article');
+            if (article) {
+                // Remove the blur class immediately
+                article.classList.remove('articleIsSunset');
+            }
+        })();
+    </script>
+{% endif %}

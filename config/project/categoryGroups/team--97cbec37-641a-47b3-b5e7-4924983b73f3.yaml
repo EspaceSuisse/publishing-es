@@ -1,0 +1,79 @@
+defaultPlacement: end
+fieldLayouts:
+  1178d939-134f-44ab-8e6d-72b3346f0e57:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-02-04T10:34:23+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: aed779c5-908b-420d-abbe-548407f49c6d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-02-04T11:04:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3bfc9fe5-3cbb-4ab0-bac7-c14c201c9bf1 # Blank Url String
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9de9ac34-8b2e-46ae-b00a-6dbdc5b8f56c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            content: "# URL\r\n\r\nDiese URL sollte auf die Teamseite auf der Originalen [EspaceSuisse](https://www.espacesuisse.ch/de) Seite verweisen. Wenn also jemand auf Team Siedlungsberatung klickt, dann kommt er auf das Angebot der Siedlungsberatung resp. Juristerei."
+            dateAdded: '2026-02-04T11:07:36+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 510cd4c2-0e02-4f86-9369-dc610eb64066
+            userCondition: null
+            width: 100
+        name: Content
+        uid: cc536286-70d9-4acb-b56e-52a0f4dfb9c1
+        userCondition: null
+    thumbFieldKey: null
+handle: team
+name: Team
+siteSettings:
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
+    hasUrls: false
+    template: null
+    uriFormat: null
+  5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 34999873-c1b9-4a79-ab61-70b1b349f073

@@ -12,6 +12,7 @@
         ])
 		.id(['not', entry.id])
         .limit(7)
+		.with(articleEagerLoad)
         .all() %}
 
 {# Show articles which contain the first subject and genre #}

@@ -1,4 +1,4 @@
-dateModified: 1769095743
+dateModified: 1773137132
 elementSources:
   craft\elements\Asset:
     -
@@ -11,8 +11,7 @@ elementSources:
       tableAttributes:
         - filename
         - size
-        - 'field:2d392e7b-19e3-42f2-bb21-f8710194fd3f' # Plain Text
-        - 'field:97b5cf10-0039-4b8a-b7ab-409f3adf851a' # Plain Text
+        - usage
       type: native
     -
       key: 'volume:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
@@ -22,6 +21,9 @@ elementSources:
       type: native
     -
       key: temp
+      type: native
+    -
+      key: 'volume:8e19eab8-006c-4c90-9a33-31262f476b3a' # Icons
       type: native
   craft\elements\Category:
     -
@@ -33,6 +35,7 @@ elementSources:
       key: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
       tableAttributes:
         - 'field:432db72f-cf6e-4d81-90df-eef5aeb18160' # Color
+        - slug
         - status
         - link
       type: native
@@ -45,6 +48,7 @@ elementSources:
       key: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
       tableAttributes:
         - 'field:432db72f-cf6e-4d81-90df-eef5aeb18160' # Color
+        - slug
         - status
         - link
         - 'field:c344dec6-0346-4e67-99e0-ec1552b8946f' # Lightswitch
@@ -52,13 +56,16 @@ elementSources:
   craft\elements\Entry:
     -
       key: '*'
+      page: Entries
       type: native
     -
       key: singles
+      page: Entries
       type: native
     -
       heading: Channels
       key: 'heading:8fd0fa10-3f82-43c9-a348-470d30a7e6cf'
+      page: Entries
       type: heading
     -
       defaultSort:
@@ -67,31 +74,46 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+      page: Entries
       tableAttributes:
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
-        - id
+        - slug
         - postDate
         - status
         - link
-        - 'field:e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f' # VC
       type: native
     -
       heading: ''
       key: 'heading:e575f80e-628e-486a-92ce-1b5abb798592'
+      page: Entries
       type: heading
     -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:bc7c6b58-e511-47e0-9216-7052ceafee56' # Sub Pages
+      page: Entries
+      tableAttributes:
+        - status
+        - slug
+        - postDate
+        - link
       type: native
     -
       heading: ''
       key: 'heading:c1ca06e3-0efe-4060-bc40-f72586121e3d'
+      page: Entries
       type: heading
     -
       key: 'section:cbd30d19-7bb8-4252-91df-a451ebb3d525' # Call to Action
+      page: Entries
       type: native
     -
       heading: ''
       key: 'heading:29182fa9-94e7-426d-82cb-e6db8a6939de'
+      page: Entries
       type: heading
     -
       defaultSort:
@@ -100,6 +122,7 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
+      page: Entries
       tableAttributes:
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
         - status
@@ -129,6 +152,7 @@ elementSources:
       type: native
     -
       heading: 'Account Type'
+      key: 'heading:2292f90b-72d2-49dc-a3ac-bd9577b9dd01'
       type: heading
     -
       key: credentialed
@@ -138,15 +162,36 @@ elementSources:
       type: native
     -
       heading: Groups
+      key: 'heading:f1807506-f21a-4f83-91d7-9820b09d06e2'
       type: heading
     -
       key: 'group:df079a13-bd61-4096-9e55-4607550dae28' # Editor
       type: native
     -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'group:ee8b684c-14de-460c-89fd-f9fe7dd4b0cd' # EspaceSuisse
+      tableAttributes:
+        - 'field:9173344f-7095-45e6-a477-c0273f2b99e3' # Plain Text I18n 2
+        - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
+        - 'field:397fd1ab-a87a-4c2d-8286-283145152ca8' # Team
+        - status
       type: native
     -
       key: 'group:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
+      type: native
+    -
+      heading: ''
+      key: 'heading:d1df9d92-6af5-44b8-8c32-a83dd0d6f834'
+      type: heading
+    -
+      key: 'group:60d6ea87-e27d-49d5-867a-a57850f7f242' # Publisher
+      type: native
+    -
+      key: 'group:ff4cdf72-64ec-41a2-8781-1751cadd315c' # Webmasters
       type: native
 email:
   fromEmail: $SMTP_EMAIL
@@ -203,8 +248,10 @@ meta:
     2e063293-328e-4b38-8c35-ec4074593593: EspaceSuisse # EspaceSuisse
     02e09030-3253-478b-97e2-af4db5bdcaa1: 'Image Licence' # Image Licence
     2e1f2e2f-757e-43c1-bb5f-6f5261966f3f: 'Artikel Bilder' # Artikel Bilder
+    2e649e3f-bf0c-40c5-a731-f9dc52e50953: 'Listing All Genres' # Listing All Genres
     2f21816e-21e0-4681-9644-9573089c1774: 'Person Monolingual' # Person Monolingual
     3bf88477-1a30-4c85-869d-a00f8943a584: 'Page Set' # Page Set
+    3bfc9fe5-3cbb-4ab0-bac7-c14c201c9bf1: 'Blank Url String' # Blank Url String
     4afbf3df-b159-483b-8c7b-3a4f6fb3c0ff: 'Site Brand' # Site Brand
     4b1aee02-974f-4737-aabb-c4bf362d2f53: Polygons # Polygons
     004b97b7-ef5f-4e9e-a79e-0f94bebe89a8: Longitude # Longitude
@@ -220,8 +267,10 @@ meta:
     6d8a51aa-75d3-40b4-854e-9be42e0db01d: 'All Articles' # All Articles
     6e9fa4fd-403d-45c4-a082-48d1c5882d71: Basemap # Basemap
     7a651ea5-c4e0-4bb0-9628-faafad747662: 'SEO News' # SEO News
+    8b00b1ad-3829-48d0-b91f-f3a597e32588: 'Google Image' # Google Image
     8b46b13d-a838-4abe-a6b4-e76faac177fb: File # File
     8caa68b5-9596-4170-82d2-20866078095e: Numer # Numer
+    8cbcac22-e63c-4df9-a8db-040cdd55daa2: 'Aufmacher Bild' # Aufmacher Bild
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
     8e19eab8-006c-4c90-9a33-31262f476b3a: Icons # Icons
     15e047b0-576a-4f08-83ff-0c064c9c8e29: 'Text SImple i18n' # Text SImple i18n
@@ -235,8 +284,10 @@ meta:
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
+    97cbec37-641a-47b3-b5e7-4924983b73f3: Team # Team
     112a7657-3989-4fc8-a084-e60b67c371e4: Polygons # Polygons
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
+    397fd1ab-a87a-4c2d-8286-283145152ca8: Team # Team
     432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
     746a28ba-cc90-41ff-8b16-82638446ed07: Provider # Provider
     762b9c18-49cc-4a00-aa78-a6d77e093631: 'Global Links' # Global Links
@@ -259,6 +310,7 @@ meta:
     a2101ab1-8df4-4168-bc8c-56af5a24badb: Switch # Switch
     a38688d7-396c-45ae-b8b7-46b401c5e71f: 'Link ' # Link 
     ad4265b0-d0a8-4b4c-a37b-bf310b170758: News # News
+    ae0c6847-79f7-48c3-bfd3-4f9d908b1d07: 'Listing All Subjects' # Listing All Subjects
     af5e5ef5-990b-4df0-8c9e-bebc1342a533: 'Footer Links' # Footer Links
     b84d7296-105e-4cd2-a351-d84b70fcfbfb: 'Img i18n' # Img i18n
     b572ca4f-491d-4184-8bba-ebf12597ed59: 'Plain Text Multiline' # Plain Text Multiline
@@ -266,7 +318,7 @@ meta:
     b992059d-78f2-4c88-8576-53b7f9b37a83: 'Grid Start' # Grid Start
     bc09de97-2997-40ed-9f92-fb366aaaebd6: 'Tag Field Provider' # Tag Field Provider
     bc7c6b58-e511-47e0-9216-7052ceafee56: 'Sub Pages' # Sub Pages
-    bf9959dc-941c-45ef-86b1-d05efb3e1626: Download # Download
+    bf9959dc-941c-45ef-86b1-d05efb3e1626: Dokument # Dokument
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
     c78633bb-34f0-471f-b7f5-45bb42559dab: 'Listing Author' # Listing Author
@@ -278,15 +330,16 @@ meta:
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
-    eb32810d-6901-4788-b8bb-d4ca4124652b: 'H Level' # H Level
+    eb32810d-6901-4788-b8bb-d4ca4124652b: 'Headline Level' # Headline Level
     ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
     ee8b684c-14de-460c-89fd-f9fe7dd4b0cd: EspaceSuisse # EspaceSuisse
     eee49365-fab5-4241-a3e6-e24d9cd9a18e: Newsletter # Newsletter
     efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
+    f8280914-6618-4ce0-8ed1-a3cc7b9c43b0: Marker # Marker
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
-    fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Img # Img
+    fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Bild # Bild
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
@@ -294,11 +347,214 @@ meta:
     ff4cdf72-64ec-41a2-8781-1751cadd315c: Webmasters # Webmasters
     ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
 plugins:
+  anchors:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  assetusage:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
   blitz:
     edition: standard
     enabled: true
     licenseKey: RQLRFXJIQ243O56I9B1CE9E6
     schemaVersion: 5.12.0
+    settings:
+      apiKey: ''
+      cacheActionRequests: false
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheControlHeaderExpired: 'public, s-maxage=5, max-age=0'
+      cacheDuration: null
+      cacheGeneratorSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+          -
+            - useBasicAuth
+            - ''
+          -
+            - username
+            - ''
+          -
+            - password
+            - ''
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      cacheNonHtmlResponses: false
+      cachePurgerSettings:
+        __assoc__:
+          -
+            - zoneIds
+            -
+              __assoc__:
+                -
+                  - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
+                  -
+                    __assoc__:
+                      -
+                        - zoneId
+                        - $CLOUDFLARE_ZONE_ID
+                -
+                  - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
+                  -
+                    __assoc__:
+                      -
+                        - zoneId
+                        - $CLOUDFLARE_ZONE_ID
+          -
+            - authenticationMethod
+            - apiKey
+          -
+            - apiToken
+            - ''
+          -
+            - apiKey
+            - $CLOUDFLARE_GLOBAL_API
+          -
+            - email
+            - $CLOUDFLARE_EMAIL
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\CloudflarePurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - compressCachedValues
+            - '1'
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cachedIncludePathParam: p
+      cachingEnabled: false
+      debug: true
+      defaultCacheControlHeader: no-store
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      detectSsiEnabled: true
+      driverJobBatchSize: 100
+      driverJobPriority: 100
+      esiEnabled: false
+      excludedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - gclid
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - fbclid
+      excludedUriPatterns:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^actions/knock-knock
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^knock-knock
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^mitglieder-login
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ^connexion-des-membres
+      generatePagesWithQueryStringParams: true
+      hintsEnabled: false
+      includedQueryStringParams:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - '.*'
+      includedUriPatterns:
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - '.*'
+      injectScriptEvent: DOMContentLoaded
+      injectScriptPosition: 3
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
+        - putyourlightson\blitz\drivers\integrations\DatastarIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      maxRetryAttempts: 10
+      maxUriIndexLength: 767
+      maxUriLength: 2048
+      mutexTimeout: 1
+      onlyCacheLowercaseUris: false
+      outputComments: true
+      purgeAssetImagesWhenChanged: true
+      queryStringCaching: 0
+      queueJobTtr: 300
+      refreshCacheAutomaticallyForGlobals: false
+      refreshCacheEnabled: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementMovedInStructure: true
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      refreshExpiredCacheAfterVisit: true
+      refreshMode: 3
+      sendPoweredByHeader: true
+      ssiEnabled: false
+      ssiTagFormat: '<!--#include virtual="{uri}" -->'
+      trackElementQueries: true
+      trackElements: true
   ckeditor:
     edition: standard
     enabled: true
@@ -307,15 +563,18 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: ''
+      cssFile: '@web/theme/css/components/backendCP.css'
   imager-x:
     edition: pro
     enabled: true
     licenseKey: Q66KERQ0US0VFVKAFRDGYOPG
     schemaVersion: 4.0.0
-  imager-x-pdf-adapter:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   knock-knock:
     edition: standard
     enabled: true
@@ -349,5 +608,5 @@ system:
   live: true
   name: 'EspaceSuisse Publishing'
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: $TZ

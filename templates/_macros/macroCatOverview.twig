@@ -11,24 +11,12 @@
 		{% set inlineStyle = item.fColor ? 'background-color:' ~ item.fColor ~ ';' : '' %}
 		{% set fullTitle = item.title %}
 		{% set sectionUrlSegment = sectionParam ? '?section=' ~ sectionParam %}
-		{% set catIcon = item.fIcon.one() %}
-		{% set svgCatIcon %}
-			{%- if catIcon -%}
-				{{ svg(catIcon) | attr({ class: 'catIcon' }) }}
-			{%- endif -%}
-		{% endset %}
 
-		{%- if catIcon -%}
-			<span class="tag {{ ' ' ~ classParam }}"> 
-				<a href="{{- item.url ~ sectionUrlSegment-}}" style="{{ inlineStyle }}" class="hasIcon">{{ svgCatIcon }}<span class="catReveal">{{- fullTitle -}}</span></a>
-			</span>
-		{% else %}
 			<span class="tag {{ ' ' ~ classParam }}"> 
 				<a href="{{- item.url ~ sectionUrlSegment -}}" style="{{ inlineStyle }}">
-					<span class="catReveal">{{- fullTitle -}}</span>
+					{{- fullTitle -}}
 				</a>
 			</span>
-		{%- endif -%}
 
 	{%- endfor -%}
 {%- endmacro -%}

@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -18,7 +19,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -27,7 +27,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -38,34 +37,16 @@ fieldLayouts:
             uid: bfab3bd8-d6eb-4c0f-a8ea-461ece283cb7
             userCondition: null
             warning: null
-            width: 75
-          -
-            dateAdded: '2025-09-17T09:35:22+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Auch für Non-Member'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: da9012aa-c2fa-4ee8-93da-e45fc5e5ac7e
-            userCondition: null
-            warning: null
-            width: 25
+            width: 100
           -
             dateAdded: '2025-07-29T07:53:44+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
             handle: null
-            includeInCards: false
             instructions: 'Willst du noch etwas Ballern mit dem Titel? Schrieb hier einen Catchy title (Wird nur in der Preview Card angezeigt)'
             label: 'Catchy Title'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -83,12 +64,11 @@ fieldLayouts:
             dateAdded: '2025-05-08T12:21:24+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
             handle: null
-            includeInCards: false
             instructions: null
             label: Lead
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -100,12 +80,11 @@ fieldLayouts:
             dateAdded: '2024-12-18T10:45:45+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -120,38 +99,30 @@ fieldLayouts:
             uid: 3ccdefd8-e23f-41dd-95e5-7aa281a823f0
             userCondition: null
           -
-            dateAdded: '2025-12-04T10:47:32+00:00'
+            dateAdded: '2026-02-03T13:45:06+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: fa54fd14-cfed-4146-af48-2c0f6efa7f6d # Img
+            elementEditCondition: null
+            fieldUid: 8cbcac22-e63c-4df9-a8db-040cdd55daa2 # Aufmacher Bild
             handle: null
-            includeInCards: false
             instructions: null
-            label: 'Aufmacher Bild'
-            providesThumbs: false
+            label: null
             required: false
-            tip: 'Schön und Toll soll es sein'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b5f2e5ed-1406-4291-a390-3a82b418d720
+            uid: 6e1e88be-5ef2-4ec3-a528-650a2526e112
             userCondition: null
             warning: null
-            width: 100
-          -
-            dateAdded: '2025-11-19T11:13:39+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 58a37ce4-5e68-4552-af28-35bbc9e4b008
-            userCondition: null
+            width: 25
           -
             dateAdded: '2024-12-18T11:06:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -163,12 +134,11 @@ fieldLayouts:
             dateAdded: '2024-12-18T11:06:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -177,7 +147,23 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n## Foto Tool\r\n- Kein Plan, wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)\r\n\r\n## Texte Einfügen\r\nEs hilft, Text erst in einen [Raw Text-Editor](https://code.visualstudio.com/) einzufügen, anstatt vom Word direkt ins CMS. So wird das Word Markup automatisch gelöscht. Das CMS putzt zwar auch das Word Markup weg. Aber nicht immer.\r\n\r\n## Artikel URL\r\nDie URL wird aus dem Titel generiert. Willst du in FR eine französische URL, lösche die Zeichen im Feld `Slug` und speichere. Dann wird die URL `ASCI-Safe` neu generiert (ohne Sonderzeichen).\r\n\r\n## Catchy Title\r\nFür die Kacheln kannst du einen polemischen / lustigeren / griffigeren Titel verwenden, der dann nur auf den Kacheln dargestellt wird. Im Artikel selber kommt immer der normale titel.\r\n\r\n## Übersetzung\r\nBeim ersten Speichern eines neuen Feldes wird der Text einmalig als Referenz in die andere Sprache hinüber kopiert.\r\n\r\n## Rubrik & Thema\r\nDienen dazu, den Artikel auf den Unterseiten zu verordnen. `Lesen Sie dazu auch` wird ebenfalls aus dieser Kategorisierung automatisch generiert."
+            dateAdded: '2025-09-17T09:35:22+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+            handle: null
+            instructions: null
+            label: 'Immer frei Verfügbar'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da9012aa-c2fa-4ee8-93da-e45fc5e5ac7e
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            content: "# Was tun\r\n- *Aufmacherbild* Eye-Catcher zu Beginn\r\n- *Lead* Zusammenfassung und glustig macher auf den Artikel\r\n- *Google Text* wird bei den Suchresultaten angezeigt. Unglaublich wichtiger Text!!!\r\n\r\n## Foto Tool\r\n- Kein Plan, wie man Fotos fürs Web aufbereitet? Nutze [Käspus Image Resizing Tool](https://kaspar-allenbach.github.io/image-resizer/)\r\n\r\n## Artikel URL\r\nDie URL wird aus dem Titel generiert. Willst du in FR eine französische URL, lösche die Zeichen im Feld `Slug` und speichere. Dann wird die URL `ASCI-Safe` neu generiert (ohne Sonderzeichen).\r\n\r\n## Catchy Title\r\nFür die Kacheln kannst du einen polemischen / lustigeren / griffigeren Titel verwenden, der dann nur auf den Kacheln dargestellt wird. Im Artikel selber kommt immer der normale titel.\r\n\r\n## Übersetzung\r\nBeim ersten Speichern eines neuen Feldes wird der Text einmalig als Referenz in die andere Sprache hinüber kopiert.\r\n\r\n## Rubrik & Thema\r\nDienen dazu, den Artikel auf den Unterseiten zu verordnen. `Lesen Sie dazu auch` wird ebenfalls aus dieser Kategorisierung automatisch generiert.\r\n\r\n# Texte\r\n\r\n## Verlinkungen\r\nMach Verlinkungen deskriptiv. Niemand weiss, wo dieser link [hier](https://www.youtube.com/watch?v=dQw4w9WgXcQ) hinführt.\r\nAber man weis, wo der Link für das [Rick Astely Video](https://www.youtube.com/watch?v=dQw4w9WgXcQ) hinführt.\r\n\r\n## Abschnitte\r\nSind immer gerne gesehen. Mach kleine Häppchen aus dem Text. Mehr ist besser.\r\n\r\n## Paragrafen Titel\r\nVerwende immer titel Hierarchien `H2`, `H3`, `H4` usw. Diese müssen immer numerisch aufeinander folgend sein. Nach einem `H2` sollte kein `H5` kommen. Funktioniert genau gleich wie z.b `1.1` `1.2` `2.1` in wissenschaftlichen Dokumenten."
             dateAdded: '2025-04-29T06:25:34+00:00'
             displayInPane: true
             elementCondition: null
@@ -204,12 +190,11 @@ fieldLayouts:
             dateAdded: '2024-12-18T11:08:52+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # ArticleBlocks
             handle: null
-            includeInCards: false
             instructions: null
             label: 'Artikel Blöcke'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -233,12 +218,11 @@ fieldLayouts:
             dateAdded: '2025-05-27T12:12:07+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -250,12 +234,11 @@ fieldLayouts:
             dateAdded: '2025-08-06T13:56:43+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -266,6 +249,7 @@ fieldLayouts:
         name: Google
         uid: 132df382-76c4-4b56-ab8f-95fb71743dd4
         userCondition: null
+    thumbFieldKey: null
 handle: tArticleSet
 hasTitleField: true
 icon: null
@@ -277,3 +261,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

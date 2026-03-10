@@ -1,0 +1,27 @@
+.previewCard {
+    &.previewCat {
+        .imgPart {
+            grid-row: 1 / -1;
+            grid-column: 1 / -1;
+        }
+        .txtPart {
+            grid-row: 1 / -1;
+            grid-column: 1 / -1;
+            align-items: flex-end;
+        }
+        .previewTitle {
+            display: inline;
+            a {
+                font-family: var(--font-monospace);
+                font-weight: normal;
+                padding: calc( var(--layoutGap) / 2 ) var(--layoutGap);
+                display: inline-block;
+            }
+        }
+        &.previewGenre {
+            .previewTitle a {
+                border-radius: 50px;
+            }
+        }
+    }
+}

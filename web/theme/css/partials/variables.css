@@ -3,6 +3,7 @@
     --font-default: "freight-text-pro", serif;
     --font-default-condensed: "freighttextcmp-pro", serif;
     --font-display: "canada-type-gibson", sans-serif;
+    --font-monospace: "aglet-mono", mono;
     --font-regular: 400;
     --font-bold: 600;
 
@@ -35,7 +36,7 @@
     --paddingBtnSmall: 4px 9px 6px;
 
     /* Links without background */
-    --linkTxtColor: #478cc6;
+    --linkTxtColor: rgb(70, 139, 195);
     --linkTxtHoverColor: var(--colorES-brand-blue);
     --linkTxtActiveColor: var(--linkTxtColor);
 
@@ -55,10 +56,13 @@
     --colorPreviewCard: white;
     --radiusPreviewCard: 4px;
 
+    --color-highlight-soft: rgb(227, 227, 227);
+    --color-highlight-strong: rgb(236, 185, 190);
+
     --colorES-brand-blue: rgb(28, 112, 183);
-    --colorES-brand-blue-soft: rgb(184, 212, 230);
+    --colorES-brand-blue-soft: rgb(152, 189, 212);
     --colorES-brand-petrol: rgb(0, 201, 190);
-    --colorES-subject: rgb(229, 51, 101);
+    --colorES-subject: rgb(251, 167, 82);
     --colorES-genre: rgb(48, 141, 192);
 
     --shadow: 0 1px 2px 0 rgba(0,0,0,0.08);

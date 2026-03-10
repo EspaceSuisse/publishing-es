@@ -1,5 +1,5 @@
 .tag {
-    font-family: var(--font-display);
+    font-family: var(--font-monospace);
     white-space: nowrap;
     font-size: var(--font-size-S);
     a {
@@ -17,7 +17,7 @@
         color: var(--txtInvertColor);
     }
 
-    &.subject {
+    &.subject a {
         border-radius: 100px;
     }
 
@@ -37,31 +37,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--layoutGap) / 2);
+    padding-bottom: calc(var(--layoutGap) / 2);
 }
 
-.previewCard {
-    .tag {
-        display: inline-flex;
-        overflow: hidden;
-        max-width: calc(var(--font-size-S) * 2.6);
-        transition: max-width 0.35s ease 0.2s;
-        &:hover {
-            max-width: 1000px;
-            transition-delay: 0s;
-        }
-    }
-    .catReveal {
-        display: inline-block;
-        padding: 0.5rem 0.75rem;
-        white-space: nowrap;
-
-        /* hide text by moving it left */
-        transform: translateX(calc(-100% - 0.75rem));
-        transition: transform 0.35s ease;
-    }
-
-    /* reveal on hover */
-    .tag:hover .catReveal {
-        transform: translateX(0);
-    }
-}

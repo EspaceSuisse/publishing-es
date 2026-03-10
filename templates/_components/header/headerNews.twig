@@ -8,10 +8,11 @@
 
 <header class="headerCard newsHeadCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
 	<div class="{{ smallerGrid }} headMeta">
-		{{ macroPostDate.postDate(entry) }}
+		{{ macroPostDate.postDate(entry.postDate, true) }}
 	</div>
 	<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
-	{# Lead Text #}
-	<p class="{{ smallerGrid }} topicLead">{{ entry.fSeoDescription }}</p>
+	{% if entry.fPlainTextI18nMultiline %}
+		<h3 class="{{ smallerGrid }} topicLead">{{ entry.fPlainTextI18nMultiline }}</h3>
+	{% endif %}
 	<span class="articleId">ID: {{ entry.id }}</span>
 </header>

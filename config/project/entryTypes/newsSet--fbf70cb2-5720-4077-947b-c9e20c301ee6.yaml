@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -16,7 +17,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -25,7 +25,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -41,12 +40,11 @@ fieldLayouts:
             dateAdded: '2025-12-17T10:15:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -55,15 +53,30 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: '2026-02-25T15:11:26+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            handle: null
+            instructions: null
+            label: Lead
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9790b3d9-b086-447a-984a-be9b3582089a
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-09-10T13:48:55+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -81,12 +94,11 @@ fieldLayouts:
             dateAdded: '2025-09-10T13:48:55+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # ArticleBlocks
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -104,12 +116,11 @@ fieldLayouts:
             dateAdded: '2025-09-10T13:48:55+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -121,12 +132,11 @@ fieldLayouts:
             dateAdded: '2025-09-10T13:48:55+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -137,6 +147,7 @@ fieldLayouts:
         name: Google
         uid: aa4ab913-b955-4dd3-ae69-6223510c4fc9
         userCondition: null
+    thumbFieldKey: null
 handle: newsSet
 hasTitleField: true
 icon: null
@@ -148,3 +159,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -3,7 +3,7 @@
         font-size: var(--font-size-L);
         font-family: var(--font-display);
         font-weight: var(--font-bold);
-        color: var(--colorES-brand-blue);
+        color: var(--txtColor);
         margin: 0;
     }
 }

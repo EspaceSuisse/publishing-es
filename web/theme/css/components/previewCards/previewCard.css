@@ -1,8 +1,8 @@
 .previewCard {
     position: relative;
     overflow: hidden;
-    container-type: inline-size;
-    container-name: previewCard;
+    display: grid;
+    grid-template-columns: subgrid;
     .previewTitle {
         margin: 0;
 
@@ -65,6 +65,9 @@
     .btnCard {
         margin-left: auto;
     }
+    .tag {
+        font-size: var(--font-size-XS);
+    }
     .previewMetaHeader, .previewMetaFooter {
         display: flex;
         align-items: baseline;
@@ -84,6 +87,9 @@
         }
     }
     .previewMetaFooter {
-        margin-top: var(--layoutGap);
+        margin-top: auto;
+    }
+    &.subjectCard {
+        border-radius: 8px;
     }
 }

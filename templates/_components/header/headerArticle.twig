@@ -4,16 +4,14 @@
 {% import '_macros/macroFigCaption' as figCaption %}
 
 
-{% set articleGenre = entry.fCatGenre %}
-{% set articleSubject = entry.fCatSubject %}
-{% set aufmacherBild = entry.fImgMono.one() ?? null %}
+
 {% set smallerGrid = 'gridSpan10 gridStart2' %}
 
 {% if aufmacherBild %}
 
 	<figure class="articleHeadImg">
 		{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
-		{{ figCaption.figCaption(aufmacherBild, null) }}
+		{{ figCaption.figCaption(aufmacherBild, null, aufmacherBild.fSwitch) }}
 	</figure>
 
 {% endif %}
@@ -22,7 +20,7 @@
 	<div class="headCardGrid">
 
 		<div class="{{ smallerGrid }} headMeta">
-			{{ macroPostDate.postDate(entry) }}
+			{{ macroPostDate.postDate(entry.postDate, true) }}
 		</div>
 
 		<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>

@@ -1,0 +1,53 @@
+
+	{% import '_macros/macroPostDate' as macroPostDate %}
+
+	{% set latestArticles = craft.entries.section('article').limit(3).all() %}
+	<li class="navToplevelLink hasDropdown">
+	
+
+		<button class="dropdownLink" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu">
+			<span class="hamburger lineUpper"></span>
+			<span class="hamburger lineMiddle"></span>
+			<span class="hamburger lineLower"></span>
+		</button>
+
+
+		<aside class="dropdown" id="dropdown-menu" role="menu">
+
+			<div class="dropdownContents">
+				<ul class="majorLinks gridMdSpan2">
+					{% include "_components/sideBar/siteNavMoreLinks.twig" %}
+					{% include "_components/sideBar/navLangSwitcher.twig" %}
+				</ul>
+				<div class="latestEntries">
+					{% for item in latestNews %}
+						{% if loop.first %}
+							<h2>{{ 'Neuste News' | t }}</h2>
+						{% endif %}
+						
+						<a href="{{ item.url }}"  class="latestLink">
+							{{ macroPostDate.postDate(item.postDate, true) }}
+							<h3>{{ item.title }}</h3>
+						</a>
+						
+					{% endfor %}
+				</div>
+				<div class="gridRowMdSpan4">{% include "_components/formNewsletter/mailchimpForm" %}</div>
+				<div class="latestEntries">
+					
+					{% for item in latestArticles %}
+						{% if loop.first %}
+							<h2>{{ 'Neuste Artikel' | t }}</h2>
+						{% endif %}
+
+						<a href="{{ item.url }}" class="latestLink">
+							{{ macroPostDate.postDate(item.postDate, true) }}
+							<h3>{{ item.title }}</h3>
+						</a>
+
+					{% endfor %}
+				</div>
+			</div>
+
+		</aside>
+	</li>
