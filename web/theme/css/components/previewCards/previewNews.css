@@ -1,0 +1,12 @@
+.previewNews {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--linkTxtColor);
+    justify-content: flex-end;
+    .previewMetaHeader {
+        margin-bottom: auto;
+    }
+    .previewMetaFooter {
+        margin: 0;
+    }
+}

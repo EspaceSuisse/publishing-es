@@ -1,35 +1,26 @@
 {% extends "_layouts/main" %}
 
-{% import '_components/previewCards/macroArticlePreviewXL' as macroPreviewXL %}
-{% import '_components/previewCards/macroArticlePreviewL' as macroPreviewL %}
-{% import '_components/previewCards/macroArticlePreviewS' as macroPreviewS %}
+{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
 
 {% block content %}
 
-	{% set allEntries = craft.entries()
+	{% set allNews = craft.entries()
 		.section('news')
 		.limit(null)
 		.all()
 	%}
+
+	{% set listingNews = craft.entries().section('listingNews').one() %}
 	
 
-	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
+	<header class="pageHead subPageHead">
+		{% include "_components/header/headerBrand" %}
+		{% include "_components/header/headerPage" %}
+	</header>
 	<div class="listingGrid">
-		{% include "_components/brandHeader.twig" %}
-		<section class="headliner">
-			{% set headliner = allEntries | first %}
-			{{ macroPreviewXL.listMacro(headliner,'gridStart1 gridSpan12') }}
-		</section>
-		<section class="teaser">
-			{% for item in allEntries | slice(1, 3) %}
-				{{ macroPreviewS.listMacro(item,'gridSpan4') }}
-			{% endfor %}
-		</section>
-		<section class="latest">
-			{% for item in allEntries | slice(6, 20) %}
-				{{ macroPreviewL.listMacro(item,'gridSpan6') }}
-			{% endfor %}
-		</section>
+		{% for item in allNews %}
+			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridLgSpan6') }}
+		{% endfor %}
 	</div>
 
 {% endblock %}

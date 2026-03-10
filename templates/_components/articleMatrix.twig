@@ -23,7 +23,7 @@
 				{% include "_components/articleBlocks/cellSubtitle" %}
 			</div>
 		{% case "tBox" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellBox {{ 'style' ~ block.fStyling.value | upper }}">
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellBox cellCard {{ 'style' ~ block.fStyling.value | upper }}">
 				{% include "_components/articleBlocks/cellBox" %}
 			</div>
 		{% case "tTxtI18n" %}
@@ -49,7 +49,7 @@
 			{% set liveEntries = relEntryQuery|filter(e => e.status == 'live') %}
 
     		{% if liveEntries|length %}
-				<aside class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellRelEntry">
+				<aside class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellCard cellRelEntry">
 					{% include "_components/articleBlocks/cellRelEntry" %}
 				</aside>
 			{% endif %}
@@ -59,7 +59,7 @@
 				{% include "_components/articleBlocks/cellMap" %}
 			</div>
 		{% case "tDownload" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload cellCard {{ 'style' ~ block.fStyling.value | upper }}">
+			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellDownload cellCard {{ 'style' ~ block.fStyling.value | upper }}">
 				{% include "_components/articleBlocks/cellDownload" %}
 			</div>
 		{% case "imgTxtFloat" %}

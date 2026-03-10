@@ -56,6 +56,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-01-14T14:49:31+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8caa68b5-9596-4170-82d2-20866078095e # Numer
+            handle: null
+            includeInCards: false
+            instructions: 'Wieviele Tage, bis ein Artikel nur noch für Mitglieder Verfügbar ist?'
+            label: 'Killswitch Engage'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb3e720a-d2c4-47f0-a5f2-42d87a0b84b3
+            userCondition: null
+            warning: null
+            width: 100
         name: Branding
         uid: 6bf9728d-b41d-4164-87b1-5e192680c738
         userCondition: null

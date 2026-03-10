@@ -1,0 +1,15 @@
+.headerSectionNews {
+    box-shadow: none;
+    margin-top: max(200px, 20vh);
+    background-color: transparent;
+    margin-bottom: calc( var(--layoutGap) * 1.5 );
+    row-gap: 0;
+    .postDate {
+        margin: 0;
+    }
+}
+@media (max-width: 48rem) {
+    .headerSectionNews {
+        margin-top: calc( var(--layoutGap) * 2 );
+    }
+}

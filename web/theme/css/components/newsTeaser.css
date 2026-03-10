@@ -1,0 +1,11 @@
+.newsTeaser {
+
+    .topicTitle {
+        text-align: center;
+    }
+    padding: calc(var(--layoutGap) * 3 ) 0;
+    .newsTeaserFooter {
+        padding-top: calc( var(--layoutGap) * 3 );
+        text-align: center;
+    }
+}

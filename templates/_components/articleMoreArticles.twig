@@ -1,4 +1,4 @@
-{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
+{% import '_components/previewCards/macroPreviewArticle' as macroPreviewArticle %}
 
 {% set firstSubject = entry.fCatGenre.one() %}
 {% set firstGenre = entry.fCatSubject.one() %}
@@ -24,7 +24,7 @@
 			{% if loop.first %}
 				<h2 class="gridSpan12 moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}…</h2>
 			{% endif %}
-			{{ macroArticlePreview.listMacro(item,'gridSpan6', 'gridSpan12', 'gridSpan12' ) }}
+			{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12' ) }}
 		{% endfor %}
 
 	</aside>

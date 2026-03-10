@@ -1,3 +1,13 @@
+{%- set language = site.language -%}
+
+{%- set feedEntries = craft.entries()
+    .section(['article', 'news'])
+    .site(site)
+    .orderBy('postDate desc')
+    .limit(null)
+    .all()
+-%}
+
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/theme/rss-style.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
@@ -7,35 +17,53 @@
 <channel>
     <title>{{ siteName }} - {{ 'Artikel' | t }} {{ language|slice(0,2) }}</title>
     <link>{{ siteUrl(language) }}</link>
-     <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/articles-' ~ language |slice(0,2) }}.rss" />
+    <atom:link rel="self"  href="{{ siteUrl ~ 'feeds/feed-' ~ language |slice(0,2) }}.rss" />
     <description>{{ 'Neuste Artikel in' | t (language) ~ ' ' ~ language }}</description>
     <language>{{ language }}</language>
+    <generator>Craft CMS</generator>
 
     {% set deSiteHandle = 'default' %}
     {% set frSiteHandle = 'espacesuissePublishingFr' %}
 
-
-    {% for item in entries %}
+    {% for item in feedEntries %}
 
         {% set otherLang = craft.entries()
             .uid(item.uid)
-            .site(frSiteHandle)
+            .site( language == 'de-CH' ? frSiteHandle : deSiteHandle )
             .one()
         %}
 
+        {% set feedItemTitle = item.fPlainTextI18n ?: item.title %}
+        {% set feedItemDesc = item.fSeoDescription %}
+
         <item>
-            {{ macroImg.rssFeedImg(item.fImgI18n.one(), 'articleThumb') }}
+            {% if item.fImgMono %}
+                {{ macroImg.rssFeedImg(item.fImgMono.one(), 'feedImageTransform') }}
+            {% endif %}
             <pubDate>{{ item.postDate.format('r') }}</pubDate>
-            <title>{{ item.title }}</title>
-            <description>{{ item.fSeoDescription }}</description>
-
-             <link>{{ item.url }}</link>
-             <guid isPermaLink="true">{{ item.url }}</guid>
-
+            <title>{{ feedItemTitle }}</title>
+            <description>{{ feedItemDesc }}</description>
+            <link>{{ item.url }}</link>
+            <guid isPermaLink="true">{{ item.url }}</guid>
+            <source>{{ craft.app.request.absoluteUrl }}</source>
+            {% if item.section.handle == 'article' %}
+                {% for author in item.authors %}
+                    <author>{{ author.name }}</author>
+                {% endfor %}
+            {% endif %}
+            {% if item.fCatGenre %}
+                {% for cat in item.fCatGenre.all() %}
+                    <category domain="{{ cat.url }}">{{ cat.title }}</category>
+                {% endfor %}
+            {% endif %}
+            {% if item.fCatSubject %}
+                {% for cat in item.fCatSubject.all() %}
+                    <category domain="{{ cat.url }}">{{ cat.title }}</category>
+                {% endfor %}
+            {% endif %}
             {%- if otherLang -%}
-                <atom:link rel="alternate" hreflang="fr" href="{{ otherLang.url }}" />
+                <atom:link rel="alternate" hreflang="{{ otherLang.language }}" href="{{ otherLang.url }}" />
             {%- endif -%}
-
         </item>
     {% endfor %}
 </channel>

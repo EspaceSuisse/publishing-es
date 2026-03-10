@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fSeoDescription
-instructions: 'For Social Media & Google Search results. Preview: `View > Social Media Preview`'
+instructions: "For Social Media & Google Search results. Preview: `View > Social Media Preview`\r\nWird auf den Kacheln dargestellt."
 name: 'Google Text'
 searchable: false
 settings:

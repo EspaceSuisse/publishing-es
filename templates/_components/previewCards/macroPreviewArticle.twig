@@ -1,0 +1,44 @@
+{% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage) %}
+
+	{% import '_macros/macroImage' as macro %}
+	{% import '_macros/macroPostDate' as macroPostDate %}
+	{% import '_macros/macroCatOverview' as macroCat %}
+
+
+	{% set image = queryParam.fImgMono.one() ?? null %}
+	{% set catGenre = queryParam.fCatGenre.all() %}
+	{% set catSubject = queryParam.fCatSubject.all() %}
+	{% set noImg = image ? false : true %}
+
+	{# if there is a catchy title use this. otherwise fallback to regular title #}
+	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
+
+	<article class="previewCard previewArticle {{ classCardParam }}">
+		{% if image %}
+		
+			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
+				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
+			</a>
+
+		{% endif %}
+
+
+		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
+			<div class="previewMetaHeader">
+				{{ macroPostDate.postDate(queryParam) }}
+				<div class="tagList">
+					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
+					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}
+				</div>
+				
+			</div>
+			<h2 class="previewTitle">
+				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
+			</h2>
+			<p class="lead">{{ queryParam.fSeoDescription}}</p>
+			<div class="previewMetaFooter">
+				{% include "_components/articlePreviewSunset.twig" %}
+			</div>
+		</div>
+	</article>
+{% endmacro %}

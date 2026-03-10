@@ -1,0 +1,38 @@
+{# Determine the current element (entry, category, product, etc.) #}
+{% set currentElement = entry ?? category ?? product ?? null %}
+
+{# Get current URL parameters #}
+{% set queryParams = craft.app.request.getQueryParams() %}
+
+{% if currentElement %}
+	{% for site in craft.app.sites.allSites %}
+
+		{% set localized = craft.categories()
+            .id(currentElement.id)
+            .site(site.handle)
+            .one()
+        %}
+
+		{# If no category found, try entries instead #}
+		{% if not localized %}
+			{% set localized = craft.entries()
+                .id(currentElement.id)
+                .site(site.handle)
+                .one()
+            %}
+		{% endif %}
+
+		{% set isActive = craft.app.language == site.language %}
+
+		{% if localized and localized.enabled %}
+			{% set localizedUrl = queryParams|length ? localized.url ~ '?' ~ queryParams|url_encode : localized.url %}
+			
+			<li class="navToplevelLink langSwitcher {{ isActive ? 'isActive' : '' }}">
+				{# Create a link to the localized version of the current element with query params #}
+				<a href="{{ localizedUrl }}">
+					<span class="buttonTxt">{{ site.language |replace({'de-CH': 'de', 'fr-CH': "fr"}) }}</span>
+				</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+{% endif %}

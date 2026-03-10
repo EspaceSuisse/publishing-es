@@ -26,3 +26,7 @@ ul {
 picture {
     display: block;
 }
+a, button {
+  transition: all var(--navSpeed) ease-in-out;
+  cursor: pointer;
+}

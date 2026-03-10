@@ -12,6 +12,7 @@ The blocks are defined in the matrix field in the CMS.
 {% set isSunset = articleSunset < now %}
 {% set daysLeft = isSunset ? 0 : now.diff(articleSunset).days %}
 {% set isPreview = craft.app.request.getParam('token') is not null %}
+{% set freeForAll = entry.fSwitch %}
 
 {# Default empty class #}
 {% set articleSunsetClass = '' %}
@@ -19,16 +20,21 @@ The blocks are defined in the matrix field in the CMS.
 {# Check if user is logged in #}
 {% set isLoggedIn = craft.app.user.identity is not null %}
 
+{# Check if article has Image #}
+{% set hasNoImage = entry.fImgMono.one() is null %}
+{% set noImageSubjectColor = entry.fCatGenre.one() %}
+
 {# Update based on logic - don't sunset if logged in #}
-{% if not isPreview and not isLoggedIn %}
+{% if not isPreview and not isLoggedIn and not freeForAll %}
     {% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
 {% endif %}
 
 {% block content %}
 	<article>		
-		<header class="articleHead">
-			{% include "_components/brandHeader.twig" %}
-			{% include "_components/articleHead" %}
+		<header class="pageHead articleHead {{ hasNoImage ? 'noImg' : '' }}">
+			{% include "_components/header/headerBrand" %}
+			{% include "_components/header/headerArticle" %}
+			{% if hasNoImage %}<div class="colorHead" style="background-color: {{ noImageSubjectColor.fColor }};"></div>{% endif %}
 		</header>
 		<div class="gridArticle {{ articleSunsetClass }} articleContent">
 			{% include "_components/articleMatrix" %}
@@ -36,4 +42,5 @@ The blocks are defined in the matrix field in the CMS.
 		{% include "_components/articleCtaCall" %}
 		{% include "_components/articleMoreArticles" %}
 	</article>
+	{% include "_components/lightboxInitiator" %}
 {% endblock %}

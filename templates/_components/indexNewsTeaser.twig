@@ -1,12 +1,23 @@
-{% import '_components/previewCards/macroArticlePreview' as macroArticlePreview %}
+{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
 
-<section class="teaser newsTeaser">
-	{% for item in newsEntries %}
-		{{ macroArticlePreview.listMacro(item,'gridSpan12', 'gridSpan6', 'gridSpan6') }}
-	{% endfor %}
-	{% if goToAllNews and newsEntries | length %}
-		<div class="gridSpan4">
-			<a href="{{ goToAllNews.url }}" class="btn gridSpan4">{{ goToAllNews.title }}</a>
-		</div>
-	{% endif %}
+{% set listingNews = craft.entries().section('listingNews').one() %}
+
+<section class="newsTeaser">
+	<div class="listingGrid">
+		{% for item in newsEntries %}
+
+			{% if loop.first %}
+				<h3 class="gridSpan12 topicTitle">{{ listingNews.title }}</h3>
+			{% endif %}
+			
+			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4') }}
+
+			{% if loop.last %}
+				<div class="gridSpan12 gridMdSpan6 gridMdStart4 newsTeaserFooter">
+					<a href="{{ listingNews.slug }}" class="btn gridSpan4">{{ 'Zu den' | t }} {{ listingNews.title }}</a>
+				</div>
+			{% endif %}
+
+		{% endfor %}
+	</div>
 </section>

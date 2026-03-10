@@ -16,12 +16,12 @@ footer {
     }
 
     a {
-        text-decoration: none;
         color: var(--txtInvertColor);
-
+        text-decoration-thickness: var(--linkDescorationThikness);
         &:hover,
         &:visited {
-            color: var(--linkTxtHoverColor);
+            text-decoration: none;
+            color: var(--linkTxtColorVisited);
         }
     }
 
@@ -71,4 +71,9 @@ footer {
             margin-bottom: 20px;
         }
     }
+    @media (min-width: 52rem) {
+    input {
+        align-self: flex-start;
+    }
+}
 }

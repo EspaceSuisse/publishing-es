@@ -1,11 +1,9 @@
 {# Grabs the data from the seomaticPlugin site settings social media in seomatic #}
 {% set esSocialMedia = seomatic.site.sameAsLinks %}
 
-
-<h2>{{ 'Social Media Feeds' | t }}</h2>
 <ul>
 	{% for item in esSocialMedia %}
 		<li><a href="{{ item.url }}">{{ item.siteName }}</a></li>
 	{% endfor %}
-	<li><a href="{{ siteUrl ~ 'feeds/articles-' ~ craft.app.language |slice(0,2) }}.rss">RSS ({{ craft.app.language }})</a></li>
+	<li><a href="{{ siteUrl ~ 'feeds/feed-' ~ craft.app.language |slice(0,2) }}.rss">RSS ({{ craft.app.language }})</a></li>
 </ul>

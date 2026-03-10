@@ -1,0 +1,25 @@
+{% set authorQuery = entry.authors %}
+
+<ul class="articleAuthors gridStart2 gridSpan10">
+	{% for item in authorQuery %}
+
+        {# Construct relative url because authors have no url functionality #}
+        {% if currentSite.language == 'de-CH' %}
+            {% set authorUrl = 'autoren/' ~ item.username %}
+        {% else %}
+            {% set authorUrl = 'auteurs/' ~ item.username %}
+        {% endif %}
+
+		<li>
+			{% if item.photo %}
+
+				{# Transform the Authors Portrait #}
+    			{% set portraitImage = craft.imagerx.transformImage(item.photo, 'authorPortrait')[0] %}
+
+				<img src="{{ portraitImage.url }}" alt="{{ item.name }}">
+			{% endif %}
+				<span class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</span>
+				{# <a href="{{ url(authorUrl) }}" class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</a> #}
+		</li>
+	{% endfor %}
+</ul>

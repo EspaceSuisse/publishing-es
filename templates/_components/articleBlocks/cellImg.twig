@@ -3,11 +3,25 @@
 
 {% set image = block.fImgI18n.all() %}
 
-
-
 {% for asset in image %}
+
+    
+
     <figure class="articleImg">
-        {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
+
+        {% if asset.extension == 'svg' %}
+            <img src="{{ asset.url }}" alt="">
+        {% else %}
+
+            {# Transform for lightbox - using the articleImageLightbox named transform #}
+            {% set lightboxImage = craft.imagerx.transformImage(asset, 'articleImageLightbox')[0] %}
+            
+            <a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
+                {{ macro.articleImage(asset, 'articleImage', 'imgArticle') }}
+            </a>
+
+        {% endif %}
+
         {{ figCaption.figCaption(asset, block.textSimpleI18n, asset.fSwitch) }}
     </figure>
 {% endfor %}

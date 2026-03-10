@@ -4,7 +4,7 @@ use craft\helpers\App;
 
 return [
     '*' => [
-        'cachingEnabled' => true,
+        'cachingEnabled' => false,
         'warmCacheAutomatically' => true,
         'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
@@ -12,13 +12,17 @@ return [
             ['uriPattern' => '.*'],
         ],
         'excludedUriPatterns' => [
-            ['uriPattern' => '^/knock-knock/who-is-there'],
+            ['uriPattern' => '^actions/knock-knock'],
+            ['uriPattern' => '^knock-knock'],
         ],
     ],
     'dev' => [
         'cachingEnabled' => false,
     ],
     'staging' => [
+        'cachingEnabled' => false,
+    ],
+    'production' => [
         'cachingEnabled' => false,
     ],
 ];
