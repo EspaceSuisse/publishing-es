@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -16,7 +17,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -25,7 +25,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -38,49 +37,52 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-08-06T14:03:14+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Google Image'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b3c863b4-68f3-498a-bb26-9dd86a79a959
-            userCondition: null
-            warning: null
-            width: 25
-          -
             dateAdded: '2024-12-18T10:44:16+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fe25a13d-22f3-4f98-9d62-8cfbbb56c3b1
             userCondition: null
             warning: null
-            width: 75
+            width: 100
+          -
+            dateAdded: '2026-02-04T14:31:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8b00b1ad-3829-48d0-b91f-f3a597e32588 # Google Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8d0736a-afdc-44a9-9758-813a54cb32f0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-02-04T14:48:03+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 80892196-8c5d-4f5a-a00d-3f4e2b8d9add
+            userCondition: null
           -
             dateAdded: '2025-11-19T08:36:29+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # ArticleBlocks
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -98,12 +100,11 @@ fieldLayouts:
             dateAdded: '2024-12-18T10:51:17+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 91b81ff9-4af2-440b-b42a-16821f2d0d5c # SEO Page
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -114,6 +115,7 @@ fieldLayouts:
         name: Google
         uid: c068604f-53b1-4979-915c-f4215695ea3a
         userCondition: null
+    thumbFieldKey: null
 handle: tPageSet
 hasTitleField: true
 icon: null
@@ -125,3 +127,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

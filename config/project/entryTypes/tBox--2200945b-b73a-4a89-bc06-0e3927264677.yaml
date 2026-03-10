@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -16,7 +17,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -25,7 +25,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -38,15 +37,30 @@ fieldLayouts:
             warning: null
             width: 75
           -
+            dateAdded: '2026-02-04T07:41:35+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: eb32810d-6901-4788-b8bb-d4ca4124652b # Headline Level
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 04922d65-0387-4009-b703-c5a9af6616dc
+            userCondition: null
+            warning: null
+            width: 25
+          -
             dateAdded: '2025-09-03T13:13:26+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
             handle: null
-            includeInCards: false
             instructions: null
             label: 'Ausgeklappt?'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -58,12 +72,11 @@ fieldLayouts:
             dateAdded: '2024-12-18T11:38:19+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -81,12 +94,11 @@ fieldLayouts:
             dateAdded: '2025-05-13T07:38:29+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -98,12 +110,11 @@ fieldLayouts:
             dateAdded: '2025-05-13T07:38:29+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -115,12 +126,11 @@ fieldLayouts:
             dateAdded: '2025-05-21T08:08:41+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -132,12 +142,11 @@ fieldLayouts:
             dateAdded: '2025-08-26T09:29:19+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4d9d87d3-4cd6-486b-9a9b-35247259c4c3 # Styling
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -148,6 +157,7 @@ fieldLayouts:
         name: Layout
         uid: 435d7c9d-1e64-4c0f-8867-202e1a3658d3
         userCondition: null
+    thumbFieldKey: null
 handle: tBox
 hasTitleField: true
 icon: cart-flatbed-boxes
@@ -159,3 +169,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -6,4 +6,5 @@
 		<li><a href="{{ item.url }}">{{ item.siteName }}</a></li>
 	{% endfor %}
 	<li><a href="{{ siteUrl ~ 'feeds/feed-' ~ craft.app.language |slice(0,2) }}.rss">RSS ({{ craft.app.language }})</a></li>
+	<li><a href="/feeds">Feeds</a></li>
 </ul>

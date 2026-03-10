@@ -1,4 +1,16 @@
-{# this is the root template. All other templates inherit this and the content is printed in block content #}
+{# Tell the browser to cache this page for X time #}
+{% if craft.app.env != 'dev' %}
+	{% set expiry = now|date_modify('+1 hour') %}
+	{% set seconds = expiry|date('U') - now|date('U') %}
+	{% set deployVersion = getenv('DEPLOY_VERSION') %}
+
+	{% header "ETag: \"" ~ deployVersion ~ "\"" %}
+	{% header "Cache-Control: public, max-age=" ~ seconds ~ ", must-revalidate" %}
+	{% header "Expires: " ~ expiry|datetime('r') %}
+{% endif %}
+
+
+{# All other templates inherit this and the content is printed in block content #}
 
 {# Category naming globally avalable #}
 {% set labelSubject = 'Thema' | t %}
@@ -22,12 +34,31 @@
 {% set handle = entry.section.handle ?? category.group.handle ?? null %}
 {% set bodyClass = 'body' ~ handle|ucfirst %}
 
+{% set articleEagerLoad = [
+    'imgAufmacher',
+    'imgAufmacher.fTagProvider',
+    'imgAufmacher.fImgLicence',
+    'imgAufmacher.fmImgSource',
+    'fCatGenre',
+    'fCatSubject',
+] %}
+
+{# is used in sidebar #}
+{% set articleIds = craft.entries().section('article').ids() %}
+
+{# is used in sidebar #}
+{% set latestNews = craft.entries()
+    .section('news')
+    .limit(3)
+	.with(articleEagerLoad)
+    .all() %}
+
 <!doctype html>
 
 <html lang="{{ craft.app.language }}">
 
 	{% include "_components/siteMeta" %}
-	{% include "_components/catColorChecker.twig" %}
+	{% include "_dynamic/catColorChecker.twig" %}
 
 	<body class="{{ bodyClass }}">
 		<div id="app">
@@ -35,7 +66,7 @@
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
 		</div>
 		{% include "_components/footer/siteFooter" %}
-		{% include "_components/viewCount.twig" %}
+		{% include "_dynamic/viewCount.twig" %}
 		{% include "_components/siteDevBar" %}
 	</body>
 </html>

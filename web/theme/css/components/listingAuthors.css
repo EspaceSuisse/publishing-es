@@ -18,7 +18,12 @@
         gap: var(--layoutGap);
         justify-content: center;
         align-items: center;
-        .authorName {
+        p {
+            font-family: var(--font-display);
+            font-size: var(--font-size-M);
+            margin: 0;
+        }
+        .authorMeta {
             font-family: var(--font-default);
             font-size: var(--font-size-S);
         }

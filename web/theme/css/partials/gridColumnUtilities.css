@@ -28,6 +28,37 @@
 .gridSpan11 { grid-column-end: span 11; }
 .gridSpan12 { grid-column-end: span 12; }
 
+/* ============================
+   Small Tablet (Sm) ≥ 36rem
+============================ */
+@media (min-width: 36rem) {
+  .gridSmStart0  { grid-column-start: 0; }
+  .gridSmStart1  { grid-column-start: 1; }
+  .gridSmStart2  { grid-column-start: 2; }
+  .gridSmStart3  { grid-column-start: 3; }
+  .gridSmStart4  { grid-column-start: 4; }
+  .gridSmStart5  { grid-column-start: 5; }
+  .gridSmStart6  { grid-column-start: 6; }
+  .gridSmStart7  { grid-column-start: 7; }
+  .gridSmStart8  { grid-column-start: 8; }
+  .gridSmStart9  { grid-column-start: 9; }
+  .gridSmStart10 { grid-column-start: 10; }
+  .gridSmStart11 { grid-column-start: 11; }
+  .gridSmStart12 { grid-column-start: 12; }
+
+  .gridSmSpan1  { grid-column-end: span 1; }
+  .gridSmSpan2  { grid-column-end: span 2; }
+  .gridSmSpan3  { grid-column-end: span 3; }
+  .gridSmSpan4  { grid-column-end: span 4; }
+  .gridSmSpan5  { grid-column-end: span 5; }
+  .gridSmSpan6  { grid-column-end: span 6; }
+  .gridSmSpan7  { grid-column-end: span 7; }
+  .gridSmSpan8  { grid-column-end: span 8; }
+  .gridSmSpan9  { grid-column-end: span 9; }
+  .gridSmSpan10 { grid-column-end: span 10; }
+  .gridSmSpan11 { grid-column-end: span 11; }
+  .gridSmSpan12 { grid-column-end: span 12; }
+}
 
 /* ============================
    Tablet (Md) ≥ 48rem
@@ -92,4 +123,7 @@
   .gridLgSpan10 { grid-column-end: span 10; }
   .gridLgSpan11 { grid-column-end: span 11; }
   .gridLgSpan12 { grid-column-end: span 12; }
+}
+.gridSpanFull {
+  grid-column: 1 / -1;
 }

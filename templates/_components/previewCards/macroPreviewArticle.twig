@@ -5,7 +5,7 @@
 	{% import '_macros/macroCatOverview' as macroCat %}
 
 
-	{% set image = queryParam.fImgMono.one() ?? null %}
+	{% set image = queryParam.imgAufmacher[0] ?? null %}
 	{% set catGenre = queryParam.fCatGenre.all() %}
 	{% set catSubject = queryParam.fCatSubject.all() %}
 	{% set noImg = image ? false : true %}
@@ -25,7 +25,7 @@
 
 		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
 			<div class="previewMetaHeader">
-				{{ macroPostDate.postDate(queryParam) }}
+				{{ macroPostDate.postDate(queryParam.postDate, true) }}
 				<div class="tagList">
 					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
 					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}

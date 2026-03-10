@@ -1,9 +1,6 @@
 
 
-{% set querySubpages = craft.entries.section('subpages')
-    .with(['title','url'])
-    .all()
-%}
+{% set querySubpages = craft.entries.section('subpages').all() %}
 
 <footer>
 	<div class="listingGrid">

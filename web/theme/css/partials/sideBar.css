@@ -1,5 +1,4 @@
 .sideBar {
-  background-color: var(--colorES-brand-blue);
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -13,6 +12,7 @@
   .sideBar {
     height: 100vh;
     width: var(--siteSideBarWidth);
+    background-color: var(--colorES-brand-blue);
     flex-shrink: 0;
     flex-direction: column;
     justify-content: flex-start;

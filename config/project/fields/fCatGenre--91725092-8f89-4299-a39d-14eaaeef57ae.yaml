@@ -9,15 +9,14 @@ settings:
   defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 3
-  minRelations: 1
-  selectionLabel: '+ Rubrik'
-  showCardsInGrid: false
+  minRelations: null
+  selectionLabel: 'Rubrik hinzufügen'
   showSearchInput: false
   showSiteMenu: true
   source: 'group:76729e35-a9d2-4cf7-aef5-11bb15688a6f' # Rubrik
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: list
+  viewMode: list-inline
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Categories
