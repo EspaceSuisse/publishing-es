@@ -8,44 +8,26 @@
 <script src="https://unpkg.com/maplibre-gl@5.7.1/dist/maplibre-gl.js"></script>
 
 
-{% set mapLatitude = block.fLat ?? '46.798591' %}
-{% set mapLongitude = block.fLong ?? '8.231772' %}
+{% set mapLatitude = block.fGpsSelector.latitude ?? '46.798591' %}
+{% set mapLongitude = block.fGpsSelector.longitude ?? '8.231772' %}
 {% set mapZoom = block.fZoom ?? '10' %}
-{% set mapLayer = block.fPlainTxt %}
-{% set polygonPath = block.fCode.value ?? '' %}
-{% set markerEnabled = block.fSwitch ?? false %}
-{% set mapKey = block.id %}
+{% set additionalLayer = block.fSwisstopoLayer %}
+{% set baseLayer = block.fBaseMap ?? 'pixelkarte-farbe' %}
+{% set mapID = block.id %}
 
-{# add markers if they are present #}
-{% set mapMarkers %}
-    {% if block.fMxMarker %}
-
-        const markers = [
-            {% for item in block.fMxMarker %}
-                {
-                    coords: [{{ item.fLong }}, {{ item.fLat }}],
-                    text: '{{ item.title }}'
-                },
-            {% endfor %}
-        ];
-
-        markers.forEach(m => {
-            const popup = new maplibregl.Popup({ offset: 25 }).setText(m.text);
-            const randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-            new maplibregl.Marker({ color: randomColor})
-                .setLngLat(m.coords)
-                .setPopup(popup)
-                .addTo(map);
-        });
-
-    {% endif %}
-{% endset %}
-
+<pre>
+    Lat: {{ mapLatitude }}
+    Long: {{ mapLongitude }}
+    Zoom: {{ mapZoom }}
+    Base Layer: {{ baseLayer }}
+    Additional Layer: {{ additionalLayer }}
+    ID: {{ mapID }}
+</pre>
 
 {# set base map style #}
 {%- set baseMapLayer -%}
-    {%- if block.fBaseMap -%}
-        {%- switch block.fBaseMap -%}
+    {%- if baseLayer -%}
+        {%- switch baseLayer -%}
             {%- case "pixelkarte-farbe" -%}
                 'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.basemap.vt/style.json'
             {%- case "swissimage" -%}
@@ -58,7 +40,7 @@
 
 {# set additional map data layer #}
 {% set mapDataLayer %}
-    {% if block.fPlainTxt %}
+    {% if additionalLayer %}
         map.on('load', () => {
             map.addSource('wms-source', {
                 'type': 'raster',
@@ -66,7 +48,7 @@
                     'https://wms.geo.admin.ch/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
                     '&FORMAT=image/png' +
                     '&TRANSPARENT=true' +
-                    '&LAYERS={{ block.fPlainTxt }}' +
+                    '&LAYERS={{ additionalLayer }}' +
                     '&CRS=EPSG:3857' +
                     '&WIDTH=256&HEIGHT=256' +
                     '&BBOX={bbox-epsg-3857}'
@@ -86,69 +68,12 @@
     {% endif %}
 {% endset %}
 
-{# set polygon lines #}
-{# THis generates the polygon or circle lines drawn on the map in polyigon matrix fields #}
-{% set polygonLines %}
-    map.on('load', () => {
-        {% for item in block.fPolygons %}
-            // Unique source id
-            map.addSource('polygon-source-{{ loop.index }}', {
-                'type': 'geojson',
-                'data': {
-                    "type": "FeatureCollection",
-                    "features": {{ item.fCode.value | raw }}
-                }
-            });
-            {% if 'circle' in item.fCode.value %}
-                // Circle layer (based on Point + radius)
-                map.addLayer({
-                    'id': 'circle-layer-{{ loop.index }}',
-                    'type': 'circle',
-                    'source': 'polygon-source-{{ loop.index }}',
-                    'paint': {
-                        'circle-radius': [
-                            '*',
-                            ['get', 'radius'],  // get the radius from GeoJSON
-                            0.1                 // multiply by pixel factor
-                        ],
-                        'circle-color': ['get', 'color'],
-                        'circle-opacity': 0.1,
-                        'circle-stroke-color': ['get', 'color'],
-                        'circle-stroke-width': 4,
-                    }
-                });
-            {% else %}
-                // Fill layer
-                map.addLayer({
-                    'id': 'polygon-fill-{{ loop.index }}',
-                    'type': 'fill',
-                    'source': 'polygon-source-{{ loop.index }}',
-                    'paint': {
-                        'fill-color': ['get', 'color'],   // use color from properties
-                        'fill-opacity': 0.4
-                    }
-                });
-                // Outline layer
-                map.addLayer({
-                    'id': 'polygon-outline-{{ loop.index }}',
-                    'type': 'line',
-                    'source': 'polygon-source-{{ loop.index }}',
-                    'paint': {
-                        'line-color': ['get', 'color'],  // same property
-                        'line-width': 2
-                    }
-                });
-            {% endif %}
-        {% endfor %}
-    });
-{% endset %}
-
-<div id="map-{{ mapKey }}" class="cellMap"></div>
+<div id="map-{{ mapID }}" class="cellMap"></div>
 
 {# Construct the whole map #}
 <script>
     (function() {
-        const mapId = 'map-{{ mapKey }}';
+        const mapId = 'map-{{ mapID }}';
         const storageKey = `mapState-${mapId}`;
 
         // --- Determine initial map state ---
@@ -188,10 +113,6 @@
             center: [initialLng, initialLat],
             zoom: initialZoom,
         });
-
-        {{ mapMarkers }}
-        {{ mapDataLayer }}
-        {{ polygonLines }}
 
         // disable scroll zoom
         map.scrollZoom.disable();

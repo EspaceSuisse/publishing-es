@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: fGpsSelector
+instructions: 'Diese Karte dient nur der GPS Auswahl. Sie zeigt nicht den richtigen Kartenlayer oder Zoomstufe'
+name: 'GPS Selector'
+searchable: false
+settings:
+  defaultCenterCoordinates: '52.3793773,4.8981'
+  defaultZoomLevel: '10'
+  googleApiKey: $GOOGLE_PLACES_API
+translationKeyFormat: null
+translationMethod: none
+type: nthmedia\entrygpscoordinates\fields\EntryCoordinates

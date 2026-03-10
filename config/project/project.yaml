@@ -1,4 +1,4 @@
-dateModified: 1773137132
+dateModified: 1773140954
 elementSources:
   craft\elements\Asset:
     -
@@ -329,6 +329,7 @@ meta:
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
+    e54c3a23-2a87-47f6-8a55-41b810c66028: 'GPS Selector' # GPS Selector
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'Headline Level' # Headline Level
     ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
@@ -341,6 +342,7 @@ meta:
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
     fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Bild # Bild
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
+    fc7aabc4-8124-48bd-b550-dd2d153afe0e: 'Swisstopo Layer' # Swisstopo Layer
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5: Bildquelle # Bildquelle
@@ -570,6 +572,10 @@ plugins:
     settings:
       additionalCss: ''
       cssFile: '@web/theme/css/components/backendCP.css'
+  entry-gps-coordinates:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   imager-x:
     edition: pro
     enabled: true
