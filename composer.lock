@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35c8e6d43786d59c99aea4f8f98d6b04",
+    "content-hash": "195a942f5a66a4524e85a36cd865b1c6",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3591,6 +3591,58 @@
                 }
             ],
             "time": "2026-03-10T09:55:26+00:00"
+        },
+        {
+            "name": "handplant/craft-geoman",
+            "version": "2.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/handplant/craft-geoman/zipball/52e72315b56c1daf0858dc3b1c4bc37e2ddf06aa",
+                "reference": "52e72315b56c1daf0858dc3b1c4bc37e2ddf06aa",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Craft Geoman",
+                "handle": "craft-geoman",
+                "developer": "webworker",
+                "developerUrl": "https://webworker.me",
+                "documentationUrl": "https://github.com/handplant/craft-geoman/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/handplant/craft-geoman/master/CHANGELOG.md",
+                "class": "handplant\\craftgeoman\\CraftGeoman"
+            },
+            "autoload": {
+                "psr-4": {
+                    "handplant\\craftgeoman\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "webworker",
+                    "homepage": "https://webworker.me"
+                }
+            ],
+            "description": "geometry editing tools",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft field",
+                "craft geoman",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/handplant/craft-geoman/blob/master/README.md",
+                "issues": "https://github.com/handplant/craft-geoman/issues"
+            },
+            "time": "2024-12-09T13:20:41+00:00"
         },
         {
             "name": "illuminate/collections",

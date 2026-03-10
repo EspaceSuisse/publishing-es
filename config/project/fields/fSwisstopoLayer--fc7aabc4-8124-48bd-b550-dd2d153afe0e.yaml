@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fSwisstopoLayer
-instructions: '[Karten-Zusatzlayer](https://wmts.geo.admin.ch/1.0.0/WMTSCapabilities.xml) `Identifier`'
+instructions: '[Karten-Zusatzlayer](https://api3.geo.admin.ch/rest/services/api/MapServer/layersTable) `Identifier`'
 name: 'Swisstopo Layer'
 searchable: false
 settings:

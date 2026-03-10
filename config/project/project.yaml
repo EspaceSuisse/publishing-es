@@ -1,4 +1,4 @@
-dateModified: 1773140954
+dateModified: 1773150917
 elementSources:
   craft\elements\Asset:
     -
@@ -307,6 +307,7 @@ meta:
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     a0163ce3-0645-430f-a846-4f6d20d6fb51: Licence # Licence
     a9c797df-ecf9-40a9-a1ce-daf522db66a6: 'Member Login' # Member Login
+    a9e662fd-d372-4978-a879-a0b4962a89c1: Marker # Marker
     a2101ab1-8df4-4168-bc8c-56af5a24badb: Switch # Switch
     a38688d7-396c-45ae-b8b7-46b401c5e71f: 'Link ' # Link 
     ad4265b0-d0a8-4b4c-a37b-bf310b170758: News # News
@@ -572,6 +573,10 @@ plugins:
     settings:
       additionalCss: ''
       cssFile: '@web/theme/css/components/backendCP.css'
+  craft-geoman:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   entry-gps-coordinates:
     edition: standard
     enabled: true

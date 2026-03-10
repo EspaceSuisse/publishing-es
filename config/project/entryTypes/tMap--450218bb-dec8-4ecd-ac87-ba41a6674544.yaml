@@ -9,6 +9,15 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.'
+            dateAdded: '2025-07-30T09:25:10+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 34804418-3e61-4fea-9980-eefabbacf537
+            userCondition: null
+            width: 100
+          -
             dateAdded: '2025-07-30T09:09:25+00:00'
             editCondition: null
             elementCondition: null
@@ -23,7 +32,7 @@ fieldLayouts:
             uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
             dateAdded: '2026-03-10T11:07:51+00:00'
             editCondition: null
@@ -55,32 +64,45 @@ fieldLayouts:
             uid: 0a39c45c-7d47-426d-9ab4-278d89d55ca4
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
-            dateAdded: '2026-03-10T11:00:55+00:00'
+            dateAdded: '2026-03-10T12:44:06+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d4bc07f7-c7d5-4060-84f0-e0cb5c2f7858
+            userCondition: null
+          -
+            dateAdded: '2026-03-10T12:43:42+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: e54c3a23-2a87-47f6-8a55-41b810c66028 # GPS Selector
+            fieldUid: fa1b164b-252f-4494-8e00-ef34899159fa # Latitude
             handle: null
             instructions: null
             label: null
             required: false
-            tip: 'Wähle den ungefähren Kartenausschnitt, den du zeigen willst.'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f5f0ceda-9c49-4937-ab10-ab87200d8ba4
+            uid: 18a7891a-f7ef-4a57-a8be-665ba5589d92
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
-            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.'
-            dateAdded: '2025-07-30T09:25:10+00:00'
-            displayInPane: true
+            dateAdded: '2026-03-10T12:43:42+00:00'
+            editCondition: null
             elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 34804418-3e61-4fea-9980-eefabbacf537
+            elementEditCondition: null
+            fieldUid: 004b97b7-ef5f-4e9e-a79e-0f94bebe89a8 # Longitude
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3256a5d-240c-411b-ac82-872af4755e0a
             userCondition: null
-            width: 100
+            warning: null
+            width: 50
         name: Content
         uid: de8accf5-1a04-48d6-b18e-0e31b1a003f0
         userCondition: null
@@ -88,11 +110,20 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) für die Marker'
+            dateAdded: '2026-03-10T11:50:59+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 85af41b1-2658-49e3-9eb2-f299738cbe00
+            userCondition: null
+            width: 100
+          -
             dateAdded: '2025-09-16T07:24:31+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: a9e662fd-d372-4978-a879-a0b4962a89c1
+            fieldUid: a9e662fd-d372-4978-a879-a0b4962a89c1 # Marker
             handle: null
             instructions: null
             label: null
@@ -124,6 +155,15 @@ fieldLayouts:
             uid: dd5305ab-1f52-4ab5-ad8b-73ab932edce3
             userCondition: null
             warning: null
+            width: 100
+          -
+            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.'
+            dateAdded: '2026-03-10T11:50:59+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 7143f05a-d3ea-4e44-a2bf-d329ed101655
+            userCondition: null
             width: 100
         name: 'Polygon Coordinates'
         uid: c2acb394-825c-4728-9b13-f2f9aa01b040

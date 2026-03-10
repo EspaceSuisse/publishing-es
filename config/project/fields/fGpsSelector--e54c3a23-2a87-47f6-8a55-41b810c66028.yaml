@@ -4,9 +4,10 @@ instructions: 'Diese Karte dient nur der GPS Auswahl. Sie zeigt nicht den richti
 name: 'GPS Selector'
 searchable: false
 settings:
-  defaultCenterCoordinates: '52.3793773,4.8981'
-  defaultZoomLevel: '10'
-  googleApiKey: $GOOGLE_PLACES_API
+  geomanMapHeight: 500
+  geomanMapLatitude: 47.99719
+  geomanMapLongitude: 7.85377
+  geomanMapZoom: 9
 translationKeyFormat: null
 translationMethod: none
-type: nthmedia\entrygpscoordinates\fields\EntryCoordinates
+type: handplant\craftgeoman\fields\Geoman
