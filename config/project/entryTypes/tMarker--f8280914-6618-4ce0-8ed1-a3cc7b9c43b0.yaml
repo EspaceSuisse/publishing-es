@@ -1,4 +1,3 @@
-allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -19,7 +18,7 @@ fieldLayouts:
             id: null
             inputType: null
             instructions: null
-            label: 'Marker Label'
+            label: null
             max: null
             min: null
             name: null
@@ -37,10 +36,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2026-03-10T12:45:03+00:00'
+            dateAdded: '2025-09-16T07:22:36+00:00'
             editCondition: null
             elementCondition: null
-            elementEditCondition: null
             fieldUid: fa1b164b-252f-4494-8e00-ef34899159fa # Latitude
             handle: null
             instructions: null
@@ -48,15 +46,14 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 40db72c4-86de-4897-b836-2fbf77b7d676
+            uid: 804ad87f-8cd6-4f50-bc2e-e183538deb79
             userCondition: null
             warning: null
             width: 50
           -
-            dateAdded: '2026-03-10T12:45:03+00:00'
+            dateAdded: '2025-09-16T07:22:36+00:00'
             editCondition: null
             elementCondition: null
-            elementEditCondition: null
             fieldUid: 004b97b7-ef5f-4e9e-a79e-0f94bebe89a8 # Longitude
             handle: null
             instructions: null
@@ -64,14 +61,13 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: da79fff3-ac07-482e-a34a-252d4cb988d1
+            uid: f0f89cf8-61c7-4765-aeec-f392bd52adaa
             userCondition: null
             warning: null
             width: 50
         name: Content
         uid: b4cc0488-d744-4e43-aad4-3e14b60c5ca7
         userCondition: null
-    thumbFieldKey: null
 handle: tMarker
 hasTitleField: true
 icon: null
@@ -83,4 +79,3 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'

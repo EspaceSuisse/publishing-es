@@ -18,6 +18,38 @@ fieldLayouts:
             userCondition: null
             width: 100
           -
+            dateAdded: '2025-05-21T06:46:08+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fa1b164b-252f-4494-8e00-ef34899159fa # Latitude
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 86127263-566f-4104-abd0-847eb16a4b8a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-05-21T06:46:08+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 004b97b7-ef5f-4e9e-a79e-0f94bebe89a8 # Longitude
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ed6634d3-6fa8-4e29-8353-695684a8e427
+            userCondition: null
+            warning: null
+            width: 50
+          -
             dateAdded: '2025-07-30T09:09:25+00:00'
             editCondition: null
             elementCondition: null
@@ -32,23 +64,7 @@ fieldLayouts:
             uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
             userCondition: null
             warning: null
-            width: 50
-          -
-            dateAdded: '2026-03-10T11:07:51+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: fc7aabc4-8124-48bd-b550-dd2d153afe0e # Swisstopo Layer
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 0ff79341-04d6-4911-89eb-b5b7ce9c7ab5
-            userCondition: null
-            warning: null
-            width: 50
+            width: 25
           -
             dateAdded: '2025-08-06T13:38:41+00:00'
             editCondition: null
@@ -64,42 +80,20 @@ fieldLayouts:
             uid: 0a39c45c-7d47-426d-9ab4-278d89d55ca4
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
-            dateAdded: '2026-03-10T12:44:06+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: d4bc07f7-c7d5-4060-84f0-e0cb5c2f7858
-            userCondition: null
-          -
-            dateAdded: '2026-03-10T12:43:42+00:00'
+            dateAdded: '2025-05-21T09:44:46+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: fa1b164b-252f-4494-8e00-ef34899159fa # Latitude
+            fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
-            instructions: null
-            label: null
+            instructions: 'Nimm den Zusatzlayer aus der [Swisstopo Liste](https://api3.geo.admin.ch/rest/services/api/MapServer/layersTable)'
+            label: 'Zusatz Layer'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 18a7891a-f7ef-4a57-a8be-665ba5589d92
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2026-03-10T12:43:42+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 004b97b7-ef5f-4e9e-a79e-0f94bebe89a8 # Longitude
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e3256a5d-240c-411b-ac82-872af4755e0a
+            uid: 2a7010d6-61b7-4715-a503-5a0836dfa01b
             userCondition: null
             warning: null
             width: 50
@@ -110,20 +104,11 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) für die Marker'
-            dateAdded: '2026-03-10T11:50:59+00:00'
-            displayInPane: true
-            elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 85af41b1-2658-49e3-9eb2-f299738cbe00
-            userCondition: null
-            width: 100
-          -
             dateAdded: '2025-09-16T07:24:31+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: a9e662fd-d372-4978-a879-a0b4962a89c1 # Marker
+            fieldUid: a9e662fd-d372-4978-a879-a0b4962a89c1
             handle: null
             instructions: null
             label: null
@@ -156,17 +141,30 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.'
-            dateAdded: '2026-03-10T11:50:59+00:00'
-            displayInPane: true
-            elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 7143f05a-d3ea-4e44-a2bf-d329ed101655
-            userCondition: null
-            width: 100
         name: 'Polygon Coordinates'
         uid: c2acb394-825c-4728-9b13-f2f9aa01b040
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-11T12:10:44+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
+            handle: null
+            instructions: 'Erkläre was man sieht weil ich zu schlecht im Programmieren bin als das ich Textmarker auf der Karte darstellen könnte.'
+            label: Kartenlegende
+            required: false
+            tip: 'Wird gleich dargestellt wie Bildlegende'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06704060-0a4d-46ec-bf65-d338178f3cf3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Legende
+        uid: e9833fbb-dd0b-42ea-bbd3-18f7519564b2
         userCondition: null
       -
         elementCondition: null

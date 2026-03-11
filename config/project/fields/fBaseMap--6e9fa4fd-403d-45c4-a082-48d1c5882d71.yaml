@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fBaseMap
-instructions: 'Wähle die Swisstopo Grundlagenkarte'
+instructions: null
 name: Basemap
 searchable: false
 settings:

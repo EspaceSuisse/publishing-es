@@ -1,4 +1,6 @@
-{# I very much appologie to you, future dev. This is absolute shit spaggheticode. but this garbage needs to work right now. #}
+{% import '_macros/macroFigCaption' as figCaption %}
+
+{# I very much apologize to you, future dev. This is absolute shit spaggheticode. but this garbage needs to work right now. #}
 
 {# https://maplibre.org/maplibre-gl-js/docs/ #}
 {# https://api3.geo.admin.ch/services/sdiservices.html#mapbox-vector-tiles #}
@@ -11,7 +13,7 @@
 {% set mapLatitude = block.fLat %}
 {% set mapLongitude = block.fLong %}
 {% set mapZoom = block.fZoom ?? '10' %}
-{% set additionalLayer = block.fSwisstopoLayer %}
+{% set additionalLayer = block.fPlainTxt ?? null %}
 {% set baseLayer = block.fBaseMap ?? 'pixelkarte-farbe' %}
 {% set mapID = block.id %}
 {% set markerHandle = block.fMxMarker %}
@@ -72,9 +74,14 @@
     }]) %}
 {% endfor %}
 
-
-<div id="map-{{ mapID }}" class="cellMap"></div>
-
+<figure>
+    <div id="map-{{ mapID }}" class="cellMapContainer"></div>
+    {% if block.textSimpleI18n %}
+        <figcaption>
+            <div class="caption">{{ block.textSimpleI18n }}</div>
+        </figcaption>
+    {% endif %}
+</figure>
 {# Construct the whole map #}
 <script>
     (function() {
