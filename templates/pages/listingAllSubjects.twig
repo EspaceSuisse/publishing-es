@@ -18,10 +18,7 @@
 
 	<div class="listingGrid">
 			{% for item in allItems %}
-				{% set hasEntries = craft.entries()
-					.relatedTo(item)
-					.exists()
-				%}
+				{% set hasEntries = craft.entries().relatedTo(item).exists() %}
 				{% if hasEntries %}
 					{{ macroPreview.listMacro(item,'previewGenre gridSpan12 gridSmSpan6 gridLgSpan4','gridColumnOne gridRowOne','gridColumnOne gridRowOne') }}
 				{% endif %}
