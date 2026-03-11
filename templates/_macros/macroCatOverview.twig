@@ -5,6 +5,7 @@
 {%- macro catOverview(catParam, classParam, sectionParam) -%}
 
 	{% import '_macros/macroImage' as macro %}
+	{% include "_dynamic/catColorChecker" %}
 
 	{% for item in catParam %}
 
@@ -14,9 +15,12 @@
 
 			<span class="tag {{ ' ' ~ classParam }}"> 
 				<a href="{{- item.url ~ sectionUrlSegment -}}" style="{{ inlineStyle }}">
-					{{- fullTitle -}}
+					<span class="tagLabel">{{- fullTitle -}}</span>
 				</a>
 			</span>
 
 	{%- endfor -%}
+
+	
+	
 {%- endmacro -%}
