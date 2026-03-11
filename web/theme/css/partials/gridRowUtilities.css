@@ -27,7 +27,9 @@
 .gridRowSpan10 { grid-row-end: span 10; }
 .gridRowSpan11 { grid-row-end: span 11; }
 .gridRowSpan12 { grid-row-end: span 12; }
-
+.gridRowOne {
+  grid-row: 1 / -1;
+}
 
 /* ============================
    Tablet (Md) ≥ 48rem

@@ -27,6 +27,9 @@
 .gridSpan10 { grid-column-end: span 10; }
 .gridSpan11 { grid-column-end: span 11; }
 .gridSpan12 { grid-column-end: span 12; }
+.gridColumnOne {
+  grid-column: 1 / -1;
+}
 
 /* ============================
    Small Tablet (Sm) ≥ 36rem
