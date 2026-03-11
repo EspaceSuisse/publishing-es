@@ -1,4 +1,4 @@
-dateModified: 1773137132
+dateModified: 1773150917
 elementSources:
   craft\elements\Asset:
     -
@@ -307,6 +307,7 @@ meta:
     91725092-8f89-4299-a39d-14eaaeef57ae: Rubrik # Rubrik
     a0163ce3-0645-430f-a846-4f6d20d6fb51: Licence # Licence
     a9c797df-ecf9-40a9-a1ce-daf522db66a6: 'Member Login' # Member Login
+    a9e662fd-d372-4978-a879-a0b4962a89c1: Marker # Marker
     a2101ab1-8df4-4168-bc8c-56af5a24badb: Switch # Switch
     a38688d7-396c-45ae-b8b7-46b401c5e71f: 'Link ' # Link 
     ad4265b0-d0a8-4b4c-a37b-bf310b170758: News # News
@@ -329,6 +330,7 @@ meta:
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
+    e54c3a23-2a87-47f6-8a55-41b810c66028: 'GPS Selector' # GPS Selector
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
     eb32810d-6901-4788-b8bb-d4ca4124652b: 'Headline Level' # Headline Level
     ee2b77e3-12d0-4d96-aafb-9ba5a79839f0: 'Listing News' # Listing News
@@ -341,6 +343,7 @@ meta:
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
     fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Bild # Bild
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
+    fc7aabc4-8124-48bd-b550-dd2d153afe0e: 'Swisstopo Layer' # Swisstopo Layer
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5: Bildquelle # Bildquelle
@@ -570,6 +573,14 @@ plugins:
     settings:
       additionalCss: ''
       cssFile: '@web/theme/css/components/backendCP.css'
+  craft-geoman:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  entry-gps-coordinates:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   imager-x:
     edition: pro
     enabled: true
