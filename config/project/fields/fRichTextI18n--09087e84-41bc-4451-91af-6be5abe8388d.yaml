@@ -7,11 +7,15 @@ settings:
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
-  ckeConfig: 2a01649b-ab6a-4edd-a8f9-130d7d06dc53 # Article
-  createButtonLabel: null
+  css: null
   defaultTransform: null
-  expandEntryButtons: false
   fullGraphqlData: false
+  headingLevels:
+    - 2
+    - 3
+    - 4
+  js: null
+  options: null
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -19,6 +23,18 @@ settings:
   showUnpermittedVolumes: false
   showWordCount: true
   sourceEditingGroups: '*'
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - link
+    - bulletedList
+    - numberedList
+    - sourceEditing
+    - subscript
+    - superscript
+    - removeFormat
   wordLimit: null
 translationKeyFormat: null
 translationMethod: language
