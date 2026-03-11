@@ -1,4 +1,4 @@
-{# I very much appologice to you, future dev. This is absolute shit spaggheticode. but this garbage needs to work right now. #}
+{# I very much appologie to you, future dev. This is absolute shit spaggheticode. but this garbage needs to work right now. #}
 
 {# https://maplibre.org/maplibre-gl-js/docs/ #}
 {# https://api3.geo.admin.ch/services/sdiservices.html#mapbox-vector-tiles #}
@@ -72,24 +72,6 @@
     }]) %}
 {% endfor %}
 
-{# construct Polygons #}
-{% set polygonData = [] %}
-{% for item in polygonHandle %}
-    {% set polygonData = polygonData|merge([item.fCode]) %}
-{% endfor %}
-
-<code style="font-size: 20px;">
-
-        Lat: {{ mapLatitude }}
-        Long: {{ mapLongitude }}
-        Zoom: {{ mapZoom }}
-        Base Layer: {{ baseLayer }}
-        Additional Layer: {{ additionalLayer }}
-        ID: {{ mapID }}
-        Marker Array: {{ markerData | json_encode() }}
-        Polygon Data: {{ dump(polygonData) }}
-
-</code>
 
 <div id="map-{{ mapID }}" class="cellMap"></div>
 
@@ -199,61 +181,61 @@
             });
         });
 
-        polygons
+        // construct and display poligon fields
         map.on('load', () => {
-
-            // --- Add polygons / circles ---
-            const polygonFeatures = {{ polygonData | json_encode() | raw }};
-
-            // Loop through each feature
-            polygonFeatures.forEach((feature, index) => {
-                // Add each as a GeoJSON source
-                const sourceId = `polygon-source-${index}`;
-                const layerId = `polygon-layer-${index}`;
-                
-                map.addSource(sourceId, {
-                    type: 'geojson',
-                    data: feature
-                });
-
-                // Determine layer type
-                if (feature.properties.type === 'polygon') {
-                    map.addLayer({
-                        id: layerId,
-                        type: 'fill',
-                        source: sourceId,
-                        layout: {},
-                        paint: {
-                            'fill-color': feature.properties.color || '#ff0000',
-                            'fill-opacity': 0.5
-                        }
-                    });
-
-                    // Optional: polygon border
-                    map.addLayer({
-                        id: `${layerId}-border`,
-                        type: 'line',
-                        source: sourceId,
-                        layout: {},
-                        paint: {
-                            'line-color': feature.properties.color || '#ff0000',
-                            'line-width': 2
-                        }
-                    });
-                } else if (feature.properties.type === 'circle') {
-                    map.addLayer({
-                        id: layerId,
-                        type: 'circle',
-                        source: sourceId,
-                        paint: {
-                            'circle-radius': feature.properties.radius || 10,
-                            'circle-color': feature.properties.color || '#ff0000',
-                            'circle-opacity': 0.5
-                        }
-                    });
+            map.addSource('polygons', {
+                type: 'geojson',
+                data: {
+                type: 'FeatureCollection',
+                features: [
+                    {% for item in polygonHandle %}
+                    {% set code = item.fCode|trim %}
+                    {% if code starts with '[' and code ends with ']' %}
+                        {{- code|slice(1, code|length - 2)|raw -}}
+                    {% else %}
+                        {{- code|raw -}}
+                    {% endif %},
+                    {% endfor %}
+                ]
                 }
             });
 
+            map.addLayer({
+                id: 'polygon-fills',
+                type: 'fill',
+                source: 'polygons',
+                filter: ['any', ['==', ['geometry-type'], 'Polygon'], ['==', ['geometry-type'], 'MultiPolygon']],
+                paint: { 'fill-color': ['coalesce', ['get', 'color'], '#f0c96a'], 'fill-opacity': 0.5 }
+            });
+
+            map.addLayer({
+                id: 'polygon-borders',
+                type: 'line',
+                source: 'polygons',
+                filter: ['any', ['==', ['geometry-type'], 'Polygon'], ['==', ['geometry-type'], 'MultiPolygon']],
+                paint: { 'line-color': ['coalesce', ['get', 'color'], '#f0c96a'], 'line-width': 2 }
+            });
+
+            // Circles (simple: radius interpreted as pixels)
+            map.addLayer({
+            id: 'circle-fills',
+            type: 'circle',
+            source: 'polygons',
+            filter: ['all',
+                ['==', ['geometry-type'], 'Point'],
+                ['==', ['get', 'type'], 'circle']
+            ],
+            paint: {
+                // color with fallback in case your HSL string isn't parsed
+                'circle-color': ['coalesce', ['get', 'color'], '#39d98a'],
+                'circle-opacity': 0.35,
+                // radius in PIXELS from your feature's "radius" property
+                'circle-radius': ['coalesce', ['get', 'radius'], 10],
+                // optional stroke
+                'circle-stroke-color': ['coalesce', ['get', 'color'], '#39d98a'],
+                'circle-stroke-width': 2
+            }
+            });
         });
 
         // --- Save map state on pan/zoom ---
