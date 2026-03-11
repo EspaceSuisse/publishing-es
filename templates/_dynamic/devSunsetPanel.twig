@@ -1,0 +1,12 @@
+
+    {% js %}
+        console.groupCollapsed('🟡 Article Sunset Debug');
+            console.table({
+                postDate: "{{ entry.postDate|date('d. M Y') }}",
+                sunsetDate: "{{ articleSunset|date('d. M Y') }}",
+                isSunset: {{ isSunset ? 'true' : 'false' }},
+                daysLeft: {{ daysLeft }},
+                freeForAll: {{ freeForAll ? 'true' : 'false' }}
+            });
+        console.groupEnd();
+    {% endjs %}

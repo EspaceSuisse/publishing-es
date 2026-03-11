@@ -1,27 +1,46 @@
 {% macro figCaption(assetParam, captionParam, hasSourceParam) %}
-	<figcaption>
-		{% if captionParam %}
-			<div class="caption">{{ captionParam }}</div>
-		{% endif %}
-        {% if hasSourceParam == false %}
+    {% import '_macros/macroFields' as macroFields %}
+
+    {% if captionParam or (hasSourceParam != true) %}
+        <figcaption>
+            {% if captionParam %}
+                <div class="caption">{{ captionParam }}</div>
+            {% endif %}
+            {% if hasSourceParam != true %}
+                {% set provider = assetParam.fTagProvider.one() %}
+                {% set licence = assetParam.fImgLicence.one() %}
+
                 <p class="assetSource">
+                    ({{ 'Quelle' | t }}:
+                    {% set sourceParts = [] %}
 
-                {# Get image source information #}
-                
-                
-                        {% for block in assetParam.fmImgSource.all() %}
-                                {% switch block.type %}
-                                        {% case "tMonolingual" %}
-                                                {{ block.fPlainTxt }}
-                                        {% case "tMultilingual" %}
-                                                {{ block.fPlainTextI18n }}
-                                {% endswitch %}
-                        {% endfor %}
+                    {%- for block in assetParam.fmImgSource.all() -%}
+                        {%- switch block.type -%}
+                            {%- case "tMonolingual" -%}
+                                {%- if block.fPlainTxt -%}
+                                    {%- set sourceParts = sourceParts | merge([block.fPlainTxt]) -%}
+                                {%- endif -%}
+                            {%- case "tMultilingual" -%}
+                                {%- set rtContent = macroFields.richText(block.fPlainTextI18n) -%}
+                                {%- if rtContent -%}
+                                    {%- set sourceParts = sourceParts | merge([rtContent]) -%}
+                                {%- endif -%}
+                        {%- endswitch -%}
+                    {%- endfor -%}
 
-                        {%- if assetParam.fTagProvider.one() -%}{{- ', ' ~ assetParam.fTagProvider.one() }}{%- endif -%}
-                        {%- if assetParam.fImgLicence.one() -%}{{- '–' ~ assetParam.fImgLicence.one() }}{%- endif -%}
+                    {%- if provider -%}
+                        {%- set sourceParts = sourceParts | merge([provider]) -%}
+                    {%- endif -%}
 
+                    {%- if licence -%}
+                        {%- set sourceParts = sourceParts | merge([licence]) -%}
+                    {%- endif -%}
+
+                    {{- sourceParts | join(', ') -}}
+                    )
                 </p>
-        {% endif %}
-	</figcaption>
+            {% endif %}
+        </figcaption>
+
+    {% endif %}
 {% endmacro %}

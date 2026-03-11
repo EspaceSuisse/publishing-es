@@ -79,3 +79,4 @@ permissions:
   - 'viewpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'viewpeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - viewusers
+  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel

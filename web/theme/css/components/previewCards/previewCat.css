@@ -1,0 +1,30 @@
+.previewCard {
+    &.previewCat {
+        .txtPart {
+            .lead {
+                color: var(--txtInvertColor);
+                text-decoration-line: underline;
+                text-decoration-color: var(--txtColor);
+                text-decoration-thickness: calc(var(--font-size-M) + 1rem);
+                text-underline-offset: calc(var(--font-size-M) * -1);
+                text-decoration-skip-ink: none;
+            }
+        }
+        .previewTitle {
+            display: inline;
+            a {
+                font-family: var(--font-monospace);
+                font-size: var(--font-size-S);
+                line-height: 1;
+                font-weight: normal;
+                padding: calc( var(--layoutGap) / 2 ) var(--layoutGap);
+                display: inline-block;
+            }
+        }
+        &.previewGenre {
+            .previewTitle a {
+                border-radius: 50px;
+            }
+        }
+    }
+}

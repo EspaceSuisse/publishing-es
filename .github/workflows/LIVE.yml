@@ -1,39 +1,38 @@
-name: Deploy ES Publishing to LIVE
+name: Deploy Craft CMS to LIVE
 
 on:
   push:
-    branches:
-      - LIVE
+    branches: [ LIVE ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare .ssh directory and Known Hosts
+      - name: Prepare SSH
         run: |
+          set -euxo pipefail
           mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.FTP_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Add SSH key
-        run: |
+          chmod 700 ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "${{ secrets.FTP_HOST }}" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
 
-      - name: Deploy files with rsync (no vendor)
+      - name: Rsync deploy (no vendor)
         env:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
-          SSH_PATH: ${{ secrets.PATH_LIVE }}
+          SSH_PATH: ${{ secrets.PATH_LIVE_HTDOCS }}
         run: |
+          set -euxo pipefail
           rsync -az --delete \
             --exclude='.git*' \
             --exclude='.github' \
             --exclude='.ddev' \
-            --exclude='*.jsx' \
             --exclude='.env*' \
             --exclude='.vscode' \
             --exclude='tests/' \
@@ -45,21 +44,28 @@ jobs:
             --exclude='*.log' \
             --exclude='vendor/' \
             -e "ssh -o StrictHostKeyChecking=no" \
-            ./ $SSH_USER@$SSH_HOST:$SSH_PATH
+            ./ "${SSH_USER}@${SSH_HOST}:${SSH_PATH}"
 
-      - name: Install Composer dependencies on remote
+      - name: Composer install (remote)
         env:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
-          SSH_PATH: ${{ secrets.PATH_LIVE }}
-          COMPOSER_BIN: ${{ secrets.COMPOSER_BIN }}
+          APP_PATH: ${{ secrets.PATH_LIVE_APP }}
         run: |
-          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && $COMPOSER_BIN install --no-dev --optimize-autoloader --no-interaction"
+          set -euxo pipefail
+          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && composer install --no-dev --prefer-dist --no-progress --no-interaction"
+      
+      - name: Set Deploy Version
+        run: |
+          DEPLOY_VERSION=$(date +%s)
+          echo "DEPLOY_VERSION=$DEPLOY_VERSION" >> .env
 
-      - name: Apply Craft project config (remote)
+      - name: Apply project config (remote)
         env:
           SSH_USER: ${{ secrets.FTP_USER }}
           SSH_HOST: ${{ secrets.FTP_HOST }}
-          SSH_PATH: ${{ secrets.PATH_LIVE }}
+          APP_PATH: ${{ secrets.PATH_LIVE_APP }}
         run: |
-          ssh $SSH_USER@$SSH_HOST "cd $SSH_PATH && ./craft project-config/apply --interactive=0"
+          set -euxo pipefail
+          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply"
+          ssh "${SSH_USER}@${SSH_HOST}" "cd '${APP_PATH}' && php craft project-config/apply"

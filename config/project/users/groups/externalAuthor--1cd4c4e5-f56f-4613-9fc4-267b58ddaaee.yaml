@@ -1,3 +1,14 @@
 description: null
 handle: externalAuthor
 name: 'External Author'
+permissions:
+  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'deletepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'deletepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'saveentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'savepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'savepeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'viewpeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel

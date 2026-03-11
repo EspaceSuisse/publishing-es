@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -16,7 +17,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -25,7 +25,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -38,19 +37,18 @@ fieldLayouts:
             warning: null
             width: 75
           -
-            dateAdded: '2025-09-24T13:26:25+00:00'
+            dateAdded: '2026-02-04T14:31:00+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            elementEditCondition: null
+            fieldUid: 8b00b1ad-3829-48d0-b91f-f3a597e32588 # Google Image
             handle: null
-            includeInCards: false
             instructions: null
-            label: 'Google Image'
-            providesThumbs: false
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2a3c79c5-3a47-449e-a323-e4a96ac875b6
+            uid: b6e16e41-18a5-408d-ab00-c7751d26d209
             userCondition: null
             warning: null
             width: 25
@@ -58,12 +56,11 @@ fieldLayouts:
             dateAdded: '2025-09-24T13:26:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -75,12 +72,11 @@ fieldLayouts:
             dateAdded: '2025-09-24T13:26:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -119,12 +115,11 @@ fieldLayouts:
             dateAdded: '2025-09-24T13:26:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 91b81ff9-4af2-440b-b42a-16821f2d0d5c # SEO Page
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -135,6 +130,7 @@ fieldLayouts:
         name: Google
         uid: b2c887e2-ba63-428a-a14a-813f6b5e54ea
         userCondition: null
+    thumbFieldKey: null
 handle: homepageSet
 hasTitleField: true
 icon: null
@@ -146,3 +142,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

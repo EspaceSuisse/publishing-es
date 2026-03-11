@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
-            includeInCards: false
             instructions: null
             label: Name
-            providesThumbs: false
             required: true
             tip: 'Z.b. Hans Huber'
             type: craft\fieldlayoutelements\CustomField

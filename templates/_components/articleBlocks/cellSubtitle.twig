@@ -1,1 +1,6 @@
-<{{ block.fHLevel }}>{{ block.title }}</{{ block.fHLevel }}>
+{% set level = block.fHLevel %}
+{% set anchorID = "subtitle-" ~ block.title | ascii | kebab %}
+   
+<{{ level }} id="{{ anchorID }}">
+    {{ block.title }} <a class="anchor" href="#{{ anchorID }}">#</a> 
+</{{ level }}>

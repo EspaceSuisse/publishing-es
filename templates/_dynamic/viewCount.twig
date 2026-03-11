@@ -1,0 +1,59 @@
+{% if getenv('CRAFT_ENVIRONMENT') != 'dev' %}
+
+    {% js %}
+
+        {% set elementId = null %}
+
+        {% if entry is defined %}
+            {% set elementId = entry.id %}
+        {% elseif category is defined %}
+            {% set elementId = category.id %}
+        {% endif %}
+
+
+        // Action URLs
+        const csrfTokenUrl = '/actions/blitz/csrf/token';
+        const incrementViewCountUrl = '/actions/view-count/increment';
+        const elementId = {{ elementId ?? 'null' }};
+
+        // Set view data
+        var data = {
+            'id': elementId
+        };
+
+        // Async function for incrementing the view count
+        async function incrementView() {
+            try {
+                
+                // Fetch the CSRF token
+                const csrfToken = await fetch(csrfTokenUrl).then(response => response.text());
+
+                // Compile request data
+                const requestData = {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-Token': csrfToken,
+                    },
+                };
+
+                // Get the response
+                const response = await fetch(incrementViewCountUrl, requestData);
+                const jsonResponse = await response.json();
+
+                console.log(jsonResponse);
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // Increment the view count
+        incrementView();
+
+    {% endjs %}
+    
+{% endif %}

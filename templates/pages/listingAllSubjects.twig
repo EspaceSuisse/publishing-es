@@ -1,0 +1,28 @@
+{% extends "_layouts/main" %}
+
+{% import '_components/previewCards/macroPreviewCat' as macroPreview %}
+
+{% block content %}
+
+	{% set allItems = craft.categories()
+		.group('catSubject')
+		.limit(null)
+		.all()
+	%}
+
+	<header class="pageHead subPageHead">
+		{% include "_components/header/headerBrand" %}
+		{% include "_components/header/headerPage" %}
+	</header>
+
+
+	<div class="listingGrid">
+			{% for item in allItems %}
+				{% set hasEntries = craft.entries().relatedTo(item).exists() %}
+				{% if hasEntries %}
+					{{ macroPreview.listMacro(item,'previewGenre gridSpan12 gridSmSpan6 gridLgSpan4','gridColumnOne gridRowOne','gridColumnOne gridRowOne') }}
+				{% endif %}
+			{% endfor %}
+	</div>
+
+{% endblock %}

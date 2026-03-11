@@ -1,12 +1,14 @@
 {% macro rssFeedImg(handleParam, transformKey) %}
 
+{% set defaultSite = craft.app.sites.getSiteByHandle('default') %}
+{% set defaultSiteUrl = defaultSite.baseUrl %}
 
 {% set transformedImages = craft.imagerx.transformImage(handleParam, transformKey) %}
 
 {% if handleParam %}
 
   <media:content 
-    url="{{ siteUrl |trim('/')  ~ transformedImages[0].url }}" 
+    url="{{ defaultSiteUrl |trim('/')  ~ transformedImages[0].url }}" 
     medium="image" 
     type="{{ transformedImages[0].mimeType }}" 
     width="{{ transformedImages[0].width }}" 
