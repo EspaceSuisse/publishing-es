@@ -13,6 +13,8 @@
             display: inline;
             a {
                 font-family: var(--font-monospace);
+                font-size: var(--font-size-S);
+                line-height: 1;
                 font-weight: normal;
                 padding: calc( var(--layoutGap) / 2 ) var(--layoutGap);
                 display: inline-block;

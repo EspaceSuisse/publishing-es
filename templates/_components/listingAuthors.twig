@@ -1,30 +1,44 @@
-{% set authorQuery = entry.authors %}
+{%- set authorQuery = entry.authors -%}
 
 <ul class="articleAuthors gridStart2 gridSpan10">
-	{% for item in authorQuery %}
-
+	{%- for item in authorQuery -%}
 		<li class="authorItem">
-			{% if item.photo %}
+			{%- if item.photo -%}
 
 				{# Transform the Authors Portrait #}
-    			{% set portraitImage = craft.imagerx.transformImage(item.photo, 'authorPortrait')[0] %}
+    			{%- set portraitImage = craft.imagerx.transformImage(item.photo, 'authorPortrait')[0] -%}
 
 				<img src="{{ portraitImage.url }}" alt="{{ item.name }}">
-			{% endif %}
+			{%- endif -%}
 				<div>
 					<p class="authorName">{{ item.name|replace({' ': '&nbsp;'})|raw }}</p>
 					<p class="authorMeta">
-						{% for cat in item.fTeam %}
-							{% if cat.fBlankUrlString %}
+						{%- if item.fPlainTextI18n2 -%}
+							<span class="authorEducation">
+								{{- item.fPlainTextI18n2 -}}
+							</span>
+						{%- endif -%}
+						{# {%- for cat in item.fTeam -%}
+							{%- if cat.fBlankUrlString -%}
 								<a class="authorTeam" href="{{ cat.fBlankUrlString }}">{{ cat.title ~ '.' }}</a>
-							{% else %}
+							{%- else -%}
 								<span class="authorTeam" >{{ cat.title ~ '.' }}</span>
+							{%- endif -%}
+						{%- endfor -%} #}
+						{%- if item.fPlainTextI18n -%}
+							<span class="authorFunction">
+								{{- ', ' ~ item.fPlainTextI18n -}}
+							</span>
+						{%- endif -%}
+						{% if item.isInGroup('espacesuisse') %}	
+							{% if entry.language == 'de-CH' %}
+								<a href="https://www.espacesuisse.ch/de/verband/organisation/geschaeftsstelle">EspaceSuisse</a></span>
+							{% else %}
+								<a href="https://www.espacesuisse.ch/fr/association/organisation/secretariat">EspaceSuisse</a></span>
 							{% endif %}
-						{% endfor %}
-						{% if item.fPlainTextI18n2 %}<span class="authorEducation">{{ item.fPlainTextI18n2 ~ ',' }}</span>{% endif %}
-						{% if item.fPlainTextI18n %}<span class="authorFunction">{{ item.fPlainTextI18n }}</span><br>{% endif %}
+						{% endif %}
 					</p>
 				</div>
 		</li>
-	{% endfor %}
+	{%- endfor -%}
 </ul>

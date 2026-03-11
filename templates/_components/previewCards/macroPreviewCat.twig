@@ -2,6 +2,7 @@
 
 	{% import '_macros/macroPostDate' as macroPostDate %}
 	{% import '_macros/macroImage' as macro %}
+	{% include "_dynamic/catColorChecker" %}
 
 
 	{% set image = queryParam.fImgMono.one() ?? null %}
@@ -22,7 +23,7 @@
 			</div>
 			<h4 class="previewTitle">
 				<a href="{{ queryParam.url }}" style="background-color: {{ queryParam.fColor ?? 'var(--colorES-brand-blue)' }};">
-					{{ queryParam.title }}
+					<span class="tagLabel">{{ queryParam.title }}</span>
 				</a>
 			</h4>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
