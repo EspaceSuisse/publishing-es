@@ -32,7 +32,7 @@
 
 {# Sets a body css class with the section or category handle for css toplevel scoping #}
 {% set handle = entry.section.handle ?? category.group.handle ?? null %}
-{% set bodyClass = 'body' ~ handle|ucfirst %}
+{% set bodyClass = 'body' ~ handle|capitalize %}
 
 {% set articleEagerLoad = [
     'imgAufmacher',

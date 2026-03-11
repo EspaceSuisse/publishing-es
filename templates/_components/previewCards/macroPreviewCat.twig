@@ -12,13 +12,13 @@
 
 		{% if image %}
 		
-			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
+			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam | raw  }}">
 				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 			</a>
 
 		{% endif %}
 
-		<div class="txtPart {{ classTxtParam }}">
+		<div class="txtPart {{ classTxtParam | raw }}">
 			<div class="previewMetaHeader">
 			</div>
 			<h4 class="previewTitle">
