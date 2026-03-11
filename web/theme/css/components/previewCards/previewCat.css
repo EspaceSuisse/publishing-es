@@ -7,7 +7,14 @@
         .txtPart {
             grid-row: 1 / -1;
             grid-column: 1 / -1;
-            align-items: flex-end;
+            .lead {
+                color: var(--txtInvertColor);
+                text-decoration-line: underline;
+                text-decoration-color: var(--txtColor);
+                text-decoration-thickness: calc(var(--font-size-M) + 1rem);
+                text-underline-offset: calc(var(--font-size-M) * -1);
+                text-decoration-skip-ink: none;
+            }
         }
         .previewTitle {
             display: inline;
