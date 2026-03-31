@@ -1,4 +1,4 @@
-dateModified: 1773231756
+dateModified: 1774955116
 elementSources:
   craft\elements\Asset:
     -
@@ -574,7 +574,7 @@ plugins:
   entry-gps-coordinates:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 1.0.2
   imager-x:
     edition: pro
     enabled: true
