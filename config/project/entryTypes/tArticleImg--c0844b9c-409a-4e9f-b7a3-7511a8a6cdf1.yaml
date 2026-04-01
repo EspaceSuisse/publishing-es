@@ -38,7 +38,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             uid: 35e68fec-8431-436b-b0d2-e7aa4ad4919d
             userCondition: null
-            warning: null
+            warning: 'Bildquelle nicht ins Legenden Feld schreiben. (Stattdessen: Doppelklick auf Bild und dort eintragen)'
             width: 75
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814

@@ -1,4 +1,4 @@
-.cellMap {
+.cellMapContainer {
     aspect-ratio: 16 / 9;
     box-shadow: var(--shadow);
 }

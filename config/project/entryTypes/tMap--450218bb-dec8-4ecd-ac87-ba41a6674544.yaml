@@ -18,22 +18,6 @@ fieldLayouts:
             userCondition: null
             width: 100
           -
-            dateAdded: '2025-07-30T09:09:25+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 6e9fa4fd-403d-45c4-a082-48d1c5882d71 # Basemap
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
-            userCondition: null
-            warning: null
-            width: 25
-          -
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
@@ -66,6 +50,22 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-30T09:09:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6e9fa4fd-403d-45c4-a082-48d1c5882d71 # Basemap
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
+            userCondition: null
+            warning: null
+            width: 25
+          -
             dateAdded: '2025-08-06T13:38:41+00:00'
             editCondition: null
             elementCondition: null
@@ -80,7 +80,7 @@ fieldLayouts:
             uid: 0a39c45c-7d47-426d-9ab4-278d89d55ca4
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
             dateAdded: '2025-05-21T09:44:46+00:00'
             editCondition: null
@@ -88,10 +88,10 @@ fieldLayouts:
             elementEditCondition: null
             fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
-            instructions: null
-            label: Kartenlayer
+            instructions: 'Nimm den Zusatzlayer aus der [Swisstopo Liste](https://api3.geo.admin.ch/rest/services/api/MapServer/layersTable)'
+            label: 'Zusatz Layer'
             required: false
-            tip: 'Layer aus der url kopieren: "ch.are.wohnungsinventar-zweitwohnungsanteil"'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2a7010d6-61b7-4715-a503-5a0836dfa01b
             userCondition: null
@@ -143,6 +143,28 @@ fieldLayouts:
             width: 100
         name: 'Polygon Coordinates'
         uid: c2acb394-825c-4728-9b13-f2f9aa01b040
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-11T12:10:44+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
+            handle: null
+            instructions: 'Erkläre was man sieht weil ich zu schlecht im Programmieren bin als das ich Textmarker auf der Karte darstellen könnte.'
+            label: Kartenlegende
+            required: false
+            tip: 'Wird gleich dargestellt wie Bildlegende'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06704060-0a4d-46ec-bf65-d338178f3cf3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Legende
+        uid: e9833fbb-dd0b-42ea-bbd3-18f7519564b2
         userCondition: null
       -
         elementCondition: null

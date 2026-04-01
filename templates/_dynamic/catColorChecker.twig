@@ -18,7 +18,7 @@
 			var contrastWhite = 1.05 / (luminance + 0.05);
 
 			label.style.color =
-				contrastBlack > contrastWhite ? "#000000" : "#ffffff";
+				contrastBlack > contrastWhite ? "var(--txtColor)" : "var(--txtInvertColor)";
 			});
 		}
 

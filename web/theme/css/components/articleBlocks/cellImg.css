@@ -9,9 +9,14 @@
     p {
         margin: 0;
     }
+    @media (max-width: 65rem) {
+        figcaption {
+            flex-direction: column;
 
-
-    figcaption {
+        }
+    }
+}
+figcaption {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -32,11 +37,3 @@
             opacity: 0.8;
         }
     }
-
-    @media (max-width: 65rem) {
-        figcaption {
-            flex-direction: column;
-
-        }
-    }
-}

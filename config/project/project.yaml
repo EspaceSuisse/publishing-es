@@ -1,4 +1,4 @@
-dateModified: 1773137132
+dateModified: 1774957046
 elementSources:
   craft\elements\Asset:
     -
@@ -240,8 +240,6 @@ meta:
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
     1f6d945b-d305-4fc1-be5f-9774e3768396: 'SEO Defaults' # SEO Defaults
     1fb49816-e800-4eb3-a679-27ea164fb72d: 'CTA Type' # CTA Type
-    2a01649b-ab6a-4edd-a8f9-130d7d06dc53: Article # Article
-    2b0cc015-5b68-4dc4-9f91-752d21224806: Reduced # Reduced
     02bbff76-fc9f-4cb1-b049-c4426dba23de: SidebarLinks # SidebarLinks
     2d4ea7fb-3050-435d-806e-46986d5c58d2: 'Inforum FR' # Inforum FR
     2d392e7b-19e3-42f2-bb21-f8710194fd3f: 'Plain Text' # Plain Text
@@ -345,7 +343,6 @@ meta:
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set
     fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5: Bildquelle # Bildquelle
     ff4cdf72-64ec-41a2-8781-1751cadd315c: Webmasters # Webmasters
-    ffa1be3d-bc59-42ca-b3ce-22e660c114d1: Simple # Simple
 plugins:
   anchors:
     edition: standard
@@ -558,7 +555,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.0.0.1
   codefield:
     edition: standard
     enabled: true
@@ -570,6 +567,14 @@ plugins:
     settings:
       additionalCss: ''
       cssFile: '@web/theme/css/components/backendCP.css'
+  craft-geoman:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  entry-gps-coordinates:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.2
   imager-x:
     edition: pro
     enabled: true
