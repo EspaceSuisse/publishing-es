@@ -51,7 +51,7 @@ fieldLayouts:
             uid: fe25a13d-22f3-4f98-9d62-8cfbbb56c3b1
             userCondition: null
             warning: null
-            width: 100
+            width: 75
           -
             dateAdded: '2026-02-04T14:31:38+00:00'
             editCondition: null
@@ -65,6 +65,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c8d0736a-afdc-44a9-9758-813a54cb32f0
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-04-01T13:18:49+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            handle: null
+            instructions: null
+            label: Lead
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a16f5665-b621-47a1-86ce-1875e80a9f60
             userCondition: null
             warning: null
             width: 100
