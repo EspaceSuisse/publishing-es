@@ -17,7 +17,7 @@ siteSettings:
     enabledByDefault: false
     hasUrls: true
     template: sections/news.twig
-    uriFormat: 'news/{slug}'
+    uriFormat: 'actualites/{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     enabledByDefault: false
     hasUrls: true

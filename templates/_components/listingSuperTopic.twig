@@ -12,8 +12,10 @@
             .section('article')
             .relatedTo(cat)
             .limit(4)
+            .with(articleEagerLoad)
             .all()
         %}
+        
         <div class="listingSuperTopic listingSection" style="background-color: {{ cat.fColor }};">
             <div class="listingGrid">
 

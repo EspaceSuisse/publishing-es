@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: fTeam
+instructions: null
+name: Team
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSearchInput: false
+  showSiteMenu: true
+  source: 'group:97cbec37-641a-47b3-b5e7-4924983b73f3' # Team
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list-inline
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

@@ -1,0 +1,26 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
+handle: listingAllGenres
+maxAuthors: 1
+name: 'Listing All Genres'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/listingAllGenres.twig
+    uriFormat: '{slug}'
+  5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/listingAllGenres.twig
+    uriFormat: '{slug}'
+type: single

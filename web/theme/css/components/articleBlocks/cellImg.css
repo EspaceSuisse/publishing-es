@@ -1,5 +1,6 @@
 .articleImg {
     position: relative;
+    padding-bottom: calc(var(--layoutGap) * 1.5);
 
     picture {
         display: block;
@@ -8,11 +9,21 @@
     p {
         margin: 0;
     }
+    @media (max-width: 65rem) {
+        figcaption {
+            flex-direction: column;
 
+        }
+    }
+}
+figcaption {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
 
-    figcaption {
         .caption {
             padding-top: 5px;
+
             p {
                 font-size: var(--font-size-S);
                 font-family: var(--font-default);
@@ -21,15 +32,8 @@
         }
 
         .assetSource {
-            font-size: var(--font-size-S);
+            font-size: var(--font-size-XS);
             font-family: var(--font-default);
             opacity: 0.8;
         }
     }
-    @media (max-width: 768px) {
-            figcaption {
-                flex-direction: column;
-                
-            }
-        }
-}

@@ -1,7 +1,0 @@
-{% set isHomepage = entry is defined and entry.section.handle == 'homepage' %}
-
-<li class="navToplevelLink navIcon {{ isHomepage ? 'isActive' : '' }}">
-	<a href="{{ siteUrl }}" aria-label="{{ 'Home' | t }}">
-		{{ svg('@webroot/theme/img/icon-home.svg')|raw }}
-	</a>
-</li>

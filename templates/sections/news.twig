@@ -7,6 +7,7 @@
 {% block content %}
 
 	{% set newsImg = entry.fImgI18n.one() ?? null %}
+	{% set authorShort = entry.authors | first %}
 
 	<article>
 		<header class="pageHead articleHead">
@@ -18,9 +19,11 @@
 			{# The articleMatrix component is flexible enough to handle news entries as well #}
 			{# We just need to ensure that the articleMatrix can handle entries from the news #}
 			{% include "_components/articleMatrix" %}
+			<span class="gridStart2">({{ authorShort |split(' ')|map(word => word|slice(0, 1))|join|upper }})</span>
 		</div>
 	</article>
 	<aside class="gridArticle articleContent">
 		{% include "_components/newsPrevNext" %}
 	</aside>
+	{% include "_dynamic/lightboxInitiator" %}
 {% endblock %}

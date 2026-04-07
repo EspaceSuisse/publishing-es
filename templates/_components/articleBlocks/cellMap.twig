@@ -1,4 +1,6 @@
+{% import '_macros/macroFigCaption' as figCaption %}
 
+{# I very much apologize to you, future dev. This is absolute shit spaggheticode. but this garbage needs to work right now. #}
 
 {# https://maplibre.org/maplibre-gl-js/docs/ #}
 {# https://api3.geo.admin.ch/services/sdiservices.html#mapbox-vector-tiles #}
@@ -8,44 +10,20 @@
 <script src="https://unpkg.com/maplibre-gl@5.7.1/dist/maplibre-gl.js"></script>
 
 
-{% set mapLatitude = block.fLat ?? '46.798591' %}
-{% set mapLongitude = block.fLong ?? '8.231772' %}
+{% set mapLatitude = block.fLat %}
+{% set mapLongitude = block.fLong %}
 {% set mapZoom = block.fZoom ?? '10' %}
-{% set mapLayer = block.fPlainTxt %}
-{% set polygonPath = block.fCode.value ?? '' %}
-{% set markerEnabled = block.fSwitch ?? false %}
-{% set mapKey = block.id %}
-
-{# add markers if they are present #}
-{% set mapMarkers %}
-    {% if block.fMxMarker %}
-
-        const markers = [
-            {% for item in block.fMxMarker %}
-                {
-                    coords: [{{ item.fLong }}, {{ item.fLat }}],
-                    text: '{{ item.title }}'
-                },
-            {% endfor %}
-        ];
-
-        markers.forEach(m => {
-            const popup = new maplibregl.Popup({ offset: 25 }).setText(m.text);
-            const randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-            new maplibregl.Marker({ color: randomColor})
-                .setLngLat(m.coords)
-                .setPopup(popup)
-                .addTo(map);
-        });
-
-    {% endif %}
-{% endset %}
+{% set additionalLayer = block.fPlainTxt ?? null %}
+{% set baseLayer = block.fBaseMap ?? 'pixelkarte-farbe' %}
+{% set mapID = block.id %}
+{% set markerHandle = block.fMxMarker %}
+{% set polygonHandle = block.fPolygons %}
 
 
 {# set base map style #}
 {%- set baseMapLayer -%}
-    {%- if block.fBaseMap -%}
-        {%- switch block.fBaseMap -%}
+    {%- if baseLayer -%}
+        {%- switch baseLayer -%}
             {%- case "pixelkarte-farbe" -%}
                 'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.basemap.vt/style.json'
             {%- case "swissimage" -%}
@@ -57,8 +35,8 @@
 {%- endset -%}
 
 {# set additional map data layer #}
-{% set mapDataLayer %}
-    {% if block.fPlainTxt %}
+{% set mapAdditionalLayer %}
+    {% if additionalLayer %}
         map.on('load', () => {
             map.addSource('wms-source', {
                 'type': 'raster',
@@ -66,7 +44,7 @@
                     'https://wms.geo.admin.ch/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap' +
                     '&FORMAT=image/png' +
                     '&TRANSPARENT=true' +
-                    '&LAYERS={{ block.fPlainTxt }}' +
+                    '&LAYERS={{ additionalLayer }}' +
                     '&CRS=EPSG:3857' +
                     '&WIDTH=256&HEIGHT=256' +
                     '&BBOX={bbox-epsg-3857}'
@@ -86,69 +64,28 @@
     {% endif %}
 {% endset %}
 
-{# set polygon lines #}
-{# THis generates the polygon or circle lines drawn on the map in polyigon matrix fields #}
-{% set polygonLines %}
-    map.on('load', () => {
-        {% for item in block.fPolygons %}
-            // Unique source id
-            map.addSource('polygon-source-{{ loop.index }}', {
-                'type': 'geojson',
-                'data': {
-                    "type": "FeatureCollection",
-                    "features": {{ item.fCode.value | raw }}
-                }
-            });
-            {% if 'circle' in item.fCode.value %}
-                // Circle layer (based on Point + radius)
-                map.addLayer({
-                    'id': 'circle-layer-{{ loop.index }}',
-                    'type': 'circle',
-                    'source': 'polygon-source-{{ loop.index }}',
-                    'paint': {
-                        'circle-radius': [
-                            '*',
-                            ['get', 'radius'],  // get the radius from GeoJSON
-                            0.1                 // multiply by pixel factor
-                        ],
-                        'circle-color': ['get', 'color'],
-                        'circle-opacity': 0.1,
-                        'circle-stroke-color': ['get', 'color'],
-                        'circle-stroke-width': 4,
-                    }
-                });
-            {% else %}
-                // Fill layer
-                map.addLayer({
-                    'id': 'polygon-fill-{{ loop.index }}',
-                    'type': 'fill',
-                    'source': 'polygon-source-{{ loop.index }}',
-                    'paint': {
-                        'fill-color': ['get', 'color'],   // use color from properties
-                        'fill-opacity': 0.4
-                    }
-                });
-                // Outline layer
-                map.addLayer({
-                    'id': 'polygon-outline-{{ loop.index }}',
-                    'type': 'line',
-                    'source': 'polygon-source-{{ loop.index }}',
-                    'paint': {
-                        'line-color': ['get', 'color'],  // same property
-                        'line-width': 2
-                    }
-                });
-            {% endif %}
-        {% endfor %}
-    });
-{% endset %}
+{# construct markers #}
+{% set markerData = [] %}
+{% for item in markerHandle %}
+    {% set markerData = markerData|merge([{
+        lat: item.fLat,
+        lng: item.fLong,
+        title: item.title
+    }]) %}
+{% endfor %}
 
-<div id="map-{{ mapKey }}" class="cellMap"></div>
-
+<figure>
+    <div id="map-{{ mapID }}" class="cellMapContainer"></div>
+    {% if block.textSimpleI18n %}
+        <figcaption>
+            <div class="caption">{{ block.textSimpleI18n }}</div>
+        </figcaption>
+    {% endif %}
+</figure>
 {# Construct the whole map #}
 <script>
     (function() {
-        const mapId = 'map-{{ mapKey }}';
+        const mapId = 'map-{{ mapID }}';
         const storageKey = `mapState-${mapId}`;
 
         // --- Determine initial map state ---
@@ -180,18 +117,16 @@
                 console.warn(`Failed to parse ${storageKey} from localStorage`, e);
             }
         }
-
+        
+        
         // --- Initialize the map ---
         const map = new maplibregl.Map({
             container: mapId,
             style: {{ baseMapLayer }},
             center: [initialLng, initialLat],
             zoom: initialZoom,
+            glyphs: "https://vectortiles.geo.admin.ch/fonts/{fontstack}/{range}.pbf"
         });
-
-        {{ mapMarkers }}
-        {{ mapDataLayer }}
-        {{ polygonLines }}
 
         // disable scroll zoom
         map.scrollZoom.disable();
@@ -204,6 +139,111 @@
         }));
 
         map.addControl(new maplibregl.FullscreenControl(), 'top-right');
+
+        // ADDITIONAL SWISSTOPO LAYER
+        {{ mapAdditionalLayer|raw }}
+
+        //makrers
+        map.on('load', () => {
+            const markers = {{ markerData | json_encode() | raw }};
+            const features = markers.map(m => ({
+                type: 'Feature',
+                geometry: { type: 'Point', coordinates: [m.lng, m.lat] },
+                properties: { title: m.title }
+            }));
+
+            // GeoJSON source for marker labels
+            map.addSource('marker-labels', {
+                type: 'geojson',
+                data: {
+                    type: 'FeatureCollection',
+                    features: features
+                }
+            });
+
+            // Add symbol layer at the **very top** to ensure visibility
+            map.addLayer({
+                id: 'marker-labels-layer',
+                type: 'symbol',
+                source: 'marker-labels',
+                layout: {
+                    'text-field': ['get', 'title'],
+                    'text-font': ['Frutiger Neue Italic'],
+                    'text-size': 14,
+                    'text-offset': [0, 1.5],
+                    'text-anchor': 'top'
+                },
+                paint: {
+                    'text-color': '#000000',
+                    'text-halo-color': '#ffffff',
+                    'text-halo-width': 1
+                }
+            }, map.getStyle().layers[map.getStyle().layers.length - 1].id); // force top
+
+            // Optional: add actual red dots
+            markers.forEach(m => {
+                new maplibregl.Marker()
+                    .setLngLat([m.lng, m.lat])
+                    .addTo(map);
+            });
+        });
+
+        // construct and display poligon fields
+        map.on('load', () => {
+            map.addSource('polygons', {
+                type: 'geojson',
+                data: {
+                type: 'FeatureCollection',
+                features: [
+                    {% for item in polygonHandle %}
+                    {% set code = item.fCode|trim %}
+                    {% if code starts with '[' and code ends with ']' %}
+                        {{- code|slice(1, code|length - 2)|raw -}}
+                    {% else %}
+                        {{- code|raw -}}
+                    {% endif %},
+                    {% endfor %}
+                ]
+                }
+            });
+
+            map.addLayer({
+                id: 'polygon-fills',
+                type: 'fill',
+                source: 'polygons',
+                filter: ['any', ['==', ['geometry-type'], 'Polygon'], ['==', ['geometry-type'], 'MultiPolygon']],
+                paint: { 'fill-color': ['coalesce', ['get', 'color'], '#f0c96a'], 'fill-opacity': 0.5 }
+            });
+
+            map.addLayer({
+                id: 'polygon-borders',
+                type: 'line',
+                source: 'polygons',
+                filter: ['any', ['==', ['geometry-type'], 'Polygon'], ['==', ['geometry-type'], 'MultiPolygon']],
+                paint: { 'line-color': ['coalesce', ['get', 'color'], '#f0c96a'], 'line-width': 2 }
+            });
+
+            // Circles (simple: radius interpreted as pixels)
+            map.addLayer({
+            id: 'circle-fills',
+            type: 'circle',
+            source: 'polygons',
+            filter: ['all',
+                ['==', ['geometry-type'], 'Point'],
+                ['==', ['get', 'type'], 'circle']
+            ],
+            paint: {
+                // color with fallback in case your HSL string isn't parsed
+                'circle-color': ['coalesce', ['get', 'color'], '#39d98a'],
+                'circle-opacity': 0.35,
+                // radius in PIXELS from your feature's "radius" property
+                'circle-radius': ['coalesce', ['get', 'radius'], 10],
+                // optional stroke
+                'circle-stroke-color': ['coalesce', ['get', 'color'], '#39d98a'],
+                'circle-stroke-width': 2
+            }
+            });
+        });
 
         // --- Save map state on pan/zoom ---
         map.on('moveend', () => {

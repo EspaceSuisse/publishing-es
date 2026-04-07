@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -30,10 +28,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

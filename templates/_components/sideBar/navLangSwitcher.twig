@@ -1,6 +1,9 @@
 {# Determine the current element (entry, category, product, etc.) #}
 {% set currentElement = entry ?? category ?? product ?? null %}
 
+{# Get current URL parameters #}
+{% set queryParams = craft.app.request.getQueryParams() %}
+
 {% if currentElement %}
 	{% for site in craft.app.sites.allSites %}
 
@@ -21,15 +24,16 @@
 
 		{% set isActive = craft.app.language == site.language %}
 
-		
-
 		{% if localized and localized.enabled %}
-			<li class="navToplevelLink langSwitcher {{ isActive ? 'isActive' : '' }}">
-				{# Create a link to the localized version of the current element #}
-				<a href="{{ localized.url }}">
-					<span class="buttonTxt">{{ site.language |replace({'de-CH': 'de', 'fr-CH': "fr"}) }}</span>
+			{% set localizedUrl = queryParams|length ? localized.url ~ '?' ~ queryParams|url_encode : localized.url %}
+			
+			<li class="langSwitcher {{ isActive ? 'isActive' : '' }}">
+				{# Create a link to the localized version of the current element with query params #}
+				<a href="{{ localizedUrl }}">
+					{{ site.language |replace({'de-CH': 'de', 'fr-CH': "fr"}) }}
 				</a>
 			</li>
 		{% endif %}
+
 	{% endfor %}
 {% endif %}

@@ -1,8 +1,32 @@
 .articleTable {
-    .item {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-        padding: var(--layoutGap);
-        border-bottom: 1px solid var(--txtColor);
+    border-collapse: collapse;
+    tr {
+        td, th {
+            color: var(--txtColor);
+            font-size: var(--font-size-S);
+            font-family: var(--font-default);
+            text-align: left;
+            padding: calc(var(--airGap) / 7);
+            a {
+                color: var(--txtColor);
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        th {
+            border: solid 2px black;
+            font-family: var(--font-display);
+        }
+
+        td {
+            border: solid 1px gray;
+            &.title a {
+                font-family: var(--font-display);
+                font-weight: var(--font-bold);
+            }
+        }
     }
 }

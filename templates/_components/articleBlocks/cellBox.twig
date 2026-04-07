@@ -1,10 +1,15 @@
 {# This is the Article Element of the box in all articles #}
+{% import '_macros/macroFields' as macroFields %}
 
 {% set expanded = block.fSwitch %}
 {% set expandedClass = expanded ? 'expanded' : 'collapsed' %}
+{% set hLevel = block.fHLevel ?? 'h2' %}
 
-<div class="boxHead">
+{% set anchorID = "box-content-" ~ block.title | ascii | kebab %}
 
+<a class="anchor" href="#{{ anchorID }}">#</a>
+
+<div class="boxHead" id="{{ anchorID }}">
     
     {% if expandedClass == 'collapsed' %}
         <button 
@@ -12,48 +17,50 @@
             aria-expanded="{{ expanded ? 'true' : 'false' }}"
             aria-controls="cellBoxContent-{{ block.id }}">
 
-            <h3 class="cellCardTitle" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</h3>
+            <{{hLevel}} class="cellCardTitle" id="cellBoxTitle-{{ block.id }}">
+                {{ block.title }}
+            </{{hLevel}}>
             
         </button>
     {% else %}
 
-        <h3 class="cellCardTitle nonCollapsable" id="cellBoxTitle-{{ block.id }}">{{ block.title }}</h3>
+        <h3 class="cellCardTitle nonCollapsable" id="cellBoxTitle-{{ block.id }}">
+            {{ block.title }}
+        </h3>
 
     {% endif %}
 </div>
 
 <div class="cellBoxContent {{ expandedClass }}" id="cellBoxContent-{{ block.id }}" role="region" aria-labelledby="cellBoxTitle-{{ block.id }}">
-    <div class="cellBoxInner">{{ block.fRichTextI18n }}</div>
+    <div class="cellBoxInner">{{ macroFields.richText(block.fRichTextI18n) }}</div>
 </div>
 
 {% js %}
     document.addEventListener("click", (e) => {
-    if (e.target.matches(".cellBoxToggle")) {
-        const btn = e.target;
-        const content = document.getElementById(btn.getAttribute("aria-controls")); // <-- use aria-controls
+        if (e.target.matches(".cellBoxToggle")) {
+            const btn = e.target;
+            const content = document.getElementById(btn.getAttribute("aria-controls")); // <-- use aria-controls
 
-        if (content.classList.contains("expanded")) {
-            // collapse
-            content.style.height = content.scrollHeight + "px";
-            content.offsetHeight; // force reflow
-            content.style.height = "0px";
-            content.classList.remove("expanded");
-            btn.classList.remove("open");
-            btn.classList.add("closed");
-        } else {
-            // expand
-            content.style.height = content.scrollHeight + "px";
-            content.classList.add("expanded");
-            btn.classList.remove("closed");
-            btn.classList.add("open");
+            if (content.classList.contains("expanded")) {
+                // collapse
+                content.style.height = content.scrollHeight + "px";
+                content.offsetHeight; // force reflow
+                content.style.height = "0px";
+                content.classList.remove("expanded");
+                btn.classList.remove("open");
+                btn.classList.add("closed");
+            } else {
+                // expand
+                content.style.height = content.scrollHeight + "px";
+                content.classList.add("expanded");
+                btn.classList.remove("closed");
+                btn.classList.add("open");
 
-            content.addEventListener("transitionend", function handler() {
-                content.style.height = "auto"; // reset to auto
-                content.removeEventListener("transitionend", handler);
-            });
+                content.addEventListener("transitionend", function handler() {
+                    content.style.height = "auto"; // reset to auto
+                    content.removeEventListener("transitionend", handler);
+                });
+            }
         }
-    }
-});
-
-
+    });
 {% endjs %}

@@ -9,14 +9,14 @@ settings:
   defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 3
-  minRelations: 1
-  selectionLabel: '+ Thema'
-  showCardsInGrid: false
-  showSiteMenu: false
+  minRelations: null
+  selectionLabel: 'Thema hinzufügen'
+  showSearchInput: false
+  showSiteMenu: true
   source: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: list
+  viewMode: list-inline
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Categories

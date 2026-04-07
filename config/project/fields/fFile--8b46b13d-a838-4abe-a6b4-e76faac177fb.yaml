@@ -22,13 +22,13 @@ settings:
   restrictedLocationSource: 'volume:4f2a2908-da4b-46df-b9ab-a5a6d8078286' # Downloads
   restrictedLocationSubpath: null
   selectionLabel: null
-  showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: list
 translationKeyFormat: null
 translationMethod: language

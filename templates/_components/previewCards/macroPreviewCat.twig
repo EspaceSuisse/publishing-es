@@ -1,0 +1,33 @@
+{% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage) %}
+
+	{% import '_macros/macroPostDate' as macroPostDate %}
+	{% import '_macros/macroImage' as macro %}
+	{% include "_dynamic/catColorChecker" %}
+
+
+	{% set image = queryParam.fImgMono.one() ?? null %}
+	{% set noImg = image ? false : true %}
+
+	<article class="previewCard previewCat {{ classCardParam }}">
+
+		{% if image %}
+		
+			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam | raw  }}">
+				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
+			</a>
+
+		{% endif %}
+
+		<div class="txtPart {{ classTxtParam | raw }}">
+			<div class="previewMetaHeader">
+			</div>
+			<h4 class="previewTitle">
+				<a href="{{ queryParam.url }}" style="background-color: {{ queryParam.fColor ?? 'var(--colorES-brand-blue)' }};">
+					<span class="tagLabel">{{ queryParam.title }}</span>
+				</a>
+			</h4>
+			<div class="previewCatLead">{{ queryParam.fRichTextI18n }}</div>
+		</div>
+	</article>
+	
+{% endmacro %}

@@ -7,23 +7,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-09-11T15:21:40+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 6eb635d2-1d95-4d26-85d2-703c297243bd
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bc26da72-ed64-4abc-b146-e95c58806860
-            userCondition: null
-            warning: null
-            width: 25
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -32,7 +15,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -41,7 +23,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -52,17 +33,15 @@ fieldLayouts:
             uid: 75b8d53e-980c-4181-9193-fb989c7305e2
             userCondition: null
             warning: 'Bei Änderung: nicht vergessen, auch den `Slug` zu ändern. `Slug` ist die `URL` der Kategorie.'
-            width: 75
+            width: 100
           -
             dateAdded: '2025-08-06T13:58:00+00:00'
             editCondition: null
             elementCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
-            includeInCards: false
             instructions: 'Wird in der Google Suche angezeigt'
             label: null
-            providesThumbs: false
             required: false
             tip: 'Extrem wichtiger Text: Aufgrund davon, klicken Leute in den Suchresultaten auf den Eintrag'
             type: craft\fieldlayoutelements\CustomField
@@ -74,16 +53,29 @@ fieldLayouts:
             dateAdded: '2025-05-14T09:19:04+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
-            includeInCards: false
-            instructions: 'Wird z.b. auf LinkedIn als Vorschaubild angezeigt'
-            label: Vorschaubild
-            providesThumbs: false
+            instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 30912ba0-5488-4b75-acaa-64d9660565ac
+            uid: 658dbbad-60cc-4ee1-a3f6-ea4bb6194d65
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-28T08:48:01+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: fa54fd14-cfed-4146-af48-2c0f6efa7f6d # Bild
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cecfc5d-5b90-407d-a19a-1e86f6c3191e
             userCondition: null
             warning: null
             width: 75
@@ -93,10 +85,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -104,23 +94,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
-          -
-            dateAdded: '2025-05-14T09:19:04+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
-            handle: null
-            includeInCards: false
-            instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 658dbbad-60cc-4ee1-a3f6-ea4bb6194d65
-            userCondition: null
-            warning: null
-            width: 100
         name: Inhalt
         uid: e72ed69c-5962-432b-b873-1a6ab58c61bb
         userCondition: null
@@ -133,10 +106,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -150,10 +121,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -169,11 +138,11 @@ name: Rubrik
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
     hasUrls: true
-    template: pages/articleByCategory.twig
+    template: pages/listingEntriesFilter.twig
     uriFormat: 'genre/{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     hasUrls: true
-    template: pages/articleByCategory.twig
+    template: pages/listingEntriesFilter.twig
     uriFormat: 'rubrik/{slug}'
 structure:
   maxLevels: 1

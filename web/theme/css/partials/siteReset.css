@@ -26,3 +26,12 @@ ul {
 picture {
     display: block;
 }
+a, button {
+  transition: all var(--navSpeed) ease-in-out;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

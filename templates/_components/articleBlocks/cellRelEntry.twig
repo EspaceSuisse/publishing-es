@@ -1,4 +1,5 @@
 {% import '_macros/macroImage' as imgMacro %}
+{% import '_components/previewCards/macroPreviewArticle' as macroPreview %}
 
 {% set relEntryQuery = block.fRelEntry.all() %}
 
@@ -7,12 +8,17 @@
     
     {% if item.status == 'live' %}
 
-        {% set img = item.fImgI18n.one() %}
+        {% set img = item.imgAufmacher.one() %}
         
-            {{ imgMacro.articleImage(img, 'articleThumb') }}
-            <a href="{{ item.url }}">
-                <p>{{ 'Lesen Sie dazu auch' | t }}</p>
-                <h3 class="relatedEntryTitle">{{ item.title }}</h3>
+
+            <a href="{{ item.url }}" class="gridSpan12">
+                <div class="imgPart gridSpan3 gridLgSpan4">
+                    {{ imgMacro.articleImage(img, 'articleThumb') }}
+                </div>
+                <div class="txtPart gridSpan9 gridLgSpan8">
+                    <p class="relEntryHeadMeta">{{ 'Lesen Sie dazu auch' | t }}:</p>
+                    <h3 class="relatedEntryTitle">{{ item.title }}</h3>
+                </div>
             </a>
 
     {% endif %}

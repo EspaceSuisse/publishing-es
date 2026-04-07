@@ -1,29 +1,29 @@
 .tag {
-    font-family: var(--font-display);
+    font-family: var(--font-monospace);
     white-space: nowrap;
     font-size: var(--font-size-S);
-    line-height: calc(var(--line-height-base) * 1.2);
     a {
-        transition: all 0.3s ease-in-out;
         color: var(--txtColor);
-        padding: 4px 9px 6px;
+        padding: var(--paddingBtnSmall);
         text-decoration: none;
-        &:hover {
-            background-color: var(--linkBgHoverColor) !important;
-            color: var(--linkTxtHoverColor);
-        }
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
     }
-    &.invert, &.invert a {
+
+    &.invert,
+    &.invert a {
         color: var(--txtInvertColor);
     }
-    &.subject {
-        a {
-            border-radius: 100px;
-        }
+
+    &.subject a {
+        border-radius: 100px;
     }
+
     .catIcon {
-      width: calc( var(--font-size-S) * 2); 
-      height: calc( var(--font-size-S) * 2);   
+        width: calc(var(--font-size-S) * 2);
+        height: calc(var(--font-size-S) * 2);
     }
 }
 
@@ -32,3 +32,11 @@
     flex-wrap: wrap;
     gap: calc(var(--layoutGap) / 2);
 }
+
+.tagList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--layoutGap) / 2);
+    padding-bottom: calc(var(--layoutGap) / 2);
+}
+

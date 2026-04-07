@@ -1,13 +1,9 @@
 .cellCard {
-    padding: var(--layoutGap);
-    margin-bottom: var(--layoutGap);
-    border-top: solid 4px var(--colorES-brand-blue);
-    border-radius: 4px;
     .cellCardTitle {
         font-size: var(--font-size-L);
         font-family: var(--font-display);
         font-weight: var(--font-bold);
-        color: var(--colorES-brand-blue);
+        color: var(--txtColor);
         margin: 0;
     }
 }

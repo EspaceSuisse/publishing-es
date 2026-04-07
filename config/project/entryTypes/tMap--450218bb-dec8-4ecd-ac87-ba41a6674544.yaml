@@ -1,5 +1,6 @@
+allowLineBreaksInTitles: false
 color: null
-description: null
+description: 'Nutz den [Karten Dieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) um die Map zu zeichnen und dann die Daten rüber zu kopieren'
 fieldLayouts:
   09662c87-2347-406a-9fa0-55e34d3451d4:
     cardThumbAlignment: end
@@ -17,62 +18,14 @@ fieldLayouts:
             userCondition: null
             width: 100
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-05-21T06:47:55+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: null
-            label: Ort
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 3f76e6b3-a65a-424d-8ff2-59997ddf3f03
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2025-07-30T09:09:25+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 6e9fa4fd-403d-45c4-a082-48d1c5882d71 # Basemap
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
-            userCondition: null
-            warning: null
-            width: 25
-          -
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fa1b164b-252f-4494-8e00-ef34899159fa # Latitude
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -84,12 +37,11 @@ fieldLayouts:
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 004b97b7-ef5f-4e9e-a79e-0f94bebe89a8 # Longitude
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -98,34 +50,48 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-07-30T09:09:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6e9fa4fd-403d-45c4-a082-48d1c5882d71 # Basemap
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 467edd1b-6699-4dd3-8cd9-666f2b6979de
+            userCondition: null
+            warning: null
+            width: 25
+          -
             dateAdded: '2025-08-06T13:38:41+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 22fd25c7-fbaf-4908-999e-70100e9cfe4a # Zoom
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 0a39c45c-7d47-426d-9ab4-278d89d55ca4
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
             dateAdded: '2025-05-21T09:44:46+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
-            includeInCards: false
-            instructions: null
-            label: Kartenlayer
-            providesThumbs: false
+            instructions: 'Nimm den Zusatzlayer aus der [Swisstopo Liste](https://api3.geo.admin.ch/rest/services/api/MapServer/layersTable)'
+            label: 'Zusatz Layer'
             required: false
-            tip: 'Layer aus der url kopieren: "ch.are.wohnungsinventar-zweitwohnungsanteil"'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2a7010d6-61b7-4715-a503-5a0836dfa01b
             userCondition: null
@@ -141,12 +107,11 @@ fieldLayouts:
             dateAdded: '2025-09-16T07:24:31+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a9e662fd-d372-4978-a879-a0b4962a89c1
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -164,12 +129,11 @@ fieldLayouts:
             dateAdded: '2025-09-23T08:51:14+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4b1aee02-974f-4737-aabb-c4bf362d2f53 # Polygons
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -184,15 +148,36 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-03-11T12:10:44+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
+            handle: null
+            instructions: 'Erkläre was man sieht weil ich zu schlecht im Programmieren bin als das ich Textmarker auf der Karte darstellen könnte.'
+            label: Kartenlegende
+            required: false
+            tip: 'Wird gleich dargestellt wie Bildlegende'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06704060-0a4d-46ec-bf65-d338178f3cf3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Legende
+        uid: e9833fbb-dd0b-42ea-bbd3-18f7519564b2
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-05-27T10:09:36+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 49c73379-624e-465f-92eb-b17550eca753 # Grid Start Wide
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -204,12 +189,11 @@ fieldLayouts:
             dateAdded: '2025-05-27T10:09:36+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -221,12 +205,11 @@ fieldLayouts:
             dateAdded: '2025-05-21T08:10:26+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -237,8 +220,9 @@ fieldLayouts:
         name: Layout
         uid: 6e80896f-15ad-4872-b6f6-5ff3bc95e688
         userCondition: null
+    thumbFieldKey: null
 handle: tMap
-hasTitleField: true
+hasTitleField: false
 icon: map-location
 name: Map
 showSlugField: false
@@ -248,3 +232,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

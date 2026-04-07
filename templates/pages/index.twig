@@ -7,47 +7,56 @@
 
 	{% set catGenre = craft.categories()
 		.group('catGenre')
-		.relatedTo({ sourceElement: craft.entries.section('article').ids() })
+		.relatedTo({ sourceElement: articleIds })
 		.all()
 	%}
 
 	{% set catSubject = craft.categories()
 		.group('catSubject')
-		.relatedTo({ sourceElement: craft.entries.section('article').ids() })
+		.relatedTo({ sourceElement: articleIds })
 		.all()
 	%}
 
 	{% set allEntries = craft.entries()
 		.section('article')
-		.with(['fCatGenre', 'fCatSubject'])
+		    .with(articleEagerLoad)
 		.limit(null)
 		.all()
 	%}
 
-	{% set newsEntries = craft.entries.section('news').limit(3).all() %}
-	{% set goToAllNews = craft.entries.section('listingNews').with(['title','url']).one() %}
+	{% set goToAllNews = craft.entries.section('listingNews').one() %}
+
+	{# --- Layout config --- #}
+	{% set sliceA = 1 %}
+	{% set sliceB = 6 %}
+	{% set sliceC = 4 %}
+
+	{# Offsets calculate themselves #}
+	{% set offsetB = sliceA %}
+	{% set offsetC = sliceA + sliceB %}
+	{% set offsetD = sliceA + sliceB + sliceC %}
 
 	<div class="listingGrid listingSection">
 		{% include "_components/header/headerBrand" %}
 		
-		{% for item in allEntries | slice(0,1) %}
-			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
+		{% for item in allEntries | slice(0, sliceA) %}
+			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridSmSpan4 gridMdSpan8','gridSpan12 gridSmSpan4') }}
 		{% endfor %}
-		{% for item in allEntries | slice(1,2) %}
-				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6','gridSpan12','gridSpan12') }}
+		{% for item in allEntries | slice(offsetB, sliceB) %}
+				{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan4','gridSpan12 gridSmSpan4','gridSpan12 gridSmSpan8') }}
 		{% endfor %}
 	</div>
 		{% include "_components/indexNewsTeaser.twig" %}
 		{% include "_components/listingSuperTopic" %}
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">
-		{% for item in allEntries | slice(4,4) %}
-			{{ macroPreview.listMacro(item,'gridSpan12','gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
+		{% for item in allEntries | slice(offsetC, sliceC) %}
+			{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6 gridMdSpan4','gridSpanFull','gridSpanFull') }}
 		{% endfor %}
 	</div>
 	<div class="listingGrid listingSection">
-		{% for item in allEntries | slice(8) %}
-			{{ macroPreview.listMacro(item,'gridSpan6','gridSpan12 gridMdSpan12','gridSpan12 gridMdSpan12') }}
+		{% for item in allEntries | slice(offsetD) %}
+			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridMdSpan4','gridSpan12 gridMdSpan8') }}
 		{% endfor %}
 	</div>
 

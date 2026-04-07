@@ -1,21 +1,19 @@
 .btn {
     background-color: var(--linkBgColor);
-    color: var(--linkTxtColor);
-    padding: calc( var(--layoutGap) / 2);
+    color: var(--linkBgTxtColor);
+    padding: 13px 20px 13px;
     display: inline-block;
     font-family: var(--font-display);
     font-weight: var(--fontBold);
     font-size: var(--font-size-S);
-    text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
+    border-radius: var(--linkDescorationThikness);
     &:hover {
         background-color: var(--linkBgHoverColor);
-        color: var(--linkTxtHoverColor);
+        color: var(--linkBgTxtHoverColor);
     }
     &.btnSmall {
-        padding: 0;
-        background-color: transparent;
-        font-size: var(--font-size-XS);
+        padding: var(--paddingBtnSmall);
     }
 }

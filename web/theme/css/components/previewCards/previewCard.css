@@ -1,8 +1,8 @@
 .previewCard {
     position: relative;
     overflow: hidden;
-    container-type: inline-size;
-    container-name: previewCard;
+    display: grid;
+    grid-template-columns: subgrid;
     .previewTitle {
         margin: 0;
 
@@ -44,6 +44,10 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        padding: var(--layoutGap);
+        &.noImg {
+            grid-column: 1 / -1;
+        }
     }
 
     .lead {
@@ -61,11 +65,21 @@
     .btnCard {
         margin-left: auto;
     }
+    .tag {
+        font-size: var(--font-size-XS);
+    }
     .previewMetaHeader, .previewMetaFooter {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        align-items: baseline;
+        flex-wrap: wrap;
         width: 100%;
+        gap: calc( var(--layoutGap) / 2);
+        .postDate {
+            margin-right: auto;
+        }
+        .btnGotoRead {
+            margin-left: auto;
+        }
     }
     @media (min-width: 48rem ) and (max-width: 68rem)  {
         .previewMetaHeader, .previewMetaFooter {
@@ -74,5 +88,8 @@
     }
     .previewMetaFooter {
         margin-top: auto;
+    }
+    &.subjectCard {
+        border-radius: 8px;
     }
 }

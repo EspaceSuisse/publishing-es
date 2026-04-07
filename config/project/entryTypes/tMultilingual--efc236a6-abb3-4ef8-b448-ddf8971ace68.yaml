@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
             handle: null
-            includeInCards: false
             instructions: null
             label: Name
-            providesThumbs: false
             required: true
             tip: 'Z.b. Bundesamt für Umwelt'
             type: craft\fieldlayoutelements\CustomField
