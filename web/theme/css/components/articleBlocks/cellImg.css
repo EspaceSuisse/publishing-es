@@ -25,14 +25,14 @@ figcaption {
             padding-top: 5px;
 
             p {
-                font-size: var(--font-size-M);
+                font-size: var(--font-size-S);
                 font-family: var(--font-default);
                 line-height: 1.5;
             }
         }
 
         .assetSource {
-            font-size: var(--font-size-S);
+            font-size: var(--font-size-XS);
             font-family: var(--font-default);
             opacity: 0.8;
         }
