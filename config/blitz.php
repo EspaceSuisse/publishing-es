@@ -8,6 +8,7 @@ return [
         'warmCacheAutomatically' => true,
         'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
+        'queryStringCaching' => \putyourlightson\blitz\models\SettingsModel::QUERY_STRINGS_CACHE_URLS_AS_UNIQUE_PAGES,
         'includedUriPatterns' => [
             ['uriPattern' => '.*'],
         ],
