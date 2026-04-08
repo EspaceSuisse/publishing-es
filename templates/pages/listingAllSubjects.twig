@@ -20,7 +20,7 @@
 			{% for item in allItems %}
 				{% set hasEntries = craft.entries().relatedTo(item).exists() %}
 				{% if hasEntries %}
-					{{ macroPreview.listMacro(item,'previewGenre gridSpan12 gridSmSpan6 gridLgSpan4','gridColumnOne gridRowOne','gridColumnOne gridRowOne') }}
+					{{ macroPreview.listMacro(item,'previewGenre gridSpan12 gridLgSpan6','gridSpan6 gridLgSpan3','gridSpan6 gridLgSpan3') }}
 				{% endif %}
 			{% endfor %}
 	</div>
