@@ -1,4 +1,4 @@
-dateModified: 1775649359
+dateModified: 1775653744
 elementSources:
   craft\elements\Asset:
     -
@@ -421,16 +421,16 @@ plugins:
                         - $CLOUDFLARE_ZONE_ID
           -
             - authenticationMethod
-            - apiKey
+            - apiToken
           -
             - apiToken
-            - ''
+            - $CLOUDFLARE_API_TOKEN
           -
             - apiKey
-            - $CLOUDFLARE_GLOBAL_API
+            - ''
           -
             - email
-            - $CLOUDFLARE_EMAIL
+            - ''
       cachePurgerType: putyourlightson\blitz\drivers\purgers\CloudflarePurger
       cacheStorageSettings:
         __assoc__:
@@ -557,7 +557,7 @@ plugins:
       onlyCacheLowercaseUris: false
       outputComments: true
       purgeAssetImagesWhenChanged: true
-      queryStringCaching: 0
+      queryStringCaching: 1
       queueJobTtr: 300
       refreshCacheAutomaticallyForGlobals: false
       refreshCacheEnabled: true
