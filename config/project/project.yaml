@@ -1,4 +1,4 @@
-dateModified: 1775645702
+dateModified: 1775649359
 elementSources:
   craft\elements\Asset:
     -
@@ -288,6 +288,7 @@ meta:
     8cbcac22-e63c-4df9-a8db-040cdd55daa2: 'Aufmacher Bild' # Aufmacher Bild
     8df2a6c0-7ecc-4aef-9545-2a09ed8e8158: 'SEO Articles' # SEO Articles
     8e19eab8-006c-4c90-9a33-31262f476b3a: Icons # Icons
+    8f91fdee-ab1e-4366-93d1-a18d076ab867: Links # Links
     15e047b0-576a-4f08-83ff-0c064c9c8e29: 'Text SImple i18n' # Text SImple i18n
     22fd25c7-fbaf-4908-999e-70100e9cfe4a: Zoom # Zoom
     23be1cae-1521-4696-b3bd-cc2d9621ee56: 'Link List' # Link List

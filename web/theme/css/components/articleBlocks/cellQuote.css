@@ -2,6 +2,8 @@
     blockquote {
         margin-bottom: calc(var(--layoutGap));
         margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
         line-height: 2;
         p {
             font-size: var(--font-size-XL);
