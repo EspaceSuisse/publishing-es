@@ -4,7 +4,7 @@ return [
     '*' => [
         'bgColor' => '#ffffff',
         'cacheEnabled' => true,
-        'cacheDuration' => 'P1D',
         'cacheKeyPrefix' => 'imager-x',
+        'cacheDuration' => 2628000, // 1 month
     ],
 ];
