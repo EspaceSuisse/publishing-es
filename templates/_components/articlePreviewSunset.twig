@@ -8,5 +8,5 @@
 {% elseif isSunset %}
 	<p class="sunsetHint">{{ 'Artikel nur noch für Mitglieder Verfügbar' | t }}.</p>
 {% else %}
-	<p class="sunsetHint">{{ ('Für Nichtmitglieder noch ' ~ daysLeft ~ ' Tage verfügbar') | t }}.</p>
+	<p class="sunsetHint">{{ 'Für Nichtmitglieder noch' | t }} {{ daysLeft }} {{ 'Tage verfügbar' | t }}.</p>
 {% endif %}
