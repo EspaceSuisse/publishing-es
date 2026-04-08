@@ -38,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: bfc0397e-8aa8-4070-9335-c6872284aff1
         userCondition: null
+    thumbFieldKey: null
 fs: vectors
 handle: vIcons
 name: Icons

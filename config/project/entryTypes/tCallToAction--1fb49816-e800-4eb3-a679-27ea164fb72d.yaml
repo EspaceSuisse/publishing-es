@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-06-19T11:25:50+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
             handle: null
             instructions: null
@@ -54,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-06-19T11:25:50+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: null
@@ -69,6 +72,7 @@ fieldLayouts:
             dateAdded: '2025-07-23T09:37:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f9f9d456-4ae3-4b92-809a-b27d47247746 # Link
             handle: null
             instructions: null
@@ -84,6 +88,7 @@ fieldLayouts:
             dateAdded: '2025-07-23T09:37:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
             handle: null
             instructions: null
@@ -98,6 +103,7 @@ fieldLayouts:
         name: Content
         uid: 6601a8b5-ec05-4c04-b4f3-25a83bfdf20c
         userCondition: null
+    thumbFieldKey: null
 handle: tCallToAction
 hasTitleField: true
 icon: null
@@ -109,3 +115,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

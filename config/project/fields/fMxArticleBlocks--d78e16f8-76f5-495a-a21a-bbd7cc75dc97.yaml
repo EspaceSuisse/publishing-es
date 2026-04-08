@@ -83,7 +83,7 @@ settings:
       __assoc__:
         -
           - uid
-          - bf9959dc-941c-45ef-86b1-d05efb3e1626 # Dokument
+          - bf9959dc-941c-45ef-86b1-d05efb3e1626 # Download
         -
           - group
           - Media
@@ -108,6 +108,14 @@ settings:
         -
           - uid
           - 782c3a90-1552-4c56-aa8e-66c715a3a40d # Editor Kommentar
+        -
+          - group
+          - Special
+    -
+      __assoc__:
+        -
+          - uid
+          - a38688d7-396c-45ae-b8b7-46b401c5e71f # Link
         -
           - group
           - Special
