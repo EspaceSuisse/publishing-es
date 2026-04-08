@@ -8,21 +8,16 @@
 			{% include "_components/header/headerPage" %}
 		</header>
 		<div class="gridArticle articleContent">
+			<div class="articleElement gridSpan12">
+				{{ entry.fRichTextI18n }}
+			</div>
+			<div class="gridSpan12">
+				<div class="elementPanel">
+					{% include "_components/formNewsletter/mailchimpForm" %}
+					{% include "_components/formNewsletter/mailchimpNewsletterArchiv" %}
+				</div>
+			</div>
 			{% include "_components/articleMatrix" %}
-			<div class="gridSpan12">
-				<div class="elementPanel">{% include "_components/formNewsletter/mailchimpForm" %}</div>
-			</div>
-			<div class="gridSpan12">
-				<style type="text/css">
-					.display_archive {font-family: arial,verdana; font-size: 12px;}
-				.campaign {line-height: 125%; margin: 5px;}
-				</style>
-				<script
-					language="javascript"
-					src="https://espacesuisse.us18.list-manage.com/generate-js/?u=0919d95bf074b70a2cd56687d&show=10&fid=13881"
-					type="text/javascript"
-				></script>
-			</div>
 		</div>
 	</article>
 {% endblock %}

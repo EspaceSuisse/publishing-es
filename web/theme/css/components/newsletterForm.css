@@ -1,0 +1,58 @@
+.bodyNewsletter {
+    .elementPanel {
+        margin-bottom: calc(var(--layoutGap) * 2);
+        display: flex;
+    }
+}
+
+.newsletterForm {
+    max-width: 48rem;
+
+    .asterisk {
+        color: var(--txtInvertColor);
+    }
+
+    .formTitle,
+    .formSubtitle, .newsletterArchiveTitle {
+        color: var(--txtColor);
+        font-family: var(--font-display);
+        font-size: var(--font-size-M);
+        margin-bottom: 0;
+    }
+
+    input[type="email"],
+    input[type="text"] {
+        background-color: color-mix(in srgb, var(--colorES-brand-blue), transparent 50%);
+        border: solid 1px var(--txtInvertColor);
+        color: var(--txtInvertColor);
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: var(--layoutGap);
+    }
+
+    .mce_inline_error {
+        font-size: var(--font-size-S);
+        font-weight: var(--font-regular);
+    }
+
+    p {
+        font-size: var(--font-size-M);
+        font-weight: var(--font-regular);
+    }
+
+    #mce-error-response {
+        color: var(--txtInvertColor);
+        font-size: var(--font-size-M);
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    .newsletterForm {
+
+        .formTitle,
+        .formSubtitle {
+            color: var(--txtInvertColor);
+        }
+    }
+}
