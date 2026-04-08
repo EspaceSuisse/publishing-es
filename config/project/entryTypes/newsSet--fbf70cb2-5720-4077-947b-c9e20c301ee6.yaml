@@ -92,7 +92,7 @@ fieldLayouts:
             fieldUid: 8cbcac22-e63c-4df9-a8db-040cdd55daa2 # Aufmacher Bild
             handle: null
             instructions: null
-            label: null
+            label: 'News Aufmacherbild'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
