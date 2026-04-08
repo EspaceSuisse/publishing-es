@@ -2,10 +2,25 @@
     .elementPanel {
         margin-bottom: calc(var(--layoutGap) * 2);
     }
+    .newsletterArchiveTitle {
+        color: var(--txtColor);
+        font-family: var(--font-display);
+        font-size: var(--font-size-L);
+        margin-bottom: calc(var(--layoutGap) * 1.5);
+    }
+    .display_archive {
+        margin-bottom: calc(var(--layoutGap) * 2);
+        .campaign {
+            font-family: var(--font-display);
+            font-size: var(--font-size-M);
+            border-bottom: solid 1px var(--colorES-brand-blue);
+            padding-bottom: calc(var(--layoutGap) / 2);
+        }
+    }
 }
 
 .newsletterForm {
-    max-width: 48rem;
+    max-width: 65rem;
     margin: 0 auto;
     padding: var(--layoutGap);
     .asterisk {
@@ -13,21 +28,20 @@
     }
 
     .formTitle,
-    .formSubtitle, .newsletterArchiveTitle {
+    .formSubtitle {
         color: var(--txtColor);
         font-family: var(--font-display);
         font-size: var(--font-size-M);
-        margin-bottom: 0;
+        margin: 0;
     }
-
     input[type="email"],
     input[type="text"] {
-        background-color: transparent;
+        background-color: color-mix(in srgb, var(--colorES-brand-blue), white 90%);
         border: solid 1px var(--colorES-brand-blue);
         color: var(--txtColor);
         width: 100%;
         border-radius: 5px;
-        margin-bottom: var(--layoutGap);
+        margin-bottom: calc( var(--layoutGap) / 2 );
         padding: 1.3rem;
     }
 
@@ -40,6 +54,10 @@
         font-size: var(--font-size-M);
         font-weight: var(--font-regular);
     }
+    .clear {
+        display: flex;
+        justify-content: flex-end;
+    }
     input[type="submit"] {
         background-color: var(--colorES-brand-blue);
         color: var(--txtInvertColor);
@@ -50,7 +68,12 @@
         cursor: pointer;
         border-radius: 5px;
     }
-
+    .input-group {
+        border: solid 1px var(--colorES-brand-blue);
+        border-radius: 4px;
+        padding: calc( var(--layoutGap) / 2);
+        margin-bottom: var(--layoutGap);
+    }
     #mce-error-response {
         color: var(--txtInvertColor);
         font-size: var(--font-size-M);
@@ -60,7 +83,6 @@
 
 footer, .dropdownContents {
     .newsletterForm {
-        max-width: 36rem;
         .formTitle,
         .formSubtitle {
             color: var(--txtInvertColor);
@@ -76,5 +98,7 @@ footer, .dropdownContents {
             background-color: var(--txtInvertColor);
             color: var(--colorES-brand-blue);
         }
+        input::placeholder { 
+            color: color-mix(in srgb, var(--txtInvertColor), var(--colorES-brand-blue) 60%);
     }
 }
