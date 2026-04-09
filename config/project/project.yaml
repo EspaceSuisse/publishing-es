@@ -1,4 +1,4 @@
-dateModified: 1775653744
+dateModified: 1775728337
 elementSources:
   craft\elements\Asset:
     -
@@ -442,7 +442,7 @@ plugins:
             - '1'
       cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
       cachedIncludePathParam: p
-      cachingEnabled: false
+      cachingEnabled: true
       debug: true
       defaultCacheControlHeader: no-store
       deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
