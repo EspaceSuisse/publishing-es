@@ -19,7 +19,7 @@ return [
         ],
     ],
     'dev' => [
-        'cachingEnabled' => false,
+        'cachingEnabled' => true,
     ],
     'staging' => [
         'cachingEnabled' => false,
