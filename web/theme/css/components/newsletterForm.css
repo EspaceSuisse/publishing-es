@@ -24,7 +24,7 @@
     margin: 0 auto;
     padding: var(--layoutGap);
     .asterisk {
-        color: var(--txtInvertColor);
+        color: var(--colorEs-alert);
     }
 
     .formTitle,
