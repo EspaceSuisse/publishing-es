@@ -25,6 +25,6 @@ return [
         'cachingEnabled' => false,
     ],
     'production' => [
-        'cachingEnabled' => false,
+        'cachingEnabled' => true,
     ],
 ];
