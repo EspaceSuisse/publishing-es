@@ -17,6 +17,6 @@
 <p>
 	<a href="{{ esBase.genericEmail }}">{{ esBase.genericEmail | enkode }}</a>
 	<br>
-	<a href="{{ esBase.genericUrl }}">{{ esBase.genericUrl }}</a><br>
+	<a href="{{ esBase.genericUrl }}">{{ esBase.genericUrl | replace({'https://' : '' })  | replace({'www.' : '' }) }}</a><br>
 	<a href="tel:{{ esBase.genericTelephone }}">{{ esBase.genericTelephone | enkode }}</a>
 </p>
