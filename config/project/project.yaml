@@ -1,4 +1,4 @@
-dateModified: 1775728337
+dateModified: 1776255269
 elementSources:
   craft\elements\Asset:
     -
@@ -388,50 +388,9 @@ plugins:
           -
             - concurrency
             - '3'
-          -
-            - useBasicAuth
-            - ''
-          -
-            - username
-            - ''
-          -
-            - password
-            - ''
-      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\LocalGenerator
       cacheNonHtmlResponses: false
-      cachePurgerSettings:
-        __assoc__:
-          -
-            - zoneIds
-            -
-              __assoc__:
-                -
-                  - 5f286764-7e74-4475-989a-21ca80692fad # Inforaum DE
-                  -
-                    __assoc__:
-                      -
-                        - zoneId
-                        - $CLOUDFLARE_ZONE_ID
-                -
-                  - 2d4ea7fb-3050-435d-806e-46986d5c58d2 # Inforum FR
-                  -
-                    __assoc__:
-                      -
-                        - zoneId
-                        - $CLOUDFLARE_ZONE_ID
-          -
-            - authenticationMethod
-            - apiToken
-          -
-            - apiToken
-            - $CLOUDFLARE_API_TOKEN
-          -
-            - apiKey
-            - ''
-          -
-            - email
-            - ''
-      cachePurgerType: putyourlightson\blitz\drivers\purgers\CloudflarePurger
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
       cacheStorageSettings:
         __assoc__:
           -
@@ -442,7 +401,7 @@ plugins:
             - '1'
       cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
       cachedIncludePathParam: p
-      cachingEnabled: true
+      cachingEnabled: false
       debug: true
       defaultCacheControlHeader: no-store
       deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
