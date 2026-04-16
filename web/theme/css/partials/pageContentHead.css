@@ -1,0 +1,4 @@
+/* The page title and lead of listing Pages */
+.pageContentHead {
+    padding-bottom: var(--layoutGap);
+}
