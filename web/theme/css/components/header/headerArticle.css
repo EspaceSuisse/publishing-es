@@ -74,7 +74,7 @@
 @media (max-width: 63rem) {
   .articleHeadTitleCard {
     .headCardGrid {
-      padding: calc(var(--layoutGap) * 1.5) 0;
+      padding: calc(var(--layoutGap) * 1.5);
     }
   }
 }
