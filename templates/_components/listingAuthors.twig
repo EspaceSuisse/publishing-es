@@ -16,6 +16,7 @@
 						{%- if item.fPlainTextI18n2 -%}
 							<span class="authorEducation">
 								{{- item.fPlainTextI18n2 -}}
+								{% if item.fPlainTextI18n2 and item.fPlainTextI18n %},{% endif %}
 							</span>
 						{%- endif -%}
 						{# {%- for cat in item.fTeam -%}
@@ -27,7 +28,7 @@
 						{%- endfor -%} #}
 						{%- if item.fPlainTextI18n -%}
 							<span class="authorFunction">
-								{{- ', ' ~ item.fPlainTextI18n -}}
+								{{ item.fPlainTextI18n -}}
 							</span>
 						{%- endif -%}
 						{% if item.isInGroup('espacesuisse') %}	

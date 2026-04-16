@@ -6,10 +6,10 @@
         margin-right: 0;
         line-height: 2;
         p {
-            font-size: var(--font-size-L);
+            font-size: var(--font-size-XL);
             font-family: var(--font-display);
             font-weight: var(--font-regular);
-            line-height: calc(var(--line-height-base));
+            line-height: calc(var(--line-height-base) + 2rem );
             margin: 0;
         }
         .quoteMarks {
@@ -38,6 +38,7 @@
     &.styleB {
         blockquote p {
             font-size: var(--font-size-XL);  
+            font-weight: var(--font-bold);
             line-height: 1.2;
         }
     }
