@@ -4,17 +4,25 @@ instructions: null
 name: 'Text i18n'
 searchable: false
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
   css: null
+  cssFile: ckEditorStyles.css
   defaultTransform: null
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
   fullGraphqlData: false
   headingLevels:
-    - 2
-    - 3
-    - 4
+    - '2'
+    - '3'
+    - '4'
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
   js: null
+  jsFile: ckEditorConfig.json
   options: null
   parseEmbeds: false
   purifierConfig: null

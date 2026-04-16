@@ -1,12 +1,13 @@
 {% extends "_layouts/main" %}
-{% import '_macros/macroImage' as macro %}
+{% import '_macros/macroImage' as macroImg %}
+{% import '_macros/macroFigCaption' as figCaption %}
 
 {# news template #}
 
 
 {% block content %}
 
-	{% set newsImg = entry.fImgI18n.one() ?? null %}
+	{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
 	{% set authorShort = entry.authors | first %}
 
 	<article>
@@ -15,9 +16,14 @@
 			{% include "_components/header/headerNews" %}
 		</header>
 		<div class="gridArticle articleContent">
-			{# News section does not have articles, so we use the articleMatrix here to display the news entries #}
-			{# The articleMatrix component is flexible enough to handle news entries as well #}
-			{# We just need to ensure that the articleMatrix can handle entries from the news #}
+
+			{% if aufmacherBild %}
+				<figure class="newsHeadImg gridSpan12">
+					{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+					{{ figCaption.figCaption(aufmacherBild, null, aufmacherBild.fSwitch) }}
+				</figure>
+			{% endif %}
+
 			{% include "_components/articleMatrix" %}
 			<span class="gridStart2">({{ authorShort |split(' ')|map(word => word|slice(0, 1))|join|upper }})</span>
 		</div>

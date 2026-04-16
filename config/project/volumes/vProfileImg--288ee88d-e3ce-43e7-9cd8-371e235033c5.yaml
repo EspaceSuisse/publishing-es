@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   71e3f39a-36ac-4943-b0b6-59faa30ea72c:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +38,7 @@ fieldLayouts:
         name: Inhalt
         uid: 7266f88d-68c2-4cde-a545-32c5c0347561
         userCondition: null
+    thumbFieldKey: null
 fs: userPortraits
 handle: vProfileImg
 name: Profilbild

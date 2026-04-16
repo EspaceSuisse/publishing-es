@@ -28,6 +28,7 @@
 @import url("components/articleTable.css");
 @import url("components/listingSuperTopic.css");
 @import url("components/listingCatList.css");
+@import url("components/newsletterForm.css");
 
 @import url("components/articleBlocks/cellSubtitle.css");
 @import url("components/articleBlocks/cellBox.css");
@@ -39,6 +40,7 @@
 @import url("components/articleBlocks/cellRelEntry.css");
 @import url("components/articleBlocks/cellImgTxtFloat.css");
 @import url("components/articleBlocks/cellMap.css");
+@import url("components/articleBlocks/cellLinks.css");
 @import url("components/articleCtaCall.css");
 
 @import url("components/header/headerNews.css");

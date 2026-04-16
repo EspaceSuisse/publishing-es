@@ -53,7 +53,10 @@
 					{% include "_components/articleBlocks/cellRelEntry" %}
 				</aside>
 			{% endif %}
-
+		{% case "tLinks" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellLinkList">
+				{% include "_components/articleBlocks/cellLinkList" %}
+			</div>
 		{% case "tMap" %}
 			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellMap">
 				{% include "_components/articleBlocks/cellMap" %}

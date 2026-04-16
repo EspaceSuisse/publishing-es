@@ -1,5 +1,6 @@
 fieldLayouts:
   9fee3de9-d18d-4886-8bdf-5514eaf76e7f:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -8,6 +9,7 @@ fieldLayouts:
             dateAdded: '2025-05-20T10:20:07+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
             handle: null
             instructions: null
@@ -23,6 +25,7 @@ fieldLayouts:
             dateAdded: '2025-05-20T10:18:55+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             instructions: null
@@ -38,6 +41,7 @@ fieldLayouts:
             dateAdded: '2025-05-20T10:18:55+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
             handle: null
             instructions: null
@@ -52,6 +56,7 @@ fieldLayouts:
         name: Content
         uid: b334513c-d3ad-4ae4-ad7d-b48846b3829a
         userCondition: null
+    thumbFieldKey: null
 handle: seoDefaults
 name: 'SEO Defaults'
 sortOrder: 1

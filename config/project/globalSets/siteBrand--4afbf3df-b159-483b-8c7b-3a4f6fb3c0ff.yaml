@@ -9,6 +9,7 @@ fieldLayouts:
             dateAdded: '2025-11-06T11:00:40+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
             instructions: null
@@ -24,6 +25,7 @@ fieldLayouts:
             dateAdded: '2025-11-06T11:00:40+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
             handle: null
             instructions: null
@@ -39,6 +41,7 @@ fieldLayouts:
             dateAdded: '2025-11-06T11:00:40+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
             handle: null
             instructions: null
@@ -54,6 +57,7 @@ fieldLayouts:
             dateAdded: '2026-01-14T14:49:31+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8caa68b5-9596-4170-82d2-20866078095e # Numer
             handle: null
             instructions: 'Wieviele Tage, bis ein Artikel nur noch für Mitglieder Verfügbar ist?'
@@ -68,6 +72,7 @@ fieldLayouts:
         name: Branding
         uid: 6bf9728d-b41d-4164-87b1-5e192680c738
         userCondition: null
+    thumbFieldKey: null
 handle: siteBrand
 name: 'Site Brand'
 sortOrder: 3

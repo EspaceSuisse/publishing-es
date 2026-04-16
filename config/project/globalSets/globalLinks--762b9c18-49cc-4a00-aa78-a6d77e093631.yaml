@@ -9,6 +9,7 @@ fieldLayouts:
             dateAdded: '2025-11-19T08:53:54+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5f2bf8e1-4de5-4485-ae03-c0d1a67389af # Sidebar Links
             handle: null
             instructions: null
@@ -24,6 +25,7 @@ fieldLayouts:
             dateAdded: '2025-11-19T09:02:32+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: af5e5ef5-990b-4df0-8c9e-bebc1342a533 # Footer Links
             handle: null
             instructions: null
@@ -47,6 +49,7 @@ fieldLayouts:
         name: Content
         uid: 5f4d3d49-3869-4ce6-b226-7054b0108037
         userCondition: null
+    thumbFieldKey: null
 handle: globalLinks
 name: 'Global Links'
 sortOrder: 4

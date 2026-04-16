@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: 'Feld für interne Kommentare. Wird nicht dargestellt.'
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-09-09T09:24:36+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fd056fec-5843-47f0-a2ad-520a3044916d # Code FIeld
             handle: null
             instructions: null
@@ -25,6 +27,7 @@ fieldLayouts:
         name: Content
         uid: a4ce5436-b53f-4c6f-bd7e-468af6770d00
         userCondition: null
+    thumbFieldKey: null
 handle: editorKommentar
 hasTitleField: false
 icon: comment-lines
@@ -36,3 +39,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

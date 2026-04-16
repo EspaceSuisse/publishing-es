@@ -2,7 +2,7 @@
     padding-bottom: var(--layoutGap);
     display: block;
     transform: rotate(-90deg) translateY(0);
-    transform-origin: 20% -190%;
+    transform-origin: 18% -275%;
     padding: 0;
     white-space: nowrap;
     path {

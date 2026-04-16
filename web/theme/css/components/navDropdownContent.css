@@ -67,10 +67,6 @@
                 }
             }
         }
-
-        #mc_embed_shell {
-            max-width: 300px;
-        }
     }
 }
 @media (max-width: 48rem) {

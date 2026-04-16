@@ -11,7 +11,7 @@
             { targetElement: firstGenre }
         ])
 		.id(['not', entry.id])
-        .limit(7)
+        .limit(3)
 		.with(articleEagerLoad)
         .all() %}
 
@@ -25,7 +25,7 @@
 			{% if loop.first %}
 				<h2 class="gridSpan12 moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}…</h2>
 			{% endif %}
-			{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12' ) }}
+			{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridSmSpan6 gridLgSpan12', 'gridSpan12 gridSmSpan6 gridLgSpan4', 'gridSpan12 gridSmSpan6 gridLgSpan8' ) }}
 		{% endfor %}
 
 	</aside>

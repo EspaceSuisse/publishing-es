@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   1543690b-ffe2-4ad8-9719-82d806edeb6b:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: b8ddae04-1612-4ffc-b020-d3600f6e4e66
         userCondition: null
+    thumbFieldKey: null
 fs: files
 handle: vDownloads
 name: Downloads

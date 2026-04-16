@@ -13,15 +13,7 @@
         }
         .previewCatLead {
             font-size: var(--font-size-M);
-            line-height: 1.5;
-            p {
-                color: var(--txtInvertColor);
-                text-decoration-line: underline;
-                text-decoration-color: var(--txtColor);
-                text-decoration-thickness: calc(var(--font-size-M) + 1rem);
-                text-underline-offset: calc(var(--font-size-M) * -1);
-                text-decoration-skip-ink: none;
-            }
+            padding: 0;
         }
         &.previewGenre {
             .previewTitle a {

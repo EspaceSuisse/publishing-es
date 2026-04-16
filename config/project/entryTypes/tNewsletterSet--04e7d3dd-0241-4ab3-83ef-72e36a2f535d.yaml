@@ -1,0 +1,369 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  87f8fe96-e4bf-4c1b-827c-8b91ed48978a:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-18T10:42:49+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 58dc808d-6c5f-4ca7-85b1-77a327419339
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-18T10:44:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67ae0462-3c72-424f-81c6-a5e40a277b9f
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2026-02-04T14:31:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8b00b1ad-3829-48d0-b91f-f3a597e32588 # Google Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ceca4066-eda1-4515-9995-1907198772bf
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-04-01T13:18:49+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
+            handle: null
+            instructions: null
+            label: Lead
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e42e4ecf-1b20-4bea-9182-c9b630346bb3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:39:02+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            handle: null
+            instructions: null
+            label: Text
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0925dc8-eaab-4f39-987d-4359f1ad3723
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-02-04T14:48:03+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 56b0abc0-c30f-4fa6-b0cb-c4c54bfefdd9
+            userCondition: null
+          -
+            dateAdded: '2025-11-19T08:36:29+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d78e16f8-76f5-495a-a21a-bbd7cc75dc97 # ArticleBlocks
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2fc58342-4489-4521-a247-3dd0d4285537
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: ab2dc275-94ca-496e-97e0-80c4f98143a5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-18T10:51:17+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 91b81ff9-4af2-440b-b42a-16821f2d0d5c # SEO Page
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e9fc6fea-9e58-4c34-974e-98a0f9551c83
+            userCondition: null
+            warning: null
+            width: 100
+        name: Google
+        uid: 9abd43ab-7946-4554-bdfc-538be0be87c8
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            handle: null
+            instructions: 'Erscheint bei jedem Newsletter Forumular'
+            label: 'Newsletter Title'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41687f18-9df6-414d-a709-8fd4b85d9c91
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:46:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n27
+            instructions: null
+            label: 'Newsletter Claim'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8184bed4-323a-433e-8968-c9bb50538d3d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: null
+            instructions: null
+            label: 'E-Mail Label'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 498eed11-548e-4929-8b11-bf67020f4b80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n22
+            instructions: null
+            label: 'E-Mail Placeholder'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9019907f-52fe-4026-939e-f26b21631b7a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n23
+            instructions: null
+            label: 'Vorname Label'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9210c9b8-f02e-4266-a4c3-b7edd7699646
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n24
+            instructions: null
+            label: 'Vorname Placeholder'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f3cb23d-38b0-4891-a7a6-a1def802825e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:53:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n28
+            instructions: null
+            label: 'Nachname Label'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a4f97d7-4d5e-4f05-a5b8-1305bf441096
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:53:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n29
+            instructions: null
+            label: 'Nachname Placeholder'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 996d94d8-a2a5-4b48-bac2-a984be552578
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:58:41+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n210
+            instructions: null
+            label: 'Untertitel Auswahl'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c60c902-1607-45c7-bf34-b5842cd64326
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n25
+            instructions: null
+            label: 'Checkbox Label Inforaum'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5cbed023-c109-44fa-afce-2cf585ed2acd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n26
+            instructions: null
+            label: 'Checkbox Label Urteilssamlung'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d9f1fa8-dfb5-4ef1-bd95-94a609a719f1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T07:01:09+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
+            handle: fPlainTextI18n211
+            instructions: null
+            label: 'Button Label'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7d5f3fdd-f645-44fb-8563-6b88e265fdf6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            content: "# Newsletter Formular Felder\r\nAlle diese Felder Generieren das Newsletter-Formular überall dort wo es vorkommt.\r\nWenn du also z.b. Das Label hier änderst, ändert sich das im Footer, auf der Newsletter Seite und in der Navigation und wo es sonst noch überall vorkommt."
+            dateAdded: '2026-04-08T06:45:43+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: a230cd1a-979f-4a00-931b-2e5abf833744
+            userCondition: null
+            width: 100
+        name: Formular
+        uid: 59f93687-0ecb-4b92-8f33-234f9b56bc36
+        userCondition: null
+    thumbFieldKey: null
+handle: tNewsletterSet
+hasTitleField: true
+icon: null
+name: 'Newsletter Set Set'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

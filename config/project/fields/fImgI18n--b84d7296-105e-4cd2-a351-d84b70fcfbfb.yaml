@@ -60,7 +60,6 @@ settings:
                 - unit
                 - MB
   selectionLabel: 'Bild hinzufügen'
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: false
@@ -68,7 +67,7 @@ settings:
   sources: '*'
   targetSiteId: null
   validateRelatedElements: true
-  viewMode: large
+  viewMode: thumbs
 translationKeyFormat: null
 translationMethod: language
 type: craft\fields\Assets
