@@ -6,10 +6,10 @@
         margin-right: 0;
         line-height: 2;
         p {
-            font-size: var(--font-size-XL);
+            font-size: var(--font-size-L);
             font-family: var(--font-display);
             font-weight: var(--font-regular);
-            line-height: calc(var(--line-height-base) + 1rem);
+            line-height: calc(var(--line-height-base));
             margin: 0;
         }
         .quoteMarks {
@@ -31,6 +31,21 @@
             &:before {
                 content: "— ";
             }
+        }
+    }
+    &.styleA {
+    }
+    &.styleB {
+        blockquote p {
+            font-size: var(--font-size-XL);  
+            line-height: 1.2;
+        }
+    }
+    &.styleC {
+        blockquote p {
+            font-size: var(--font-size-XXL);  
+            font-weight: var(--font-bold);
+            line-height: 1.2;
         }
     }
 }
