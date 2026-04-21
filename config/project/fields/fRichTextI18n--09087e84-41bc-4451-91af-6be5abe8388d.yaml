@@ -42,6 +42,8 @@ settings:
     - sourceEditing
     - subscript
     - superscript
+    - strikethrough
+    - fontColor
     - removeFormat
   wordLimit: null
 translationKeyFormat: null
