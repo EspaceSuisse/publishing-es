@@ -19,12 +19,12 @@ return [
         ],
     ],
     'dev' => [
-        'cachingEnabled' => false,
+        'cachingEnabled' => true,
     ],
     'staging' => [
         'cachingEnabled' => false,
     ],
     'production' => [
-        'cachingEnabled' => true,
+        'cachingEnabled' => false,
     ],
 ];
