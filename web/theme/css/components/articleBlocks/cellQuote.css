@@ -2,12 +2,14 @@
     blockquote {
         margin-bottom: calc(var(--layoutGap));
         margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
         line-height: 2;
         p {
-            font-size: var(--font-size-XXL);
+            font-size: var(--font-size-XL);
             font-family: var(--font-display);
             font-weight: var(--font-regular);
-            line-height: calc(var(--line-height-base) + 3rem);
+            line-height: calc(var(--line-height-base) + 2rem );
             margin: 0;
         }
         .quoteMarks {
@@ -29,6 +31,22 @@
             &:before {
                 content: "— ";
             }
+        }
+    }
+    &.styleA {
+    }
+    &.styleB {
+        blockquote p {
+            font-size: var(--font-size-XL);  
+            font-weight: var(--font-bold);
+            line-height: 1.2;
+        }
+    }
+    &.styleC {
+        blockquote p {
+            font-size: var(--font-size-XXL);  
+            font-weight: var(--font-bold);
+            line-height: 1.2;
         }
     }
 }

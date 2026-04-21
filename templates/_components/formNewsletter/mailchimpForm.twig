@@ -2,18 +2,23 @@
 {% set postUrlFr = 'https://espacesuisse.us18.list-manage.com/subscribe/post?u=0919d95bf074b70a2cd56687d&amp;id=cfbf9c235c&amp;f_id=00c2b0e6f0' %}
 {% set honeypotDe = 'b_0919d95bf074b70a2cd56687d_977cadf3ca' %}
 {% set honeypotFr = 'b_0919d95bf074b70a2cd56687d_cfbf9c235c' %}
+{% set newsltrFieldIdDE = '38936' %}
+{% set newsltrFieldIdFr = '38940' %}
 
 {% if craft.app.language == 'de-CH' %}
 	{% set postUrl = postUrlDe %}
 	{% set honeypot = honeypotDe %}
+	{% set newsltrGroupID = newsltrFieldIdDE %}
 {% else %}
 	{% set postUrl = postUrlFr %}
 	{% set honeypot = honeypotFr %}
+	{% set newsltrGroupID = newsltrFieldIdFr %}
 {% endif %}
 
+{% set newsletterLines = craft.entries.section('newsletter').one() %}
 
-<div id="mc_embed_shell">
-	<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+<div id="mc_embed_shell" class="newsletterForm">
 	<div id="mc_embed_signup">
 		<form 
 			action="{{ postUrl }}"
@@ -25,30 +30,36 @@
 		>
 
 			<div id="mc_embed_signup_scroll">
-				<h2 class="formTitle">{{ 'Newsletter Abonnieren' | t }}</h2>
+				<h2 class="formTitle">{{ newsletterLines.fPlainTextI18n }}</h2>
+				<p>{{ newsletterLines.fPlainTextI18n27 }}</p>
 				<div class="mc-field-group">
-					<label for="mce-EMAIL">{{ 'E-Mail' | t }}
-						<span class="asterisk">*</span>
+					<label for="mce-EMAIL">{{ newsletterLines.fPlainTextI18n2 }} <span class="asterisk">*</span></label>
 					</label>
-					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="">
+					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="" required placeholder="{{ newsletterLines.fPlainTextI18n22 }}">
 				</div>
 				<div class="mc-field-group">
-					<label for="mce-FNAME">{{ 'Vorname' | t }}</label>
-					<input type="text" name="FNAME" class=" text" id="mce-FNAME" value="" required>
+					<label for="mce-FNAME">{{ newsletterLines.fPlainTextI18n23 }} <span class="asterisk">*</span></label>
+					<input type="text" name="FNAME" class=" text" id="mce-FNAME" value="" required placeholder="{{ newsletterLines.fPlainTextI18n24 }}">
 				</div>
 				<div class="mc-field-group">
-					<label for="mce-LNAME">{{ 'Nachname' | t }}</label>
-					<input type="text" name="LNAME" class=" text" id="mce-LNAME" value="" required>
+					<label for="mce-LNAME">{{ newsletterLines.fPlainTextI18n28 }} <span class="asterisk">*</span></label>
+					<input type="text" name="LNAME" class=" text" id="mce-LNAME" value="" required placeholder="{{ newsletterLines.fPlainTextI18n29 }}">
 				</div>
+				{% if newsletterLines.fPlainTextI18n210 %}
+					<h3 class="formSubtitle">{{ newsletterLines.fPlainTextI18n210 }}</h3>
+				{% endif %}
 				<div class="mc-field-group input-group">
 					<ul>
 						<li>
-							<input type="checkbox" name="group[38936][1]" id="mce-group[38936]-38936-0" value="">
-							<label for="mce-group[38936]-38936-0">{{ 'Newsletter Inforaum' | t }}</label>
+							<input type="checkbox" name="group[{{ newsltrGroupID }}][1]" id="mce-group[{{ newsltrGroupID }}]-{{ newsltrGroupID }}-0" value="">
+							<label for="mce-group[{{ newsltrGroupID }}]-{{ newsltrGroupID }}-0">{{ newsletterLines.fPlainTextI18n25 }}</label>
 						</li>
 						<li>
-							<input type="checkbox" name="group[38936][2]" id="mce-group[38936]-38936-1" value="">
-							<label for="mce-group[38936]-38936-1">{{ 'Newsletter US Urteilssammlung' | t }}</label>
+							<input type="checkbox" name="group[{{ newsltrGroupID }}][2]" id="mce-group[{{ newsltrGroupID }}]-{{ newsltrGroupID }}-1" value="">
+							<label for="mce-group[{{ newsltrGroupID }}]-{{ newsltrGroupID }}-1">{{ newsletterLines.fPlainTextI18n26 }}</label>
+						</li>
+						<li><input type="checkbox" name="group[{{ newsltrGroupID }}][4]" id="mce-group[{{ newsltrGroupID }}]-{{ newsltrGroupID }}-2" value="">
+						<label for="mce-group[{{ newsltrGroupID }}]-{{ newsltrGroupID }}-2">{{ newsletterLines.fPlainTextI18n3 }}</label>
 						</li>
 					</ul>
 				</div>
@@ -59,11 +70,7 @@
 				<div style="position: absolute; left: -5000px;" aria-hidden="true">
 					<input type="text" name="{{ honeypot }}" tabindex="-1" value="">
 				</div>
-				<div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="{{ 'Abonnieren' | t }}"></div>
-				<p class="indicates-required">
-					<span class="asterisk">*</span>
-					{{ 'Angaben erforderlich' | t }}
-				</p>
+				<div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="{{ newsletterLines.fPlainTextI18n211 }}"></div>
 			</div>
 		</form>
 	</div>

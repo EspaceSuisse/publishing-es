@@ -94,6 +94,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+          -
+            dateAdded: '2026-04-16T09:00:37+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4d9d87d3-4cd6-486b-9a9b-35247259c4c3 # Styling
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd79079e-55ea-44c5-9022-c90b522f2b9a
+            userCondition: null
+            warning: null
+            width: 100
         name: Layout
         uid: 6918e779-b83a-450e-a59e-0a4cb33a17bc
         userCondition: null

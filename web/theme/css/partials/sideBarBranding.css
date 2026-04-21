@@ -2,25 +2,30 @@
     padding-bottom: var(--layoutGap);
     display: block;
     transform: rotate(-90deg) translateY(0);
-    transform-origin: 20% -190%;
+    transform-origin: 20% -245%; /* Corrected: Removed extra '%' */
     padding: 0;
     white-space: nowrap;
-    path {
-        fill: var(--txtInvertColor);
-    }
-
     font-size: var(--font-size-XL);
     font-family: var(--font-display);
     font-weight: var(--font-normal);
     text-decoration: none;
     margin: 0;
-    padding: 0;
+    /* Removed duplicate padding: 0; */
     color: var(--txtInvertColor);
-    a:first-of-type {
-        font-weight: var(--font-bold);
-    }
-    a {
-        color: var(--txtInvertColor);
-        text-decoration: none;
-    }
+}
+
+/* Style for SVG paths directly inside .sidebarBrandLink */
+.sidebarBrandLink svg path {
+    fill: var(--txtInvertColor);
+}
+
+/* Style for the first anchor tag directly inside .sidebarBrandLink */
+.sidebarBrandLink a:first-of-type {
+    font-weight: var(--font-bold);
+}
+
+/* Style for all anchor tags directly inside .sidebarBrandLink */
+.sidebarBrandLink a {
+    color: var(--txtInvertColor);
+    text-decoration: none;
 }

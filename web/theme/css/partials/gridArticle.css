@@ -9,7 +9,7 @@
 }
 @media (max-width: 48rem) {
   .gridArticle {
-    grid-template-columns: repeat(12, 1fr);
+    display: block;
   }
 }
 .furtherArticles {

@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: subgrid;
     border: solid 1px var(--colorES-brand-blue);
+    margin-bottom: var(--layoutGap);
     a {
         display: grid;
         grid-template-columns: subgrid;

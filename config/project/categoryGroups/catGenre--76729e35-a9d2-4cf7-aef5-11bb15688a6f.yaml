@@ -38,6 +38,7 @@ fieldLayouts:
             dateAdded: '2025-08-06T13:58:00+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             instructions: 'Wird in der Google Suche angezeigt'
@@ -53,6 +54,7 @@ fieldLayouts:
             dateAdded: '2025-05-14T09:19:04+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
@@ -68,6 +70,7 @@ fieldLayouts:
             dateAdded: '2026-01-28T08:48:01+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fa54fd14-cfed-4146-af48-2c0f6efa7f6d # Bild
             handle: null
             instructions: null
@@ -83,6 +86,7 @@ fieldLayouts:
             dateAdded: '2025-06-17T09:16:31+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
             handle: null
             instructions: null
@@ -104,6 +108,7 @@ fieldLayouts:
             dateAdded: '2025-08-06T13:58:00+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
             handle: null
             instructions: null
@@ -119,6 +124,7 @@ fieldLayouts:
             dateAdded: '2025-08-06T13:58:00+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
             handle: null
             instructions: null
@@ -133,6 +139,7 @@ fieldLayouts:
         name: Meta
         uid: d8fc1f6e-16a3-41ac-9595-3b092ab713ad
         userCondition: null
+    thumbFieldKey: null
 handle: catGenre
 name: Rubrik
 siteSettings:

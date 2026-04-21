@@ -31,7 +31,7 @@
 				{% include "_components/articleBlocks/cellRichText" %}
 			</div>
 		{% case "tQuote" %}
-			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, null) }} cellQuote">
+			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, null) }} cellQuote {{ 'style' ~ block.fStyling.value | upper }}">
 				{% include "_components/articleBlocks/cellQuote" %}
 			</div>
 		{% case "tArticleImg" %}
@@ -53,7 +53,10 @@
 					{% include "_components/articleBlocks/cellRelEntry" %}
 				</aside>
 			{% endif %}
-
+		{% case "tLinks" %}
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellLinkList">
+				{% include "_components/articleBlocks/cellLinkList" %}
+			</div>
 		{% case "tMap" %}
 			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellMap">
 				{% include "_components/articleBlocks/cellMap" %}

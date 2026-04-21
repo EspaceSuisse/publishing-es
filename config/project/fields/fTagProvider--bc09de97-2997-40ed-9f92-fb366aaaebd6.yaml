@@ -11,12 +11,12 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   source: 'taggroup:746a28ba-cc90-41ff-8b16-82638446ed07' # Provider
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Tags
