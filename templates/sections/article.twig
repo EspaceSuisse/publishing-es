@@ -58,8 +58,16 @@ The blocks are defined in the matrix field in the CMS.
 {% set isPreview = craft.app.request.getParam('token') is not null %}
 {% set freeForAll = entry.fSwitch %}
 
-{# Set Blitz cache to expire exactly on sunset date #}
-{% do craft.blitz.options().expiryDate(articleSunset) %}
+{# Set Blitz cache to expire exactly on sunset date,
+   but only if the sunset is still in the future.
+   Otherwise Blitz loops forever regenerating the cache. #}
+{% if articleSunset > now %}
+    {# Sunset is in the future — expire exactly on sunset #}
+    {% do craft.blitz.options().expiryDate(articleSunset) %}
+{% else %}
+    {# Already sunset — cache for a week, then natural refresh #}
+    {% do craft.blitz.options().expiryDate(now|date_modify('+7 days')) %}
+{% endif %}
 
 
 {# Default empty class #}
