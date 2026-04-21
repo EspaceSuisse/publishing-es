@@ -58,7 +58,7 @@ fieldLayouts:
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
-            label: null
+            label: Lead
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
