@@ -2,8 +2,8 @@ module.exports = {
   files: [
     'templates/**/*.twig',
     'templates/**/*.html',
-    'web/assets/**/*.css',
-    'web/assets/**/*.js',
+    'web/theme/**/*.css',
+    'web/theme/**/*.js',
   ],
   watchOptions: {
     ignored: [
