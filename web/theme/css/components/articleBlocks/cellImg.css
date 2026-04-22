@@ -47,3 +47,12 @@ figcaption {
         text-align: right;
     }
 }
+
+.fadeImg img {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.fadeImg.loaded img {
+  opacity: 1;
+}

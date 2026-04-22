@@ -17,7 +17,7 @@
                 desktop: '(min-width: 63rem)',
             } %}
 
-            <picture class="{{ paramClass ?? 'imgItem' }}">
+            <picture class="{{ paramClass ?? 'imgItem' }} fadeImg">
                 {% for img in transformedImages %}
                     {% set device     = deviceMap[loop.index0] ?? null %}
                     {% set mediaQuery = deviceBreakpoints[device] ?? null %}
@@ -28,7 +28,9 @@
                 <img src="{{ transformedImages[0].url }}"
                      alt="{{ (handleParam.fPlainTextI18nMultiline ?? '') | e('html_attr') }}"
                      title="{{ handleParam.title | e('html_attr') }}"
-                     loading="lazy" decoding="async">
+                     loading="lazy" decoding="async"
+                     onload="this.closest('picture').classList.add('loaded')"
+                     >
             </picture>
         {% endif %}
     {% endif %}
