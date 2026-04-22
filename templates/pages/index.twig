@@ -4,7 +4,6 @@
 {% import '_macros/macroCatOverview' as macroCat %}
 
 {% block content %}
-
 	{% set catGenre = craft.categories()
 		.group('catGenre')
 		.relatedTo({ sourceElement: articleIds })
@@ -43,7 +42,7 @@
 			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridSmSpan4 gridMdSpan8','gridSpan12 gridSmSpan4') }}
 		{% endfor %}
 		{% for item in allEntries | slice(offsetB, sliceB) %}
-				{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan4','gridSpan12 gridSmSpan4','gridSpan12 gridSmSpan4') }}
+				{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan4','gridSpan12 gridSmSpan4','gridSpan12 gridSmSpan8') }}
 		{% endfor %}
 	</div>
 		{% include "_components/indexNewsTeaser.twig" %}

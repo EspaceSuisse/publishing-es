@@ -1,8 +1,7 @@
-.btn {
+.btn, a.btn {
     background-color: var(--linkBgColor);
     color: var(--linkBgTxtColor);
     padding: 13px 20px 13px;
-    display: inline-block;
     font-family: var(--font-display);
     font-weight: var(--fontBold);
     font-size: var(--font-size-S);
@@ -13,7 +12,38 @@
         background-color: var(--linkBgHoverColor);
         color: var(--linkBgTxtHoverColor);
     }
+    &:visited {
+    }
     &.btnSmall {
         padding: var(--paddingBtnSmall);
+        padding-top: 6px;
     }
+    &.btnNeutral {
+        background-color: transparent;
+        border: solid 1px var(--linkBgColor);
+        color: var(--linkTxtColor);
+        &.active, &:hover {
+            background-color: var(--linkBgColor);
+            color: var(--linkBgTxtColor);
+        }
+    }
+}
+.btnGroup {
+  display: flex;
+
+  .btn {
+    border-radius: 0;
+    position: relative;
+    &:not(:first-child) {
+      border-left: none;
+    }
+    &:first-child {
+      border-top-left-radius: var(--radiusPreviewCard);
+      border-bottom-left-radius: var(--radiusPreviewCard);
+    }
+    &:last-child {
+      border-top-right-radius: var(--radiusPreviewCard);
+      border-bottom-right-radius: var(--radiusPreviewCard);
+    }
+  }
 }

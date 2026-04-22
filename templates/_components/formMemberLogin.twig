@@ -1,5 +1,5 @@
 {% if craft.app.session.hasFlash('error') %}
-	<div class="gridSpan12 error-message" style="color: red; padding: 1rem; margin-bottom: 1rem; background: #fee; border: 1px solid red;">
+	<div class="gridSpan12 error-message">
 		{{ craft.app.session.getFlash('error') }}
 	</div>
 {% endif %}
@@ -10,13 +10,13 @@
 	<input type="hidden" name="language" value="{{ craft.app.language }}">
 
 	<div class="formField">
-		<label for="username">{{ 'Username' | t }}</label>
-		<input type="text" id="username" name="username" autocomplete="username" placeholder="Username" required>
+		<label for="username">{{ 'Benutzername' | t }}</label>
+		<input type="text" id="username" name="username" autocomplete="username" placeholder="{{ 'Benutzername' | t }}" required>
 	</div>
 
 	<div class="formField">
 		<label for="password">{{ 'Passwort' | t }}</label>
-		<input type="password" id="password" name="password" autocomplete="current-password" placeholder="Passwort" required>
+		<input type="password" id="password" name="password" autocomplete="current-password" placeholder="{{ 'Passwort' | t }}" required>
 	</div>
 	<div class="formField formActions">
 		<label>

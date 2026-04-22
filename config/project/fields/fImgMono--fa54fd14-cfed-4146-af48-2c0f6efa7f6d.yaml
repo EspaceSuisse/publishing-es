@@ -48,7 +48,7 @@ settings:
                 - '<'
               -
                 - value
-                - '2'
+                - '1.5'
               -
                 - maxValue
                 - ''
