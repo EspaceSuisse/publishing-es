@@ -1,15 +1,11 @@
-{# _dynamic/unlockScript.twig #}
-
-{# Check if we have a valid session (Your LoginController creates this) #}
-{% if craft.app.user.identity %}
-    <script>
-        // Use a self-executing function to avoid global variable pollution
-        (function() {
-            var article = document.getElementById('protected-article');
-            if (article) {
-                // Remove the blur class immediately
-                article.classList.remove('articleIsSunset');
-            }
-        })();
-    </script>
-{% endif %}
+{# Cache-safe unlock: strips `.articleIsSunset` from `#protected-article`
+   pre-paint when the `hasAccess` cookie (set by manageplus Module) is present. #}
+<script>
+  if (/(?:^|; )hasAccess=1/.test(document.cookie)) {
+    const unlock = () => document.getElementById('protected-article')?.classList.remove('articleIsSunset');
+    new MutationObserver((_, o) => document.getElementById('protected-article') && (unlock(), o.disconnect()))
+      .observe(document.documentElement, { childList: true, subtree: true });
+    addEventListener('DOMContentLoaded', unlock, { once: true });
+    addEventListener('pageshow', e => e.persisted && unlock());
+  }
+</script>

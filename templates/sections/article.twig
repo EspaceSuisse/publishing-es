@@ -70,20 +70,13 @@ The blocks are defined in the matrix field in the CMS.
 {% endif %}
 
 
-{# Default empty class #}
-{% set articleSunsetClass = '' %}
-
-{# Check if user is logged in #}
-{% set isLoggedIn = craft.app.user.identity is not null %}
-
 {# Check if article has Image #}
 {% set hasNoImage = entry.imgAufmacher.one() is null %}
 {% set noImageSubjectColor = entry.fCatGenre.one() %}
 
-{# Update based on logic - don't sunset if logged in #}
-{% if not isPreview and not isLoggedIn and not freeForAll %}
-    {% set articleSunsetClass = isSunset ? 'articleIsSunset' : '' %}
-{% endif %}
+{# Sunset class is rendered uniformly for all visitors; per-user unlock
+   is handled client-side via the hasAccess cookie + unlockScript. #}
+{% set articleSunsetClass = (isSunset and not isPreview and not freeForAll) ? 'articleIsSunset' : '' %}
 
 {% block content %}
 
@@ -95,19 +88,12 @@ The blocks are defined in the matrix field in the CMS.
 			{% include "_components/header/headerArticle" %}
 			{% if hasNoImage %}<div class="colorHead" style="background-color: {{ noImageSubjectColor.fColor ?? 'var(--colorES-brand-blue)' }};"></div>{% endif %}
 		</header>
-		<div class="gridArticle {{ articleSunsetClass }} articleContent">
+		<div id="protected-article" class="gridArticle {{ articleSunsetClass }} articleContent">
 			{% include "_components/articleMatrix" %}
 		</div>
 		{# {% include "_components/articleCtaCall" %} #}
 		{% include "_components/articleMoreArticles" %}
 	</article>
 	{% include "_dynamic/lightboxInitiator" %}
-
-
-{# 3. Inject the Dynamic Eraser #}
-{#    Only necessary if the article IS currently sunset #}
-{% if isSunset %}
-    {{ craft.blitz.includeDynamic('_dynamic/unlockScript.twig') }}
-{% endif %}
 
 {% endblock %}
