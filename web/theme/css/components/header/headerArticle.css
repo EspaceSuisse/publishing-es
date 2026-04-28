@@ -41,7 +41,7 @@
     figcaption {
       position: absolute;
       right: 10px;
-      top: 10px;
+      top: calc( var(--layoutGap) * 4);
       background-color: var(--txtInvertColor);
       padding: 4px;
       p {

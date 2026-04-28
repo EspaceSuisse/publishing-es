@@ -61,7 +61,7 @@
 	{% include "_dynamic/catColorChecker.twig" %}
 
 	<body class="{{ bodyClass }}">
-		{{ craft.blitz.includeDynamic('_dynamic/loginIndicator', { currentUrl: craft.app.request.url }) }}
+		{% include "_components/pageSettingsPanel" %}
 		<div id="app">
 			{% include "_components/sideBar/sideBar" %}
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
