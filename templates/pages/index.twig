@@ -39,7 +39,7 @@
 		{% include "_components/header/headerBrand" %}
 		
 		{% for item in allEntries | slice(0, sliceA) %}
-			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridSmSpan4 gridMdSpan8','gridSpan12 gridSmSpan4') }}
+			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridSmSpan4 gridMdSpan8','gridSpan12 gridSmSpan8 gridMdSpan4') }}
 		{% endfor %}
 		{% for item in allEntries | slice(offsetB, sliceB) %}
 				{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan4','gridSpan12 gridSmSpan4','gridSpan12 gridSmSpan8') }}
