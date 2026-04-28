@@ -1,4 +1,7 @@
 .loginIndicator {
+    position: absolute;
+    right: calc(var(--layoutGap) * 1);
+    top: calc(var(--layoutGap) * 1);
     z-index: 100;
     font-size: var(--font-size-XS);
     font-family: var(--font-display);
@@ -20,6 +23,7 @@
         height: 10px;
         aspect-ratio: 1 / 1;
         border-radius: 100px;
+
         &.denied {
             background-color: var(--colorEs-alert);
         }
@@ -32,6 +36,7 @@
 
 @media (min-width: 48rem) {
     .loginIndicator {
+        top: calc(var(--layoutGap) * 2);
         span {
             color: var(--txtColor);
         }
