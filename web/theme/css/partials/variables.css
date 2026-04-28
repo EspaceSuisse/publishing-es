@@ -19,6 +19,7 @@
     --line-height-base: 3rem;
 
     --siteSideBarWidth: 75px;
+    --articleHeadChute: -100px;
     --layoutGap: var(--font-size-M);
     --airGap: calc(var(--font-size-M) * 0.5);
     @media (min-width: 37rem) {
