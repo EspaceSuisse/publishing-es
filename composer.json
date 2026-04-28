@@ -7,7 +7,6 @@
     }
   },
   "require": {
-    "born05/craft-assetusage": "^4.2.1",
     "craftcms/anchors": "^3.4.0",
     "craftcms/ckeditor": "^5.4.0",
     "craftcms/cms": "^5.9.20",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c69ecda8d34af4f5be4c082bb6237d0b",
+    "content-hash": "989e40a0ecad0a162c2830a6897c9131",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1057,59 +1057,6 @@
             "description": "BaconQrCode is a QR code generator for PHP.",
             "homepage": "https://github.com/Bacon/BaconQrCode",
             "time": "2022-12-07T17:46:57+00:00"
-        },
-        {
-            "name": "born05/craft-assetusage",
-            "version": "4.2.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/born05/craft-assetusage/zipball/ac2fc85fedeb673370c61bc7d940fa49ae6354bf",
-                "reference": "ac2fc85fedeb673370c61bc7d940fa49ae6354bf",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0",
-                "php": "^8.2.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Asset Usage",
-                "handle": "assetusage",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/roelvanhintum/craft-assetusage/craft4/CHANGELOG.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "roelvanhintum\\assetusage\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roel van Hintum",
-                    "homepage": "https://roel.vanhintum.eu/"
-                },
-                {
-                    "name": "Born05",
-                    "homepage": "https://www.born05.com/"
-                }
-            ],
-            "description": "Adds a column to see which assets are used or unused.",
-            "keywords": [
-                "asset usage",
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms"
-            ],
-            "support": {
-                "docs": "https://github.com/roelvanhintum/craft-assetusage/blob/craft4/README.md",
-                "issues": "https://github.com/roelvanhintum/craft-assetusage/issues"
-            },
-            "time": "2026-02-08T10:45:57+00:00"
         },
         {
             "name": "brick/math",
@@ -11958,11 +11905,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.3.21"
     },

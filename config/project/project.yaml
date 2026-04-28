@@ -1,4 +1,4 @@
-dateModified: 1777387216
+dateModified: 1777389562
 elementSources:
   craft\elements\Asset:
     -
@@ -370,7 +370,7 @@ plugins:
     schemaVersion: 1.0.0
   assetusage:
     edition: standard
-    enabled: true
+    enabled: false
     schemaVersion: 2.0.0
   blitz:
     edition: standard
