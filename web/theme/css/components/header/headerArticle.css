@@ -39,19 +39,26 @@
     }
 
     figcaption {
-      position: absolute;
-      right: 10px;
-      top: calc( var(--layoutGap) * 4);
       background-color: var(--txtInvertColor);
       padding: 4px;
+      position: absolute;
+      z-index: 100;
+      bottom: 0;
+      right: 0;
       p {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
         margin-top: var(--layoutGap);
         margin: 0;
         padding: 0;
+        background-color: red;
       }
     }
+  }
+}
+@media (min-width: 63rem) {
+  figcaption {
+    top: calc( var(--layoutGap) * 1.5 );
   }
 }
 
