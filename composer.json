@@ -8,7 +8,7 @@
   },
   "require": {
     "craftcms/anchors": "^3.4.0",
-    "craftcms/ckeditor": "^5.4.0",
+    "craftcms/ckeditor": "^5.5.0",
     "craftcms/cms": "^5.9.20",
     "doublesecretagency/craft-cpcss": "^3.0.0",
     "doublesecretagency/craft-viewcount": "2.0.0",
