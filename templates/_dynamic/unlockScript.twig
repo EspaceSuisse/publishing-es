@@ -3,7 +3,7 @@
 <script>
   console.log('unlockScript');
   console.log(document.cookie);
-  if (/(?:^|; )hasAccess=1/.test(document.cookie)) {
+  if (/hasAccess=[^;]*s%3A1%3A%221%22/.test(document.cookie)) {
     console.log('hasAccess=1');
     const unlock = () => document.getElementById('protected-article')?.classList.remove('articleIsSunset');
     new MutationObserver((_, o) => document.getElementById('protected-article') && (unlock(), o.disconnect()))
@@ -12,3 +12,5 @@
     addEventListener('pageshow', e => e.persisted && unlock());
   }
 </script>
+ 
+ 
