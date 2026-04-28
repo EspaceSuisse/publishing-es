@@ -1,4 +1,4 @@
-dateModified: 1776778720
+dateModified: 1777387216
 elementSources:
   craft\elements\Asset:
     -
@@ -564,6 +564,10 @@ plugins:
     enabled: true
     schemaVersion: 1.1.1
   obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  relax:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
