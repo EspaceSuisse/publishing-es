@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 04e7d3dd-0241-4ab3-83ef-72e36a2f535d # Newsletter Set Set
+    uid: 04e7d3dd-0241-4ab3-83ef-72e36a2f535d # Newsletter Set
 handle: newsletter
 maxAuthors: 1
 name: Newsletter

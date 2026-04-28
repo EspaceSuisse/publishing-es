@@ -1,0 +1,14 @@
+{% set memberLoginPage = craft.entries.section('memberLogin').one() %}
+{% set currentUrl = currentUrl ?? '/' %}
+
+{% if craft.app.user.identity %}
+    <p class="loginIndicator">
+        <span>{{ 'Mitglied' | t }}</span>
+        <span class="ampel allowed"></span>
+    </p>
+{% else %}
+    <p class="loginIndicator">
+        <a href="{{ url( memberLoginPage.url , { redirect: currentUrl }) }}">{{ 'Gast' | t }}</a>
+        <span class="ampel denied"></span>
+    </p>
+{% endif %}

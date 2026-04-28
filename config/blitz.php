@@ -1,13 +1,17 @@
 <?php
 
 use craft\helpers\App;
+use putyourlightson\blitz\models\SettingsModel;
+
 
 return [
     '*' => [
         'cachingEnabled' => false,
         'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
-        'queryStringCaching' => \putyourlightson\blitz\models\SettingsModel::QUERY_STRINGS_CACHE_URLS_AS_UNIQUE_PAGES,
+        'queryStringCaching' => SettingsModel::QUERY_STRINGS_CACHE_URLS_AS_UNIQUE_PAGES,
+        //'refreshMode' => SettingsModel::REFRESH_MODE_CLEAR,
+        'refreshMode' => SettingsModel::REFRESH_MODE_CLEAR_AND_GENERATE,
         'includedUriPatterns' => [
             ['uriPattern' => '.*'],
         ],
@@ -19,7 +23,7 @@ return [
         ],
     ],
     'dev' => [
-        'cachingEnabled' => true,
+        'cachingEnabled' => false,
     ],
     'staging' => [
         'cachingEnabled' => false,

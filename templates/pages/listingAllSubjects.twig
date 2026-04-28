@@ -15,12 +15,11 @@
 		{% include "_components/header/headerPage" %}
 	</header>
 
-
 	<div class="listingGrid">
 			{% for item in allItems %}
 				{% set hasEntries = craft.entries().relatedTo(item).exists() %}
 				{% if hasEntries %}
-					{{ macroPreview.listMacro(item,'previewGenre gridSpan12 gridLgSpan6','gridSpan6 gridLgSpan3','gridSpan6 gridLgSpan3') }}
+					{{ macroPreview.listMacro(item,'previewGenre gridSpan12 gridLgSpan6','gridSpan12 gridMdSpan6 gridLgSpan3','gridSpan12 gridMdSpan6 gridLgSpan3') }}
 				{% endif %}
 			{% endfor %}
 	</div>

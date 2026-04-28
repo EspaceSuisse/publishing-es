@@ -1,4 +1,4 @@
-dateModified: 1776255269
+dateModified: 1777389562
 elementSources:
   craft\elements\Asset:
     -
@@ -270,7 +270,7 @@ meta:
     4b6337e2-afe6-4b96-a285-d544f0ff0fdc: 'Image Gallery' # Image Gallery
     4b232459-e954-415b-b8ff-b69a655f5526: 'Public Schema' # Public Schema
     4d9d87d3-4cd6-486b-9a9b-35247259c4c3: Styling # Styling
-    04e7d3dd-0241-4ab3-83ef-72e36a2f535d: 'Newsletter Set Set' # Newsletter Set Set
+    04e7d3dd-0241-4ab3-83ef-72e36a2f535d: 'Newsletter Set' # Newsletter Set
     4e75f3d6-ff7d-43bf-8be9-7eef14e6f6eb: 'Homepage Set' # Homepage Set
     4f2a2908-da4b-46df-b9ab-a5a6d8078286: Downloads # Downloads
     5af8807d-9f2e-4703-a300-ba7f06531aea: 'Grid Span Wide' # Grid Span Wide
@@ -370,7 +370,7 @@ plugins:
     schemaVersion: 1.0.0
   assetusage:
     edition: standard
-    enabled: true
+    enabled: false
     schemaVersion: 2.0.0
   blitz:
     edition: standard
@@ -564,6 +564,10 @@ plugins:
     enabled: true
     schemaVersion: 1.1.1
   obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  relax:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

@@ -1,6 +1,8 @@
 .articleImg {
     position: relative;
     padding-bottom: calc(var(--layoutGap) * 1.5);
+    container-type: inline-size; /* Define as a size container */
+    container-name: article-img; /* Give it a name for reference */
 
     picture {
         display: block;
@@ -9,31 +11,48 @@
     p {
         margin: 0;
     }
-    @media (max-width: 65rem) {
-        figcaption {
-            flex-direction: column;
+}
 
+figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--layoutGap);
+    /*
+     * This is the CORRECT syntax for a container query.
+     * It applies to the figcaption element itself and checks
+     * the dimensions of its container named 'article-img'.
+     */
+    @container article-img (max-width: 65rem) {
+        /* Apply styles when the parent .articleImg is smaller than 65rem */
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .caption {
+        padding-top: 5px;
+
+        p {
+            font-size: var(--font-size-S);
+            font-family: var(--font-default);
+            line-height: 1.5;
         }
+    }
+
+    .assetSource {
+        font-size: var(--font-size-XS);
+        font-family: var(--font-default);
+        opacity: 0.8;
+        min-width: 30%;
+        text-align: right;
     }
 }
-figcaption {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
 
-        .caption {
-            padding-top: 5px;
+.fadeImg img {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
 
-            p {
-                font-size: var(--font-size-S);
-                font-family: var(--font-default);
-                line-height: 1.5;
-            }
-        }
-
-        .assetSource {
-            font-size: var(--font-size-XS);
-            font-family: var(--font-default);
-            opacity: 0.8;
-        }
-    }
+.fadeImg.loaded img {
+  opacity: 1;
+}

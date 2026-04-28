@@ -327,6 +327,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-04-16T11:32:49+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            handle: fPlainTextI18n3
+            instructions: null
+            label: 'Checkbox Label Inforaum TI'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 53f5fdc2-a003-415f-bed6-b43858ba3501
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-04-08T07:01:09+00:00'
             editCondition: null
             elementCondition: null
@@ -358,7 +374,7 @@ fieldLayouts:
 handle: tNewsletterSet
 hasTitleField: true
 icon: null
-name: 'Newsletter Set Set'
+name: 'Newsletter Set'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

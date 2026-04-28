@@ -19,6 +19,7 @@
     --line-height-base: 3rem;
 
     --siteSideBarWidth: 75px;
+    --articleHeadChute: -100px;
     --layoutGap: var(--font-size-M);
     --airGap: calc(var(--font-size-M) * 0.5);
     @media (min-width: 37rem) {
@@ -56,7 +57,7 @@
     --radiusPreviewCard: 4px;
 
     --color-highlight-soft: rgb(227, 227, 227);
-    --color-highlight-strong: rgb(236, 185, 190);
+    --color-highlight-strong: var(--colorES-brand-blue);
 
     --colorES-brand-blue: rgb(28, 112, 183);
     --colorES-brand-blue-soft: rgb(152, 189, 212);
@@ -65,6 +66,8 @@
     --colorES-genre: rgb(48, 141, 192);
 
     --colorEs-alert: rgb(216, 134, 34);
+    --colorEs-success: rgb(128, 205, 113);
+
 
     --shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
 

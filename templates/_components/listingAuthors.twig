@@ -1,4 +1,6 @@
 {%- set authorQuery = entry.authors -%}
+{% set esURLDe = 'https://www.espacesuisse.ch/de/verband/organisation/geschaeftsstelle' %}
+{% set esUrlFr = 'https://www.espacesuisse.ch/fr/association/organisation/secretariat' %}
 
 <ul class="articleAuthors gridStart2 gridSpan10">
 	{%- for item in authorQuery -%}
@@ -15,7 +17,8 @@
 					<p class="authorMeta">
 						{%- if item.fPlainTextI18n2 -%}
 							<span class="authorEducation">
-								{{- item.fPlainTextI18n2 -}}
+								{{- item.fPlainTextI18n2 | t -}}
+								{% if item.fPlainTextI18n2 and item.fPlainTextI18n %},{% endif %}
 							</span>
 						{%- endif -%}
 						{# {%- for cat in item.fTeam -%}
@@ -27,14 +30,14 @@
 						{%- endfor -%} #}
 						{%- if item.fPlainTextI18n -%}
 							<span class="authorFunction">
-								{{- ', ' ~ item.fPlainTextI18n -}}
+								{{ item.fPlainTextI18n | t -}}
 							</span>
 						{%- endif -%}
 						{% if item.isInGroup('espacesuisse') %}	
 							{% if entry.language == 'de-CH' %}
-								<a href="https://www.espacesuisse.ch/de/verband/organisation/geschaeftsstelle">EspaceSuisse</a></span>
+								<a href="{{ esURLDe }}">EspaceSuisse</a></span>
 							{% else %}
-								<a href="https://www.espacesuisse.ch/fr/association/organisation/secretariat">EspaceSuisse</a></span>
+								<a href="{{ esURLFr }}">EspaceSuisse</a></span>
 							{% endif %}
 						{% endif %}
 					</p>

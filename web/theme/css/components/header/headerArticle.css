@@ -39,26 +39,33 @@
     }
 
     figcaption {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      background-color: var(--txtInvertColor);
       padding: 4px;
+      position: absolute;
+      text-align: right;
+      z-index: 100;
+      bottom: calc( var(--articleHeadChute) * -1 );
+      right: 0;
       p {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
         margin-top: var(--layoutGap);
+        background-color: var(--txtInvertColor);
         margin: 0;
         padding: 0;
       }
     }
   }
 }
+@media (min-width: 63rem) {
+  .articleHead .articleHeadImg figcaption {
+    top: calc( var(--layoutGap) * 2);
+  }
+}
 
 .articleHeadTitleCard {
   position: relative;
   margin-bottom: calc(var(--layoutGap) * 2);
-  margin-top: -100px;
+  margin-top: var(--articleHeadChute);
   &.noImg {
     margin-top: 50vh;
   }
@@ -74,7 +81,7 @@
 @media (max-width: 63rem) {
   .articleHeadTitleCard {
     .headCardGrid {
-      padding: calc(var(--layoutGap) * 1.5) 0;
+      padding: calc(var(--layoutGap) * 1.5);
     }
   }
 }

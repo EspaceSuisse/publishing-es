@@ -9,7 +9,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: 'Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.'
+            content: "Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.\r\n\r\nFormat bitte nur Koordinatensystem WSG84. Das sieht ungefähr so aus:\r\n`Lat: 46.418105`\r\n`Lon: 6.260320`"
             dateAdded: '2025-07-30T09:25:10+00:00'
             displayInPane: true
             elementCondition: null
