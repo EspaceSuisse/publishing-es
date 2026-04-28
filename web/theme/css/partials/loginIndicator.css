@@ -1,7 +1,7 @@
 .loginIndicator {
     position: absolute;
-    right: calc(var(--layoutGap) * 1);
-    top: calc(var(--layoutGap) * 1);
+    right: calc(var(--layoutGap) / 2);
+    top: calc(var(--layoutGap) / 2);
     z-index: 100;
     font-size: var(--font-size-XS);
     font-family: var(--font-display);
@@ -9,7 +9,6 @@
     display: flex;
     gap: calc(var(--layoutGap) / 2);
     align-items: center;
-
     span {
         color: var(--txtInvertColor);
     }
@@ -36,7 +35,9 @@
 
 @media (min-width: 48rem) {
     .loginIndicator {
-        top: calc(var(--layoutGap) * 2);
+        top: calc(var(--layoutGap) / 2);
+        padding: 0;
+        margin: 0;
         span {
             color: var(--txtColor);
         }

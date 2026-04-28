@@ -1,7 +1,10 @@
 {# Cache-safe unlock: strips `.articleIsSunset` from `#protected-article`
    pre-paint when the `hasAccess` cookie (set by manageplus Module) is present. #}
 <script>
-  if (/(?:^|; )hasAccess=1/.test(document.cookie)) {
+  console.log('unlockScript');
+  console.log(document.cookie);
+  if (/hasAccess=[^;]*s%3A1%3A%221%22/.test(document.cookie)) {
+    console.log('hasAccess=1');
     const unlock = () => document.getElementById('protected-article')?.classList.remove('articleIsSunset');
     new MutationObserver((_, o) => document.getElementById('protected-article') && (unlock(), o.disconnect()))
       .observe(document.documentElement, { childList: true, subtree: true });
@@ -9,3 +12,5 @@
     addEventListener('pageshow', e => e.persisted && unlock());
   }
 </script>
+ 
+ 

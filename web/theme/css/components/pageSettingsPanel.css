@@ -1,0 +1,12 @@
+.pageSettingsPanel {
+    background-color: red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+}
+@media (min-width: 48rem) {
+    .pageSettingsPanel {
+        top: calc(var(--layoutGap) * 2);
+    }
+}
