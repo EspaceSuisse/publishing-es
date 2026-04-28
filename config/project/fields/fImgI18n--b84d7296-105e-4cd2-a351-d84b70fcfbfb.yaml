@@ -22,43 +22,6 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
   restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
-      -
-        - conditionRules
-        -
-          -
-            __assoc__:
-              -
-                - class
-                - craft\elements\conditions\assets\FileSizeConditionRule
-              -
-                - uid
-                - 2d0b1ccb-d43b-4da1-a235-3afa51cd457c
-              -
-                - operator
-                - '<'
-              -
-                - value
-                - '1.5'
-              -
-                - maxValue
-                - ''
-              -
-                - step
-                - 1
-              -
-                - unit
-                - MB
   selectionLabel: 'Bild hinzufügen'
   showSearchInput: true
   showSiteMenu: true
