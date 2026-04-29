@@ -78,31 +78,20 @@ class Module extends BaseModule
             $logger->dispatcher->targets['manageplus'] = $fileTarget;
         }
 
-        // Sync `hasAccess` cookie for cache-safe client-side article unlock.
-        // The cookie is a non-httpOnly UI hint, not an auth token — the Craft
-        // session remains the authority for actual access control.
-        $request = Craft::$app->getRequest();
-        if (!$request->getIsConsoleRequest()) {
-            $user = Craft::$app->getUser();
-            $cookies = Craft::$app->getResponse()->getCookies();
-
-            if ($user->getIdentity()) {
-                $authTimeout = $user->authTimeout;
-                $expire = $authTimeout ? time() + $authTimeout : 0;
-
-                $cookies->add(new \yii\web\Cookie([
-                    'name' => 'hasAccess',
-                    'value' => '1',
-                    'expire' => $expire,
-                    'path' => '/',
-                    'httpOnly' => false,
-                    'secure' => $request->getIsSecureConnection(),
-                    'sameSite' => \yii\web\Cookie::SAME_SITE_LAX,
-                ]));
-            } else {
-                $cookies->remove('hasAccess');
+        // Clear the `hasAccess` cookie on logout. The cookie is set on the
+        // login redirect (LoginController) — keeping set/clear bound to the
+        // auth boundary avoids leaking Set-Cookie headers onto cached
+        // responses and prevents timing races with Blitz dynamic includes.
+        Event::on(
+            \craft\web\User::class,
+            \craft\web\User::EVENT_AFTER_LOGOUT,
+            function () {
+                $response = Craft::$app->getResponse();
+                if ($response) {
+                    $response->getCookies()->remove('hasAccess');
+                }
             }
-        }
+        );
     }
 
     /**
