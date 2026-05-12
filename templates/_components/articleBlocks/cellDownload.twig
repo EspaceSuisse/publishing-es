@@ -1,21 +1,19 @@
 {% set downloadAsset = block.fFile.all() %}
 
 
-{% for item in downloadAsset %}
+<ul>
+	{% for item in downloadAsset %}
 
-	{% set imgGridSpans = 'gridSpan12 gridMdSpan3 gridMdStart2' %}
-	{% set txtGridSpans = 'gridSpan12 gridMdSpan4 gridMdStart6' %}
-	{% set subLine = item.extension ~ ', ' ~ (item.size / 1000) | number_format(0, '.', ',') ~ ' KB' %}
+		{% set subLine = item.extension ~ ', ' ~ (item.size / 1000) | number_format(0, '.', ',') ~ ' KB' %}
 
-	<a href="{{ item.url }}" class="downloadLink gridSpan12" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
-		<div class="imgPart {{ imgGridSpans }}">
-			<img src="/theme/img/icon-file.svg" alt="">
-			<span class="downloadExtension">.{{ item.extension }}</span>
-		</div>
-		<div class="txtPart {{ txtGridSpans }}">
-			<h3 class="downloadTitle">{{ item.title }}</h3>
-			<p>{{ subLine }}</p>
-		</div>
-		
-	</a>
-{% endfor %}
+			<li>
+				<a href="{{ item.url }}" class="downloadLink" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
+					<span class="linkIcon downloadIcon">{{ svg('@webroot/theme/img/icon-file.svg')|raw }} </span>
+					<span class="linkLabel downloadTitle">
+						{{ item.title }}
+						<span class="subLine">(.{{ subLine }})</span>
+					</span>
+				</a>
+			</li>
+	{% endfor %}
+</ul>

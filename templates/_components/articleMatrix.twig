@@ -7,12 +7,12 @@
 {% for block in articleMatrix %}
 
 	{# check if there is a number set for grid placement. #}
-	{% set gridStart = block.fGridStart ?? null %}
-	{% set gridSpan = block.fGridSpan ?? null %}
+	{% set gridStart = block.fGridStart ?? '2' %}
+	{% set gridSpan = block.fGridSpan ?? '10' %}
 	{% set vertPos = block.fVertPos.value ?? null %}
 
-	{% set gridStartImg = block.fGridStartWide ?? null %}
-	{% set gridSpanImg = block.fGridSpanWide ?? null %}
+	{% set gridStartImg = block.fGridStartWide ?? '0' %}
+	{% set gridSpanImg = block.fGridSpanWide ?? '12' %}
 
 	{# switch trough all blocks. actual block code in partials #}
 	{% switch block.type %}
@@ -54,7 +54,7 @@
 				</aside>
 			{% endif %}
 		{% case "tLinks" %}
-			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellLinkList">
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellLinkList cellClickElement">
 				{% include "_components/articleBlocks/cellLinkList" %}
 			</div>
 		{% case "tMap" %}
@@ -62,7 +62,7 @@
 				{% include "_components/articleBlocks/cellMap" %}
 			</div>
 		{% case "tDownload" %}
-			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellDownload cellCard {{ 'style' ~ block.fStyling.value | upper }}">
+			<div class="articleElement {{ macro.gridClasses(gridStart, gridSpan, vertPos) }} cellDownload cellClickElement">
 				{% include "_components/articleBlocks/cellDownload" %}
 			</div>
 		{% case "imgTxtFloat" %}

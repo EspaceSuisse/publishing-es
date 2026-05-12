@@ -6,8 +6,8 @@
     
         <li>
             <a href="{{ item.fLinkI18n.url }}" target="{{ item.fLinkI18n.target }}" rel="noopener noreferrer">
-                <span>{{ svg('@webroot/theme/img/icon-link.svg')|raw }} </span>
-                {{ item.fLinkI18n.label }}
+                <span class="linkIcon">{{ svg('@webroot/theme/img/icon-link.svg')|raw }} </span>
+                <span class="linkLabel">{{ item.fLinkI18n.label }}</span>
             </a>
         </li>
     

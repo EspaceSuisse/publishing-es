@@ -31,34 +31,34 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-12-04T08:47:43+00:00'
+            dateAdded: '2026-05-12T08:11:44+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 49c73379-624e-465f-92eb-b17550eca753 # Grid Start Wide
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2e2d12be-bd7d-4386-8619-1d52976a095c
+            uid: 63b835e5-c69b-487d-a8f8-c73f7065db0b
             userCondition: null
             warning: null
             width: 50
           -
-            dateAdded: '2025-12-04T08:47:43+00:00'
+            dateAdded: '2026-05-12T08:11:44+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a621dede-d4e2-46df-89e2-3173a108d537
+            uid: faeb4c26-848b-4150-b7d6-8d19fa41832a
             userCondition: null
             warning: null
             width: 50
@@ -75,22 +75,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7f6a4c29-345e-4619-8910-d289592b37e1
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2025-08-26T11:24:43+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 4d9d87d3-4cd6-486b-9a9b-35247259c4c3 # Styling
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e1ada919-812d-4ff5-88cf-680d6576f38d
             userCondition: null
             warning: null
             width: 50
