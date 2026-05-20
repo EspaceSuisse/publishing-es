@@ -1,4 +1,4 @@
-dateModified: 1779268048
+dateModified: 1779268114
 elementSources:
   craft\elements\Asset:
     -
@@ -547,6 +547,10 @@ plugins:
       additionalCss: ''
       cssFile: '@web/theme/css/components/backendCP.css'
   craft-geoman:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  craft-link-checker:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
