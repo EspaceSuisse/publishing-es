@@ -6,6 +6,7 @@ entryTypes:
     uid: fd55594d-e7ef-4114-b326-eb015c7418c9 # Article Set
 handle: article
 maxAuthors: 5
+minAuthors: 1
 name: Artikel
 previewTargets:
   -
