@@ -1,4 +1,4 @@
-dateModified: 1779267977
+dateModified: 1779268048
 elementSources:
   craft\elements\Asset:
     -
@@ -534,7 +534,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 5.0.0.1
+    schemaVersion: 5.6.0.0
   codefield:
     edition: standard
     enabled: true

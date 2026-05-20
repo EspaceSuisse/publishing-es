@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9dca61bbb76bb9c9d6ea7150b2e67f83",
+    "content-hash": "05689fcd55fcc47206b5552ef590bd2f",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1289,16 +1289,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.11",
+            "version": "1.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "68ff39175e8e94a4bb1d259407ce51a6a60f09e6"
+                "reference": "00a2f4201641d5c53f7fc0195e6c8d9fcc321a78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/68ff39175e8e94a4bb1d259407ce51a6a60f09e6",
-                "reference": "68ff39175e8e94a4bb1d259407ce51a6a60f09e6",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/00a2f4201641d5c53f7fc0195e6c8d9fcc321a78",
+                "reference": "00a2f4201641d5c53f7fc0195e6c8d9fcc321a78",
                 "shasum": ""
             },
             "require": {
@@ -1345,7 +1345,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.11"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.12"
             },
             "funding": [
                 {
@@ -1357,7 +1357,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-30T09:16:10+00:00"
+            "time": "2026-05-19T11:26:22+00:00"
         },
         {
             "name": "composer/pcre",
@@ -1538,15 +1538,15 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "5.5.0",
+            "version": "5.6.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/743a4e1bccd3c98eb544b4730dd6689ca03ab4af",
-                "reference": "743a4e1bccd3c98eb544b4730dd6689ca03ab4af",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/a9bcc37d02b069d9ed9a08242f470588d58b1400",
+                "reference": "a9bcc37d02b069d9ed9a08242f470588d58b1400",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^5.9.0",
+                "craftcms/cms": "^5.10.0",
                 "craftcms/html-field": "^3.5.0",
                 "embed/embed": "^4.4",
                 "nystudio107/craft-code-editor": ">=1.0.8 <=1.0.13 || ^1.0.16",
@@ -1587,7 +1587,7 @@
                 "docs": "https://github.com/craftcms/ckeditor/blob/5.x/README.md",
                 "rss": "https://github.com/craftcms/ckeditor/commits/5.x.atom"
             },
-            "time": "2026-04-27T23:04:54+00:00"
+            "time": "2026-05-13T22:11:11+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -11948,13 +11948,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.3.21"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
