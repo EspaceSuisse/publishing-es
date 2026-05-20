@@ -1,0 +1,11 @@
+{%- macro authorI18nField(fieldParamDe, fieldParamFr) -%}
+
+  {%- set isFrench = currentSite.language starts with 'fr' -%}
+
+  {%- if isFrench -%}
+    {{- fieldParamFr ?? fieldParamDe -}}
+  {%- else -%}
+    {{- fieldParamDe ?? fieldParamFr -}}
+  {%- endif -%}
+
+{%- endmacro -%}
