@@ -1,6 +1,7 @@
 {% extends "_layouts/main" %}
 {% import '_macros/macroImage' as macroImg %}
 {% import '_macros/macroFigCaption' as figCaption %}
+{% import '_macros/macroCatOverview' as macroCat %}
 
 {# news template #}
 
@@ -9,6 +10,7 @@
 
 	{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
 	{% set authorShort = entry.authors | first %}
+	{% set newsSubject = entry.fCatSubject %}
 
 	<article>
 		<header class="pageHead articleHead">
@@ -28,6 +30,11 @@
 		</div>
 	</article>
 	<aside class="gridArticle articleContent">
+		{% if newsSubject %}
+			<div class="gridStart2 gridSpan10">
+				{{ macroCat.catOverview(newsSubject, 'subject', entry.section) }}
+			</div>
+		{% endif %}
 		{% include "_components/newsPrevNext" %}
 	</aside>
 	{% include "_dynamic/lightboxInitiator" %}
