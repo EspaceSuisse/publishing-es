@@ -81,3 +81,17 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     line-height: 1.4;
     margin: 0;
 }
+sub, sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.3em;
+}
+
+sup {
+  top: -0.5em;
+}
