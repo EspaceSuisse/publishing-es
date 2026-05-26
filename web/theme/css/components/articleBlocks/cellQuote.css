@@ -34,10 +34,13 @@
         }
     }
     &.styleA {
+        blockquote p {
+            font-weight: var(--font-regular);
+            line-height: 1.2;
+        }
     }
     &.styleB {
         blockquote p {
-            font-size: var(--font-size-XL);  
             font-weight: var(--font-bold);
             line-height: 1.2;
         }

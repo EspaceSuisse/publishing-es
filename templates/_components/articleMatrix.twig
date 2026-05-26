@@ -31,9 +31,14 @@
 				{% include "_components/articleBlocks/cellRichText" %}
 			</div>
 		{% case "tQuote" %}
-			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, null) }} cellQuote {{ 'style' ~ block.fStyling.value | upper }}">
+
+			{% set styleValue = block.fStyling.value ?? 'a' %}
+			{% set quoteStyle = 'style' ~ styleValue | upper %}
+
+			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, null) }} cellQuote {{ quoteStyle }}">
 				{% include "_components/articleBlocks/cellQuote" %}
 			</div>
+
 		{% case "tArticleImg" %}
 			<div class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellImg">
 				{% include "_components/articleBlocks/cellImg" %}
