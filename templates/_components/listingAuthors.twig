@@ -3,6 +3,7 @@
 {%- set authorQuery = entry.authors -%}
 {% set esUrlDe = 'https://www.espacesuisse.ch/de/verband/organisation/geschaeftsstelle' %}
 {% set esUrlFr = 'https://www.espacesuisse.ch/fr/association/organisation/secretariat' %}
+{% set functionSeparator = ',' %}
 
 <ul class="articleAuthors gridStart2 gridSpan10">
 	{%- for item in authorQuery -%}
@@ -19,7 +20,7 @@
 					<p class="authorMeta">
 						{%- if item.fPlainTextI18n2 or item.fPlainTextI18n3 -%}
 							<span class="authorEducation">
-								{{ macro.authorI18nField(item.fPlainTextI18n2, item.fPlainTextI18n3) }}.
+								{{ macro.authorI18nField(item.fPlainTextI18n2, item.fPlainTextI18n3) }}{{ functionSeparator }}
 							</span>
 						{%- endif -%}
 						{# {%- for cat in item.fTeam -%}
