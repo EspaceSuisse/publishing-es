@@ -30,11 +30,14 @@
 		</div>
 	</article>
 	<aside class="gridArticle articleContent">
-		{% if newsSubject %}
-			<div class="gridStart2 gridSpan10">
-				{{ macroCat.catOverview(newsSubject, 'subject', entry.section) }}
-			</div>
-		{% endif %}
+		<div class="gridStart2 gridSpan10 articlebottomMeta">
+			{% if newsSubject %}
+				<div>
+					{{ macroCat.catOverview(newsSubject, 'subject', entry.section) }}
+				</div>
+			{% endif %}
+			<p>ID: {{ entry.id }}</p>
+		</div>
 		{% include "_components/newsPrevNext" %}
 	</aside>
 	{% include "_dynamic/lightboxInitiator" %}

@@ -14,3 +14,11 @@
         color: var(--linkTxtHoverColor)
     }
 }
+.articlebottomMeta {
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-size: var(--font-size-S);
+        font-family: var(--font-default);
+    }
+}

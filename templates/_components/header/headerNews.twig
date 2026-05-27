@@ -9,7 +9,7 @@
 
 <header class="headerCard newsHeadCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
 	<div class="{{ smallerGrid }} headMeta">
-		{{ macroPostDate.postDate(entry.postDate, true) }} ID: {{ entry.id }}
+		{{ macroPostDate.postDate(entry.postDate, true) }}
 	</div>
 	<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
 	{% if entry.fPlainTextI18nMultiline %}
