@@ -5,13 +5,15 @@
     {% set imgSourceLicence = handleParam.fImgLicence %}
     
     {%- set printImgSource -%}
-        ({{ 'Quelle' | t }}:
-        {{- ' ' ~ imgSource.fPlainTxt -}}
+        {% if imgSource %}
+            ({{ 'Quelle' | t }}:
+            {{- ' ' ~ imgSource.fPlainTxt -}}
+        {% endif %}
         {%- for item in imgSourcePlatform -%}
             {{- ' ' ~ item.title -}}
         {%- endfor -%}
         {%- for item in imgSourceLicence -%}
-            {{- ' ' ~ item.title -}}
+            {{- ' ' ~ item.title -}})
         {%- endfor -%}
     {%- endset -%}
 
