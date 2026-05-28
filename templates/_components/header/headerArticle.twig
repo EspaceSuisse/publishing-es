@@ -35,8 +35,8 @@
 		{% endif %}
 		<div class="{{ smallerGrid }}  headMetaFooter">
 			<p class="tags">
-				{{ macroCat.catOverview(articleGenre, 'genre', true) }}
-				{{ macroCat.catOverview(articleSubject, 'subject', true) }}
+				{{ macroCat.catOverview(articleGenre, 'genre', entry.section) }}
+				{{ macroCat.catOverview(articleSubject, 'subject', entry.section) }}
 			</p>
 			{% include "_components/listingAuthors" %}
 		</div>
