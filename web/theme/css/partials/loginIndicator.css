@@ -1,7 +1,4 @@
 .loginIndicator {
-    position: absolute;
-    right: calc(var(--layoutGap) / 2);
-    top: calc(var(--layoutGap) / 2);
     z-index: 100;
     font-size: var(--font-size-XS);
     font-family: var(--font-display);
@@ -12,7 +9,6 @@
     span {
         color: var(--txtInvertColor);
     }
-
     a {
         color: var(--txtInvertColor);
     }
@@ -29,20 +25,6 @@
 
         &.allowed {
             background-color: var(--colorEs-success);
-        }
-    }
-}
-
-@media (min-width: 48rem) {
-    .loginIndicator {
-        top: calc(var(--layoutGap) / 2);
-        padding: 0;
-        margin: 0;
-        span {
-            color: var(--txtColor);
-        }
-        a {
-            color: var(--linkTxtColor);
         }
     }
 }
