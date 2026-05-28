@@ -1,4 +1,20 @@
 {% macro articleImage(handleParam, transformKey, paramClass) %}
+
+    {% set imgSource = handleParam.fmImgSource.one() %}
+    {% set imgSourcePlatform = handleParam.fTagProvider %}
+    {% set imgSourceLicence = handleParam.fImgLicence %}
+    
+    {%- set printImgSource -%}
+        ({{ 'Quelle' | t }}:
+        {{- ' ' ~ imgSource.fPlainTxt -}}
+        {%- for item in imgSourcePlatform -%}
+            {{- ' ' ~ item.title -}}
+        {%- endfor -%}
+        {%- for item in imgSourceLicence -%}
+            {{- ' ' ~ item.title -}}
+        {%- endfor -%}
+    {%- endset -%}
+
     {% if handleParam is null %}
         no image
     {% elseif handleParam.extension|lower == 'svg' %}
@@ -27,7 +43,7 @@
                 {% endfor %}
                 <img src="{{ transformedImages[0].url }}"
                      alt="{{ (handleParam.fPlainTextI18nMultiline ?? '') | e('html_attr') }}"
-                     title="{{ handleParam.title | e('html_attr') }}"
+                     title="{{ handleParam.title | e('html_attr') }} {{ printImgSource | e('html_attr') }}"
                      loading="lazy" decoding="async"
                      onload="this.closest('picture').classList.add('loaded')"
                      >
