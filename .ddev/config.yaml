@@ -16,6 +16,7 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 corepack_enable: false
+upload_dirs: "web/assets"
 
 # Key features of DDEV's config.yaml:
 
