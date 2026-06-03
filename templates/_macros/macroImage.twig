@@ -1,4 +1,7 @@
 {% macro articleImage(handleParam, transformKey, paramClass) %}
+
+    {% import '_macros/macroImageSource' as macroImageSource %}
+
     {% if handleParam is null %}
         no image
     {% elseif handleParam.extension|lower == 'svg' %}
@@ -27,7 +30,7 @@
                 {% endfor %}
                 <img src="{{ transformedImages[0].url }}"
                      alt="{{ (handleParam.fPlainTextI18nMultiline ?? '') | e('html_attr') }}"
-                     title="{{ handleParam.title | e('html_attr') }}"
+                     title="{{ handleParam.title | e('html_attr') }} {{ macroImageSource.imageSource(handleParam) | e('html_attr') }}"
                      loading="lazy" decoding="async"
                      onload="this.closest('picture').classList.add('loaded')"
                      >

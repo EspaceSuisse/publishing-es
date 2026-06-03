@@ -135,6 +135,22 @@ tabs:
         warning: null
         width: 100
       -
+        dateAdded: '2026-05-20T08:34:18+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+        handle: fPlainTextI18n3
+        instructions: null
+        label: 'Education FR'
+        required: false
+        tip: Journaliste
+        type: craft\fieldlayoutelements\CustomField
+        uid: 82ddeb9c-b1be-431a-b5dc-47e57d2d0255
+        userCondition: null
+        warning: null
+        width: 100
+      -
         dateAdded: '2025-04-29T07:06:49+00:00'
         editCondition: null
         elementCondition: null
@@ -147,6 +163,22 @@ tabs:
         tip: 'Anwältin, stellvertretende Direktorin von EspaceSuisse'
         type: craft\fieldlayoutelements\CustomField
         uid: b4789b93-a202-4a87-a724-f555549a25f2
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        dateAdded: '2026-05-20T08:34:18+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+        handle: fPlainTextI18n4
+        instructions: null
+        label: 'Functione FR'
+        required: false
+        tip: 'Responsable de la communication'
+        type: craft\fieldlayoutelements\CustomField
+        uid: a675b9b6-79a7-4386-b523-961d89928071
         userCondition: null
         warning: null
         width: 100
@@ -165,6 +197,15 @@ tabs:
         uid: 132ae7de-6d1e-4d16-9ac8-49e0ab5762da
         userCondition: null
         warning: null
+        width: 100
+      -
+        content: 'Unglücklicherweise werden Personen nicht übersetzt. Daher hat es für mehrsprachige Felder je ein feld parat. Nicht so wie bei den Einträgen :('
+        dateAdded: '2026-05-20T08:34:18+00:00'
+        displayInPane: true
+        elementCondition: null
+        type: craft\fieldlayoutelements\Markdown
+        uid: 04bf16a0-b9ec-4d62-84f3-9f3b8aa76cad
+        userCondition: null
         width: 100
     name: Inhalt
     uid: 766bde34-59ba-4113-824c-677fcecba61c

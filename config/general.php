@@ -19,12 +19,22 @@ return GeneralConfig::create()
     ->preloadSingles()
     ->preventUserEnumeration()
     ->limitAutoSlugsToAscii(true)
-    ->maxUploadFileSize('2M')
+    ->maxUploadFileSize(App::env('MAX_UPLOAD_FILE_SIZE') ?: '1572864') // 1.5mb
     ->cpTrigger(App::env('CP_TRIGGER') ?: 'admin')
     ->timezone(App::env('TIMEZONE') ?: 'Europe/Zurich')
     ->securityKey(App::env('CRAFT_SECURITY_KEY'))
     ->generateTransformsBeforePageLoad(false)
     ->allowAdminChanges(App::env('CRAFT_ALLOW_ADMIN_CHANGES', true))
+    ->allowedFileExtensions([
+        'jpg',
+        'jpeg',
+        'pdf',
+        'zip',
+        'webp',
+        'png',
+        'avif',
+        'heic',
+    ])
     ->devMode(App::env('CRAFT_DEV_MODE', false))
     ->convertFilenamesToAscii(true)
     ->transformGifs(false) 

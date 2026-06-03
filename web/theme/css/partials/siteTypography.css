@@ -11,6 +11,10 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
         > strong {
             font-weight: var(--font-bold);
         }
+        > i {
+            font-size: var(--font-size-M);
+            font-style: italic;
+        }
     }
     ul, ol {
         padding-left: 30px;
@@ -80,4 +84,18 @@ p,li,span,h1,h2,h3,h4,h5,h6 {
     font-style: italic;
     line-height: 1.4;
     margin: 0;
+}
+sub, sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.3em;
+}
+
+sup {
+  top: -0.5em;
 }

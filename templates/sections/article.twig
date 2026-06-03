@@ -76,7 +76,7 @@ The blocks are defined in the matrix field in the CMS.
 
 {# Sunset class is rendered uniformly for all visitors; per-user unlock
    is handled client-side via the hasAccess cookie + unlockScript. #}
-{% set articleSunsetClass = (isSunset and not isPreview and not freeForAll) ? 'articleIsSunset' : '' %}
+{% set articleSunsetClass = (isSunset and not isPreview and not freeForAll and not currentUser ) ? 'articleIsSunset' : '' %}
 
 {% block content %}
 

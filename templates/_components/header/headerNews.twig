@@ -1,10 +1,7 @@
 
 {% import '_macros/macroPostDate' as macroPostDate %}
 
-
-
 {% set smallerGrid = 'gridStart2 gridSpan10' %}
-
 
 <header class="headerCard newsHeadCard gridArticle headerSection{{ entry.section.handle | capitalize }}">
 	<div class="{{ smallerGrid }} headMeta">
@@ -14,5 +11,4 @@
 	{% if entry.fPlainTextI18nMultiline %}
 		<h3 class="{{ smallerGrid }} topicLead">{{ entry.fPlainTextI18nMultiline }}</h3>
 	{% endif %}
-	<span class="articleId">ID: {{ entry.id }}</span>
 </header>

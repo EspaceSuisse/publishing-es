@@ -1,4 +1,4 @@
-dateModified: 1777390742
+dateModified: 1779268114
 elementSources:
   craft\elements\Asset:
     -
@@ -534,7 +534,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 5.0.0.1
+    schemaVersion: 5.6.0.0
   codefield:
     edition: standard
     enabled: true
@@ -547,6 +547,10 @@ plugins:
       additionalCss: ''
       cssFile: '@web/theme/css/components/backendCP.css'
   craft-geoman:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  craft-link-checker:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -596,5 +600,5 @@ system:
   live: true
   name: 'EspaceSuisse Publishing'
   retryDuration: null
-  schemaVersion: 5.9.0.8
+  schemaVersion: 5.10.0.0
   timeZone: $TZ

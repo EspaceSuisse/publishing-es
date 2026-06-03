@@ -57,6 +57,40 @@ settings:
         -
           - default
           - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Pixelkarte Raster Farbe'
+        -
+          - value
+          - pixelkarte-farbe-raster
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#49a9aa'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Pixelkarte Raster Grau'
+        -
+          - value
+          - pixelkarte-grau-raster
+        -
+          - icon
+          - ''
+        -
+          - color
+          - '#357141'
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Dropdown

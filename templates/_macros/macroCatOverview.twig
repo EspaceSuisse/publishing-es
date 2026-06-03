@@ -11,7 +11,7 @@
 
 		{% set inlineStyle = item.fColor ? 'background-color:' ~ item.fColor ~ ';' : '' %}
 		{% set fullTitle = item.title %}
-		{% set sectionUrlSegment = sectionParam ? '?section=' ~ sectionParam %}
+		{% set sectionUrlSegment = sectionParam ? '?section=' ~ sectionParam.handle %}
 
 			<span class="tag {{ ' ' ~ classParam }}"> 
 				<a href="{{- item.url ~ sectionUrlSegment -}}" style="{{ inlineStyle }}">
