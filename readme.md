@@ -26,6 +26,10 @@ Bei Hilfe:
 - Wenn das Minimum Viable Product existiert wird pro feature/bug ein branch erstellt und nach erfolgreichem deploment/testing gelöscht.
 - Deployment auf STAGING & LIVE wird via Pull Reuests auf der Github homepage gemacht.
 
+## Deployment
+
+`git deploy-live`
+
 ## Craft CMS
 
 ### Folder Structure

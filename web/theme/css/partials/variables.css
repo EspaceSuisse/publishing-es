@@ -1,10 +1,10 @@
 :root {
     
-    --font-default: "freight-text-pro", serif;
-    --font-display: "work-sans", sans-serif;
+    --font-default: "canada-type-gibson", sans-serif;
+    --font-display: var(--font-default);
     --font-monospace: "aglet-mono", mono;
-    --font-regular: 400;
-    --font-bold: 700;
+    --font-regular: 300;
+    --font-bold: 600;
 
     /* clamp(min, preferred, max) */
     --font-size-base: 62.5%;
@@ -16,7 +16,8 @@
     --font-size-S: 1.6rem;
     --font-size-XS: 1.3rem;
     --font-size-XXS: 1rem;
-    --line-height-base: 1.3;
+    --line-height-base: 1.44;
+    --line-height-display: 1;
 
     --siteSideBarWidth: 75px;
     --articleHeadChute: -100px;
