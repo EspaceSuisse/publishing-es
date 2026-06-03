@@ -2,7 +2,7 @@
     padding-bottom: var(--layoutGap);
     display: block;
     transform: rotate(-90deg) translateY(0);
-    transform-origin: 20% -245%; /* Corrected: Removed extra '%' */
+    transform-origin: 20% -194%; /* Corrected: Removed extra '%' */
     padding: 0;
     white-space: nowrap;
     font-size: var(--font-size-XL);
