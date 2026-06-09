@@ -20,7 +20,9 @@
             <div class="listingGrid">
 
             <h2 class="gridSpan12 topicTitle">{{ cat.title }}</h2>
-            
+            {% if cat.fRichTextI18n2 %}
+                <h3 class="topicLead gridSpan12">{{ cat.fRichTextI18n2 }}</h3>
+            {% endif %}
             {# loop trough the entries which belong to the subject with supertopic enabled #}
             {% for item in relatedEntries %}
                 {{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan12', 'gridSpan3 gridMdSpan6', 'gridSpan9 gridMdSpan6') }}
