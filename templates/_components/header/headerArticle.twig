@@ -20,14 +20,10 @@
 
 		<div class="{{ smallerGrid }} headMeta">
 			{{ macroPostDate.postDate(entry.postDate, true) }}
+			{% include "_components/articleSunsetMsg" %}
 		</div>
 
 		<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
-
-		<div class="{{ smallerGrid }} headMeta">
-			{% include "_components/articleSunsetMsg" %}
-		</div>
-		
 		
 		{% if entry.fPlainTextI18nMultiline %}
 			<h3 class="{{ smallerGrid }} topicLead">{{ entry.fPlainTextI18nMultiline }}</h3>
