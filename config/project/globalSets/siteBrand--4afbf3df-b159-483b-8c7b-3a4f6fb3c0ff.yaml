@@ -69,6 +69,38 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-06-09T13:55:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
+            handle: null
+            instructions: null
+            label: 'Color Subject'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 900f4fba-7cc1-4727-ba22-6ace60e4280c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-06-09T13:55:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
+            handle: fColor2
+            instructions: null
+            label: 'Color Genre'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd13428b-2ffa-4db4-b16d-fbb4a2a31537
+            userCondition: null
+            warning: null
+            width: 100
         name: Branding
         uid: 6bf9728d-b41d-4164-87b1-5e192680c738
         userCondition: null

@@ -2,20 +2,22 @@
 {# It takes the url params for the two languages and a class for the link #}
 {# The label is taken from the translation file #}
 
-{%- macro catOverview(catParam, classParam, sectionParam) -%}
+{%- macro catOverview(catParam, classParam, sectionParam, colorParam) -%}
 
 	{% import '_macros/macroImage' as macro %}
 	{% include "_dynamic/catColorChecker" %}
 
+	{% set catColor = colorParam ?? 'rgb(142, 226, 39)' %}
+
 	{% for item in catParam %}
 
-		{% set inlineStyle = item.fColor ? 'background-color:' ~ item.fColor ~ ';' : '' %}
+		{% set inlineStyle = item.fColor ? 'background-color:' ~ catColor ~ ';' : '' %}
 		{% set fullTitle = item.title %}
 		{% set sectionUrlSegment = sectionParam ? '?section=' ~ sectionParam.handle %}
 
 			<span class="tag {{ ' ' ~ classParam }}"> 
 				<a href="{{- item.url ~ sectionUrlSegment -}}" style="{{ inlineStyle }}">
-					<span class="tagLabel">{{- fullTitle -}}</span>
+					<span class="tagLabel">{{- fullTitle -}}<span>
 				</a>
 			</span>
 
