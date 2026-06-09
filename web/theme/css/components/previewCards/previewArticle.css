@@ -5,3 +5,8 @@
     display: grid;
     grid-template-columns: subgrid;
 }
+.authorName {
+        font-family: var(--font-default);
+        font-size: var(--font-size-S);
+        margin: 0;
+    }

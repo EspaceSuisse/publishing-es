@@ -1,0 +1,11 @@
+{%- macro authorPreviewCard(queryParam) -%}
+
+  {% set multipleAuthors = queryParam.authors %}
+  {% set author = queryParam.author %}
+  <p class="authorName">
+    {{ author.fullName }}
+    {% if multipleAuthors | length > 1 %}{{ 'et al.' | t }}{% endif %}
+  </p>
+  
+
+{%- endmacro -%}
