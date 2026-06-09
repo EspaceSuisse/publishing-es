@@ -30,9 +30,10 @@
 
                 {% if loop.first %}
                     <tr class="item tHead gridSpan12">
-						<th data-type="date">{{ 'Veröffentlichung' }}</th>
+						<th data-type="date">{{ 'Veröffentlichung' | t }}</th>
 						<th data-type="string">Art.</th>
 						<th data-type="string">{{ 'Title' | t }}</th>
+						<th data-type="string">{{ 'Catchy Titel' | t }}</th>
 						<th data-type="string">{{ 'Lead' | t }}</th>
 						<th data-type="string">{{ labelGenre }}</th>
 						<th data-type="string">{{ labelSubject }}</th>
@@ -47,6 +48,9 @@
 					<td>{{ item.section.handle | capitalize | t }}</td>
 					<td class="title">
 						<a href="{{ item.url }}">{{ item.title }}</a>
+					</td>
+					<td class="title">
+						<a href="{{ item.url }}">{{ item.fPlainTextI18n }}</a>
 					</td>
 					<td class="description">{{ item.fSeoDescription }}</td>
 					<td class="genre">
