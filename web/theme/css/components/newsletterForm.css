@@ -34,6 +34,9 @@
         font-size: var(--font-size-M);
         margin: 0;
     }
+    .newsltrHead {
+        padding-bottom: var(--layoutGap);
+    }
     input[type="email"],
     input[type="text"] {
         background-color: color-mix(in srgb, var(--colorES-brand-blue), white 90%);
