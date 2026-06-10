@@ -1,0 +1,30 @@
+.bodyListingauthor {
+    .authorCard {
+        box-shadow: var(--shadow);
+        background-color: var(--colorPreviewCard);
+         align-items: stretch;
+         grid-auto-rows: 1fr;
+        .textPart {
+            display: flex;
+            flex-direction: column;
+        }
+        img {
+            object-fit: cover;
+        }
+        .authorName {
+            font-size: var(--font-size-M);
+            font-family: var(--font-display);
+            padding: 0 var(--layoutGap);
+            padding-top: var(--layoutGap);
+        }
+        .authorTaxonomy, .relatedPosts {
+            font-size: var(--font-size-S);
+            font-family: var(--font-default);
+            padding: 0 var(--layoutGap);
+        }
+        .allPosts {
+            margin-top: auto;
+            align-self: flex-end;
+        }
+    }
+}
