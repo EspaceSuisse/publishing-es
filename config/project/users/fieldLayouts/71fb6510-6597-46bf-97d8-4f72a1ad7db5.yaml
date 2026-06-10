@@ -183,22 +183,6 @@ tabs:
         warning: null
         width: 100
       -
-        dateAdded: '2024-12-18T12:06:18+00:00'
-        editCondition: null
-        elementCondition: null
-        elementEditCondition: null
-        fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
-        handle: null
-        instructions: null
-        label: Bio
-        required: false
-        tip: null
-        type: craft\fieldlayoutelements\CustomField
-        uid: 132ae7de-6d1e-4d16-9ac8-49e0ab5762da
-        userCondition: null
-        warning: null
-        width: 100
-      -
         content: 'Unglücklicherweise werden Personen nicht übersetzt. Daher hat es für mehrsprachige Felder je ein feld parat. Nicht so wie bei den Einträgen :('
         dateAdded: '2026-05-20T08:34:18+00:00'
         displayInPane: true

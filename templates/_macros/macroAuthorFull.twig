@@ -43,7 +43,7 @@
 							</span>
 						{%- endif -%}
 						{% if writter.isInGroup('espacesuisse') %}	
-							{% if entry.language == 'de-CH' %}
+							{% if queryParam.language == 'de-CH' %}
 								<a href="{{ esUrlDe }}">EspaceSuisse</a></span>
 							{% else %}
 								<a href="{{ esUrlFr }}">EspaceSuisse</a></span>
