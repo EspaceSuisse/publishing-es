@@ -1,4 +1,4 @@
-dateModified: 1781094614
+dateModified: 1781095128
 elementSources:
   craft\elements\Asset:
     -
@@ -66,13 +66,21 @@ elementSources:
         - status
         - section
         - postDate
-        - expiryDate
-        - link
+        - id
         - revisionCreator
       type: native
     -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: singles
       page: Entries
+      tableAttributes:
+        - status
+        - link
+        - id
       type: native
     -
       heading: Channels
@@ -89,11 +97,11 @@ elementSources:
       page: Entries
       tableAttributes:
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
+        - status
         - 'field:2e6b1f37-5bf3-41f9-9d33-83817ab9080b' # Sticky
         - slug
         - postDate
-        - status
-        - link
+        - id
       type: native
     -
       heading: ''
@@ -112,7 +120,7 @@ elementSources:
         - status
         - slug
         - postDate
-        - link
+        - id
       type: native
     -
       heading: ''
@@ -141,7 +149,7 @@ elementSources:
         - 'field:2e6b1f37-5bf3-41f9-9d33-83817ab9080b' # Sticky
         - postDate
         - expiryDate
-        - link
+        - id
       type: native
   craft\elements\User:
     -
