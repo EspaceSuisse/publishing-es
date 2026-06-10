@@ -11,8 +11,7 @@
         {% set relatedEntries = craft.entries()
             .section('article')
             .relatedTo(cat)
-            .orderBy('sticky asc, postDate asc')
-            .limit(2)
+            .limit(3)
             .with(articleEagerLoad)
             .all()
         %}
