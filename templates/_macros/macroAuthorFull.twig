@@ -1,0 +1,55 @@
+
+
+
+
+
+{%- macro authorArticle(queryParam, htmlParam) -%}
+
+		{% import '_macros/macroAuthorField' as macro %}
+
+		{% set writter = queryParam %}
+		{% set esUrlDe = 'https://www.espacesuisse.ch/de/verband/organisation/geschaeftsstelle' %}
+		{% set esUrlFr = 'https://www.espacesuisse.ch/fr/association/organisation/secretariat' %}
+		{% set functionSeparator = ',' %}
+
+		{% if htmlParam %}<li class="authorItem">{% endif %}
+		
+		
+			{%- if writter.photo -%}
+
+				{# Transform the Authors Portrait #}
+    			{%- set portraitImage = craft.imagerx.transformImage(writter.photo, 'authorPortrait')[0] -%}
+
+				<img src="{{ portraitImage.url }}" alt="{{ writter.name }}">
+			{%- endif -%}
+				<div>
+					<p class="authorName">{{ writter.name|replace({' ': '&nbsp;'})|raw }}</p>
+					<p class="authorMeta">
+						{%- if writter.fPlainTextI18n2 or writter.fPlainTextI18n3 -%}
+							<span class="authorEducation">
+								{{ macro.authorI18nField(writter.fPlainTextI18n2, writter.fPlainTextI18n3) }}{{ functionSeparator }}
+							</span>
+						{%- endif -%}
+						{# {%- for cat in writter.fTeam -%}
+							{%- if cat.fBlankUrlString -%}
+								<a class="authorTeam" href="{{ cat.fBlankUrlString }}">{{ cat.title ~ '.' }}</a>
+							{%- else -%}
+								<span class="authorTeam" >{{ cat.title ~ '.' }}</span>
+							{%- endif -%}
+						{%- endfor -%} #}
+						{%- if writter.fPlainTextI18n -%}
+							<span class="authorFunction">
+								{{ macro.authorI18nField(writter.fPlainTextI18n, writter.fPlainTextI18n4) }}
+							</span>
+						{%- endif -%}
+						{% if writter.isInGroup('espacesuisse') %}	
+							{% if queryParam.language == 'de-CH' %}
+								<a href="{{ esUrlDe }}">EspaceSuisse</a></span>
+							{% else %}
+								<a href="{{ esUrlFr }}">EspaceSuisse</a></span>
+							{% endif %}
+						{% endif %}
+					</p>
+				</div>
+		{% if htmlParam %}</li>{% endif %}
+{%- endmacro -%}
