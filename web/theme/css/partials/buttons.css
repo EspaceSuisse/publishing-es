@@ -16,6 +16,7 @@
     }
     &.btnSmall {
         padding: var(--paddingBtnSmall);
+        font-size: var(--font-size-XS);
         padding-top: 6px;
     }
     &.btnNeutral {
