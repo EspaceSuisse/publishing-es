@@ -1,4 +1,4 @@
-dateModified: 1781071921
+dateModified: 1781086483
 elementSources:
   craft\elements\Asset:
     -
@@ -89,6 +89,7 @@ elementSources:
       page: Entries
       tableAttributes:
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
+        - 'field:2e6b1f37-5bf3-41f9-9d33-83817ab9080b' # Sticky
         - slug
         - postDate
         - status
@@ -136,11 +137,10 @@ elementSources:
       key: 'section:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
       page: Entries
       tableAttributes:
-        - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
         - status
+        - 'field:2e6b1f37-5bf3-41f9-9d33-83817ab9080b' # Sticky
         - postDate
         - expiryDate
-        - authors
         - link
       type: native
   craft\elements\User:
