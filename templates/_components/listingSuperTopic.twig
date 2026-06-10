@@ -11,7 +11,7 @@
         {% set relatedEntries = craft.entries()
             .section('article')
             .relatedTo(cat)
-            .limit(4)
+            .limit(3)
             .with(articleEagerLoad)
             .all()
         %}
