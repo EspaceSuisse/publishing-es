@@ -1,4 +1,7 @@
 {% extends "_layouts/main" %}
+{% import '_macros/macroAuthorField' as macro %}
+{% import '_macros/macroImage' as macroImg %}
+{% import '_components/previewCards/macroPreviewArticle' as macroPreview %}
 
 {% block content %}
 
@@ -11,24 +14,41 @@
 		{% do seomatic.meta.ogImage(author.photo.url) %}
 	{% endif %}
 
-    {# Whats missing here still: cannonical url not correct + nav language switcher not working here #}
-    <div class="listingGrid">
-        {% if author %}
-            <h1 class="gridSpan12">{{ 'Artikel von' | t }} {{ author.name }}</h1>
-            {% set articles = craft.entries.section('article').authorId(author.id).all() %}
+    <header class="pageHead subPageHead">
+		{% include "_components/header/headerBrand" %}
+	</header>
 
-            {% for article in articles %}
-                <article>
-                    <h2>
-                        <a href="{{ article.url }}">{{ article.title }}</a>
-                    </h2>
-                </article>
-            {% else %}
-                <p>Keine Artikel gefunden.</p>
-            {% endfor %}
-        {% else %}
-            <p>Autor nicht gefunden.</p>
-        {% endif %}
-    </div>
+	{# Whats missing here still: cannonical url not correct + nav language switcher not working here #}
+	<div class="listingGrid">
+		{% if author %}
+			<div class="authorCard previewCard gridSpan12">
+				<div class="imgPart gridSpan12 gridSmSpan4">
+					{% if author.photo %}
+                        {{ macroImg.articleImage(author.photo, 'articleImage', 'imgArticle') }}
+					{% endif %}
+				</div>
+				<div class="textPart">
+					<h2 class="authorName">{{ author.name }}</h2>
+					<p class="authorTaxonomy">
+						{% if craft.app.language == 'de-CH' %}
+							{{ macro.authorI18nField(author.fPlainTextI18n, author.fPlainTextI18n4) }}
+						{% else %}
+							{{ macro.authorI18nField(author.fPlainTextI18n2, author.fPlainTextI18n3) }}
+						{% endif %}
+					</p>
+				</div>
+			</div>
+
+			{% set articles = craft.entries.section('article').authorId(author.id).all() %}
+
+			{% for item in articles %}
+				{{ macroPreview.listMacro(item,'gridSpan6',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
+			{% else %}
+				<p>Keine Artikel gefunden.</p>
+			{% endfor %}
+		{% else %}
+			<p>Autor nicht gefunden.</p>
+		{% endif %}
+	</div>
 
 {% endblock %}
