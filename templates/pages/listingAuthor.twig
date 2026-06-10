@@ -2,6 +2,7 @@
 {% import '_macros/macroImage' as macroImg %}
 {% import '_macros/macroAuthorField' as macro %}
 {% import '_macros/macroPostDate' as macroPostDate %}
+{% import '_macros/macroAuthorUrl' as authorUrlHelper %}
 
 {% block content %}
 
@@ -11,9 +12,6 @@
         .orderBy('fullName asc')
         .status('active')
         .all() %}
-
-	{# construct the language url segment becuse users have no urls functionality #}
-	{% set baseSegment = { 'de-CH': 'autoren', 'fr-CH': 'auteurs' }[craft.app.language] %}
 
 	<header class="pageHead subPageHead">
 		{% include "_components/header/headerBrand" %}
@@ -65,7 +63,9 @@
 						</ul>
 
 						{# render link to author post page #}
-						<a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}" class="allPosts btn btnSmall">{{ 'Alle Artikel von' | t ~ ' ' }}{{ author.name }}{{ ' ' ~ 'anzeigen' | t }}</a>
+                        <a href="{{ authorUrlHelper.url(author) }}" class="btn btnSmall">
+                            {{ author.fullName }}
+                        </a>
 					</div>
 				</div>
 			{% endif %}

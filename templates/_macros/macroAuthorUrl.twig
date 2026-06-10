@@ -1,0 +1,8 @@
+{% macro url(handleParam) %}
+    {% set baseSegment = {
+        'de-CH': 'autoren',
+        'fr-CH': 'auteurs'
+    }[craft.app.language] ?? 'autoren' %}
+
+    {{- baseSegment ~ '/' ~ handleParam.username -}}
+{% endmacro %}

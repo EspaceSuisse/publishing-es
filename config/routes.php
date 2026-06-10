@@ -9,7 +9,9 @@
  * https://craftcms.com/docs/4.x/routing.html
  */
 
-return [
-    'autoren/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
-    'auteurs/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
-];
+// this route generates author posing urls. there a page will be generated with the posts of each authors.
+//template: pages/authorPosts
+// return [
+//     'autoren/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
+//     'auteurs/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
+// ];
