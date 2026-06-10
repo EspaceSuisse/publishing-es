@@ -16,6 +16,9 @@ permissions:
   - 'blitz:flush'
   - 'blitz:generate'
   - 'blitz:purge'
+  - 'changeauthorforpeerentries:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
+  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+  - 'changeauthorforpeerentries:bc7c6b58-e511-47e0-9216-7052ceafee56' # Sub Pages
   - changetranslationssettings
   - 'createentries:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
   - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
@@ -151,6 +154,3 @@ permissions:
   - 'viewpeerentrydrafts:ee2b77e3-12d0-4d96-aafb-9ba5a79839f0' # Listing News
   - 'viewpeerentrydrafts:eee49365-fab5-4241-a3e6-e24d9cd9a18e' # Newsletter
   - viewusers
-  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
-  - 'changeauthorforpeerentries:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
-  - 'changeauthorforpeerentries:bc7c6b58-e511-47e0-9216-7052ceafee56' # Sub Pages

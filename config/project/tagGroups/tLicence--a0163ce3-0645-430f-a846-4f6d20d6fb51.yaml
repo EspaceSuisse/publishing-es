@@ -36,5 +36,6 @@ fieldLayouts:
         name: Content
         uid: 731e5707-5110-4d10-ba07-73a93d67d62c
         userCondition: null
+    thumbFieldKey: null
 handle: tLicence
 name: Licence

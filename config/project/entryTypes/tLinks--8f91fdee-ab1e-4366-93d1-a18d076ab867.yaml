@@ -1,0 +1,80 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  2cf4ffc4-6f0d-443a-bcb1-96180764244d:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-08T10:57:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 23be1cae-1521-4696-b3bd-cc2d9621ee56 # Link List
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 93571f70-5489-495f-9567-1ca19b563276
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 31ff7ad6-a022-4c79-9209-6de8bfb3c343
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-08T11:31:22+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b992059d-78f2-4c88-8576-53b7f9b37a83 # Grid Start
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 396222dd-c32d-450c-a491-bdb524bb2e3d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-04-08T11:31:22+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d06e43b2-938f-4ef6-9438-70bdfaf59efa # Grid Span
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3a2a570-a8e8-466c-a74c-bb022e0bcae7
+            userCondition: null
+            warning: null
+            width: 50
+        name: Layout
+        uid: 539312c4-4be5-4022-89f6-37a060a25ea7
+        userCondition: null
+    thumbFieldKey: null
+handle: tLinks
+hasTitleField: false
+icon: globe-pointer
+name: Links
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

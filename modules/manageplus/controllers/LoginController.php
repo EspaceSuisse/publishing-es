@@ -74,6 +74,19 @@ class LoginController extends Controller
             return $this->handleFailure(Craft::t('manageplus', 'Login failed. Please try again.', [], $language));
         }
 
+        // Set the `hasAccess` cookie on the redirect response. Browsers never
+        // cache 302s, so the cookie is reliably stored before the browser
+        // follows the redirect to a (possibly cached) article page.
+        Craft::$app->getResponse()->getCookies()->add(new \yii\web\Cookie([
+            'name'     => 'hasAccess',
+            'value'    => '1',
+            'expire'   => $duration ? time() + $duration : 0,
+            'path'     => '/',
+            'httpOnly' => false,
+            'secure'   => Craft::$app->getRequest()->getIsSecureConnection(),
+            'sameSite' => \yii\web\Cookie::SAME_SITE_LAX,
+        ]));
+
         // Success! Redirect to home or return URL
         $returnUrl = Craft::$app->getRequest()->getBodyParam('redirect') ?: Craft::$app->getConfig()->getGeneral()->getPostLoginRedirect();
 

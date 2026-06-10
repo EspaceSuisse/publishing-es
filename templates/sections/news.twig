@@ -1,13 +1,16 @@
 {% extends "_layouts/main" %}
-{% import '_macros/macroImage' as macro %}
+{% import '_macros/macroImage' as macroImg %}
+{% import '_macros/macroFigCaption' as figCaption %}
+{% import '_macros/macroCatOverview' as macroCat %}
 
 {# news template #}
 
 
 {% block content %}
 
-	{% set newsImg = entry.fImgI18n.one() ?? null %}
+	{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
 	{% set authorShort = entry.authors | first %}
+	{% set newsSubject = entry.fCatSubject %}
 
 	<article>
 		<header class="pageHead articleHead">
@@ -15,14 +18,26 @@
 			{% include "_components/header/headerNews" %}
 		</header>
 		<div class="gridArticle articleContent">
-			{# News section does not have articles, so we use the articleMatrix here to display the news entries #}
-			{# The articleMatrix component is flexible enough to handle news entries as well #}
-			{# We just need to ensure that the articleMatrix can handle entries from the news #}
+
+			{% if aufmacherBild %}
+				<figure class="newsHeadImg gridSpan12">
+					{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+					{{ figCaption.figCaption(aufmacherBild, null, aufmacherBild.fSwitch) }}
+				</figure>
+			{% endif %}
+
 			{% include "_components/articleMatrix" %}
-			<span class="gridStart2">({{ authorShort |split(' ')|map(word => word|slice(0, 1))|join|upper }})</span>
 		</div>
 	</article>
 	<aside class="gridArticle articleContent">
+		<div class="gridStart2 gridSpan10 articlebottomMeta">
+			{% if newsSubject %}
+				<div>
+					{{ macroCat.catOverview(newsSubject, 'subject', entry.section, siteBrand.fColor2) }}
+				</div>
+			{% endif %}
+			<p>ID: {{ entry.id }}</p>
+		</div>
 		{% include "_components/newsPrevNext" %}
 	</aside>
 	{% include "_dynamic/lightboxInitiator" %}

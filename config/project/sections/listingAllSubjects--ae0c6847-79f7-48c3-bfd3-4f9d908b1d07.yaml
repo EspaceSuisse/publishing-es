@@ -5,6 +5,7 @@ entryTypes:
     uid: 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
 handle: listingAllSubjects
 maxAuthors: 1
+minAuthors: 1
 name: 'Listing All Subjects'
 previewTargets:
   -

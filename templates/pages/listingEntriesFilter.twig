@@ -22,25 +22,39 @@
 
 	{% set allEntries = query.all() %}
 
+	{# --- Layout config --- #}
+	{% set sliceA = 1 %}
+	{% set sliceB = 2 %}
+	{% set sliceC = 4 %}
+
+	{# Offsets calculate themselves #}
+	{% set offsetB = sliceA %}
+	{% set offsetC = sliceA + sliceB %}
+	{% set offsetD = sliceA + sliceB + sliceC %}
+
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 	<article class="listingGrid">
 		{% include "_components/header/headerBrand" %}
 		{% include "_components/header/headerCatList" %}
-		{% for item in allEntries | slice(0,1) %}
+		{% for item in allEntries | slice(0, sliceA) %}
 			{% if item.section.handle == 'news' %}
 				{{ macroPreviewNews.listMacro(item,'gridSpan12', ) }}
 			{% else %}
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
 			{% endif %}
 		{% endfor %}
-		{% for item in allEntries | slice(1, null) %}
-			{% if item.section.handle == 'news' %}
-			{% else %}
-			{% endif %}
+		{% for item in allEntries | slice(offsetB, sliceB) %}
 			{% if item.section.handle == 'news' %}
 				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6') }}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12') }}
+				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }}
+			{% endif %}
+		{% endfor %}
+		{% for item in allEntries | slice(offsetD) %}
+			{% if item.section.handle == 'news' %}
+				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan4') }}
+			{% else %}
+				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4') }}
 			{% endif %}
 		{% endfor %}
 	</article>

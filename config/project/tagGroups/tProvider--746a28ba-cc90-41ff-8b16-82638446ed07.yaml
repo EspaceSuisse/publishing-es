@@ -36,5 +36,6 @@ fieldLayouts:
         name: Content
         uid: 450e7838-af52-4071-862a-97527c9af70f
         userCondition: null
+    thumbFieldKey: null
 handle: tProvider
 name: Provider

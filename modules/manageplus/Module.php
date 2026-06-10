@@ -77,6 +77,21 @@ class Module extends BaseModule
             ]);
             $logger->dispatcher->targets['manageplus'] = $fileTarget;
         }
+
+        // Clear the `hasAccess` cookie on logout. The cookie is set on the
+        // login redirect (LoginController) — keeping set/clear bound to the
+        // auth boundary avoids leaking Set-Cookie headers onto cached
+        // responses and prevents timing races with Blitz dynamic includes.
+        Event::on(
+            \craft\web\User::class,
+            \craft\web\User::EVENT_AFTER_LOGOUT,
+            function () {
+                $response = Craft::$app->getResponse();
+                if ($response) {
+                    $response->getCookies()->remove('hasAccess');
+                }
+            }
+        );
     }
 
     /**

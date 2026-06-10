@@ -12,6 +12,7 @@ permissions:
   - 'assignusergroup:e8b4cd0c-7d29-4d2a-a92c-3549a590ecd0'
   - 'assignusergroup:ee8b684c-14de-460c-89fd-f9fe7dd4b0cd' # EspaceSuisse
   - assignuserpermissions
+  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'createfolders:288ee88d-e3ce-43e7-9cd8-371e235033c5' # Profilbild
   - 'createfolders:2e1f2e2f-757e-43c1-bb5f-6f5261966f3f' # Artikel Bilder
@@ -79,4 +80,3 @@ permissions:
   - 'viewpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'viewpeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - viewusers
-  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel

@@ -3,6 +3,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
     align-items: center;
     background-color: var(--colorES-brand-blue);
     .siteNav {

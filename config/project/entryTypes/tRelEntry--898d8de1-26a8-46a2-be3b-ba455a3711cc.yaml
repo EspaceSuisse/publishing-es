@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-05-06T08:27:33+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 23465aca-7fa4-4dd7-bd09-9c11e7d61c9a # Related Entry
             handle: null
             instructions: null
@@ -32,6 +34,7 @@ fieldLayouts:
             dateAdded: '2025-08-26T09:49:32+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
             handle: null
             instructions: null
@@ -47,6 +50,7 @@ fieldLayouts:
             dateAdded: '2025-08-26T09:49:32+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 49c73379-624e-465f-92eb-b17550eca753 # Grid Start Wide
             handle: null
             instructions: null
@@ -62,6 +66,7 @@ fieldLayouts:
             dateAdded: '2025-05-21T08:09:43+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
             instructions: null
@@ -76,6 +81,7 @@ fieldLayouts:
         name: Layout
         uid: e2331b0d-90b2-41da-8556-6ec89518c833
         userCondition: null
+    thumbFieldKey: null
 handle: tRelEntry
 hasTitleField: false
 icon: typewriter
@@ -87,3 +93,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

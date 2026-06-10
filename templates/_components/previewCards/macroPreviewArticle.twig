@@ -3,6 +3,7 @@
 	{% import '_macros/macroImage' as macro %}
 	{% import '_macros/macroPostDate' as macroPostDate %}
 	{% import '_macros/macroCatOverview' as macroCat %}
+	{% import '_macros/macroAuthorPreviewCard' as macroAuthor %}
 
 
 	{% set image = queryParam.imgAufmacher[0] ?? null %}
@@ -26,18 +27,18 @@
 		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
 			<div class="previewMetaHeader">
 				{{ macroPostDate.postDate(queryParam.postDate, true) }}
-				<div class="tagList">
-					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
-					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}
-				</div>
-				
+				{{ macroAuthor.authorPreviewCard(queryParam) }}
 			</div>
 			<h2 class="previewTitle">
 				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			<div class="previewMetaFooter">
-				{% include "_components/articlePreviewSunset.twig" %}
+				{# <div class="tagList">
+					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
+					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}
+				</div> #}
+				{# {% include "_components/articlePreviewSunset.twig" %} #}
 			</div>
 		</div>
 	</article>

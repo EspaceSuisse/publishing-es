@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-09-10T13:59:09+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
             handle: null
             instructions: null
@@ -26,6 +28,7 @@ fieldLayouts:
             dateAdded: '2025-09-10T13:59:09+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
             handle: null
             instructions: null
@@ -40,6 +43,7 @@ fieldLayouts:
         name: Content
         uid: 8e67314d-65a6-456a-bc94-becf391bb45f
         userCondition: null
+    thumbFieldKey: null
 handle: categorySet
 hasTitleField: false
 icon: null
@@ -51,3 +55,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,15 +1,5 @@
 .previewCard {
     &.previewCat {
-        .txtPart {
-            .lead {
-                color: var(--txtInvertColor);
-                text-decoration-line: underline;
-                text-decoration-color: var(--txtColor);
-                text-decoration-thickness: calc(var(--font-size-M) + 1rem);
-                text-underline-offset: calc(var(--font-size-M) * -1);
-                text-decoration-skip-ink: none;
-            }
-        }
         .previewTitle {
             display: inline;
             a {
@@ -20,6 +10,15 @@
                 padding: calc( var(--layoutGap) / 2 ) var(--layoutGap);
                 display: inline-block;
             }
+        }
+        .txtPart {
+            padding: 0;
+        }
+        .previewCatLead {
+            font-size: var(--font-size-M);
+            font-family: var(--font-default);
+            line-height: var(--line-height-base);
+            padding: 0;
         }
         &.previewGenre {
             .previewTitle a {

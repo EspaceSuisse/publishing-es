@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   b1a7e021-3c5f-42e1-a2a5-39d8728567ab:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -9,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-04-29T07:30:04+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4b6337e2-afe6-4b96-a285-d544f0ff0fdc # Image Gallery
             handle: null
             instructions: null
@@ -30,6 +34,7 @@ fieldLayouts:
             dateAdded: '2025-05-27T10:08:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 49c73379-624e-465f-92eb-b17550eca753 # Grid Start Wide
             handle: null
             instructions: null
@@ -45,6 +50,7 @@ fieldLayouts:
             dateAdded: '2025-05-27T10:08:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5af8807d-9f2e-4703-a300-ba7f06531aea # Grid Span Wide
             handle: null
             instructions: null
@@ -60,6 +66,7 @@ fieldLayouts:
             dateAdded: '2025-05-21T08:09:29+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: dea6c28d-f531-465f-8aa7-a53fd66a2c6f # Vertical Position
             handle: null
             instructions: null
@@ -74,6 +81,7 @@ fieldLayouts:
         name: Layout
         uid: 165cfa28-1490-4c4c-81c4-0e457b464b0c
         userCondition: null
+    thumbFieldKey: null
 handle: tArticleImgGallery
 hasTitleField: false
 icon: images
@@ -85,3 +93,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,30 @@
+.loginIndicator {
+    z-index: 100;
+    font-size: var(--font-size-XS);
+    font-family: var(--font-display);
+    font-weight: var(--fontBold);
+    display: flex;
+    gap: calc(var(--layoutGap) / 2);
+    align-items: center;
+    span {
+        color: var(--txtInvertColor);
+    }
+    a {
+        color: var(--txtInvertColor);
+    }
+
+    .ampel {
+        width: 10px;
+        height: 10px;
+        aspect-ratio: 1 / 1;
+        border-radius: 100px;
+
+        &.denied {
+            background-color: var(--colorEs-alert);
+        }
+
+        &.allowed {
+            background-color: var(--colorEs-success);
+        }
+    }
+}

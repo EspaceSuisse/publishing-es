@@ -4,7 +4,6 @@
 {% import '_macros/macroCatOverview' as macroCat %}
 
 {% block content %}
-
 	{% set catGenre = craft.categories()
 		.group('catGenre')
 		.relatedTo({ sourceElement: articleIds })
@@ -40,13 +39,14 @@
 		{% include "_components/header/headerBrand" %}
 		
 		{% for item in allEntries | slice(0, sliceA) %}
-			{{ macroPreview.listMacro(item,'gridSpan12',' gridSpan12 gridSmSpan4 gridMdSpan8','gridSpan12 gridSmSpan4') }}
+			{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan8',' gridSpan12','gridSpan12 gridLgSpan8') }}
 		{% endfor %}
+		{% include "_components/newsTicker" %}
 		{% for item in allEntries | slice(offsetB, sliceB) %}
-				{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan4','gridSpan12 gridSmSpan4','gridSpan12 gridSmSpan8') }}
+				{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan4','gridSpan12 gridSmSpan4','gridSpan12 gridSmSpan8 gridLgSpan4') }}
 		{% endfor %}
 	</div>
-		{% include "_components/indexNewsTeaser.twig" %}
+		{# {% include "_components/indexNewsTeaser.twig" %} #}
 		{% include "_components/listingSuperTopic" %}
 		{% include "_components/listingCatList" %}
 	<div class="listingGrid listingSection">

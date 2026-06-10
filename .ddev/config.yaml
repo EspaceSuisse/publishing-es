@@ -1,6 +1,8 @@
 name: publishing-es
 type: craftcms
 docroot: web
+upload_dirs:
+  - web/assets
 php_version: "8.3"
 webserver_type: nginx-fpm
 xdebug_enabled: false

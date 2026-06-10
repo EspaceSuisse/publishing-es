@@ -12,10 +12,18 @@ button.dropdownLink {
     width: 100%;
     height: 100%;
     aspect-ratio: 1 / 1;
-    span {
-      height: 3px;
-      background-color: var(--txtInvertColor);
-      width: 100%;
+    .animationWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+    }
+    .hamburger {
+        width: 100%;
+        height: 3px;
+        background-color: var(--txtInvertColor);
+        border-radius: 2px;
     }
     @media (max-width: 48rem) {
     }

@@ -1,0 +1,35 @@
+.pageSettingsPanel {
+    background-color: var(--colorES-brand-blue);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    gap: calc(var(--layoutGap) / 2);
+    padding: calc(var(--layoutGap) / 2);
+    right: 0;
+    ul, p {
+        margin: 0;
+    }
+    ul {
+        display: flex;
+        gap: calc(var(--layoutGap) / 2);
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .langSwitcher {
+        a {
+            color: var(--txtInvertColor);
+            font-size: var(--font-size-S);
+            font-family: var(--font-display);
+            font-weight: var(--fontBold);
+            text-decoration: none;
+        }
+        &.isActive a {
+            text-decoration: underline;
+        }
+    }
+
+    @media (min-width: 48rem) {
+        .pageSettingsPanel {}
+    }

@@ -72,6 +72,7 @@ fieldLayouts:
             dateAdded: '2025-08-28T10:55:31+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
             handle: null
             instructions: null
@@ -97,6 +98,7 @@ fieldLayouts:
                   value: false
               elementType: craft\elements\Asset
               fieldContext: global
+            elementEditCondition: null
             fieldUid: fec3b7f5-b9a4-4f4d-8d6f-acd7061740f5 # Bildquelle
             handle: null
             instructions: 'Natürliche, oder juristische Person'
@@ -122,6 +124,7 @@ fieldLayouts:
                   value: false
               elementType: craft\elements\Asset
               fieldContext: global
+            elementEditCondition: null
             fieldUid: bc09de97-2997-40ed-9f92-fb366aaaebd6 # Tag Field Provider
             handle: null
             instructions: 'Flickr, Unsplash, EspaceSuisse usw.'
@@ -147,6 +150,7 @@ fieldLayouts:
                   value: false
               elementType: craft\elements\Asset
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 02e09030-3253-478b-97e2-af4db5bdcaa1 # Image Licence
             handle: null
             instructions: 'CC BY-SA 2.0 usw.'
@@ -161,6 +165,7 @@ fieldLayouts:
         name: Inhalt
         uid: 8fbc089a-23b3-4c45-a770-d16436c054c5
         userCondition: null
+    thumbFieldKey: null
 fs: images
 handle: vImg
 name: 'Artikel Bilder'

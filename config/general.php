@@ -19,11 +19,22 @@ return GeneralConfig::create()
     ->preloadSingles()
     ->preventUserEnumeration()
     ->limitAutoSlugsToAscii(true)
+    ->maxUploadFileSize(App::env('MAX_UPLOAD_FILE_SIZE') ?: '1572864') // 1.5mb
     ->cpTrigger(App::env('CP_TRIGGER') ?: 'admin')
     ->timezone(App::env('TIMEZONE') ?: 'Europe/Zurich')
     ->securityKey(App::env('CRAFT_SECURITY_KEY'))
-    ->generateTransformsBeforePageLoad(true)
+    ->generateTransformsBeforePageLoad(false)
     ->allowAdminChanges(App::env('CRAFT_ALLOW_ADMIN_CHANGES', true))
+    ->allowedFileExtensions([
+        'jpg',
+        'jpeg',
+        'pdf',
+        'zip',
+        'webp',
+        'png',
+        'avif',
+        'heic',
+    ])
     ->devMode(App::env('CRAFT_DEV_MODE', false))
     ->convertFilenamesToAscii(true)
     ->transformGifs(false) 
@@ -32,8 +43,8 @@ return GeneralConfig::create()
     ->backupCommand(fn(ShellCommand $command) => $command->addArg('--set-gtid-purged=OFF')) 
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
-        '@assetBaseUrl' => rtrim(getenv('PRIMARY_SITE_URL') . '/assets'),
-        '@assetBasePath' => rtrim(getenv('CRAFT_WEB_ROOT') . '/assets'),
-        '@web' => getenv('PRIMARY_SITE_URL'),
+        '@assetBaseUrl' => App::env('PRIMARY_SITE_URL') . '/assets',
+        '@assetBasePath' => App::env('CRAFT_WEB_ROOT') . '/assets',
+        '@web' => App::env('PRIMARY_SITE_URL'),
     ])
 ;

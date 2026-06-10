@@ -85,6 +85,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-04-08T06:30:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8cbcac22-e63c-4df9-a8db-040cdd55daa2 # Aufmacher Bild
+            handle: null
+            instructions: null
+            label: 'News Aufmacherbild'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4296ece6-681b-4c0b-9cd5-2faea2225eb0
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-09-10T13:48:55+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule

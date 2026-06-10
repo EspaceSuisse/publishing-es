@@ -2,11 +2,18 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-
+    max-width: 48rem;
+    margin: auto;
     .formActions {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+}
+@media (min-width: 48rem) {
+    .loginForm {
+        padding-top: calc( 48rem / 4);
+        padding-bottom: calc( 48rem / 4);
     }
 }
 .formTitle {
@@ -14,11 +21,7 @@
         font-family: var(--font-display);
     }
 .loginLinks {
-    p a {
-        font-size: var(--font-size-M);
-        font-family: var(--font-default);
-        line-height: var(--line-height-base);
-    }
+    margin-bottom: var(--layoutGap);
 }
 
 label {
@@ -44,4 +47,14 @@ input {
     background-color: var(--colorPreviewCard);
     box-shadow: var(--shadow);
     border-radius: var(--radiusPreviewCard);
+    margin-bottom: var(--layoutGap);
+}
+.error-message {
+    background-color: var(--colorEs-alert);
+    padding: var(--layoutGap);
+    font-size: var(--font-size-M);
+    font-family: var(--font-default);
+    line-height: var(--line-height-base);
+    color: var(--txtInvertColor);
+    margin-bottom: var(--layoutGap);
 }

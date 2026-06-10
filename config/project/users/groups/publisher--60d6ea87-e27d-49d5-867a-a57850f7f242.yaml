@@ -11,6 +11,7 @@ permissions:
   - 'assignusergroup:ee8b684c-14de-460c-89fd-f9fe7dd4b0cd' # EspaceSuisse
   - 'assignusergroup:ff4cdf72-64ec-41a2-8781-1751cadd315c' # Webmasters
   - assignuserpermissions
+  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'createentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'deleteentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'deletepeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
@@ -29,4 +30,3 @@ permissions:
   - 'viewpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - 'viewpeerentrydrafts:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
   - viewusers
-  - 'changeauthorforpeerentries:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel

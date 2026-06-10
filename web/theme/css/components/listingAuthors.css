@@ -26,6 +26,9 @@
         .authorMeta {
             font-family: var(--font-default);
             font-size: var(--font-size-S);
+            a {
+                color: var(--linkTxtColor);
+            }
         }
     }
 }

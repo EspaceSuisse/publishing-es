@@ -1,0 +1,33 @@
+{%- macro imageSource(handleParam) -%}
+
+        {%- set imgSource = handleParam.fmImgSource.all() -%}
+        {%- set imgSourcePlatform = handleParam.fTagProvider -%}
+        {%- set imgSourceLicence = handleParam.fImgLicence -%}
+
+        {%- set printImgSource -%}
+            
+            {# I am sorry. this is very stupid. #}
+            {# I should have setup the entire image source fields better in the first place :( #}
+
+            {%- set sourceText = '' -%}
+            
+            {%- for item in imgSource -%}
+                {%- switch item.type.handle -%}
+                    {%- case 'tMonolingual' -%}
+                        {%- set sourceText = item.title -%}
+                    {%- case 'tMultilingual' -%}
+                        {%- set sourceText = item.fPlainTextI18n -%}
+                {%- endswitch -%}
+            {%- endfor -%}
+            
+            {%- for item in imgSourcePlatform -%}
+                {{- ' ' ~ item.title -}}
+            {%- endfor -%}
+            {%- for item in imgSourceLicence -%}
+                {{- ' ' ~ item.title -}}
+            {%- endfor -%}
+
+        {%- endset -%}
+
+        {{- '(' ~ 'Quelle' | t ~ ':' ~ sourceText ~ printImgSource ~ ')' -}}
+{%- endmacro -%}

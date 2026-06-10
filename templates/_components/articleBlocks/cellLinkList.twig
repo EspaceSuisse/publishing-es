@@ -1,0 +1,15 @@
+{% set linkCell = block.fLinkList.all() %}
+
+
+{% for item in linkCell %}
+    {% if loop.first %}<ul>{% endif %}
+    
+        <li>
+            <a href="{{ item.fLinkI18n.url }}" target="{{ item.fLinkI18n.target }}" rel="noopener noreferrer">
+                <span class="linkIcon">{{ svg('@webroot/theme/img/icon-link.svg')|raw }} </span>
+                <span class="linkLabel">{{ item.fLinkI18n.label }}</span>
+            </a>
+        </li>
+    
+    {% if loop.last %}</ul>{% endif %}
+{% endfor %}

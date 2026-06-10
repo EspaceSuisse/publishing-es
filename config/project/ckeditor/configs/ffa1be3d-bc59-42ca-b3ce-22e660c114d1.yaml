@@ -1,0 +1,18 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: Simple
+toolbar:
+  - bold
+  - italic
+  - superscript
+  - link
+  - '|'
+  - bulletedList
+  - numberedList
+  - '|'
+  - sourceEditing

@@ -38,6 +38,7 @@ fieldLayouts:
             dateAdded: '2025-08-06T13:58:27+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 766fa7b3-abd7-40fb-aa55-b6bda45069cd # Google Text
             handle: null
             instructions: 'Wird in der Google Suche angezeigt'
@@ -53,10 +54,11 @@ fieldLayouts:
             dateAdded: '2025-05-14T09:19:19+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: 'Wird auf der Kategorien- Übersichtsseite dargestellt'
-            label: null
+            label: Lead
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -68,6 +70,7 @@ fieldLayouts:
             dateAdded: '2026-01-28T08:48:22+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fa54fd14-cfed-4146-af48-2c0f6efa7f6d # Bild
             handle: null
             instructions: null
@@ -83,6 +86,7 @@ fieldLayouts:
             dateAdded: '2025-06-17T09:16:46+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
             handle: null
             instructions: 'Hintergrundfarbe des Kategorien Buttons'
@@ -95,9 +99,26 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: '2026-06-09T13:46:39+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            handle: fRichTextI18n2
+            instructions: null
+            label: 'Supertopic Lead'
+            required: false
+            tip: 'Erscheint beim Suportopic Block auf der Startseite'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79c75b77-16f6-4ce1-b301-1b0bb296d139
+            userCondition: null
+            warning: null
+            width: 75
+          -
             dateAdded: '2025-11-06T10:01:14+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
             handle: null
             instructions: 'Thema, welches auf der Startseite hervorgehoben wird'
@@ -108,7 +129,7 @@ fieldLayouts:
             uid: 12c775f6-0dfa-4d12-98db-7afc6b4d8c65
             userCondition: null
             warning: null
-            width: 50
+            width: 25
         name: Inhalt
         uid: 8732783b-ab28-4e2b-9ceb-8f87d9ef6b90
         userCondition: null
@@ -119,6 +140,7 @@ fieldLayouts:
             dateAdded: '2025-08-06T13:58:27+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8df2a6c0-7ecc-4aef-9545-2a09ed8e8158 # SEO Articles
             handle: null
             instructions: null
@@ -134,6 +156,7 @@ fieldLayouts:
             dateAdded: '2025-08-06T13:58:27+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f # VC
             handle: null
             instructions: null
@@ -148,6 +171,7 @@ fieldLayouts:
         name: Meta
         uid: 56af3aac-c639-434a-b9b5-45a14a7cb926
         userCondition: null
+    thumbFieldKey: null
 handle: catSubject
 name: Thema
 siteSettings:

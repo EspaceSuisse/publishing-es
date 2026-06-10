@@ -5,6 +5,7 @@ entryTypes:
     uid: fbf70cb2-5720-4077-947b-c9e20c301ee6 # News Set
 handle: news
 maxAuthors: 1
+minAuthors: 1
 name: News
 previewTargets:
   -

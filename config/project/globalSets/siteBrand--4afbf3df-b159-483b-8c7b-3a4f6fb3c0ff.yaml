@@ -9,6 +9,7 @@ fieldLayouts:
             dateAdded: '2025-11-06T11:00:40+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 97b5cf10-0039-4b8a-b7ab-409f3adf851a # Plain Text
             handle: null
             instructions: null
@@ -24,6 +25,7 @@ fieldLayouts:
             dateAdded: '2025-11-06T11:00:40+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
             handle: null
             instructions: null
@@ -39,6 +41,7 @@ fieldLayouts:
             dateAdded: '2025-11-06T11:00:40+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9173344f-7095-45e6-a477-c0273f2b99e3 # Plain Text I18n 2
             handle: null
             instructions: null
@@ -54,6 +57,7 @@ fieldLayouts:
             dateAdded: '2026-01-14T14:49:31+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8caa68b5-9596-4170-82d2-20866078095e # Numer
             handle: null
             instructions: 'Wieviele Tage, bis ein Artikel nur noch für Mitglieder Verfügbar ist?'
@@ -65,9 +69,42 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-06-09T13:55:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
+            handle: null
+            instructions: null
+            label: 'Color Subject'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 900f4fba-7cc1-4727-ba22-6ace60e4280c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-06-09T13:55:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
+            handle: fColor2
+            instructions: null
+            label: 'Color Genre'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd13428b-2ffa-4db4-b16d-fbb4a2a31537
+            userCondition: null
+            warning: null
+            width: 100
         name: Branding
         uid: 6bf9728d-b41d-4164-87b1-5e192680c738
         userCondition: null
+    thumbFieldKey: null
 handle: siteBrand
 name: 'Site Brand'
 sortOrder: 3

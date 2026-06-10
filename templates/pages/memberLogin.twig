@@ -8,6 +8,10 @@
 	{% set signUpDe = 'https://www.espacesuisse.ch/de/verband/mitglieder' %}
 	{% set signUpFr = 'https://www.espacesuisse.ch/fr/association/membres' %}
 
+	{% set buttonCSS = 'btn btnSmall btnNeutral' %}
+	{% set labelPwForgotten = 'Passwort vergessen?' | t %}
+	{% set labelMemberSignup = 'Mitglied werden' | t %}
+
 	<header class="pageHead subPageHead">
 		{% include "_components/header/headerBrand" %}
 		{% include "_components/header/headerPage" %}
@@ -21,13 +25,13 @@
 		</div>
 		
 
-		<div class="gridSpan12 gridMdSpan10 gridMdStart2 loginLinks">
+		<div class="gridSpan12 gridMdSpan10 gridMdStart2 btnGroup loginLinks">
 			{% if craft.app.language == 'de-CH' %}
-				<p><a href="{{ passwordResetDe }}">{{ 'Passwort Vergessen?' | t }}</a>
-				<a href="{{ signUpDe }}">{{ 'Mitglied Werden' | t }}</a></p>
+				<a href="{{ passwordResetDe }}" class="{{ buttonCSS }}">{{ labelPwForgotten }}</a>
+				<a href="{{ signUpDe }}" class="{{ buttonCSS }}">{{ labelMemberSignup }}</a>
 			{% else %}
-				<p><a href="{{ passwordResetFr }}">{{ 'Passwort Vergessen?' | t }}</a>
-				<a href="{{ signUpFr }}">{{ 'Mitglied Werden' | t }}</a></p>
+				<a href="{{ passwordResetFr }}" class="{{ buttonCSS }}">{{ labelPwForgotten }}</a>
+				<a href="{{ signUpFr }}" class="{{ buttonCSS }}">{{ labelMemberSignup }}</a>
 			{% endif %}
 		</div>
 

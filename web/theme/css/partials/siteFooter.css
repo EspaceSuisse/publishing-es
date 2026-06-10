@@ -46,31 +46,6 @@ footer {
     label {
         color: var(--txtInvertColor);
     }
-    .newsletter {
-        .asterisk {
-            color: var(--txtInvertColor);
-        }
-        h3 {
-            color: var(--txtInvertColor);
-            font-family: var(--font-display);
-            font-size: var(--font-size-M);
-            margin-bottom: 0;
-        }
-        input {
-            background-color: var(--colorES-brand-blue);
-            border: solid 1px var(--txtInvertColor);
-            color: var(--txtInvertColor);
-        }
-        .mce_inline_error {
-            font-size: var(--font-size-S);
-            font-weight: var(--font-regular);
-        }
-        #mce-error-response {
-            color: var(--txtInvertColor);
-            font-size: var(--font-size-M);
-            margin-bottom: 20px;
-        }
-    }
     @media (min-width: 52rem) {
     input {
         align-self: flex-start;

@@ -236,6 +236,12 @@ To add more languages, create a new translation file in the appropriate language
 - **Without "Remember Me"**: Uses Craft's `userSessionDuration` setting
 - **With "Remember Me"**: Uses Craft's `rememberedUserSessionDuration` setting
 
+### Client-Side Cache Unlock (`hasAccess` cookie)
+
+Blitz serves the same HTML to every visitor, so `Module::init()` sets a JS-readable `hasAccess=1` cookie while the user is logged in (refreshed every request, removed when the session ends). It's a UI hint only — Craft's session remains the authority.
+
+A head-loaded script (`templates/_dynamic/unlockScript.twig`, included from `templates/_components/siteMeta.twig`) reads the cookie and strips `articleIsSunset` from `#protected-article` before first paint.
+
 ## Support
 
 For issues or questions:

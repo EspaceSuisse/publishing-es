@@ -20,9 +20,12 @@
         .cellBoxInner {
             border: none
         }
+        p, li, h2, h3, h4, p a, button .cellCardTitle {
+            color: var(--txtInvertColor);
+        }
         a {
             &:visited {
-                color: var(--txtColor);
+                color: var(--linkBgTxtHoverColor);
             }
         }
     }
