@@ -5,8 +5,8 @@ name: Sticky
 searchable: false
 settings:
   default: false
-  offLabel: 'YES'
-  onLabel: 'NO'
+  offLabel: 'NO'
+  onLabel: 'YES'
   showLabelsInCards: true
 translationKeyFormat: null
 translationMethod: none
