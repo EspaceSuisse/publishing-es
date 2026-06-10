@@ -31,15 +31,24 @@ fieldLayouts:
             elementEditCondition: null
             fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
             handle: null
-            instructions: null
+            instructions: 'Kontext zum Bild'
             label: Bildlegende
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 35e68fec-8431-436b-b0d2-e7aa4ad4919d
             userCondition: null
-            warning: 'Bildquelle nicht ins Legenden Feld schreiben. (Stattdessen: Doppelklick auf Bild und dort eintragen)'
-            width: 75
+            warning: null
+            width: 50
+          -
+            content: 'Bildquelle: Doppelklick auf die Bild.'
+            dateAdded: '2026-06-10T06:10:12+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: e54767d4-6890-4613-ae6b-a90fd5244e41
+            userCondition: null
+            width: 25
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
         userCondition: null
