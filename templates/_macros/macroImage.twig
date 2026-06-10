@@ -30,7 +30,7 @@
                 {% endfor %}
                 <img src="{{ transformedImages[0].url }}"
                      alt="{{ (handleParam.fPlainTextI18nMultiline ?? '') | e('html_attr') }}"
-                     title="{{ handleParam.title | e('html_attr') }} {{ macroImageSource.imageSource(handleParam) | e('html_attr') }}"
+                     title="{{ (handleParam.title|trim ~ ' ' ~ macroImageSource.imageSource(handleParam)|trim)|e('html_attr') }}"
                      loading="lazy" decoding="async"
                      onload="this.closest('picture').classList.add('loaded')"
                      >
