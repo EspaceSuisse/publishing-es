@@ -1,0 +1,20 @@
+{% import '_macros/macroPostDate' as macro %}
+
+{% set newsTicker = craft.entries
+    .section("news")
+    .limit(5)
+    .all()
+%}
+
+<div class="newsTicker gridSpan12 gridLgSpan4">
+    <h2 class="newsTickerTitle">{{ 'Neuste News' | t }}</h2>
+    <ul class="newsTickerList">
+        {% for item in newsTicker %}
+            <li class="newsTickerItem">
+                <span class="postDate">{{ macro.postDate(item.postDate) }}</span>
+                <a href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ goToAllNews.url }}" class="btn">{{ 'Zu den News' | t }}</a>
+</div>

@@ -20,22 +20,18 @@
 
 		<div class="{{ smallerGrid }} headMeta">
 			{{ macroPostDate.postDate(entry.postDate, true) }}
+			{% include "_components/articleSunsetMsg" %}
 		</div>
 
 		<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
-
-		<div class="{{ smallerGrid }} headMeta">
-			{% include "_components/articleSunsetMsg" %}
-		</div>
-		
 		
 		{% if entry.fPlainTextI18nMultiline %}
 			<h3 class="{{ smallerGrid }} topicLead">{{ entry.fPlainTextI18nMultiline }}</h3>
 		{% endif %}
 		<div class="{{ smallerGrid }}  headMetaFooter">
 			<p class="tags">
-				{{ macroCat.catOverview(articleGenre, 'genre', entry.section) }}
-				{{ macroCat.catOverview(articleSubject, 'subject', entry.section) }}
+				{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}
+				{{ macroCat.catOverview(articleSubject, 'subject', entry.section, siteBrand.fColor2) }}
 			</p>
 			{% include "_components/listingAuthors" %}
 		</div>

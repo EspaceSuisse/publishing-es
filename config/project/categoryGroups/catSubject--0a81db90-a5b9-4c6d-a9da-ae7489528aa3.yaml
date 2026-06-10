@@ -99,6 +99,22 @@ fieldLayouts:
             warning: null
             width: 25
           -
+            dateAdded: '2026-06-09T13:46:39+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            handle: fRichTextI18n2
+            instructions: null
+            label: 'Supertopic Lead'
+            required: false
+            tip: 'Erscheint beim Suportopic Block auf der Startseite'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79c75b77-16f6-4ce1-b301-1b0bb296d139
+            userCondition: null
+            warning: null
+            width: 75
+          -
             dateAdded: '2025-11-06T10:01:14+00:00'
             editCondition: null
             elementCondition: null
@@ -113,7 +129,7 @@ fieldLayouts:
             uid: 12c775f6-0dfa-4d12-98db-7afc6b4d8c65
             userCondition: null
             warning: null
-            width: 50
+            width: 25
         name: Inhalt
         uid: 8732783b-ab28-4e2b-9ceb-8f87d9ef6b90
         userCondition: null
