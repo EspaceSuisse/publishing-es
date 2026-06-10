@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: sticky
+instructions: null
+name: Sticky
+searchable: false
+settings:
+  default: false
+  offLabel: 'YES'
+  onLabel: 'NO'
+  showLabelsInCards: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

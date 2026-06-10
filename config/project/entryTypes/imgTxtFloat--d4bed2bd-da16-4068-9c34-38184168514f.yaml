@@ -31,7 +31,7 @@ fieldLayouts:
             elementEditCondition: null
             fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
             handle: null
-            instructions: null
+            instructions: 'Kontext zum Bild'
             label: Bildlegende
             required: false
             tip: null
@@ -39,20 +39,14 @@ fieldLayouts:
             uid: 3df29378-a3b9-4c7c-88c0-84a1274f7dfd
             userCondition: null
             warning: null
-            width: 75
+            width: 50
           -
-            dateAdded: '2025-08-27T08:22:15+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 171b452e-5ea6-4efc-bec5-b46550e0e54c
-            userCondition: null
-          -
-            content: 'Mit diesem Element fliesst der Text ums Bild herum. Im Layout Tab nach Wunsch einstellen.'
-            dateAdded: '2025-08-27T08:23:21+00:00'
+            content: 'Bildquelle: Doppelklick auf Bild.'
+            dateAdded: '2026-06-10T06:11:03+00:00'
             displayInPane: true
             elementCondition: null
             type: craft\fieldlayoutelements\Markdown
-            uid: d980438c-aae2-4b5f-a6bc-021cc3fbb865
+            uid: 5c124126-dc1b-4873-95cb-cf519bfda28e
             userCondition: null
             width: 25
           -
@@ -70,7 +64,13 @@ fieldLayouts:
             uid: 8f30374a-9c72-4d1d-8855-582e0d0139f7
             userCondition: null
             warning: null
-            width: 75
+            width: 100
+          -
+            dateAdded: '2025-08-27T08:22:15+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 171b452e-5ea6-4efc-bec5-b46550e0e54c
+            userCondition: null
         name: Content
         uid: 31219149-3a24-4c57-992c-cb2265cc60fc
         userCondition: null
@@ -140,6 +140,15 @@ fieldLayouts:
             uid: b5c5a6b5-4827-4471-a396-bbde5607a425
             userCondition: null
             warning: null
+            width: 25
+          -
+            content: 'Mit diesem Element fliesst der Text ums Bild herum. Im Layout Tab nach Wunsch einstellen.'
+            dateAdded: '2025-08-27T08:23:21+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: d980438c-aae2-4b5f-a6bc-021cc3fbb865
+            userCondition: null
             width: 25
         name: Layout
         uid: 0e029fc9-5706-4fa3-b53f-2d9686a6e6f9

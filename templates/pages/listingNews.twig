@@ -6,6 +6,7 @@
 
 	{% set allNews = craft.entries()
 		.section('news')
+		.orderBy('sticky desc, postDate desc')
 		.limit(null)
 		.all()
 	%}

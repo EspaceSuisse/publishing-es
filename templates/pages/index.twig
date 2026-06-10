@@ -18,7 +18,8 @@
 
 	{% set allEntries = craft.entries()
 		.section('article')
-		    .with(articleEagerLoad)
+		.with(articleEagerLoad)
+		.orderBy('sticky desc, postDate desc')
 		.limit(null)
 		.all()
 	%}
