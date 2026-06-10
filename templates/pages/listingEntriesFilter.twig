@@ -12,6 +12,7 @@
 	{% set query = craft.entries()
 		.relatedTo(category)
 		.with(['fCatGenre', 'fCatSubject'])
+		.orderBy('sticky desc, postDate desc')
 		.limit(null)
 	%}
 
