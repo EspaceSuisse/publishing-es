@@ -3,6 +3,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: subgrid;
+    align-content: start;
     .previewTitle {
         margin: 0;
 
@@ -23,10 +24,12 @@
 
     .imgPart {
         display: flex;
+        @media (min-width: 68rem) {
+            aspect-ratio: 16 / 9;
+        }
         picture {
             background-color: var(--linkTxtHoverColor);
             display: flex;
-
             img {
                 object-fit: cover;
                 transition: all 0.1s ease-in-out;
