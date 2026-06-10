@@ -2,10 +2,12 @@
 {% import '_macros/macroCatOverview' as macroCat %}
 {% import '_macros/macroPostDate' as macroPostDate %}
 {% import '_macros/macroFigCaption' as figCaption %}
+{% import '_macros/macroAuthorArticle' as writers %}
 
 
 
 {% set smallerGrid = 'gridSpan10 gridStart2' %}
+{%- set authorQuery = entry.authors -%}
 
 {% if aufmacherBild %}
 
@@ -33,7 +35,11 @@
 				{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}
 				{{ macroCat.catOverview(articleSubject, 'subject', entry.section, siteBrand.fColor2) }}
 			</p>
-			{% include "_components/listingAuthors" %}
+			<ul class="articleAuthors gridStart2 gridSpan10">
+				{%- for item in authorQuery -%}
+					{{ writers.authorArticle(item, true) }}
+				{%- endfor -%}
+			</ul>
 		</div>
 	</div>
 	{# <span class="articleId">ID: {{ entry.id }}</span> #}
