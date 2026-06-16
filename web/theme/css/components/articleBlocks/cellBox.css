@@ -69,9 +69,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: var(--font-size-M);
+        font-weight: var(--font-medium)
     }
     .cellBoxInner {
-        padding: var(--layoutGap);
+        padding: calc( var(--layoutGap) / 2);
         padding-bottom: 0;
         border-top: solid 1px var(--linkTxtColor);
         p, ul, ol {
@@ -89,7 +91,7 @@
 
     .cellBoxToggle {
         transition: all 0.1s ease-in-out;
-        padding: var(--layoutGap);
+        padding: calc( var(--layoutGap) / 2);
         .cellCardTitle {
             color: var(--linkTxtColor);
             font-size: var(--font-size-M);
