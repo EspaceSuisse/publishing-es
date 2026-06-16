@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: fSwitchEnabled
+handle: fSwitch2
 instructions: null
 name: Switch
 searchable: false
 settings:
-  default: true
+  default: false
   offLabel: null
   onLabel: null
   showLabelsInCards: false

@@ -1,5 +1,5 @@
 :root {
-    --iconSize: 45px;
+    --iconSize: 20px;
 }
 .cellClickElement {
     margin-bottom: calc(var(--layoutGap) * 1);
@@ -13,30 +13,37 @@
             .linkIcon {
                 max-width: var(--iconSize);
                 display: flex;
+                flex-direction: column-reverse;
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
-                padding: calc(var(--layoutGap) / 5) 0;
+                padding-top: 5px;
                 svg {
                     display: block;
                     width: 100%;
                     height: 100%;
+                    path, line, polygon {
+                        stroke: var(--linkTxtColor);
+                    }
                 }
             }
             a {
                 display: flex;
-                gap: var(--layoutGap);
+                gap: 4px;
                 align-items: center;
                 font-family: var(--font-display);
-                font-weight: var(--font-bold);
+                font-weight: var(--font-normal);
                 font-size: var(--font-size-M);
-                color: var(--txtColor);
+                color: var(--linkTxtColor);
                 line-height: var(--line-height-base);
                 text-decoration: none;
-
+                align-items: initial;
+                .linkLabel {
+                    color: var(--linkTxtHoverColor);
+                }
                 &:hover {
                     color: var(--linkTxtHoverColor);
-                    background-color: var(--linkBgColor);
+                    text-decoration: underline;
                 }
             }
         }

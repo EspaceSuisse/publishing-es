@@ -8,11 +8,11 @@
 
 			<li>
 				<a href="{{ item.url }}" class="downloadLink" title="{{ 'Download' | t }} {{ item.extension }}: {{ item.title }}" target="_blank">
-					<span class="linkIcon downloadIcon">{{ svg('@webroot/theme/img/icon-file.svg')|raw }} </span>
 					<span class="linkLabel downloadTitle">
 						{{ item.title }}
 						<span class="subLine">(.{{ subLine }})</span>
 					</span>
+					<span class="linkIcon downloadIcon">{{ svg('@webroot/theme/img/icon-file.svg')|raw }} </span>
 				</a>
 			</li>
 	{% endfor %}
