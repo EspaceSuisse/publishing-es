@@ -9,13 +9,12 @@
     {% if item.status == 'live' %}
 
         {% set img = item.imgAufmacher.one() %}
-        
 
-            <a href="{{ item.url }}" class="gridSpan12">
-                <div class="imgPart gridSpan3 gridLgSpan4">
+            <a href="{{ item.url }}" class="cellRelEntry">
+                <div class="imgPart">
                     {{ imgMacro.articleImage(img, 'articleThumb') }}
                 </div>
-                <div class="txtPart gridSpan9 gridLgSpan8">
+                <div class="txtPart">
                     <p class="relEntryHeadMeta">{{ 'Lesen Sie dazu auch' | t }}:</p>
                     <h3 class="relatedEntryTitle">{{ item.title }}</h3>
                 </div>

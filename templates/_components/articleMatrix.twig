@@ -54,7 +54,7 @@
 			{% set liveEntries = relEntryQuery|filter(e => e.status == 'live') %}
 
     		{% if liveEntries|length %}
-				<aside class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellCard cellRelEntry">
+				<aside class="articleElement {{ macro.gridClasses(gridStartImg, gridSpanImg, vertPos) }} cellCard">
 					{% include "_components/articleBlocks/cellRelEntry" %}
 				</aside>
 			{% endif %}
