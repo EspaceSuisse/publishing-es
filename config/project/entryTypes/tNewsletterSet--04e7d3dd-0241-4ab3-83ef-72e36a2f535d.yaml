@@ -69,22 +69,6 @@ fieldLayouts:
             warning: null
             width: 25
           -
-            dateAdded: '2026-04-01T13:18:49+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
-            handle: null
-            instructions: null
-            label: Lead
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e42e4ecf-1b20-4bea-9182-c9b630346bb3
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2026-04-08T06:39:02+00:00'
             editCondition: null
             elementCondition: null
@@ -92,11 +76,27 @@ fieldLayouts:
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: null
-            label: Text
+            label: Lead
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c0925dc8-eaab-4f39-987d-4359f1ad3723
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-06-16T13:41:17+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            handle: fRichTextI18n2
+            instructions: null
+            label: Text
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3de3be7-2cde-41b3-a486-38095ac1df36
             userCondition: null
             warning: null
             width: 100
