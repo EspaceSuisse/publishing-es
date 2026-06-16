@@ -1,7 +1,10 @@
 {% import '_macros/macroImage' as imgMacro %}
 {% import '_components/previewCards/macroPreviewArticle' as macroPreview %}
+{% import '_macros/macroAuthorPreviewCard' as macroAuthor %}
+{% import '_macros/macroPostDate' as macroPostDate %}
 
 {% set relEntryQuery = block.fRelEntry.all() %}
+
 
 
 {% for item in relEntryQuery %}
@@ -9,14 +12,20 @@
     {% if item.status == 'live' %}
 
         {% set img = item.imgAufmacher.one() %}
+        {% set relEntryMeta = macroPostDate.postDate(item.postDate, true) ~ ' ' ~ macroAuthor.authorPreviewCard(item) %}
 
             <a href="{{ item.url }}" class="cellRelEntry">
                 <div class="imgPart">
                     {{ imgMacro.articleImage(img, 'articleThumb') }}
                 </div>
                 <div class="txtPart">
-                    <p class="relEntryHeadMeta">{{ 'Lesen Sie dazu auch' | t }}:</p>
-                    <h3 class="relatedEntryTitle">{{ item.title }}</h3>
+                    <div class="metaTitle">
+                        <p class="relEntryHeadMeta">{{ 'Lesen Sie dazu auch den Inforaum Artikel vom' | t }}</p>
+                        <h3 class="relatedEntryTitle">{{ item.title }}</h3>
+                    </div>
+                    <div class="metaRelEntry">
+                        {{ relEntryMeta | raw }}
+                    </div>
                 </div>
             </a>
 
