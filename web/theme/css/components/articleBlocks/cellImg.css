@@ -49,6 +49,7 @@ figcaption {
         font-family: var(--font-default);
         opacity: 0.8;
         min-width: 30%;
+        text-align: right;
     }
 }
 
