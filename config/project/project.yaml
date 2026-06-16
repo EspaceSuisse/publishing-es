@@ -1,4 +1,4 @@
-dateModified: 1781617306
+dateModified: 1781617976
 elementSources:
   craft\elements\Asset:
     -
@@ -71,8 +71,19 @@ elementSources:
         - revisionCreator
       type: native
     -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: singles
       page: Entries
+      tableAttributes:
+        - status
+        - link
+        - 'field:766fa7b3-abd7-40fb-aa55-b6bda45069cd' # Google Text
+        - 'field:09087e84-41bc-4451-91af-6be5abe8388d' # Text i18n
+        - 'field:8b00b1ad-3829-48d0-b91f-f3a597e32588' # Google Image
       type: native
     -
       heading: Channels
