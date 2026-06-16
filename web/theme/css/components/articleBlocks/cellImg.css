@@ -40,12 +40,11 @@ figcaption {
         p {
             font-size: var(--font-size-S);
             font-family: var(--font-default);
-            line-height: 1.5;
         }
     }
 
     .assetSource {
-        font-size: var(--font-size-XS);
+        font-size: var(--font-size-XXS);
         font-family: var(--font-default);
         opacity: 0.8;
         min-width: 30%;
@@ -63,4 +62,18 @@ figcaption {
 
 .fadeImg.loaded img {
   opacity: 1;
+}
+/* Lightbox styling caption */
+.pswp__custom-caption {
+    .caption p {
+        font-size: var(--font-size-S);
+        background-color: black;
+    }
+    .assetSource {
+        font-size: var(--font-size-XS);
+        background-color: black;
+    }
+}
+.pswp__img {
+    padding: var(--layoutGap);
 }
