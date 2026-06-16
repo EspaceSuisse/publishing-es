@@ -1,7 +1,7 @@
 .cellQuote {
     blockquote {
-        margin-bottom: calc(var(--layoutGap));
-        margin-top: 0;
+        margin-bottom: calc( var(--layoutGap) * 2 );
+        margin-top: calc( var(--layoutGap) * 1 );
         margin-left: 0;
         margin-right: 0;
         line-height: 2;
@@ -11,6 +11,10 @@
             font-weight: var(--font-regular);
             line-height: calc(var(--line-height-base) + 2rem );
             margin: 0;
+        }
+        .noQuoteMarks {
+            border-left: 3px var(--colorES-brand-blue) solid;
+            padding-left: calc( var(--layoutGap) / 2 );
         }
         .quoteMarks {
             &::before {
@@ -41,14 +45,14 @@
     }
     &.styleB {
         blockquote p {
-            font-weight: var(--font-bold);
+            font-weight: var(--font-medium);
             line-height: 1.2;
         }
     }
     &.styleC {
         blockquote p {
             font-size: var(--font-size-XXL);  
-            font-weight: var(--font-bold);
+            font-weight: var(--font-medium);
             line-height: 1.2;
         }
     }

@@ -1,8 +1,8 @@
 <blockquote>
 
-	{% set marks = block.fSwitchEnabled %}
+	{% set marks = block.fSwitch2 %}
 
-	<p class="{% if marks %}quoteMarks{% endif %}">{{ block.fPlainTextI18nMultiline }}</p>
+	<p class="{% if marks %}quoteMarks{% else %}noQuoteMarks{% endif %}">{{ block.fPlainTextI18nMultiline }}</p>
 
 	{% for block in block.fmImgSource.all() %}
 		{% switch block.type %}

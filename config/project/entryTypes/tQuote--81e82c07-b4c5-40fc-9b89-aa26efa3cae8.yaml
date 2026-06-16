@@ -39,7 +39,7 @@ fieldLayouts:
             uid: 18df280a-ce33-487e-a43e-0c6469458442
             userCondition: null
             warning: null
-            width: 75
+            width: 50
           -
             dateAdded: '2025-09-03T08:06:34+00:00'
             editCondition: null
@@ -55,7 +55,7 @@ fieldLayouts:
             uid: 8677a60e-ce78-4a3c-a1a0-6fc3f760da06
             userCondition: null
             warning: null
-            width: 25
+            width: 50
         name: Inhalt
         uid: 80ae1dd6-4f37-4682-99fb-5950713e3a10
         userCondition: null
