@@ -8,7 +8,7 @@
 
 {% set newsLimitOnMobile = 3 %}
 
-<div class="newsTicker gridSpan12 gridLgSpan4">
+<aside class="newsTicker gridSpan12 gridLgSpan4">
     {# <h2 class="newsTickerTitle">{{ 'News' | t }}</h2> #}
     <ul class="newsTickerList">
         {% for item in newsTicker %}
@@ -22,4 +22,4 @@
         {% endfor %}
     </ul>
     <a href="{{ goToAllNews.url }}" class="btn">{{ 'Zu den News' | t }}</a>
-</div>
+</aside>

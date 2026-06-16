@@ -14,10 +14,27 @@
             flex-direction: column;
             justify-content: center;
             text-decoration: none;
+            width: 100%;
             .relEntryHeadMeta {
                 font-size: var(--font-size-M);
                 font-family: var(--font-default);
                 margin: 0;
+            }
+            .metaTitle {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .metaRelEntry {
+                padding-bottom: var(--layoutGap);
+                width: 100%;
+                display: flex;
+                .postDate {
+                    display: inline;
+                    padding: 0;
+                    margin: 0;
+                }
             }
         }
         &:hover {
