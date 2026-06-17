@@ -39,16 +39,13 @@ fieldLayouts:
             uid: 3df29378-a3b9-4c7c-88c0-84a1274f7dfd
             userCondition: null
             warning: null
-            width: 50
+            width: 75
           -
-            content: 'Bildquelle: Doppelklick auf Bild.'
-            dateAdded: '2026-06-10T06:11:03+00:00'
-            displayInPane: true
+            dateAdded: '2025-08-27T08:22:15+00:00'
             elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 5c124126-dc1b-4873-95cb-cf519bfda28e
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 171b452e-5ea6-4efc-bec5-b46550e0e54c
             userCondition: null
-            width: 25
           -
             dateAdded: '2025-06-17T07:37:24+00:00'
             editCondition: null
@@ -65,12 +62,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-08-27T08:22:15+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 171b452e-5ea6-4efc-bec5-b46550e0e54c
-            userCondition: null
         name: Content
         uid: 31219149-3a24-4c57-992c-cb2265cc60fc
         userCondition: null

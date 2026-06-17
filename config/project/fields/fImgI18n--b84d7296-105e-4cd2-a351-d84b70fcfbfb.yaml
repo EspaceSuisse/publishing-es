@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: fImgI18n
-instructions: 'Lange Seite: `2400px` /  [Img Resizer](https://kaspar-allenbach.github.io/image-resizer/)'
+instructions: '[Lange Seite](https://kaspar-allenbach.github.io/image-resizer/) : `2400px` /  jpq Qualität `0.6`'
 name: 'Img i18n'
 searchable: false
 settings:
