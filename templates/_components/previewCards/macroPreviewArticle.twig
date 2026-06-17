@@ -1,4 +1,4 @@
-{% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage) %}
+{% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage, paramLazy = true) %}
 
 	{% import '_macros/macroImage' as macro %}
 	{% import '_macros/macroPostDate' as macroPostDate %}
@@ -18,7 +18,7 @@
 		{% if image %}
 		
 			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
-				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
+				{{ macro.articleImage(image, 'articleThumb', 'previewImg', paramLazy) }}
 			</a>
 
 		{% endif %}

@@ -1,4 +1,4 @@
-{% macro articleImage(handleParam, transformKey, paramClass) %}
+{% macro articleImage(handleParam, transformKey, paramClass, paramLazy = true) %}
 
     {% import '_macros/macroImageSource' as macroImageSource %}
 
@@ -39,7 +39,8 @@
                      height="{{ fallback.height }}"
                      alt="{{ (handleParam.fPlainTextI18nMultiline ?? '') | e('html_attr') }}"
                      title="{{ (handleParam.title|trim ~ ' ' ~ macroImageSource.imageSource(handleParam)|trim)|e('html_attr') }}"
-                     loading="lazy" decoding="async"
+                     {% if paramLazy %}loading="lazy"{% else %}loading="eager" fetchpriority="high"{% endif %}
+                     decoding="async"
                      onload="this.closest('picture').classList.add('loaded')">
             </picture>
         {% endif %}
