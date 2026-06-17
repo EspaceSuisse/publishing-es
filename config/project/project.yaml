@@ -1,4 +1,4 @@
-dateModified: 1781693403
+dateModified: 1781699033
 elementSources:
   craft\elements\Asset:
     -
@@ -380,6 +380,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   assetusage:
     edition: standard
     enabled: false
@@ -558,18 +562,10 @@ plugins:
     settings:
       additionalCss: ''
       cssFile: '@web/theme/css/components/backendCP.css'
-  craft-geoman:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   craft-link-checker:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  entry-gps-coordinates:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.2
   imager-x:
     edition: pro
     enabled: true

@@ -1,6 +1,6 @@
 allowLineBreaksInTitles: false
 color: null
-description: 'Nur Title und Lead'
+description: null
 fieldLayouts:
   1c24f3e1-4a89-430c-9c68-8e2e7ef4d959:
     cardThumbAlignment: end
@@ -76,7 +76,7 @@ fieldLayouts:
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: null
-            label: Lead
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -84,6 +84,27 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a359d0ad-236c-49c1-833c-5e3b5700b745
+            userCondition: null
+          -
+            content: 'Artikel die den Super Topic enthalten, werden auf der Homepage gesondert dargestellt.'
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: c89d4904-2d24-43fd-bd1c-dc8b5a3efc88
+            userCondition: null
+            width: 75
+          -
+            dateAdded: '2025-09-24T13:26:25+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 37b955f9-6052-4aab-8977-882460d5d355
+            userCondition: null
         name: Content
         uid: 7823158a-5679-4ea0-93ad-f2b4074cecc0
         userCondition: null
@@ -110,10 +131,10 @@ fieldLayouts:
         uid: b2c887e2-ba63-428a-a14a-813f6b5e54ea
         userCondition: null
     thumbFieldKey: null
-handle: pageSetNoMatrix
+handle: homepageSet
 hasTitleField: true
 icon: null
-name: 'Page Set'
+name: 'Homepage Set'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

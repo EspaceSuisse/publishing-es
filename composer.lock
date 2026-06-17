@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3ec7f4b6aa0463e498cceb681e29337",
+    "content-hash": "28e23ad402cd3ca34da1fcab7fbe87a3",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1085,6 +1085,42 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
+        },
+        {
+            "name": "clubstudioltd/craft-asset-rev",
+            "version": "8.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clubstudioltd/craft-asset-rev/zipball/fbf2c9aae5447ea88478afdcd3a69a7741c7246e",
+                "reference": "fbf2c9aae5447ea88478afdcd3a69a7741c7246e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Asset Rev",
+                "handle": "assetrev",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
+                "developer": "Club Studio Ltd",
+                "developerUrl": "https://clubstudio.co.uk",
+                "class": "club\\assetrev\\AssetRev"
+            },
+            "autoload": {
+                "psr-4": {
+                    "club\\assetrev\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A plugin to aid cache-busting",
+            "time": "2024-03-26T19:39:38+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -2979,58 +3015,6 @@
             "time": "2026-06-02T12:30:48+00:00"
         },
         {
-            "name": "handplant/craft-geoman",
-            "version": "2.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/handplant/craft-geoman/zipball/52e72315b56c1daf0858dc3b1c4bc37e2ddf06aa",
-                "reference": "52e72315b56c1daf0858dc3b1c4bc37e2ddf06aa",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0",
-                "php": "^8.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Craft Geoman",
-                "handle": "craft-geoman",
-                "developer": "webworker",
-                "developerUrl": "https://webworker.me",
-                "documentationUrl": "https://github.com/handplant/craft-geoman/blob/master/README.md",
-                "changelogUrl": "https://raw.githubusercontent.com/handplant/craft-geoman/master/CHANGELOG.md",
-                "class": "handplant\\craftgeoman\\CraftGeoman"
-            },
-            "autoload": {
-                "psr-4": {
-                    "handplant\\craftgeoman\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "webworker",
-                    "homepage": "https://webworker.me"
-                }
-            ],
-            "description": "geometry editing tools",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft field",
-                "craft geoman",
-                "craft-plugin",
-                "craftcms"
-            ],
-            "support": {
-                "docs": "https://github.com/handplant/craft-geoman/blob/master/README.md",
-                "issues": "https://github.com/handplant/craft-geoman/issues"
-            },
-            "time": "2024-12-09T13:20:41+00:00"
-        },
-        {
             "name": "illuminate/collections",
             "version": "v10.49.0",
             "source": {
@@ -4627,61 +4611,6 @@
                 }
             ],
             "time": "2025-01-08T20:10:23+00:00"
-        },
-        {
-            "name": "nthmedia/entry-gps-coordinates",
-            "version": "2.4.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nthmedia/entry-gps-coordinates/zipball/8b8d7ee0fe7f8ab334cb320ba74985fb6095ec01",
-                "reference": "8b8d7ee0fe7f8ab334cb320ba74985fb6095ec01",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0 || ^5.0.0",
-                "php": "^8.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Entry GPS Coordinates",
-                "handle": "entry-gps-coordinates",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://github.com/nthmedia/entry-gps-coordinates/CHANGELOG.md",
-                "class": "nthmedia\\entrygpscoordinates\\EntryGpsCoordinates"
-            },
-            "autoload": {
-                "psr-4": {
-                    "nthmedia\\entrygpscoordinates\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "NTH media",
-                    "homepage": "https://nthmedia.nl"
-                }
-            ],
-            "description": "Entry GPS Coordinates plugin for Craft CMS",
-            "keywords": [
-                "coordinate",
-                "coordinates",
-                "gps",
-                "gps coordinates",
-                "lat",
-                "latitude",
-                "lng",
-                "location",
-                "longitude",
-                "map"
-            ],
-            "support": {
-                "docs": "https://github.com/nthmedia/entry-gps-coordinates",
-                "issues": "https://github.com/nthmedia/entry-gps-coordinates/issues"
-            },
-            "time": "2026-03-17T21:30:12+00:00"
         },
         {
             "name": "nystudio107/craft-code-editor",
