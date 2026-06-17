@@ -81,6 +81,21 @@ fieldLayouts:
         name: Layout
         uid: 3574d368-a75a-4bf2-8d21-4dc229230392
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "- Uploade Zip, oder PDF files oder was auch immer\r\n- Du kannst nur eine, oder mehrere Datein hinzufügen. Wie du willst\r\n- Im Frontend werden die Datei Titel als Klickbare Links verwendet.\r\n- Um die Titel zu ändern einfach File Doppelklicken (Andere Sprache nicht vergessen)."
+            dateAdded: '2026-06-17T09:38:54+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: efd0bb58-663b-48b9-a4d9-cfb9c075c0f0
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: 8fdba5d6-4162-4056-8ef6-06fe70cfd6ae
+        userCondition: null
     thumbFieldKey: null
 handle: tDownload
 hasTitleField: false

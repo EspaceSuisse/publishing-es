@@ -9,15 +9,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: "Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.\r\n\r\nFormat bitte nur Koordinatensystem WSG84. Das sieht ungefähr so aus:\r\n`Lat: 46.418105`\r\n`Lon: 6.260320`"
-            dateAdded: '2025-07-30T09:25:10+00:00'
-            displayInPane: true
-            elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 34804418-3e61-4fea-9980-eefabbacf537
-            userCondition: null
-            width: 100
-          -
             dateAdded: '2025-05-21T06:46:08+00:00'
             editCondition: null
             elementCondition: null
@@ -219,6 +210,21 @@ fieldLayouts:
             width: 25
         name: Layout
         uid: 6e80896f-15ad-4872-b6f6-5ff3bc95e688
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Nimm die Koordinaten von [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/) und zeichne dort auch grad Polygone, wenn du willst.\r\n\r\nFormat bitte nur Koordinatensystem WSG84. Das sieht ungefähr so aus:\r\n`Lat: 46.418105`\r\n`Lon: 6.260320`\r\n\r\nAlle anderen Koordinatenformate führen zu komischem Zeug.\r\n\r\n# Basemap\r\nDU hast die Wahl zwischen diversen swisstopo Kartendarstellungen\r\n\r\n# Zusatzlayer\r\nDu kannst zusatzlayer darstellen, indem du z.b. die Layer url aus der swisstopo app rauskopierst. Die haben immer dasselbe format:\r\n- `ch.swisstopo.layername@zusatz`\r\n- Z.b. Zeireise ist: `ch.swisstopo.zeitreihen@year=1864;`\r\n- Dies kannst du in der swisstopo url sehen\r\n\r\n# Marker\r\n\r\nFüge einen order mehrere Marker via WSG84 Format ein.\r\n**Merke:** wenn die Marker ausserhalb deiner definierten Position im panel Content sind und die Zoomsoofe zu nah, dann siehst du sie nicht. Too bad.\r\n\r\n# Polygon Coordinates\r\n- füge valides GEOJSOn mit umlaufenden eckigen Klammern ein [Käspus Geodieb](https://kaspar-allenbach.github.io/map-coordinate-thief/)\r\n\r\nDies wird im Geodieb automatisch generiert. Einfach herüberkopieren. Wenn du willst, kannst du hier die Farben anpassen: `\"color\": \"hsl(309 70% 70% / 1)\"`"
+            dateAdded: '2025-07-30T09:25:10+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 34804418-3e61-4fea-9980-eefabbacf537
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: 4130ac40-029a-49a0-89fe-390493b74647
         userCondition: null
     thumbFieldKey: null
 handle: tMap

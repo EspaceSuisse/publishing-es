@@ -27,6 +27,21 @@ fieldLayouts:
         name: Content
         uid: a4ce5436-b53f-4c6f-bd7e-468af6770d00
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Das Editorkommentar Element kannst du nutzen um dir selber oder jemand anderem etwas mitzuteilen. Wird nicht im Frontend gerendert.\r\n\r\n- Etwas Mitteilen\r\n- Etwas Notieren\r\n- Platzhalte für ein fehlendes Element"
+            dateAdded: '2026-06-17T10:11:47+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 4e233fcb-2df2-49f1-8422-5ec302b5c048
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: e8d45fc9-8a62-4aae-8cd8-404408d8d1bc
+        userCondition: null
     thumbFieldKey: null
 handle: editorKommentar
 hasTitleField: false
