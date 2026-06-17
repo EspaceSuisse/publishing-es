@@ -2,8 +2,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.typekit.net/zfp0qhw.css">
+  <link rel="stylesheet" href="{{ craft.vite.entry('src/css/app.css') }}">
 
-  <link rel="stylesheet" href="{{ rev('/theme/css/app.css') }}">
+  
 
   {% set currentHandle = currentSite.handle %}
   {% set secondHandle = currentHandle == 'espacesuissePublishingFr' ? 'default' : 'espacesuissePublishingFr' %}
