@@ -16,6 +16,6 @@ return [
         'enabled' => true,
     ],
     'production' => [
-        'enabled' => true,
+        'enabled' => false,
     ],
 ];
