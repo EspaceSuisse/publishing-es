@@ -1,4 +1,4 @@
-dateModified: 1781619303
+dateModified: 1781683605
 elementSources:
   craft\elements\Asset:
     -
@@ -354,7 +354,7 @@ meta:
     cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Call to Action' # Call to Action
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Span' # Grid Span
     d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
-    d4bf6dfa-d2c6-45dc-9550-68e2b143520e: 'Text i18N' # Text i18N
+    d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Lauftext # Lauftext
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor

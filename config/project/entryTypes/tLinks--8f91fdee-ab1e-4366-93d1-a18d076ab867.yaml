@@ -65,6 +65,21 @@ fieldLayouts:
         name: Layout
         uid: 539312c4-4be5-4022-89f6-37a060a25ea7
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Möchtest du einen Link speziell hervorheben und nicht einfach im Lauftext unterbringen kannst du dieses Element verwenden. Das schreibt dir den Link inklusive eines Icons auf eine neue Zeile. So hast du eine etwas prominentere Darstellungsweise.\r\n\r\nDu kannst so auch Linklisten mache für z.b. `Wieter Links` oder so. \r\n\r\n# Kontext nicht vergessen\r\n\r\nWie zum Beispiel das Bildergalerie-Element kannst du hier auch verschachtelte Elemente machen. Du musst also nicht pro Link ein Link Element machen… DU kannst stattdessen im Link Element mehrere Links einfügen. `Context is everything`.\r\n\r\n# Interne vs. Externe Links\r\n- Verwende für interne Links `Entry` und für Externe `URL`\r\n- **URL immer aus dem Browser Kopieren** niemals aus dem Mail, oder von Hand schreiben. Wenn du den Link aus dem Mail kopierst, dann kopierst du in Wirklichkeit den Link zum Microsoft Antivirus check."
+            dateAdded: '2026-06-17T08:02:48+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: ac20f77e-80b3-484d-87bb-a17cdb6e8683
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: 6a6dfba8-4b38-4101-b107-eacdc9d8ccdb
+        userCondition: null
     thumbFieldKey: null
 handle: tLinks
 hasTitleField: false
