@@ -36,8 +36,19 @@
             }
         }
     }
-    .btn {
+    .newsTickerMeta {
         margin-top: auto;
         align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
     }
+    .rssLink {
+        font-family: var(--font-default);
+        font-size: var(--font-size-S);
+        padding-left: var(--layoutGap);
+        color: var(--linkTxtColor)
+    }
+
 }

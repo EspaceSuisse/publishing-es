@@ -8,18 +8,30 @@
 
 {% set newsLimitOnMobile = 3 %}
 
-<aside class="newsTicker gridSpan12 gridLgSpan4">
-    {# <h2 class="newsTickerTitle">{{ 'News' | t }}</h2> #}
-    <ul class="newsTickerList">
-        {% for item in newsTicker %}
+{% set feedRssDe = {path: 'feeds/feed-de.rss', title: 'RSS'} %}
+{% set feedRssFr = {path: 'feeds/feed-fr.rss', title: 'RSS'} %}
 
-            {% set hideOnMobile = loop.index > newsLimitOnMobile ? 'hideOnMobile' %}
+<aside
+	class="newsTicker gridSpan12 gridLgSpan4">
+	{# <h2 class="newsTickerTitle">{{ 'News' | t }}</h2> #}
+	<ul class="newsTickerList">
+		{% for item in newsTicker %}
 
-            <li class="newsTickerItem {{ hideOnMobile }}">
-                <span class="postDate">{{ macro.postDate(item.postDate) }}</span>
-                <a href="{{ item.url }}">{{ item.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <a href="{{ goToAllNews.url }}" class="btn">{{ 'Zu den News' | t }}</a>
+			{% set hideOnMobile = loop.index > newsLimitOnMobile ? 'hideOnMobile' %}
+
+			<li class="newsTickerItem {{ hideOnMobile }}">
+				<span class="postDate">{{ macro.postDate(item.postDate) }}</span>
+				<a href="{{ item.url }}">{{ item.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+    <div class="newsTickerMeta">
+
+        {% if craft.app.locale == 'de-CH' %}
+            <a href="{{ siteUrl(feedRssDe.path) }}" class="rssLink" target="_blank">{{ feedRssDe.title }}</a>
+        {% else %}
+            <a href="{{ siteUrl(feedRssFr.path) }}"  class="rssLink" target="_blank">{{ feedRssFr.title }}</a>
+        {% endif %}
+        <a href="{{ goToAllNews.url }}" class="btn">{{ 'Zu den News' | t }}</a>
+    </div>
 </aside>
