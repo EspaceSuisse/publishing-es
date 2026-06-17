@@ -3,7 +3,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.typekit.net/zfp0qhw.css">
 
-  <link rel="stylesheet" href="/theme/css/esPublishing.css?v={{ now|date('U') }}">
+  {% set manifest = craft.app.cache.getOrSet('vite-manifest', () => {
+      return json_decode(file_get_contents(alias('@webroot/dist/.vite/manifest.json')), true)
+  }) %}
+  <link rel="stylesheet" href="/dist/{{ manifest['src/css/app.css'].file }}">
 
   {% set currentHandle = currentSite.handle %}
   {% set secondHandle = currentHandle == 'espacesuissePublishingFr' ? 'default' : 'espacesuissePublishingFr' %}

@@ -7,3 +7,4 @@
 .env.web
 /web/imager
 /web/cache
+node_modules

@@ -103,5 +103,6 @@ footer, .dropdownContents {
         }
         input::placeholder { 
             color: color-mix(in srgb, var(--txtInvertColor), var(--colorES-brand-blue) 60%);
+        }
     }
 }
