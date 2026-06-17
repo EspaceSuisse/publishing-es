@@ -24,7 +24,7 @@
 
             {% set fallback = craft.imagerx.transformImage(handleParam, [namedTransform.transforms[0]])[0] %}
 
-            <picture class="{{ paramClass ?? 'imgItem' }} fadeImg">
+            <picture class="{{ paramClass ?? 'imgItem' }}{% if paramLazy %} fadeImg{% endif %}">
                 {% for transform in namedTransform.transforms %}
                     {% set img        = craft.imagerx.transformImage(handleParam, [transform])[0] %}
                     {% set device     = transform.device ?? null %}
