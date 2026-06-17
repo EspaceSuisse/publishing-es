@@ -14,6 +14,7 @@ body, figure {
 
 img, svg {
   width: 100%;
+  height: 100%;
   vertical-align: bottom;
 }
 button {
