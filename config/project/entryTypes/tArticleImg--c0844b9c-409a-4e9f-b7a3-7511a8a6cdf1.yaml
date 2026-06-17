@@ -39,16 +39,7 @@ fieldLayouts:
             uid: 35e68fec-8431-436b-b0d2-e7aa4ad4919d
             userCondition: null
             warning: null
-            width: 50
-          -
-            content: 'Bildquelle: Doppelklick auf die Bild.'
-            dateAdded: '2026-06-10T06:10:12+00:00'
-            displayInPane: true
-            elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: e54767d4-6890-4613-ae6b-a90fd5244e41
-            userCondition: null
-            width: 25
+            width: 75
         name: Inhalt
         uid: dccca97d-5f11-4b2a-9bbc-07072ff38814
         userCondition: null
@@ -105,6 +96,21 @@ fieldLayouts:
             width: 25
         name: Layout
         uid: 9a7652c2-646e-4191-9775-3f779d72f259
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "# Bildquelle\r\nSämtliche Einstellungen für Bildquelle sind mit einem Doppelklick auf die Bilddatei erreichbar\r\n\r\n- Bitte keine Bildquellen in das Legendenfeld schreiben\r\n- Der Bildtitel wird angezeigt, wenn man mit der Maus über das Bild hovert. Ansonsten ist der Bildtitel nicht in verwendung\r\n\r\n# Fokuspunkt\r\n- Um den Beschnitt zu Kontrollieren lässt sich ein Fokuspunkt setzen. Damit wird das Zentrum des Bildbeschnitts bestimmt, sollte dieser nicht in der Mitte sein.\r\n\r\n1. Doppelklick auf das Bild\r\n2. Im Seitenpanel wieder über das Bild hovern und `Edit Image` aus wählen\r\n3. auf `Focal Point` klicken\r\n4. Focal Point auf den gewünschten Ort schieben.\r\n5. Save"
+            dateAdded: '2026-06-10T06:10:12+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: e54767d4-6890-4613-ae6b-a90fd5244e41
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: 173807dd-cda8-41e4-bee0-6c7285d3c284
         userCondition: null
     thumbFieldKey: null
 handle: tArticleImg

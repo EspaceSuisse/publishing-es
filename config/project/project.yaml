@@ -1,4 +1,4 @@
-dateModified: 1781604788
+dateModified: 1781619303
 elementSources:
   craft\elements\Asset:
     -
@@ -71,8 +71,19 @@ elementSources:
         - revisionCreator
       type: native
     -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: singles
       page: Entries
+      tableAttributes:
+        - status
+        - link
+        - 'field:766fa7b3-abd7-40fb-aa55-b6bda45069cd' # Google Text
+        - 'field:09087e84-41bc-4451-91af-6be5abe8388d' # Text i18n
+        - 'field:8b00b1ad-3829-48d0-b91f-f3a597e32588' # Google Image
       type: native
     -
       heading: Channels
@@ -272,7 +283,7 @@ meta:
     4b232459-e954-415b-b8ff-b69a655f5526: 'Public Schema' # Public Schema
     4d9d87d3-4cd6-486b-9a9b-35247259c4c3: Styling # Styling
     04e7d3dd-0241-4ab3-83ef-72e36a2f535d: 'Newsletter Set' # Newsletter Set
-    4e75f3d6-ff7d-43bf-8be9-7eef14e6f6eb: 'Homepage Set' # Homepage Set
+    4e75f3d6-ff7d-43bf-8be9-7eef14e6f6eb: 'Page Set' # Page Set
     4f2a2908-da4b-46df-b9ab-a5a6d8078286: Downloads # Downloads
     5af8807d-9f2e-4703-a300-ba7f06531aea: 'Grid Span Wide' # Grid Span Wide
     5b8d8b99-77e0-4cac-935c-3b3eca4413c7: 'Internal Link' # Internal Link

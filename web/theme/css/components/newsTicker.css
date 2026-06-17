@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     .newsTickerTitle {
-        font-size: var(--font-size-M);
+        font-size: var(--font-size-L);
         font-family: var(--font-display);
         font-weight: var(--font-bold);
         padding: var(--layoutGap) var(--layoutGap) 0 var(--layoutGap);
@@ -14,7 +14,7 @@
         padding: 0 var(--layoutGap);
         @media (min-width: 512px) {
             overflow-y: auto;
-            max-height: 500px;
+            height: 100%;
         }
     }
     .postDate {
