@@ -4,6 +4,7 @@ export default defineConfig({
   build: {
     outDir: 'web',
     emptyOutDir: false,
+    manifest: true,
     rollupOptions: {
       input: 'src/css/app.css',
       output: {
