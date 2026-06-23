@@ -1,27 +1,52 @@
 {% import '_components/previewCards/macroPreviewArticle' as macroPreviewArticle %}
 
-{% set firstSubject = entry.fCatGenre.one() %}
-{% set firstGenre = entry.fCatSubject.one() %}
+{# 1. Collect ALL category IDs from both fields (handles empty fields safely) #}
+{% set genres   = entry.fCatGenre.ids() %}
+{% set subjects = entry.fCatSubject.ids() %}
 
-{% set relatedEntries = craft.entries()
+{% set limit     = 3 %}
+{% set collected = [] %}
+
+{# ---- TIER 1: shares a genre AND a subject (most relevant) ---- #}
+{% if genres|length and subjects|length %}
+    {% set tier1 = craft.entries()
         .section('article')
+        .id(['not', entry.id])
         .relatedTo([
             'and',
-            { targetElement: firstSubject },
-            { targetElement: firstGenre }
+            { targetElement: genres },
+            { targetElement: subjects }
         ])
-		.id(['not', entry.id])
-        .limit(3)
-		.with(articleEagerLoad)
+        .limit(limit)
+        .with(articleEagerLoad ?? [])
         .all() %}
+    {% set collected = collected|merge(tier1) %}
+{% endif %}
 
+{# ---- TIER 2: top up with genre OR subject matches ---- #}
+{% if collected|length < limit %}
+    {% set excludeIds = ['not', entry.id]|merge(collected|map(e => e.id)) %}
+
+    {% set tier2 = craft.entries()
+        .section('article')
+        .id(excludeIds)
+        .relatedTo([
+            'or',
+            { targetElement: genres },
+            { targetElement: subjects }
+        ])
+        .limit(limit - collected|length)
+        .with(articleEagerLoad ?? [])
+        .all() %}
+    {% set collected = collected|merge(tier2) %}
+{% endif %}
 {# Show articles which contain the first subject and genre #}
 
-{% if relatedEntries|length %}
+{% if collected|length %}
 
 	<aside class="gridArticle furtherArticles">
 
-		{% for item in relatedEntries %}
+		{% for item in collected %}
 			{% if loop.first %}
 				<h2 class="gridSpan12 moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}</h2>
 			{% endif %}
