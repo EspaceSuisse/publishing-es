@@ -7,6 +7,9 @@
     .postDate {
         margin: 0;
     }
+    .topicTitle {
+        padding-bottom: var(--layoutGap);
+    }
 }
 @media (max-width: 48rem) {
     .headerSectionNews {
