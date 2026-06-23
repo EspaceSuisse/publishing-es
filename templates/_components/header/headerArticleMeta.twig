@@ -1,0 +1,14 @@
+{% import '_macros/macroAuthorFull' as writers %}
+{% import '_macros/macroCatOverview' as macroCat %}
+
+<div class="headMetaFooter">
+	<p class="tags">
+		{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}
+		{{ macroCat.catOverview(articleSubject, 'subject', entry.section, siteBrand.fColor2) }}
+	</p>
+	<ul class="articleAuthors gridStart2 gridSpan10">
+		{%- for item in entry.authors -%}
+			{{ writers.authorArticle(item, true) }}
+		{%- endfor -%}
+	</ul>
+</div>

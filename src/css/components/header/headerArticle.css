@@ -64,7 +64,7 @@
 
 .articleHeadTitleCard {
   position: relative;
-  margin-bottom: calc(var(--layoutGap) * 2);
+  margin-bottom: calc(var(--layoutGap) * 1);
   margin-top: var(--articleHeadChute);
   &.noImg {
     margin-top: 50vh;
@@ -75,7 +75,7 @@
     row-gap: var(--layoutGap);
     background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 73%, rgba(255, 255, 255, 0) 100%);
     grid-column: 1/-1;
-    padding: calc(var(--layoutGap) * 3) 0;
+    padding: calc(var(--layoutGap) * 3) 0 var(--layoutGap) 0;
   }
 }
 @media (max-width: 63rem) {
