@@ -41,8 +41,11 @@
         align-self: flex-end;
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: flex-end;
         width: 100%;
+    }
+    .channelLinks {
+        padding-bottom: calc( var(--layoutGap) / 2 );
     }
     .rssLink {
         font-family: var(--font-default);
