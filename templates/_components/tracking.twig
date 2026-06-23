@@ -1,0 +1,36 @@
+{# --- Google tag (gtag.js) with exclusion logic --- #}
+{% set GA4ID = getenv('GOOGLE_ANALYTICS_MEASUREMENT_ID') %}
+
+{# Groups that should NOT be tracked (use group HANDLES, case-sensitive) #}
+{% set excludedGroups = ['editor', 'espacesuisse', 'externalAuthor', 'publisher', 'webmasters'] %}
+
+{# Flag excluded users #}
+{% set isExcludedUser = false %}
+{% if currentUser %}
+    {% for groupHandle in excludedGroups %}
+        {% if currentUser.isInGroup(groupHandle) %}
+            {% set isExcludedUser = true %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{# Bypass tracking in dev mode, preview/live-preview, for excluded users, or if no ID set #}
+{% set bypassTracking =
+    craft.app.config.general.devMode
+    or craft.app.request.isPreview
+    or craft.app.request.isLivePreview
+    or isExcludedUser
+    or not GA4ID
+%}
+
+{% if not bypassTracking %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA4ID }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ GA4ID }}');
+  </script>
+{% endif %}
