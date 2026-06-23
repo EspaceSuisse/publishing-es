@@ -34,10 +34,10 @@
 			</h2>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			<div class="previewMetaFooter">
-				{# <div class="tagList">
-					{{ macroCat.catOverview(catGenre, 'genre', 'article') }}
-					{{ macroCat.catOverview(catSubject, 'subject', 'article') }}
-				</div> #}
+				<div class="tagList">
+					{{ macroCat.catOverview(catGenre, 'genre', null, siteBrand.fColor) }}
+					{{ macroCat.catOverview(catSubject, 'subject', null, siteBrand.fColor2) }}
+				</div>
 				{# {% include "_components/articlePreviewSunset.twig" %} #}
 			</div>
 		</div>
