@@ -19,6 +19,7 @@
         ])
         .limit(limit)
         .with(articleEagerLoad ?? [])
+		.orderBy('postDate DESC')
         .all() %}
     {% set collected = collected|merge(tier1) %}
 {% endif %}
@@ -37,6 +38,7 @@
         ])
         .limit(limit - collected|length)
         .with(articleEagerLoad ?? [])
+		.orderBy('postDate DESC')
         .all() %}
     {% set collected = collected|merge(tier2) %}
 {% endif %}
