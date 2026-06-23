@@ -2,7 +2,6 @@
 
 return [
     '*' => [
-        'bgColor' => '#ffffff',
         'cacheEnabled' => true,
         'cacheKeyPrefix' => 'imager-x',
         'hashRemoteUrl' => true,
