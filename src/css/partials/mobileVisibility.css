@@ -5,11 +5,11 @@
 }
 .hideOnTablet {
   @media (min-width: 50rem) {
-    display: none;
+    display: none !important;
   }
 }
 .hideOnDesktop {
   @media (min-width: 63rem) {
-    display: none;
+    display: none !important;
   }
 }
