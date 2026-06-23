@@ -1,5 +1,6 @@
 .previewCard {
     &.previewCat {
+        background: var(--colorPreviewCard);
         .previewTitle {
             display: inline;
             a {
@@ -12,7 +13,8 @@
             }
         }
         .txtPart {
-            padding: 0;
+            display: flex;
+            justify-content: center;
         }
         .previewCatLead {
             font-size: var(--font-size-M);
