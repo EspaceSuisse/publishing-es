@@ -1,13 +1,12 @@
+{% set mailchimpArchiveLink = '' %}
+{% if craft.app.language == 'de-CH' %}
+	{% set mailchimpArchiveLink = 'https://us18.campaign-archive.com/home/?u=0919d95bf074b70a2cd56687d&id=977cadf3ca' %}
+{% else %}
+	{% set mailchimpArchiveLink = 'https://us18.campaign-archive.com/home/?u=0919d95bf074b70a2cd56687d&id=6354f42260' %}
+{% endif %}
+
 <div class="gridSpan12">
-	{% if craft.app.language == 'de-CH' %}
-		<a href="https://us18.campaign-archive.com/home/?u=0919d95bf074b70a2cd56687d&id=977cadf3ca" class="btn">
-			{{ 'Newsletter Archiv' | t }}
-		</a>
-	{% else %}
-		<a href="https://us18.campaign-archive.com/home/?u=0919d95bf074b70a2cd56687d&id=6354f42260" class="btn">
-			{{ 'Newsletter Archiv' | t }}
-		</a>
-	{% endif %}
-	
-	
+	<a href="{{ mailchimpArchiveLink }}" class="btn" target="_blank" rel="noopener">
+		{{ 'Newsletter Archiv' | t }}
+	</a>
 </div>

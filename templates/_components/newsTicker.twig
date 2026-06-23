@@ -10,6 +10,8 @@
 
 {% set feedRssDe = {path: 'feeds/feed-de.rss', title: 'RSS'} %}
 {% set feedRssFr = {path: 'feeds/feed-fr.rss', title: 'RSS'} %}
+{% set newsletterUrl = craft.entries.section('newsletter').one() %}
+{% set linkedinUrl = 'https://www.linkedin.com/company/espacesuisse/posts/?feedView=all' %}
 
 <aside
 	class="newsTicker gridSpan12 gridLgSpan4">
@@ -26,12 +28,15 @@
 		{% endfor %}
 	</ul>
     <div class="newsTickerMeta">
-
-        {% if craft.app.locale == 'de-CH' %}
-            <a href="{{ siteUrl(feedRssDe.path) }}" class="rssLink" target="_blank">{{ feedRssDe.title }}</a>
-        {% else %}
-            <a href="{{ siteUrl(feedRssFr.path) }}"  class="rssLink" target="_blank">{{ feedRssFr.title }}</a>
-        {% endif %}
+        <div class="channelLinks">
+            {% if craft.app.locale == 'de-CH' %}
+                <a href="{{ siteUrl(feedRssDe.path) }}" class="rssLink" target="_blank">{{ feedRssDe.title }}</a>
+            {% else %}
+                <a href="{{ siteUrl(feedRssFr.path) }}"  class="rssLink" target="_blank">{{ feedRssFr.title }}</a>
+            {% endif %}
+            <a href="{{ newsletterUrl.url }}" class="rssLink" >{{ newsletterUrl.title }}</a>
+            <a href="{{ linkedinUrl }}" class="rssLink" rel="noopener"   target="_blank">LinkedIn</a>
+        </div>
         <a href="{{ goToAllNews.url }}" class="btn">{{ 'Zu den News' | t }}</a>
     </div>
 </aside>
