@@ -2,6 +2,8 @@
 
 	{% import '_macros/macroPostDate' as macroPostDate %}
 	{% import '_macros/macroImage' as macro %}
+	{% include "_dynamic/catColorChecker" %}
+
 
 
 	{% set image = queryParam.fImgMono.one() ?? null %}
