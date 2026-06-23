@@ -5,7 +5,6 @@
 {%- macro catOverview(catParam, classParam, sectionParam, colorParam) -%}
 
 	{% import '_macros/macroImage' as macro %}
-	{% include "_dynamic/catColorChecker" %}
 
 	{% set catColor = colorParam ?? 'rgb(142, 226, 39)' %}
 
