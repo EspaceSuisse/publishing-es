@@ -91,7 +91,7 @@
 
     .cellBoxToggle {
         transition: all 0.1s ease-in-out;
-        padding: calc( var(--layoutGap) / 2);
+        padding: calc( var(--layoutGap) / 1.2);
         .cellCardTitle {
             color: var(--linkTxtColor);
             font-size: var(--font-size-M);
