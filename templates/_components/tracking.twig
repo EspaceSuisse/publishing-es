@@ -24,13 +24,15 @@
 %}
 
 {% if not bypassTracking %}
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA4ID }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    {% if craft.app.response.statusCode >= 200 and craft.app.response.statusCode < 300 %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA4ID }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', '{{ GA4ID }}');
-  </script>
+        gtag('config', '{{ GA4ID }}');
+    </script>
+  {% endif %}
 {% endif %}
