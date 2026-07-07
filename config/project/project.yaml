@@ -1,4 +1,4 @@
-dateModified: 1782198420
+dateModified: 1783431742
 elementSources:
   craft\elements\Asset:
     -
@@ -310,6 +310,7 @@ meta:
     60d6ea87-e27d-49d5-867a-a57850f7f242: Publisher # Publisher
     76bb08dd-bf89-4939-985c-3e55bff5a68d: Homepage # Homepage
     81e82c07-b4c5-40fc-9b89-aa26efa3cae8: Quote # Quote
+    82cf9fee-6b3a-4847-a4ab-1f0de78c7738: 'LinkedIn Author Url' # LinkedIn Author Url
     91b81ff9-4af2-440b-b42a-16821f2d0d5c: 'SEO Page' # SEO Page
     97b5cf10-0039-4b8a-b7ab-409f3adf851a: 'Plain Text' # Plain Text
     97cbec37-641a-47b3-b5e7-4924983b73f3: Team # Team

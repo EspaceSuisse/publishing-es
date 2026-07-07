@@ -119,6 +119,22 @@ tabs:
         userCondition: null
         width: 100
       -
+        dateAdded: '2026-07-07T13:42:22+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: 82cf9fee-6b3a-4847-a4ab-1f0de78c7738 # LinkedIn Author Url
+        handle: null
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: d059f815-e397-4577-b9c6-b70f812753b1
+        userCondition: null
+        warning: null
+        width: 100
+      -
         dateAdded: '2025-05-21T07:53:10+00:00'
         editCondition: null
         elementCondition: null
