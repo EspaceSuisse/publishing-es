@@ -30,6 +30,7 @@
                 padding-bottom: var(--layoutGap);
                 width: 100%;
                 display: flex;
+                gap: 4px;
                 .postDate {
                     display: inline;
                     padding: 0;

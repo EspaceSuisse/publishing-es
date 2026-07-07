@@ -12,7 +12,6 @@
     {% if item.status == 'live' %}
 
         {% set img = item.imgAufmacher.one() %}
-        {% set relEntryMeta = macroPostDate.postDate(item.postDate, true) ~ ' ' ~ macroAuthor.authorPreviewCard(item) %}
 
             <a href="{{ item.url }}" class="cellRelEntry">
                 <div class="imgPart">
@@ -24,7 +23,7 @@
                         <h3 class="relatedEntryTitle">{{ item.title }}</h3>
                     </div>
                     <div class="metaRelEntry">
-                        {{ relEntryMeta | raw }}
+                        {{ macroPostDate.postDate(item.postDate, true) }} {{ macroAuthor.authorPreviewCard(item) }}
                     </div>
                 </div>
             </a>
