@@ -1,0 +1,14 @@
+{% set authorUrl = entry.author.linkedinAuthorUrl.value ?? null %}
+
+{% if authorUrl %}
+  {% set articleAuthor = seomatic.tag.get('article:author') %}
+
+  {% if articleAuthor %}
+    {% do articleAuthor.content(authorUrl) %}
+  {% else %}
+    {% do seomatic.tag.create({
+      'property': 'article:author',
+      'content': authorUrl
+    }) %}
+  {% endif %}
+{% endif %}
