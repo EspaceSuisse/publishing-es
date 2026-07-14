@@ -1,9 +1,10 @@
 .cellCard {
-    border: solid 1px var(--colorES-brand-blue);
-    margin-bottom: var(--layoutGap);
+    margin: calc( var(--layoutGap) * 2) 0;
+    box-shadow: var(--shadow);
     container-type: inline-size;
     a.cellRelEntry {
         text-decoration: none;
+        background: var(--colorPreviewCard);
         display: flex;
         gap: var(--layoutGap);
         .imgPart {
@@ -39,12 +40,8 @@
             }
         }
         &:hover {
-            background-color: var(--linkBgHoverColor);
-            .relatedEntryTitle {
-                color: var(--txtInvertColor);
-            }
-            .relEntryHeadMeta {
-                color: var(--txtInvertColor);
+            .relEntryHeadMeta, .relatedEntryTitle, .metaRelEntry p {
+                color: var(--linkColor);
             }
         }
     }

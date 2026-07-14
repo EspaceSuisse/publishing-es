@@ -6,6 +6,7 @@
 
     picture {
         display: block;
+        box-shadow: var(--shadow);
     }
 
     p {
