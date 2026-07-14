@@ -16,7 +16,8 @@
 .cellImg {
     /* make extra padding for images. needs to be scoped */
     .articleImg {
-        padding: calc( var(--layoutGap) * 2 ) 0;
+        padding-top: var(--mediaGap);
+        padding-bottom: calc( var(--mediaGap) * 2 );
     }
 }
 

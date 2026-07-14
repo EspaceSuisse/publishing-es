@@ -1,6 +1,5 @@
 .cellBox {
     border: 1px solid var(--linkTxtColor);
-    margin: calc( var(--layoutGap) * 2 ) 0;
     position: relative;
     .nonCollapsable {
         padding: var(--layoutGap);
@@ -8,7 +7,6 @@
     &.styleB {
         background-color: var(--color-highlight-soft);
         border: none;
-        box-shadow: var(--shadow);
         .cellBoxInner {
             border: none
         }
@@ -22,7 +20,6 @@
     &.styleC {
         background-color: var(--color-highlight-strong);
         border: none;
-        box-shadow: var(--shadow);
         .cellBoxInner {
             border: none
         }
