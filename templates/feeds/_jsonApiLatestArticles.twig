@@ -19,7 +19,9 @@
         "postDate": "{{ item.postDate | date('c') }}",
         "postDateUnix": {{ item.postDate | date('U') }},
         "language": "{{ language }}",
-        "categories": [
+        "es_type": "Im Fokus",
+        "es_thema": "Raumplanung",
+        "ir_categories": [
             {% for category in item.fCatSubject.all() %}
                 {
                     "title": "{{ category.title }}"
