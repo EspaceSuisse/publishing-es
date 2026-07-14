@@ -10,6 +10,7 @@
   <media:content 
     url="{{ defaultSiteUrl |trim('/')  ~ transformedImages[0].url }}" 
     medium="image" 
+    filename="{{ transformedImages[0].fileName }}"
     type="{{ transformedImages[0].mimeType }}" 
     width="{{ transformedImages[0].width }}" 
     height="{{ transformedImages[0].height }}" 
