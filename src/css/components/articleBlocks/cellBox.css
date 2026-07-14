@@ -1,6 +1,6 @@
 .cellBox {
     border: 1px solid var(--linkTxtColor);
-    margin-bottom: calc(var(--layoutGap));
+    margin: calc( var(--layoutGap) * 2 ) 0;
     position: relative;
     .nonCollapsable {
         padding: var(--layoutGap);
