@@ -10,6 +10,7 @@
         "url": "{{ item.url }}",
         "postDate": "{{ item.postDate | date('c') }}",
         "postDateUnix": {{ item.postDate | date('U') }},
+        "type": "news",
         "language": "{{ language }}"
     }{% if not loop.last %},{% endif %}
 {% endfor %}
