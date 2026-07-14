@@ -1,7 +1,7 @@
 .cellQuote {
     blockquote {
-        margin-bottom: calc( var(--layoutGap) * 2 );
-        margin-top: calc( var(--layoutGap) * 1 );
+        margin-bottom: var(--mediaGap);
+        margin-top: calc( var(--mediaGap) / 2 );
         margin-left: 0;
         margin-right: 0;
         line-height: 2;

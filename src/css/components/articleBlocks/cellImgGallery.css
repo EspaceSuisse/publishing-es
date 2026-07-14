@@ -1,4 +1,6 @@
 .cellImgGallery {
     display: grid;
     grid-template-columns: subgrid;
+    padding-top: var(--mediaGap);
+    padding-bottom: calc( var(--mediaGap) * 1);
 }
