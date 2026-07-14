@@ -1,0 +1,39 @@
+{% set authorUrl = entry.author.fullName ?? null %}
+
+{% if authorUrl %}
+  {% set articleAuthor = seomatic.tag.get('article:author') %}
+
+  {% if articleAuthor %}
+    {% do articleAuthor.content(authorUrl) %}
+  {% else %}
+    {% do seomatic.tag.create({
+      'property': 'article:author',
+      'content': authorUrl
+    }) %}
+  {% endif %}
+{% endif %}
+
+{% if (entry.section.handle == 'article') or (entry.section.handle == 'news') %}
+
+{% do seomatic.tag.create({
+    property: 'article:published_time',
+    content: entry.postDate|atom
+}) %}
+
+{% do seomatic.tag.create({
+    property: 'article:modified_time',
+    content: entry.dateUpdated|atom
+}) %}
+
+{% endif %}
+
+{% if (entry.section.handle == 'article') %}
+
+  {% set sunsetTime = articleSunset | atom  %}
+
+{% do seomatic.tag.create({
+    property: 'article:expiration_time',
+    content: sunsetTime
+}) %}
+
+{% endif %}
