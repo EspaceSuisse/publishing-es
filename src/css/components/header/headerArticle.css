@@ -30,7 +30,6 @@
     max-height: var(--headerFigureHeight);
     overflow: hidden;
     position: relative;
-    box-shadow: var(--shadow);
 
     img {
       object-fit: cover;
