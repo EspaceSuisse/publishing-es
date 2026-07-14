@@ -12,6 +12,12 @@
         margin: 0;
     }
 }
+.cellImg {
+    /* make extra padding for images. needs to be scoped */
+    .articleImg {
+        padding: calc( var(--layoutGap) * 2 ) 0;
+    }
+}
 
 figcaption {
     display: flex;
