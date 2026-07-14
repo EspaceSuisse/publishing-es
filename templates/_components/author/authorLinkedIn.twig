@@ -1,4 +1,4 @@
-{% set authorUrl = entry.author.linkedinAuthorUrl.value ?? null %}
+{% set authorUrl = entry.author.fullName ?? null %}
 
 {% if authorUrl %}
   {% set articleAuthor = seomatic.tag.get('article:author') %}
