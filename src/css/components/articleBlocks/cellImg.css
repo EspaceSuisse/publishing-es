@@ -68,12 +68,15 @@ figcaption {
     .caption p {
         font-size: var(--font-size-S);
         background-color: black;
+        padding: 5px;
+    }
+    @media (min-width: 48rem) {
+        .caption {
+            padding-left: var(--layoutGap);
+        }
     }
     .assetSource {
         font-size: var(--font-size-XS);
         background-color: black;
     }
-}
-.pswp__img {
-    padding: var(--layoutGap);
 }
