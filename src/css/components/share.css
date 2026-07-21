@@ -1,0 +1,23 @@
+.share {
+    button {
+        width: 25px;
+        padding: 5px;
+        background: var(--linkBgColor);
+        border-radius: 500px;
+        svg {
+            polyline, line {
+                stroke: var(--linkBgTxtColor)
+            }
+        }
+    }
+}
+.dialogBox {
+    background: var(--backgroundColor);
+    box-shadow: var(--shaodw);
+    border: none;
+    min-width: 50vw;
+    &::backdrop {
+        background-color: var(--colorES-brand-blue);
+        opacity: 0.3;
+    }
+}
