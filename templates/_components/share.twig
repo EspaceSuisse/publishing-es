@@ -1,0 +1,136 @@
+{# Assumes you have `entry` in scope. Adjust variables as needed. #}
+{% set shareUrl   = entry.url %}
+{% set shareTitle = entry.title %}
+{% set shareText  = entry.fSeoDescription %}
+{% set shareTarget = '_blank' %}
+{% set shareRel = 'noopener noreferrer' %}
+'
+{% if entry.section.handle == 'news' %}
+    {% set dialogTitle = labelNews ~ ' ' ~ 'teilen' | t %}
+{% else %}
+    {% set dialogTitle = labelArticle ~ ' ' ~ 'teilen' | t  %}
+{% endif %}
+
+
+<div
+    class="share"
+    data-share
+    data-share-url="{{ shareUrl }}"
+    data-share-title="{{ shareTitle }}"
+    data-share-text="{{ shareText }}"
+>
+    <button type="button" class="shareBtn" data-share-trigger aria-haspopup="dialog" aria-label="Share this article">
+        {{ svg('@webroot/theme/img/icon-share.svg')|raw }}
+    </button>
+
+    <dialog class="dialogBox dialogShare" data-share-dialog aria-label="Share options">
+        <div class="dialogInner">
+            <div class="dialogHeader">
+                <h2 class="dialogHeading">{{ dialogTitle }}</h2>
+                <button type="button" class="share__close" data-share-close aria-label="Close">&times;</button>
+            </div>
+
+            <ul class="shareList">
+                <li>
+                    <a class="shareLink"
+                    href="https://www.linkedin.com/feed/?shareActive=true&text={{ (shareTitle ~ ' ' ~ shareUrl)|url_encode }}"
+                    target="{{ shareTarget }}" rel="{{ shareRel }}">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a class="shareLink"
+                       href="https://www.facebook.com/sharer/sharer.php?u={{ shareUrl|url_encode }}"
+                       target="{{ shareTarget }}" rel="{{ shareRel }}">
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a class="shareLink"
+                       href="https://twitter.com/intent/tweet?url={{ shareUrl|url_encode }}&text={{ shareTitle|url_encode }}"
+                       target="{{ shareTarget }}" rel="{{ shareRel }}">
+                        X / Twitter
+                    </a>
+                </li>
+                <li>
+                    <a class="shareLink"
+                       href="https://api.whatsapp.com/send?text={{ (shareTitle ~ ' ' ~ shareUrl)|url_encode }}"
+                       target="{{ shareTarget }}" rel="{{ shareRel }}">
+                        WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a class="shareLink"
+                       href="mailto:?subject={{ shareTitle|url_encode }}&body={{ (shareText ~ '%0D%0A%0D%0A' ~ shareUrl)|raw }}">
+                        {{ 'Teilen via E-Mail' | t }}
+                    </a>
+                </li>
+                <li>
+                    <button type="button" class="shareLink" data-share-copy>
+                        {{ 'Link Kopieren' | t }}
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+</div>
+
+{% js %}
+    (function () {
+        const roots = document.querySelectorAll('[data-share]');
+
+        roots.forEach((root) => {
+            const trigger = root.querySelector('[data-share-trigger]');
+            const dialog  = root.querySelector('[data-share-dialog]');
+            const close   = root.querySelector('[data-share-close]');
+            const copyBtn = root.querySelector('[data-share-copy]');
+
+            const shareData = {
+            title: root.dataset.shareTitle,
+            text:  root.dataset.shareText,
+            url:   root.dataset.shareUrl,
+            };
+
+            trigger.addEventListener('click', async () => {
+            // 1. Try the Web Share API (mostly mobile + Safari/Edge).
+            if (navigator.share && (!navigator.canShare || navigator.canShare(shareData))) {
+                try {
+                await navigator.share(shareData);
+                return;
+                } catch (err) {
+                // AbortError = user cancelled the native sheet; do nothing.
+                if (err.name === 'AbortError') return;
+                // Anything else: fall through to the dialog.
+                }
+            }
+
+            // 2. Fallback: open the link-list dialog.
+            if (typeof dialog.showModal === 'function') {
+                dialog.showModal();
+            } else {
+                dialog.setAttribute('open', '');
+            }
+            });
+
+            // Close handlers
+            close?.addEventListener('click', () => dialog.close());
+
+            // Click on the backdrop closes the dialog
+            dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) dialog.close();
+            });
+
+            // Copy link to clipboard
+            copyBtn?.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(shareData.url);
+                const original = copyBtn.textContent;
+                copyBtn.textContent = 'Copied!';
+                setTimeout(() => (copyBtn.textContent = original), 1500);
+            } catch {
+                window.prompt('Copy this link:', shareData.url);
+            }
+            });
+        });
+        })();
+{% endjs %}
