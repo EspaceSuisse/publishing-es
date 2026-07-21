@@ -4,7 +4,8 @@
 {% set shareText  = entry.fSeoDescription %}
 {% set shareTarget = '_blank' %}
 {% set shareRel = 'noopener noreferrer' %}
-'
+{% set noticeCopied = 'Kopiert!' | t %}
+
 {% if entry.section.handle == 'news' %}
     {% set dialogTitle = labelNews ~ ' ' ~ 'teilen' | t %}
 {% else %}
@@ -19,7 +20,7 @@
     data-share-title="{{ shareTitle }}"
     data-share-text="{{ shareText }}"
 >
-    <button type="button" class="shareBtn" data-share-trigger aria-haspopup="dialog" aria-label="Share this article">
+    <button type="button" class="dialogOpen" data-share-trigger aria-haspopup="dialog" aria-label="{{ dialogTitle }}">
         {{ svg('@webroot/theme/img/icon-share.svg')|raw }}
     </button>
 
@@ -27,7 +28,7 @@
         <div class="dialogInner">
             <div class="dialogHeader">
                 <h2 class="dialogHeading">{{ dialogTitle }}</h2>
-                <button type="button" class="share__close" data-share-close aria-label="Close">&times;</button>
+                <button type="button" class="dialogClose" data-share-close aria-label="Close">&times;</button>
             </div>
 
             <ul class="shareList">
@@ -125,7 +126,7 @@
             try {
                 await navigator.clipboard.writeText(shareData.url);
                 const original = copyBtn.textContent;
-                copyBtn.textContent = 'Copied!';
+                copyBtn.textContent = '{{ noticeCopied }}';
                 setTimeout(() => (copyBtn.textContent = original), 1500);
             } catch {
                 window.prompt('Copy this link:', shareData.url);
