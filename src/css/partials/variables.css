@@ -56,10 +56,10 @@
     --txtInvertColor: white;
 
     --backgroundColor: rgb(240, 240, 240);
-    --colorPreviewCard: white;
+    --colorPreviewCard: var(--backgroundColor);
     --radiusPreviewCard: 4px;
 
-    --color-highlight-soft: rgb(227, 227, 227);
+    --color-highlight-soft: var(--backgroundColor);
     --color-highlight-strong: var(--colorES-brand-blue);
 
     --colorES-brand-blue: rgb(28, 112, 183);
