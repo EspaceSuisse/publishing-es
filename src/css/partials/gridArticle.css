@@ -17,3 +17,8 @@
     margin-top: calc( var(--layoutGap) * 2 );
     gap: calc( var(--layoutGap) / 2 );
 }
+.cluster {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

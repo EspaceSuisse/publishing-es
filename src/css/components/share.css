@@ -1,0 +1,62 @@
+.share {
+    .dialogOpen {
+        padding: 5px;
+        width: 30px;
+        svg {
+            polyline, line, polygon {
+                stroke: var(--linkBgColor)
+            }
+        }
+        &:hover {
+            background-color: var(--linkBgHoverColor);
+            cursor: pointer;
+            svg {
+            polyline, line, polygon {
+                stroke: var(--linkBgTxtColor)
+            }
+        }
+        }
+    }
+}
+.dialogBox {
+    background: var(--backgroundColor);
+    box-shadow: var(--shaodw);
+    border: none;
+    min-width: 25vw;
+    max-width: 320px;
+    padding: var(--layoutGap);
+    &::backdrop {
+        background-color: var(--colorES-brand-blue);
+        opacity: 0.6;
+    }
+    .dialogClose {
+        position: absolute;
+        top: var(--layoutGap);
+        right: var(--layoutGap);
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        font-weight: var(--font-regular);
+    }
+    .dialogHeading {
+        font-size: var(--font-size-XL);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        margin: 0;
+        border-bottom: 1px solid var(--txtColor);
+    }
+    .shareList {
+        font-size: var(--font-size-L);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        li {
+            padding-bottom: var(--layoutGap);
+            a {
+                color: var(--linkColor);
+                &:hover {
+                    text-decoration: none;
+                    color: var(--linkHoverColor);
+                }
+            }
+        }
+    }
+}

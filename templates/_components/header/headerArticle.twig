@@ -20,7 +20,10 @@
 	<div class="headCardGrid">
 
 		<div class="{{ smallerGrid }} headMeta">
-			{{ macroPostDate.postDate(entry.postDate, true) }}
+			<div class="cluster">
+				{{ macroPostDate.postDate(entry.postDate, true) }}
+				{% include "_components/share" %}
+			</div>
 			{% include "_components/articleSunsetMsg" %}
 		</div>
 
