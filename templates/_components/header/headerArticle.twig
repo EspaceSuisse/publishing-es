@@ -22,9 +22,9 @@
 		<div class="{{ smallerGrid }} headMeta">
 			<div class="cluster">
 				{{ macroPostDate.postDate(entry.postDate, true) }}
-				{% include "_components/share" %}
+				- {% include "_components/articleSunsetMsg" %}
 			</div>
-			{% include "_components/articleSunsetMsg" %}
+			{% include "_components/share" %}
 		</div>
 
 		<h1 class="{{ smallerGrid }} topicTitle">{{ entry.title }}</h1>
