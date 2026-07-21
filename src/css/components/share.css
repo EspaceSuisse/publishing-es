@@ -1,10 +1,16 @@
 .share {
     .dialogOpen {
+        @media (max-width: 48rem) {
+            position: absolute;
+            top: var(--layoutGap);
+            right: calc( var(--layoutGap) * 2 );
+        }
         padding: 5px;
         width: 30px;
         svg {
             polyline, line, polygon {
-                stroke: var(--linkBgColor)
+                stroke: var(--linkBgColor);
+                stroke-width: 5px;
             }
         }
         &:hover {
