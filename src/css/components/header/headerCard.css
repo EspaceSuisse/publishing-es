@@ -1,5 +1,5 @@
 .headerCard {
-
+    position: relative;
     .articlePostDate {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
@@ -11,8 +11,7 @@
         font-family: var(--font-default);
         font-size: var(--font-size-S);
         justify-content: space-between;
-        padding-top: var(--layoutGap);
-        align-items: center;
+        padding-bottom: var(--layoutGap);
         p {
                 margin: 0;
                 padding: 0;
@@ -23,12 +22,16 @@
             
         }
     }
+    .topicLead {
+        padding-bottom: var(--airGap);
+    }
 
     .headMetaFooter {
         display: flex;
         gap: var(--layoutGap);
         flex-wrap: wrap;
         justify-content: space-between;
+        flex-direction: column;
     }
     .accessMessage {
     }
