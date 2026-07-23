@@ -24,6 +24,13 @@
         }
     }
 }
+.newsHeadCard {
+    .share {
+        .dialogOpen {
+            top: -5px;
+        }
+    }
+}
 .dialogBox {
     background: var(--backgroundColor);
     box-shadow: var(--shaodw);
