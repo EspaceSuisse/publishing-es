@@ -16,9 +16,20 @@
 }
 .articlebottomMeta {
     display: flex;
-    justify-content: space-between;
+    gap: calc( var(--layoutGap) / 2);
+    align-items: baseline;
+    flex-wrap: wrap;
+    .bottomCat {
+        display: flex;
+        gap: calc( var(--layoutGap) / 2);
+        padding-bottom: var(--airGap);
+        flex-wrap: wrap;
+    }
     p {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
+    }
+    .share {
+        text-align: right;
     }
 }

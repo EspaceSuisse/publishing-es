@@ -10,7 +10,6 @@
 
 	{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
 	{% set authorShort = entry.authors | first %}
-	{% set newsSubject = entry.fCatSubject %}
 
 	<article>
 		<header class="pageHead articleHead">
@@ -34,16 +33,6 @@
 			{% include "_components/articleMatrix" %}
 		</div>
 	</article>
-	<aside class="gridArticle articleContent">
-		<div class="gridStart2 gridSpan10 articlebottomMeta">
-			{% if newsSubject %}
-				<div>
-					{{ macroCat.catOverview(newsSubject, 'subject', entry.section, siteBrand.fColor2) }}
-				</div>
-			{% endif %}
-			<p>ID: {{ entry.id }}</p>
-		</div>
-		{% include "_components/newsFurther" %}
-	</aside>
+	{% include "_components/bottomMetaNews" %}
 	{% include "_dynamic/lightboxInitiator" %}
 {% endblock %}
