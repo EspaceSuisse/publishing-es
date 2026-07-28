@@ -13,7 +13,11 @@
     padding: 0 calc( var(--layoutGap) * 1.3 );
   }
 }
-.furtherArticles {
+.furtherNews {
+  display: flex;
+  flex-direction: column;
+}
+.furtherArticles, .furtherNews {
     margin-top: calc( var(--layoutGap) * 2 );
     gap: calc( var(--layoutGap) / 2 );
 }

@@ -1,0 +1,20 @@
+{% import '_macros/macroPostDate' as macroPostDate %}
+{% import '_components/previewCards/macroPreviewNews' as macroPreviewNews %}
+
+
+{% set furtherNews = craft.entries
+    .section('news')
+    .id(['not', entry.id])
+    .limit(5)
+    .all()
+%}
+
+{# Output the links #}
+<div class="gridSpan10 gridStart2 furtherNews">
+    {% for item in furtherNews %}
+        {% if loop.first %}
+			<h2 class="gridSpan12 moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}</h2>
+		{% endif %}
+        {{ macroPreviewNews.listMacro(item,'gridSpan12 gridLgSpan6') }}
+    {% endfor %}
+</div>
