@@ -16,8 +16,11 @@
 .furtherNews {
   display: flex;
   flex-direction: column;
+  margin-top: calc( var(--layoutGap) * 2 );
+    gap: calc( var(--layoutGap) / 2 );
 }
-.furtherArticles, .furtherNews {
+.furtherArticles {
+  display: grid;
     margin-top: calc( var(--layoutGap) * 2 );
     gap: calc( var(--layoutGap) / 2 );
 }
