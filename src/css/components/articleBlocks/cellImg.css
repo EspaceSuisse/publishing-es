@@ -6,7 +6,6 @@
 
     picture {
         display: block;
-        box-shadow: var(--shadow);
     }
 
     p {
@@ -48,6 +47,7 @@ figcaption {
         p {
             font-size: var(--font-size-S);
             font-family: var(--font-default);
+            margin: 0;
         }
     }
 
