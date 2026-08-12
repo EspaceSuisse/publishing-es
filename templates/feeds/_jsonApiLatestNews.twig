@@ -10,6 +10,7 @@
         "url": "{{ item.url }}",
         "postDate": "{{ item.postDate | date('c') }}",
         "postDateUnix": {{ item.postDate | date('U') }},
+        "item_uid": "{{ item.uid }}-{{ item.siteId }}",
         "es_type": "News",
         "es_thema": "Raumplanung",
         "language": "{{ language }}",
