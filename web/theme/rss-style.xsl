@@ -5,6 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:media="http://search.yahoo.com/mrss/"
     xmlns:images="https://kaspar-allenbach.ch/rss/images"
+    xmlns:custom="https://kaspar-allenbach.ch/rss/custom"
     exclude-result-prefixes="media images"
 >
     <xsl:output
