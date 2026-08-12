@@ -1,0 +1,19 @@
+{% import '_macros/macroCatOverview' as macroCat %}
+
+<aside class="">
+	<div class="gridArticle articleContent">
+		<div class="gridStart2 gridSpan10 articlebottomMeta">
+			{% if entry.fCatSubject %}
+				<div>
+					{{ macroCat.catOverview(entry.fCatSubject, 'subject', entry.section, siteBrand.fColor2) }}
+				</div>
+			{% endif %}
+			<p class="entryId">ID: {{ entry.id }}</p>
+		</div>
+	</div>
+</aside>
+<aside class="">
+	<div class="gridArticle articleContent">
+		{% include "_components/newsFurther" %}
+	</div>
+</aside>

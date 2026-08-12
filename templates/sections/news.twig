@@ -10,7 +10,6 @@
 
 	{% set aufmacherBild = entry.imgAufmacher.one() ?? null %}
 	{% set authorShort = entry.authors | first %}
-	{% set newsSubject = entry.fCatSubject %}
 
 	<article>
 		<header class="pageHead articleHead">
@@ -20,25 +19,20 @@
 		<div class="gridArticle articleContent">
 
 			{% if aufmacherBild %}
-				<figure class="newsHeadImg gridSpan12">
-					{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
-					{{ figCaption.figCaption(aufmacherBild, null, aufmacherBild.fSwitch) }}
+
+				{# Transform for lightbox - using the articleImageLightbox named transform #}
+            	{% set lightboxImage = craft.imagerx.transformImage(aufmacherBild, 'articleImageLightbox')[0] %}
+				<figure class="newsHeadImg imgArticle gridSpan12">
+					<a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
+						{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+						{{ figCaption.figCaption(aufmacherBild, entry.textSimpleI18n, aufmacherBild.fSwitch) }}
+					</a>
 				</figure>
 			{% endif %}
 
 			{% include "_components/articleMatrix" %}
 		</div>
 	</article>
-	<aside class="gridArticle articleContent">
-		<div class="gridStart2 gridSpan10 articlebottomMeta">
-			{% if newsSubject %}
-				<div>
-					{{ macroCat.catOverview(newsSubject, 'subject', entry.section, siteBrand.fColor2) }}
-				</div>
-			{% endif %}
-			<p>ID: {{ entry.id }}</p>
-		</div>
-		{% include "_components/newsPrevNext" %}
-	</aside>
+	{% include "_components/bottomMetaNews" %}
 	{% include "_dynamic/lightboxInitiator" %}
 {% endblock %}

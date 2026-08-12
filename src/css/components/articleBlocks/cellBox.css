@@ -7,7 +7,7 @@
     }
     &.styleB {
         background-color: var(--color-highlight-soft);
-        border: none;
+        border: 1px solid var(--linkTxtColor);
         box-shadow: var(--shadow);
         .cellBoxInner {
             border: none

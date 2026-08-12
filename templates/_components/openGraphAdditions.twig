@@ -31,9 +31,16 @@
 
   {% set sunsetTime = articleSunset | atom  %}
 
-{% do seomatic.tag.create({
-    property: 'article:expiration_time',
-    content: sunsetTime
-}) %}
+  {% do seomatic.tag.create({
+      property: 'article:expiration_time',
+      content: sunsetTime
+  }) %}
+
+  {% set catchyTitle = entry.fPlainTextI18n %}
+
+  {% if catchyTitle %}
+    {% do seomatic.meta.ogTitle(catchyTitle) %}
+    {% do seomatic.meta.seoTitle(catchyTitle) %}
+  {% endif %}
 
 {% endif %}

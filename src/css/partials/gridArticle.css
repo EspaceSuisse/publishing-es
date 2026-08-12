@@ -13,7 +13,14 @@
     padding: 0 calc( var(--layoutGap) * 1.3 );
   }
 }
+.furtherNews {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc( var(--layoutGap) * 2 );
+    gap: calc( var(--layoutGap) / 2 );
+}
 .furtherArticles {
+  display: grid;
     margin-top: calc( var(--layoutGap) * 2 );
     gap: calc( var(--layoutGap) / 2 );
 }

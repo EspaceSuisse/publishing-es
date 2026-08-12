@@ -84,6 +84,7 @@
         gap: calc( var(--layoutGap) / 2);
         .postDate {
             margin-right: auto;
+            margin-top: 0;
         }
         .btnGotoRead {
             margin-left: auto;

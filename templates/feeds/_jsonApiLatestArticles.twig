@@ -19,6 +19,8 @@
         "postDate": "{{ item.postDate | date('c') }}",
         "postDateUnix": {{ item.postDate | date('U') }},
         "language": "{{ language }}",
+        "id": "{{ item.id }}",
+        "item_uid": "{{ item.uid }}-{{ item.siteId }}",
         "es_type": "Im Fokus",
         "es_thema": "Raumplanung",
         "ir_categories": [
