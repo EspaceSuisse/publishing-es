@@ -24,8 +24,15 @@
 
     {% set deSiteHandle = 'default' %}
     {% set frSiteHandle = 'espacesuissePublishingFr' %}
+    
 
     {% for item in feedEntries %}
+
+            {% if item.language == 'de-CH' %}
+                {% set langISO = 'de' %}
+            {% else %}
+                {% set langISO = 'fr' %}
+            {% endif %}
 
         {% set otherLang = craft.entries()
             .uid(item.uid)
@@ -34,7 +41,7 @@
         %}
 
         {% set feedItemTitle = item.fPlainTextI18n ?: item.title %}
-        {% set feedItemDesc = item.fSeoDescription %}
+        {% set feedItemDesc = item.fPlainTextI18nMultiline %}
 
         <item>
             {% if item.imgAufmacher | length %}
@@ -45,10 +52,10 @@
             <pubDate>{{ item.postDate | atom }} </pubDate>
             <title>{{ feedItemTitle }}</title>
             <description>{{ feedItemDesc }}</description>
-            <custom:lead>{{ item.fPlainTextI18nMultiline }}</custom:lead>
             <link>{{ item.url }}</link>
             <guid isPermaLink="false">{{ item.uid }}-{{ item.siteId }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
+            <category domain="language">{{ langISO }}</category>
             {% if item.section.handle == 'article' %}
                 {% for author in item.authors %}
                     <author>{{ author.name }}</author>
