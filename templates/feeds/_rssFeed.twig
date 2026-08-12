@@ -4,7 +4,7 @@
     .section(['article', 'news'])
     .site(site)
     .orderBy('postDate desc')
-    .limit(null)
+    .limit(10)
     .all()
 -%}
 
@@ -40,11 +40,7 @@
             {% if item.imgAufmacher %}
                 {{ macroImg.rssFeedImg(item.imgAufmacher.one(), 'feedImageTransform') }}
             {% endif %}
-            {% if item.language == 'fr-CH' %}
-                <pubDate>{{ item.postDate | date_modify('+1 hour') | atom }} </pubDate>
-            {% else %}
-                <pubDate>{{ item.postDate.format('r') }}</pubDate>
-            {% endif %}
+            <pubDate>{{ item.postDate | atom }} </pubDate>
             <title>{{ feedItemTitle }}</title>
             <description>{{ feedItemDesc }}</description>
             <custom:lead>{{ item.fPlainTextI18nMultiline }}</custom:lead>
