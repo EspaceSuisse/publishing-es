@@ -44,7 +44,7 @@
             <title>{{ feedItemTitle }}</title>
             <description>{{ feedItemDesc }}</description>
             <link>{{ item.url }}</link>
-            <guid isPermaLink="false">{{ item.uid }}-{{ item.siteId }}</guid>
+            <guid isPermaLink="false">{{ item.uid }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
             {% if item.section.handle == 'article' %}
                 {% for author in item.authors %}
