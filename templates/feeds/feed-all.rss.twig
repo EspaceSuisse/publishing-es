@@ -1,0 +1,17 @@
+{%- header "Content-Type: application/rss+xml; charset=utf-8" -%}
+
+{%- set combinedEntries = craft.entries()
+    .section(['article', 'news'])
+    .site(['default', 'espacesuissePublishingFr'])
+    .unique(false)
+    .orderBy('postDate desc')
+    .limit(10)
+    .all()
+-%}
+
+{%- set fallbackSite = craft.app.sites.getSiteByHandle('default') -%}
+
+{% include 'feeds/_rssFeed.twig' with { 
+    site: fallbackSite,
+    customEntries: combinedEntries 
+} %}

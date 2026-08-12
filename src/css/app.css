@@ -11,6 +11,7 @@
 @import "partials/buttons.css";
 
 @import "components/nav.css";
+@import "components/lightBox.css";
 @import "components/navDropdown.css";
 @import "components/header/headerArticle.css";
 @import "components/navDropdownContent.css";

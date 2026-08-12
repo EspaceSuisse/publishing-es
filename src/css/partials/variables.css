@@ -56,7 +56,7 @@
     --txtInvertColor: white;
 
     --backgroundColor: rgb(240, 240, 240);
-    --colorPreviewCard: var(--backgroundColor);
+    --colorPreviewCard: white;
     --radiusPreviewCard: 4px;
 
     --color-highlight-soft: var(--backgroundColor);

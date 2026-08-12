@@ -1,6 +1,6 @@
 {%- set language = site.language -%}
 
-{%- set feedEntries = craft.entries()
+{%- set feedEntries = customEntries ?? craft.entries()
     .section(['article', 'news'])
     .site(site)
     .orderBy('postDate desc')
@@ -29,7 +29,7 @@
 
         {% set otherLang = craft.entries()
             .uid(item.uid)
-            .site( language == 'de-CH' ? frSiteHandle : deSiteHandle )
+            .site( item.site.handle == deSiteHandle ? frSiteHandle : deSiteHandle )
             .one()
         %}
 
@@ -44,7 +44,7 @@
             <title>{{ feedItemTitle }}</title>
             <description>{{ feedItemDesc }}</description>
             <link>{{ item.url }}</link>
-            <guid isPermaLink="true">{{ item.url }}</guid>
+            <guid isPermaLink="false">{{ item.uid }}-{{ item.siteId }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
             {% if item.section.handle == 'article' %}
                 {% for author in item.authors %}
