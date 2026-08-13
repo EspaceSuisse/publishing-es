@@ -1,4 +1,4 @@
-dateModified: 1786519608
+dateModified: 1786624128
 elementSources:
   craft\elements\Asset:
     -
@@ -105,6 +105,7 @@ elementSources:
         - postDate
         - dateCreated
         - dateUpdated
+        - authors
       type: native
     -
       heading: ''
