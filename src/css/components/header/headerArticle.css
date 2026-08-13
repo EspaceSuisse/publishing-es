@@ -6,8 +6,12 @@
     font-family: var(--font-display);
     font-weight: var(--font-bold);
     line-height: 1.2;
-    margin: 0;
+    padding-bottom: var(--layoutGap);
     hyphens: none;
+    .catchyTitle {
+      font-size: var(--font-size-M);
+      display: block;
+    }
   }
   .topicTitleWrapper {
     display: flex;
@@ -69,7 +73,6 @@
 
 .articleHeadTitleCard {
   position: relative;
-  margin-bottom: calc(var(--layoutGap) * 1);
   margin-top: var(--articleHeadChute);
   &.noImg {
     margin-top: 50vh;

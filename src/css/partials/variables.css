@@ -23,7 +23,7 @@
     --siteSideBarWidth: 75px;
     --articleHeadChute: -100px;
     --layoutGap: var(--font-size-M);
-    --mediaGap: calc( var(--layoutGap) * 1.5);
+    --mediaGap: calc( var(--layoutGap) * 1.2);
     --airGap: calc(var(--font-size-M) * 0.5);
     @media (min-width: 37rem) {
         --airGap: calc(var(--font-size-M) * 3);

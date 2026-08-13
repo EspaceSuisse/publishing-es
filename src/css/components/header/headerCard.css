@@ -23,7 +23,7 @@
         }
     }
     .topicLead {
-        padding-bottom: var(--airGap);
+        padding-bottom: var(--layoutGap);
     }
 
     .headMetaFooter {
