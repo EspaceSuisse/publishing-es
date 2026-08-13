@@ -4,18 +4,8 @@
 <aside class="articlebottomMeta">
 	<div class="gridArticle">
 		<div class="gridStart2 gridSpan10 bottomCat">
-			{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}
-			{{ macroCat.catOverview(articleSubject, 'subject', entry.section, siteBrand.fColor2) }}{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}
-		</div>
-		<div class="gridSpan8 gridStart2 bottomAuthors">
-			<ul class="articleAuthors gridStart2 gridSpan10">
-				{%- for item in entry.authors -%}
-					{{ writers.authorArticle(item, true) }}
-				{%- endfor -%}
-			</ul>
-		</div>
-		<div class="gridSpan2 bottomShare">
-			{% include "_components/share" %}
+			{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}
+			{{ macroCat.catOverview(articleSubject, 'subject', entry.section, siteBrand.fColor2) }}
 		</div>
 	</div>
 </aside>
