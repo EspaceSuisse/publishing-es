@@ -22,9 +22,6 @@
             
         }
     }
-    .topicLead {
-        padding-bottom: var(--layoutGap);
-    }
 
     .headMetaFooter {
         display: flex;
