@@ -12,6 +12,6 @@
 // this route generates author posing urls. there a page will be generated with the posts of each authors.
 //template: pages/authorPosts
  return [
-    'autoren/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
-    'auteurs/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
+    'autoren/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],
+    'auteurs/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],
 ];
