@@ -16,15 +16,14 @@
 			{% include "_components/header/headerBrand" %}
 			{% include "_components/header/headerNews" %}
 		</header>
-		<div class="gridArticle articleContent">
+		<div class="gridArticle articleContent cellImg newsHeaderImg">
 
 			{% if aufmacherBild %}
-
 				{# Transform for lightbox - using the articleImageLightbox named transform #}
             	{% set lightboxImage = craft.imagerx.transformImage(aufmacherBild, 'articleImageLightbox')[0] %}
-				<figure class="newsHeadImg imgArticle gridSpan12">
+				<figure class="newsHeadImg articleImg gridSpan12">
 					<a href="{{ lightboxImage.url }}" class="lightboxImg" data-pswp-width="{{ lightboxImage.width }}" data-pswp-height="{{ lightboxImage.height }}">
-						{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', 'imgHeader') }}
+						{{ macroImg.articleImage(aufmacherBild, 'articleStarterImg', '') }}
 						{{ figCaption.figCaption(aufmacherBild, entry.textSimpleI18n, aufmacherBild.fSwitch) }}
 					</a>
 				</figure>
