@@ -10,7 +10,12 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/theme/rss-style.xsl"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:custom="https://kaspar-allenbach.ch/rss/custom">
+<rss 
+    version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:custom="https://inforaum.ch/rss/custom"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 {% import '_macros/macroRssImg' as macroImg %}
 
@@ -40,9 +45,13 @@
             .one()
         %}
 
-        {% set feedItemTitle = item.fPlainTextI18n ?: item.title %}
-        {% set feedItemDesc = item.fPlainTextI18nMultiline %}
         {% set textLength = 400 %}
+
+        {% set feedItemTitle = item.fPlainTextI18n ?: item.title %}
+        {% set feedLongText = item.fPlainTextI18nMultiline %}
+        {% set feedItemLead = feedLongText | length > textLength ? feedLongText | slice(0, textLength) ~ '…': feedLongText %}
+        {% set feedItemSeoDesc = item.fSeoDescription %}
+        
 
         <item>
             {% if item.imgAufmacher | length %}
@@ -52,7 +61,8 @@
             {% endif %}
             <pubDate>{{ item.postDate | atom }} </pubDate>
             <title>{{ feedItemTitle }}</title>
-            <description>{{ feedItemDesc | length > textLength ? feedItemDesc | slice(0, textLength) ~ '…': feedItemDesc }}</description>
+            <description><![CDATA[{{ feedItemSeoDesc }}]]></description>
+            <content:encoded><![CDATA[{{ feedItemLead }}]]></content:encoded>
             <link>{{ item.url }}</link>
             <guid isPermaLink="false">{{ item.uid }}-{{ item.siteId }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
