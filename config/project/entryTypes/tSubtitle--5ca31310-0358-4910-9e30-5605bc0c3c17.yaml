@@ -109,6 +109,21 @@ fieldLayouts:
         name: Layout
         uid: e268efe7-1950-4440-b53d-9d79703eaeb0
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Um neue abschnitte zu machen, kannst du Zwischenüberschriften verwenden. Wähle den Headline-Level gem. deinen Wünschen aus.\r\n\r\nKann auch im Lauftext Feld gemacht werden. Aber hier ist das Überschriftenfeld separat, wenn du z.b. ein Bild darauffolgend haben willst oder ein sonstiges Element.\r\n\r\n# Das Überschriften-System.\r\n- `H1`, `H2`, `H3` usw. sind Abkürzungen für `Headline 1` `Headline 2` usw. oder auf Deutsch `Überschrift 1`, `Überschrift 2`\r\n- Diese unterscheidungen sind wichtig für die Maschinenlesbarkeit der Artikel. So erkennt Google die Struktur des Textes.\r\n\r\n# Fett / Überschriften sind nicht das Gleiche\r\nWenn du Titel einfach Fett machst, ist das für die Maschine kein Hinweis auf die Textstruktur, weil fett nur für die Auszeichnung von einzelnen Wörtern im Lauftext gedacht ist.\r\n\r\n## Ergo\r\nImmer Überschriften Setzen, anstatt die Fett (Bold) Funktion zu nutzen."
+            dateAdded: '2026-06-17T10:01:28+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 3725558b-ee3a-4967-bdd3-2db73bf8c0d6
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: 56cd67c6-2f4b-4358-9e0a-047e11eba7bc
+        userCondition: null
     thumbFieldKey: null
 handle: tSubtitle
 hasTitleField: true

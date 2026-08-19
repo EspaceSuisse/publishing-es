@@ -81,6 +81,21 @@ fieldLayouts:
         name: Layout
         uid: e2331b0d-90b2-41da-8556-6ec89518c833
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "Möchtest du auf einen anderen Artikel Cross linken kannst du hier einfach per suche Feld oder via listen Panel einen anderen Artikel auswählen.\r\n\r\nSo werden Bild, Text, Autor und Veröffentlichungsdatum automatisch mitgeladen."
+            dateAdded: '2026-06-17T09:40:37+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 8876429e-7c60-4d72-9e20-83a22b2cd98b
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: 8ee98e9f-a9b7-4fe9-97f5-999d5edf77f1
+        userCondition: null
     thumbFieldKey: null
 handle: tRelEntry
 hasTitleField: false

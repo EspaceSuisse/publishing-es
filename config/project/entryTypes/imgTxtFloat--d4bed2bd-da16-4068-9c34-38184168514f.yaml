@@ -39,16 +39,13 @@ fieldLayouts:
             uid: 3df29378-a3b9-4c7c-88c0-84a1274f7dfd
             userCondition: null
             warning: null
-            width: 50
+            width: 75
           -
-            content: 'Bildquelle: Doppelklick auf Bild.'
-            dateAdded: '2026-06-10T06:11:03+00:00'
-            displayInPane: true
+            dateAdded: '2025-08-27T08:22:15+00:00'
             elementCondition: null
-            type: craft\fieldlayoutelements\Markdown
-            uid: 5c124126-dc1b-4873-95cb-cf519bfda28e
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 171b452e-5ea6-4efc-bec5-b46550e0e54c
             userCondition: null
-            width: 25
           -
             dateAdded: '2025-06-17T07:37:24+00:00'
             editCondition: null
@@ -65,12 +62,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-08-27T08:22:15+00:00'
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 171b452e-5ea6-4efc-bec5-b46550e0e54c
-            userCondition: null
         name: Content
         uid: 31219149-3a24-4c57-992c-cb2265cc60fc
         userCondition: null
@@ -141,17 +132,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
+        name: Layout
+        uid: 0e029fc9-5706-4fa3-b53f-2d9686a6e6f9
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
-            content: 'Mit diesem Element fliesst der Text ums Bild herum. Im Layout Tab nach Wunsch einstellen.'
+            content: "# Content einfügen\r\nMit diesem Element kannst du Text um ein Bild fliessen lassen. Lade dein gewünschtes Bild hoch wie du das sonst im normalen Bild Element auch machst. Füge die Bildlegende hinzu und den Lauftext, welcher das Bild umfliessen soll.\r\n\r\n# Umfluss\r\nNur zum umfluss. Gehe auf das `Layout` Panel. Wenn du hier alle Einstellung so lässt wie sie am Anfang sind, gibt es keinen Bildumfluss. Das Bild hat die normale kleine Textbreite.\r\n\r\nUm den Umfluss zu erreichen, ändere den Slider `Bildgrösse`. Am besten du gehst in den Preview Mode, dann siehst du direkt, was dabei herauskommt. \r\n\r\n# Layout\r\n- Auf Desktop hat es `12 spalten`.\r\n- Stellst du also `Bildgrösse` auf `12` dann läuft das Bild über die volle Breite.\r\n- Stellst du `Bildgrösse` auf `6` läuft das Bild auf die halbe Breite usw.\r\n\r\n## Grid Span & Grid Start\r\n- `Grid Span` & `Grid Start` definieren die breite über die 12 Spalten im gesamten. Soll heissen Bild. Text und Bildlegende, wärhend `Bildgrösse` nur die `Bildgrösse` kontrolliert.\r\n\r\n# Bild Position\r\n- Mit dem Schalter `Bildposition` kannst du das Bild auf die rechte oder linke seite schieben.\r\n\r\n> Am besten ist, das ganze im Preview mode zu machen. Dann siehst du gleich was passiert und musst dich nicht um genaue nummern kümmern\r\n\r\n# Mobile Ansicht\r\n- In der Mobilen Ansicht wird das ganze Ignoriert und einfach auf eine Spalte heruntergebrochen."
             dateAdded: '2025-08-27T08:23:21+00:00'
             displayInPane: true
             elementCondition: null
             type: craft\fieldlayoutelements\Markdown
             uid: d980438c-aae2-4b5f-a6bc-021cc3fbb865
             userCondition: null
-            width: 25
-        name: Layout
-        uid: 0e029fc9-5706-4fa3-b53f-2d9686a6e6f9
+            width: 100
+        name: Hilfe
+        uid: 1781431a-502e-4563-89e7-cf74bb28e681
         userCondition: null
     thumbFieldKey: null
 handle: imgTxtFloat

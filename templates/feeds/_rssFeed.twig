@@ -1,16 +1,21 @@
 {%- set language = site.language -%}
 
-{%- set feedEntries = craft.entries()
+{%- set feedEntries = customEntries ?? craft.entries()
     .section(['article', 'news'])
     .site(site)
     .orderBy('postDate desc')
-    .limit(null)
+    .limit(100)
     .all()
 -%}
 
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/theme/rss-style.xsl"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<rss 
+    version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:custom="https://inforaum.ch/rss/custom"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 {% import '_macros/macroRssImg' as macroImg %}
 
@@ -24,28 +29,44 @@
 
     {% set deSiteHandle = 'default' %}
     {% set frSiteHandle = 'espacesuissePublishingFr' %}
+    
 
     {% for item in feedEntries %}
 
+            {% if item.language == 'de-CH' %}
+                {% set langISO = 'de' %}
+            {% else %}
+                {% set langISO = 'fr' %}
+            {% endif %}
+
         {% set otherLang = craft.entries()
             .uid(item.uid)
-            .site( language == 'de-CH' ? frSiteHandle : deSiteHandle )
+            .site( item.site.handle == deSiteHandle ? frSiteHandle : deSiteHandle )
             .one()
         %}
 
+        {% set textLength = 400 %}
+
         {% set feedItemTitle = item.fPlainTextI18n ?: item.title %}
-        {% set feedItemDesc = item.fSeoDescription %}
+        {% set feedLongText = item.fPlainTextI18nMultiline %}
+        {% set feedItemLead = feedLongText | length > textLength ? feedLongText | slice(0, textLength) ~ '…': feedLongText %}
+        {% set feedItemSeoDesc = item.fSeoDescription %}
+        
 
         <item>
-            {% if item.imgAufmacher %}
+            {% if item.imgAufmacher | length %}
                 {{ macroImg.rssFeedImg(item.imgAufmacher.one(), 'feedImageTransform') }}
+            {% else %}
+                {{ macroImg.rssFeedImg(seoDefaults.fImgI18n.one(), 'feedImageTransform') }}
             {% endif %}
-            <pubDate>{{ item.postDate.format('r') }}</pubDate>
+            <pubDate>{{ item.postDate | atom }} </pubDate>
             <title>{{ feedItemTitle }}</title>
-            <description>{{ feedItemDesc }}</description>
+            <description><![CDATA[{{ feedItemSeoDesc }}]]></description>
+            <content:encoded><![CDATA[{{ feedItemLead }}]]></content:encoded>
             <link>{{ item.url }}</link>
-            <guid isPermaLink="true">{{ item.url }}</guid>
+            <guid isPermaLink="false">{{ item.uid }}-{{ item.siteId }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
+            <category domain="language">{{ langISO }}</category>
             {% if item.section.handle == 'article' %}
                 {% for author in item.authors %}
                     <author>{{ author.name }}</author>

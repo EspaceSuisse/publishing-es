@@ -1,0 +1,12 @@
+.cellMapContainer {
+    aspect-ratio: 16 / 9;
+    box-shadow: var(--shadow);
+}
+.cellMap {
+    padding: calc( var(--layoutGap) * 2 ) 0;
+}
+@media (max-width: 768px) {
+    .cellMap {
+        aspect-ratio: 4 / 5;
+    }
+}

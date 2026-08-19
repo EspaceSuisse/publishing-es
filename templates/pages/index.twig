@@ -40,7 +40,7 @@
 		{% include "_components/header/headerBrand" %}
 		
 		{% for item in allEntries | slice(0, sliceA) %}
-			{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan8',' gridSpan12','gridSpan12 gridLgSpan8') }}
+			{{ macroPreview.listMacro(item,'gridSpan12 gridLgSpan8',' gridSpan12','gridSpan12 gridLgSpan8', false, false) }}
 		{% endfor %}
 		{% include "_components/newsTicker" %}
 		{% for item in allEntries | slice(offsetB, sliceB) %}

@@ -20,6 +20,7 @@ return [
             ['uriPattern' => '^knock-knock'],
             ['uriPattern' => '^mitglieder-login'],
             ['uriPattern' => '^connexion-des-membres'],
+            ['uriPattern' => '\.(json|xml|rss)$'],
         ],
     ],
     'dev' => [

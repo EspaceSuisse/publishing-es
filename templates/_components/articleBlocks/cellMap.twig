@@ -10,14 +10,18 @@
 <script src="https://unpkg.com/maplibre-gl@5.7.1/dist/maplibre-gl.js"></script>
 
 
-{% set mapLatitude = block.fLat %}
-{% set mapLongitude = block.fLong %}
+{% set mapLatitude = block.fLat ?? '46.917289' %}
+{% set mapLongitude = block.fLong ?? '7.443796' %}
 {% set mapZoom = block.fZoom ?? '10' %}
 {% set additionalLayer = block.fPlainTxt ?? null %}
 {% set baseLayer = block.fBaseMap ?? 'pixelkarte-farbe' %}
 {% set mapID = block.id %}
 {% set markerHandle = block.fMxMarker %}
 {% set polygonHandle = block.fPolygons %}
+{% set labelTxtSize = '15' %}
+{% set labelTxtColor = 'rgb(86, 86, 86)' %}
+{% set labelTxtHalo = 'rgb(250, 250, 250)' %}
+{% set pinColor = 'rgb(28, 112, 183)' %}
 
 
 {# Determine base map type and URL #}
@@ -160,6 +164,26 @@
             });
         {% endif %}
 
+        /**
+        * Builds a text-size expression that scales 1:1 with the map
+        * (doubles per zoom level), clamped so labels never get
+        * unreadably small or absurdly large.
+        *
+        * @param {number} sizeAtRefZoom  px size at refZoom
+        * @param {number} refZoom        zoom level where sizeAtRefZoom applies
+        * @param {number} minPx          lower clamp
+        * @param {number} maxPx          upper clamp
+        */
+        const scaleWithMap = (sizeAtRefZoom, refZoom = 14, minPx = 5, maxPx = 48) => {
+            const zMin = refZoom + Math.log2(minPx / sizeAtRefZoom);
+            const zMax = refZoom + Math.log2(maxPx / sizeAtRefZoom);
+            return [
+                'interpolate', ['exponential', 2], ['zoom'],
+                zMin, minPx,
+                zMax, maxPx
+            ];
+        };
+
         // disable scroll zoom
         map.scrollZoom.disable();
 
@@ -175,7 +199,7 @@
         // ADDITIONAL SWISSTOPO LAYER
         {{ mapAdditionalLayer|raw }}
 
-        //makrers
+        //markers
         map.on('load', () => {
             const markers = {{ markerData | json_encode() | raw }};
             const features = markers.map(m => ({
@@ -201,41 +225,141 @@
                 layout: {
                     'text-field': ['get', 'title'],
                     'text-font': ['Frutiger Neue Italic'],
-                    'text-size': 14,
-                    'text-offset': [0, 1.5],
+                    // 'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // doesnt scale with zoom
+                    'text-size': {{ labelTxtSize }},
+                    'text-offset': [0, -4],
                     'text-anchor': 'top'
                 },
                 paint: {
-                    'text-color': '#000000',
-                    'text-halo-color': '#ffffff',
+                    'text-color': '{{ labelTxtColor }}',
+                    'text-halo-color': '{{ labelTxtHalo }}',
                     'text-halo-width': 1
                 }
-            }, map.getStyle().layers[map.getStyle().layers.length - 1].id); // force top
+            });
+            if (map.getLayer('marker-labels-layer')) {
+                map.moveLayer('marker-labels-layer');
+            }
 
             // Optional: add actual red dots
             markers.forEach(m => {
-                new maplibregl.Marker()
+                new maplibregl.Marker({ color: '{{ pinColor }}' })
                     .setLngLat([m.lng, m.lat])
                     .addTo(map);
             });
         });
 
-        // construct and display poligon fields
+       {# Construct and display polygon fields #}
         map.on('load', () => {
+           const polygonGroups = [
+                {% for item in polygonHandle %}
+                    {% if not loop.first %},{% endif %}
+                    {
+                        title: {{ item.title|json_encode|raw }},
+                        features:
+                        {% set code = item.fCode|trim %}
+                        {% if code starts with '[' and code ends with ']' %}
+                            {{ code|raw }}
+                        {% else %}
+                            [{{ code|raw }}]
+                        {% endif %}
+                    }
+                {% endfor %}
+            ];
+
+            /*
+            * Add the Craft polygon label to each GeoJSON feature.
+            *
+            * The original properties are preserved, including:
+            * - type
+            * - color
+            * - radius
+            * - any other properties in the Code Field
+            */
+            const polygonFeatures = polygonGroups.flatMap(group =>
+                group.features.map(feature => ({
+                    ...feature,
+                    properties: {
+                        ...(feature.properties || {}),
+                        title: group.title
+                    }
+                }))
+            );
+
+            const circleLabelFeatures = polygonFeatures.filter(feature =>
+                    feature.geometry?.type === 'Point' &&
+                    feature.properties?.type === 'circle'
+                );
+
+                const renderFeatures = polygonFeatures.map(feature => {
+                    const isCircle =
+                        feature.geometry?.type === 'Point' &&
+                        feature.properties?.type === 'circle';
+
+                    if (!isCircle) {
+                        return feature;
+                    }
+
+                    const radius = Number(feature.properties.radius) || 10;
+
+                    return {
+                        ...feature,
+                        geometry: {
+                            type: 'Polygon',
+                            coordinates: [
+                                createCirclePolygon(
+                                    feature.geometry.coordinates,
+                                    radius
+                                )
+                            ]
+                        }
+                    };
+                });
+
+            // build the circle as a polygon, not as a circle object
+            function createCirclePolygon(center, radius, steps = 64) {
+                const [centerLng, centerLat] = center;
+
+                // Assumes radius is in metres
+                const earthRadius = 6371008.8;
+                const angularDistance = radius / earthRadius;
+
+                const latRadians = centerLat * Math.PI / 180;
+                const coordinates = [];
+
+                for (let i = 0; i <= steps; i++) {
+                    const angle = (i / steps) * Math.PI * 2;
+
+                    const latitude = Math.asin(
+                        Math.sin(latRadians) * Math.cos(angularDistance) +
+                        Math.cos(latRadians) *
+                        Math.sin(angularDistance) *
+                        Math.cos(angle)
+                    );
+
+                    const longitude =
+                        centerLng * Math.PI / 180 +
+                        Math.atan2(
+                            Math.sin(angle) *
+                            Math.sin(angularDistance) *
+                            Math.cos(latRadians),
+                            Math.cos(angularDistance) -
+                            Math.sin(latRadians) * Math.sin(latitude)
+                        );
+
+                    coordinates.push([
+                        longitude * 180 / Math.PI,
+                        latitude * 180 / Math.PI
+                    ]);
+                }
+
+                return coordinates;
+            }
+
             map.addSource('polygons', {
                 type: 'geojson',
                 data: {
-                type: 'FeatureCollection',
-                features: [
-                    {% for item in polygonHandle %}
-                    {% set code = item.fCode|trim %}
-                    {% if code starts with '[' and code ends with ']' %}
-                        {{- code|slice(1, code|length - 2)|raw -}}
-                    {% else %}
-                        {{- code|raw -}}
-                    {% endif %},
-                    {% endfor %}
-                ]
+                    type: 'FeatureCollection',
+                    features: renderFeatures
                 }
             });
 
@@ -243,37 +367,64 @@
                 id: 'polygon-fills',
                 type: 'fill',
                 source: 'polygons',
-                filter: ['any', ['==', ['geometry-type'], 'Polygon'], ['==', ['geometry-type'], 'MultiPolygon']],
-                paint: { 'fill-color': ['coalesce', ['get', 'color'], '#f0c96a'], 'fill-opacity': 0.5 }
+                filter: [
+                    'any',
+                    ['==', ['geometry-type'], 'Polygon'],
+                    ['==', ['geometry-type'], 'MultiPolygon']
+                ],
+                paint: {
+                    'fill-color': ['coalesce', ['get', 'color'], '#f0c96a'],
+                    'fill-opacity': 0.5
+                }
             });
 
             map.addLayer({
                 id: 'polygon-borders',
                 type: 'line',
                 source: 'polygons',
-                filter: ['any', ['==', ['geometry-type'], 'Polygon'], ['==', ['geometry-type'], 'MultiPolygon']],
-                paint: { 'line-color': ['coalesce', ['get', 'color'], '#f0c96a'], 'line-width': 2 }
+                filter: [
+                    'any',
+                    ['==', ['geometry-type'], 'Polygon'],
+                    ['==', ['geometry-type'], 'MultiPolygon']
+                ],
+                paint: {
+                    'line-color': ['coalesce', ['get', 'color'], '#f0c96a'],
+                    'line-width': 2
+                }
             });
 
-            // Circles (simple: radius interpreted as pixels)
+            // Polygon labels
+            // Labels for polygons and circles
             map.addLayer({
-            id: 'circle-fills',
-            type: 'circle',
-            source: 'polygons',
-            filter: ['all',
-                ['==', ['geometry-type'], 'Point'],
-                ['==', ['get', 'type'], 'circle']
-            ],
-            paint: {
-                // color with fallback in case your HSL string isn't parsed
-                'circle-color': ['coalesce', ['get', 'color'], '#39d98a'],
-                'circle-opacity': 0.35,
-                // radius in PIXELS from your feature's "radius" property
-                'circle-radius': ['coalesce', ['get', 'radius'], 10],
-                // optional stroke
-                'circle-stroke-color': ['coalesce', ['get', 'color'], '#39d98a'],
-                'circle-stroke-width': 2
-            }
+                id: 'polygon-labels-layer',
+                type: 'symbol',
+                source: 'polygons',
+                filter: [
+                    'any',
+                    ['==', ['geometry-type'], 'Polygon'],
+                    ['==', ['geometry-type'], 'MultiPolygon'],
+                    [
+                        'all',
+                        ['==', ['geometry-type'], 'Point'],
+                        ['==', ['get', 'type'], 'circle']
+                    ]
+                ],
+                layout: {
+                    'text-field': ['get', 'title'],
+                    'text-font': ['Frutiger Neue Italic'],
+                    // 'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // was: 14
+                    'text-size': {{ labelTxtSize }},
+                    'text-pitch-alignment': 'viewport',
+                    'text-rotation-alignment': 'viewport',
+                    'text-anchor': 'center',
+                    'text-allow-overlap': true,
+                    'text-ignore-placement': true
+                },
+                paint: {
+                    'text-color': '{{ labelTxtColor }}',
+                    'text-halo-color': '{{ labelTxtHalo }}',
+                    'text-halo-width': 1
+                }
             });
         });
 

@@ -1,0 +1,141 @@
+.cellBox {
+    border: 1px solid var(--linkTxtColor);
+    margin-bottom: calc(var(--airGap));
+    margin-top: calc(var(--airGap) - var(--layoutGap));
+    position: relative;
+    .nonCollapsable {
+        padding: var(--layoutGap);
+    }
+    &.styleB {
+        background-color: var(--color-highlight-soft);
+        border: 1px solid var(--linkTxtColor);
+        box-shadow: var(--shadow);
+        .cellBoxInner {
+            border: none
+        }
+        .cellBoxToggle {
+            color: var(--txtColor);
+            &::after {
+                color: var(--txtColor);
+            }
+        }
+    }
+    &.styleC {
+        background-color: var(--color-highlight-strong);
+        border: none;
+        box-shadow: var(--shadow);
+        .cellBoxInner {
+            border: none
+        }
+        p, li, h2, h3, h4, p a, button .cellCardTitle {
+            color: var(--txtInvertColor);
+        }
+        a {
+            &:visited {
+                color: var(--linkBgTxtHoverColor);
+            }
+        }
+    }
+    .boxHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .collapsed {
+        overflow: hidden;
+        transition: height 0.4s ease;
+        height: 0;
+
+        &.expanded {
+            height: auto;
+        }
+    }
+
+    .cellCardTitle {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        justify-content: space-between;
+        align-items: baseline;
+        .cellCardTitle {
+            pointer-events: none;
+        }
+    }
+    button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--font-size-M);
+        font-weight: var(--font-medium)
+    }
+    .cellBoxInner {
+        padding: calc( var(--layoutGap) / 2);
+        padding-bottom: 0;
+        border-top: solid 1px var(--linkTxtColor);
+        p, ul, ol {
+            font-size: var(--font-size-M);
+            font-family: var(--font-default);
+            line-height: var(--line-height-base);
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: var(--layoutGap);
+            > strong {
+                font-weight: var(--font-bold);
+            }
+        }
+    }
+
+    .cellBoxToggle {
+        transition: all 0.1s ease-in-out;
+        padding: calc( var(--layoutGap) / 1.2);
+        .cellCardTitle {
+            color: var(--linkTxtColor);
+            font-size: var(--font-size-M);
+            margin: 0;
+            padding: 0;
+        }
+
+        &::after {
+            content: "▲";
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+            font-size: var(--font-size-M);
+            color: var(--linkTxtColor);
+            line-height: 0;
+            right: var(--layoutGap);
+        }
+
+        &:hover {
+            background-color: var(--linkBgHoverColor);
+            color: var(--txtInvertColor);
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+                color: var(--linkBgTxtHoverColor);
+            }
+
+            h3 {
+                color: var(--linkBgTxtHoverColor);
+            }
+            &.closed::after {
+                transform: translateY(-50%) rotate(0deg);
+            }
+
+            &.open::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            &.closed:hover::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            &.open:hover::after {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    }
+}

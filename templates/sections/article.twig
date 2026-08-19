@@ -45,10 +45,10 @@
 {% set hasNoImage = aufmacherBild is null %}
 
 {# 
-This is the template for all articles.
-It includes the header and the matrix include which contains a switch statement.
-In the switch statement the different blocks are included.
-The blocks are defined in the matrix field in the CMS.
+    This is the template for all articles.
+    It includes the header and the matrix include which contains a switch statement.
+    In the switch statement the different blocks are included.
+    The blocks are defined in the matrix field in the CMS.
 #}
 
 {# check if the article is older than 3 months #}
@@ -61,12 +61,12 @@ The blocks are defined in the matrix field in the CMS.
 {# Set Blitz cache to expire exactly on sunset date,
    but only if the sunset is still in the future.
    Otherwise Blitz loops forever regenerating the cache. #}
-{% if articleSunset > now %}
-    {# Sunset is in the future — expire exactly on sunset #}
-    {% do craft.blitz.options().expiryDate(articleSunset) %}
+	{% if articleSunset > now %}
+	{# Sunset is in the future — expire exactly on sunset #}
+	{% do craft.blitz.options().expiryDate(articleSunset) %}
 {% else %}
-    {# Already sunset — cache for a week, then natural refresh #}
-    {% do craft.blitz.options().expiryDate(now|date_modify('+7 days')) %}
+	{# Already sunset — cache for a week, then natural refresh #}
+	{% do craft.blitz.options().expiryDate(now|date_modify('+7 days')) %}
 {% endif %}
 
 
@@ -82,18 +82,21 @@ The blocks are defined in the matrix field in the CMS.
 
 	{% include "_dynamic/devSunsetPanel" %}
 
-	<article>		
+	<article>
 		<header class="pageHead articleHead {{ hasNoImage ? 'noImg' : '' }}">
 			{% include "_components/header/headerBrand" %}
 			{% include "_components/header/headerArticle" %}
-			{% if hasNoImage %}<div class="colorHead" style="background-color: {{ noImageSubjectColor.fColor ?? 'var(--colorES-brand-blue)' }};"></div>{% endif %}
+			{% if hasNoImage %}
+				<div class="colorHead" style="background-color: {{ noImageSubjectColor.fColor ?? 'var(--colorES-brand-blue)' }};"></div>
+			{% endif %}
 		</header>
 		<div id="protected-article" class="gridArticle {{ articleSunsetClass }} articleContent">
 			{% include "_components/articleMatrix" %}
 		</div>
-		{# {% include "_components/articleCtaCall" %} #}
-		{% include "_components/articleMoreArticles" %}
 	</article>
+	{% include "_components/bottomMetaArticle" %}
+	{% include "_components/articleMoreArticles" %}
+
 	{% include "_dynamic/lightboxInitiator" %}
 
 {% endblock %}

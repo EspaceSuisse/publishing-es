@@ -1,0 +1,105 @@
+.previewCard {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-content: start;
+    .previewTitle {
+        margin: 0;
+
+        a {
+            font-family: var(--font-display);
+            font-weight: var(--font-bold);
+            font-size: var(--font-size-L);
+            color: var(--txtColor);
+            line-height: var(--line-height-display);
+            margin: 0;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--linkTxtHoverColor);
+            }
+        }
+    }
+
+    .imgPart {
+        display: flex;
+        aspect-ratio: 1 / 1;
+
+        picture {
+            background-color: var(--linkTxtHoverColor);
+            display: flex;
+            img {
+                transition: all 0.1s ease-in-out;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    @media (min-width: 48rem) { 
+        .imgPart { aspect-ratio: 4 / 5; } 
+    }   /* tablet */
+    @media (min-width: 63rem) { 
+        .imgPart { aspect-ratio: 16 / 9; } 
+    }  /* desktop */
+
+    .txtPart {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: var(--layoutGap);
+        &.noImg {
+            grid-column: 1 / -1;
+        }
+    }
+
+    .lead {
+        font-size: var(--font-size-M);
+        font-family: var(--font-default);
+        line-height: var(--line-height-base);
+        color: var(--txtColor);
+        margin: 0;
+    }
+
+    .sunsetHint {
+        font-size: var(--font-size-S);
+        font-family: var(--font-default);
+        margin: 0;
+    }
+    .btnCard {
+        margin-left: auto;
+    }
+    .tag {
+        font-size: var(--font-size-XS);
+    }
+    .previewMetaHeader, .previewMetaFooter {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: calc( var(--layoutGap) / 2);
+        .postDate {
+            margin-right: auto;
+            margin-top: 0;
+        }
+        .btnGotoRead {
+            margin-left: auto;
+        }
+    }
+    @media (min-width: 48rem ) and (max-width: 68rem)  {
+        .previewMetaHeader, .previewMetaFooter {
+            flex-direction: column;
+        }
+    }
+    .previewMetaFooter {
+        margin-top: auto;
+        padding-top: calc(var(--layoutGap) / 2);
+    }
+    &.subjectCard {
+        border-radius: 8px;
+    }
+}

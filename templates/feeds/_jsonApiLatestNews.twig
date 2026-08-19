@@ -10,7 +10,17 @@
         "url": "{{ item.url }}",
         "postDate": "{{ item.postDate | date('c') }}",
         "postDateUnix": {{ item.postDate | date('U') }},
-        "language": "{{ language }}"
+        "item_uid": "{{ item.uid }}-{{ item.siteId }}",
+        "es_type": "News",
+        "es_thema": "Raumplanung",
+        "language": "{{ language }}",
+        "ir_categories": [
+            {% for category in item.fCatSubject.all() %}
+                {
+                    "title": "{{ category.title }}"
+                }{% if not loop.last %},{% endif %}
+            {% endfor %}
+            ]
     }{% if not loop.last %},{% endif %}
 {% endfor %}
 ]

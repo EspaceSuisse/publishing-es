@@ -7,3 +7,6 @@
 .env.web
 /web/imager
 /web/cache
+node_modules
+/web/css
+/web/.vite

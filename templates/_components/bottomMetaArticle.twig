@@ -1,0 +1,11 @@
+{% import '_macros/macroCatOverview' as macroCat %}
+{% import '_macros/macroAuthorFull' as writers %}
+
+<aside class="articlebottomMeta">
+	<div class="gridArticle">
+		<div class="gridStart2 gridSpan10 bottomCat">
+			{{ macroCat.catOverview(articleGenre, 'genre', entry.section, siteBrand.fColor) }}
+			{{ macroCat.catOverview(articleSubject, 'subject', entry.section, siteBrand.fColor2) }}
+		</div>
+	</div>
+</aside>

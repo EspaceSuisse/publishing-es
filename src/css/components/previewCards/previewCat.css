@@ -1,0 +1,31 @@
+.previewCard {
+    &.previewCat {
+        background: var(--colorPreviewCard);
+        .previewTitle {
+            display: inline;
+            a {
+                font-family: var(--font-monospace);
+                font-size: var(--font-size-S);
+                line-height: 1;
+                font-weight: normal;
+                padding: calc( var(--layoutGap) / 2 ) var(--layoutGap);
+                display: inline-block;
+            }
+        }
+        .txtPart {
+            display: flex;
+            justify-content: center;
+        }
+        .previewCatLead {
+            font-size: var(--font-size-M);
+            font-family: var(--font-default);
+            line-height: var(--line-height-base);
+            padding: 0;
+        }
+        &.previewGenre {
+            .previewTitle a {
+                border-radius: 50px;
+            }
+        }
+    }
+}

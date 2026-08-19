@@ -1,0 +1,15 @@
+.hideOnMobile {
+  @media (max-width: 48rem) {
+    display: none !important;
+  }
+}
+.hideOnTablet {
+  @media (min-width: 50rem) {
+    display: none !important;
+  }
+}
+.hideOnDesktop {
+  @media (min-width: 63rem) {
+    display: none !important;
+  }
+}

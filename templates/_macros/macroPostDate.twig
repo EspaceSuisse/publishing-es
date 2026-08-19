@@ -4,7 +4,11 @@
     {% set daysAgo = date.diff(now).days %}
 
     {% if daysAgo == 0 %}
-        {{ date|time('short') }}
+        {{ 'Heute' | t }}
+    {% elseif daysAgo == 1 %}
+        {{ 'Gestern' | t }}
+    {% elseif daysAgo == 2 %}
+        {{ 'Vorgestern' | t }}
     {% else %}
         {{ date|timestamp }}
     {% endif %}

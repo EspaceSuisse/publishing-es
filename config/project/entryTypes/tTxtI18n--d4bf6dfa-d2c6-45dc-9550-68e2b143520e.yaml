@@ -83,11 +83,26 @@ fieldLayouts:
         name: Layout
         uid: 3929d890-cdda-4809-b680-fb80873d635c
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            content: "# Das ist das Hauptelement um Texte einzufügen\r\n\r\n# Formatierung\r\nNutze die Knöpfe, um deinen Text zu formatieren.\r\n\r\n## Headlines & Paragraphen\r\n- Im Drop-down-Menü kannst du die Überschriften Hierarchie auswählen\r\n\r\n# Überschriften\r\n- Verwende für Überschriften die Überschriften und nicht den `Fett` Knopf.\r\n- Und das besser Sichtbar zu machen: Überschriften werden `Grün` dargestellt und Fetter Text ist `Orange`.\r\n- Fetter Text ist nur dazu da etwas im Lauftext auszuzeichnen. `Niemals für Überschriften verwenden`\r\n- Überschriften müssen numerisch aufeinander folgend sein: soll heissen: Überschrift 4 muss auf Überschrift 3 folgen und nicht einfach hin und her springen.\r\n- Anstatt die Überschriften hier im WYSIWYG Editor zu verwenden, kannst du auch das separat verfügbare Überschriften Matrix Element verwenden. Diese beiden Möglichkeiten sind deckungsgleich.\r\n\r\n# Sanitation\r\n- Wenn du einen Text z.b. von Word reinkopierst, kopierst du sehr viel unsichtbaren Word code mit. Dieser wird beim Speichern `Sanitized` das heisst, vom System gesäubert. Daher kann der Text manchmal nach dem ersten Speichern anders aussehen.\r\n\r\n# Links\r\nVerwende für Interne links nach Möglichkeit `Entry` im Link Kontext. Die `URL` Option ist nur für Externe Links gedacht.\r\n\r\n# Source\r\nMit dem Source Button wird dir der Text in echtem HTML angezeigt. Falls du mal selber was säubern must oder so. `USE AT YOUR OWN RISK`"
+            dateAdded: '2026-06-17T07:51:48+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 2623cf5a-d5c1-4b7a-a990-733ec6d50f88
+            userCondition: null
+            width: 100
+        name: Hilfe
+        uid: 47a84a79-6a4f-453f-847c-676448f8b2a8
+        userCondition: null
     thumbFieldKey: null
 handle: tTxtI18n
 hasTitleField: false
 icon: file-lines
-name: 'Text i18N'
+name: Lauftext
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -58,7 +58,6 @@
 <html lang="{{ craft.app.language }}">
 
 	{% include "_components/siteMeta" %}
-	{% include "_dynamic/catColorChecker.twig" %}
 
 	<body class="{{ bodyClass }}">
 		{# {% include "_components/pageSettingsPanel" %} #}
@@ -67,7 +66,7 @@
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
 		</div>
 		{% include "_components/footer/siteFooter" %}
+		{% include "_components/tracking" %}
 		{% include "_dynamic/viewCount.twig" %}
-		{% include "_components/siteDevBar" %}
 	</body>
 </html>
