@@ -235,7 +235,10 @@
                     'text-halo-color': '{{ labelTxtHalo }}',
                     'text-halo-width': 1
                 }
-            }, map.getStyle().layers[map.getStyle().layers.length - 1].id); // force top
+            });
+            if (map.getLayer('marker-labels-layer')) {
+                map.moveLayer('marker-labels-layer');
+            }
 
             // Optional: add actual red dots
             markers.forEach(m => {
