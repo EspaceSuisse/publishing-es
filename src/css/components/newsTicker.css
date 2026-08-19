@@ -1,6 +1,7 @@
 .newsTicker {
     box-shadow: var(--shadow);
     background-color: var(--colorPreviewCard);
+    container-type: inline-size; 
     display: flex;
     flex-direction: column;
     .newsTickerTitle {
@@ -36,16 +37,21 @@
             }
         }
     }
+    @container (max-width: 384px) {
+        .newsTickerMeta {
+            flex-direction: column;
+            .channelLinks {
+                padding-bottom: var(--layoutGap);
+            }
+        }
+    }
     .newsTickerMeta {
         margin-top: auto;
         align-self: flex-end;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: baseline;
         width: 100%;
-    }
-    .channelLinks {
-        padding-bottom: calc( var(--layoutGap) / 2 );
     }
     .rssLink {
         font-family: var(--font-default);
