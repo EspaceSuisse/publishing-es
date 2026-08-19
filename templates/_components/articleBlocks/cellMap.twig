@@ -10,8 +10,8 @@
 <script src="https://unpkg.com/maplibre-gl@5.7.1/dist/maplibre-gl.js"></script>
 
 
-{% set mapLatitude = block.fLat %}
-{% set mapLongitude = block.fLong %}
+{% set mapLatitude = block.fLat ?? '46.917289' %}
+{% set mapLongitude = block.fLong ?? '7.443796' %}
 {% set mapZoom = block.fZoom ?? '10' %}
 {% set additionalLayer = block.fPlainTxt ?? null %}
 {% set baseLayer = block.fBaseMap ?? 'pixelkarte-farbe' %}
