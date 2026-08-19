@@ -18,7 +18,7 @@
 {% set mapID = block.id %}
 {% set markerHandle = block.fMxMarker %}
 {% set polygonHandle = block.fPolygons %}
-{% set labelTxtSize = '18' %}
+{% set labelTxtSize = '15' %}
 {% set labelTxtColor = 'rgb(86, 86, 86)' %}
 {% set labelTxtHalo = 'rgb(250, 250, 250)' %}
 {% set pinColor = 'rgb(28, 112, 183)' %}
@@ -225,7 +225,8 @@
                 layout: {
                     'text-field': ['get', 'title'],
                     'text-font': ['Frutiger Neue Italic'],
-                    'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // was: 14
+                    // 'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // doesnt scale with zoom
+                    'text-size': {{ labelTxtSize }},
                     'text-offset': [0, -4],
                     'text-anchor': 'top'
                 },
@@ -281,11 +282,81 @@
                 }))
             );
 
+            const circleLabelFeatures = polygonFeatures.filter(feature =>
+                    feature.geometry?.type === 'Point' &&
+                    feature.properties?.type === 'circle'
+                );
+
+                const renderFeatures = polygonFeatures.map(feature => {
+                    const isCircle =
+                        feature.geometry?.type === 'Point' &&
+                        feature.properties?.type === 'circle';
+
+                    if (!isCircle) {
+                        return feature;
+                    }
+
+                    const radius = Number(feature.properties.radius) || 10;
+
+                    return {
+                        ...feature,
+                        geometry: {
+                            type: 'Polygon',
+                            coordinates: [
+                                createCirclePolygon(
+                                    feature.geometry.coordinates,
+                                    radius
+                                )
+                            ]
+                        }
+                    };
+                });
+
+            // build the circle as a polygon, not as a circle object
+            function createCirclePolygon(center, radius, steps = 64) {
+                const [centerLng, centerLat] = center;
+
+                // Assumes radius is in metres
+                const earthRadius = 6371008.8;
+                const angularDistance = radius / earthRadius;
+
+                const latRadians = centerLat * Math.PI / 180;
+                const coordinates = [];
+
+                for (let i = 0; i <= steps; i++) {
+                    const angle = (i / steps) * Math.PI * 2;
+
+                    const latitude = Math.asin(
+                        Math.sin(latRadians) * Math.cos(angularDistance) +
+                        Math.cos(latRadians) *
+                        Math.sin(angularDistance) *
+                        Math.cos(angle)
+                    );
+
+                    const longitude =
+                        centerLng * Math.PI / 180 +
+                        Math.atan2(
+                            Math.sin(angle) *
+                            Math.sin(angularDistance) *
+                            Math.cos(latRadians),
+                            Math.cos(angularDistance) -
+                            Math.sin(latRadians) * Math.sin(latitude)
+                        );
+
+                    coordinates.push([
+                        longitude * 180 / Math.PI,
+                        latitude * 180 / Math.PI
+                    ]);
+                }
+
+                return coordinates;
+            }
+
             map.addSource('polygons', {
                 type: 'geojson',
                 data: {
                     type: 'FeatureCollection',
-                    features: polygonFeatures
+                    features: renderFeatures
                 }
             });
 
@@ -319,25 +390,6 @@
                 }
             });
 
-            // Circles
-            map.addLayer({
-                id: 'circle-fills',
-                type: 'circle',
-                source: 'polygons',
-                filter: [
-                    'all',
-                    ['==', ['geometry-type'], 'Point'],
-                    ['==', ['get', 'type'], 'circle']
-                ],
-                paint: {
-                    'circle-color': ['coalesce', ['get', 'color'], '#39d98a'],
-                    'circle-opacity': 0.35,
-                    'circle-radius': ['coalesce', ['get', 'radius'], 10],
-                    'circle-stroke-color': ['coalesce', ['get', 'color'], '#39d98a'],
-                    'circle-stroke-width': 2
-                }
-            });
-
             // Polygon labels
             // Labels for polygons and circles
             map.addLayer({
@@ -357,7 +409,8 @@
                 layout: {
                     'text-field': ['get', 'title'],
                     'text-font': ['Frutiger Neue Italic'],
-                    'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // was: 14
+                    // 'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // was: 14
+                    'text-size': {{ labelTxtSize }},
                     'text-pitch-alignment': 'viewport',
                     'text-rotation-alignment': 'viewport',
                     'text-anchor': 'center',
