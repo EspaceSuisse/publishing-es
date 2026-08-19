@@ -73,7 +73,7 @@
     </FilesMatch>
 
     # Never cache HTML at the browser level
-    <FilesMatch "\.(html|htm)$">
+    <FilesMatch "\.(html|htm|html\.gz)$">
         Header set Cache-Control "no-cache"
     </FilesMatch>
 </IfModule>
