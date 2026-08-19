@@ -35,8 +35,10 @@
 
             {% if item.language == 'de-CH' %}
                 {% set langISO = 'de' %}
+                {% set itemPostDate = item.postDate %}
             {% else %}
                 {% set langISO = 'fr' %}
+                {% set itemPostDate = item.postDate | date_modify('+1 hour') %}
             {% endif %}
 
         {% set otherLang = craft.entries()
@@ -59,7 +61,7 @@
             {% else %}
                 {{ macroImg.rssFeedImg(seoDefaults.fImgI18n.one(), 'feedImageTransform') }}
             {% endif %}
-            <pubDate>{{ item.postDate | atom }} </pubDate>
+            <pubDate>{{ itemPostDate | atom }} </pubDate>
             <title>{{ feedItemTitle }}</title>
             <description><![CDATA[{{ feedItemSeoDesc }}]]></description>
             <content:encoded><![CDATA[{{ feedItemLead }}]]></content:encoded>
