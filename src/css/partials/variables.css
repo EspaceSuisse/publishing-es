@@ -74,6 +74,9 @@
     --colorEs-alert: rgb(216, 134, 34);
     --colorEs-success: rgb(128, 205, 113);
     --shadow: 0 2px 20px 0 rgba(0,0,0,0.07);
+
+    --colorGenre: #e3d4a5;
+    --colorSubject: #e2f1f1;
 } 
 
 /* 2. EXPLICIT Dark Mode: User explicitly clicked the "Dark" button */
@@ -89,10 +92,10 @@
         color-scheme: dark;
         
         --backgroundColor: rgb(46, 45, 45);
-        --txtColor: rgb(212, 212, 212);
+        --txtColor: rgb(171, 175, 190);
         --txtInvertColor: oklch(from var(--txtColor) calc(l + 0.06) c h);
         --colorPreviewCard: oklch(from var(--backgroundColor) calc(l + 0.03) c h);
-        --colorES-brand-blue: rgb(10, 42, 69);
+        --colorES-brand-blue: rgb(16, 70, 115);
         --colorES-brand-blue-soft: rgb(152, 189, 212);
         --colorES-brand-petrol: rgb(0, 201, 190);
         --colorES-subject: rgb(251, 167, 82);
@@ -100,7 +103,7 @@
         --colorEs-alert: rgb(216, 134, 34);
         --colorEs-success: rgb(128, 205, 113);
 
-        --linkTxtColor: oklch(from var(--colorES-brand-blue) calc(l + 0.53) c h);
+        --linkTxtColor: oklch(from var(--colorES-brand-blue) calc(l + 0.13) c h);
         --linkTxtHoverColor: var(--colorES-brand-blue);
         --linkTxtActiveColor: var(--linkTxtColor);
 
@@ -110,9 +113,11 @@
         --linkBgTxtHoverColor: var(--linkBgTxtColor);
 
         --linkTxtColorVisited: var(--colorES-brand-blue-soft);
-        --shadow: 0 2px 20px 0 rgba(0,0,0,0.07);
 
         --color-highlight-soft: var(--backgroundColor);
         --color-highlight-strong: var(--colorES-brand-blue);
+
+        --colorGenre: #534a31;
+        --colorSubject: #3d5b5b;
     }
 }
