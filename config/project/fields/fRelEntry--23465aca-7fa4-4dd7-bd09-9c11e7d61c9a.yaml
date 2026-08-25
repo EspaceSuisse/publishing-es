@@ -17,9 +17,10 @@ settings:
   showUnpermittedSections: false
   sources:
     - 'section:b885bd92-90c0-47e9-abe5-dd9464f9c0b5' # Artikel
+    - 'section:ad4265b0-d0a8-4b4c-a37b-bf310b170758' # News
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: cards
+  viewMode: list-inline
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Entries

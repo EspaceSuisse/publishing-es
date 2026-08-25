@@ -11,7 +11,11 @@
     
     {% if item.status == 'live' %}
 
-        {% set img = item.imgAufmacher.one() %}
+        {% if item.imgAufmacher.one() | length %}
+            {% set img = item.imgAufmacher.one() %}
+        {% else %}
+            {% set img = seoDefaults.fImgI18n.one() %}
+        {% endif %}
 
             <a href="{{ item.url }}" class="cellRelEntry">
                 <div class="imgPart">
