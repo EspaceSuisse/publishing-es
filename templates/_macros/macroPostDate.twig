@@ -7,10 +7,8 @@
         {{ 'Heute' | t }}
     {% elseif daysAgo == 1 %}
         {{ 'Gestern' | t }}
-    {% elseif daysAgo == 2 %}
-        {{ 'Vorgestern' | t }}
     {% else %}
-        {{ date|timestamp }}
+        {{ date | date('d. M Y') }}
     {% endif %}
 
     {% if wrap %}</p>{% endif %}
