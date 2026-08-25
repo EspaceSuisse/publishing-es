@@ -1,0 +1,40 @@
+<ul aria-label="Color scheme switcher" id="theme-switcher">
+    <li><button aria-pressed="false" data-theme-value="light">Light</button></li>
+    <li><button aria-pressed="true" data-theme-value="auto">Auto</button></li>
+    <li><button aria-pressed="false" data-theme-value="dark">Dark</button></li>
+</ul>
+
+
+{% js %}
+    const switcher = document.getElementById('theme-switcher');
+    const switchButtons = switcher.querySelectorAll('button');
+
+    function applyTheme(theme) {
+        // 1. Update the DOM and LocalStorage
+        if (theme === 'auto') {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.removeItem('theme'); // Auto means we rely on OS preferences
+        } else {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        // 2. Update button aria-pressed states
+        switchButtons.forEach(button => {
+            const isActive = button.getAttribute('data-theme-value') === theme;
+            button.setAttribute('aria-pressed', isActive);
+        });
+    }
+
+    // Initialize button states on load
+    const currentTheme = localStorage.getItem('theme') || 'auto';
+    applyTheme(currentTheme);
+
+    // Add click event listeners
+    switchButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedTheme = button.getAttribute('data-theme-value');
+            applyTheme(selectedTheme);
+        });
+    });
+{% endjs %}
