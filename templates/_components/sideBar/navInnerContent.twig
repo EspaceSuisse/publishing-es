@@ -17,9 +17,12 @@
 		<aside class="dropdown" id="dropdown-menu" role="menu">
 
 			<div class="dropdownContents">
-				<ul class="majorLinks gridMdSpan2">
+				<ul class="majorLinks">
 					{% include "_components/sideBar/siteNavMoreLinks.twig" %}
+				</ul>
+				<ul>
 					{% include "_components/sideBar/navLangSwitcher.twig" %}
+					{% include "_components/themeColorSwitcher" %}
 				</ul>
 				<div class="latestEntries">
 					{% for item in latestNews %}
