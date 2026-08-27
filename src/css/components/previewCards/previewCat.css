@@ -22,9 +22,10 @@
             line-height: var(--line-height-base);
             padding: 0;
         }
-        &.previewGenre {
+        &.previewGenre, &.previewSubject {
             .previewTitle a {
-                border-radius: 50px;
+                font-size: var(--font-size-L);
+                padding: 0;
             }
         }
     }

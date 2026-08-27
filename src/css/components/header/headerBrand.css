@@ -17,7 +17,6 @@
             text-decoration: none;
             color: var(--txtInvertColor);
             transition: all 0.3s ease;
-            color: var(--colorES-brand-blue);
         }
     }
     .brandMagazine {

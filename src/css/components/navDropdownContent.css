@@ -20,7 +20,7 @@
         }
 
         .majorLinks {
-            a {
+            a, button {
                 font-family: var(--font-default);
                 font-size: var(--font-size-XL);
                 color: var(--linkBgTxtColor);
@@ -30,6 +30,12 @@
                     text-decoration: underline;
                 }
             }
+            button.isActive {
+                font-weight: var(--font-bold);
+                text-decoration: underline;
+                text-decoration-thickness: 5px;
+                color: var(--linkBgTxtHoverColor);
+            }
             .isActive {
                 a {
                     font-weight: var(--font-bold);
@@ -37,6 +43,29 @@
                     text-decoration-thickness: 5px;
                     color: var(--linkBgTxtHoverColor);
                 }
+            }
+        }
+        .element {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            .elementTitle {
+                font-family: var(--font-default);
+                font-size: var(--font-size-XL);
+                color: var(--linkBgTxtColor);
+                margin: 0;
+                padding: 0;
+            }
+            > ul {
+                display: flex;
+                gap: 10px;
+                margin: 0;
+                padding: 0;
+            }
+            .theme-switcher button {
+                font-family: var(--font-default);
+                font-size: var(--font-size-XL);
+                color: var(--linkBgTxtColor);
             }
         }
 
@@ -83,6 +112,12 @@
             }
             #mc_embed_shell {
                 display: none;
+            }
+            .element, .element > ul {
+                flex-direction: row;
+                .elementTitle, .theme-switcher button {
+                    font-size: var(--font-size-S);
+                }
             }
         }
     }
