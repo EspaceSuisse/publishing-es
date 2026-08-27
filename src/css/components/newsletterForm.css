@@ -39,8 +39,8 @@
     }
     input[type="email"],
     input[type="text"] {
-        background-color: color-mix(in srgb, var(--colorES-brand-blue), white 90%);
         border: solid 1px var(--colorES-brand-blue);
+        font-weight: var(--font-regular);
         color: var(--txtColor);
         width: 100%;
         border-radius: 5px;
