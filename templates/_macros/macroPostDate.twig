@@ -8,8 +8,11 @@
     {% elseif daysAgo == 1 %}
         {{ 'Gestern' | t }}
     {% else %}
-        {{ date | date('d. M Y') }}
+        {% if craft.app.language == 'de-CH' %}
+            {{ date | date('d. M Y') }}
+        {% else %}
+            {{ date | date('d M Y') }}
+        {% endif %}
     {% endif %}
-
     {% if wrap %}</p>{% endif %}
 {% endmacro %}
