@@ -15,7 +15,7 @@
         margin: 0;
         a {
             text-decoration: none;
-            color: var(--txtInvertColor);
+            color: var(--colorES-brand-blue);
             transition: all 0.3s ease;
         }
     }
