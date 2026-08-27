@@ -91,7 +91,7 @@
     :root:not([data-theme="light"]) {
         color-scheme: dark;
         
-        --backgroundColor: rgb(46, 45, 45);
+        --backgroundColor: rgb(27, 27, 27);
         --txtColor: rgb(171, 175, 190);
         --txtInvertColor: oklch(from var(--txtColor) calc(l + 0.06) c h);
         --colorPreviewCard: oklch(from var(--backgroundColor) calc(l + 0.03) c h);

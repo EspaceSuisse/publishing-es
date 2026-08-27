@@ -20,10 +20,18 @@
 				<ul class="majorLinks">
 					{% include "_components/sideBar/siteNavMoreLinks.twig" %}
 				</ul>
-				<ul>
-					{% include "_components/sideBar/navLangSwitcher.twig" %}
-					{% include "_components/themeColorSwitcher" %}
-				</ul>
+				<div  class="siteSettings">
+					<div class="element">
+						<p class="elementTitle">{{ "Sprache" | t }}:</p>
+						<ul  class="majorLinks">
+							{% include "_components/sideBar/navLangSwitcher.twig" %}
+						</ul>
+					</div>
+					<div class="element">
+						<p class="elementTitle">{{ "Farbschema" | t }}:</p>
+						{% include "_components/themeColorSwitcher" %}
+					</div>
+				</div>
 				<div class="latestEntries">
 					{% for item in latestNews %}
 						{% if loop.first %}
