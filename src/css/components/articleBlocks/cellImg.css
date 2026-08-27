@@ -77,8 +77,10 @@ figcaption {
     background-color: var(--backgroundColor);
     .caption p {
         font-size: var(--font-size-S);
+        color: var(--txtColor);
     }
     .assetSource {
         font-size: var(--font-size-XS);
+        color: var(--txtColor);
     }
 }
