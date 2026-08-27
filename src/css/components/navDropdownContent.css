@@ -30,12 +30,6 @@
                     text-decoration: underline;
                 }
             }
-            button.isActive {
-                font-weight: var(--font-bold);
-                text-decoration: underline;
-                text-decoration-thickness: 5px;
-                color: var(--linkBgTxtHoverColor);
-            }
             .isActive {
                 a {
                     font-weight: var(--font-bold);
@@ -51,7 +45,7 @@
             gap: 10px;
             .elementTitle {
                 font-family: var(--font-default);
-                font-size: var(--font-size-XL);
+                font-size: var(--font-size-M);
                 color: var(--linkBgTxtColor);
                 margin: 0;
                 padding: 0;
@@ -62,9 +56,15 @@
                 margin: 0;
                 padding: 0;
             }
-            .theme-switcher button {
+            button.isActive {
+                font-weight: var(--font-bold);
+                text-decoration: underline;
+                text-decoration-thickness: 5px;
+                color: var(--linkBgTxtHoverColor);
+            }
+            .theme-switcher button, .langSwitcher a {
                 font-family: var(--font-default);
-                font-size: var(--font-size-XL);
+                font-size: var(--font-size-M);
                 color: var(--linkBgTxtColor);
             }
         }
