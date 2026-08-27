@@ -265,6 +265,53 @@ fieldLayouts:
         name: Google
         uid: 132df382-76c4-4b56-ab8f-95fb71743dd4
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-08-27T13:09:45+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fd056fec-5843-47f0-a2ad-520a3044916d # Code FIeld
+            handle: null
+            instructions: '[CSS Color Variables](https://github.com/EspaceSuisse/publishing-es/blob/LIVE/src/css/partials/variables.css)'
+            label: 'Override - Lightmode'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a0ebf54-faf7-449a-a578-bc8caaa83f3b
+            userCondition: null
+            warning: 'DOOO NOT TOUCH'
+            width: 100
+          -
+            dateAdded: '2026-08-27T13:09:45+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fd056fec-5843-47f0-a2ad-520a3044916d # Code FIeld
+            handle: fCode2
+            instructions: null
+            label: 'Override - Darkmode'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c6f0b5d0-61e5-49b5-a3b2-a8e432e4c571
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            content: "# Was zur hölle ist das?\r\n\r\nFür Spezialpublikationen kannst du hier via CSS variablen einfach den Artikel ein bisschen umfärben."
+            dateAdded: '2026-08-27T13:32:02+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 3146b8b8-6ea2-46dc-83fc-df3c26d83c2d
+            userCondition: null
+            width: 100
+        name: Code
+        uid: 68c19475-b991-444a-86ae-92573e312fac
+        userCondition: null
     thumbFieldKey: null
 handle: tArticleSet
 hasTitleField: true

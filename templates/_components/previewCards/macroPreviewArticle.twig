@@ -13,8 +13,9 @@
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
 	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
+	{% set cardId = queryParam.section.handle ~ '-' ~ queryParam.id %}
 
-	<article class="previewCard previewArticle {{ classCardParam }}">
+	<article class="previewCard previewArticle {{ classCardParam }}" id="{{ cardId }}">
 		{% if image %}
 		
 			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
@@ -41,5 +42,7 @@
 				{# {% include "_components/articlePreviewSunset.twig" %} #}
 			</div>
 		</div>
+		{% include "_dynamic/customCodePreviewCard" %}
+		
 	</article>
 {% endmacro %}

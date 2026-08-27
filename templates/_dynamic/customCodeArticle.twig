@@ -1,0 +1,12 @@
+{% css %}
+        :root {
+            {{ entry.fCode }}
+        }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                color-scheme: dark;
+                {{ entry.fCode2 }}
+            }
+        }
+        
+{% endcss %}
