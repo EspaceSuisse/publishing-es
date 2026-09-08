@@ -19,8 +19,9 @@
 {% set markerHandle = block.fMxMarker %}
 {% set polygonHandle = block.fPolygons %}
 {% set labelTxtSize = '15' %}
-{% set labelTxtColor = 'rgb(86, 86, 86)' %}
-{% set labelTxtHalo = 'rgb(250, 250, 250)' %}
+{% set labelTxtOffset = '-5' %}
+{% set labelTxtColor = 'black' %}
+{% set labelTxtHalo = 'white' %}
 {% set pinColor = 'rgb(28, 112, 183)' %}
 
 
@@ -224,10 +225,10 @@
                 source: 'marker-labels',
                 layout: {
                     'text-field': ['get', 'title'],
-                    'text-font': ['Frutiger Neue Italic'],
+                    'text-font': ['Frutiger Neue Bold'],
                     // 'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // doesnt scale with zoom
                     'text-size': {{ labelTxtSize }},
-                    'text-offset': [0, -4],
+                    'text-offset': [0, {{ labelTxtOffset }}],
                     'text-anchor': 'top'
                 },
                 paint: {
