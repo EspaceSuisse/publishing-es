@@ -3,6 +3,9 @@
 
 [
 {% for item in latestNews %}
+
+    {% set postUID = item.uid ~ '-' ~ item.siteId %}
+
     {
         "id": "{{ item.id }}",
         "title": "{{  item.fPlainTextI18n ??  item.title}}",
@@ -10,7 +13,7 @@
         "url": "{{ item.url }}",
         "postDate": "{{ item.postDate | date('c') }}",
         "postDateUnix": {{ item.postDate | date('U') }},
-        "item_uid": "{{ item.uid }}-{{ item.siteId }}",
+        "item_uid": "{{ postUID }}",
         "es_type": "News",
         "es_thema": "Raumplanung",
         "language": "{{ language }}",

@@ -53,6 +53,7 @@
         {% set feedLongText = item.fPlainTextI18nMultiline %}
         {% set feedItemLead = feedLongText | length > textLength ? feedLongText | slice(0, textLength) ~ '…': feedLongText %}
         {% set feedItemSeoDesc = item.fSeoDescription %}
+        {% set postUID = item.uid ~ '-' ~ item.siteId %}
         
 
         <item>
@@ -66,7 +67,7 @@
             <description><![CDATA[{{ feedItemSeoDesc }}]]></description>
             <content:encoded><![CDATA[{{ feedItemLead }}]]></content:encoded>
             <link>{{ item.url }}</link>
-            <guid isPermaLink="false">{{ item.uid }}-{{ item.siteId }}</guid>
+            <guid isPermaLink="false">{{ postUID }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
             <category domain="language">{{ langISO }}</category>
             {% if item.section.handle == 'article' %}
