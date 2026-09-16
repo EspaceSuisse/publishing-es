@@ -1,4 +1,4 @@
-dateModified: 1789540922
+dateModified: 1789562882
 elementSources:
   craft\elements\Asset:
     -
@@ -358,6 +358,7 @@ meta:
     d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Lauftext # Lauftext
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
+    d59333c3-49a3-4ba8-b3c5-b4013b420c99: 'Lightswitch On' # Lightswitch On
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
@@ -367,6 +368,7 @@ meta:
     eee49365-fab5-4241-a3e6-e24d9cd9a18e: Newsletter # Newsletter
     efc236a6-abb3-4ef8-b448-ddf8971ace68: 'Person Multilingual' # Person Multilingual
     f9f9d456-4ae3-4b92-809a-b27d47247746: Link # Link
+    f61de312-2030-4af6-b3ea-df3697ef8f9d: Gender # Gender
     f636f8a5-c9a2-4976-9ccf-f73a58c3fabf: 'Article Image Gallery' # Article Image Gallery
     f8280914-6618-4ce0-8ed1-a3cc7b9c43b0: Marker # Marker
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude

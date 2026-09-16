@@ -4,6 +4,40 @@ tabs:
     elementCondition: null
     elements:
       -
+        dateAdded: '2026-09-16T12:43:23+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: f61de312-2030-4af6-b3ea-df3697ef8f9d # Gender
+        handle: null
+        instructions: null
+        label: null
+        oldFieldUid: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: ce85704d-3bc4-4897-9f63-7288fad6cc86
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        dateAdded: '2026-09-16T12:44:44+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: d59333c3-49a3-4ba8-b3c5-b4013b420c99 # Lightswitch On
+        handle: null
+        instructions: null
+        label: 'Anzeigen?'
+        oldFieldUid: d59333c3-49a3-4ba8-b3c5-b4013b420c99 # Lightswitch On
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: b2657151-9d75-499a-9394-c7866dd3ee78
+        userCondition: null
+        warning: null
+        width: 100
+      -
         autocapitalize: true
         autocomplete: false
         autocorrect: true
@@ -84,6 +118,7 @@ tabs:
         handle: null
         instructions: null
         label: null
+        oldFieldUid: null
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField
@@ -127,6 +162,7 @@ tabs:
         handle: null
         instructions: null
         label: null
+        oldFieldUid: null
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField
@@ -143,6 +179,7 @@ tabs:
         handle: null
         instructions: null
         label: Aubildung
+        oldFieldUid: null
         required: false
         tip: 'Journalistin, Redaktorin'
         type: craft\fieldlayoutelements\CustomField
@@ -159,6 +196,7 @@ tabs:
         handle: fPlainTextI18n3
         instructions: null
         label: 'Education FR'
+        oldFieldUid: null
         required: false
         tip: Journaliste
         type: craft\fieldlayoutelements\CustomField
@@ -175,6 +213,7 @@ tabs:
         handle: null
         instructions: null
         label: Funktion
+        oldFieldUid: null
         required: false
         tip: 'Anwältin, stellvertretende Direktorin von EspaceSuisse'
         type: craft\fieldlayoutelements\CustomField
@@ -191,6 +230,7 @@ tabs:
         handle: fPlainTextI18n4
         instructions: null
         label: 'Functione FR'
+        oldFieldUid: null
         required: false
         tip: 'Responsable de la communication'
         type: craft\fieldlayoutelements\CustomField

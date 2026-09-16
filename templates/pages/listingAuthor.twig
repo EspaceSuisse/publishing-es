@@ -8,6 +8,7 @@
 	{# get all relevant authors #}
 	{% set authorPosts = craft.users
         .group(['espacesuisse'])
+		.fSwitchOn(true)
         .orderBy('fullName asc')
         .status('active')
         .all() %}
@@ -33,8 +34,7 @@
 
 
 			{% if authorPostPage %}
-				<div
-					class="authorCard gridSpan12 gridLgSpan4 previewCard">
+				<div class="authorCard gridSpan12 gridLgSpan4 previewCard">
 
 					{# render author photo #}
 					<div class="imgPart gridSpan12 gridSmSpan4">
@@ -42,7 +42,7 @@
 							{{ macroImg.articleImage(author.photo, 'articleImage', 'imgArticle') }}
 						{% endif %}
 					</div>
-					<div class="textPart gridSpan12 gridSmSpan8">
+					<div class="txtPart gridSpan12 gridSmSpan8">
 						<h2 class="authorName">{{ author.name }}</h2>
 						<p class="authorTaxonomy">
 							{% if craft.app.language == 'de-CH' %}
@@ -51,21 +51,9 @@
 								{{ macro.authorI18nField(author.fPlainTextI18n2, author.fPlainTextI18n3) }}
 							{% endif %}
 						</p>
-
-						{# print the related author articles #}
-						<ul class="relatedPosts">
-							{% for item in relArticles %}
-								<li>
-									<a href="{{ item.url }}">
-										{{ macroPostDate.postDate(entry.postDate, false) }}
-										{{ item.title }}
-									</a>
-								</li>
-							{% endfor %}
-						</ul>
-
-						{# render link to author post page #}
-						<a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}" class="allPosts btn btnSmall">{{ 'Alle Artikel von' | t ~ ' ' }}{{ author.name }}{{ ' ' ~ 'anzeigen' | t }}</a>
+						<a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}" class="allPosts btn .">
+							{{ 'Zu den Artikeln' | t }}
+						</a>
 					</div>
 				</div>
 			{% endif %}

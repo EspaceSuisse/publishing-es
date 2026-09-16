@@ -30,6 +30,7 @@
     }
     &.btnReadMore {
       align-self: flex-end;
+      margin-top: auto;
     }
 }
 .btnGroup {

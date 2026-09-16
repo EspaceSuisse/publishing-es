@@ -22,15 +22,15 @@
 	{# Whats missing here still: cannonical url not correct + nav language switcher not working here #}
 	<div class="listingGrid">
 		{% if author %}
-			<div class="authorCard previewCard gridSpan12">
-				<div class="imgPart gridSpan12 gridSmSpan4">
+			<div class="authorCard previewCard gridSpan8 gridStart3 gridMdSpan6 gridMdStart4">
+				<div class="imgPart gridSpan12 gridSmSpan3">
 					{% if author.photo %}
                         {{ macroImg.articleImage(author.photo, 'articleImage', 'imgArticle') }}
 					{% endif %}
 				</div>
-				<div class="textPart">
-					<h2 class="authorName">{{ author.name }}</h2>
-					<p class="authorTaxonomy">
+				<div class="txtPart gridSpan12 gridSmSpan5 gridMdSpan3">
+					<h2 class="previewTitle authorName">{{ author.name }}</h2>
+					<p class="lead authorTaxonomy">
 						{% if craft.app.language == 'de-CH' %}
 							{{ macro.authorI18nField(author.fPlainTextI18n, author.fPlainTextI18n4) }}
 						{% else %}
@@ -42,13 +42,26 @@
 
 			{% set articles = craft.entries.section('article').authorId(author.id).all() %}
 
+			{% if author.fGender == 'male' %}
+				{% set authorGenitive = 'des Autors' %}
+			{% elseif author.fGender == 'genderless' %}
+				{% set authorGenitive = 'der Autorenschaft' %}
+			{% elseif author.fGender == 'noInfo' %}
+				{% set authorGenitive = 'der schreibenden Person' %}
+			{% else %}
+				{% set authorGenitive = 'der Autorin' %}
+			{% endif %}
+
+			<h1 class="gridSpan12 topicTitle">Alle Artikel {{ authorGenitive }}</h1>
+			
+			
 			{% for item in articles %}
-				{{ macroPreview.listMacro(item,'gridSpan6',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
+				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
 			{% else %}
 				<p>Keine Artikel gefunden.</p>
 			{% endfor %}
 		{% else %}
-			<p>Autor nicht gefunden.</p>
+				<p>Autor nicht gefunden.</p>
 		{% endif %}
 	</div>
 

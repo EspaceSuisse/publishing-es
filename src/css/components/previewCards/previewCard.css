@@ -88,6 +88,7 @@
         }
         .btnGotoRead {
             margin-left: auto;
+            margin-top: auto;
         }
     }
     @media (min-width: 48rem ) and (max-width: 68rem)  {
@@ -101,5 +102,15 @@
     }
     &.subjectCard {
         border-radius: 8px;
+    }
+    &.authorCard {
+        .imgPart {
+            aspect-ratio: 1/1;
+            border-radius: 500px;
+            overflow: hidden;
+        }
+        .txtPart {
+            justify-content: center;
+        }
     }
 }

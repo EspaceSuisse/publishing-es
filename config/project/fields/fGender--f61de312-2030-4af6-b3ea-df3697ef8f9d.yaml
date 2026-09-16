@@ -1,0 +1,79 @@
+columnSuffix: null
+handle: fGender
+instructions: null
+name: Gender
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Señora
+        -
+          - value
+          - female
+        -
+          - icon
+          - venus
+        -
+          - color
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Hombre
+        -
+          - value
+          - male
+        -
+          - icon
+          - mars
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Sin género'
+        -
+          - value
+          - genderless
+        -
+          - icon
+          - transgender
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Sin especificar'
+        -
+          - value
+          - noInfo
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown
