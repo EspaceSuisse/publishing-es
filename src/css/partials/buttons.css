@@ -28,6 +28,9 @@
             color: var(--linkBgTxtColor);
         }
     }
+    &.btnReadMore {
+      align-self: flex-end;
+    }
 }
 .btnGroup {
   display: flex;

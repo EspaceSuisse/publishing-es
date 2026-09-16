@@ -1,4 +1,4 @@
-dateModified: 1786624128
+dateModified: 1789540922
 elementSources:
   craft\elements\Asset:
     -
@@ -394,7 +394,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: RQLRFXJIQ243O56I9B1CE9E6
-    schemaVersion: 5.12.0
+    schemaVersion: 5.13.0
     settings:
       apiKey: ''
       cacheActionRequests: false
@@ -614,5 +614,5 @@ system:
   live: true
   name: 'EspaceSuisse Publishing'
   retryDuration: null
-  schemaVersion: 5.10.0.0
+  schemaVersion: 5.11.0.2
   timeZone: $TZ

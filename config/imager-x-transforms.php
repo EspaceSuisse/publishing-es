@@ -29,6 +29,13 @@ return [
         ],
         'defaults' => $defaults,
     ],
+    'newsThumb' => [
+        'displayName' => 'NewsThumb',
+        'transforms' => [
+            ['width' => 580, 'ratio' => 1 / 1],
+        ],
+        'defaults' => $defaults,
+    ],
     'articleImageLightbox' => [
         'displayName' => 'Article Image Lightbox',
         'transforms' => [

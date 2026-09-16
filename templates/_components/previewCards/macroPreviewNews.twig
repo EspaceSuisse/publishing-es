@@ -2,11 +2,23 @@
 
 	{% import '_macros/macroPostDate' as macroPostDate %}
 	{% import '_macros/macroCatOverview' as macroCat %}
+	{% import '_macros/macroImage' as macro %}
 
 
 	{% set newsCat = queryParam.fCatSubject ?? null %}
+	{% set image = queryParam.imgAufmacher[0] ?? null %}
+	{% set noImg = image ? false : true %}
 
 	<article class="previewCard previewNews {{ classCardParam }}">
+
+		{% if image %}
+		
+			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart">
+				{{ macro.articleImage(image, 'newsThumb', 'previewImg') }}
+			</a>
+
+		{% endif %}
+
 		<div class="txtPart">
 			<div class="previewMetaHeader">
 				{{ macroPostDate.postDate(queryParam.postDate, true) }}
@@ -16,6 +28,7 @@
 				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
 			</h4>
 			<p class="lead">{{ queryParam.fSeoDescription}}</p>
+			<a href="{{ queryParam.url }}" class="btn btnReadMore">{{ 'Lesen' | t }}</a>
 		</div>
 	</article>
 	

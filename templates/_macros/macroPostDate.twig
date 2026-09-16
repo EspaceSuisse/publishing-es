@@ -7,11 +7,12 @@
         {{ 'Heute' | t }}
     {% elseif daysAgo == 1 %}
         {{ 'Gestern' | t }}
-    {% elseif daysAgo == 2 %}
-        {{ 'Vorgestern' | t }}
     {% else %}
-        {{ date|timestamp }}
+        {% if craft.app.language == 'de-CH' %}
+            {{ date | date('d. M Y') }}
+        {% else %}
+            {{ date | date('d M Y') }}
+        {% endif %}
     {% endif %}
-
     {% if wrap %}</p>{% endif %}
 {% endmacro %}

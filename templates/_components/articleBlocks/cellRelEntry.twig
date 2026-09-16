@@ -11,7 +11,11 @@
     
     {% if item.status == 'live' %}
 
-        {% set img = item.imgAufmacher.one() %}
+        {% if item.imgAufmacher.one() | length %}
+            {% set img = item.imgAufmacher.one() %}
+        {% else %}
+            {% set img = seoDefaults.fImgI18n.one() %}
+        {% endif %}
 
             <a href="{{ item.url }}" class="cellRelEntry">
                 <div class="imgPart">
@@ -23,7 +27,10 @@
                         <h3 class="relatedEntryTitle">{{ item.title }}</h3>
                     </div>
                     <div class="metaRelEntry">
-                        {{ macroPostDate.postDate(item.postDate, true) }} {{ macroAuthor.authorPreviewCard(item) }}
+                        {{ macroPostDate.postDate(item.postDate, true) }}
+                        {% if item.section.handle != 'news' %}
+                            <p class="postDate">|</p>{{ macroAuthor.authorPreviewCard(item) }}
+                        {% endif %}
                     </div>
                 </div>
             </a>

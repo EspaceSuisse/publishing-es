@@ -17,6 +17,10 @@
     .articleImg {
         padding-top: var(--mediaGap);
         padding-bottom: calc( var(--mediaGap) * 2 );
+        img {
+            background-color: var(--alphaImgBackground);
+            box-shadow: var(--shadow);
+        }
     }
 }
 
@@ -72,13 +76,20 @@ figcaption {
   opacity: 1;
 }
 /* Lightbox styling caption */
-.pswp .pswp__custom-caption {
-    padding: 5px;
-    background-color: var(--backgroundColor);
-    .caption p {
-        font-size: var(--font-size-S);
+.pswp {
+    .pswp__custom-caption {
+        padding: 5px;
+        background-color: var(--backgroundColor);
+        .caption p {
+            font-size: var(--font-size-S);
+            color: var(--txtColor);
+        }
+        .assetSource {
+            font-size: var(--font-size-XS);
+            color: var(--txtColor);
+        }
     }
-    .assetSource {
-        font-size: var(--font-size-XS);
+    .pswp__img {
+        background-color: var(--alphaImgBackground);
     }
 }

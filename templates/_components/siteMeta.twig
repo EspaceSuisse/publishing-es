@@ -1,6 +1,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
   <link rel="preconnect" href="https://use.typekit.net">
   <link rel="preconnect" href="https://p.typekit.net" crossorigin>
 
@@ -29,5 +31,13 @@
 
 
 {% include "_dynamic/unlockScript.twig" %}
+
+  <script>
+        // Check localStorage immediately before the browser renders the page
+        const savedTheme = localStorage.getItem('theme') || 'auto';
+        if (savedTheme !== 'auto') {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    </script>
 
 </head>

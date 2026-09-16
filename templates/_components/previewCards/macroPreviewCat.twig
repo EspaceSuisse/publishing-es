@@ -2,7 +2,6 @@
 
 	{% import '_macros/macroPostDate' as macroPostDate %}
 	{% import '_macros/macroImage' as macro %}
-	{% include "_dynamic/catColorChecker" %}
 
 
 
@@ -23,7 +22,7 @@
 			<div class="previewMetaHeader">
 			</div>
 			<h4 class="previewTitle">
-				<a href="{{ queryParam.url }}" style="background-color: {{ queryParam.fColor ?? 'var(--colorES-brand-blue)' }};">
+				<a href="{{ queryParam.url }}">
 					<span class="tagLabel">{{ queryParam.title }}</span>
 				</a>
 			</h4>

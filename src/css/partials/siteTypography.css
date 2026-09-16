@@ -87,6 +87,9 @@ body {
     font-weight: var(--font-medium);
     line-height: 1.4;
     margin: 0;
+    a {
+        color: var(--linkTxtColor);
+    }
 }
 sub, sup {
   font-size: 0.75em;

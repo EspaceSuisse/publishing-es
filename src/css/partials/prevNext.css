@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding-top: var(--layoutGap);
     p {
         font-size: var(--font-size-S);
         font-family: var(--font-default);
