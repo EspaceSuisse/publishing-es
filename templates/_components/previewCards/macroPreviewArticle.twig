@@ -12,7 +12,11 @@
 	{% set noImg = image ? false : true %}
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
-	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
+	{% if queryParam.fPlainTextI18n %}
+		{% set cardTitle = queryParam.fPlainTextI18n %}
+	{% else %}
+		{% set cardTitle = queryParam.title %}
+	{% endif %}
 
 	<article class="previewCard previewArticle {{ classCardParam }}">
 		{% if image %}
