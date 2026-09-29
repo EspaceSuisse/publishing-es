@@ -1,4 +1,11 @@
 .share {
+    position: fixed;
+    top: var(--layoutGap);
+    right: var(--layoutGap);
+    z-index: 100;
+    @media (max-width: 48rem) {
+        top: calc( var(--layoutGap) * 3 );
+    }
     .dialogOpen {
         @media (max-width: 48rem) {
             position: absolute;
