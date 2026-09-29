@@ -19,14 +19,17 @@
 		{% endif %}
 
 		<div class="txtPart {{ classTxtParam | raw }}">
-			<div class="previewMetaHeader">
+			<div class="txtOverview">
+				<div class="previewMetaHeader">
+				</div>
+				<h4 class="previewTitle">
+					<a href="{{ queryParam.url }}">
+						<span class="tagLabel">{{ queryParam.title }}</span>
+					</a>
+				</h4>
+				<div class="previewCatLead lead">{{ queryParam.fRichTextI18n }}</div>
 			</div>
-			<h4 class="previewTitle">
-				<a href="{{ queryParam.url }}">
-					<span class="tagLabel">{{ queryParam.title }}</span>
-				</a>
-			</h4>
-			<div class="previewCatLead">{{ queryParam.fRichTextI18n }}</div>
+			<a href="{{ queryParam.url }}" class="btn btnReadMore">{{ 'Lesen' | t }}</a>
 		</div>
 	</article>
 	

@@ -12,7 +12,11 @@
 	{% set noImg = image ? false : true %}
 
 	{# if there is a catchy title use this. otherwise fallback to regular title #}
-	{% set cardTitle = queryParam.fPlainTextI18n ?: queryParam.title %}
+	{% if queryParam.fPlainTextI18n %}
+		{% set cardTitle = queryParam.fPlainTextI18n %}
+	{% else %}
+		{% set cardTitle = queryParam.title %}
+	{% endif %}
 
 	<article class="previewCard previewArticle {{ classCardParam }}">
 		{% if image %}
@@ -25,21 +29,17 @@
 
 
 		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
-			<div class="previewMetaHeader">
-				{{ macroPostDate.postDate(queryParam.postDate, true) }}
-				{{ macroAuthor.authorPreviewCard(queryParam) }}
+			<div class="txtOverview">
+				<div class="previewMetaHeader">
+					{{ macroPostDate.postDate(queryParam.postDate, true) }}
+					{{ macroAuthor.authorPreviewCard(queryParam) }}
+				</div>
+				<h2 class="previewTitle">
+					<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
+				</h2>
+				<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			</div>
-			<h2 class="previewTitle">
-				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
-			</h2>
-			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			<div class="previewMetaFooter">
-				{# <div class="tagList">
-					{{ macroCat.catOverview(catGenre, 'genre', null, siteBrand.fColor) }}
-					{{ macroCat.catOverview(catSubject, 'subject', null, siteBrand.fColor2) }}
-				</div> #}
-				{# {% include "_components/articlePreviewSunset.twig" %} #}
-			</div>
+			<a href="{{ queryParam.url }}" class="btn btnReadMore">{{ 'Lesen' | t }}</a>
 		</div>
 	</article>
 {% endmacro %}

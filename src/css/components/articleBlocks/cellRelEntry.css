@@ -1,6 +1,5 @@
 .cellCard {
-    margin-top: var(--mediaGap);
-    margin-bottom: calc( var(--mediaGap) * 2 );
+    margin-bottom: calc( var(--mediaGap) * 1.2 );
     box-shadow: var(--shadow);
     container-type: inline-size;
     a.cellRelEntry {
