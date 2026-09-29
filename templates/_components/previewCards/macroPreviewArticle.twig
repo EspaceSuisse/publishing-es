@@ -29,21 +29,17 @@
 
 
 		<div class="txtPart {{ classTxtParam }} {{ noImg ? 'noImg' : '' }}">
-			<div class="previewMetaHeader">
-				{{ macroPostDate.postDate(queryParam.postDate, true) }}
-				{{ macroAuthor.authorPreviewCard(queryParam) }}
+			<div class="txtOverview">
+				<div class="previewMetaHeader">
+					{{ macroPostDate.postDate(queryParam.postDate, true) }}
+					{{ macroAuthor.authorPreviewCard(queryParam) }}
+				</div>
+				<h2 class="previewTitle">
+					<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
+				</h2>
+				<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			</div>
-			<h2 class="previewTitle">
-				<a href="{{ queryParam.url }}">{{ cardTitle }}</a>
-			</h2>
-			<p class="lead">{{ queryParam.fSeoDescription}}</p>
-			<div class="previewMetaFooter">
-				{# <div class="tagList">
-					{{ macroCat.catOverview(catGenre, 'genre', null, siteBrand.fColor) }}
-					{{ macroCat.catOverview(catSubject, 'subject', null, siteBrand.fColor2) }}
-				</div> #}
-				{# {% include "_components/articlePreviewSunset.twig" %} #}
-			</div>
+			<a href="{{ queryParam.url }}" class="btn btnReadMore">{{ 'Lesen' | t }}</a>
 		</div>
 	</article>
 {% endmacro %}

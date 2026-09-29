@@ -41,7 +41,7 @@
 		{# First block: 1 Item #}
 		{% for item in allEntries | slice(0, sliceA) %}
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12', ) }}
+				{{ macroPreviewNews.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
 			{% else %}
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
 			{% endif %}
@@ -50,7 +50,7 @@
 		{# Second block: 2 Items #}
 		{% for item in allEntries | slice(offsetB, sliceB) %}
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6') }}
+				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }}
 			{% else %}
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }}
 			{% endif %}
@@ -59,7 +59,7 @@
 		{# MISSING THIRD BLOCK ADDED HERE: 4 Items #}
 		{% for item in allEntries | slice(offsetC, sliceC) %}
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6') }} {# Adjust these classes as needed #}
+				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }} {# Adjust these classes as needed #}
 			{% else %}
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }} {# Adjust these classes as needed #}
 			{% endif %}
@@ -68,7 +68,7 @@
 		{# Fourth block: Remaining Items #}
 		{% for item in allEntries | slice(offsetD) %}
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan4') }}
+				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4') }}
 			{% else %}
 				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4') }}
 			{% endif %}
