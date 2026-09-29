@@ -16,7 +16,7 @@
     /* make extra padding for images. needs to be scoped */
     .articleImg {
         padding-top: var(--mediaGap);
-        padding-bottom: calc( var(--mediaGap) * 2 );
+        padding-bottom: calc( var(--mediaGap) * 1.2 );
         img {
             background-color: var(--alphaImgBackground);
             box-shadow: var(--shadow);
