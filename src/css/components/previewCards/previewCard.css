@@ -104,3 +104,6 @@
         border-radius: 8px;
     }
 }
+.previewCat {
+    box-shadow: var(--shadow);
+}
