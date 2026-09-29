@@ -9,7 +9,7 @@
 	{% set image = queryParam.imgAufmacher[0] ?? null %}
 	{% set noImg = image ? false : true %}
 
-	<article class="previewCard previewNews {{ classCardParam }}">
+	<article class="previewCard previewArticle previewNews {{ classCardParam }} {% if not image %}hasNoImage{% endif %}">
 
 		{% if image %}
 		
