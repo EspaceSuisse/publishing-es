@@ -103,14 +103,7 @@
     &.subjectCard {
         border-radius: 8px;
     }
-    &.authorCard {
-        .imgPart {
-            aspect-ratio: 1/1;
-            border-radius: 500px;
-            overflow: hidden;
-        }
-        .txtPart {
-            justify-content: center;
-        }
-    }
+}
+.previewCat {
+    box-shadow: var(--shadow);
 }
