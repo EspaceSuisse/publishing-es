@@ -3,14 +3,23 @@
 use craft\helpers\App;
 use putyourlightson\blitz\models\SettingsModel;
 
-
 return [
     '*' => [
         'cachingEnabled' => false,
         'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
+        
+        // Tell Blitz to cache unique query strings as unique pages
         'queryStringCaching' => SettingsModel::QUERY_STRINGS_CACHE_URLS_AS_UNIQUE_PAGES,
-        //'refreshMode' => SettingsModel::REFRESH_MODE_CLEAR,
+        
+        // Tell Blitz WHICH query strings it is allowed to look at
+        'includedQueryStringParams' => [
+            [
+                'siteId' => '', // Applies to all sites
+                'queryStringParam' => 'section', // Whitelist your 'section' query string
+            ],
+        ],
+
         'refreshMode' => SettingsModel::REFRESH_MODE_CLEAR_AND_GENERATE,
         'includedUriPatterns' => [
             ['uriPattern' => '.*'],
