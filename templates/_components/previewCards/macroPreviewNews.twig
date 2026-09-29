@@ -1,4 +1,4 @@
-{% macro listMacro(queryParam, classCardParam) %}
+{% macro listMacro(queryParam, classCardParam, classImgParam, classTxtParam, hideImage, paramLazy = true) %}
 
 	{% import '_macros/macroPostDate' as macroPostDate %}
 	{% import '_macros/macroCatOverview' as macroCat %}
@@ -13,21 +13,23 @@
 
 		{% if image %}
 		
-			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart">
-				{{ macro.articleImage(image, 'newsThumb', 'previewImg') }}
+			<a href="{{ queryParam.url }}" aria-label="{{ queryParam.title }}" class="imgPart {{ classImgParam }}">
+				{{ macro.articleImage(image, 'articleThumb', 'previewImg') }}
 			</a>
 
 		{% endif %}
 
-		<div class="txtPart">
-			<div class="previewMetaHeader">
-				{{ macroPostDate.postDate(queryParam.postDate, true) }}
-				{# {{ macroCat.catOverview(newsCat, 'subject', 'news', siteBrand.fColor2) }} #}
+		<div class="txtPart {{ classTxtParam }}">
+			<div class="txtOverview">
+				<div class="previewMetaHeader">
+					{{ macroPostDate.postDate(queryParam.postDate, true) }}
+					{# {{ macroCat.catOverview(newsCat, 'subject', 'news', siteBrand.fColor2) }} #}
+				</div>
+				<h4 class="previewTitle">
+					<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
+				</h4>
+				<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			</div>
-			<h4 class="previewTitle">
-				<a href="{{ queryParam.url }}">{{ queryParam.title }}</a>
-			</h4>
-			<p class="lead">{{ queryParam.fSeoDescription}}</p>
 			<a href="{{ queryParam.url }}" class="btn btnReadMore">{{ 'Lesen' | t }}</a>
 		</div>
 	</article>
