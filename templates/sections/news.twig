@@ -12,6 +12,7 @@
 	{% set authorShort = entry.authors | first %}
 
 	<article>
+		{% include "_components/share" %}
 		<header class="pageHead articleHead">
 			{% include "_components/header/headerBrand" %}
 			{% include "_components/header/headerNews" %}
