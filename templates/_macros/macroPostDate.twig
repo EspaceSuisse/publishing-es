@@ -4,14 +4,14 @@
     {% set daysAgo = date.diff(now).days %}
 
     {% if daysAgo == 0 %}
-        {{ 'Heute' | t }}
+        {{ 'Heute' | t | replace({' ': '&nbsp;'}) | raw }}
     {% elseif daysAgo == 1 %}
-        {{ 'Gestern' | t }}
+        {{ 'Gestern' | t | replace({' ': '&nbsp;'}) | raw }}
     {% else %}
         {% if craft.app.language == 'de-CH' %}
-            {{ date | date('d. M Y') }}
+            {{ date | date('d. M Y') | replace({' ': '&nbsp;'}) | raw }}
         {% else %}
-            {{ date | date('d M Y') }}
+            {{ date | date('d M Y') | replace({' ': '&nbsp;'}) | raw }}
         {% endif %}
     {% endif %}
     {% if wrap %}</p>{% endif %}

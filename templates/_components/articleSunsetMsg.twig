@@ -3,7 +3,7 @@
     {% set memberLoginPage = craft.entries.section('memberLogin').one() %}
 
     {% if not isSunset %}
-        {{ 'Artikel für Nichtmitglieder noch' | t }} {{ daysLeft }} {{ 'Tage verfügbar.' | t }}
+        {{ 'Artikel für Nichtmitglieder noch' | t }} {{ daysLeft }} {{ 'Tage verfügbar.' | t }} <br>
         <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Mitglied werden' | t }}</a>
     {% elseif freeForAll == true %}
         {{ 'Artikel frei Verfügbar' | t }}
