@@ -1,0 +1,21 @@
+<div class="listingPagination gridSpan12">
+	<a href="{{ pageInfo.firstUrl }}">{{ 'Erste Seite' | t }}</a>
+	{% if pageInfo.prevUrl %}
+		<a href="{{ pageInfo.prevUrl }}"><</a>
+	{% endif %}
+
+	{% for page, url in pageInfo.getPrevUrls(5) %}
+		<a href="{{ url }}">{{ page }}</a>
+	{% endfor %}
+
+	<span class="current">{{ pageInfo.currentPage }}</span>
+
+	{% for page, url in pageInfo.getNextUrls(5) %}
+		<a href="{{ url }}">{{ page }}</a>
+	{% endfor %}
+
+	{% if pageInfo.nextUrl %}
+		<a href="{{ pageInfo.nextUrl }}">></a>
+	{% endif %}
+	<a href="{{ pageInfo.lastUrl }}">{{ 'Letzte Seite' | t }}</a>
+</div>
