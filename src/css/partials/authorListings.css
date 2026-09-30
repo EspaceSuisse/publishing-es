@@ -1,52 +1,52 @@
-.bodyListingauthor {
-    .previewCard {
-        &.authorCard {
-            box-shadow: var(--shadow);
-            background-color: var(--colorPreviewCard);
-            grid-template-rows: auto 1fr auto;
-            align-content: stretch; 
+.previewCard {
+    &.authorCard {
+        grid-template-rows: auto 1fr auto;
+        align-content: stretch;
+
         .imgPart {
             border-radius: 0;
         }
+
         .txtPart {
             display: flex;
             flex-direction: column;
-            flex-grow: 1; 
+            flex-grow: 1;
             padding: 0;
         }
+
         .authorName {
-            font-size: var(--font-size-M);
+            font-size: var(--font-size-XL);
             font-family: var(--font-display);
-            padding-top: var(--layoutGap);
-            padding-left: var(--layoutGap);
-            padding-right: var(--layoutGap);
         }
-        .authorTaxonomy, .relatedPosts {
-            font-size: var(--font-size-S);
+        .authorTaxonomy {
+            font-size: var(--font-size-M);
             font-family: var(--font-default);
-            padding-left: var(--layoutGap);
-            padding-right: var(--layoutGap);
+            margin: 0;
+            a {
+                color: var(--linkTxtColor);
+            }
         }
-        }
-    }
-    .guestAuthorList {
-        font-size: var(--font-size-M);
-        font-family: var(--font-display);
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--layoutGap);
     }
 }
 
+.guestAuthorList {
+    font-size: var(--font-size-M);
+    font-family: var(--font-display);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--layoutGap);
+}
+
 .authorPosts {
-   .authorCard {
+    .authorCard {
         .imgPart {
             aspect-ratio: 1;
             border-radius: 1000px;
             overflow: hidden;
         }
+
         .txtPart {
             justify-content: center;
         }
-   } 
+    }
 }
