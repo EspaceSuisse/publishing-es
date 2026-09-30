@@ -1,4 +1,4 @@
-dateModified: 1790748801
+dateModified: 1790749060
 elementSources:
   craft\elements\Asset:
     -
@@ -354,6 +354,7 @@ meta:
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
     c78633bb-34f0-471f-b7f5-45bb42559dab: 'Listing Author' # Listing Author
     cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Call to Action' # Call to Action
+    cf6adcb3-eff6-4b6e-a47b-96c40a40241a: 'Img Source' # Img Source
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Span' # Grid Span
     d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Lauftext # Lauftext

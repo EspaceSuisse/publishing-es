@@ -86,6 +86,33 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-09-30T06:15:44+00:00'
+            editCondition: null
+            elementCondition:
+              class: craft\elements\conditions\assets\AssetCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: c344dec6-0346-4e67-99e0-ec1552b8946f # Lightswitch
+                  layoutElementUid: dbdb4c38-7926-4642-873f-0ab20520c4b4
+                  uid: ef5f9b89-fe06-4ca0-81a2-ba7273fcee1c
+                  value: false
+              elementType: craft\elements\Asset
+              fieldContext: global
+            elementEditCondition: null
+            fieldUid: cf6adcb3-eff6-4b6e-a47b-96c40a40241a # Img Source
+            handle: null
+            instructions: null
+            label: 'Bild URL'
+            oldFieldUid: cf6adcb3-eff6-4b6e-a47b-96c40a40241a # Img Source
+            required: false
+            tip: 'Falls du einen Direktlink auf die Bildquelle setzen möchtest'
+            type: craft\fieldlayoutelements\CustomField
+            uid: cfc551a5-4924-4f1e-96f3-3f3a39df9f41
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-08-27T09:35:33+00:00'
             editCondition: null
             elementCondition:
@@ -109,23 +136,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4bd1622b-4ce6-42e7-a383-5e90c059a56a
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-09-30T06:08:27+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 3bfc9fe5-3cbb-4ab0-bac7-c14c201c9bf1 # Blank Url String
-            handle: null
-            instructions: null
-            label: 'Quelle Url'
-            oldFieldUid: 3bfc9fe5-3cbb-4ab0-bac7-c14c201c9bf1 # Blank Url String
-            required: false
-            tip: 'Falls du die Bildquelle direkt verlinken willst.'
-            type: craft\fieldlayoutelements\CustomField
-            uid: d2e99be9-a294-4d79-8055-01f75dbd5f3a
             userCondition: null
             warning: null
             width: 100
