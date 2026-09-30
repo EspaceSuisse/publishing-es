@@ -37,3 +37,16 @@
         gap: var(--layoutGap);
     }
 }
+
+.authorPosts {
+   .authorCard {
+        .imgPart {
+            aspect-ratio: 1;
+            border-radius: 1000px;
+            overflow: hidden;
+        }
+        .txtPart {
+            justify-content: center;
+        }
+   } 
+}
