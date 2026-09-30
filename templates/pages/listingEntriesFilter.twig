@@ -40,37 +40,49 @@
         
 		{# First block: 1 Item #}
 		{% for item in allEntries | slice(0, sliceA) %}
+
+			{% set macroParams = [ 'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5' ] %}
+
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }}
 			{% endif %}
 		{% endfor %}
         
 		{# Second block: 2 Items #}
 		{% for item in allEntries | slice(offsetB, sliceB) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6'] %}
+
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }}
 			{% endif %}
 		{% endfor %}
 
 		{# MISSING THIRD BLOCK ADDED HERE: 4 Items #}
 		{% for item in allEntries | slice(offsetC, sliceC) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6'] %}
+
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }} {# Adjust these classes as needed #}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }} {# Adjust these classes as needed #}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }} {# Adjust these classes as needed #}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }} {# Adjust these classes as needed #}
 			{% endif %}
 		{% endfor %}
 
 		{# Fourth block: Remaining Items #}
 		{% for item in allEntries | slice(offsetD) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4'] %}
+
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4') }}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4') }}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }}
 			{% endif %}
 		{% endfor %}
 	</article>
