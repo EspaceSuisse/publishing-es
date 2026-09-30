@@ -4,5 +4,6 @@
   gap: var(--layoutGap);
   max-width: var(--listingMaxWidth);
   padding: 0 var(--airGap);
+  align-items: stretch;
   margin: auto;
 }
