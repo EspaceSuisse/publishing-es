@@ -1,4 +1,4 @@
-dateModified: 1790749060
+dateModified: 1790750699
 elementSources:
   craft\elements\Asset:
     -
@@ -359,6 +359,7 @@ meta:
     d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Lauftext # Lauftext
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
+    d59333c3-49a3-4ba8-b3c5-b4013b420c99: 'Lightswitch On' # Lightswitch On
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC

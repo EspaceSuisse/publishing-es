@@ -20,7 +20,8 @@
 			{%- endif -%}
 				<div>
 					<p class="authorName">
-						<a href="{{ authorUrlHelper.url(writter) }}">{{ writter.name|replace({' ': '&nbsp;'})|raw }}</a>
+						{# <a href="{{ authorUrlHelper.url(writter) }}">{{ writter.name|replace({' ': '&nbsp;'})|raw }}</a> #}
+						{{ writter }}
 					</p>
 					<p class="authorMeta">
 						{%- if writter.fPlainTextI18n2 or writter.fPlainTextI18n3 -%}
