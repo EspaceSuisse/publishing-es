@@ -1,39 +1,64 @@
 {# Determine the current element (entry, category, product, etc.) #}
 {% set currentElement = entry ?? category ?? product ?? null %}
 
+{# Check if we are currently on an author page route #}
+{% set isAuthorPage = craft.app.request.getSegment(1) in ['autoren', 'auteurs'] %}
+{% set currentAuthorSlug = isAuthorPage ? craft.app.request.getSegment(2) : null %}
+
 {# Get current URL parameters #}
 {% set queryParams = craft.app.request.getQueryParams() %}
 
-{% if currentElement %}
-	{% for site in craft.app.sites.allSites %}
+{# Route prefixes mapped to your actual site handles #}
+{% set authorPrefixes = {
+    'default': 'autoren',
+    'espacesuissePublishingFr': 'auteurs',
+} %}
 
-		{% set localized = craft.categories()
-            .id(currentElement.id)
-            .site(site.handle)
-            .one()
-        %}
+{# Only run the switcher if an element exists OR we are on an author page #}
+{% if currentElement or isAuthorPage %}
+    {% for site in craft.app.sites.allSites %}
+        {% set isActive = craft.app.language == site.language %}
+        {% set localizedUrl = null %}
 
-		{# If no category found, try entries instead #}
-		{% if not localized %}
-			{% set localized = craft.entries()
+        {% if isAuthorPage %}
+            {# --- 1. Author Custom Route Handling --- #}
+            {% set targetPrefix = authorPrefixes[site.handle] ?? 'autoren' %}
+            
+            {# Strip trailing slashes from baseUrl, then append the path #}
+            {% set baseUrl = alias(site.baseUrl)|trim('/', 'right') %}
+            {% set localizedUrl = baseUrl ~ '/' ~ targetPrefix ~ '/' ~ currentAuthorSlug %}
+
+        {% elseif currentElement %}
+            {# --- 2. Element (Entry/Category) Handling --- #}
+            {% set localized = craft.categories()
                 .id(currentElement.id)
                 .site(site.handle)
                 .one()
             %}
-		{% endif %}
 
-		{% set isActive = craft.app.language == site.language %}
+            {% if not localized %}
+                {% set localized = craft.entries()
+                    .id(currentElement.id)
+                    .site(site.handle)
+                    .one()
+                %}
+            {% endif %}
 
-		{% if localized and localized.enabled %}
-			{% set localizedUrl = queryParams|length ? localized.url ~ '?' ~ queryParams|url_encode : localized.url %}
-			
-			<li class="langSwitcher {{ isActive ? 'isActive' : '' }}">
-				{# Create a link to the localized version of the current element with query params #}
-				<a href="{{ localizedUrl }}">
-					{{ site.language |replace({'de-CH': 'de', 'fr-CH': "fr"}) }}
-				</a>
-			</li>
-		{% endif %}
+            {% if localized and localized.enabled %}
+                {% set localizedUrl = localized.url %}
+            {% endif %}
+        {% endif %}
 
-	{% endfor %}
+        {# --- 3. Render Link --- #}
+        {% if localizedUrl %}
+            {% set finalUrl = queryParams|length ? localizedUrl ~ '?' ~ queryParams|url_encode : localizedUrl %}
+
+            <li class="langSwitcher {{ isActive ? 'isActive' : '' }}">
+                <a href="{{ finalUrl }}">
+                    {{ site.language | replace({'de-CH': 'de', 'fr-CH': 'fr'}) }}
+                </a>
+            </li>
+        {% endif %}
+
+    {% endfor %}
 {% endif %}

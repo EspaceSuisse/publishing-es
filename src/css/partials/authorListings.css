@@ -29,4 +29,24 @@
         }
         }
     }
+    .guestAuthorList {
+        font-size: var(--font-size-M);
+        font-family: var(--font-display);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--layoutGap);
+    }
+}
+
+.authorPosts {
+   .authorCard {
+        .imgPart {
+            aspect-ratio: 1;
+            border-radius: 1000px;
+            overflow: hidden;
+        }
+        .txtPart {
+            justify-content: center;
+        }
+   } 
 }
