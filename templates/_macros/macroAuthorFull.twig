@@ -1,12 +1,9 @@
 {%- macro authorArticle(queryParam, htmlParam) -%}
 
-		{% import '_macros/macroAuthorField' as macro %}
 		{% import '_macros/macroAuthorUrl' as authorUrlHelper %}
+		{% import '_macros/macroAuthorTaxonomy' as authorTaxonomy %}
 
 		{% set writter = queryParam %}
-		{% set esUrlDe = 'https://www.espacesuisse.ch/de/verband/organisation/geschaeftsstelle' %}
-		{% set esUrlFr = 'https://www.espacesuisse.ch/fr/association/organisation/secretariat' %}
-		{% set functionSeparator = ',' %}
 
 		{% if htmlParam %}<li class="authorItem">{% endif %}
 		
@@ -20,27 +17,14 @@
 			{%- endif -%}
 				<div>
 					<p class="authorName">
-						{# <a href="{{ authorUrlHelper.url(writter) }}">{{ writter.name|replace({' ': '&nbsp;'})|raw }}</a> #}
-						{{ writter }}
+						{% if writter.fSwitchOn %}
+							<a href="{{ authorUrlHelper.url(writter) }}">{{ writter.name|replace({' ': '&nbsp;'})|raw }}</a>
+						{% else %}
+							{{ writter }}
+						{% endif %}
 					</p>
 					<p class="authorMeta">
-						{%- if writter.fPlainTextI18n2 or writter.fPlainTextI18n3 -%}
-							<span class="authorEducation">
-								{{ macro.authorI18nField(writter.fPlainTextI18n2, writter.fPlainTextI18n3) }}{{ functionSeparator }}
-							</span>
-						{%- endif -%}
-						{%- if writter.fPlainTextI18n -%}
-							<span class="authorFunction">
-								{{ macro.authorI18nField(writter.fPlainTextI18n, writter.fPlainTextI18n4) }}
-							</span>
-						{%- endif -%}
-						{% if writter.isInGroup('espacesuisse') %}	
-							{% if queryParam.language == 'de-CH' %}
-								<a href="{{ esUrlDe }}">EspaceSuisse</a></span>
-							{% else %}
-								<a href="{{ esUrlFr }}">EspaceSuisse</a></span>
-							{% endif %}
-						{% endif %}
+						{{ authorTaxonomy.authorTaxonomy(writter) }}
 					</p>
 				</div>
 		{% if htmlParam %}</li>{% endif %}
