@@ -1,4 +1,4 @@
-dateModified: 1790750699
+dateModified: 1790750951
 elementSources:
   craft\elements\Asset:
     -
@@ -201,8 +201,9 @@ elementSources:
       tableAttributes:
         - 'field:9173344f-7095-45e6-a477-c0273f2b99e3' # Plain Text I18n 2
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
-        - 'field:397fd1ab-a87a-4c2d-8286-283145152ca8'
         - status
+        - 'field:c344dec6-0346-4e67-99e0-ec1552b8946f' # Lightswitch
+        - 'field:0b6f8ead-6d71-4167-83c5-510df38bf06b' # Gender
       type: native
     -
       key: 'group:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
