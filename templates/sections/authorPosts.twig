@@ -46,13 +46,11 @@
 			{% set articles = craft.entries.section('article').authorId(author.id).all() %}
 
 			{% if author.fGender == 'male' %}
-				{% set authorGenitive = 'des Autors' %}
-			{% elseif author.fGender == 'genderless' %}
-				{% set authorGenitive = 'der Autorenschaft' %}
-			{% elseif author.fGender == 'noInfo' %}
-				{% set authorGenitive = 'der schreibenden Person' %}
+				{% set authorGenitive = 'des Autors' | t %}
+			{% elseif author.fGender == 'genderUnknown' | t %}
+				{% set authorGenitive = 'der schreibenden Person' | t %}
 			{% else %}
-				{% set authorGenitive = 'der Autorin' %}
+				{% set authorGenitive = 'der Autorin' | t %}
 			{% endif %}
 
 			<h1 class="gridSpan12 topicTitle">Alle Artikel {{ authorGenitive }}</h1>
