@@ -1,9 +1,9 @@
 {%- macro imageSource(handleParam) -%}
 
-	{%- set imgSource = handleParam.fmImgSource.all() | length -%}
+	{%- set imgSource = handleParam.fmImgSource.all() -%}
 	{%- set imgSourcePlatform = handleParam.fTagProvider.one() -%}
 	{%- set imgSourceLicence = handleParam.fImgLicence.one() -%}
-	{%- set imgSourceUrl = handleParam.imgSource -%}
+	{%- set imgSourceUrl = handleParam.imgSourceUrl -%}
 
 	{%- set photographer = '' -%}
 	{%- set totalSourceString = '' -%}
@@ -11,7 +11,6 @@
 	
 
 	{# Construct the Photographer Name #}
-
 	{%- for item in imgSource -%}
 		{%- switch item.type.handle -%}
 			{%- case 'tMonolingual' -%}
@@ -23,12 +22,12 @@
 
 	{# Construct the source + Photographer + image licence #}
 
-	{%- set totalSourceString = photographer ~ ' ' ~ imgSourcePlatform ~ ' ' ~ imgSourceLicence -%}
+	{%- set totalSourceString = ' ' ~ photographer ~ ' ' ~ imgSourcePlatform ~ ' ' ~ imgSourceLicence -%}
 
 	{% if imgSourceUrl %}
-		({{ 'Quelle' | t }}: <a href="{{ imgSourceUrl }}" target="_blank">{{ totalSourceString }}</a>)
+		({{ 'Quelle' | t }}: <a href="{{ imgSourceUrl }}" target="_blank">{{ totalSourceString | trim }}</a>)
 	{% else %}
-		({{ 'Quelle' | t }}: {{ totalSourceString }})
+		({{ 'Quelle' | t }}: {{- totalSourceString | trim -}})
 	{% endif %}
 
 {%- endmacro -%}
