@@ -2,12 +2,21 @@
 {% import '_macros/macroImage' as macroImg %}
 {% import '_macros/macroAuthorField' as macro %}
 {% import '_macros/macroPostDate' as macroPostDate %}
+{% import '_macros/macroAuthorFull' as writers %}
+{% import '_macros/macroAuthorTaxonomy' as authorTaxonomy %}
 
 {% block content %}
 
 	{# get all relevant authors #}
 	{% set authorPosts = craft.users
         .group(['espacesuisse'])
+		.fSwitchOn(true)
+        .orderBy('fullName asc')
+        .status('active')
+        .all() %}
+
+	{% set authorGuest = craft.users
+        .group(['externalAuthor'])
 		.fSwitchOn(true)
         .orderBy('fullName asc')
         .status('active')
@@ -26,8 +35,6 @@
 			{# cconstruct the link to the authors page with all his written articles #}
 			{% set authorPostPage = craft.entries.section('article').authorId(author.id).limit(1).one() %}
 
-			{# print a limited amount of articles as preview #}
-			{% set relArticles = craft.entries.section('article').authorId(author.id).limit(3).all() %}
 
 			{# construct the author slug. unfortunately umlauts are unavoidable right now #}
 			{% set authorSlug = author.username %}
@@ -35,7 +42,6 @@
 
 			{% if authorPostPage %}
 				<div class="authorCard gridSpan12 gridLgSpan4 previewCard">
-
 					{# render author photo #}
 					<div class="imgPart gridSpan12 gridSmSpan4">
 						{% if author.photo %}
@@ -44,20 +50,26 @@
 					</div>
 					<div class="txtPart gridSpan12 gridSmSpan8">
 						<h2 class="authorName">{{ author.name }}</h2>
-						<p class="authorTaxonomy">
-							{% if craft.app.language == 'de-CH' %}
-								{{ macro.authorI18nField(author.fPlainTextI18n, author.fPlainTextI18n4) }}
-							{% else %}
-								{{ macro.authorI18nField(author.fPlainTextI18n2, author.fPlainTextI18n3) }}
-							{% endif %}
-						</p>
-						<a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}" class="allPosts btn .">
+						<p class="authorTaxonomy">{{ authorTaxonomy.authorTaxonomy(author) }}</p>
+						<a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}" class="btn btnReadMore">
 							{{ 'Zu den Artikeln' | t }}
 						</a>
 					</div>
 				</div>
 			{% endif %}
+
 		{% endfor %}
+
+		{% if authorGuest | length %}
+			<div class="geustAuthors gridSpan12">
+				<h2>Unsere Gastautoren:</h2>
+				<ul>
+					{% for guest in authorGuest %}
+						<li>{{ guest.fullName }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
 	</article>
 
 {% endblock %}
