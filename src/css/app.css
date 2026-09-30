@@ -51,6 +51,7 @@
 @import "components/header/headerCard.css";
 @import "components/newsTeaser.css";
 @import "components/listingAuthors.css";
+@import "partials/authorListings.css";
 @import "partials/anchorLink.css";
 @import "partials/pageContentHead.css";
 @import "partials/loginIndicator.css";

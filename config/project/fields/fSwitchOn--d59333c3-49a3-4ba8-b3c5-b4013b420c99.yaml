@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: fSwitchOn
+instructions: null
+name: 'Lightswitch On'
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

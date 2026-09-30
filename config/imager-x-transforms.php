@@ -25,7 +25,7 @@ return [
     'authorPortrait' => [
         'displayName' => 'Author Portrait',
         'transforms' => [
-            ['width' => 100, 'ratio' => 1 / 1],
+            ['width' => 256, 'ratio' => 1 / 1],
         ],
         'defaults' => $defaults,
     ],

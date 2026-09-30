@@ -1,6 +1,6 @@
 {%- macro imageSource(handleParam) -%}
 
-	{%- set imgSource = handleParam.fmImgSource.all() -%}
+	{%- set imgSource = handleParam.fmImgSource.all() | length -%}
 	{%- set imgSourcePlatform = handleParam.fTagProvider.one() -%}
 	{%- set imgSourceLicence = handleParam.fImgLicence.one() -%}
 	{%- set imgSourceUrl = handleParam.imgSource -%}
