@@ -5,12 +5,13 @@
 {% for item in latestNews %}
 
     {% set postUID = item.uid ~ '-' ~ item.siteId %}
+    {% set utmTracker = '?utm_source=espacesuisse&utm_medium=referral' %}
 
     {
         "id": "{{ item.id }}",
         "title": "{{  item.fPlainTextI18n ??  item.title}}",
         "description": "{{ item.fSeoDescription }}",
-        "url": "{{ item.url }}",
+        "url": "{{ (item.url ~ utmTracker)|raw }}",
         "postDate": "{{ item.postDate | date('c') }}",
         "postDateUnix": {{ item.postDate | date('U') }},
         "item_uid": "{{ postUID }}",

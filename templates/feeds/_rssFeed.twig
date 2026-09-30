@@ -29,6 +29,7 @@
 
     {% set deSiteHandle = 'default' %}
     {% set frSiteHandle = 'espacesuissePublishingFr' %}
+    {% set utmTracker = '?utm_source=social&utm_medium=organic_social' %}
     
 
     {% for item in feedEntries %}
@@ -66,7 +67,7 @@
             <title>{{ feedItemTitle }}</title>
             <description><![CDATA[{{ feedItemSeoDesc }}]]></description>
             <content:encoded><![CDATA[{{ feedItemLead }}]]></content:encoded>
-            <link>{{ item.url }}</link>
+            <link>{{ (item.url ~ utmTracker)|raw }}</link>
             <guid isPermaLink="false">{{ postUID }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
             <category domain="language">{{ langISO }}</category>
