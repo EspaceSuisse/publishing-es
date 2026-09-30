@@ -29,4 +29,11 @@
         }
         }
     }
+    .guestAuthorList {
+        font-size: var(--font-size-M);
+        font-family: var(--font-display);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--layoutGap);
+    }
 }

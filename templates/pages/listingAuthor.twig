@@ -62,8 +62,8 @@
 
 		{% if authorGuest | length %}
 			<div class="geustAuthors gridSpan12">
-				<h2>Unsere Gastautoren:</h2>
-				<ul>
+				<h2 class="topicTitle">{{ 'Unsere Gastautoren' | t }}</h2>
+				<ul class="guestAuthorList">
 					{% for guest in authorGuest %}
 						<li>{{ guest.fullName }}</li>
 					{% endfor %}
