@@ -28,13 +28,6 @@
 								{{ macro.authorI18nField(writter.fPlainTextI18n2, writter.fPlainTextI18n3) }}{{ functionSeparator }}
 							</span>
 						{%- endif -%}
-						{# {%- for cat in writter.fTeam -%}
-							{%- if cat.fBlankUrlString -%}
-								<a class="authorTeam" href="{{ cat.fBlankUrlString }}">{{ cat.title ~ '.' }}</a>
-							{%- else -%}
-								<span class="authorTeam" >{{ cat.title ~ '.' }}</span>
-							{%- endif -%}
-						{%- endfor -%} #}
 						{%- if writter.fPlainTextI18n -%}
 							<span class="authorFunction">
 								{{ macro.authorI18nField(writter.fPlainTextI18n, writter.fPlainTextI18n4) }}
