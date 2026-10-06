@@ -1,37 +1,77 @@
 {% extends "_layouts/main" %}
+{% import '_macros/macroImage' as macroImg %}
+{% import '_macros/macroAuthorField' as macro %}
+{% import '_macros/macroPostDate' as macroPostDate %}
+{% import '_macros/macroAuthorFull' as writers %}
+{% import '_macros/macroAuthorTaxonomy' as authorTaxonomy %}
 
 {% block content %}
 
-    {# get all relevant authors #}
-	{% set authorPosts = craft.users.group(['espacesuisse','externalAuthor','editor']).status('active').all() %}
+	{# get all relevant authors #}
+	{% set authorPosts = craft.users
+        .group(['espacesuisse'])
+		.fSwitchOn(true)
+        .orderBy('fullName asc')
+        .status('active')
+        .all() %}
 
-    {# construct the language url segment becuse users have no urls functionality #}
-	{% set baseSegment = {
-            'de-CH': 'autoren',
-            'fr-CH': 'auteurs'
-        }[craft.app.language] %}
+	{% set authorGuest = craft.users
+        .group(['externalAuthor'])
+		.fSwitchOn(true)
+        .orderBy('fullName asc')
+        .status('active')
+        .all() %}
 
-	
-    <div class="listingGrid">
-        <h1 class="gridSpan12">{{ entry.title }}</h1>
-        {% for author in authorPosts %}
+	{# construct the language url segment becuse users have no urls functionality #}
+	{% set baseSegment = { 'de-CH': 'autoren', 'fr-CH': 'auteurs' }[craft.app.language] %}
 
-            {# check if author has at least one article written #}
-            {% set authoredArticles = craft.entries.section('article').authorId(author.id).limit(1).one() %}
+	<header class="pageHead subPageHead">
+		{% include "_components/header/headerBrand" %}
+		{% include "_components/header/headerPage" %}
+	</header>
+	<article class="listingGrid">
+		{% for author in authorPosts %}
 
-            {# construct the author slug. unfortunately umlauts are unavoidable right now #}
-            {% set authorSlug = author.username %}
+			{# cconstruct the link to the authors page with all his written articles #}
+			{% set authorPostPage = craft.entries.section('article').authorId(author.id).limit(1).one() %}
 
-            {% if authoredArticles %}
-                <div class="authorPost gridSpan6">
-                    {% if author.photo %}
-                        <img src="{{ author.photo.url }}" alt="">
-                    {% endif %}
-                    <h4>{{ author.name }}</h4>
-                    <a href="{{ url(baseSegment ~ '/' ~ authorSlug) }}">{{ 'Alle Artikel von ' | t }}{{ author.name }} {{ 'anzeigen' | t | lower }}</a>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+			{# construct the author slug. unfortunately umlauts are unavoidable right now #}
+			{% set authorSlug = author.username %}
+
+			{# construct the url to the authors post page #}
+			{% set authorPostsUrl = url(baseSegment ~ '/' ~ authorSlug) %}
+
+
+			{% if authorPostPage %}
+				<div class="authorCard gridSpan12 gridLgSpan4 previewCard">
+					{# render author photo #}
+					<a href="{{ authorPostsUrl}}" class="imgPart gridSpan12 gridSmSpan4">
+						{% if author.photo %}
+							{{ macroImg.articleImage(author.photo, 'articleThumb', 'imgArticle') }}
+						{% endif %}
+					</a>
+					<div class="txtPart gridSpan12 gridSmSpan8">
+						<h2 class="authorName">{{ author.name }}</h2>
+						<p class="authorTaxonomy">{{ authorTaxonomy.authorTaxonomy(author) }}</p>
+						<a href="{{ authorPostsUrl }}" class="btn btnReadMore">
+							{{ 'Zu den Artikeln' | t }}
+						</a>
+					</div>
+				</div>
+			{% endif %}
+
+		{% endfor %}
+
+		{% if authorGuest | length %}
+			<div class="geustAuthors gridSpan12">
+				<h2 class="topicTitle">{{ 'Unsere Gastautoren' | t }}</h2>
+				<ul class="guestAuthorList">
+					{% for guest in authorGuest %}
+						<li>{{ guest.fullName }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+	</article>
 
 {% endblock %}

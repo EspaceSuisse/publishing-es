@@ -20,11 +20,8 @@
 	<div class="headCardGrid">
 
 		<div class="{{ smallerGrid }} headMeta">
-			<div class="cluster">
-				{{ macroPostDate.postDate(entry.postDate, true) }} | 
-				{% include "_components/articleSunsetMsg" %}
-			</div>
-			{% include "_components/share" %}
+			{{ macroPostDate.postDate(entry.postDate, true) }} | 
+			{% include "_components/articleSunsetMsg" %}
 		</div>
 
 		<h1 class="{{ smallerGrid }} topicTitle">

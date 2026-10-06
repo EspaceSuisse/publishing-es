@@ -12,7 +12,9 @@
         border-radius: 50%;
         object-fit: cover;
     }
-
+    a {
+        color: var(--linkTxtColor);
+    }
     li {
         display: flex;
         gap: var(--layoutGap);

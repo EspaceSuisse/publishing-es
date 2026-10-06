@@ -2,6 +2,12 @@
     font-family: var(--font-monospace);
     white-space: nowrap;
     font-size: var(--font-size-S);
+    &.genre {
+        background-color: var(--colorGenre);
+    }
+    &.subject {
+        background-color: var(--colorSubject);
+    }
     a {
         color: var(--txtColor);
         padding: var(--paddingBtnSmall);

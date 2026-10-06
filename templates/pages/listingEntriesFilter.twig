@@ -23,39 +23,66 @@
 
 	{% set allEntries = query.all() %}
 
-	{# --- Layout config --- #}
+		{# --- Layout config --- #}
 	{% set sliceA = 1 %}
 	{% set sliceB = 2 %}
 	{% set sliceC = 4 %}
 
 	{# Offsets calculate themselves #}
-	{% set offsetB = sliceA %}
-	{% set offsetC = sliceA + sliceB %}
-	{% set offsetD = sliceA + sliceB + sliceC %}
+	{% set offsetB = sliceA %} {# Equals 1 #}
+	{% set offsetC = sliceA + sliceB %} {# Equals 3 #}
+	{% set offsetD = sliceA + sliceB + sliceC %} {# Equals 7 #}
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 	<article class="listingGrid">
 		{% include "_components/header/headerBrand" %}
 		{% include "_components/header/headerCatList" %}
+        
+		{# First block: 1 Item #}
 		{% for item in allEntries | slice(0, sliceA) %}
+
+			{% set macroParams = [ 'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5' ] %}
+
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12', ) }}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5') }}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }}
 			{% endif %}
 		{% endfor %}
+        
+		{# Second block: 2 Items #}
 		{% for item in allEntries | slice(offsetB, sliceB) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6'] %}
+
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan6') }}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6') }}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }}
 			{% endif %}
 		{% endfor %}
-		{% for item in allEntries | slice(offsetD) %}
+
+		{# MISSING THIRD BLOCK ADDED HERE: 4 Items #}
+		{% for item in allEntries | slice(offsetC, sliceC) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6'] %}
+
 			{% if item.section.handle == 'news' %}
-				{{ macroPreviewNews.listMacro(item,'gridSpan12 gridMdSpan4') }}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }} {# Adjust these classes as needed #}
 			{% else %}
-				{{ macroPreviewArticle.listMacro(item,'gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4') }}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }} {# Adjust these classes as needed #}
+			{% endif %}
+		{% endfor %}
+
+		{# Fourth block: Remaining Items #}
+		{% for item in allEntries | slice(offsetD) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4'] %}
+
+			{% if item.section.handle == 'news' %}
+				{{ macroPreviewNews.listMacro(item, ...macroParams) }}
+			{% else %}
+				{{ macroPreviewArticle.listMacro(item, ...macroParams) }}
 			{% endif %}
 		{% endfor %}
 	</article>

@@ -17,10 +17,21 @@
 		<aside class="dropdown" id="dropdown-menu" role="menu">
 
 			<div class="dropdownContents">
-				<ul class="majorLinks gridMdSpan2">
+				<ul class="majorLinks">
 					{% include "_components/sideBar/siteNavMoreLinks.twig" %}
-					{% include "_components/sideBar/navLangSwitcher.twig" %}
 				</ul>
+				<div  class="siteSettings">
+					<div class="element">
+						<p class="elementTitle">{{ "Sprache" | t }}:</p>
+						<ul  class="majorLinks">
+							{% include "_components/sideBar/navLangSwitcher.twig" %}
+						</ul>
+					</div>
+					<div class="element">
+						<p class="elementTitle">{{ "Farbschema" | t }}:</p>
+						{% include "_components/themeColorSwitcher" %}
+					</div>
+				</div>
 				<div class="latestEntries">
 					{% for item in latestNews %}
 						{% if loop.first %}

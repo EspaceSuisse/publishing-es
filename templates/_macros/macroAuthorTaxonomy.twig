@@ -1,0 +1,27 @@
+{%- macro authorTaxonomy(queryParam) -%}
+
+	{% import '_macros/macroAuthorField' as macro %}
+
+	
+	{% set esUrlDe = 'https://www.espacesuisse.ch/de/verband/organisation/geschaeftsstelle' %}
+	{% set esUrlFr = 'https://www.espacesuisse.ch/fr/association/organisation/secretariat' %}
+	{% set functionSeparator = ',' %}
+
+	{%- if queryParam.fPlainTextI18n2 or queryParam.fPlainTextI18n3 -%}
+		<span class="authorEducation">
+			{{ macro.authorI18nField(queryParam.fPlainTextI18n2, queryParam.fPlainTextI18n3) }}{{ functionSeparator }}
+		</span>
+	{%- endif -%}
+	{%- if queryParam.fPlainTextI18n -%}
+		<span class="authorFunction">
+			{{ macro.authorI18nField(queryParam.fPlainTextI18n, queryParam.fPlainTextI18n4) }}
+		</span>
+	{%- endif -%}
+	{% if queryParam.isInGroup('espacesuisse') %}
+		{% if queryParam.language == 'de-CH' %}
+			<a href="{{ esUrlDe }}">EspaceSuisse</a>
+		</span>
+	{% else %}
+		<a href="{{ esUrlFr }}">EspaceSuisse</a>
+	</span>
+{% endif %}{% endif %}{%- endmacro -%}

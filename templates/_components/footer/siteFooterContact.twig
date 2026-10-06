@@ -1,5 +1,6 @@
 {# Grabs the data from the seomaticPlugin site Identity #}
 {% set esBase = seomatic.site.identity %}
+{% set emailLink = '<a href="mailto:' ~ esBase.genericEmail ~ '">' ~ esBase.genericEmail ~ '</a>' %}
 
 <h2>{{ esBase.genericName }}</h2>
 <p>
@@ -15,7 +16,8 @@
 	</a>
 </p>
 <p>
-	<a href="mailto:{{ esBase.genericEmail }}">{{ esBase.genericEmail | enkode }}</a>
+	
+	{{ emailLink | enkode_mailtos | raw }}
 	<br>
 	<a href="{{ esBase.genericUrl }}">{{ esBase.genericUrl | replace({'https://' : '' })  | replace({'www.' : '' }) }}</a><br>
 	<a href="tel:{{ esBase.genericTelephone }}">{{ esBase.genericTelephone | enkode }}</a>

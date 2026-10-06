@@ -1,0 +1,54 @@
+.previewCard {
+    &.authorCard {
+        grid-template-rows: auto 1fr auto;
+        align-content: stretch;
+        box-shadow: var(--shadow);
+        .imgPart {
+            border-radius: 0;
+        }
+
+        .txtPart {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 0;
+        }
+
+        .authorName {
+            font-size: var(--font-size-L);
+            font-family: var(--font-display);
+            padding: var(--layoutGap) 0 0 var(--layoutGap);
+        }
+        .authorTaxonomy {
+            font-size: var(--font-size-M);
+            font-family: var(--font-default);
+            padding: 0 var(--layoutGap);
+            margin: 0;
+            a {
+                color: var(--linkTxtColor);
+            }
+        }
+    }
+}
+
+.guestAuthorList {
+    font-size: var(--font-size-M);
+    font-family: var(--font-display);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--layoutGap);
+}
+
+.bodyAuthorposts {
+    .authorCard {
+        box-shadow: none;
+        .imgPart {
+            aspect-ratio: 1;
+            border-radius: 1000px;
+            overflow: hidden;
+        }
+        .txtPart {
+            justify-content: center;
+        }
+    }
+}

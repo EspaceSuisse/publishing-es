@@ -19,8 +19,10 @@
 {% set markerHandle = block.fMxMarker %}
 {% set polygonHandle = block.fPolygons %}
 {% set labelTxtSize = '15' %}
-{% set labelTxtColor = 'rgb(86, 86, 86)' %}
-{% set labelTxtHalo = 'rgb(250, 250, 250)' %}
+{% set labelTxtOffset = '-5' %}
+{% set labelTxtColor = 'black' %}
+{% set labelTxtHalo = 'white' %}
+{% set labelHaloWidth = 1 %}
 {% set pinColor = 'rgb(28, 112, 183)' %}
 
 
@@ -224,10 +226,10 @@
                 source: 'marker-labels',
                 layout: {
                     'text-field': ['get', 'title'],
-                    'text-font': ['Frutiger Neue Italic'],
+                    'text-font': ['Frutiger Neue Bold'],
                     // 'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // doesnt scale with zoom
                     'text-size': {{ labelTxtSize }},
-                    'text-offset': [0, -4],
+                    'text-offset': [0, {{ labelTxtOffset }}],
                     'text-anchor': 'top'
                 },
                 paint: {
@@ -284,11 +286,6 @@
                     }
                 }))
             );
-
-            const circleLabelFeatures = polygonFeatures.filter(feature =>
-                    feature.geometry?.type === 'Point' &&
-                    feature.properties?.type === 'circle'
-                );
 
                 const renderFeatures = polygonFeatures.map(feature => {
                     const isCircle =
@@ -393,8 +390,53 @@
                 }
             });
 
+            // Polylines (unclosed lines)
+            map.addLayer({
+                id: 'polyline-lines',
+                type: 'line',
+                source: 'polygons',
+                filter: ['any',
+                    ['==', ['geometry-type'], 'LineString'],
+                    ['==', ['geometry-type'], 'MultiLineString']
+                ],
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': ['coalesce', ['get', 'color'], '#f0c96a'],
+                    'line-width': ['coalesce', ['get', 'width'], 5]
+                }
+            });
+
             // Polygon labels
-            // Labels for polygons and circles
+            map.addLayer({
+                id: 'polyline-labels',
+                type: 'symbol',
+                source: 'polygons',
+                filter: ['any',
+                    ['==', ['geometry-type'], 'LineString'],
+                    ['==', ['geometry-type'], 'MultiLineString']
+                ],
+                layout: {
+                    'text-field': ['coalesce', ['get', 'title'], ['get', 'label'], ''],
+                    'text-font': ['Frutiger Neue Bold'],
+                    'text-size': {{ labelTxtSize }},
+                    'symbol-placement': 'line-center',
+                    'text-rotation-alignment': 'map',
+                    'text-offset': [0, -1],
+                    'text-max-angle': 45,
+                    'text-allow-overlap': true,
+                    'text-ignore-placement': true
+                },
+                paint: {
+                    'text-color': '{{ labelTxtColor }}',
+                    'text-halo-color': '{{ labelTxtHalo }}',
+                    'text-halo-width': {{ labelHaloWidth }}
+                }
+            });
+
+            // Polygon + circle labels
             map.addLayer({
                 id: 'polygon-labels-layer',
                 type: 'symbol',
@@ -402,17 +444,11 @@
                 filter: [
                     'any',
                     ['==', ['geometry-type'], 'Polygon'],
-                    ['==', ['geometry-type'], 'MultiPolygon'],
-                    [
-                        'all',
-                        ['==', ['geometry-type'], 'Point'],
-                        ['==', ['get', 'type'], 'circle']
-                    ]
+                    ['==', ['geometry-type'], 'MultiPolygon']
                 ],
                 layout: {
-                    'text-field': ['get', 'title'],
-                    'text-font': ['Frutiger Neue Italic'],
-                    // 'text-size': scaleWithMap({{ labelTxtSize }}, {{ mapZoom }}),   // was: 14
+                    'text-field': ['coalesce', ['get', 'title'], ['get', 'label'], ''],
+                    'text-font': ['Frutiger Neue Bold'],
                     'text-size': {{ labelTxtSize }},
                     'text-pitch-alignment': 'viewport',
                     'text-rotation-alignment': 'viewport',
@@ -423,9 +459,10 @@
                 paint: {
                     'text-color': '{{ labelTxtColor }}',
                     'text-halo-color': '{{ labelTxtHalo }}',
-                    'text-halo-width': 1
+                    'text-halo-width': {{ labelHaloWidth }}
                 }
             });
+            
         });
 
         // --- Save map state on pan/zoom ---

@@ -9,7 +9,15 @@
  * https://craftcms.com/docs/4.x/routing.html
  */
 
+// this route generates author posing urls. there a page will be generated with the posts of each authors.
+//template: pages/authorPosts
 return [
-    'autoren/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
-    'auteurs/<authorSlug:{slug}>' => ['template' => 'pages/authorPosts'],
+    // German site
+    'default' => [
+        'autoren/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],
+    ],
+    // French site
+    'espacesuissePublishingFr' => [
+        'auteurs/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],
+    ],
 ];

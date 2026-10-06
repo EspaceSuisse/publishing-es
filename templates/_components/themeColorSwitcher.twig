@@ -1,0 +1,40 @@
+<ul aria-label="Color scheme switcher" class="theme-switcher">
+    <li><button aria-pressed="false" data-theme-value="light">{{ 'Hell' | t }}</button></li>
+    <li><button aria-pressed="true" data-theme-value="auto">Auto</button></li>
+    <li><button aria-pressed="false" data-theme-value="dark">{{ 'Dunkel' | t }}</button></li>
+</ul>
+
+
+{% js %}
+    const switchers = document.querySelectorAll('.theme-switcher');
+
+function applyTheme(theme) {
+    if (theme === 'auto') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+    } else {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+
+    switchers.forEach(switcher => {
+        switcher.querySelectorAll('button').forEach(button => {
+            const isActive = button.dataset.themeValue === theme;
+
+            button.setAttribute('aria-pressed', isActive);
+            button.classList.toggle('isActive', isActive);
+        });
+    });
+}
+
+const currentTheme = localStorage.getItem('theme') || 'auto';
+applyTheme(currentTheme);
+
+switchers.forEach(switcher => {
+    switcher.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => {
+            applyTheme(button.dataset.themeValue);
+        });
+    });
+});
+{% endjs %}

@@ -86,7 +86,11 @@ body {
     font-family: var(--font-default);
     font-weight: var(--font-medium);
     line-height: 1.4;
+    padding-bottom: var(--layoutGap);
     margin: 0;
+    a {
+        color: var(--linkTxtColor);
+    }
 }
 sub, sup {
   font-size: 0.75em;

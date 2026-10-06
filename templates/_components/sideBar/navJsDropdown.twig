@@ -1,6 +1,6 @@
 {% js %}
 document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.querySelector('nav'); // select your nav element
+    const nav = document.querySelector('nav');
 
     document.querySelectorAll('.dropdownLink').forEach(button => {
         button.addEventListener('click', (event) => {
@@ -13,13 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
                 if (openDropdown !== dropdown) {
                     openDropdown.classList.remove('open');
+
                     const parentButton = openDropdown.closest('li').querySelector('.dropdownLink');
-                    if (parentButton) parentButton.classList.remove('open');
+                    if (parentButton) {
+                        parentButton.classList.remove('open');
+                    }
                 }
             });
 
             if (dropdown.classList.contains('open')) {
-                // Start slide-out animation
                 dropdown.classList.add('closing');
                 dropdown.classList.remove('open');
                 button.classList.remove('open');
@@ -27,18 +29,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     dropdown.classList.remove('closing');
 
-                    // Remove nav open class if no dropdowns are open
                     if (!document.querySelector('.dropdown.open')) {
                         nav.classList.remove('open');
                     }
-                }, 300); // match transition duration
+                }, 300);
             } else {
                 dropdown.classList.add('open');
                 button.classList.add('open');
-
-                // Add nav open class
                 nav.classList.add('open');
             }
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+        // Ignore clicks inside an open dropdown or on a dropdown trigger
+        if (
+            event.target.closest('.dropdown.open') ||
+            event.target.closest('.dropdownLink')
+        ) {
+            return;
+        }
+
+        document.querySelectorAll('.dropdown.open').forEach(dropdown => {
+            dropdown.classList.add('closing');
+            dropdown.classList.remove('open');
+
+            const button = dropdown.closest('li')?.querySelector('.dropdownLink');
+            if (button) {
+                button.classList.remove('open');
+            }
+
+            setTimeout(() => {
+                dropdown.classList.remove('closing');
+
+                if (!document.querySelector('.dropdown.open')) {
+                    nav.classList.remove('open');
+                }
+            }, 300);
         });
     });
 });

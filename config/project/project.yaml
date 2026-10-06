@@ -1,4 +1,4 @@
-dateModified: 1787655698
+dateModified: 1790767298
 elementSources:
   craft\elements\Asset:
     -
@@ -201,11 +201,25 @@ elementSources:
       tableAttributes:
         - 'field:9173344f-7095-45e6-a477-c0273f2b99e3' # Plain Text I18n 2
         - 'field:38c1e2e9-c1e3-4c80-acfe-f190d86317fa' # Plain Text i18n
-        - 'field:397fd1ab-a87a-4c2d-8286-283145152ca8' # Team
         - status
+        - 'field:0b6f8ead-6d71-4167-83c5-510df38bf06b' # Gender
+        - 'field:d59333c3-49a3-4ba8-b3c5-b4013b420c99' # Lightswitch On
       type: native
     -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'group:1cd4c4e5-f56f-4613-9fc4-267b58ddaaee' # External Author
+      tableAttributes:
+        - status
+        - fullName
+        - email
+        - dateCreated
+        - lastLoginDate
+        - 'field:d59333c3-49a3-4ba8-b3c5-b4013b420c99' # Lightswitch On
+        - 'field:0b6f8ead-6d71-4167-83c5-510df38bf06b' # Gender
       type: native
     -
       heading: ''
@@ -261,6 +275,7 @@ fs:
 meta:
   __names__:
     0a81db90-a5b9-4c6d-a9da-ae7489528aa3: Thema # Thema
+    0b6f8ead-6d71-4167-83c5-510df38bf06b: Gender # Gender
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
     1f6d945b-d305-4fc1-be5f-9774e3768396: 'SEO Defaults' # SEO Defaults
     1fb49816-e800-4eb3-a679-27ea164fb72d: 'CTA Type' # CTA Type
@@ -317,7 +332,6 @@ meta:
     97cbec37-641a-47b3-b5e7-4924983b73f3: Team # Team
     112a7657-3989-4fc8-a084-e60b67c371e4: Polygons # Polygons
     288ee88d-e3ce-43e7-9cd8-371e235033c5: Profilbild # Profilbild
-    397fd1ab-a87a-4c2d-8286-283145152ca8: Team # Team
     432db72f-cf6e-4d81-90df-eef5aeb18160: Color # Color
     746a28ba-cc90-41ff-8b16-82638446ed07: Provider # Provider
     762b9c18-49cc-4a00-aa78-a6d77e093631: 'Global Links' # Global Links
@@ -354,10 +368,12 @@ meta:
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
     c78633bb-34f0-471f-b7f5-45bb42559dab: 'Listing Author' # Listing Author
     cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Call to Action' # Call to Action
+    cf6adcb3-eff6-4b6e-a47b-96c40a40241a: 'Img Source' # Img Source
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Span' # Grid Span
     d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
     d4bf6dfa-d2c6-45dc-9550-68e2b143520e: Lauftext # Lauftext
     d78e16f8-76f5-495a-a21a-bbd7cc75dc97: ArticleBlocks # ArticleBlocks
+    d59333c3-49a3-4ba8-b3c5-b4013b420c99: 'Lightswitch On' # Lightswitch On
     dea6c28d-f531-465f-8aa7-a53fd66a2c6f: 'Vertical Position' # Vertical Position
     df079a13-bd61-4096-9e55-4607550dae28: Editor # Editor
     e6243b8f-e6ab-4c5e-90a5-7f6c97b6575f: VC # VC
@@ -394,7 +410,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: RQLRFXJIQ243O56I9B1CE9E6
-    schemaVersion: 5.12.0
+    schemaVersion: 5.13.0
     settings:
       apiKey: ''
       cacheActionRequests: false
@@ -614,5 +630,5 @@ system:
   live: true
   name: 'EspaceSuisse Publishing'
   retryDuration: null
-  schemaVersion: 5.10.0.0
+  schemaVersion: 5.11.0.2
   timeZone: $TZ

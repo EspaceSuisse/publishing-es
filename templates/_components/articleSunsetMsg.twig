@@ -3,13 +3,13 @@
     {% set memberLoginPage = craft.entries.section('memberLogin').one() %}
 
     {% if not isSunset %}
-        {{ 'Artikel für Nichtmitglieder noch' | t }} {{ daysLeft }} {{ 'Tage verfügbar.' | t }}
+        {{ 'Noch' | t }} {{ daysLeft }} {{ 'Tage verfügbar.' | t }}.
         <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Mitglied werden' | t }}</a>
     {% elseif freeForAll == true %}
         {{ 'Artikel frei Verfügbar' | t }}
     {% else %}
-        {{ 'Artikel nur für Mitglieder verfügbar.' | t }}
-        <a href="{{ url( memberLoginPage.url , { redirect: craft.app.request.url }) }}">{{ 'Loggen Sie sich ein' | t }}</a>.
+        {{ 'Für Mitglieder verfügbar' | t }}.
+        <a href="{{ url( memberLoginPage.url , { redirect: craft.app.request.url }) }}">{{ 'Logen Sie sich ein' | t }}</a>.
         <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Werden Sie Mitglied' | t }}</a>
     {% endif %}
 {% endset %}

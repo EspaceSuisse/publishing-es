@@ -17,7 +17,10 @@
   display: flex;
   flex-direction: column;
   margin-top: calc( var(--layoutGap) * 2 );
-    gap: calc( var(--layoutGap) / 2 );
+  gap: calc( var(--layoutGap) / 2 );
+  .gridArticle {
+    gap: var(--layoutGap);
+  }
 }
 .furtherArticles {
   display: grid;

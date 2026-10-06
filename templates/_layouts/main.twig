@@ -31,8 +31,8 @@
 
 
 {# Sets a body css class with the section or category handle for css toplevel scoping #}
-{% set handle = entry.section.handle ?? category.group.handle ?? null %}
-{% set bodyClass = 'body' ~ handle|capitalize %}
+{% set bodyClassIdentifier = entry.section.handle ?? category.group.handle ?? author|default(null) %}
+{% set bodyClass = 'body' ~ bodyClassIdentifier|capitalize %}
 
 {% set articleEagerLoad = [
     'imgAufmacher',
@@ -68,5 +68,6 @@
 		{% include "_components/footer/siteFooter" %}
 		{% include "_components/tracking" %}
 		{% include "_dynamic/viewCount.twig" %}
+		 {% include "_components/siteDevBar" %}
 	</body>
 </html>

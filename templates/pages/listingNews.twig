@@ -7,21 +7,23 @@
 	{% set allNews = craft.entries()
 		.section('news')
 		.orderBy('sticky desc, postDate desc')
-		.limit(null)
-		.all()
+		.limit(10)
 	%}
 
 	{% set listingNews = craft.entries().section('listingNews').one() %}
 	
+	{% paginate allNews as pageInfo, newsEntries %}
 
 	<header class="pageHead subPageHead">
 		{% include "_components/header/headerBrand" %}
 		{% include "_components/header/headerPage" %}
 	</header>
 	<div class="listingGrid">
-		{% for item in allNews %}
-			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridLgSpan6') }}
+		{% for item in newsEntries %}
+			{{ macroPreviewNews.listMacro(item,'gridSpan12 gridLgSpan4','gridSpan12 gridLgSpan4','gridSpan12 gridLgSpan4') }}
 		{% endfor %}
+		{% include "_components/paginationNavi" %}
 	</div>
 
+	
 {% endblock %}

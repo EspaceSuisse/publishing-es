@@ -15,18 +15,22 @@
 
 <aside
 	class="newsTicker gridSpan12 gridLgSpan4">
-	<h2 class="newsTickerTitle">{{ 'News aus der Raumplanung' | t }}</h2>
-	<ul class="newsTickerList">
-		{% for item in newsTicker %}
+	<h2 class="newsTickerTitle">
+        <a href="{{ goToAllNews.url }}">{{ 'News aus der Raumplanung' | t }}</a>
+    </h2>
+    <div class="listWrapper">
+        <ul class="newsTickerList">
+            {% for item in newsTicker %}
 
-			{% set hideOnMobile = loop.index > newsLimitOnMobile ? 'hideOnMobile' %}
+                {% set hideOnMobile = loop.index > newsLimitOnMobile ? 'hideOnMobile' %}
 
-			<li class="newsTickerItem {{ hideOnMobile }}">
-				<span class="postDate">{{ macro.postDate(item.postDate) }}</span>
-				<a href="{{ item.url }}">{{ item.title }}</a>
-			</li>
-		{% endfor %}
-	</ul>
+                <li class="newsTickerItem {{ hideOnMobile }}">
+                    <span class="postDate">{{ macro.postDate(item.postDate) }}</span>
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
     <div class="newsTickerMeta">
         <div class="channelLinks">
             {% if craft.app.locale == 'de-CH' %}

@@ -62,6 +62,40 @@ tabs:
         warning: null
         width: 100
       -
+        dateAdded: '2026-09-30T06:12:01+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: 0b6f8ead-6d71-4167-83c5-510df38bf06b # Gender
+        handle: null
+        instructions: null
+        label: null
+        oldFieldUid: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: edad1c43-9c5f-4a1c-806d-5376ec773e08
+        userCondition: null
+        warning: null
+        width: 50
+      -
+        dateAdded: '2026-09-30T07:34:27+00:00'
+        editCondition: null
+        elementCondition: null
+        elementEditCondition: null
+        fieldUid: d59333c3-49a3-4ba8-b3c5-b4013b420c99 # Lightswitch On
+        handle: null
+        instructions: null
+        label: 'Als Autor anzeigen?'
+        oldFieldUid: d59333c3-49a3-4ba8-b3c5-b4013b420c99 # Lightswitch On
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 90545294-bb46-491d-a125-d19cdf2a8275
+        userCondition: null
+        warning: null
+        width: 100
+      -
         dateAdded: '2024-12-18T12:04:41+00:00'
         elementCondition: null
         id: null
@@ -72,22 +106,6 @@ tabs:
         tip: null
         type: craft\fieldlayoutelements\users\PhotoField
         uid: 8710e08e-b531-428a-a8cf-30f72f97a274
-        userCondition: null
-        warning: null
-        width: 100
-      -
-        dateAdded: '2026-02-04T10:36:57+00:00'
-        editCondition: null
-        elementCondition: null
-        elementEditCondition: null
-        fieldUid: 397fd1ab-a87a-4c2d-8286-283145152ca8 # Team
-        handle: null
-        instructions: null
-        label: null
-        required: false
-        tip: null
-        type: craft\fieldlayoutelements\CustomField
-        uid: f12b6d86-29fb-4642-8b64-b0a9c009a66f
         userCondition: null
         warning: null
         width: 100
@@ -127,6 +145,7 @@ tabs:
         handle: null
         instructions: null
         label: null
+        oldFieldUid: null
         required: false
         tip: null
         type: craft\fieldlayoutelements\CustomField
@@ -143,6 +162,7 @@ tabs:
         handle: null
         instructions: null
         label: Aubildung
+        oldFieldUid: null
         required: false
         tip: 'Journalistin, Redaktorin'
         type: craft\fieldlayoutelements\CustomField
@@ -159,6 +179,7 @@ tabs:
         handle: fPlainTextI18n3
         instructions: null
         label: 'Education FR'
+        oldFieldUid: null
         required: false
         tip: Journaliste
         type: craft\fieldlayoutelements\CustomField
@@ -175,6 +196,7 @@ tabs:
         handle: null
         instructions: null
         label: Funktion
+        oldFieldUid: null
         required: false
         tip: 'Anwältin, stellvertretende Direktorin von EspaceSuisse'
         type: craft\fieldlayoutelements\CustomField
@@ -191,6 +213,7 @@ tabs:
         handle: fPlainTextI18n4
         instructions: null
         label: 'Functione FR'
+        oldFieldUid: null
         required: false
         tip: 'Responsable de la communication'
         type: craft\fieldlayoutelements\CustomField

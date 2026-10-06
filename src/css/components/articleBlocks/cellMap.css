@@ -3,7 +3,7 @@
     box-shadow: var(--shadow);
 }
 .cellMap {
-    padding: calc( var(--layoutGap) * 2 ) 0;
+    margin-bottom: calc(var(--mediaGap) * 1.2);
 }
 @media (max-width: 768px) {
     .cellMap {

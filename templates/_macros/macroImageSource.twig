@@ -1,31 +1,33 @@
 {%- macro imageSource(handleParam) -%}
 
 	{%- set imgSource = handleParam.fmImgSource.all() -%}
-	{%- set imgSourcePlatform = handleParam.fTagProvider -%}
-	{%- set imgSourceLicence = handleParam.fImgLicence -%}
+	{%- set imgSourcePlatform = handleParam.fTagProvider.one() -%}
+	{%- set imgSourceLicence = handleParam.fImgLicence.one() -%}
+	{%- set imgSourceUrl = handleParam.imgSourceUrl -%}
 
-	{%- set sourceText = '' -%}
-	{%- set additionalSources = '' -%}
+	{%- set photographer = '' -%}
+	{%- set totalSourceString = '' -%}
 
-	{# I am sorry. this is very stupid. #}
-	{# I should have setup the entire image source fields better in the first place :( #}
+	
 
+	{# Construct the Photographer Name #}
 	{%- for item in imgSource -%}
-				{%- switch item.type.handle -%}
+		{%- switch item.type.handle -%}
 			{%- case 'tMonolingual' -%}
-				{%- set sourceText = item.fPlainTxt -%}
+				{%- set photographer = item.fPlainTxt -%}
 			{%- case 'tMultilingual' -%}
-				{%- set sourceText = item.fPlainTextI18n -%}
+				{%- set photographer = item.fPlainTextI18n -%}
 		{%- endswitch -%}
 	{%- endfor -%}
 
-	{%- for item in imgSourcePlatform -%}
-		{%- set additionalSources = additionalSources ~ ' ' ~ item.title -%}
-	{%- endfor -%}
-	{%- for item in imgSourceLicence -%}
-		{%- set additionalSources = additionalSources ~ ' ' ~ item.title -%}
-	{%- endfor -%}
+	{# Construct the source + Photographer + image licence #}
 
-	{{- '(' ~ 'Quelle'|t ~ ': ' ~ sourceText ~ (additionalSources ? ' ' ~ additionalSources|trim : '') ~ ')' -}}
+	{%- set totalSourceString = ' ' ~ photographer ~ ' ' ~ imgSourcePlatform ~ ' ' ~ imgSourceLicence -%}
+
+	{% if imgSourceUrl %}
+		({{ 'Quelle' | t }}: <a href="{{ imgSourceUrl }}" target="_blank">{{ totalSourceString | trim }}</a>)
+	{% else %}
+		({{ 'Quelle' | t }}: {{- totalSourceString | trim -}})
+	{% endif %}
 
 {%- endmacro -%}

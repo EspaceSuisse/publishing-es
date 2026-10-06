@@ -10,11 +10,9 @@
 %}
 
 {# Output the links #}
-<div class="gridSpan10 gridStart2 furtherNews">
-    {% for item in furtherNews %}
-        {% if loop.first %}
-			<h2 class="gridSpan12 moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}</h2>
-		{% endif %}
-        {{ macroPreviewNews.listMacro(item,'gridSpan12 gridLgSpan6') }}
-    {% endfor %}
-</div>
+{% for item in furtherNews %}
+    {% if loop.first %}
+		<h2 class="gridSpan12 moreArticlesTitle">{{ 'Vielleicht Interessiert Sie auch' | t }}</h2>
+	{% endif %}
+    {{ macroPreviewNews.listMacro(item,'gridSpan12','gridSpan12 gridSmSpan4 gridLgSpan4','gridSpan12 gridSmSpan8 gridLgSpan8') }}
+{% endfor %}

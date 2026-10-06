@@ -1,9 +1,17 @@
 {%- macro authorPreviewCard(queryParam) -%}
 
+  {% import '_macros/macroAuthorUrl' as authorUrlHelper %}
+
   {% set multipleAuthors = queryParam.authors %}
   {% set author = queryParam.author %}
   <p class="authorName">
     {{ author.fullName }}
+
+    {# later we can expose the author posting url here: #}
+    {# <a href="{{ authorUrlHelper.url(author) }}" class="btn btnSmall">
+      {{ author.fullName }}
+    </a> #}
+
     {% if multipleAuthors | length > 1 %}{{ 'et al.' | t }}{% endif %}
   </p>
   

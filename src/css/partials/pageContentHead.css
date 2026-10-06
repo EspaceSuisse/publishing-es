@@ -2,3 +2,10 @@
 .pageContentHead {
     padding-bottom: var(--layoutGap);
 }
+.bodyListingnews {
+    .topicTitle {
+        @media (max-width: 93rem) {
+            text-align: center;
+        }
+    }
+}

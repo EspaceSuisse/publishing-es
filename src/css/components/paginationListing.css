@@ -1,0 +1,19 @@
+.listingPagination {
+    font-size: var(--font-size-S);
+    font-family: var(--font-default);
+    justify-content: center;
+    display: flex;
+    gap: var(--layoutGap);
+    padding-top: var(--layoutGap);
+    padding-bottom: var(--layoutGap);
+    a {
+        color: var(--linkTxtColor);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .current {
+        font-weight: var(--font-bold);
+    }
+}
