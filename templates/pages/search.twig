@@ -1,0 +1,96 @@
+{% extends "_layouts/main" %}
+
+
+{% block content %}
+	<article>		
+		<header class="pageHead subPageHead">
+			{% include "_components/header/headerBrand" %}
+			{% include "_components/header/headerPage" %}
+		</header>
+		<div class="gridArticle articleContent">
+			{% include "_components/articleMatrix" %}
+		</div>
+	</article>
+
+	{# get the search string from theb url query #}
+	{% set query = craft.app.request.getQueryParam('query') %}
+	<article>
+		<div class="gridArticle articleContent">
+			<form class="searchForm">
+				<label for="search-input">Search terms</label>
+				<input
+					type="search"
+					name="query"
+					value="{{ query }}"
+					id="search-input"
+					placeholder="Search…"
+					autocomplete="off"
+				>
+				<div id="search-suggestions"></div>
+
+				<button type="submit" class="btn">Submit</button>
+			</form>
+		</div>
+		<div class="gridArticle articleContent">
+			{# Only when a query is provided do we actually perform the search and display results: #}
+			{% if query %}
+				{% set results = craft.entries()
+					.section('*')
+					.search(query)
+					.orderBy('score')
+					.all() %}
+
+				{# We still need to check if there were results, too: #}
+			{% if results is not empty %}
+				<p>Found {{ results|length }} result(s)!</p>
+				<ul class="searchResults">
+					{% for result in results %}
+					<li>{{ result.getLink() }}</li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				<p>Sorry, we searched high and low for “{{ query }}” but couldn’t find anything!</p>
+			{% endif %}
+			{% endif %}
+
+			</div>
+	</article>
+
+	{% js %}
+		const input = document.querySelector('#search-input');
+		const suggestions = document.querySelector('#search-suggestions');
+
+		input.addEventListener('input', async () => {
+			const query = input.value.trim();
+
+			if (query.length < 2) {
+				suggestions.innerHTML = '';
+				return;
+			}
+
+			const response = await fetch(
+				`/search/suggestions?query=${encodeURIComponent(query)}`
+			);
+
+			const results = await response.json();
+
+			suggestions.innerHTML = results.map(result => `
+				<a href="${result.url}">
+					${result.title}
+				</a>
+			`).join('');
+
+			let timer;
+
+			input.addEventListener('input', () => {
+				clearTimeout(timer);
+
+				timer = setTimeout(async () => {
+					// fetch suggestions
+				}, 250);
+			});
+		});
+	{% endjs %}
+
+{% endblock %}
+

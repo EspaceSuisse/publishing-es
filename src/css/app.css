@@ -47,6 +47,7 @@
 @import "components/pageSettingsPanel.css";
 @import "components/newsTicker.css";
 @import "components/paginationListing.css";
+@import "components/search.css";
 
 @import "components/header/headerNews.css";
 @import "components/header/headerCard.css";
