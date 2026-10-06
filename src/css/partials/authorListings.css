@@ -2,7 +2,7 @@
     &.authorCard {
         grid-template-rows: auto 1fr auto;
         align-content: stretch;
-
+        box-shadow: var(--shadow);
         .imgPart {
             border-radius: 0;
         }
@@ -15,12 +15,14 @@
         }
 
         .authorName {
-            font-size: var(--font-size-XL);
+            font-size: var(--font-size-L);
             font-family: var(--font-display);
+            padding: var(--layoutGap) 0 0 var(--layoutGap);
         }
         .authorTaxonomy {
             font-size: var(--font-size-M);
             font-family: var(--font-default);
+            padding: 0 var(--layoutGap);
             margin: 0;
             a {
                 color: var(--linkTxtColor);
@@ -37,14 +39,14 @@
     gap: var(--layoutGap);
 }
 
-.authorPosts {
+.bodyAuthorposts {
     .authorCard {
+        box-shadow: none;
         .imgPart {
             aspect-ratio: 1;
             border-radius: 1000px;
             overflow: hidden;
         }
-
         .txtPart {
             justify-content: center;
         }
