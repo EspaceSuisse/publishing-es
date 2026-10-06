@@ -14,6 +14,7 @@ return [
             ['width' => 1080, 'ratio' => 4 / 5,  'device' => 'mobile'],
         ],
         'defaults' => $defaults,
+        'position' => 'focalpoint',
     ],
     'feedImageTransform' => [
         'displayName' => 'Feed Image',
@@ -21,6 +22,7 @@ return [
             ['width' => 1920, 'ratio' => 16 / 9],
         ],
         'defaults' => $defaults,
+        'position' => 'focalpoint',
     ],
     'authorPortrait' => [
         'displayName' => 'Author Portrait',
@@ -28,6 +30,7 @@ return [
             ['width' => 256, 'ratio' => 1 / 1],
         ],
         'defaults' => $defaults,
+        'position' => 'focalpoint',
     ],
     'newsThumb' => [
         'displayName' => 'NewsThumb',
@@ -35,6 +38,7 @@ return [
             ['width' => 580, 'ratio' => 1 / 1],
         ],
         'defaults' => $defaults,
+        'position' => 'focalpoint',
     ],
     'articleImageLightbox' => [
         'displayName' => 'Article Image Lightbox',
@@ -42,6 +46,7 @@ return [
             ['width' => 1920],
         ],
         'defaults' => $defaults,
+        'position' => 'focalpoint',
     ],
     'articleImage' => [
         'displayName' => 'Article Image',
@@ -50,6 +55,7 @@ return [
             ['width' => 1080, 'device' => 'mobile'],
         ],
         'defaults' => $defaults,
+        'position' => 'focalpoint',
     ],
     'articleThumb' => [
         'displayName' => 'Article Thumb',
@@ -59,5 +65,6 @@ return [
             ['width' => 1080, 'ratio' => 1 / 1,  'device' => 'mobile'],
         ],
         'defaults' => $defaults,
+        'position' => 'focalpoint',
     ],
 ];
