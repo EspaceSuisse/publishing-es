@@ -22,7 +22,11 @@
             }
         }
     }
-
+    a.imgPart {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
     .imgPart {
         display: flex;
         picture {
@@ -34,9 +38,6 @@
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                &:hover {
-                    opacity: 0.5;
-                }
             }
         }
     }
