@@ -48,16 +48,16 @@
 				{% set authorGenitive = 'der Autorin' | t %}
 			{% endif %}
 
-			<h1 class="gridSpan12 topicTitle">Alle Artikel {{ authorGenitive }}</h1>
+			<h1 class="gridSpan12 topicTitle">{{ 'Alle Artikel' | t }} {{ authorGenitive }}</h1>
 			
 			
 			{% for item in articles %}
 				{{ macroPreview.listMacro(item,'gridSpan12 gridMdSpan6 gridLgSpan4',' gridSpan12 gridMdSpan6','gridSpan12 gridMdSpan6') }}
 			{% else %}
-				<p>Keine Artikel gefunden.</p>
+				<p>{{'Keine Artikel gefunden' | t }}.</p>
 			{% endfor %}
 		{% else %}
-				<p>Autor nicht gefunden.</p>
+				<p>{{'Autor nicht gefunden' | t }}.</p>
 		{% endif %}
 	</div>
 
