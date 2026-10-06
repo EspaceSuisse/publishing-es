@@ -1,13 +1,24 @@
 .share {
     position: fixed;
-    top: var(--layoutGap);
+    top: calc( var(--layoutGap) * 2 );
     right: var(--layoutGap);
     z-index: 100;
     background-color: var(--backgroundColor);
     padding: calc( var(--layoutGap) / 3 );
     border-radius: 100px;
+    z-index: 1-00;
     @media (max-width: 48rem) {
         top: calc( var(--layoutGap) * 4 );
+    }
+    &:hover {
+            background-color: var(--linkBgHoverColor);
+            cursor: pointer;
+            svg {
+                polyline, line, polygon {
+                    stroke: var(--linkBgTxtColor)
+                }
+            }
+        }
     }
     .dialogOpen {
         padding: 5px;
@@ -18,16 +29,6 @@
                 stroke-width: 5px;
             }
         }
-        &:hover {
-            background-color: var(--linkBgHoverColor);
-            cursor: pointer;
-            svg {
-            polyline, line, polygon {
-                stroke: var(--linkBgTxtColor)
-            }
-        }
-        }
-    }
 }
 .newsHeadCard {
     .share {
