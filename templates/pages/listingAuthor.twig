@@ -47,7 +47,7 @@
 					{# render author photo #}
 					<a href="{{ authorPostsUrl}}" class="imgPart gridSpan12 gridSmSpan4">
 						{% if author.photo %}
-							{{ macroImg.articleImage(author.photo, 'articleImage', 'imgArticle') }}
+							{{ macroImg.articleImage(author.photo, 'articleThumb', 'imgArticle') }}
 						{% endif %}
 					</a>
 					<div class="txtPart gridSpan12 gridSmSpan8">
