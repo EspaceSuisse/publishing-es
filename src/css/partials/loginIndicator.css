@@ -1,16 +1,33 @@
 .loginIndicator {
-    z-index: 100;
-    font-size: var(--font-size-XS);
-    font-family: var(--font-display);
-    font-weight: var(--fontBold);
-    display: flex;
-    gap: calc(var(--layoutGap) / 2);
-    align-items: center;
+    z-index: 2000;
+    position: fixed;
+    top: calc( var(--layoutGap) );
+    right: calc( var(--layoutGap) );;
+    .loginIndicatorContent {
+        font-size: var(--font-size-XS);
+        font-family: var(--font-display);
+        font-weight: var(--fontBold);
+        display: flex;
+        gap: calc(var(--layoutGap) / 2);
+        align-items: center;
+        justify-content: baseline;
+        margin: 0;
+    }
     span {
-        color: var(--txtInvertColor);
+        color: var(--txtColor);
     }
     a {
-        color: var(--txtInvertColor);
+        color: var(--txtColor);
+        padding: 3px;
+        background-color: var(--backgroundColor);
+        text-decoration: none;
+        @media (max-width: 48rem) {
+            background-color: var(--colorES-brand-blue);
+        }
+        &:hover {
+            text-decoration: underline;
+            background-color: var(--linkBgColor);
+        }
     }
 
     .ampel {
@@ -18,7 +35,7 @@
         height: 10px;
         aspect-ratio: 1 / 1;
         border-radius: 100px;
-
+        display: block;
         &.denied {
             background-color: var(--colorEs-alert);
         }
