@@ -8,6 +8,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: baseline;
     }
 }
 @media (min-width: 48rem) {
@@ -28,6 +29,7 @@ label {
     font-size: var(--font-size-M);
     font-family: var(--font-default);
     line-height: var(--line-height-base);
+    color: var(--txtColor);
 }
 
 input {
@@ -35,6 +37,9 @@ input {
     font-size: var(--font-size-M);
     font-family: var(--font-default);
     line-height: var(--line-height-base);
+    background-color: var(--backgroundColor);
+    border: solid 1px var(--colorES-brand-blue);
+    border-radius: 4px;
     color: var(--txtColor);
 }
 .formField,
