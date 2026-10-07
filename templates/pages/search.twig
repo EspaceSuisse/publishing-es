@@ -22,11 +22,11 @@
 					name="query"
 					value="{{ query }}"
 					id="search-input"
-					placeholder="Search…"
+					placeholder="{{ 'Suchen' | t }}…"
 					autocomplete="off"
 				>
 
-				<button type="submit" class="btn">Submit</button>
+				<button type="submit" class="btn">{{ 'Suchen' | t }}</button>
 			</form>
 		</div>
 		<div class="gridArticle articleContent">
@@ -41,14 +41,16 @@
 
 					{# We still need to check if there were results, too: #}
 				{% if results is not empty %}
-					<p class="gridSpan10 foundTotalResults">Found {{ results|length }} result(s)!</p>
+					<p class="gridSpan10 foundTotalResults"> {{ results|length }} {{ 'Einträge gefunden.' | t }}</p>
 					<ul class="searchResultList">
 						{% for result in results %}
-						<li>{{ result.getLink() }}</li>
+							<li>
+								<h2>{{ result.getLink() }}</h2>
+							</li>
 						{% endfor %}
 					</ul>
 				{% else %}
-					<p class="gridSpan10 foundTotalResults">Sorry, we searched high and low for “{{ query }}” but couldn’t find anything!</p>
+					<p class="gridSpan10 gridStart2 foundTotalResults">{{ 'Für die Suche' | t }} “{{ query }}” {{ 'konnten wir leider nichts finden' }}!</p>
 				{% endif %}
 				{% endif %}
 			</div>
