@@ -11,7 +11,7 @@
         {#  User ist eingelogt  #}
     {% else %}
         {{ 'Für Mitglieder verfügbar' | t }}.
-        <a href="{{ url( memberLoginPage.url , { redirect: craft.app.request.url }) }}">{{ 'Logen Sie sich ein' | t }}</a>.
+        <a href="{{ url( memberLoginPage.url , { redirect: craft.app.request.url }) }}">{{ 'Loggen Sie sich ein' | t }}</a>.
         <a href="https://www.espacesuisse.ch/de/verband/mitglieder">{{ 'Werden Sie Mitglied' | t }}</a>
     {% endif %}
 {% endset %}

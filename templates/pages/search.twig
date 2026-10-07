@@ -1,0 +1,61 @@
+{% extends "_layouts/main" %}
+
+
+{% block content %}
+	<article>		
+		<header class="pageHead subPageHead">
+			{% include "_components/header/headerBrand" %}
+			{% include "_components/header/headerPage" %}
+		</header>
+		<div class="gridArticle articleContent">
+			{% include "_components/articleMatrix" %}
+		</div>
+	</article>
+
+	{# get the search string from theb url query #}
+	{% set query = craft.app.request.getQueryParam('query') %}
+	<article>
+		<div class="gridArticle articleContent">
+			<form class="searchForm gridSpan6 gridStart4">
+				<input
+					type="search"
+					name="query"
+					value="{{ query }}"
+					id="search-input"
+					placeholder="{{ 'Suchen' | t }}…"
+					autocomplete="off"
+				>
+
+				<button type="submit" class="btn">{{ 'Suchen' | t }}</button>
+			</form>
+		</div>
+		<div class="gridArticle articleContent">
+			<div class="searchResults gridSpan10 gridStart2">
+				{# Only when a query is provided do we actually perform the search and display results: #}
+				{% if query %}
+					{% set results = craft.entries()
+						.section('*')
+						.search(query)
+						.orderBy('score')
+						.all() %}
+
+					{# We still need to check if there were results, too: #}
+				{% if results is not empty %}
+					<p class="gridSpan10 foundTotalResults"> {{ results|length }} {{ 'Einträge gefunden.' | t }}</p>
+					<ul class="searchResultList">
+						{% for result in results %}
+							<li>
+								<h2>{{ result.getLink() }}</h2>
+							</li>
+						{% endfor %}
+					</ul>
+				{% else %}
+					<p class="gridSpan10 gridStart2 foundTotalResults">{{ 'Für die Suche' | t }} “{{ query }}” {{ 'konnten wir leider nichts finden' }}!</p>
+				{% endif %}
+				{% endif %}
+			</div>
+		</div>
+	</article>
+
+{% endblock %}
+

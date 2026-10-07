@@ -1,0 +1,30 @@
+.bodySearch {
+    .topicTitle {
+        text-align: center;
+    }
+    .searchForm {
+        display: flex;
+        input {
+            width: 100%;
+            font-weight: var(--fontNormal);
+        }
+    }
+    .searchResults {
+        margin-top: var(--layoutGap);
+    }
+    .foundTotalResults {
+        font-size: var(--font-size-L);
+        font-family: var(--font-display);
+        font-weight: var(--fontBold);
+    }
+    .searchResultList {
+        li {
+            a {
+                font-size: var(--font-size-L);
+                font-family: var(--font-display);
+                font-weight: var(--fontBold);
+                color: var(--linkTxtColor);
+            }
+        }
+    }
+}
