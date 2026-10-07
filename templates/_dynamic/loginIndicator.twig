@@ -3,12 +3,12 @@
 
 {% if craft.app.user.identity %}
     <p class="loginIndicatorContent">
-        <span>{{ 'Mitglied' | t }}</span>
+        <span>{{ 'Eingeloggt' | t }}</span>
         <span class="ampel allowed"></span>
     </p>
 {% else %}
     <p class="loginIndicatorContent">
-        <a href="{{ url( memberLoginPage.url , { redirect: currentUrl }) }}">{{ 'Gast' | t }}</a>
+        <a href="{{ url( memberLoginPage.url , { redirect: currentUrl }) }}">{{ 'Nicht Eingelogt' | t }}</a>
         <span class="ampel denied"></span>
     </p>
 {% endif %}
