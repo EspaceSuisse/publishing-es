@@ -1,6 +1,6 @@
 .share {
     position: fixed;
-    top: calc( var(--layoutGap) * 2 );
+    top: calc( var(--layoutGap) * 3 );
     right: var(--layoutGap);
     z-index: 100;
     background-color: var(--backgroundColor);
