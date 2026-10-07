@@ -40,18 +40,18 @@
 						.all() %}
 
 					{# We still need to check if there were results, too: #}
-				{% if results is not empty %}
-					<p class="gridSpan10 foundTotalResults"> {{ results|length }} {{ 'Einträge gefunden.' | t }}</p>
-					<ul class="searchResultList">
-						{% for result in results %}
-							<li>
-								<h2>{{ result.getLink() }}</h2>
-							</li>
-						{% endfor %}
-					</ul>
-				{% else %}
-					<p class="gridSpan10 gridStart2 foundTotalResults">{{ 'Für die Suche' | t }} “{{ query }}” {{ 'konnten wir leider nichts finden' }}!</p>
-				{% endif %}
+					{% if results is not empty %}
+						<p class="gridSpan10 foundTotalResults"> {{ results|length }} {{ 'Einträge gefunden.' | t }}</p>
+						<ul class="searchResultList">
+							{% for result in results %}
+								<li>
+									<h2>{{ result.getLink() }}</h2>
+								</li>
+							{% endfor %}
+						</ul>
+					{% else %}
+						<p class="gridSpan10 gridStart2 foundTotalResults">{{ 'Für die Suche' | t }} “{{ query }}” {{ 'konnten wir leider nichts finden' }}!</p>
+					{% endif %}
 				{% endif %}
 			</div>
 		</div>

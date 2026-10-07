@@ -29,6 +29,8 @@ return [
             ['uriPattern' => '^knock-knock'],
             ['uriPattern' => '^mitglieder-login'],
             ['uriPattern' => '^connexion-des-membres'],
+            ['uriPattern' => '^suche'],
+            ['uriPattern' => '^chercher'],
             ['uriPattern' => '\.(json|xml|rss)$'],
         ],
     ],
