@@ -2,7 +2,7 @@ columnSuffix: null
 handle: fImgI18n
 instructions: '[Lange Seite](https://kaspar-allenbach.github.io/image-resizer/) : `2400px` /  jpq Qualität `0.6`'
 name: 'Img i18n'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   allowSubfolders: true

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: imgSourceUrl
 instructions: null
 name: 'Img Source'
-searchable: false
+searchable: true
 settings:
   fullGraphqlData: true
   maxLength: 255
