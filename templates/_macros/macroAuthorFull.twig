@@ -22,6 +22,10 @@
 						{% else %}
 							{{ writter }}
 						{% endif %}
+						{% if writter.linkedinAuthorUrl %}
+							<a href="{{ writter.linkedinAuthorUrl }}" target="_blank" class="linkedinIcon">{{ svg('@webroot/theme/img/Linkedin_icon.svg')|raw }}</a>
+						{% endif %}
+						
 					</p>
 					<p class="authorMeta">
 						{{ authorTaxonomy.authorTaxonomy(writter) }}
