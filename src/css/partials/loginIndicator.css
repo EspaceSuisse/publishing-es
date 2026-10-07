@@ -23,6 +23,7 @@
         text-decoration: none;
         @media (max-width: 48rem) {
             background-color: var(--colorES-brand-blue);
+            color: var(--linkBgTxtColor);
         }
         &:hover {
             text-decoration: underline;
