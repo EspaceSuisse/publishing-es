@@ -3,9 +3,6 @@
 
     .dropdownContents {
         padding: calc(var(--layoutGap) * 2);
-        display: grid;
-        gap: var(--layoutGap);
-        grid-template-columns: repeat(2, 1fr);
         height: 100%;
         p,
         a,
@@ -20,6 +17,7 @@
         }
 
         .majorLinks {
+            padding-bottom: var(--layoutGap);
             a, button {
                 font-family: var(--font-default);
                 font-size: var(--font-size-XL);
