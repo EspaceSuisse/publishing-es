@@ -1,4 +1,4 @@
-dateModified: 1791371345
+dateModified: 1793692640
 elementSources:
   craft\elements\Asset:
     -
@@ -411,7 +411,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: RQLRFXJIQ243O56I9B1CE9E6
-    schemaVersion: 5.13.0
+    schemaVersion: 5.14.0
     settings:
       apiKey: ''
       cacheActionRequests: false
@@ -593,7 +593,7 @@ plugins:
   knock-knock:
     edition: standard
     enabled: true
-    schemaVersion: 1.1.1
+    schemaVersion: 1.1.3
   obfuscator:
     edition: standard
     enabled: true
