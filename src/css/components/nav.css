@@ -38,3 +38,33 @@ nav {
         }
     }
 }
+.desktopNavi {
+    background: transparent;
+    align-items: center;
+    padding-left: calc( var(--siteSideBarWidth) + var(--airGap) );
+    padding-top: var(--layoutGap);
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    height: inherit;
+    ul {
+        display: flex;
+        gap: calc( var(--layoutGap) / 3);
+        margin: 0;
+        padding: 0;
+        background: var(--backgroundColor);
+        padding: 3px;
+        li {
+            font-size: var(--font-size-S);
+            font-family: var(--font-display);
+            font-weight: var(--fontBold);
+            a {
+                text-decoration: none;
+                color: var(--linkTxtColor);
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
