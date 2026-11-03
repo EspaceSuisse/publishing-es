@@ -43,7 +43,7 @@
     }
     @media (min-width: 79rem) { 
         .imgPart { 
-            aspect-ratio: 16/9;
+            /* aspect-ratio: 16/9; */
          } 
     }  /* desktop */
     &.hasNoImage {
