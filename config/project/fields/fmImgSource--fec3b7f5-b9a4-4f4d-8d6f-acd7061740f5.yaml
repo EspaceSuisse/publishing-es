@@ -2,7 +2,7 @@ columnSuffix: null
 handle: fmImgSource
 instructions: null
 name: Bildquelle
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
