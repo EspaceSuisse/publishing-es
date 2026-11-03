@@ -3,7 +3,9 @@
 
     .dropdownContents {
         padding: calc(var(--layoutGap) * 2);
-        height: 100%;
+        display: grid;
+        gap: var(--layoutGap);
+        grid-template-columns: repeat(2, 1fr);
         p,
         a,
         label,
@@ -17,7 +19,6 @@
         }
 
         .majorLinks {
-            padding-bottom: var(--layoutGap);
             a, button {
                 font-family: var(--font-default);
                 font-size: var(--font-size-XL);
@@ -105,6 +106,15 @@
                     font-size: var(--font-size-L);
                     padding-bottom: calc( var(--layoutGap) * 0.5 );
                     display: block;
+                    text-align: center;
+                }
+            }
+            .siteSettings .element {
+                justify-content: center;
+                flex-wrap: wrap;
+                padding-bottom: calc( var(--layoutGap) * 2 );
+                .elementTitle {
+                    width: 100%;
                     text-align: center;
                 }
             }
