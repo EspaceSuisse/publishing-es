@@ -40,10 +40,12 @@ nav {
 }
 .desktopNavi {
     background: transparent;
-    align-items: center;
+    align-items: flex-start;
     padding-left: calc( var(--siteSideBarWidth) + var(--airGap) );
     padding-top: var(--layoutGap);
     display: flex;
+    flex-direction: row;
+    gap: var(--layoutGap);
     position: fixed;
     z-index: 100;
     height: inherit;

@@ -2,7 +2,7 @@
     text-align: center;
     grid-column: 1 / -1;
     padding: var(--layoutGap);
-    margin-top: calc(var(--layoutGap) * 2);
+    margin-top: calc(var(--layoutGap) * 6);
     margin-bottom: calc(var(--layoutGap) * 4);
     display: flex;
     flex-direction: column;
@@ -36,6 +36,7 @@
 }
 @media (max-width: 48rem) {
     .brandHeader {
+        margin-top: calc(var(--layoutGap));
         margin-bottom: calc(var(--layoutGap) * 1);
     }
 }
