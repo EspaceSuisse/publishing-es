@@ -45,7 +45,7 @@ nav {
     padding-top: var(--layoutGap);
     display: flex;
     flex-direction: row;
-    position: fixed;
+    position: absolute;
     z-index: 100;
     height: inherit;
     ul {
