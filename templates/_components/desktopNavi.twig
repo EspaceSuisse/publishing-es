@@ -1,0 +1,13 @@
+<nav class="desktopNavi hideOnTablet">
+				{% include "_components/sideBar/siteNavMoreLinks.twig" %}
+				<ul>
+					{% include "_components/sideBar/navLangSwitcher.twig" %}
+					<li><button popovertarget="my-dialog">Open dialog</button></li>
+				</ul>
+</nav>
+
+<dialog id="my-dialog" popover>
+  <p>This dialog was opened using an invoker command.</p>
+  <ul>{% include "_components/themeColorSwitcher" %}</ul>
+  <button popovertarget="my-dialog" popovertargetaction="hide">Close</button>
+</dialog>

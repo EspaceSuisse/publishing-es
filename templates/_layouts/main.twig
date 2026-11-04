@@ -65,16 +65,7 @@
 			<div class="loginIndicator">
 				{{ craft.blitz.includeDynamic('_dynamic/loginIndicator', { currentUrl: craft.app.request.url }) }}
 			</div>
-			<nav class="desktopNavi hideOnTablet">
-				{% include "_components/sideBar/siteNavMoreLinks.twig" %}
-				<ul>
-					{% include "_components/sideBar/navLangSwitcher.twig" %}
-				</ul>
-				<ul class="settings">
-					<li><button>Settings</button></li>
-					<ul class="dropdown">{% include "_components/themeColorSwitcher" %}</ul>
-				</ul>
-			</nav>
+			{% include "_components/desktopNavi" %}
 			{% include "_components/sideBar/sideBar" %}
 			<main id="main">{% block content %}{# all the content #}{% endblock %}</main>
 		</div>
