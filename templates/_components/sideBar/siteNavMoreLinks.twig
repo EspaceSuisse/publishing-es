@@ -32,6 +32,9 @@
     {% if loop.first %}<ul>{% endif %}
     <li class="{{ isActive ? 'isActive' : '' }}">
         <a href="{{ item.fLinkI18n.url }}" aria-label="{{ item.fLinkI18n.label }}">
+            {% for asset in linkedEntry.fIcon %}
+                <span class="navIcon hideOnTablet">{{ svg(asset) }}</span>
+            {% endfor %}
             {{ item.fLinkI18n.label }}
         </a>
     </li>

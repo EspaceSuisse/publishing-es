@@ -45,26 +45,48 @@ nav {
     padding-top: var(--layoutGap);
     display: flex;
     flex-direction: row;
-    gap: var(--layoutGap);
     position: fixed;
     z-index: 100;
     height: inherit;
     ul {
         display: flex;
-        gap: calc( var(--layoutGap) / 3);
+        gap: calc( var(--layoutGap) / 1.5);
         margin: 0;
         padding: 0;
         background: var(--backgroundColor);
-        padding: 3px;
+        padding: 8px 13px;
+        &.langSwitcher {
+            padding-left: var(--layoutGap);
+        }
         li {
             font-size: var(--font-size-S);
             font-family: var(--font-display);
             font-weight: var(--fontBold);
-            a {
+            display: flex;
+            a, button {
                 text-decoration: none;
                 color: var(--linkTxtColor);
+                display: flex;
+                align-items: center;
+                gap: 5px;
                 &:hover {
                     text-decoration: underline;
+                }
+                .navIcon {
+                    display: inline-flex;
+                    height: 1em;
+                    flex-shrink: 0;
+                    align-items: center;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        polygon, circle, rect, line {
+                            stroke: var(--linkTxtColor);
+                        }
+                        path {
+                            fill: var(--linkTxtColor);
+                        }
+                    }
                 }
             }
         }

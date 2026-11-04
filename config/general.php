@@ -34,6 +34,7 @@ return GeneralConfig::create()
         'png',
         'avif',
         'heic',
+        'svg',
     ])
     ->devMode(App::env('CRAFT_DEV_MODE', false))
     ->convertFilenamesToAscii(true)
