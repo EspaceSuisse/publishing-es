@@ -22,7 +22,7 @@
             {% set isActive = true %}
         {% elseif linkedSection == 'listingAllGenres' and currentSection == 'catGenre' %}
             {% set isActive = true %}
-        {% elseif linkedSection == 'listingAuthors' and currentSection == 'authorPosts' %}
+        {% elseif linkedSection == 'listingAuthor' and author is defined and author == 'authorPosts' %}
             {% set isActive = true %}
         {% else %}
             {% set isActive = currentSection == linkedSection %}
