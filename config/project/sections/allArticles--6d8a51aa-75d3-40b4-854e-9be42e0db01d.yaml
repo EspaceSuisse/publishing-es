@@ -18,10 +18,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: pages/articlesAll.twig
-    uriFormat: tous-les-articles
+    uriFormat: '{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     enabledByDefault: true
     hasUrls: true
     template: pages/articlesAll.twig
-    uriFormat: alle-artikel
+    uriFormat: '{slug}'
 type: single

@@ -1,8 +1,33 @@
 {% set moreLinks = globalLinks.mxSidebarLinks.all() %}
-{% set currentUrl = entry.url ?? null %}
+
+{% set currentSection = entry is defined and entry
+    ? entry.section.handle
+    : category is defined and category
+        ? category.group.handle
+        : author is defined and author
+            ? author
+            : null %}
 
 {% for item in moreLinks %}
-    {% set isActive = currentUrl and item.fLinkI18n.url == currentUrl %}
+    {% set linkedEntry = item.fLinkI18n.getElement() %}
+    {% set linkedSection = linkedEntry.section.handle ?? null %}
+    {% set isActive = false %}
+
+    {% if linkedSection and currentSection %}
+        {% if linkedSection == 'allArticles' and currentSection == 'article' %}
+            {% set isActive = true %}
+        {% elseif linkedSection == 'listingNews' and currentSection == 'news' %}
+            {% set isActive = true %}
+        {% elseif linkedSection == 'listingAllSubjects' and currentSection == 'catSubject' %}
+            {% set isActive = true %}
+        {% elseif linkedSection == 'listingAllGenres' and currentSection == 'catGenre' %}
+            {% set isActive = true %}
+        {% elseif linkedSection == 'listingAuthors' and currentSection == 'authorPosts' %}
+            {% set isActive = true %}
+        {% else %}
+            {% set isActive = currentSection == linkedSection %}
+        {% endif %}
+    {% endif %}
 
     {% if loop.first %}<ul>{% endif %}
     <li class="{{ isActive ? 'isActive' : '' }}">
