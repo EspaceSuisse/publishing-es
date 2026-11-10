@@ -10,11 +10,11 @@
 	{% for item in catParam %}
 
 		{% set fullTitle = item.title %}
-		{% set sectionUrlSegment = sectionParam ? '?section=' ~ sectionParam %}
+		{% set sectionUrlSegment = sectionParam ? '?section=' ~ sectionParam | ascii | lower %}
 
 			<span class="tag {{ ' ' ~ classParam }}"> 
 				<a href="{{- item.url ~ sectionUrlSegment -}}">
-					<span class="tagLabel">{{- fullTitle -}}<span>
+					<span class="tagLabel">{{- fullTitle -}}</a>span>
 				</a>
 			</span>
 
