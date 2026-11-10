@@ -1,0 +1,28 @@
+{# Get the first genre from the current article #}
+{% set relatedSubject = entry.fCatSubject.one() %}
+
+{{ relatedSubject }} yyy
+
+{# Get Erste Hilfe entries matching the current genre #}
+{% set ctaItems = craft.entries()
+    .section('ersteHilfe')
+    .relatedTo({
+        targetElement: relatedSubject,
+        field: 'fCatSubject'
+    })
+    .all()
+%}
+
+{# Shuffle matching entries #}
+{% set shuffledHilfe = shuffle(ctaItems) %}
+
+{# Output only one random entry #}
+{% set randomHilfe = shuffledHilfe|first %}
+
+{% if randomHilfe %}
+    <aside class="ersteHilfe" style="background:{{ relatedSubject.fColor }}">
+        <h2>{{ randomHilfe.title }}</h2>
+        <p class="claim">{{ randomHilfe.txtClaim }}</p>
+        {{ randomHilfe.fLinkI18n }}
+    </aside>
+{% endif %}

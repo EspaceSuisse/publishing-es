@@ -1,4 +1,4 @@
-dateModified: 1793692640
+dateModified: 1794315487
 elementSources:
   craft\elements\Asset:
     -
@@ -132,7 +132,7 @@ elementSources:
       page: Entries
       type: heading
     -
-      key: 'section:cbd30d19-7bb8-4252-91df-a451ebb3d525' # Call to Action
+      key: 'section:cbd30d19-7bb8-4252-91df-a451ebb3d525' # Erste Hilfe
       page: Entries
       type: native
     -
@@ -278,7 +278,7 @@ meta:
     0b6f8ead-6d71-4167-83c5-510df38bf06b: Gender # Gender
     1cd4c4e5-f56f-4613-9fc4-267b58ddaaee: 'External Author' # External Author
     1f6d945b-d305-4fc1-be5f-9774e3768396: 'SEO Defaults' # SEO Defaults
-    1fb49816-e800-4eb3-a679-27ea164fb72d: 'CTA Type' # CTA Type
+    1fb49816-e800-4eb3-a679-27ea164fb72d: 'Erste Hilfe' # Erste Hilfe
     2a01649b-ab6a-4edd-a8f9-130d7d06dc53: Article # Article
     2b0cc015-5b68-4dc4-9f91-752d21224806: Reduced # Reduced
     02bbff76-fc9f-4cb1-b049-c4426dba23de: SidebarLinks # SidebarLinks
@@ -344,6 +344,7 @@ meta:
     09087e84-41bc-4451-91af-6be5abe8388d: 'Text i18n' # Text i18n
     23465aca-7fa4-4dd7-bd09-9c11e7d61c9a: 'Related Entry' # Related Entry
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
+    339478e6-f21d-4637-94a8-dcb7979328c0: 'Erste Hilfe Claim' # Erste Hilfe Claim
     450218bb-dec8-4ecd-ac87-ba41a6674544: Map # Map
     2200945b-b73a-4a89-bc06-0e3927264677: Box # Box
     9173344f-7095-45e6-a477-c0273f2b99e3: 'Plain Text I18n 2' # Plain Text I18n 2
@@ -367,7 +368,7 @@ meta:
     c0844b9c-409a-4e9f-b7a3-7511a8a6cdf1: Image # Image
     c344dec6-0346-4e67-99e0-ec1552b8946f: Lightswitch # Lightswitch
     c78633bb-34f0-471f-b7f5-45bb42559dab: 'Listing Author' # Listing Author
-    cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Call to Action' # Call to Action
+    cbd30d19-7bb8-4252-91df-a451ebb3d525: 'Erste Hilfe' # Erste Hilfe
     cf6adcb3-eff6-4b6e-a47b-96c40a40241a: 'Img Source' # Img Source
     d06e43b2-938f-4ef6-9438-70bdfaf59efa: 'Grid Span' # Grid Span
     d4bed2bd-da16-4068-9c34-38184168514f: 'Bild Umfluss' # Bild Umfluss
