@@ -25,9 +25,9 @@
 	{%- set totalSourceString = ' ' ~ photographer ~ ' ' ~ imgSourcePlatform ~ ' ' ~ imgSourceLicence -%}
 
 	{% if imgSourceUrl %}
-		({{ 'Quelle' | t }}: <a href="{{ imgSourceUrl }}" target="_blank">{{ totalSourceString | trim }}</a>)
+		({{ 'Quelle' | t }}:{{ ' ' }}<a href="{{ imgSourceUrl }}" target="_blank">{{ totalSourceString | trim }}</a>)
 	{% else %}
-		({{ 'Quelle' | t }}: {{- totalSourceString | trim -}})
+		({{ 'Quelle' | t }}:{{ ' ' }}{{- totalSourceString | trim -}})
 	{% endif %}
 
 {%- endmacro -%}
