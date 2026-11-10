@@ -3,6 +3,7 @@
 
     .dropdownContents {
         padding: calc(var(--layoutGap) * 2);
+        grid-template-columns: 1fr;
         height: 100%;
         p,
         a,
@@ -40,7 +41,8 @@
         .element {
             display: flex;
             align-items: baseline;
-            gap: 10px;
+            flex-direction: column;
+            padding-bottom: 20px;
             .elementTitle {
                 font-family: var(--font-default);
                 font-size: var(--font-size-M);
@@ -99,7 +101,6 @@
 @media (max-width: 48rem) {
     .dropdown {
         .dropdownContents {
-            grid-template-columns: 1fr;
             .majorLinks {
                 a {
                     font-size: var(--font-size-L);
