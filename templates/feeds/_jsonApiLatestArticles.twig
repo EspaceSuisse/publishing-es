@@ -1,4 +1,8 @@
-{% set latestArticles = craft.entries.section('article').site(site).limit(3).all() %}
+{% set latestArticles = craft.entries.section('article')
+    .site(site)
+    .fDistribution('esPage')
+    .limit(3)
+    .all() %}
 {% set language = site.language %}
 
 [

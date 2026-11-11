@@ -4,12 +4,12 @@
     .section(['article', 'news'])
     .site(site)
     .orderBy('postDate desc')
+    .fDistribution('rssFeed')
     .limit(100)
     .all()
 -%}
 
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/theme/rss-style.xsl"?>
 <rss 
     version="2.0"
     xmlns:atom="http://www.w3.org/2005/Atom"
@@ -67,7 +67,7 @@
             <title>{{ feedItemTitle }}</title>
             <description><![CDATA[{{ feedItemSeoDesc }}]]></description>
             <content:encoded><![CDATA[{{ feedItemLead }}]]></content:encoded>
-            <link>{{ (item.url ~ utmTracker)|raw }}</link>
+            <link>{{ (item.url ~ utmTracker) }}</link>
             <guid isPermaLink="false">{{ postUID }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>
             <category domain="language">{{ langISO }}</category>

@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: sticky
-instructions: null
+instructions: 'Eintrag wird zuoberst angepinnt.'
 name: Sticky
 searchable: false
 settings:
