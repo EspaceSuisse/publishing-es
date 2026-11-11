@@ -1,4 +1,4 @@
-dateModified: 1794401769
+dateModified: 1794402506
 elementSources:
   craft\elements\Asset:
     -
@@ -635,5 +635,5 @@ system:
   live: true
   name: 'EspaceSuisse Publishing'
   retryDuration: null
-  schemaVersion: 5.11.0.2
+  schemaVersion: 5.12.0.2
   timeZone: $TZ
