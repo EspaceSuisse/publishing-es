@@ -71,6 +71,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-11-11T11:14:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fb9c4af6-8850-46b4-9b03-d4a2bdd614f8 # Social Media Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 01b6ef00-0900-4617-80a9-cbef8c729bc0
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-12-17T10:15:25+00:00'
             editCondition: null
             elementCondition: null
@@ -102,7 +119,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: Aufmacherbild
-            oldFieldUid: 8cbcac22-e63c-4df9-a8db-040cdd55daa2 # Aufmacher Bild
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -119,7 +136,7 @@ fieldLayouts:
             handle: null
             instructions: 'Kontext zum Bild'
             label: 'Aufmacherbild Legende'
-            oldFieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

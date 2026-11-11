@@ -48,11 +48,11 @@
             .one()
         %}
 
-        {% set textLength = 400 %}
+        {% set textLength = 300 %}
 
         {% set feedItemTitle = item.fPlainTextI18n ?: item.title %}
-        {% set feedLongText = item.fPlainTextI18nMultiline %}
-        {% set feedItemLead = feedLongText | length > textLength ? feedLongText | slice(0, textLength) ~ '…': feedLongText %}
+        {% set feedLongText = item.fSocialMediaText ?: item.fPlainTextI18nMultiline ?: item.fSeoDescription %}
+        {% set feedTextSummary = feedLongText | length > 300 ? feedLongText | slice(0, textLength - 1) ~ '…' : feedLongText %}
         {% set feedItemSeoDesc = item.fSeoDescription %}
         {% set postUID = item.uid ~ '-' ~ item.siteId %}
         
@@ -66,7 +66,7 @@
             <pubDate>{{ itemPostDate | atom }} </pubDate>
             <title>{{ feedItemTitle }}</title>
             <description><![CDATA[{{ feedItemSeoDesc }}]]></description>
-            <content:encoded><![CDATA[{{ feedItemLead }}]]></content:encoded>
+            <content:encoded><![CDATA[{{ feedTextSummary }}]]></content:encoded>
             <link>{{ (item.url ~ utmTracker) }}</link>
             <guid isPermaLink="false">{{ postUID }}</guid>
             <source>{{ craft.app.request.absoluteUrl }}</source>

@@ -96,6 +96,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-11-11T11:14:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fb9c4af6-8850-46b4-9b03-d4a2bdd614f8 # Social Media Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 227d6655-6725-47f1-abc9-09adc0363315
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-23T08:10:27+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
