@@ -37,34 +37,36 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-06-19T11:25:50+00:00'
+            dateAdded: '2026-11-11T10:02:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
             handle: null
             instructions: null
-            label: null
+            label: Claim
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 44d8ed52-7643-4e15-a450-4c663a34845d
+            uid: bf236a70-9a13-4287-be6b-20f584423e9c
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-06-19T11:25:50+00:00'
+            dateAdded: '2026-11-11T10:02:08+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: null
-            label: null
+            label: Text
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9da75b6d-b47a-469f-9699-a0fb6ddfead0
+            uid: cfb02c5b-4b06-45a3-8168-41c8483d7578
             userCondition: null
             warning: null
             width: 100
@@ -76,7 +78,8 @@ fieldLayouts:
             fieldUid: f9f9d456-4ae3-4b92-809a-b27d47247746 # Link
             handle: null
             instructions: null
-            label: null
+            label: 'Call To Cation Link'
+            oldFieldUid: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -85,18 +88,19 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-07-23T09:37:15+00:00'
+            dateAdded: '2026-11-10T12:58:07+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
+            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ac53e6ae-766e-427d-a32e-a92e66a9ca0c
+            uid: 13c58ea3-4eed-4e58-a29e-1aabf68f1598
             userCondition: null
             warning: null
             width: 100
@@ -104,10 +108,10 @@ fieldLayouts:
         uid: 6601a8b5-ec05-4c04-b4f3-25a83bfdf20c
         userCondition: null
     thumbFieldKey: null
-handle: tCallToAction
+handle: tErsteHilfe
 hasTitleField: true
-icon: null
-name: 'CTA Type'
+icon: truck-medical
+name: 'Erste Hilfe'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

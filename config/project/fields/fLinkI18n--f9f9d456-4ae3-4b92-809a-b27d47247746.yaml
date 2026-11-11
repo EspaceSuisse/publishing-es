@@ -37,9 +37,18 @@ settings:
             -
               - allowCustomSchemes
               - ''
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
   types:
     - entry
     - url
+    - category
+    - email
 translationKeyFormat: null
 translationMethod: language
 type: craft\fields\Link
