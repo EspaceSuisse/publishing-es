@@ -1,0 +1,39 @@
+.ersteHilfe {
+    text-align: center;
+    background-color: var(--colorES-brand-blue-soft);
+    padding: 10vw;
+    margin-bottom: calc( var(--layoutGap) * -1 );
+    margin-top: var(--layoutGap);
+    box-shadow: 0 0 69px -10px rgba(0, 0, 0, 0.2),
+              inset 0 -8px 12px 0 rgba(0, 0, 0, 0.15);
+    .theTitle {
+        color: var(--txtInvertColor);
+        font-size: var(--font-size-XXL);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        margin-bottom: 0;
+    }
+    .theClaim {
+        color: var(--txtInvertColor);
+        font-size: var(--font-size-L);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        background-color: transparent;
+        padding: 0;
+    }
+    .theText {
+        padding-top: var(--layoutGap);
+        p {
+            color: var(--txtInvertColor);
+            font-size: var(--font-size-L);
+            font-family: var(--font-display);
+        }
+    }
+    .theCta {
+        a {
+            color: var(--txtInvertColor);
+            font-size: var(--font-size-L);
+            font-family: var(--font-display);
+        }
+    }
+}

@@ -37,19 +37,36 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2026-11-10T12:44:44+00:00'
+            dateAdded: '2026-11-11T10:02:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 339478e6-f21d-4637-94a8-dcb7979328c0 # Erste Hilfe Claim
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
             handle: null
             instructions: null
-            label: null
+            label: Claim
             oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8f649e1e-0482-4345-bcf8-0cfc20ca8cf8
+            uid: bf236a70-9a13-4287-be6b-20f584423e9c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-11T10:02:08+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
+            handle: null
+            instructions: null
+            label: Text
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cfb02c5b-4b06-45a3-8168-41c8483d7578
             userCondition: null
             warning: null
             width: 100
@@ -61,7 +78,7 @@ fieldLayouts:
             fieldUid: f9f9d456-4ae3-4b92-809a-b27d47247746 # Link
             handle: null
             instructions: null
-            label: null
+            label: 'Call To Cation Link'
             oldFieldUid: null
             required: true
             tip: null

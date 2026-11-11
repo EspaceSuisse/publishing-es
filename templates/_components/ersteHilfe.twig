@@ -20,9 +20,16 @@
 {% set randomHilfe = shuffledHilfe|first %}
 
 {% if randomHilfe %}
-    <aside class="ersteHilfe" style="background:{{ relatedSubject.fColor }}">
-        <h2>{{ randomHilfe.title }}</h2>
-        <p class="claim">{{ randomHilfe.txtClaim }}</p>
-        {{ randomHilfe.fLinkI18n }}
+    <aside class="ersteHilfe">
+        <h2 class="theTitle">{{ randomHilfe.title }}</h2>
+        <h3 class="theClaim">{{ randomHilfe.fPlainTextI18nMultiline }}</h3>
+        <div class="theText">{{ randomHilfe.fRichTextI18n }}</div>
+       <span class="theCta">
+             {% if randomHilfe.fLinkI18n.type == 'email' %}
+                {{ randomHilfe.fLinkI18n.link | enkode }}
+            {% else %}
+                {{ randomHilfe.fLinkI18n.link }}
+            {% endif %}
+       </span>
     </aside>
 {% endif %}
