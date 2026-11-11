@@ -1,14 +1,12 @@
 {# Get the first genre from the current article #}
 {% set relatedSubject = entry.fCatSubject.one() %}
 
-{{ relatedSubject }} yyy
-
 {# Get Erste Hilfe entries matching the current genre #}
 {% set ctaItems = craft.entries()
     .section('ersteHilfe')
     .relatedTo({
         targetElement: relatedSubject,
-        field: 'fCatSubject'
+        field: 'fCatSubjectDisplay'
     })
     .all()
 %}
@@ -20,16 +18,20 @@
 {% set randomHilfe = shuffledHilfe|first %}
 
 {% if randomHilfe %}
-    <aside class="ersteHilfe">
+    <aside class="ersteHilfe" {% if randomHilfe.fColor %}style="background-color:{{ randomHilfe.fColor }}"{% endif %}>
         <h2 class="theTitle">{{ randomHilfe.title }}</h2>
-        <h3 class="theClaim">{{ randomHilfe.fPlainTextI18nMultiline }}</h3>
-        <div class="theText">{{ randomHilfe.fRichTextI18n }}</div>
-       <span class="theCta">
+        {% if randomHilfe.fPlainTextI18nMultiline %}
+            <h3 class="theClaim">{{ randomHilfe.fPlainTextI18nMultiline }}</h3>
+        {% endif %}
+        {% if randomHilfe.fRichTextI18n %}
+            <div class="theText">{{ randomHilfe.fRichTextI18n }}</div>
+        {% endif %}
+       <div class="theCta">
              {% if randomHilfe.fLinkI18n.type == 'email' %}
                 {{ randomHilfe.fLinkI18n.link | enkode }}
             {% else %}
                 {{ randomHilfe.fLinkI18n.link }}
             {% endif %}
-       </span>
+       </div>
     </aside>
 {% endif %}

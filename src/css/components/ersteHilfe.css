@@ -23,16 +23,17 @@
     }
     .theText {
         padding-top: var(--layoutGap);
-        p {
+        p, li {
             color: var(--txtInvertColor);
             font-size: var(--font-size-L);
             font-family: var(--font-display);
         }
     }
     .theCta {
+        padding-top: calc( var(--layoutGap) * 4 );
         a {
             color: var(--txtInvertColor);
-            font-size: var(--font-size-L);
+            font-size: var(--font-size-XXL);
             font-family: var(--font-display);
         }
     }
