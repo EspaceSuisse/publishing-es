@@ -3,6 +3,7 @@
 {%- set combinedEntries = craft.entries()
     .section(['article', 'news'])
     .site(['default', 'espacesuissePublishingFr'])
+    .fDistribution('rssFeed')
     .unique(false)
     .orderBy('postDate desc')
     .limit(10)
