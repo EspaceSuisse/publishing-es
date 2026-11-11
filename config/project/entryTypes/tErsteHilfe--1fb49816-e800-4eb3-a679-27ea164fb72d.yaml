@@ -3,7 +3,7 @@ color: null
 description: null
 fieldLayouts:
   ba018980-2dd6-45ab-b31e-2658e30cdf0e:
-    cardThumbAlignment: end
+    cardThumbAlignment: start
     tabs:
       -
         elementCondition: null

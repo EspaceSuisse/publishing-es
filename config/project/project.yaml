@@ -1,4 +1,4 @@
-dateModified: 1794391406
+dateModified: 1794396574
 elementSources:
   craft\elements\Asset:
     -
@@ -344,6 +344,7 @@ meta:
     09087e84-41bc-4451-91af-6be5abe8388d: 'Text i18n' # Text i18n
     23465aca-7fa4-4dd7-bd09-9c11e7d61c9a: 'Related Entry' # Related Entry
     76729e35-a9d2-4cf7-aef5-11bb15688a6f: Rubrik # Rubrik
+    299900b0-cba6-4e48-a209-ae1409609c77: Distribution # Distribution
     339478e6-f21d-4637-94a8-dcb7979328c0: 'Erste Hilfe Claim' # Erste Hilfe Claim
     450218bb-dec8-4ecd-ac87-ba41a6674544: Map # Map
     2200945b-b73a-4a89-bc06-0e3927264677: Box # Box
@@ -389,6 +390,7 @@ meta:
     f8280914-6618-4ce0-8ed1-a3cc7b9c43b0: Marker # Marker
     fa1b164b-252f-4494-8e00-ef34899159fa: Latitude # Latitude
     fa54fd14-cfed-4146-af48-2c0f6efa7f6d: Bild # Bild
+    fb9c4af6-8850-46b4-9b03-d4a2bdd614f8: 'Social Media Text' # Social Media Text
     fbf70cb2-5720-4077-947b-c9e20c301ee6: 'News Set' # News Set
     fd056fec-5843-47f0-a2ad-520a3044916d: 'Code FIeld' # Code FIeld
     fd55594d-e7ef-4114-b326-eb015c7418c9: 'Article Set' # Article Set

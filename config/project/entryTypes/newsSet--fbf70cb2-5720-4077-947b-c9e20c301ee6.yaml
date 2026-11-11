@@ -35,38 +35,6 @@ fieldLayouts:
             uid: 5f19d603-acc0-4629-bfe2-1ba16f722bae
             userCondition: null
             warning: null
-            width: 75
-          -
-            dateAdded: '2026-06-10T06:04:42+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 2e6b1f37-5bf3-41f9-9d33-83817ab9080b # Sticky
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bb156a50-5a68-4cd0-b5d7-d074927e6386
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            dateAdded: '2025-12-17T10:15:25+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 14238941-64ec-4951-8f76-71ae79200b4d
-            userCondition: null
-            warning: null
             width: 100
           -
             dateAdded: '2026-02-25T15:11:26+00:00'
@@ -77,6 +45,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: Lead
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -93,10 +62,45 @@ fieldLayouts:
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: bef7572d-bb23-440f-b433-636cc7523943
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-11T11:14:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fb9c4af6-8850-46b4-9b03-d4a2bdd614f8 # Social Media Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 01b6ef00-0900-4617-80a9-cbef8c729bc0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-12-17T10:15:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 2897cc3f-95c9-4148-80b9-fd663d11f977 # Thema
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14238941-64ec-4951-8f76-71ae79200b4d
             userCondition: null
             warning: null
             width: 100
@@ -114,7 +118,8 @@ fieldLayouts:
             fieldUid: 8cbcac22-e63c-4df9-a8db-040cdd55daa2 # Aufmacher Bild
             handle: null
             instructions: null
-            label: 'News Aufmacherbild'
+            label: Aufmacherbild
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -130,7 +135,8 @@ fieldLayouts:
             fieldUid: 15e047b0-576a-4f08-83ff-0c064c9c8e29 # Text SImple i18n
             handle: null
             instructions: 'Kontext zum Bild'
-            label: Bildlegende
+            label: 'Aufmacherbild Legende'
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -145,6 +151,15 @@ fieldLayouts:
             uid: 96fad22f-943a-4067-aefc-d3f384a95368
             userCondition: null
           -
+            content: "# Was tun?\r\n\r\nWürfle dir deine News aus den Matrix Blöcken frei zusammen."
+            dateAdded: '2026-11-11T10:31:03+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 8e39c578-65da-4caf-a636-80b13b650b0a
+            userCondition: null
+            width: 100
+          -
             dateAdded: '2025-09-10T13:48:55+00:00'
             editCondition: null
             elementCondition: null
@@ -153,6 +168,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -175,6 +191,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -191,6 +208,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -200,6 +218,46 @@ fieldLayouts:
             width: 100
         name: Google
         uid: aa4ab913-b955-4dd3-ae69-6223510c4fc9
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-11-11T10:31:03+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 299900b0-cba6-4e48-a209-ae1409609c77 # Distribution
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6785b0aa-d23b-4eb0-ac58-c712bbfd7792
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-06-10T06:04:42+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 2e6b1f37-5bf3-41f9-9d33-83817ab9080b # Sticky
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bb156a50-5a68-4cd0-b5d7-d074927e6386
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 1b6da0a9-0668-4e7e-bc79-f17140112dd4
         userCondition: null
     thumbFieldKey: null
 handle: newsSet

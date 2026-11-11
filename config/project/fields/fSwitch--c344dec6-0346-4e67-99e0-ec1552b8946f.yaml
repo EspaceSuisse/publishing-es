@@ -5,8 +5,8 @@ name: Lightswitch
 searchable: false
 settings:
   default: false
-  offLabel: null
-  onLabel: null
+  offLabel: 'NO'
+  onLabel: 'YES'
   showLabelsInCards: false
 translationKeyFormat: null
 translationMethod: none
