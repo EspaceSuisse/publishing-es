@@ -106,6 +106,7 @@ fieldLayouts:
 fs: userPortraits
 handle: vProfileImg
 name: Profilbild
+propagationMethod: all
 sortOrder: 3
 subpath: ''
 titleTranslationKeyFormat: null
