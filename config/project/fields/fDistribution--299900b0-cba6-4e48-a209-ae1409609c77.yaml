@@ -1,0 +1,45 @@
+columnSuffix: null
+handle: fDistribution
+instructions: 'Wo möchtest du, das der Eintrag überall Propagiert wird?'
+name: Distribution
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'EspaceSuisse Website'
+        -
+          - value
+          - esPage
+        -
+          - icon
+          - house-medical-flag
+        -
+          - color
+          - '#007cc0'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Social Media'
+        -
+          - value
+          - rssFeed
+        -
+          - icon
+          - linkedin
+        -
+          - color
+          - '#8cffcb'
+        -
+          - default
+          - '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\MultiSelect
