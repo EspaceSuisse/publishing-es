@@ -37,12 +37,12 @@ jobs:
             --exclude='.vscode' \
             --exclude='tests/' \
             --exclude='/web/assets/' \
-            --exclude='web/cpresources/' \
-            --exclude='web/imager/' \
-            --exclude='node_modules/' \
+            --exclude='/web/cpresources/' \
+            --exclude='/web/imager/' \
+            --exclude='/node_modules/' \
             --exclude='storage/' \
             --exclude='*.log' \
-            --exclude='vendor/' \
+            --exclude='/vendor/' \
             -e "ssh -o StrictHostKeyChecking=no" \
             ./ "${SSH_USER}@${SSH_HOST}:${SSH_PATH}"
 
