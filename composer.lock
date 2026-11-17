@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8b896f26fcd522ab914979f7e45afd0",
+    "content-hash": "c0c1056dc50734a679e64b796d13970d",
     "packages": [
         {
             "name": "amphp/amp",
@@ -7361,11 +7361,11 @@
         },
         {
             "name": "putyourlightson/craft-blitz",
-            "version": "5.14.5",
+            "version": "5.15.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/6320e883e61dc08d50d4ebdb9de2732a11bdd1e5",
-                "reference": "6320e883e61dc08d50d4ebdb9de2732a11bdd1e5",
+                "url": "https://api.github.com/repos/putyourlightson/craft-blitz/zipball/3513bfed9fd9a91ac089c3f8e5cae3ca9a635dbc",
+                "reference": "3513bfed9fd9a91ac089c3f8e5cae3ca9a635dbc",
                 "shasum": ""
             },
             "require": {
@@ -7409,7 +7409,7 @@
                 "source": "https://github.com/putyourlightson/craft-blitz",
                 "issues": "https://github.com/putyourlightson/craft-blitz/issues"
             },
-            "time": "2026-11-10T02:26:33+00:00"
+            "time": "2026-11-16T13:16:10+00:00"
         },
         {
             "name": "putyourlightson/craft-sprig-core",
@@ -7626,11 +7626,11 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "6.2.0",
+            "version": "6.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/e393c0354df9f444636da88e514da219d66156f8",
-                "reference": "e393c0354df9f444636da88e514da219d66156f8",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/633b3bb615bf6440dc30ab051f309b2b6e794cb9",
+                "reference": "633b3bb615bf6440dc30ab051f309b2b6e794cb9",
                 "shasum": ""
             },
             "require": {
@@ -7682,7 +7682,7 @@
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues"
             },
-            "time": "2026-11-04T18:48:11+00:00"
+            "time": "2026-11-13T20:01:08+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
