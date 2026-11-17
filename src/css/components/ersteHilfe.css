@@ -23,10 +23,14 @@
         font-family: var(--font-display);
         font-weight: var(--font-bold);
         background-color: transparent;
+        max-width: 50rem;
+        margin: auto;
         padding: 0;
     }
     .theText {
         padding-top: var(--layoutGap);
+        max-width: 50rem;
+        margin: auto;
         p, li {
             color: var(--txtInvertColor);
             font-size: var(--font-size-L);
