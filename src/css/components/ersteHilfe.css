@@ -6,6 +6,10 @@
     margin-top: var(--layoutGap);
     box-shadow: 0 0 69px -10px rgba(0, 0, 0, 0.2),
               inset 0 -8px 12px 0 rgba(0, 0, 0, 0.15);
+    .imgErsteHilfe {
+        max-width: 300px;
+        margin: auto;
+    }
     .theTitle {
         color: var(--txtInvertColor);
         font-size: var(--font-size-XXL);

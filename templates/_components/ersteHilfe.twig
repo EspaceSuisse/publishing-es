@@ -1,3 +1,5 @@
+{% import '_macros/macroImage' as macro %}
+
 {# Get the first genre from the current article #}
 {% set relatedSubject = entry.fCatSubject.one() %}
 
@@ -19,6 +21,9 @@
 
 {% if randomHilfe %}
     <aside class="ersteHilfe" {% if randomHilfe.fColor %}style="background-color:{{ randomHilfe.fColor }}"{% endif %}>
+        {% for asset in randomHilfe.fImgI18n %}
+            <img src="{{ asset.url }}" alt="{{ randomHilfe.title }}" class="imgErsteHilfe">
+        {% endfor %}
         <h2 class="theTitle">{{ randomHilfe.title }}</h2>
         {% if randomHilfe.fPlainTextI18nMultiline %}
             <h3 class="theClaim">{{ randomHilfe.fPlainTextI18nMultiline }}</h3>
