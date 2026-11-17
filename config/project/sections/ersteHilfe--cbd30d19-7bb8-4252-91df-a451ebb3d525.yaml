@@ -6,7 +6,7 @@ entryTypes:
 handle: ersteHilfe
 maxAuthors: 1
 minAuthors: 1
-name: 'First Aid'
+name: 'Erste Hilfe'
 previewTargets:
   -
     label: 'Primary entry page'
