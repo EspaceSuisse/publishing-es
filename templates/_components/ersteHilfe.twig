@@ -41,11 +41,14 @@
         {% if randomHilfe.fRichTextI18n %}
             <div class="theText">{{ randomHilfe.fRichTextI18n }}</div>
         {% endif %}
-       <div class="theCta">
+       <div class="theCta {% if randomHilfe.fPlainTextI18n %}hasCtaClaim{% endif %}">
+            {% if randomHilfe.fPlainTextI18n %}
+                <p class="ctaClaim">{{ randomHilfe.fPlainTextI18n }}</p>
+            {% endif %}
              {% if randomHilfe.fLinkI18n.type == 'email' %}
                 {{ randomHilfe.fLinkI18n.link | enkode }}
             {% else %}
-                {{ randomHilfe.fLinkI18n.link }}
+                <a href="{{ randomHilfe.fLinkI18n.url }}" class="btn ersteHilfeCtaLink">{{ randomHilfe.fLinkI18n.label }}</a>
             {% endif %}
        </div>
     </aside>
