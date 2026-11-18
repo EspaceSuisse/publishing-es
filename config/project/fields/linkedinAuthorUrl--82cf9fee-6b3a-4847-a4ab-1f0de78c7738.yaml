@@ -2,7 +2,7 @@ columnSuffix: null
 handle: linkedinAuthorUrl
 instructions: 'LinkedIn Profil URL des Autors'
 name: 'LinkedIn Author Url'
-searchable: false
+searchable: true
 settings:
   fullGraphqlData: true
   maxLength: 255

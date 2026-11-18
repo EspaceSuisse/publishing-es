@@ -2,11 +2,11 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 1fb49816-e800-4eb3-a679-27ea164fb72d # CTA Type
-handle: callToAction
+    uid: 1fb49816-e800-4eb3-a679-27ea164fb72d # Erste Hilfe
+handle: ersteHilfe
 maxAuthors: 1
 minAuthors: 1
-name: 'Call to Action'
+name: 'Erste Hilfe'
 previewTargets:
   -
     label: 'Primary entry page'

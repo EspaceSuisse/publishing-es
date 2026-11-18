@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: txtClaim
+instructions: null
+name: 'Erste Hilfe Claim'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 150
+  code: true
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText

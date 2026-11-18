@@ -3,11 +3,28 @@ color: null
 description: null
 fieldLayouts:
   ba018980-2dd6-45ab-b31e-2658e30cdf0e:
-    cardThumbAlignment: end
+    cardThumbAlignment: start
     tabs:
       -
         elementCondition: null
         elements:
+          -
+            dateAdded: '2026-11-17T11:51:06+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            handle: null
+            instructions: null
+            label: 'Animated Graphic'
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f4fce110-243e-4529-be8f-5a7683985d3c
+            userCondition: null
+            warning: null
+            width: 100
           -
             autocapitalize: true
             autocomplete: false
@@ -37,34 +54,53 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-06-19T11:25:50+00:00'
+            dateAdded: '2026-11-11T10:02:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: b84d7296-105e-4cd2-a351-d84b70fcfbfb # Img i18n
+            fieldUid: 826bddc1-fa89-4b66-b1ab-6924ab5aa9c3 # Plain Text i18n Multiline
             handle: null
             instructions: null
-            label: null
+            label: Claim
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 44d8ed52-7643-4e15-a450-4c663a34845d
+            uid: bf236a70-9a13-4287-be6b-20f584423e9c
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-06-19T11:25:50+00:00'
+            dateAdded: '2026-11-11T10:02:08+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
             fieldUid: 09087e84-41bc-4451-91af-6be5abe8388d # Text i18n
             handle: null
             instructions: null
-            label: null
+            label: Text
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9da75b6d-b47a-469f-9699-a0fb6ddfead0
+            uid: cfb02c5b-4b06-45a3-8168-41c8483d7578
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-18T08:34:09+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            handle: null
+            instructions: null
+            label: 'CTA Claim'
+            oldFieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            required: false
+            tip: 'Zögern Sie nicht uns zu kontaktieren'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1ff1bf5c-eb7e-4aad-90c8-ee8016822cd1
             userCondition: null
             warning: null
             width: 100
@@ -76,7 +112,8 @@ fieldLayouts:
             fieldUid: f9f9d456-4ae3-4b92-809a-b27d47247746 # Link
             handle: null
             instructions: null
-            label: null
+            label: 'Call To Cation Link'
+            oldFieldUid: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -85,29 +122,47 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-07-23T09:37:15+00:00'
+            dateAdded: '2026-11-11T12:49:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 91725092-8f89-4299-a39d-14eaaeef57ae # Rubrik
+            fieldUid: 0e5998e7-8232-4c43-9d99-d85269573897 # Betroffene Themen
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fe008afb-11aa-4998-ac27-893c76117ffa
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2026-11-11T12:53:13+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 432db72f-cf6e-4d81-90df-eef5aeb18160 # Color
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ac53e6ae-766e-427d-a32e-a92e66a9ca0c
+            uid: da28fbbd-c8a6-45aa-9821-7211a110b660
             userCondition: null
             warning: null
-            width: 100
+            width: 25
         name: Content
         uid: 6601a8b5-ec05-4c04-b4f3-25a83bfdf20c
         userCondition: null
     thumbFieldKey: null
-handle: tCallToAction
+handle: tErsteHilfe
 hasTitleField: true
-icon: null
-name: 'CTA Type'
+icon: truck-medical
+name: 'Erste Hilfe'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

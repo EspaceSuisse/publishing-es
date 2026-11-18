@@ -18,10 +18,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: pages/search.twig
-    uriFormat: rechercher
+    uriFormat: '{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
     enabledByDefault: true
     hasUrls: true
     template: pages/search.twig
-    uriFormat: search
+    uriFormat: '{slug}'
 type: single

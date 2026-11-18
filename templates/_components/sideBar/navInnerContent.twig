@@ -32,34 +32,6 @@
 						{% include "_components/themeColorSwitcher" %}
 					</div>
 				</div>
-				<div class="latestEntries">
-					{% for item in latestNews %}
-						{% if loop.first %}
-							<h2>{{ 'News' | t }}</h2>
-						{% endif %}
-						
-						<a href="{{ item.url }}"  class="latestLink">
-							{{ macroPostDate.postDate(item.postDate, true) }}
-							<h3>{{ item.title }}</h3>
-						</a>
-						
-					{% endfor %}
-				</div>
-				<div class="gridRowMdSpan4">{% include "_components/formNewsletter/mailchimpForm" %}</div>
-				<div class="latestEntries">
-					
-					{% for item in latestArticles %}
-						{% if loop.first %}
-							<h2>{{ 'Neuste Artikel' | t }}</h2>
-						{% endif %}
-
-						<a href="{{ item.url }}" class="latestLink">
-							{{ macroPostDate.postDate(item.postDate, true) }}
-							<h3>{{ item.title }}</h3>
-						</a>
-
-					{% endfor %}
-				</div>
 			</div>
 
 		</aside>

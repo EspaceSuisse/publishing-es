@@ -2,7 +2,7 @@ columnSuffix: null
 handle: fCatSubject
 instructions: null
 name: Thema
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

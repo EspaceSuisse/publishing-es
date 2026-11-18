@@ -200,6 +200,7 @@ fieldLayouts:
 fs: images
 handle: vImg
 name: 'Artikel Bilder'
+propagationMethod: all
 sortOrder: 1
 subpath: ''
 titleTranslationKeyFormat: null

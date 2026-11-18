@@ -2,8 +2,9 @@ columnSuffix: null
 handle: textSimpleI18n
 instructions: null
 name: 'Text SImple i18n'
-searchable: false
+searchable: true
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: '*'
   characterLimit: null
@@ -14,12 +15,12 @@ settings:
   defaultUploadLocationVolume: null
   fullGraphqlData: true
   headingLevels:
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 6
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
   imageEntryTypeUid: null
   imageFieldUid: null
   imageMode: img

@@ -8,6 +8,14 @@ return [
         'cachingEnabled' => false,
         'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
+
+        // Only one HTTP request at a time
+        'cacheGeneratorSettings' => [
+            'concurrency' => 1,
+        ],
+
+        // Smaller batches of driver jobs
+        'driverJobBatchSize' => 25,
         
         // Tell Blitz to cache unique query strings as unique pages
         'queryStringCaching' => SettingsModel::QUERY_STRINGS_CACHE_URLS_AS_UNIQUE_PAGES,
@@ -20,7 +28,11 @@ return [
             ],
         ],
 
-        'refreshMode' => SettingsModel::REFRESH_MODE_CLEAR_AND_GENERATE,
+        'refreshMode' => SettingsModel::REFRESH_MODE_EXPIRE,
+
+        // Whether expired cached pages should be refreshed after being visited by a user.
+        'refreshExpiredCacheAfterVisit' => true,
+
         'includedUriPatterns' => [
             ['uriPattern' => '.*'],
         ],
@@ -29,6 +41,8 @@ return [
             ['uriPattern' => '^knock-knock'],
             ['uriPattern' => '^mitglieder-login'],
             ['uriPattern' => '^connexion-des-membres'],
+            ['uriPattern' => '^suche'],
+            ['uriPattern' => '^chercher'],
             ['uriPattern' => '\.(json|xml|rss)$'],
         ],
     ],

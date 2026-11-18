@@ -5,16 +5,16 @@ button.dropdownLink {
     z-index: 10000;
 
     .animationWrapper {
-        transition: transform 0.6s ease;
+        transition: transform var(--hamburgerSpeed) ease;
     }
 
     span {
-        transition: transform 0.6s ease, opacity 0.4s ease;
+        transition: transform var(--hamburgerSpeed) ease, opacity var(--hamburgerSpeed) ease;
     }
 
     &.open {
         .animationWrapper {
-            animation: spin 0.6s ease forwards;
+            animation: spin var(--hamburgerSpeed) ease forwards;
         }
         .lineUpper {
             transform: rotate(45deg) translate(6px, 6px);

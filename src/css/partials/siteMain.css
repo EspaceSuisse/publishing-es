@@ -22,6 +22,3 @@
     padding-top: var(--siteSideBarWidth);
   }
 }
-.bodyNews #main {
-  padding-bottom: calc( var(--layoutGap) * 5 );
-}

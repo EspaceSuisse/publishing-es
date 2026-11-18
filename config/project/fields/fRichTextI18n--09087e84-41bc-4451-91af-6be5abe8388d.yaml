@@ -2,7 +2,7 @@ columnSuffix: null
 handle: fRichTextI18n
 instructions: null
 name: 'Text i18n'
-searchable: false
+searchable: true
 settings:
   advancedLinkFields: null
   availableTransforms: ''
