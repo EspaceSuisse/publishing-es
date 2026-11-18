@@ -1,0 +1,24 @@
+{% set query = craft.app.request.getQueryParam('query')|trim %}
+
+{% if query|length >= 2 %}
+    {% set suggestions = craft.entries()
+        .section('*')
+        .search(query)
+        .orderBy('score')
+        .limit(8)
+        .all() %}
+
+    {% if suggestions %}
+        <ul class="searchSuggestions" role="listbox">
+            {% for result in suggestions %}
+                <li
+                    role="option"
+                    id="suggestion-{{ loop.index0 }}"
+                    aria-selected="false"
+                >
+                    <a href="{{ result.url }}">{{ result.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endif %}

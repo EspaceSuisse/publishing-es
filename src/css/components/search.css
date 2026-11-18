@@ -27,4 +27,14 @@
             }
         }
     }
+    .searchSuggestions {
+        li {
+            a {
+                font-size: var(--font-size-L);
+                font-family: var(--font-display);
+                font-weight: var(--fontBold);
+                color: var(--linkTxtColor);
+            }
+        }
+    }
 }
