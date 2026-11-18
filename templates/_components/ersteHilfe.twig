@@ -3,15 +3,25 @@
 {# Get the first genre from the current article #}
 {% set relatedSubject = entry.fCatSubject.one() %}
 
-{# Get Erste Hilfe entries matching the current genre #}
-{% set ctaItems = craft.entries()
+{% set query = craft.entries()
     .section('ersteHilfe')
-    .relatedTo({
-        targetElement: relatedSubject,
-        field: 'fCatSubjectDisplay'
-    })
-    .all()
 %}
+
+{# Get Erste Hilfe entries matching the current genre #}
+{% if relatedSubject %}
+    {% set ctaItems = query
+        .relatedTo({
+            targetElement: relatedSubject,
+            field: 'fCatSubjectDisplay'
+        })
+        .all()
+    %}
+{% else %}
+    {% set ctaItems = query
+        .fCatSubjectDisplay(':empty:')
+        .all()
+    %}
+{% endif %}
 
 {# Shuffle matching entries #}
 {% set shuffledHilfe = shuffle(ctaItems) %}
