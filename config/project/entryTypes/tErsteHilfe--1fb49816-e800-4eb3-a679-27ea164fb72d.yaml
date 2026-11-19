@@ -46,7 +46,7 @@ fieldLayouts:
             required: true
             size: null
             step: null
-            tip: null
+            tip: 'Aufmerksamkeit auf sich ziehen'
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: 9442ba70-0917-40f4-8ccc-5d84501c8848
@@ -64,7 +64,7 @@ fieldLayouts:
             label: Claim
             oldFieldUid: null
             required: false
-            tip: null
+            tip: 'Aufmerksamkeit weiterleiten'
             type: craft\fieldlayoutelements\CustomField
             uid: bf236a70-9a13-4287-be6b-20f584423e9c
             userCondition: null
@@ -81,7 +81,7 @@ fieldLayouts:
             label: Text
             oldFieldUid: null
             required: false
-            tip: null
+            tip: 'Erklären worums geht'
             type: craft\fieldlayoutelements\CustomField
             uid: cfb02c5b-4b06-45a3-8168-41c8483d7578
             userCondition: null
@@ -95,10 +95,10 @@ fieldLayouts:
             fieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
             handle: null
             instructions: null
-            label: 'CTA Claim'
-            oldFieldUid: 38c1e2e9-c1e3-4c80-acfe-f190d86317fa # Plain Text i18n
+            label: 'Call to Action'
+            oldFieldUid: null
             required: false
-            tip: 'Zögern Sie nicht uns zu kontaktieren'
+            tip: 'Was soll der Nutzer tun?'
             type: craft\fieldlayoutelements\CustomField
             uid: 1ff1bf5c-eb7e-4aad-90c8-ee8016822cd1
             userCondition: null
@@ -112,10 +112,10 @@ fieldLayouts:
             fieldUid: f9f9d456-4ae3-4b92-809a-b27d47247746 # Link
             handle: null
             instructions: null
-            label: 'Call To Cation Link'
+            label: Action
             oldFieldUid: null
             required: true
-            tip: null
+            tip: 'Möglichkeit des Nutzers um mit EspaceSuisse in Kontakt zu treten.'
             type: craft\fieldlayoutelements\CustomField
             uid: 6dba6f3e-59c5-4b4b-8abc-e7ca4ac56428
             userCondition: null
@@ -128,11 +128,11 @@ fieldLayouts:
             elementEditCondition: null
             fieldUid: 0e5998e7-8232-4c43-9d99-d85269573897 # Betroffene Themen
             handle: null
-            instructions: null
+            instructions: 'Weise diese `Erste Hilfe` allen Einträgen mit folgenden Themen zu'
             label: null
-            oldFieldUid: null
+            oldFieldUid: 0e5998e7-8232-4c43-9d99-d85269573897 # Betroffene Themen
             required: true
-            tip: null
+            tip: 'Hat ein Thema mehrere zuordnungen entscheidet der Zufall.'
             type: craft\fieldlayoutelements\CustomField
             uid: fe008afb-11aa-4998-ac27-893c76117ffa
             userCondition: null
