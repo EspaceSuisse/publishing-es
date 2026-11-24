@@ -1,15 +1,27 @@
+{% import '_macros/macroImage' as macro %}
+
 {# Get the first genre from the current article #}
 {% set relatedSubject = entry.fCatSubject.one() %}
 
-{# Get Erste Hilfe entries matching the current genre #}
-{% set ctaItems = craft.entries()
+{% set query = craft.entries()
     .section('ersteHilfe')
-    .relatedTo({
-        targetElement: relatedSubject,
-        field: 'fCatSubjectDisplay'
-    })
-    .all()
 %}
+
+{# Get Erste Hilfe entries matching the current genre #}
+{% if relatedSubject %}
+    {% set ctaItems = query
+        .relatedTo({
+            targetElement: relatedSubject,
+            field: 'fCatSubjectDisplay'
+        })
+        .all()
+    %}
+{% else %}
+    {% set ctaItems = query
+        .fCatSubjectDisplay(':empty:')
+        .all()
+    %}
+{% endif %}
 
 {# Shuffle matching entries #}
 {% set shuffledHilfe = shuffle(ctaItems) %}
@@ -19,6 +31,9 @@
 
 {% if randomHilfe %}
     <aside class="ersteHilfe" {% if randomHilfe.fColor %}style="background-color:{{ randomHilfe.fColor }}"{% endif %}>
+        {% for asset in randomHilfe.fImgI18n %}
+            <img src="{{ asset.url }}" alt="{{ randomHilfe.title }}" class="imgErsteHilfe">
+        {% endfor %}
         <h2 class="theTitle">{{ randomHilfe.title }}</h2>
         {% if randomHilfe.fPlainTextI18nMultiline %}
             <h3 class="theClaim">{{ randomHilfe.fPlainTextI18nMultiline }}</h3>
@@ -26,11 +41,14 @@
         {% if randomHilfe.fRichTextI18n %}
             <div class="theText">{{ randomHilfe.fRichTextI18n }}</div>
         {% endif %}
-       <div class="theCta">
+       <div class="theCta {% if randomHilfe.fPlainTextI18n %}hasCtaClaim{% endif %}">
+            {% if randomHilfe.fPlainTextI18n %}
+                <p class="ctaClaim">{{ randomHilfe.fPlainTextI18n }}</p>
+            {% endif %}
              {% if randomHilfe.fLinkI18n.type == 'email' %}
                 {{ randomHilfe.fLinkI18n.link | enkode }}
             {% else %}
-                {{ randomHilfe.fLinkI18n.link }}
+                <a href="{{ randomHilfe.fLinkI18n.url }}" class="btn ersteHilfeCtaLink">{{ randomHilfe.fLinkI18n.label }}</a>
             {% endif %}
        </div>
     </aside>

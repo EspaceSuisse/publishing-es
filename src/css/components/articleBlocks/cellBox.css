@@ -73,7 +73,7 @@
         font-weight: var(--font-medium)
     }
     .cellBoxInner {
-        padding: calc( var(--layoutGap) / 2);
+        padding: calc( var(--layoutGap) / 1);
         padding-bottom: 0;
         border-top: solid 1px var(--linkTxtColor);
         p, ul, ol {
