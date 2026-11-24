@@ -12,19 +12,26 @@
     .searchResults {
         margin-top: var(--layoutGap);
     }
-    .foundTotalResults {
-        font-size: var(--font-size-L);
-        font-family: var(--font-display);
-        font-weight: var(--fontBold);
+    .resultsInTotal {
+        p:first-child {
+            font-size: var(--font-size-L);
+            font-family: var(--font-display);
+            font-weight: var(--fontBold);
+        }
     }
-    .searchResultList {
-        li {
-            a {
-                font-size: var(--font-size-L);
+    .result {
+        padding-bottom: var(--layoutGap);
+        > a {
+            font-size: var(--font-size-L);
                 font-family: var(--font-display);
                 font-weight: var(--fontBold);
                 color: var(--linkTxtColor);
-            }
+        }
+        p {
+            font-size: var(--font-size-M);
+            font-family: var(--font-display);
+            font-weight: var(--fontRegular);
+            margin: 0;
         }
     }
     .searchSuggestions {

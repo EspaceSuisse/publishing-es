@@ -3,251 +3,323 @@
 
 {% block content %}
 
+{# Search uses the rawsearch plugin: https://github.com/oncode/craft-rawsearch #}
 
-		<article>
-			<header class="pageHead subPageHead">
-				{% include "_components/header/headerBrand" %}
-				{% include "_components/header/headerPage" %}
-			</header>
-			<div class="gridArticle articleContent">
-				{% include "_components/articleMatrix" %}
-			</div>
-		</article>
+    <article>
+        <header class="pageHead subPageHead">
+            {% include "_components/header/headerBrand" %}
+            {% include "_components/header/headerPage" %}
+        </header>
 
-		{% set query = craft.app.request.getQueryParam('query') %}
+        <div class="gridArticle articleContent">
+            {% include "_components/articleMatrix" %}
+        </div>
+    </article>
 
-		<article>
-			<div class="gridArticle articleContent">
-				<form class="searchForm gridSpan6 gridStart4" id="search-form">
-					<input
-						type="search"
-						name="query"
-						value="{{ query }}"
-						id="search-input"
-						placeholder="{{ 'Suchen'|t }}…"
-						autocomplete="off"
-						role="combobox"
-						aria-autocomplete="list"
-						aria-expanded="false"
-						aria-controls="search-suggestions"
-					>
+    {% set query = craft.app.request.getParam('query')|trim %}
 
-					<button type="submit" class="btn">{{ 'Suchen'|t }}</button>
+    <article>
+        <div class="gridArticle articleContent">
+            <form
+                action="{{ url('search') }}"
+                method="get"
+                class="searchForm gridSpan10 gridStart2"
+                id="search-form"
+            >
+                <input
+                    type="search"
+                    name="query"
+                    value="{{ query }}"
+                    id="search-input"
+                    placeholder="{{ 'Suchen'|t }}…"
+                    autocomplete="off"
+                    role="combobox"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-controls="search-suggestions"
+                >
 
-					<div
-						id="search-suggestions"
-						data-endpoint="{{ url('search-suggestions') }}"
-						hidden
-					></div>
-				</form>
-			</div>
+                <button type="submit" class="btn">
+                    {{ 'Suchen'|t }}
+                </button>
 
-			<div class="gridArticle articleContent">
-				<div class="searchResults gridSpan10 gridStart2">
+                <div
+                    id="search-suggestions"
+                    data-endpoint="{{ actionUrl('rawsearch/api/autocomplete') }}"
+                    data-site="{{ currentSite.handle }}"
+                    hidden
+                ></div>
+            </form>
+        </div>
 
-					{% if query %}
-						{% set results = craft.entries()
-							.section('*')
-							.search(query)
-							.orderBy('score')
-							.all() %}
+        <div class="gridArticle articleContent">
+            <div class="searchResults gridSpan10 gridStart2">
 
-						{% if results is not empty %}
-							<p class="gridSpan10 foundTotalResults">
-								{{ results|length }} {{ 'Einträge gefunden.'|t }}
+                {% if query|length > 2 %}
+
+                    {% set search = craft.rawSearch.search({
+                        query: query,
+                        site: currentSite.handle,
+                        resultsPerPage: 10,
+                        extract: {
+                            type: 'sentences',
+                            maxLength: 200
+                        }
+                    }) %}
+
+                    {% if search.total %}
+                        <div class="gridSpan10 resultsInTotal">
+                            {{ craft.rawSearch.renderResults(search, query) }}
+                        </div>
+
+                    {% else %}
+						<div class="gridSpan10 resultsInTotal">
+							<p>
+								{{ 'Für die Suche'|t }}
+								“{{ query }}”
+								{{ 'konnten wir leider nichts finden'|t }} :(
 							</p>
+						</div>
+                    {% endif %}
 
-							<ul class="searchResultList">
-								{% for result in results %}
-									<li>
-										<h2>{{ result.getLink() }}</h2>
-									</li>
-								{% endfor %}
-							</ul>
-						{% else %}
-							<p class="gridSpan10 gridStart2 foundTotalResults">
-								{{ 'Für die Suche'|t }} “{{ query }}” {{ 'konnten wir leider nichts finden'|t }}!
-							</p>
-						{% endif %}
-					{% endif %}
+                {% elseif query %}
+                    <div class="gridSpan10 resultsInTotal">
+						<p>
+                        	{{ 'Bitte mindestens 3 Zeichen eingeben.'|t }}
+                    	</p>
+					</div>
 
-				</div>
-			</div>
-		</article>
+                {% else %}
 
-		{% js %}
-			document.addEventListener('DOMContentLoaded', () => {
+                    {% set popularSearches = craft.rawSearch.mostSearched({
+                        site: currentSite.handle,
+                        limit: 8
+                    }) %}
 
-				const form = document.getElementById('search-form');
-				const input = document.getElementById('search-input');
-				const container = document.getElementById('search-suggestions');
+                    {% if popularSearches %}
+                        <div class="popularSearches">
+                            <h2>{{ 'Häufig gesucht'|t }}</h2>
 
-				if (!form || !input || !container) return;
+                            <ul>
+                                {% for item in popularSearches %}
+                                    <li>
+                                        <a href="{{ url('search', { query: item.query }) }}">
+                                            {{ item.query }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
 
-				let debounceTimer;
-				let abortController;
-				let activeIndex = -1;
+                {% endif %}
 
-				const closeSuggestions = () => {
-					container.hidden = true;
-					container.innerHTML = '';
-					input.setAttribute('aria-expanded', 'false');
-					input.removeAttribute('aria-activedescendant');
-					activeIndex = -1;
-				};
+            </div>
+        </div>
+    </article>
 
-				const getSuggestions = () => {
-					const query = input.value.trim();
+    {% js %}
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('search-form');
+            const input = document.getElementById('search-input');
+            const container = document.getElementById('search-suggestions');
 
-					if (query.length < 2) {
-						closeSuggestions();
-						return;
-					}
+            if (!form || !input || !container) return;
 
-					// Cancel any previous request.
-					if (abortController) {
-						abortController.abort();
-					}
+            let debounceTimer;
+            let abortController;
+            let activeIndex = -1;
 
-					abortController = new AbortController();
+            const closeSuggestions = () => {
+                container.hidden = true;
+                container.innerHTML = '';
+                input.setAttribute('aria-expanded', 'false');
+                input.removeAttribute('aria-activedescendant');
+                activeIndex = -1;
+            };
 
-					const url = new URL(container.dataset.endpoint, window.location.origin);
-					url.searchParams.set('query', query);
+            const getSuggestions = async () => {
+                const query = input.value.trim();
 
-					console.log('Autocomplete request:', url.toString());
+                if (query.length < 2) {
+                    closeSuggestions();
+                    return;
+                }
 
-					fetch(url, {
-						signal: abortController.signal,
-						headers: {
-							'X-Requested-With': 'XMLHttpRequest'
-						}
-					})
-					.then(response => {
-						if (!response.ok) throw new Error('Search request failed');
-						return response.text();
-					})
-					.then(html => {
-							console.log('Autocomplete response:', html);
+                if (abortController) {
+                    abortController.abort();
+                }
 
-							if (input.value.trim() !== query) return;
+                abortController = new AbortController();
 
-							container.innerHTML = html;
+                const url = new URL(
+                    container.dataset.endpoint,
+                    window.location.origin
+                );
 
-							const suggestions = container.querySelectorAll('[role="option"]');
+                url.searchParams.set('query', query);
+                url.searchParams.set('site', container.dataset.site);
+                url.searchParams.set('limit', '8');
 
-							console.log('Suggestions found:', suggestions.length);
+                try {
+                    const response = await fetch(url, {
+                        signal: abortController.signal,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    });
 
-							if (!suggestions.length) {
-								closeSuggestions();
-								return;
-							}
+                    if (!response.ok) {
+                        throw new Error('Autocomplete request failed');
+                    }
 
-							container.hidden = false;
-							input.setAttribute('aria-expanded', 'true');
-							activeIndex = -1;
-					})
-					.catch(error => {
-						if (error.name !== 'AbortError') {
-							console.error(error);
-						}
-					});
-				};
+                    const data = await response.json();
 
-				input.addEventListener('input', () => {
-					clearTimeout(debounceTimer);
+                    if (input.value.trim() !== query) return;
 
-					debounceTimer = setTimeout(getSuggestions, 250);
-				});
+                    if (data.error || !data.result?.length) {
+                        closeSuggestions();
+                        return;
+                    }
 
-				input.addEventListener('keydown', event => {
-					const suggestions = container.querySelectorAll('[role="option"]');
+                    container.innerHTML = '';
 
-					if (!suggestions.length || container.hidden) return;
+                    const list = document.createElement('ul');
+                    list.className = 'searchSuggestions';
 
-					if (event.key === 'ArrowDown') {
-						event.preventDefault();
-						activeIndex = (activeIndex + 1) % suggestions.length;
-					}
+                    data.result.forEach((word, index) => {
+                        const item = document.createElement('li');
+                        item.id = `suggestion-${index}`;
+                        item.setAttribute('role', 'option');
+                        item.setAttribute('aria-selected', 'false');
 
-					else if (event.key === 'ArrowUp') {
-						event.preventDefault();
-						activeIndex = activeIndex <= 0
-							? suggestions.length - 1
-							: activeIndex - 1;
-					}
+                        const link = document.createElement('a');
+                        const targetUrl = new URL(
+                            form.action,
+                            window.location.origin
+                        );
 
-					else if (event.key === 'Escape') {
-						closeSuggestions();
-						return;
-					}
+                        targetUrl.searchParams.set('query', word.word);
+                        link.href = targetUrl.toString();
+                        link.textContent = word.word;
 
-					else if (event.key === 'Enter' && activeIndex >= 0) {
-						event.preventDefault();
-						suggestions[activeIndex].querySelector('a').click();
-						return;
-					}
+                        const count = document.createElement('span');
+                        count.className = 'suggestionCount';
+                        count.textContent = ` (${word.results})`;
 
-					suggestions.forEach((suggestion, index) => {
-						const active = index === activeIndex;
+                        link.appendChild(count);
+                        item.appendChild(link);
+                        list.appendChild(item);
+                    });
 
-						suggestion.setAttribute('aria-selected', active);
+                    container.appendChild(list);
+                    container.hidden = false;
+                    input.setAttribute('aria-expanded', 'true');
+                    activeIndex = -1;
 
-						if (active) {
-							input.setAttribute('aria-activedescendant', suggestion.id);
-						}
-					});
-				});
+                } catch (error) {
+                    if (error.name !== 'AbortError') {
+                        console.error(error);
+                    }
+                }
+            };
 
-				// Close when clicking outside the search form.
-				document.addEventListener('click', event => {
-					if (!form.contains(event.target)) {
-						closeSuggestions();
-					}
-				});
+            input.addEventListener('input', () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(getSuggestions, 250);
+            });
 
-				// Close suggestions when submitting the regular search form.
-				form.addEventListener('submit', closeSuggestions);
+            input.addEventListener('keydown', event => {
+                const suggestions = container.querySelectorAll('[role="option"]');
 
-			});
-		{% endjs %}
+                if (!suggestions.length || container.hidden) return;
 
-	{% css %}
+                if (event.key === 'ArrowDown') {
+                    event.preventDefault();
+                    activeIndex = (activeIndex + 1) % suggestions.length;
+                }
 
-		#search-form {
-			position: relative;
-		}
+                else if (event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    activeIndex = activeIndex <= 0
+                        ? suggestions.length - 1
+                        : activeIndex - 1;
+                }
 
-		#search-suggestions {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			z-index: 10;
-			background: white;
-			border: 1px solid #ccc;
-		}
+                else if (event.key === 'Escape') {
+                    closeSuggestions();
+                    return;
+                }
 
-		#search-suggestions[hidden] {
-			display: none;
-		}
+                else if (event.key === 'Enter' && activeIndex >= 0) {
+                    event.preventDefault();
+                    suggestions[activeIndex].querySelector('a').click();
+                    return;
+                }
 
-		.searchSuggestions {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
+                suggestions.forEach((suggestion, index) => {
+                    const active = index === activeIndex;
 
-		.searchSuggestions li a {
-			display: block;
-			padding: 10px 15px;
-			text-decoration: none;
-		}
+                    suggestion.setAttribute('aria-selected', active);
 
-		.searchSuggestions li[aria-selected="true"] a,
-		.searchSuggestions li a:hover {
-			background: #eee;
-		}
+                    if (active) {
+                        input.setAttribute(
+                            'aria-activedescendant',
+                            suggestion.id
+                        );
+                    }
+                });
+            });
 
-	{% endcss %}
+            document.addEventListener('click', event => {
+                if (!form.contains(event.target)) {
+                    closeSuggestions();
+                }
+            });
+
+            form.addEventListener('submit', closeSuggestions);
+        });
+    {% endjs %}
+
+    {% css %}
+        #search-form {
+            position: relative;
+        }
+
+        #search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            background: white;
+            border: 1px solid #ccc;
+        }
+
+        #search-suggestions[hidden] {
+            display: none;
+        }
+
+        .searchSuggestions {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .searchSuggestions li a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .searchSuggestions li[aria-selected="true"] a,
+        .searchSuggestions li a:hover {
+            background: #eee;
+        }
+
+        .suggestionCount {
+            opacity: .6;
+        }
+    {% endcss %}
 
 {% endblock %}
