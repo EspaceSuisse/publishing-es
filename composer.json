@@ -20,6 +20,7 @@
     "nystudio107/craft-retour": "^5.0.14",
     "nystudio107/craft-seomatic": "^5.1.22",
     "nystudio107/craft-vite": "^5.0.2",
+    "oncode/craft-rawsearch": "^v1.0.0",
     "ostark/craft-relax": "^2.1.0",
     "putyourlightson/craft-blitz": "^5.15.0",
     "spacecatninja/imager-x": "^6.3.0",

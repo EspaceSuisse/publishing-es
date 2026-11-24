@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0c1056dc50734a679e64b796d13970d",
+    "content-hash": "dc70821c44bf451f1b7d3bd4b309e79c",
     "packages": [
         {
             "name": "amphp/amp",
@@ -5679,6 +5679,52 @@
                 "source": "https://github.com/nystudio107/craft-vite"
             },
             "time": "2026-08-01T20:38:21+00:00"
+        },
+        {
+            "name": "oncode/craft-rawsearch",
+            "version": "v1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oncode/craft-rawsearch/zipball/570cbda24d759d8a4f378d32ed92abbad15d46b1",
+                "reference": "570cbda24d759d8a4f378d32ed92abbad15d46b1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "RawSearch",
+                "handle": "rawsearch",
+                "developer": "Manuel Sommerhalder",
+                "developerUrl": "https://oncode.ch",
+                "class": "oncode\\rawsearch\\RawSearch"
+            },
+            "autoload": {
+                "psr-4": {
+                    "oncode\\rawsearch\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Manuel Sommerhalder",
+                    "homepage": "https://oncode.ch"
+                }
+            ],
+            "description": "Highly customizable text search with weighted results and result snippets for Craft CMS",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "rawsearch",
+                "search"
+            ],
+            "time": "2026-09-27T00:56:42+00:00"
         },
         {
             "name": "opis/json-schema",
