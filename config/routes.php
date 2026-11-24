@@ -15,12 +15,10 @@ return [
     // German site
     'default' => [
         'autoren/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],
-        'search-suggestions' => ['template' => '_components/searchSuggestions'],
     ],
 
     // French site
     'espacesuissePublishingFr' => [
         'auteurs/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],
-        'search-suggestions' => ['template' => '_components/searchSuggestions'],
     ],
 ];
