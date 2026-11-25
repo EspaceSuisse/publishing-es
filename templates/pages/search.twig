@@ -21,7 +21,7 @@
     <article>
         <div class="gridArticle articleContent">
             <form
-                action="{{ url('search') }}"
+                action="{{ url(craft.app.request.pathInfo) }}"
                 method="get"
                 class="searchForm gridSpan10 gridStart2"
                 id="search-form"
