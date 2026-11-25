@@ -7,6 +7,7 @@
 
 	{# check if the url contains a url param with section #}
 	{% set sectionFilter = craft.app.request.getParam('section') %}
+	{% set pageTitle = category.title %}
 
 	{# Get all entries associated with this genre or subject no matter the section #}
 	{% set query = craft.entries()
@@ -16,9 +17,19 @@
 		.limit(null)
 	%}
 
+	
+
 	{# if ther is a param in the url get the value of said param and use it to filter for section #}
 	{% if sectionFilter %}
 		{% set query = query.section(sectionFilter) %}
+		{% set sectionTitle = sectionFilter == 'article' ? labelArticle : labelNews %}
+		{%- set pageTitle = 'Alle' | t  ~ ' ' ~ sectionTitle ~ ' – ' ~ category.title -%}
+
+		{# Rewrite metadata if there is a url param #}
+		{% do seomatic.meta.seoTitle(pageTitle) %}
+		{% do seomatic.meta.canonicalUrl(
+			craft.app.request.hostInfo ~ craft.app.request.pathInfo
+		) %}
 	{% endif %}
 
 	{% set allEntries = query.all() %}
