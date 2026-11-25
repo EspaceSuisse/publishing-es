@@ -1,0 +1,35 @@
+{%- header "Content-Type: application/xml; charset=utf-8" -%}
+{#-
+ # Custom XML Sitemap for filtered Subject Category pages (?section=article / ?section=news)
+ # Note: `catGenre` only has articles and needs no URL params (handled by SEOmatic's native sitemap).
+ #
+ # URL: /catListingSitemaps.xml (and localized, e.g. /fr/catListingSitemaps.xml)
+ # Registered in CP: SEOmatic -> Site Settings -> Sitemap -> Additional Sitemaps
+ -#}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for sectionHandle in ['article', 'news'] %}
+        {% set entryIds = craft.entries().section(sectionHandle).ids() %}
+
+        {% if entryIds|length %}
+            {% set categories = craft.categories()
+                .group('catSubject')
+                .relatedTo({
+                    sourceElement: entryIds,
+                    field: 'fCatSubject',
+                })
+                .all() %}
+
+            {% for category in categories %}
+                {% if category.url %}
+                    <url>
+                        <loc>{{ url(category.url, { section: sectionHandle }) }}</loc>
+                        <lastmod>{{ category.dateUpdated|atom }}</lastmod>
+                        <changefreq>weekly</changefreq>
+                        <priority>0.7</priority>
+                    </url>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</urlset>
