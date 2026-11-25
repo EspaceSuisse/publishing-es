@@ -15,6 +15,12 @@
             }
          }
     }
+.cellBox {
+    .anchor {
+        position: absolute;
+        right: -25px;
+    }
+}
 [id] {
     scroll-margin-top: var(--layoutGap); /* height of your sticky header */
 }
