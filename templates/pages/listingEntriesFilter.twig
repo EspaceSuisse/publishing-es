@@ -36,7 +36,9 @@
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 	<article class="listingGrid">
 		{% include "_components/header/headerBrand" %}
-		{% include "_components/header/headerCatList" %}
+		{% if category.group.handle == 'catSubject' %}
+			{% include "_components/header/headerCatList" %}
+		{% endif %}
         
 		{# First block: 1 Item #}
 		{% for item in allEntries | slice(0, sliceA) %}
