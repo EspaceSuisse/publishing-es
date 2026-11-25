@@ -1,4 +1,4 @@
-dateModified: 1795610651
+dateModified: 1795620949
 elementSources:
   craft\elements\Asset:
     -
@@ -103,9 +103,8 @@ elementSources:
         - status
         - 'field:2e6b1f37-5bf3-41f9-9d33-83817ab9080b' # Sticky
         - postDate
-        - dateCreated
         - dateUpdated
-        - authors
+        - 'field:c344dec6-0346-4e67-99e0-ec1552b8946f' # Lightswitch
       type: native
     -
       heading: ''
@@ -607,7 +606,7 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
     settings:
-      apiKey: bmlqzihlcpisgyzdivhlrqzt
+      apiKey: dxbxzkdtpcfngumnvynfpnwx
   relax:
     edition: standard
     enabled: true
