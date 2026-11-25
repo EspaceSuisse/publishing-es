@@ -50,14 +50,11 @@ nav {
     height: inherit;
     ul {
         display: flex;
-        gap: calc( var(--layoutGap) / 1.5);
+        gap: calc( var(--layoutGap) * 0.5);
         margin: 0;
         padding: 0;
-        background: var(--backgroundColor);
+        background: var(--colorES-brand-blue);
         padding: 8px 13px;
-        &.langSwitcher {
-            padding-left: var(--layoutGap);
-        }
         li {
             font-size: var(--font-size-S);
             font-family: var(--font-display);
@@ -65,7 +62,7 @@ nav {
             display: flex;
             a, button {
                 text-decoration: none;
-                color: var(--linkTxtColor);
+                color: var(--linkBgTxtColor);
                 display: flex;
                 align-items: center;
                 gap: 5px;
