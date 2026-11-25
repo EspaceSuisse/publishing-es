@@ -1,0 +1,40 @@
+{% set sectionFilter = craft.app.request.getParam('section') %}
+{% set allowedSections = ['article', 'news'] %} {# Adjust to your actual section handles #}
+{% set pageTitle = category.title %}
+
+{# Get all entries associated with this genre or subject no matter the section #}
+{% set query = craft.entries()
+    .relatedTo(category)
+    .with(['fCatGenre', 'fCatSubject'])
+    .orderBy('sticky desc, postDate desc')
+    .limit(null)
+%}
+
+{# Only filter and rewrite SEO metadata for allowed section values #}
+{% if sectionFilter and sectionFilter in allowedSections %}
+    {% set query = query.section(sectionFilter) %}
+    {% set sectionTitle = sectionFilter == 'article' ? labelArticle : labelNews %}
+    {%- set pageTitle = 'Alle'|t ~ ' ' ~ sectionTitle ~ ' – ' ~ category.title -%}
+
+    {# Build the clean canonical URL with ONLY the allowed `section` param #}
+    {% set paramUrl = url(category.url, { section: sectionFilter }) %}
+
+    {# 1. Title (updates <title>, og:title, and twitter:title) #}
+    {% do seomatic.meta.seoTitle(pageTitle) %}
+
+    {# 2. Canonical URL & og:url #}
+    {% do seomatic.meta.canonicalUrl(paramUrl) %}
+
+    {# Explicitly set og:url too, in case og:url was customized in Content SEO #}
+    {% set ogUrlTag = seomatic.tag.get('og:url') %}
+    {% if ogUrlTag %}
+        {% do ogUrlTag.content(paramUrl) %}
+    {% endif %}
+
+    {# 3. Append ?section=... to all localized hreflang / alternate links (de-ch, fr-ch, x-default) #}
+    {% set alternateLink = seomatic.link.get('alternate') %}
+    {% if alternateLink and alternateLink.href is iterable %}
+        {% set updatedHrefs = alternateLink.href|map(href => url(href, { section: sectionFilter })) %}
+        {% do alternateLink.href(updatedHrefs) %}
+    {% endif %}
+{% endif %}

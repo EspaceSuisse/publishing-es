@@ -7,6 +7,7 @@
 
 	{# check if the url contains a url param with section #}
 	{% set sectionFilter = craft.app.request.getParam('section') %}
+	{% set pageTitle = category.title %}
 
 	{# Get all entries associated with this genre or subject no matter the section #}
 	{% set query = craft.entries()
@@ -16,9 +17,11 @@
 		.limit(null)
 	%}
 
+	
+
 	{# if ther is a param in the url get the value of said param and use it to filter for section #}
 	{% if sectionFilter %}
-		{% set query = query.section(sectionFilter) %}
+		{% include "_components/catSectionFilter" %}
 	{% endif %}
 
 	{% set allEntries = query.all() %}
@@ -35,8 +38,11 @@
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 	<article class="listingGrid">
+		
 		{% include "_components/header/headerBrand" %}
-		{% include "_components/header/headerCatList" %}
+		{% if category.group.handle == 'catSubject' %}
+			{% include "_components/header/headerCatList" %}
+		{% endif %}
         
 		{# First block: 1 Item #}
 		{% for item in allEntries | slice(0, sliceA) %}
