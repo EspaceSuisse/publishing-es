@@ -89,29 +89,6 @@
                     	</p>
 					</div>
 
-                {% else %}
-
-                    {% set popularSearches = craft.rawSearch.mostSearched({
-                        site: currentSite.handle,
-                        limit: 8
-                    }) %}
-
-                    {% if popularSearches %}
-                        <div class="popularSearches">
-                            <h2>{{ 'Häufig gesucht'|t }}</h2>
-
-                            <ul>
-                                {% for item in popularSearches %}
-                                    <li>
-                                        <a href="{{ url('search', { query: item.query }) }}">
-                                            {{ item.query }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
-
                 {% endif %}
 
             </div>
