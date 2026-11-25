@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: fCatSubjectDisplay
+instructions: 'Wo das Teil angezeigt wird.'
+name: 'Betroffene Themen'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: 1
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: true
+  source: 'group:0a81db90-a5b9-4c6d-a9da-ae7489528aa3' # Thema
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list-inline
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

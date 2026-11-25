@@ -16,6 +16,7 @@ return [
     'default' => [
         'autoren/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],
     ],
+
     // French site
     'espacesuissePublishingFr' => [
         'auteurs/<authorSlug:{slug}>' => ['template' => 'sections/authorPosts'],

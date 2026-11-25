@@ -48,7 +48,7 @@
     }  /* desktop */
     &.hasNoImage {
         .txtPart {
-            grid-row: span 2;
+            grid-column: 1/-1;
         }
     }
     .txtPart {

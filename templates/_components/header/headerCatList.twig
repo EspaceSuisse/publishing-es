@@ -1,19 +1,23 @@
 {% set smallerGrid = 'gridSpan12 gridLgSpan10 gridLgStart2' %}
+{% set hasArticles = craft.entries().section('article').relatedTo(category).exists() %}
+{% set hasNews = craft.entries().section('news').relatedTo(category).exists() %}
 
 <div class="{{ smallerGrid }}">
-<h1 class="topicTitle gridSpan12">{{ category.title }}</h1>
-{% if category.fRichTextI18n %}
-	<div class="topicLead gridSpan12">
-		{{ category.fRichTextI18n }}
-	</div>
-{% endif %}
-
-    {# Add filter buttons #}
-    <div class="sectionFilter gridSpan12">
-        <div class="btnGroup">
-            <a href="{{ category.url }}" class="btn btnNeutral btnSmall{% if not sectionFilter %} active{% endif %}">{{ 'Alles' | t }}</a>
-            <a href="{{ category.url }}?section=article" class="btn btnNeutral btnSmall{% if sectionFilter == 'article' %} active{% endif %}">{{ labelArticle }}</a>
-            <a href="{{ category.url }}?section=news" class="btn btnNeutral btnSmall{% if sectionFilter == 'news' %} active{% endif %}">{{ labelNews }}</a>
+    <h1 class="topicTitle gridSpan12">{{ pageTitle }}</h1>
+    {% if category.fRichTextI18n %}
+        <div class="topicLead gridSpan12">
+            {{ category.fRichTextI18n }}
         </div>
-    </div>
+    {% endif %}
+
+    {# Only show filter buttons if this subject actually has BOTH articles and news #}
+    {% if hasArticles and hasNews %}
+        <div class="sectionFilter gridSpan12">
+            <div class="btnGroup">
+                <a href="{{ category.url }}" class="btn btnNeutral btnSmall{% if not sectionFilter %} active{% endif %}">{{ 'Alles' | t | ucfirst }}</a>
+                <a href="{{ url(category.url, { section: 'article' }) }}" class="btn btnNeutral btnSmall{% if sectionFilter == 'article' %} active{% endif %}">{{ labelArticle | ucfirst }}</a>
+                <a href="{{ url(category.url, { section: 'news' }) }}" class="btn btnNeutral btnSmall{% if sectionFilter == 'news' %} active{% endif %}">{{ labelNews | ucfirst }}</a>
+            </div>
+        </div>
+    {% endif %}
 </div>

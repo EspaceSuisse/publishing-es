@@ -1,12 +1,24 @@
 .anchor {
-   font-size: var(--font-size-M);
-    font-family: var(--font-default); 
-    text-decoration: none;
-}
+        font-size: 0;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url('/theme/img/icon-link.svg') center / contain no-repeat;
+            opacity: 0.3;
+            
+        }
+        &:hover {
+            &::after {
+                opacity: 0.9;
+            }
+         }
+    }
 .cellBox {
-   >  .anchor {
+    .anchor {
         position: absolute;
-        right: -30px;
+        right: -25px;
     }
 }
 [id] {

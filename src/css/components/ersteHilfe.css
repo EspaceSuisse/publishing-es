@@ -1,0 +1,71 @@
+.ersteHilfe {
+    text-align: center;
+    background-color: var(--colorES-brand-blue-soft);
+    padding: 10vw;
+    margin-bottom: calc(var(--layoutGap) * -1);
+    margin-top: var(--layoutGap);
+    box-shadow: 0 0 69px -10px rgba(0, 0, 0, 0.2),
+        inset 0 -8px 12px 0 rgba(0, 0, 0, 0.15);
+
+    .imgErsteHilfe {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .theTitle {
+        color: var(--txtInvertColor);
+        font-size: var(--font-size-XXL);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        margin-bottom: 0;
+    }
+
+    .theClaim {
+        color: var(--txtInvertColor);
+        font-size: var(--font-size-L);
+        font-family: var(--font-display);
+        font-weight: var(--font-bold);
+        background-color: transparent;
+        max-width: 50rem;
+        margin: auto;
+        padding: 0;
+    }
+
+    .theText {
+        padding-top: var(--layoutGap);
+        max-width: 50rem;
+        margin: auto;
+    }
+
+    p,
+    li,
+    .ctaClaim {
+        color: var(--txtInvertColor);
+        font-size: var(--font-size-L);
+        font-family: var(--font-display);
+    }
+
+    .theCta {
+        padding-top: calc(var(--layoutGap) * 4);
+
+        a {
+            color: var(--txtInvertColor);
+            font-size: var(--font-size-XXL);
+            font-family: var(--font-display);
+        }
+
+        .ersteHilfeCtaLink {
+            font-size: var(--font-size-M);
+            border-radius: 4px;
+        }
+        &.hasCtaClaim {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            @media (max-width: 48rem) {
+                flex-direction: column;
+            }
+        }
+    }
+}

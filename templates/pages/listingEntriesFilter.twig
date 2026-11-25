@@ -5,10 +5,18 @@
 
 {% block content %}
 
-	{# check if the url contains a url param with section #}
-	{% set sectionFilter = craft.app.request.getParam('section') %}
+	{# Check if the URL contains ?section=... (strictly from query string) #}
+	{% set sectionFilter = craft.app.request.getQueryParam('section') %}
+	{% set pageTitle = category.title %}
 
-	{# Get all entries associated with this genre or subject no matter the section #}
+	{# Redirect 302 to clean category URL if ?section= is used on catGenre or has an invalid value #}
+	{% if sectionFilter is not null and (
+		category.group.handle != 'catSubject' or sectionFilter not in ['article', 'news']
+	) %}
+		{% redirect category.url 302 %}
+	{% endif %}
+
+	{# Build the entry query #}
 	{% set query = craft.entries()
 		.relatedTo(category)
 		.with(['fCatGenre', 'fCatSubject'])
@@ -16,14 +24,31 @@
 		.limit(null)
 	%}
 
-	{# if ther is a param in the url get the value of said param and use it to filter for section #}
 	{% if sectionFilter %}
 		{% set query = query.section(sectionFilter) %}
 	{% endif %}
 
 	{% set allEntries = query.all() %}
 
-		{# --- Layout config --- #}
+	{# Handle empty results #}
+	{% if allEntries is empty %}
+		{% if sectionFilter %}
+			{# Valid filter param, but 0 entries in this section -> 302 back to base category URL #}
+			{% redirect category.url 302 %}
+		{% else %}
+			{# Unassigned category (0 entries overall) -> 404 so we don't redirect to ourselves #}
+			{% exit 404 %}
+		{% endif %}
+	{% endif %}
+
+	{# Update pageTitle and SEOmatic metadata when a valid section filter is active #}
+	{% if sectionFilter %}
+		{% set sectionTitle = sectionFilter == 'article' ? labelArticle : labelNews %}
+		{%- set pageTitle = 'Alle'|t ~ ' ' ~ sectionTitle ~ ' – ' ~ category.title -%}
+		{% include "_components/catSectionFilter" %}
+	{% endif %}
+
+	{# --- Layout config --- #}
 	{% set sliceA = 1 %}
 	{% set sliceB = 2 %}
 	{% set sliceC = 4 %}
@@ -35,8 +60,11 @@
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 	<article class="listingGrid">
+		
 		{% include "_components/header/headerBrand" %}
-		{% include "_components/header/headerCatList" %}
+		{% if category.group.handle == 'catSubject' %}
+			{% include "_components/header/headerCatList" %}
+		{% endif %}
         
 		{# First block: 1 Item #}
 		{% for item in allEntries | slice(0, sliceA) %}

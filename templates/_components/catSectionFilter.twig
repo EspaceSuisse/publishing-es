@@ -1,0 +1,19 @@
+{# Rewrite SEOmatic metadata when a valid ?section= filter is active #}
+{% set paramUrl = url(category.url, { section: sectionFilter }) %}
+
+{# 1. Title (<title>, og:title, twitter:title) #}
+{% do seomatic.meta.seoTitle(pageTitle) %}
+
+{# 2. Canonical URL & og:url #}
+{% do seomatic.meta.canonicalUrl(paramUrl) %}
+{% set ogUrlTag = seomatic.tag.get('og:url') %}
+{% if ogUrlTag %}
+    {% do ogUrlTag.content(paramUrl) %}
+{% endif %}
+
+{# 3. Append ?section=... to localized hreflang / alternate links #}
+{% set alternateLink = seomatic.link.get('alternate') %}
+{% if alternateLink and alternateLink.href is iterable %}
+    {% set updatedHrefs = alternateLink.href|map(href => url(href, { section: sectionFilter })) %}
+    {% do alternateLink.href(updatedHrefs) %}
+{% endif %}
