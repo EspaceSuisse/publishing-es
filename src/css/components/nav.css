@@ -40,7 +40,7 @@ nav {
 }
 .desktopNavi {
     background: transparent;
-    align-items: flex-start;
+    justify-content: center;
     padding-left: calc( var(--siteSideBarWidth) + var(--airGap) );
     padding-top: var(--layoutGap);
     display: flex;
