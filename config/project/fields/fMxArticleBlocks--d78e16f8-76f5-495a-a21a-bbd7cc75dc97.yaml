@@ -2,7 +2,7 @@ columnSuffix: null
 handle: fMxArticleBlocks
 instructions: null
 name: ArticleBlocks
-searchable: false
+searchable: true
 settings:
   createButtonLabel: 'Artikel Element'
   defaultIndexViewMode: cards
@@ -13,9 +13,6 @@ settings:
         -
           - uid
           - d4bf6dfa-d2c6-45dc-9550-68e2b143520e # Lauftext
-        -
-          - name
-          - Lauftext
         -
           - group
           - General

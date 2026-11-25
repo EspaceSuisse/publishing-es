@@ -2,11 +2,11 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 1fb49816-e800-4eb3-a679-27ea164fb72d # CTA Type
-handle: callToAction
+    uid: 3bf88477-1a30-4c85-869d-a00f8943a584 # Page Set
+handle: search
 maxAuthors: 1
 minAuthors: 1
-name: 'Call to Action'
+name: Search
 previewTargets:
   -
     label: 'Primary entry page'
@@ -15,13 +15,13 @@ previewTargets:
 propagationMethod: all
 siteSettings:
   2d4ea7fb-3050-435d-806e-46986d5c58d2: # Inforum FR
-    enabledByDefault: false
-    hasUrls: false
-    template: null
-    uriFormat: null
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/search.twig
+    uriFormat: '{slug}'
   5f286764-7e74-4475-989a-21ca80692fad: # Inforaum DE
-    enabledByDefault: false
-    hasUrls: false
-    template: null
-    uriFormat: null
-type: channel
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/search.twig
+    uriFormat: '{slug}'
+type: single

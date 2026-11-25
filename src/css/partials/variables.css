@@ -22,6 +22,8 @@
     --line-height-display: 1;
 
     --siteSideBarWidth: 75px;
+    --sideBarOpenWidth: 500px;
+    --sideBarOpenMobileHeight: var(--sideBarOpenWidth);
     --articleHeadChute: -100px;
     --layoutGap: var(--font-size-M);
     --mediaGap: calc( var(--layoutGap) * 1.2);
@@ -37,7 +39,8 @@
 
     --radiusPreviewCard: 4px;
 
-    --navSpeed: 0.2s;
+    --navSpeed: 100ms;
+    --hamburgerSpeed: calc( var(--navSpeed) + 0.2s);
     --paddingBtnSmall: 4px 9px 6px;
     --radiusPreviewCard: 4px;
     --linkDescorationThikness: 2px;

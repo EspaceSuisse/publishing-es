@@ -7,7 +7,7 @@
 	{% set allNews = craft.entries()
 		.section('news')
 		.orderBy('sticky desc, postDate desc')
-		.limit(10)
+		.limit(12)
 	%}
 
 	{% set listingNews = craft.entries().section('listingNews').one() %}

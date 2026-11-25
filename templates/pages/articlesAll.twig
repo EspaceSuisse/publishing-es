@@ -1,176 +1,66 @@
 {% extends "_layouts/main" %}
 
+{% import '_components/previewCards/macroPreviewArticle' as macroPreview %}
+
 {% block content %}
 
-	{% import '_macros/macroPostDate' as macroPostDate %}
+	{% set allArticles = craft.entries()
+		.section('article')
+		.orderBy('sticky desc, postDate desc')
+		.limit(null)
+	%}
 
-	{% set allEntries = craft.entries()
-        .section('article, news')
-        .with(['fCatGenre', 'fCatSubject'])
-        .limit(null)
-        .all()
-    %}
+		{# --- Layout config --- #}
+	{% set sliceA = 1 %}
+	{% set sliceB = 2 %}
+	{% set sliceC = 4 %}
+	{% set sliceD = 4 %}
 
-
-	<div class="listingGrid" id="articleList">
-        {% include "_components/header/headerBrand" %}
-
-		<table class="articleTable gridSpan12 list">
-			{% for item in allEntries %}
-
-				{% set availability %}
-					{% if item.fSwitch %}
-						{{ 'Free for All' | t }}
-					{% else %}
-						{% set cutoff = "now"|date_modify(cutoffDate) %}
-						{{ (item.postDate < cutoff ? 'Archiv' : 'Offen') | t }}
-					{% endif %}
-				{% endset %}
-
-
-                {% if loop.first %}
-                    <tr class="item tHead gridSpan12">
-						<th data-type="date">{{ 'Veröffentlichung' | t }}</th>
-						<th data-type="string">Art.</th>
-						<th data-type="string">{{ 'Title' | t }}</th>
-						<th data-type="string">{{ 'Catchy Titel' | t }}</th>
-						<th data-type="string">{{ 'Lead' | t }}</th>
-						<th data-type="string">{{ labelGenre }}</th>
-						<th data-type="string">{{ labelSubject }}</th>
-						<th data-type="date">{{ 'Letztes Update' | t }}</th>
-						<th data-type="string">{{ 'Verfügbarkeit' | t }}</th>
-						<th data-type="number">ID</th>
-					</tr>
-                {% endif %}
-
-				<tr class="item gridSpan12">
-					<td class="postDate">{{ macroPostDate.postDate(item.postDate, false) }}</td>
-					<td>{{ item.section.handle | capitalize | t }}</td>
-					<td class="title">
-						<a href="{{ item.url }}">{{ item.title }}</a>
-					</td>
-					<td class="title">
-						<a href="{{ item.url }}">{{ item.fPlainTextI18n }}</a>
-					</td>
-					<td class="description">{{ item.fSeoDescription }}</td>
-					<td class="genre">
-						{% for cat in item.fCatGenre.all() %}
-							<a href="{{ cat.url }}">{{ cat.title }}</a>
-							{% if not loop.last %},
-							{% endif %}
-						{% endfor %}
-					</td>
-					<td class="subject">
-						{% for cat in item.fCatSubject.all() %}
-							<a href="{{ cat.url }}">{{ cat.title }}</a>
-							{% if not loop.last %},{% endif %}
-						{% endfor %}
-					</td>
-					<td>{{ macroPostDate.postDate(item.dateUpdated, false) }}</td>
-					<td>{{ availability }}</td>
-                    <td class="articleId">{{ item.id }}</td>
-				</tr>
-			{% endfor %}
-		</table>
-	</div>
-
-	{% js %}
-		document.addEventListener('DOMContentLoaded', function () {
-			const table = document.querySelector('.articleTable');
-			if (!table) return;
-
-			const headerRow = table.querySelector('tr.tHead');
-			if (!headerRow) return;
-
-			const headers = headerRow.querySelectorAll('th');
-
-			headers.forEach((th, colIndex) => {
-				th.style.cursor = 'pointer'; // visual hint
-
-				th.addEventListener('click', () => {
-					const type = th.dataset.type || 'string';
-
-					// Toggle direction: top -> bottom (asc) / bottom -> top (desc)
-					const currentDir = th.dataset.sortDir === 'asc' ? 'desc' : 'asc';
-
-					// Reset all headers (remove arrows + active state)
-					headers.forEach(h => {
-						h.removeAttribute('data-sort-dir');
-						h.classList.remove('is-active');
-					});
-
-					// Set direction + active state on clicked header
-					th.dataset.sortDir = currentDir;
-					th.classList.add('is-active');
-
-					// Get all rows except the header
-					const rows = Array.from(
-						table.querySelectorAll('tr.item.gridSpan12:not(.tHead)')
-					);
-
-					rows.sort((rowA, rowB) => {
-						const cellA = rowA.children[colIndex];
-						const cellB = rowB.children[colIndex];
-						const textA = cellA ? cellA.textContent.trim() : '';
-						const textB = cellB ? cellB.textContent.trim() : '';
-
-						let cmp = 0;
-
-						if (type === 'number') {
-							const aNum = parseFloat(textA.replace(',', '.')) || 0;
-							const bNum = parseFloat(textB.replace(',', '.')) || 0;
-							cmp = aNum - bNum;
-						} else if (type === 'date') {
-							const aDate = new Date(textA);
-							const bDate = new Date(textB);
-							cmp = aDate - bDate;
-						} else {
-							// default: string
-							cmp = textA.localeCompare(textB, 'de', { sensitivity: 'base' });
-						}
-
-						return currentDir === 'asc' ? cmp : -cmp;
-					});
-
-					// Re-attach rows in new order
-					const tbody = table.querySelector('tbody') || table;
-					rows.forEach(row => tbody.appendChild(row));
-				});
-			});
-		});
-	{% endjs %}
-
-	{% css %}
-		/* Make headers look clickable */
-		.articleTable .tHead th {
-			cursor: pointer;
-		}
-
-		/* Base: reserve space for arrow */
-		.articleTable .tHead th::after {
-			content: '';
-			display: inline-block;
-			margin-left: 0.25rem;
-		}
-
-		/* Ascending ▲ */
-		.articleTable .tHead th[data-sort-dir="asc"]::after {
-			content: '▲';
-		}
-
-		/* Descending ▼ */
-		.articleTable .tHead th[data-sort-dir="desc"]::after {
-			content: '▼';
-		}
-
-		/* Active column styling (customize as you like) */
-		.articleTable .tHead th.is-active {
-			background-color: #eee;
-			font-weight: bold;
-		}
-	{% endcss %}
+	{# Offsets calculate themselves #}
+	{% set currentOffset = 0 %}
 	
+	{% paginate allArticles as pageInfo, newsEntries %}
 
+	<header class="pageHead subPageHead">
+		{% include "_components/header/headerBrand" %}
+		{% include "_components/header/headerPage" %}
+	</header>
+	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
+	<article class="listingGrid">
+        
+		{# First block: 1 Item #}
+		{% for item in allArticles | slice(currentOffset, sliceA) %}
 
+			{% set macroParams = [ 'gridSpan12', 'gridSpan12 gridMdSpan4 gridLgSpan7', 'gridSpan12 gridMdSpan8 gridLgSpan5' ] %}
+			{{ macroPreview.listMacro(item, ...macroParams) }}
+			{% set currentOffset = currentOffset + sliceA %}
+		{% endfor %}
+        
+		{# Second block: 2 Items #}
+		{% for item in allArticles | slice(currentOffset, sliceB) %}
 
+			{% set macroParams = ['gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6'] %}
+
+			{{ macroPreview.listMacro(item, ...macroParams) }}
+			{% set currentOffset = currentOffset + sliceB %}
+		{% endfor %}
+
+		{# MISSING THIRD BLOCK ADDED HERE: 4 Items #}
+		{% for item in allArticles | slice(currentOffset, sliceC) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan6', 'gridSpan12', 'gridSpan12 gridMdSpan6'] %}
+
+			{{ macroPreview.listMacro(item, ...macroParams) }}
+			{% set currentOffset = currentOffset + sliceC %}
+		{% endfor %}
+
+		{# Fourth block: Remaining Items #}
+		{% for item in allArticles | slice(currentOffset) %}
+
+			{% set macroParams = ['gridSpan12 gridMdSpan4', 'gridSpan12', 'gridSpan12 gridMdSpan4'] %}
+
+			{{ macroPreview.listMacro(item, ...macroParams) }}
+		{% endfor %}
+	</article>
+	
 {% endblock %}

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: fTagProvider
 instructions: null
 name: 'Tag Field Provider'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

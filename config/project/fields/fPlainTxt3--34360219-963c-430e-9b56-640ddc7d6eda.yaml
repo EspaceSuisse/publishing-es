@@ -2,7 +2,7 @@ columnSuffix: null
 handle: fPlainTxt3
 instructions: null
 name: 'Plain Text'
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

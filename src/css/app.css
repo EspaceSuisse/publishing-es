@@ -31,6 +31,7 @@
 @import "components/share.css";
 @import "components/listingCatList.css";
 @import "components/newsletterForm.css";
+@import "components/ersteHilfe.css";
 
 @import "components/articleBlocks/cellSubtitle.css";
 @import "components/articleBlocks/cellBox.css";
@@ -47,6 +48,7 @@
 @import "components/pageSettingsPanel.css";
 @import "components/newsTicker.css";
 @import "components/paginationListing.css";
+@import "components/search.css";
 
 @import "components/header/headerNews.css";
 @import "components/header/headerCard.css";

@@ -9,6 +9,7 @@ settings:
   facebookTabEnabled: ''
   generalEnabledFields:
     - seoPreview
+    - mainEntityOfPage
     - seoTitle
     - seoDescription
     - seoImage
