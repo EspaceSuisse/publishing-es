@@ -27,7 +27,7 @@
         }
         &:hover {
             text-decoration: underline;
-            background-color: var(--linkBgColor);
+            background-color: var(--colorEs-success);
         }
     }
 
