@@ -1,4 +1,4 @@
-dateModified: 1795093700
+dateModified: 1795610651
 elementSources:
   craft\elements\Asset:
     -
@@ -602,6 +602,12 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  rawsearch:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      apiKey: bmlqzihlcpisgyzdivhlrqzt
   relax:
     edition: standard
     enabled: true

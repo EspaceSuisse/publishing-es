@@ -12,17 +12,44 @@
     .searchResults {
         margin-top: var(--layoutGap);
     }
-    .foundTotalResults {
-        font-size: var(--font-size-L);
-        font-family: var(--font-display);
-        font-weight: var(--fontBold);
+    .resultsInTotal {
+        p:first-of-type {
+            font-size: var(--font-size-L);
+            font-family: var(--font-display);
+        }
+        /* Pagination */
+        p:last-of-type {
+            font-size: var(--font-size-M);
+            font-family: var(--font-display);
+        }
+        a:last-of-type {
+            font-size: var(--font-size-M);
+            font-family: var(--font-display);
+            font-weight: var(--fontRegular);
+            color: var(--linkTxtColor);
+        }
     }
-    .searchResultList {
+    .result {
+        padding-bottom: var(--layoutGap);
+        > a {
+            font-size: var(--font-size-L);
+            font-family: var(--font-display);
+            font-weight: var(--font-bold);
+            color: var(--linkTxtColor);
+        }
+        p {
+            font-size: var(--font-size-M);
+            font-family: var(--font-display);
+            font-weight: var(--fontRegular);
+            margin: 0;
+        }
+    }
+    .searchSuggestions {
         li {
             a {
                 font-size: var(--font-size-L);
                 font-family: var(--font-display);
-                font-weight: var(--fontBold);
+                font-weight: var(--font-bold);
                 color: var(--linkTxtColor);
             }
         }
