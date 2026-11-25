@@ -1,4 +1,4 @@
-dateModified: 1795620949
+dateModified: 1795623050
 elementSources:
   craft\elements\Asset:
     -
@@ -607,6 +607,17 @@ plugins:
     schemaVersion: 1.0.0
     settings:
       apiKey: dxbxzkdtpcfngumnvynfpnwx
+      whitelistedFieldTypes:
+        - craft\redactor\Field
+        - benf\neo\Field
+        - verbb\supertable\fields\SuperTableField
+        - craft\fields\Categories
+        - craft\fields\ContentBlock
+        - craft\fields\Matrix
+        - craft\fields\PlainText
+        - craft\fields\Table
+        - craft\fields\Users
+        - craft\ckeditor\Field
   relax:
     edition: standard
     enabled: true
