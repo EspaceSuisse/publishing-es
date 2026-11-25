@@ -21,15 +21,7 @@
 
 	{# if ther is a param in the url get the value of said param and use it to filter for section #}
 	{% if sectionFilter %}
-		{% set query = query.section(sectionFilter) %}
-		{% set sectionTitle = sectionFilter == 'article' ? labelArticle : labelNews %}
-		{%- set pageTitle = 'Alle' | t  ~ ' ' ~ sectionTitle ~ ' – ' ~ category.title -%}
-
-		{# Rewrite metadata if there is a url param #}
-		{% do seomatic.meta.seoTitle(pageTitle) %}
-		{% do seomatic.meta.canonicalUrl(
-			craft.app.request.hostInfo ~ craft.app.request.pathInfo
-		) %}
+		{% include "_components/catSectionFilter" %}
 	{% endif %}
 
 	{% set allEntries = query.all() %}
@@ -46,6 +38,7 @@
 
 	{# Display All Subject Category in Use. Unassigned Items will not be displayed #}
 	<article class="listingGrid">
+		
 		{% include "_components/header/headerBrand" %}
 		{% if category.group.handle == 'catSubject' %}
 			{% include "_components/header/headerCatList" %}
