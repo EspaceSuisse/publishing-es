@@ -9,7 +9,7 @@ return [
         'refreshCacheAutomaticallyForGlobals' => false,
         'debug' => true,
 
-        // Only one HTTP request at a time
+        // Only one HTTP request at a time.
         'cacheGeneratorSettings' => [
             'concurrency' => 1,
         ],
@@ -28,7 +28,7 @@ return [
             ],
         ],
 
-        'refreshMode' => SettingsModel::REFRESH_MODE_EXPIRE,
+        'refreshMode' => SettingsModel::REFRESH_MODE_CLEAR_AND_GENERATE,
 
         // Whether expired cached pages should be refreshed after being visited by a user.
         'refreshExpiredCacheAfterVisit' => true,
